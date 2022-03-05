@@ -3,8 +3,6 @@
  *
  * Implementacao da Heuristica GENIUS
  *
- *  Created on: 26/06/2012
- *      Author: rogerio
  */
 #include <stdio.h>
 #include <stdlib.h>
