@@ -1,7 +1,7 @@
 # PCCTP
 A grasp heuristic for the Prize-Collecting Covering Tour Problem
 
-Créditos: Rogégio da Silva
+Créditos: Francisco Glaubod and Rogégio da Silva
 
 The definition of the PCCTP can be given as follows. Consider an undirected graph
 G = (N, E), with the set of vertices N = V ∪ W and V = R ∪ T. Let D be a coverage
