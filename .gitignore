@@ -1,0 +1,25 @@
+# Executavel e objectos
+pcctp
+*.o
+src/*.o
+
+# Resultados gerados (logs e saidas)
+resultados/
+
+# Backup e temporarios
+*.bak
+*~
+*.swp
+*.swo
+
+# IDE / editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Gurobi (se tiver instalacao local no repo)
+gurobi.lic
