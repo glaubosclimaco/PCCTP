@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "enumerated_optimum": 22,
+  "results": [
+    {
+      "warm_start": false,
+      "start_status": null,
+      "version": "1.13.1",
+      "cost": 22.0,
+      "initial_cost": 24.0,
+      "improved": true,
+      "seconds": 0.05015708299999977,
+      "overrun": 0.0,
+      "callback_calls": 1,
+      "events": [
+        {
+          "seconds": 0.025687666000000053,
+          "cost": 22.0
+        }
+      ],
+      "status": "Optimal",
+      "proven_optimal": true,
+      "nodes": 1,
+      "dual_bound": 22.0,
+      "route": [
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    {
+      "warm_start": true,
+      "start_status": "HighsStatus.kOk",
+      "version": "1.13.1",
+      "cost": 22.0,
+      "initial_cost": 24.0,
+      "improved": true,
+      "seconds": 0.05539466699999984,
+      "overrun": 0.0,
+      "callback_calls": 3,
+      "events": [
+        {
+          "seconds": 0.0230750839999998,
+          "cost": 23.0
+        },
+        {
+          "seconds": 0.054299166999999926,
+          "cost": 22.0
+        }
+      ],
+      "status": "Optimal",
+      "proven_optimal": true,
+      "nodes": 1,
+      "dual_bound": 22.0,
+      "route": [
+        0,
+        1,
+        4,
+        3
+      ]
+    }
+  ]
+}
