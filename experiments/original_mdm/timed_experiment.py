@@ -17,8 +17,10 @@ ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance,validate
 
-def run_one(name,seed,policy,budget,target):
-    build=HERE/'build_timed';working=HERE/'runs'/f'{name}.seed{seed}.timed.{policy}'
+def run_one(name,seed,policy,budget,target,elite_count_bounded=False):
+    build=HERE/('build_timed_elite_bounded' if elite_count_bounded else 'build_timed')
+    working=HERE/'runs'/f'{name}.seed{seed}.timed.{policy}'
+    if elite_count_bounded:working=working.with_name(working.name+'.elite_bounded')
     fp=working/'FPMax';fp.mkdir(parents=True,exist_ok=True)
     for binary in ['fim_maximal','fpmax_hnmp']:
         link=fp/binary
@@ -52,6 +54,7 @@ def run_one(name,seed,policy,budget,target):
         if trace:assert payload['deadline_route']==trace[-1]['route']
     row=dict(instance=name,geometry=d['geometry'],seed=seed,operator_policy=policy,
              method='timed_MDM_'+policy,budget_seconds=budget,process_wall_seconds=wall,
+             elite_count_bounded=elite_count_bounded,
              overrun_seconds=max(0.,wall-budget),hard_timeout=timed_out,exit_code=code,
              native_returned=bool(payload and payload['completed']),feasible_before_deadline=bool(trace),
              cost=trace[-1]['cost'] if trace else None,route=trace[-1]['route'] if trace else [],anytime=trace,
@@ -66,6 +69,7 @@ def run_one(name,seed,policy,budget,target):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--budget',type=float,default=1.)
     p.add_argument('--limit',type=int,default=9);p.add_argument('--seeds',type=int,nargs='+',default=[42,43,44])
+    p.add_argument('--bound-elite-size',action='store_true')
     args=p.parse_args();assert args.budget>0
     out=HERE/'timed_development';out.mkdir(exist_ok=True)
     cases=[];seen=set()
@@ -75,23 +79,25 @@ def main():
         seen.add(b['geometry']);cases.append(b)
         if len(cases)==args.limit:break
     methods=['original','static','size','generic','joint','adaptive']
-    protocol=dict(scope=__doc__,budget=args.budget,seeds=args.seeds,methods=methods,
+    build=HERE/('build_timed_elite_bounded' if args.bound_elite_size else 'build_timed')
+    protocol=dict(scope=__doc__,budget=args.budget,seeds=args.seeds,methods=methods,elite_count_bounded=args.bound_elite_size,
                   cases=[dict(instance=b['instance'],geometry=b['geometry'],role='development') for b in cases],
                   code_hashes={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in
                                ['timed_experiment.py','build.py','research_hook.cpp','research_hook.hpp','scheduler.hpp']},
-                  build_manifest=json.loads((HERE/'build_timed/manifest.json').read_text()),
-                  binary_sha256=hashlib.sha256((HERE/'build_timed/original_mdm').read_bytes()).hexdigest())
+                  build_manifest=json.loads((build/'manifest.json').read_text()),
+                  binary_sha256=hashlib.sha256((build/'original_mdm').read_bytes()).hexdigest())
     fingerprint=hashlib.sha256(json.dumps(protocol,sort_keys=True).encode()).hexdigest()[:12]
     (out/f'protocol.{fingerprint}.json').write_text(json.dumps(protocol,indent=2)+'\n')
     # No-budget original must still reproduce the supplied fixed-iteration solver.
-    control=run_one(cases[0]['instance'],42,'original',0.,out/f'fidelity.{fingerprint}.json')
-    assert control['native_returned'] and control['native_cost_after_return']==cases[0]['cost']
+    control=run_one(cases[0]['instance'],42,'original',0.,out/f'fidelity.{fingerprint}.json',args.bound_elite_size)
+    assert control['native_returned']
+    if not args.bound_elite_size:assert control['native_cost_after_return']==cases[0]['cost']
     for b in cases:
         for seed in args.seeds:
             order=methods[:];random.Random(b['instance']+str(seed)).shuffle(order);first=[]
             for policy in order:
                 target=out/f"{b['instance']}.seed{seed}.{policy}.{fingerprint}.json"
-                row=json.loads(target.read_text()) if target.exists() else run_one(b['instance'],seed,policy,args.budget,target)
+                row=json.loads(target.read_text()) if target.exists() else run_one(b['instance'],seed,policy,args.budget,target,args.bound_elite_size)
                 if row['anytime']:first.append((row['anytime'][0]['cost'],row['anytime'][0]['route']))
                 print(json.dumps({k:v for k,v in row.items() if k not in ('route','anytime')}),flush=True)
             if first:assert all(r==first[0] for r in first),'Unequal initial construction across policies'

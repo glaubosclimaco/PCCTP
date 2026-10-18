@@ -1,5 +1,55 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 7h23 — diagnóstico negativo e baseline com elite delimitada
+
+- Repetiçãomonotônicad0df6114da43 TERMINOU162runs,9DEV/3seeds/6políticas/1s.
+ Audit_timedPASS162; 162viáveis,1crash(-11),semhardtimeout. Custosincumbentes
+ persistidos antesdocrashtambémsãoauditados; falhanãoomitida. Summaryjointvs
+ original2melhores/24empates/1pior, médiaporgeom−0.0000231; vsadaptive1/25/1,
++0.0008057. Semganhorelevante. Loteccb595d69e76continuaINVALIDADOporclock.
+- Crashgr48seed43adaptive temstackget→encode→mining. Descobertadefeitolegado:
+ mineração recebeelite_size(capacidade10), masmatrizsópreencheelite_element
+ linhas e mallocnãoinicializarestante. verify_elite_bounds.py extraiencoder
+ real eporacessochecked+linhaspoisonadasreproduzfalhacom10;ocupado1codifica
+ cicloexato. elite_encode_diagnostic.json preservastack/hash;testelogscope
+ explícito,não éreprodução damemória original.
+- Novaopção --bound-elite-sizecorrigesomenteacópiacompilada,passaelite_element
+ para mining, buildssufixo_elite_bounded,macro PCCTP_ELITE_BOUNDED,método
+ original_MDM_legacy_decoder_index_initialized_elite_count_bounded. Originais
+ intactos. run.py/timed_experiment.py aceitamflag e temporáriosseparados.
+- Buildsprofile e timed_elite_boundedconcluídos. Smoke3seeds42/43/44gr48adaptive
+ emelite_smoke/retornaramexit0,custo3571. Não éprovaausênciaoutrosbugs.
+- Todoswrappersnativosnovos(inclprofiling)usamclock_gettimeCLOCK_MONOTONIC.
+ Manifesto novo temclock_source e instrumented_sha256 de todosfontescompilados;
+ não reutilizar antigo manifest semessesdados. --model-filepara pesosfuturos.
+- ColetaNOVAATIVA sessão12929:
+ python3 experiments/original_mdm/profile_moves.py --train-limit 20 --dev-limit 0
+ --include-incomplete --bound-elite-size --output-dir
+ experiments/original_mdm/move_profiles_monotonic_elite_bounded
+ Log /tmp/pcctp_safe_monotonic_training_profiles.log. Protocolo59eb88271c01.
+ Prefixo2000calls,timeout90s/caso. Lock comPID27830. NÃOduplicar/profiling
+ domesmocasooutrodirporque temporários porinstância/seed/método são compartilhados.
+ Primeiraa280geraregistros;semresultadofinalainda. Podelevar20–30min.
+- Fontesexatasdocoletor/build/hook/runfrozen porSHA emprofile_source_versions/.
+ Clock/baseline metadata obrigatórios na nova base. Checkpointsdiferentes vs
+ baseline decoder-only registrados embaseline_checkpoint_differences,nãoassert
+ igualdadepois écorreçãodoalgoritmo. Não mistura comperfilantigo.
+- Pipelineconfigurávelpronto: apóscompletion59eb88271c01, executar
+ OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3
+ experiments/original_mdm/operator_prediction.py --all-profiles --profile-dir
+ experiments/original_mdm/move_profiles_monotonic_elite_bounded
+ --require-monotonic-elite
+ eexport_operator_models.py --profile-dir MESMODIR --require-monotonic-elite.
+ Argscompletionprotocolinferidoquandoapenasumplano. Modelosnovosprecisam20TRAIN,
+ clocks/fixchecados, ebuild--model-fileexplicitoparabenchmarkseguinte.
+
+Próximo: acompanhar20TRAIN/semduplicar,avaliar/retrainnovabase. Sóentãoavaliar
+ política comumrobustacorrigida(modelosatualizados)contracontroles. Osresultados
+ atuaisnão sustentamcontribuiçãodeML; CTPnãoimplementar; testereservadointacto.
+ Incluircorreções de baseline econtroles na futuraauditoriadoartigo,queainda
+ nãoestápronto. Include/Utils.h preservado; automaçãocontinua.
+
+
 ## Retomada às 7h11 — prazo comum, falha de relógio detectada e repetição
 
 - Implementado --timed embuild.py, build_timed/ separado, originalsemwrapper

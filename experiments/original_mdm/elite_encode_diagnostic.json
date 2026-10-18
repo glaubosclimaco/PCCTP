@@ -1,0 +1,55 @@
+{
+  "case": "g_gr48_VT16_T16_W16_25.seed43.adaptive.d0df6114da43",
+  "exit_code": -11,
+  "exception": {
+    "codes": "0x0000000000000001, 0xffffffff3e80c18c",
+    "rawCodes": [
+      1,
+      -3246341748
+    ],
+    "type": "EXC_BAD_ACCESS",
+    "signal": "SIGSEGV",
+    "subtype": "KERN_INVALID_ADDRESS at 0xffffffff3e80c18c"
+  },
+  "frames": [
+    {
+      "imageOffset": 8824,
+      "symbol": "get(matriz*, int, int)",
+      "symbolLocation": 12,
+      "imageIndex": 2
+    },
+    {
+      "imageOffset": 69748,
+      "symbol": "encode(matriz*, int, int)",
+      "symbolLocation": 420,
+      "imageIndex": 2
+    },
+    {
+      "imageOffset": 70232,
+      "symbol": "mining(matriz*, int, int, padrao*&, int, int)",
+      "symbolLocation": 52,
+      "imageIndex": 2
+    },
+    {
+      "imageOffset": 59504,
+      "symbol": "grasp_basico(vertice*, matriz*, float, int, float, int, int, int, float, int, __sFILE*, char*, int, int*&, int, int, int&, int&, int, int)",
+      "symbolLocation": 432,
+      "imageIndex": 2
+    },
+    {
+      "imageOffset": 81344,
+      "symbol": "main",
+      "symbolLocation": 576,
+      "imageIndex": 2
+    },
+    {
+      "imageOffset": 24800,
+      "symbol": "start",
+      "symbolLocation": 2360,
+      "imageIndex": 3
+    }
+  ],
+  "crash_report_sha256": "9066b0687c94b775463e471242e502bed4165fe1d022d5dbeb8ce88a5c9c7517",
+  "diagnosis": "Encoder receives allocated elite capacity rather than occupied rows. Poisoned-row extracted-source test reproduces invalid access; exact original crash memory was not captured.",
+  "repair": "Separate optional correction passes elite_element to mining; original user sources unchanged."
+}

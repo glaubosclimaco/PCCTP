@@ -100,6 +100,9 @@ void research_export(const char* path,double value,int* route) {
 #ifdef PCCTP_DECODER_INITIALIZED
   method="original_MDM_legacy_decoder_index_initialized";
 #endif
+#ifdef PCCTP_ELITE_BOUNDED
+  method="original_MDM_legacy_decoder_index_initialized_elite_count_bounded";
+#endif
   out << std::setprecision(16) << "{\"method\":\"" << method << "\",\"seed\":" << seed
       << ",\"clock_source\":\"clock_gettime(CLOCK_MONOTONIC)\""
       << ",\"support_absolute\":" << support << ",\"stability_percent\":" << stability

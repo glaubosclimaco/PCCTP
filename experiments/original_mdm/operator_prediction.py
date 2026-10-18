@@ -65,16 +65,29 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--all-profiles',action='store_true')
     parser.add_argument('--partial',action='store_true',help='Explicit snapshot of an unfinished expanded collection')
+    parser.add_argument('--profile-dir',type=Path,default=HERE/'move_profiles')
+    parser.add_argument('--completion-protocol')
+    parser.add_argument('--require-monotonic-elite',action='store_true')
     args=parser.parse_args()
-    collection_complete=(HERE/'move_profiles/completion.093590aaa738.json').exists()
+    profile_dir=args.profile_dir.resolve()
+    completion_protocol=args.completion_protocol
+    if completion_protocol is None:
+        if profile_dir==(HERE/'move_profiles').resolve():completion_protocol='093590aaa738'
+        else:
+            plans=list(profile_dir.glob('protocol.*.json'))
+            if len(plans)!=1:parser.error('Select --completion-protocol when the profile directory has multiple plans')
+            completion_protocol=plans[0].stem.split('.')[-1]
+    collection_complete=(profile_dir/f'completion.{completion_protocol}.json').exists()
     if args.all_profiles and not args.partial and not collection_complete:
         parser.error('Expanded collection unfinished; use --partial for a labeled exploratory snapshot')
     began=time.perf_counter();blocks=[];manifest={};audit=[]
     pattern='g_*.json' if args.all_profiles else 'g_*.4e1c42c7aa48.json'
     seen=set()
-    for path in sorted((HERE/'move_profiles').glob(pattern)):
+    for path in sorted(profile_dir.glob(pattern)):
         s=json.loads(path.read_text())
         if 'records' not in s:continue
+        if args.require_monotonic_elite:
+            assert s.get('clock_source')=='clock_gettime(CLOCK_MONOTONIC)' and s.get('elite_count_bounded') is True
         key=(s['instance'],s['seed'])
         if key in seen:raise ValueError('Duplicate profile for instance/seed')
         seen.add(key);d=read_instance(ROOT/'data'/s['instance'])
@@ -119,6 +132,8 @@ def main():
     summary={name:{metric:float(np.mean([r['metrics'][name][metric] for r in rows]))
                    for metric in rows[0]['metrics'][name]} for name in rows[0]['metrics']}
     result=dict(scope='Exploratory LOGO on TRAIN geometries; observed executed actions only, no policy-value claim',
+                profile_directory=str(profile_dir),collection_protocol=completion_protocol,
+                requires_monotonic_elite=args.require_monotonic_elite,
                 training_geometries=len(geometries),
                 expanded_collection_complete=collection_complete,partial_snapshot=bool(args.all_profiles and args.partial),
                 code_sha256=code_sha256,source_hashes=manifest,

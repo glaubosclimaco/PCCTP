@@ -13,12 +13,17 @@ parser.add_argument('--initialize-decoder-index',action='store_true')
 parser.add_argument('--profile-moves',action='store_true')
 parser.add_argument('--scheduled',action='store_true')
 parser.add_argument('--timed',action='store_true')
+parser.add_argument('--bound-elite-size',action='store_true')
+parser.add_argument('--model-file',type=Path)
 args=parser.parse_args()
 if args.profile_moves and not args.initialize_decoder_index:
     parser.error('Move profiling requires the explicitly corrected decoder baseline')
 if args.scheduled and (not args.initialize_decoder_index or args.profile_moves):parser.error('Scheduled build requires corrected decoder and no profiling')
 if args.timed and not args.scheduled:parser.error('Timed build requires --scheduled')
 BUILD=Path(__file__).with_name('build_timed' if args.timed else 'build_scheduled' if args.scheduled else 'build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
+if args.bound_elite_size:
+    if not args.initialize_decoder_index:parser.error('Elite-count correction requires corrected decoder')
+    BUILD=BUILD.with_name(BUILD.name+'_elite_bounded')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -51,7 +56,9 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
         text=text.replace(anchor,'research_snapshot(iteracao+1, melhor_custo, s_melhor_rota);\n\t\t'+anchor)
         anchor='qtd_de_padroes = mining(conjunto_elite, elite_size, qtd_n, padroes, sup_min, max_padroes);'
         assert text.count(anchor)==1
-        text=text.replace(anchor,'research_mining();\n\t\t\t'+anchor)
+        corrected=anchor.replace('conjunto_elite, elite_size,','conjunto_elite, elite_element,') if args.bound_elite_size else anchor
+        text=text.replace(anchor,'research_mining();\n\t\t\t'+corrected)
+        if args.bound_elite_size:manifest['changes'].append('EXPLICIT BUG FIX: pass occupied elite count to mining/encode, not allocated capacity; never read uninitialized elite rows')
         manifest['changes'].append('grasp: observational checkpoint and mining-call hooks; algorithm unchanged')
         if args.profile_moves or args.scheduled:
             declaration='void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,\n\t\tint *vertices_solucao, int tamanho_rota, int d, int prize, int qtd_n)'
@@ -71,6 +78,9 @@ void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,
             anchor='void busca_local(Vertice *vertices'
             assert text.count(anchor)==1
             text=text.replace(anchor,wrapper+'\n'+anchor)
+            text=text.replace('auto start=std::chrono::steady_clock::now();','double start=research_monotonic_seconds();')
+            text=text.replace('std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count()',
+                              'research_monotonic_seconds()-start')
             text='#include <vector>\n#include <chrono>\n'+text
             manifest['changes'].append('OBSERVATIONAL move profiling: copy successor array, time each operator, export first 2000 calls; no RNG/decision change')
             if args.scheduled:
@@ -124,7 +134,7 @@ for name in ['research_hook.hpp','research_hook.cpp']:
     shutil.copyfile(Path(__file__).with_name(name),BUILD/name)
 if args.scheduled:
     home=Path(__file__).parent
-    frozen=home/'operator_models/models.52b8e9ae6089.json'
+    frozen=args.model_file.resolve() if args.model_file else home/'operator_models/models.52b8e9ae6089.json'
     models=json.loads(frozen.read_text())['models']
     names=['operator_only','operator_size','operator_generic','operator_state']
     header='// Frozen TRAIN-only models; ABI modes 0/1/2/3.\n'
@@ -150,6 +160,7 @@ compiler=shutil.which('g++-15') or shutil.which('g++')
 flags=[compiler,'-std=gnu++11','-O2','-fpermissive','-Wno-narrowing']
 if args.initialize_decoder_index: flags.append('-DPCCTP_DECODER_INITIALIZED')
 if args.timed:flags.append('-DPCCTP_TIMED')
+if args.bound_elite_size:flags.append('-DPCCTP_ELITE_BOUNDED')
 log=[]
 def run(command):
     process=subprocess.run(command,capture_output=True,text=True)
@@ -166,6 +177,9 @@ if args.scheduled:sources+=['operator_state.cpp','operator_inference.cpp']
 command=flags+['-I',str(BUILD),*[str(BUILD/name) for name in sources],'-o',str(BUILD/'original_mdm')]
 run(command)
 manifest['command']=command
+manifest['clock_source']='clock_gettime(CLOCK_MONOTONIC)'
+manifest['instrumented_sha256']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(BUILD.iterdir())
+                               if p.suffix in ('.cpp','.hpp','.h')}
 manifest['compiler']=subprocess.check_output([compiler,'--version'],text=True).splitlines()[0]
 (BUILD/'compiler.log').write_text('\n'.join(log))
 (BUILD/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

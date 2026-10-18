@@ -4,6 +4,7 @@ No scheduling policy is implemented here. The measured native call excludes
 route feature extraction and cannot be reported as the full policy overhead.
 """
 import ctypes
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -18,14 +19,22 @@ from experiments.ml_lns.pilot import read_instance,validate
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--profile-dir',type=Path,default=HERE/'move_profiles')
+    parser.add_argument('--require-monotonic-elite',action='store_true')
+    args=parser.parse_args();profile_dir=args.profile_dir.resolve()
+    if args.require_monotonic_elite:
+        assert list(profile_dir.glob('completion.*.json')),'Complete the profile collection before exporting models'
     versions=HERE/'operator_prediction_sources';versions.mkdir(exist_ok=True)
     for name in ['export_operator_models.py','operator_prediction.py','operator_inference.cpp']:
         path=HERE/name;content=path.read_bytes()
         (versions/(hashlib.sha256(content).hexdigest()+path.suffix)).write_bytes(content)
     blocks=[];sources={};seen=set()
-    for path in sorted((HERE/'move_profiles').glob('g_*.json')):
+    for path in sorted(profile_dir.glob('g_*.json')):
         s=json.loads(path.read_text())
         if 'records' not in s or s['role']!='train':continue
+        if args.require_monotonic_elite:
+            assert s.get('clock_source')=='clock_gettime(CLOCK_MONOTONIC)' and s.get('elite_count_bounded') is True
         key=(s['instance'],s['seed']);assert key not in seen;seen.add(key)
         source=ROOT/'experiments/ml_lns/decoder_initialized_states'/f"{s['instance']}.seed{s['seed']}.json"
         assert hashlib.sha256(source.read_bytes()).hexdigest()==s['source_sha256']
@@ -74,6 +83,7 @@ def main():
     hashes={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in
             ['export_operator_models.py','operator_prediction.py','operator_inference.cpp']}
     payload=dict(scope=__doc__,training_geometries=geometries,observations=len(x),source_hashes=sources,
+                 profile_directory=str(profile_dir),requires_monotonic_elite=args.require_monotonic_elite,
                  code_hashes=hashes,feature_names=NAMES,models={name:{k:v.tolist() if isinstance(v,np.ndarray) else v
                               for k,v in model.items()} for name,model in models.items()},
                  native_verification=dict(status='PASS',action_scores_checked=checks,max_absolute_error=maxerror,

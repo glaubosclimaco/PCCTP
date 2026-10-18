@@ -215,3 +215,37 @@ por enumeração não são invalidados por isso, mas suas medições de tempo ex
 revisão/recoleta antes do artigo. O piloto novo ainda usa os pesos congelados
 antigos como diagnóstico; uma conclusão final exige nova coleta TRAIN com
 relógio explícito, sem misturá-la silenciosamente com os perfis antigos.
+
+## Repetição monotônica e defeito no conjunto de elite, às 7h23
+
+Protocolo d0df6114da43 terminou162execuções; a auditoria de rotas e relógios
+passou. Há1saídaanormal, conservada na análise. O modelo conjunto não mostrou
+vantagem relevante: frente ao original,2pares melhores,24empates,1pior,
+diferença relativa média por geometria−0.0000231; frente ao adaptativo,1melhor,
+25empates,1pior,+0.0008057. Não interpretar isso como superioridade nem realizar
+testes para procurar significância. Tempos de treino ainda são os antigos.
+
+O crashgr48/seed43/adaptive ocorreu emget→encode→mining. O código chama mineração
+comelite_size(capacidade10), emboraadd_to_elite sópreenchaelite_elementlinhas.
+A alocação não inicializa as linhas restantes. `verify_elite_bounds.py` extraiu
+oencoder original e mostrou que capacidade10acessa sucessor inválido emlinhas
+nãoocupadas, enquanto quantidade1codifica exatamente umciclo. Não éumdumpda
+memória específica docrash; éuma reprodução independente dodefeito nessecaminho.
+
+Novaopção explícita `--bound-elite-size` passa quantidadeocupada àmineração,
+cria buildscomsufixo_elite_bounded eidentifica ométodo corrigido. Originais
+intactos, dadosnão misturados.3repetiçõesadaptativasgr48(seed42/43/44)com1s
+retornaramsemcrash,custo3571. Isso não prova ausência deoutrosdefeitos.
+
+Nova coleta exclusivamenteTRAIN emmove_profiles_monotonic_elite_bounded/:
+20geometrias,clock_gettime(CLOCK_MONOTONIC),correçõesdecoder+contagemelite,
+uma variante/semente42,90s/caso,prefixo2000chamadas. Protocolo59eb88271c01.
+O manifesto agora contém hashes dosfontesinstrumentados e relógio explícito;
+coletores não podem reutilizar perfis antigos como sefossem dessebuild.
+Mudanças de custo frenteao baseline decoder-only são registradas, nãoapagadas
+nemtratadas comoerrodainstrumentação. Metadados identificam ométodo e correção.
+
+O avaliador eexportador aceitam diretório explícito echecagemobrigatória
+monotonic+elitebounded; novo buildaceita--model-filecongelado. A coleta deve
+concluir antesdenovotreino/benchmark. As probabilidades antigas efeatures são
+apenas diagnóstico de desenvolvimento; nadafoiabertodevalidação/teste.
