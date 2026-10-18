@@ -35,6 +35,7 @@ def design(x,moves,mean,scale,context):
     if not context:return hot
     z=np.clip((x-mean)/scale,-5.,5.)
     if context=='size':z=z[:,:2]
+    if context=='generic':z=z[:,[0,1,2,3,7,8,9]]
     return np.column_stack((hot,(hot[:,:,None]*z[:,None,:]).reshape(len(x),-1)))
 
 def fit(x,moves,y,logtime,weight,context):
@@ -109,7 +110,8 @@ def main():
         geometry_counts={g:sum(len(b['y']) for b in train if b['geometry']==g) for g in geometries if g!=geometry}
         weight=np.concatenate([np.full(len(b['y']),1./geometry_counts[b['geometry']]/len(geometry_counts)) for b in train])
         scores={}
-        for name,context in [('operator_only',False),('operator_size','size'),('operator_state',True)]:
+        for name,context in [('operator_only',False),('operator_size','size'),
+                             ('operator_generic','generic'),('operator_state',True)]:
             model=fit(x,moves,y,t,weight,context)
             a=design(test['x'],test['moves'],model['mean'],model['scale'],context)
             scores[name]=metrics(test['y'],expit(a@model['probability']),test['t'],a@model['timing'])

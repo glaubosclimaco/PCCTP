@@ -71,3 +71,44 @@ anteriores da mesma geometria podem existir: LOGO deve reter todas as variantes
 da geometria fora do treino simultaneamente e ponderar por geometria.
 Falhas sem primeiro checkpoint são registradas e não apagam geometrias do plano.
 Protocolo093590aaa738. Desenvolvimento/validação/teste não entram nessa ampliação.
+
+## Coleta ampliada e ablação, às 6h51
+
+Coleta terminou sem falhas de geração nas20geometriasTRAIN planejadas. Incluir
+perfil anterior de outra variante de gr229 produz21perfis de treino,32808chamadas.
+LOGO retém todas as variantes da geometria avaliada e pondera por geometria.
+Isso é avaliação exploratória no treino, não avaliação reservada.
+
+Resultados `operator_prediction.830f5d4ca7e1.json`:
+
+| Modelo por operador | Brier | Logloss | MAE logtempo |
+|---|---:|---:|---:|
+| Somente intercepto |0.117835|0.377717|1.272162|
+| Tamanho da instância/rota |0.116365|0.372386|0.468763|
+| Estado genérico sem cobertura/prêmio |0.114996|0.368022|0.456017|
+| Estado completo |0.113794|0.364934|0.470808|
+
+Os descritores de cobertura/prêmio melhoram um pouco a previsão de melhoria
+(14de20geometrias emBrier) e pioram o tempo frente ao estado genérico. Não há
+inferência confirmatória, nem justificativa para alegar ganho de busca a partir
+dessa tabela. O modelo genérico preserva tamanho, fração selecionada/obrigatória,
+custos das arestas e proxy de economia; retira quota, prêmio e cobertura crítica.
+
+Modelos finais de treino congelados em `operator_models/models.52b8e9ae6089.json`,
+semDEV/validação/teste no treino. `operator_inference.cpp` foi comparado com
+Python em102vetores incluindo extrapolação/clipping,15ações e4modelos:
+6120comparações,erro máximo5.33e-15. Chamadas viaPython/ctypes~20–29us excluem
+extração dos descritores da rota, que ainda precisa ser implementada/verificada
+no caminho nativo e cobrada na política completa.
+
+Mapa ABI atual:0=operator_only,1=operator_size,2=operator_generic,3=operator_state.
+O modelo anterior `models.bfc2363c359b.json` tem apenas3modelos e foi verificado
+com a versão anterior do C++ (arquivada porSHA); não usar seu índice2 com o ABI
+atual. Usar explicitamente nomes/contextos e o modelo de4cabeças acima.
+
+Próximo experimento: mesma previsão de tempo genérica para todos os modelos
+com estado, variando a previsão de melhoria. Comparar ordem original, regra
+estática por operador, tamanho, estado genérico, estado com cobertura/prêmio,
+e adaptação simples. Manter todos os operadores elegíveis até completar a
+varredura após a última melhoria; incluir todo overhead e preservar censura.
+Uma política pode mudar a trajetória, portanto avaliar em execução completa.

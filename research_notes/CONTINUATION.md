@@ -1,5 +1,46 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h51 — coleta final e inferência nativa verificada
+
+- Coleta093590aaa738 TERMINOU:20geometriasTRAIN planejadas,semfalhasdegeração.
+ Sessão26945 encerrada. Total no banco23perfis/22geometrias(2DEV+20TRAIN),
+36334chamadas;21perfisTRAIN/32808chamadas porvarianteextra degr229.
+10perfis checkpoint-only e12capados em2000chamadas. Nãoalegar70iterações
+ para interrompidos. Todasasrotas/custos antes/depois eproveniênciaauditados.
+- LOGO completo todosTRAIN terminou: `operator_prediction.eb53cc02a54c.json`
+ compara3modelos. Acrescentadaablação genérica que retira quota,prêmio,cobertura
+ mantendo tamanho/seleção/obrigatórios/custo/variação/economia. Resultado4modelos
+ em `operator_prediction.830f5d4ca7e1.json` (sessão29524 encerrada).
+ Brier operador_only0.117835,size0.116365,generic0.114996,full0.113794.
+ Logloss0.377717/0.372386/0.368022/0.364934. LogtempoMAE
+1.272162/0.468763/0.456017/0.470808. FullvencegenericemBrier14/20geometrias;
+ sinalpequeno,semtesteconfirmatório,semvalor de política demonstrado.
+- Implementados `export_operator_models.py` e `operator_inference.cpp`:
+ ajustes finais SOMENTE20TRAIN,mesmos pesosporgeometria e penalidadesfixas.
+ Modelos congelados em `operator_models/models.52b8e9ae6089.json`.
+ Verificação nativa vsPython102vetores(inclclipping),15ações,4modelos:
+6120comparaçõesPASS,erro máximo5.33e-15. Custo viaPython/ctypes20–29us,
+ EXCLUIextração de estado da rota. FonteexataPY/CPP arquivada porSHA.
+ Sessões15470/13089encerradas; log `/tmp/pcctp_operator_models_ablation.log`.
+- ABIATUAL0=operator_only,1=operator_size,2=operator_generic,3=operator_state.
+ Modeloantigo3cabeças bfc2363c359b tinhaABIíndice2=full comCPPantigoarquivado;
+ NÃOusá-lo comCPPnovo. Usar52b8e9ae6089 eíndicesexplícitos parafuturopiloto.
+- Ainda NÃO implementados extração nativa dosdescritores nem política noMDM.
+ O modelo prediz ocorrência demelhoria, não magnitude. Umrankprob/tempo é
+ hipóteseagoraautorizada para piloto, não conclusão. Compararfullvsgeneric com
+ MESMAcabeçadetempo genérica paraisolar cobertura/prêmio;includeinferência.
+- Nota `research_notes/operator_scheduling_protocol.md` contém tabela,limitações
+ einstruções donovopiloto. Semprocessosativosdesta retomada.
+
+Próximo concreto: implementareverificar extraçãonativa contraPython nasrotas
+ exportadas; criarbuildMDMescalonadoseparado comtodos15operadores (semomissão),
+ reordenando somenteapós mudança de estado. Controlesordemoriginal,prioridade
+ estáticaporoperador,tamanho,generic,full eadaptaçãosimples; usarinstânciasDEV,
+ mesmosorçamentostotais/sementes. Nenhum reservado aberto. Se nãohaverganho
+ preservarrefutação. Novidadegenérica limitada pelosantecedentesjáregistrados.
+ Objetivofinalnãoatingido; artigo continuaesqueleto,CTPforadoescopo.
+
+
 ## Retomada às 6h41 — controle de tamanho e antecedentes diretos
 
 - Coleta ampliada093590aaa738 ainda ATIVA sessão26945, log
