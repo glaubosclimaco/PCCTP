@@ -1,8 +1,681 @@
 {
   "scope": "Conservative development diagnostic, sparse checkpoints and historical timings; no confirmed speed claim",
-  "assessed_queries": 0,
-  "missing_timing_cases_or_queries": 13,
-  "improving_queries": 0,
-  "already_matched_by_MDM": 0,
-  "rows": []
+  "assessed_queries": 480,
+  "missing_timing_cases_or_queries": 0,
+  "improving_queries": 64,
+  "already_matched_by_MDM": 8,
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "geometry": "g_a280",
+      "phase": 1,
+      "gain": 0.00047460844803037496,
+      "optimistic_repair_time": 47.181918292,
+      "cost": 2106.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "geometry": "g_a280",
+      "phase": 1,
+      "gain": 0.00047460844803037496,
+      "optimistic_repair_time": 47.355241084,
+      "cost": 2106.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "phase": 1,
+      "gain": 0.015601783060921248,
+      "optimistic_repair_time": 0.12654749999999781,
+      "cost": 2650.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "phase": 1,
+      "gain": 0.015601783060921248,
+      "optimistic_repair_time": 0.11759116700000093,
+      "cost": 2650.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "phase": 1,
+      "gain": 0.0036101083032490976,
+      "optimistic_repair_time": 0.2887293750000004,
+      "cost": 5244.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.2059307080000022,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.1370342910000045,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.1334484999999984,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.5568798749999982,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.31710666599999915,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.008123398288283932,
+      "optimistic_repair_time": 0.5259400420000003,
+      "cost": 20513.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.5485459169999968,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.4381127910000001,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.2615385409999985,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "gain": 0.010396015666553841,
+      "optimistic_repair_time": 0.5689109589999984,
+      "cost": 20466.0,
+      "recorded_MDM_dominates": true,
+      "witness": {
+        "iteration": 5,
+        "cost": 20466,
+        "seconds": 0.205746
+      }
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.08956624999999888,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09363150000000245,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.12516149999999895,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.09374983399999506,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.1140417079999966,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09559883299999852,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09279933300000379,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.10547995799999824,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.09317229200000013,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09680162499999936,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.09253683299999862,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09776237499999665,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.11186858400000146,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.091013166000005,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.10156212500000264,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.007194244604316547,
+      "optimistic_repair_time": 0.09664604100000132,
+      "cost": 276.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.17832600000000012,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "phase": 1,
+      "gain": 0.0035971223021582736,
+      "optimistic_repair_time": 0.09388112499999748,
+      "cost": 277.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.09003733299999866,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.0899823749999989,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.12088879199999597,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.10904133399999766,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.08937404099999996,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.10503754100000223,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.087507166999999,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.11142987499999962,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.09364775000000308,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.1034758750000016,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.0902753749999981,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.08889066599999823,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.14574120900000126,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.002881844380403458,
+      "optimistic_repair_time": 0.08790083299999979,
+      "cost": 346.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.08713025000000202,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.01440922190201729,
+      "optimistic_repair_time": 0.10014745800000285,
+      "cost": 342.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.01440922190201729,
+      "optimistic_repair_time": 0.08158808399999701,
+      "cost": 342.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.01440922190201729,
+      "optimistic_repair_time": 0.09779279200000063,
+      "cost": 342.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.09101587499999725,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.08648774999999703,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.043227665706051875,
+      "optimistic_repair_time": 0.08670099999999864,
+      "cost": 332.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "phase": 1,
+      "gain": 0.005763688760806916,
+      "optimistic_repair_time": 0.10233016599999517,
+      "cost": 345.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.00048590864917395527,
+      "optimistic_repair_time": 40.025968791,
+      "cost": 2057.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.00048590864917395527,
+      "optimistic_repair_time": 40.02846012500001,
+      "cost": 2057.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.0014577259475218659,
+      "optimistic_repair_time": 40.15946650000001,
+      "cost": 2055.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.00048590864917395527,
+      "optimistic_repair_time": 40.016820499999994,
+      "cost": 2057.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.00048590864917395527,
+      "optimistic_repair_time": 40.027287666999996,
+      "cost": 2057.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.0009718172983479105,
+      "optimistic_repair_time": 40.032121625,
+      "cost": 2056.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.0014577259475218659,
+      "optimistic_repair_time": 40.012107,
+      "cost": 2055.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "phase": 1,
+      "gain": 0.0009718172983479105,
+      "optimistic_repair_time": 40.04940720799999,
+      "cost": 2056.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    },
+    {
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "geometry": "g_gr96",
+      "phase": 1,
+      "gain": 0.005295032597544429,
+      "optimistic_repair_time": 0.44181274999999554,
+      "cost": 30057.0,
+      "recorded_MDM_dominates": false,
+      "witness": null
+    }
+  ]
 }

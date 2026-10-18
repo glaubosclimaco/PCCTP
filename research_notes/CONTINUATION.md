@@ -1,5 +1,41 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 5h30 — lema e reparação construtiva
+
+Foi implementada e verificada uma construção de rota para qualquer atribuição
+condicional viável de visitas, dentro do operador `route_context`:
+
+- `selection_lift.py`, `verify_selection_lift.py` e prova para revisão em
+  `selection_lifting_lemma.md`.
+- Orçamento de k arestas extras (em vez de2k) é suficiente; uma família
+  construtiva de exemplos exige k no pior caso. Não afirmar novidade sem
+  revisão bibliográfica. Foram verificadas1954 construções e o limite inferior
+  por enumeração de ciclos para k=1..6.
+- `best_lift` enumera a seleção condicional e reconecta de forma heurística as
+  três melhores atribuições por substituto aditivo. O substituto não é bound
+  do custo, e não há certificado de reparação ótima para essa heurística.
+- `probe_lifting.py`, sessão85390, terminou: em20estados/480vizinhanças corrigidas
+  com tempos, o MIP limitado melhorou64consultas, a construção melhorou69;
+  igualou/superou52das64melhoras do MIP e foi estritamente melhor em14consultas.
+  Nenhuma construção ficou abaixo de um ótimo local certificado pelo MIP
+  (checagem obrigatória no script). Ainda é diagnóstico, não algoritmo completo.
+- Triagem temporal:8das64melhoras locais já eram igualadas pelo MDM em checkpoint
+  anterior ao tempo otimista concedido à consulta. As outras não são vitórias
+  temporais provadas; checkpoints são esparsos e os tempos históricos.
+- `lifting_prior_art.md` registra antecedentes relevantes: HDR(2023) e DRHG,
+  AAAI2025. Contração de caminhos e aprendizado com contração já têm antecedentes.
+
+Próximo passo: testar a construção como controle barato dentro de busca
+iterativa, e como solução inicial viável para o MIP; incluir todo o custo de
+seleção. Comparar qualidade por tempo com MDM continuado e ALNS antes de atribuir
+ganho a ML. Não abandonar nem omitir o fato de a regra simples ser competitiva.
+
+As coletas corrigidas das primeiras e demais variantes ainda avançam
+(`/tmp/pcctp_decoder_initialized_states.log`,
+`/tmp/pcctp_decoder_initialized_other_variants.log`). Coletor temporizado1
+terminou com20estados. Pode retomar incrementalmente na mesma saída, cuja trava
+evita duplicações. Teste e validação continuam reservados por geometria.
+
 ## Retomada às 5h20 — processos e auditoria temporal
 
 - Sessão87177: primeiras variantes corrigidas, log

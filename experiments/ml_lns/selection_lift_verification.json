@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "random_contexts": 80,
+  "feasible_assignments_lifted": 1954,
+  "retained_outside_sizes": [
+    1,
+    2,
+    3
+  ],
+  "extra_edge_budgets": [
+    "k",
+    "2k"
+  ],
+  "worst_case_lower_bound_checks": [
+    {
+      "k": 1,
+      "minimum_required_extra_edges": 1,
+      "retained_tours_enumerated": 1
+    },
+    {
+      "k": 2,
+      "minimum_required_extra_edges": 2,
+      "retained_tours_enumerated": 1
+    },
+    {
+      "k": 3,
+      "minimum_required_extra_edges": 3,
+      "retained_tours_enumerated": 2
+    },
+    {
+      "k": 4,
+      "minimum_required_extra_edges": 4,
+      "retained_tours_enumerated": 6
+    },
+    {
+      "k": 5,
+      "minimum_required_extra_edges": 5,
+      "retained_tours_enumerated": 24
+    },
+    {
+      "k": 6,
+      "minimum_required_extra_edges": 6,
+      "retained_tours_enumerated": 120
+    }
+  ],
+  "scope": "Finite independent assignment tests; proof reviewed separately"
+}
