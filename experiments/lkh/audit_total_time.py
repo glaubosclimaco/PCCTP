@@ -8,9 +8,12 @@ from experiments.ml_lns.pilot import read_instance,validate
 HERE=Path(__file__).resolve().parent;OUT=HERE/'total_time'
 
 
-def audit(validation=False):
+def audit(validation=False,horizon30=False):
     global OUT
+    assert not (validation and horizon30)
     if validation: OUT=HERE/'validation'
+    if horizon30: OUT=HERE/'horizon30'
+    total_budget=30. if horizon30 else 10.
     assert (OUT/'completion.json').exists(),'Batch still running'
     cases=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows']
     if validation:
@@ -33,7 +36,7 @@ def audit(validation=False):
                 timing[mode].append(r)
                 assert r['instance']==name and r['seed']==seed and r['mode']==mode
                 assert native['input_sha256']==hashlib.sha256((ROOT/'data'/name).read_bytes()).hexdigest()
-                budget=10. if mode=='mdm' else 9.
+                budget=total_budget if mode=='mdm' else total_budget-1.
                 assert native['budget_seconds']==budget and native['elite_count_bounded']
                 assert native['clock_source']=='clock_gettime(CLOCK_MONOTONIC)'
                 assert native['feasible_before_deadline']==bool(native['anytime'])==r['feasible']
@@ -54,7 +57,7 @@ def audit(validation=False):
                     assert set(lkh['route'])==set(native['route'])
                     assert validate(d,[mapping[v] for v in lkh['route']])==lkh['cost']
                 if r['cost']<native['cost']:
-                    assert mode=='hybrid' and r['lkh_used'] and r['wall_seconds']<=10.
+                    assert mode=='hybrid' and r['lkh_used'] and r['wall_seconds']<=total_budget
                     assert r['cost']==r['lkh']['cost']
                 costs[mode].append(r['cost']);pair[mode]=r
             if all(pair[m]['feasible'] for m in pair):
@@ -79,16 +82,19 @@ def audit(validation=False):
     average=statistics.mean(means)
     gate=average>0 and wins>=4 and losses<=1 and failures==0 if validation else average>=.5 and wins>=6 and losses<=1 and failures==0
     timing_summary={mode:dict(runs=len(rs),mean_wall_seconds=statistics.mean(r['wall_seconds'] for r in rs),max_wall_seconds=max(r['wall_seconds'] for r in rs),mean_overrun_seconds=statistics.mean(r['overrun'] for r in rs),hard_timeouts=sum(r['hard_timeout'] for r in rs),lkh_calls=sum(r['lkh_used'] for r in rs)) for mode,rs in timing.items()}
-    report=dict(status='PASS',scope='frozen reserved validation' if validation else 'exploratory hard-TRAIN pilot; not confirmatory',
+    if horizon30: gate=False  # Diagnostic only, never unlocks reserved data.
+    audit_name='horizon30_audit.json' if horizon30 else 'validation_audit.json' if validation else 'total_time_audit.json'
+    note_name='lkh_horizon30_results.md' if horizon30 else 'lkh_validation_results.md' if validation else 'lkh_total_time_results.md'
+    report=dict(status='PASS',scope='exploratory 30-second TRAIN persistence' if horizon30 else 'frozen reserved validation' if validation else 'exploratory hard-TRAIN pilot; not confirmatory',
         geometries=n,paired_seeds=3,pairs=3*n,mean_geometry_gain_percent=average,
         median_geometry_gain_percent=statistics.median(means),
         geometry_bootstrap_95_percentile=[boot[249],boot[9749]],
         geometry_wins=wins,geometry_losses=losses,geometry_ties=n-wins-losses,
         feasibility_failures=failures,gate_passed=gate,rows=geometries,pair_rows=pair_rows,
         result_hashes=hashes,timing=timing_summary)
-    (HERE/('validation_audit.json' if validation else 'total_time_audit.json')).write_text(json.dumps(report,indent=2)+'\n')
-    lines=['# Piloto MDM10s versus MDM9s+LKH','',
-           f'{n} geometrias, três sementes pareadas; '+('validação reservada com método congelado.' if validation else 'treino exploratório, não confirmatório.')+' Ambos recebem dez segundos totais. Overruns são registrados; melhorias tardias do LKH são descartadas.',
+    (HERE/audit_name).write_text(json.dumps(report,indent=2)+'\n')
+    lines=[f'# MDM{total_budget:g}s versus MDM{total_budget-1:g}s+LKH','',
+           f'{n} geometrias, três sementes pareadas; '+('validação reservada com método congelado.' if validation else 'treino exploratório, não confirmatório.')+f' Ambos recebem {total_budget:g} segundos totais. Overruns são registrados; melhorias tardias do LKH são descartadas.',
            '', '| Geometria | Média MDM | Média híbrido | Ganho pareado médio % |','|---|---:|---:|---:|']
     for row in geometries:
         lines.append(f"| {row['geometry']} | {row['mdm_mean']:.2f} | {row['hybrid_mean']:.2f} | {row['mean_paired_gain_percent']:.3f} |")
@@ -96,13 +102,13 @@ def audit(validation=False):
             f'Vitórias/empates/derrotas por geometria: {wins}/{n-wins-losses}/{losses}. Gate pré-fixado: {gate}.',
             f'Intervalo bootstrap exploratório por geometria: [{boot[249]:.3f}, {boot[9749]:.3f}]%.',
             'O intervalo não corrige a seleção de método/coorte durante a pesquisa. Não alegar confirmação estatística ou publicabilidade só com este piloto.']
-    lines+=['','## Tempo de retorno e prazo de aceitação','', 'Os dez segundos limitam a aceitação de soluções. O processo nativo verifica o prazo cooperativamente e pode retornar depois dele; seus incumbentes tardios são descartados. Assim, os tempos reais de retorno devem acompanhar os custos.']
+    lines+=['','## Tempo de retorno e prazo de aceitação','', f'O prazo de {total_budget:g} segundos limita a aceitação de soluções. O processo nativo verifica o prazo cooperativamente e pode retornar depois dele; seus incumbentes tardios são descartados. Assim, os tempos reais de retorno devem acompanhar os custos.']
     for mode,row in timing_summary.items():
         lines.append(f"{mode}: retorno médio {row['mean_wall_seconds']:.4f}s; máximo {row['max_wall_seconds']:.4f}s; excesso médio {row['mean_overrun_seconds']:.4f}s; hard timeouts {row['hard_timeouts']}; chamadas LKH {row['lkh_calls']}.")
-    (ROOT/'research_notes'/('lkh_validation_results.md' if validation else 'lkh_total_time_results.md')).write_text('\n'.join(lines)+'\n')
+    (ROOT/'research_notes'/note_name).write_text('\n'.join(lines)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ('rows','pair_rows','result_hashes')}))
 
 
 if __name__=='__main__':
-    assert sys.argv[1:] in ([],['--validation'])
-    audit(validation='--validation' in sys.argv)
+    assert sys.argv[1:] in ([],['--validation'],['--horizon30'])
+    audit(validation='--validation' in sys.argv,horizon30='--horizon30' in sys.argv)

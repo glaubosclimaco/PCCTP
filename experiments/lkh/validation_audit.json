@@ -1,0 +1,343 @@
+{
+  "status": "PASS",
+  "scope": "frozen reserved validation",
+  "geometries": 7,
+  "paired_seeds": 3,
+  "pairs": 21,
+  "mean_geometry_gain_percent": 0.8931899109836088,
+  "median_geometry_gain_percent": 0.0,
+  "geometry_bootstrap_95_percentile": [
+    0.04581851020868199,
+    2.159639364621035
+  ],
+  "geometry_wins": 3,
+  "geometry_losses": 0,
+  "geometry_ties": 4,
+  "feasibility_failures": 0,
+  "gate_passed": false,
+  "rows": [
+    {
+      "instance": "g_d198_VT39_T119_W40_50",
+      "geometry": "g_d198",
+      "seeds": 3,
+      "mean_paired_gain_percent": 0.3207295714607739,
+      "median_paired_gain_percent": 0.1808579903060117,
+      "mdm_mean": 13724.666666666666,
+      "hybrid_mean": 13680.666666666666,
+      "classification": "win"
+    },
+    {
+      "instance": "g_kroB100_VT20_T60_W20_25",
+      "geometry": "g_kroB100",
+      "seeds": 3,
+      "mean_paired_gain_percent": 0.0,
+      "median_paired_gain_percent": 0.0,
+      "mdm_mean": 18406,
+      "hybrid_mean": 18406,
+      "classification": "tie"
+    },
+    {
+      "instance": "g_kroE100_VT20_T20_W60_50",
+      "geometry": "g_kroE100",
+      "seeds": 3,
+      "mean_paired_gain_percent": 0.0,
+      "median_paired_gain_percent": 0.0,
+      "mdm_mean": 10586,
+      "hybrid_mean": 10586,
+      "classification": "tie"
+    },
+    {
+      "instance": "g_pr124_VT24_T25_W75_75",
+      "geometry": "g_pr124",
+      "seeds": 3,
+      "mean_paired_gain_percent": 0.0,
+      "median_paired_gain_percent": 0.0,
+      "mdm_mean": 34359,
+      "hybrid_mean": 34359,
+      "classification": "tie"
+    },
+    {
+      "instance": "g_pr152_VT29_T31_W92_75",
+      "geometry": "g_pr152",
+      "seeds": 3,
+      "mean_paired_gain_percent": 0.0,
+      "median_paired_gain_percent": 0.0,
+      "mdm_mean": 49198.666666666664,
+      "hybrid_mean": 49198.666666666664,
+      "classification": "tie"
+    },
+    {
+      "instance": "g_pr264_VT52_T159_W53_75",
+      "geometry": "g_pr264",
+      "seeds": 3,
+      "mean_paired_gain_percent": 4.432573087730991,
+      "median_paired_gain_percent": 3.769908505591325,
+      "mdm_mean": 47589.333333333336,
+      "hybrid_mean": 45442.0,
+      "classification": "win"
+    },
+    {
+      "instance": "g_pr299_VT101_T99_W99_75",
+      "geometry": "g_pr299",
+      "seeds": 3,
+      "mean_paired_gain_percent": 1.4990267176934968,
+      "median_paired_gain_percent": 1.4835948644793153,
+      "mdm_mean": 31911,
+      "hybrid_mean": 31433.0,
+      "classification": "win"
+    }
+  ],
+  "pair_rows": [
+    {
+      "instance": "g_d198_VT39_T119_W40_50",
+      "seed": 42,
+      "gain_percent": 0.16125485597009456,
+      "mdm_cost": 13643,
+      "hybrid_cost": 13621.0
+    },
+    {
+      "instance": "g_d198_VT39_T119_W40_50",
+      "seed": 43,
+      "gain_percent": 0.1808579903060117,
+      "mdm_cost": 13823,
+      "hybrid_cost": 13798.0
+    },
+    {
+      "instance": "g_d198_VT39_T119_W40_50",
+      "seed": 44,
+      "gain_percent": 0.6200758681062154,
+      "mdm_cost": 13708,
+      "hybrid_cost": 13623.0
+    },
+    {
+      "instance": "g_kroB100_VT20_T60_W20_25",
+      "seed": 42,
+      "gain_percent": 0.0,
+      "mdm_cost": 18406,
+      "hybrid_cost": 18406
+    },
+    {
+      "instance": "g_kroB100_VT20_T60_W20_25",
+      "seed": 43,
+      "gain_percent": 0.0,
+      "mdm_cost": 18406,
+      "hybrid_cost": 18406
+    },
+    {
+      "instance": "g_kroB100_VT20_T60_W20_25",
+      "seed": 44,
+      "gain_percent": 0.0,
+      "mdm_cost": 18406,
+      "hybrid_cost": 18406
+    },
+    {
+      "instance": "g_kroE100_VT20_T20_W60_50",
+      "seed": 42,
+      "gain_percent": 0.0,
+      "mdm_cost": 10586,
+      "hybrid_cost": 10586
+    },
+    {
+      "instance": "g_kroE100_VT20_T20_W60_50",
+      "seed": 43,
+      "gain_percent": 0.0,
+      "mdm_cost": 10586,
+      "hybrid_cost": 10586
+    },
+    {
+      "instance": "g_kroE100_VT20_T20_W60_50",
+      "seed": 44,
+      "gain_percent": 0.0,
+      "mdm_cost": 10586,
+      "hybrid_cost": 10586
+    },
+    {
+      "instance": "g_pr124_VT24_T25_W75_75",
+      "seed": 42,
+      "gain_percent": 0.0,
+      "mdm_cost": 34359,
+      "hybrid_cost": 34359
+    },
+    {
+      "instance": "g_pr124_VT24_T25_W75_75",
+      "seed": 43,
+      "gain_percent": 0.0,
+      "mdm_cost": 34359,
+      "hybrid_cost": 34359
+    },
+    {
+      "instance": "g_pr124_VT24_T25_W75_75",
+      "seed": 44,
+      "gain_percent": 0.0,
+      "mdm_cost": 34359,
+      "hybrid_cost": 34359
+    },
+    {
+      "instance": "g_pr152_VT29_T31_W92_75",
+      "seed": 42,
+      "gain_percent": 0.0,
+      "mdm_cost": 49110,
+      "hybrid_cost": 49110
+    },
+    {
+      "instance": "g_pr152_VT29_T31_W92_75",
+      "seed": 43,
+      "gain_percent": 0.0,
+      "mdm_cost": 49243,
+      "hybrid_cost": 49243
+    },
+    {
+      "instance": "g_pr152_VT29_T31_W92_75",
+      "seed": 44,
+      "gain_percent": 0.0,
+      "mdm_cost": 49243,
+      "hybrid_cost": 49243
+    },
+    {
+      "instance": "g_pr264_VT52_T159_W53_75",
+      "seed": 42,
+      "gain_percent": 8.021995794921558,
+      "mdm_cost": 49464,
+      "hybrid_cost": 45496.0
+    },
+    {
+      "instance": "g_pr264_VT52_T159_W53_75",
+      "seed": 43,
+      "gain_percent": 3.769908505591325,
+      "mdm_cost": 47216,
+      "hybrid_cost": 45436.0
+    },
+    {
+      "instance": "g_pr264_VT52_T159_W53_75",
+      "seed": 44,
+      "gain_percent": 1.5058149626800903,
+      "mdm_cost": 46088,
+      "hybrid_cost": 45394.0
+    },
+    {
+      "instance": "g_pr299_VT101_T99_W99_75",
+      "seed": 42,
+      "gain_percent": 1.4835948644793153,
+      "mdm_cost": 31545,
+      "hybrid_cost": 31077.0
+    },
+    {
+      "instance": "g_pr299_VT101_T99_W99_75",
+      "seed": 43,
+      "gain_percent": 1.7336138940359913,
+      "mdm_cost": 31841,
+      "hybrid_cost": 31289.0
+    },
+    {
+      "instance": "g_pr299_VT101_T99_W99_75",
+      "seed": 44,
+      "gain_percent": 1.2798713945651838,
+      "mdm_cost": 32347,
+      "hybrid_cost": 31933.0
+    }
+  ],
+  "result_hashes": {
+    "g_d198_VT39_T119_W40_50.seed42.mdm.json": "c65cd79fd08f93418628e8570c1e44c6d260adf0d72a8020c3bbecb3e52baf4d",
+    "g_d198_VT39_T119_W40_50.seed42.mdm.native.json": "2949420f17c626f51fbf52efe07cdafb2fb21199135931f49482953a23ccbfe4",
+    "g_d198_VT39_T119_W40_50.seed42.hybrid.json": "571b635cda604e7c710f4d5f636e751b20a35688c1e562f83d5e3f5517a91ae0",
+    "g_d198_VT39_T119_W40_50.seed42.hybrid.native.json": "1ceae99bf5d7aa1e6016548efc157fb54c43a10ddf79b95d82a3fdfc15c7a3f8",
+    "g_d198_VT39_T119_W40_50.seed43.mdm.json": "7a8d98a43defd95b06a74d3586c89cbbdd59b2efde80b3e2dbcba58c1d339c7a",
+    "g_d198_VT39_T119_W40_50.seed43.mdm.native.json": "514ab33ef2947272322fc414cb69ea0df781e4317533ae5f33acd4e7743613a5",
+    "g_d198_VT39_T119_W40_50.seed43.hybrid.json": "28cb8d85a52a06d37f6ea288d398bad0233d4279f5d3bc5c490642fe808f7c38",
+    "g_d198_VT39_T119_W40_50.seed43.hybrid.native.json": "f4076ce2572d94a0f047768e37ac84e707c280396e1a804cbf4c1946da36cc68",
+    "g_d198_VT39_T119_W40_50.seed44.mdm.json": "3a44fca1174db91d5fba811260390cee27d6d5c7318c3206db74a6bae2fe1395",
+    "g_d198_VT39_T119_W40_50.seed44.mdm.native.json": "d3e1cf24c1a0c8d105c90290020d3d0f2e1e1efa9d79c319f841f099d8f37c48",
+    "g_d198_VT39_T119_W40_50.seed44.hybrid.json": "050df53ea127825771f160791d49e89af5885b23ad8e90f698887ee5a280ae97",
+    "g_d198_VT39_T119_W40_50.seed44.hybrid.native.json": "d990071eb09c9827ceb2872ae72f6fcde3e1b886eaea699d977ee1006f49d283",
+    "g_kroB100_VT20_T60_W20_25.seed42.mdm.json": "9e284110b850bc2e28e6d067a63d1fe6529735230405ea61357e0ac01acf401e",
+    "g_kroB100_VT20_T60_W20_25.seed42.mdm.native.json": "5db865fc20ed00153329dfc0d4d11da690b3e14342d96da0b9214c1e0d22e01f",
+    "g_kroB100_VT20_T60_W20_25.seed42.hybrid.json": "7fe058eacd26627f501369ffbbd888d425fa08f6c560cc703f200a2124f7cbc7",
+    "g_kroB100_VT20_T60_W20_25.seed42.hybrid.native.json": "813cd1d4eda054f42551c070bfbf2edb537955f5eeb0d537ac5e09d7ee581f43",
+    "g_kroB100_VT20_T60_W20_25.seed43.mdm.json": "bfe7ee7e8946f0ac2ddc36dc370dd82ce7925b4aca985750712af4907fe18208",
+    "g_kroB100_VT20_T60_W20_25.seed43.mdm.native.json": "2b3394a62f493da294a3f879021c90ebe03720ef31371265d1604470af8ed1ce",
+    "g_kroB100_VT20_T60_W20_25.seed43.hybrid.json": "0db0ed66c32e395e2cbb45e663ebdb5085bac5926163a7fab5dd5501c954ed41",
+    "g_kroB100_VT20_T60_W20_25.seed43.hybrid.native.json": "06d39cc49d88ba2a14a2edfc7211cd80621d11077d7073d1cc1e0a2acea89ca5",
+    "g_kroB100_VT20_T60_W20_25.seed44.mdm.json": "18c24277865129526a24c19d96e018865387576ea404384520278901779237de",
+    "g_kroB100_VT20_T60_W20_25.seed44.mdm.native.json": "d670b82cfc0a18484e458181a2929e6c2226d1770d00d3f9d9eff508f3098bee",
+    "g_kroB100_VT20_T60_W20_25.seed44.hybrid.json": "74c5fd2c9f8d5e4bc9a79dd061c16842365db1ca5609504b9cf1cd6236c69afc",
+    "g_kroB100_VT20_T60_W20_25.seed44.hybrid.native.json": "c22697bfd089d86b2936503e4e93aaaa9b0a64b9f1ffc7b4946aaaa67b5a06bf",
+    "g_kroE100_VT20_T20_W60_50.seed42.mdm.json": "125e06a3b5bac81a3c576b7176d9d0054419a1679a9743b3c5c6edd3ec9b5fbb",
+    "g_kroE100_VT20_T20_W60_50.seed42.mdm.native.json": "cc2c5c2e29480ae7917171e9d7953aa36476b65defeec213f45e5bb55f0bb405",
+    "g_kroE100_VT20_T20_W60_50.seed42.hybrid.json": "3cbdf3275707ca7ca8115a08b8d2eb8c3d56693f4463cf9566a99bf658f41013",
+    "g_kroE100_VT20_T20_W60_50.seed42.hybrid.native.json": "6d6c3957a7151495341ecc9c9cab5ba8649ce4beaaba5b7b06df0da09fdde121",
+    "g_kroE100_VT20_T20_W60_50.seed43.mdm.json": "5d4b7f4568da92df4978f73a9250f611aea1df3083813018c0ec6f3a976acd3d",
+    "g_kroE100_VT20_T20_W60_50.seed43.mdm.native.json": "206f5beb497f36ba5a459a6af6eda89d285b1b5a80dcc2a421cc078b222ec5d1",
+    "g_kroE100_VT20_T20_W60_50.seed43.hybrid.json": "0ed0cfece2fcd51df0aa1cf177795b4b133c4d4a01fc1b3f8882596890f7c9a3",
+    "g_kroE100_VT20_T20_W60_50.seed43.hybrid.native.json": "8451f7c4253f82afd3ca51cef962f3071263c0e922dd1426b3ae660cc8b4cd12",
+    "g_kroE100_VT20_T20_W60_50.seed44.mdm.json": "83ce4317004b8b64c6a8a44cc991cdeefea794cbc3429ec205517842083364e2",
+    "g_kroE100_VT20_T20_W60_50.seed44.mdm.native.json": "f56c2c04853bd0494eb999a53140559993d70076ceae00b7d820cdab73381898",
+    "g_kroE100_VT20_T20_W60_50.seed44.hybrid.json": "15eadb75412bbb3b295c1f4cdbb390987b9c20d45f8ed5f4e60e582ac776e199",
+    "g_kroE100_VT20_T20_W60_50.seed44.hybrid.native.json": "e92b8986202988f63be883e9dafe48366728f2494fce7094e513f96699fe4b86",
+    "g_pr124_VT24_T25_W75_75.seed42.mdm.json": "84bd0b6b57ec18431a0306019adfc13ba6d110faf411bcd39afd0b88450985fe",
+    "g_pr124_VT24_T25_W75_75.seed42.mdm.native.json": "847f38e7f7dd60642ca3cf2816f9ccbcb3115d0a40dee917f6d618c26847c7ba",
+    "g_pr124_VT24_T25_W75_75.seed42.hybrid.json": "b393228316f3958a577dddac23221279e7c05e339430dfb1517a19e25d7f3833",
+    "g_pr124_VT24_T25_W75_75.seed42.hybrid.native.json": "48c8df7fb03d24a2e165470b46ddfbf5e9b75d97e73bdf5ac3cee3caf3684e29",
+    "g_pr124_VT24_T25_W75_75.seed43.mdm.json": "5f84197e5c4d24ac27e61b932d9974d30080b0fe8d70850882345c11f2c4811e",
+    "g_pr124_VT24_T25_W75_75.seed43.mdm.native.json": "b21141e48fed6d0955c015d2e56b3539f9248895d154c2860231e654590336db",
+    "g_pr124_VT24_T25_W75_75.seed43.hybrid.json": "0396644ac7493a1008725a2784d11e93c2057d68c1ba443cdbf62dac57f21d6c",
+    "g_pr124_VT24_T25_W75_75.seed43.hybrid.native.json": "cc5960205ae00f67091bc26468e73dcdc0c8d810e73886a9c830f40f8da56885",
+    "g_pr124_VT24_T25_W75_75.seed44.mdm.json": "b1eb29125549f6d9cab78c901d963a5b05fd0cb8a2704e91c090aae27f428dc1",
+    "g_pr124_VT24_T25_W75_75.seed44.mdm.native.json": "1e32ff773a41d3d899cffa9a663f88d4f7a0d933075f2d6b395813b46994a7c9",
+    "g_pr124_VT24_T25_W75_75.seed44.hybrid.json": "753af29554ac9a56f5c0899ff1bfe1b98bd40c5bb7cdb42852ab99df1605f6a7",
+    "g_pr124_VT24_T25_W75_75.seed44.hybrid.native.json": "b41d57f1d5386802349e61c1269873543616ae2546f9bfab69f4310edd9c7575",
+    "g_pr152_VT29_T31_W92_75.seed42.mdm.json": "b3b79b153f1399c956b9942ee4ed3d8918953c12a754488146b4a2bc46622864",
+    "g_pr152_VT29_T31_W92_75.seed42.mdm.native.json": "0f76863ff9771a625c84b62c562d1a337d57b836b0cc35e8252ced6c46179669",
+    "g_pr152_VT29_T31_W92_75.seed42.hybrid.json": "f693aaaa5a26aa804f8591e6526afdce348b58955695a9d3601788584d11803d",
+    "g_pr152_VT29_T31_W92_75.seed42.hybrid.native.json": "4e3a8eb1aad151766424b5f7d7fe76569a68431bd4f13f92d75f4b5351fdfa93",
+    "g_pr152_VT29_T31_W92_75.seed43.mdm.json": "f5c49f69ef956c607e970128336c9a16ebf518dc70fa7ee772246744e98fcf3d",
+    "g_pr152_VT29_T31_W92_75.seed43.mdm.native.json": "51456edf3529c4d02da2e797016d28593d4c3b32975250ce20c649fa88f945ae",
+    "g_pr152_VT29_T31_W92_75.seed43.hybrid.json": "0155865e9f13071863e6e32d441a91ef2953c3aeda6d4c7f67b97c529d7971af",
+    "g_pr152_VT29_T31_W92_75.seed43.hybrid.native.json": "ed3abcb5e490a7090ab1d509876f9534fe47240740c2d6fbb384d4ef786a4496",
+    "g_pr152_VT29_T31_W92_75.seed44.mdm.json": "421f741dee4dd2e007b44a942b79c161fc8efe606b3c43b5d62413275e071301",
+    "g_pr152_VT29_T31_W92_75.seed44.mdm.native.json": "d8c73fe3221316f0f422b21a51c006009e69bbc97232f3be73d5cb6796c6959e",
+    "g_pr152_VT29_T31_W92_75.seed44.hybrid.json": "2ce6a17339a0cef552c0d899e82ca09971020497a15dd59b3e64c9227cfdcb11",
+    "g_pr152_VT29_T31_W92_75.seed44.hybrid.native.json": "1405ab52a84d8ffe738127f9ffb8499864b1e787a2f11b7d6092c2cdf8079774",
+    "g_pr264_VT52_T159_W53_75.seed42.mdm.json": "f31d42935a52470a4595f4f3995480a88bcfb663fcc987cf0893572be0a6a500",
+    "g_pr264_VT52_T159_W53_75.seed42.mdm.native.json": "970184aa0ac724fa179754b73873e092a11d5232d34b7ed2953291efd103f130",
+    "g_pr264_VT52_T159_W53_75.seed42.hybrid.json": "30d1837c1d888dbd8759418121188989fa8af1879e01b63a1987be8f8840ba73",
+    "g_pr264_VT52_T159_W53_75.seed42.hybrid.native.json": "5cc798b84b6961bf26c7ffb46fdb2c40d5eaa8bb7245df1d87b01e792cfbf4d7",
+    "g_pr264_VT52_T159_W53_75.seed43.mdm.json": "a6656582ef54be96d7dad0524999bc00ab6e13521ddcc166121740d2b735b4c0",
+    "g_pr264_VT52_T159_W53_75.seed43.mdm.native.json": "3aa576acbddf15286822009d38544ba782670a714ddfbd2b6442e744c15acb66",
+    "g_pr264_VT52_T159_W53_75.seed43.hybrid.json": "ade86873bc18e361b80dbd3244b80c22b0518ec51ad98ba5892c4665051c8795",
+    "g_pr264_VT52_T159_W53_75.seed43.hybrid.native.json": "ff1a76ad1569be7dceb3d03958204e4ef463962a90b795a1741fe118ee0aac57",
+    "g_pr264_VT52_T159_W53_75.seed44.mdm.json": "cbff9983dfc2ec9a907eac474cb33f2273b09e8ad373c40164e6860188f678c6",
+    "g_pr264_VT52_T159_W53_75.seed44.mdm.native.json": "f47d5dfd84b492abdd7b4d8ccaef14d2baea7e27fe28bcb31335ed85052feefd",
+    "g_pr264_VT52_T159_W53_75.seed44.hybrid.json": "dc8c8fa8464d22826690de814c0eb573982ee6400b730e637dadc7a98b9b4e53",
+    "g_pr264_VT52_T159_W53_75.seed44.hybrid.native.json": "778ae8c1d93006b0dc687100feefc95c41b5d2fd50f77d00f3358116bd755c9e",
+    "g_pr299_VT101_T99_W99_75.seed42.mdm.json": "7b9d470aa0627463c982ee518d242aab540b296fd83c7f2911cfe2f1c1d005a5",
+    "g_pr299_VT101_T99_W99_75.seed42.mdm.native.json": "a7bf4b3dd227165c31c3ee7d31b3dc6564addd680b6b120671411430acb39c5f",
+    "g_pr299_VT101_T99_W99_75.seed42.hybrid.json": "448a45bcd4e9f324ca8242a48b6bb75798efb1cf10f2f80a65fec453125979f0",
+    "g_pr299_VT101_T99_W99_75.seed42.hybrid.native.json": "fd503aaa6b25ee200032699752cbe2b1ea7ba4d09e1cc027e61436746cb5ab06",
+    "g_pr299_VT101_T99_W99_75.seed43.mdm.json": "90fd5f7150e14a5f989a6a9a5cdcaee30e240a8bb16fd0e08f70063f6e994fd4",
+    "g_pr299_VT101_T99_W99_75.seed43.mdm.native.json": "71e9a291aba8e5a84cef2141ece6d3f747e969620d43f3254d5ef6ee1c9fb336",
+    "g_pr299_VT101_T99_W99_75.seed43.hybrid.json": "1e3cc64ba2844a5415f4a322fba5fa0a062f0a412e8245cc0f01e41fb44b59b4",
+    "g_pr299_VT101_T99_W99_75.seed43.hybrid.native.json": "99bdcb86b40bf2212e7ac083882e17742598916cc37f1e6c7334869102be52ff",
+    "g_pr299_VT101_T99_W99_75.seed44.mdm.json": "2705ffd05c8f5aa0d2ad960eb87c13dd127af85197a9d61dfaa000950761dac0",
+    "g_pr299_VT101_T99_W99_75.seed44.mdm.native.json": "b7f16544030cd392362f0a49b3042078cf5b9f756269ccaade065393010b45c5",
+    "g_pr299_VT101_T99_W99_75.seed44.hybrid.json": "203bd0028e9b1088f902bf2dbb836810dda1a90b406fc750725005f834a71624",
+    "g_pr299_VT101_T99_W99_75.seed44.hybrid.native.json": "5fa299fae513155c842bce09145a8eaca1e76cf0a96edbab30ef4b5e72168243"
+  },
+  "timing": {
+    "mdm": {
+      "runs": 21,
+      "mean_wall_seconds": 10.151999142849707,
+      "max_wall_seconds": 10.624333999992814,
+      "mean_overrun_seconds": 0.151999142849707,
+      "hard_timeouts": 0,
+      "lkh_calls": 0
+    },
+    "hybrid": {
+      "runs": 21,
+      "mean_wall_seconds": 9.274179761907796,
+      "max_wall_seconds": 9.805555000028107,
+      "mean_overrun_seconds": 0.0,
+      "hard_timeouts": 0,
+      "lkh_calls": 21
+    }
+  }
+}

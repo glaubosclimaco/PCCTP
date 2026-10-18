@@ -10,11 +10,12 @@ from experiments.lkh.screen import polish
 OUT=Path(__file__).with_name('total_time')
 
 
-def run(name,seed,mode):
+def run(name,seed,mode,total_budget=10.,polish_budget=1.):
+    assert total_budget>polish_budget>0 and mode in ('mdm','hybrid')
     target=OUT/f'{name}.seed{seed}.{mode}.json'
     if target.exists():return json.loads(target.read_text())
     began=time.clock_gettime(time.CLOCK_MONOTONIC)
-    native=run_one(name,seed,'original',10. if mode=='mdm' else 9.,
+    native=run_one(name,seed,'original',total_budget if mode=='mdm' else total_budget-polish_budget,
                    OUT/f'{name}.seed{seed}.{mode}.native.json',True,parent_started=began)
     result=dict(instance=name,seed=seed,mode=mode,cost=native['cost'],route=native['route'],
                 feasible=native['feasible_before_deadline'],lkh_used=False,native_overrun=native['overrun_seconds'],
@@ -22,15 +23,15 @@ def run(name,seed,mode):
     if mode=='hybrid' and result['feasible']:
         d=read_instance(ROOT/'data'/name);mapping={int(v):i for i,v in enumerate(d['visits'])}
         route=[mapping[v] for v in native['route']]
-        remaining=10.-(time.clock_gettime(time.CLOCK_MONOTONIC)-began)
+        remaining=total_budget-(time.clock_gettime(time.CLOCK_MONOTONIC)-began)
         if remaining>0:
-            lkh=polish(d,route,seconds=min(1.,remaining))
+            lkh=polish(d,route,seconds=min(polish_budget,remaining))
             # Recheck the OUTER deadline, including call/return overhead.
-            if time.clock_gettime(time.CLOCK_MONOTONIC)-began<=10. and lkh['cost']<result['cost']:
+            if time.clock_gettime(time.CLOCK_MONOTONIC)-began<=total_budget and lkh['cost']<result['cost']:
                 result['cost']=lkh['cost'];result['route']=lkh['route']
             result['lkh_used']=True;result['lkh']=lkh
     result['wall_seconds']=time.clock_gettime(time.CLOCK_MONOTONIC)-began
-    result['overrun']=max(0.,result['wall_seconds']-10.)
+    result['overrun']=max(0.,result['wall_seconds']-total_budget)
     if result['feasible']:
         d=read_instance(ROOT/'data'/name);mapping={int(v):i for i,v in enumerate(d['visits'])}
         assert validate(d,[mapping[v] for v in result['route']])==result['cost']
