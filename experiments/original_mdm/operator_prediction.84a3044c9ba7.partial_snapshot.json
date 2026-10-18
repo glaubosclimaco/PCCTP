@@ -1,0 +1,496 @@
+{
+  "scope": "Exploratory LOGO on TRAIN geometries; observed executed actions only, no policy-value claim",
+  "training_geometries": 13,
+  "expanded_collection_complete": false,
+  "partial_snapshot": true,
+  "code_sha256": "f6e7f070fdefa0dda680e7f22e7e275a72e28f3e631b530bcde71b8e0bb89090",
+  "source_hashes": {
+    "g_a280_VT56_T168_W56_50.seed42.093590aaa738.json": "de9eac3f55ef17ee24da044f1a9cd741316a25d774c8c4a83a9c4858d64ee204",
+    "g_att48_VT16_T16_W16_75.seed42.4e1c42c7aa48.json": "6e25276ee6b41caee421fef49dce8a4f4fe8a03b34263b747901a83535342d76",
+    "g_berlin52_VT16_T18_W18_50.seed42.4e1c42c7aa48.json": "8e2eb6dd2ec9a8f520a0d56ff4e5a222e3c6198347d4013f7ad6779a8cabcd5b",
+    "g_bier127_VT24_T26_W77_50.seed42.4e1c42c7aa48.json": "3cd9c37f84696f5689a15ee32b19b4f925d72e5f41fe5ff8ebe5985026f4cc06",
+    "g_gil262_VT51_T158_W53_75.seed42.093590aaa738.json": "da48b17213c33643390b2e3318d02e7c8f30cecf5f25abeb6f463d655167591c",
+    "g_gr137_VT26_T28_W83_25.seed42.4e1c42c7aa48.json": "358ede5c15221e770c636d1038ceab33616a70939f1ef8add7bb3e7b00a91bfa",
+    "g_gr229_VT45_T138_W46_50.seed42.093590aaa738.json": "df38d718eb26cd049cf569f0ae804e57c5b7d396723f59ef61ae67cc7df9a384",
+    "g_gr229_VT45_T46_W138_25.seed42.4e1c42c7aa48.json": "85f15090f3521e87d23e32f5359214f5e2ca988fec12e6c1bbe1c9403bb48721",
+    "g_gr96_VT18_T20_W58_75.seed42.4e1c42c7aa48.json": "39caaa6e442ffe7d763ee8d91300d5de03aee22f75d9c0d0f04963659eb7ef6c",
+    "g_kroA150_VT30_T30_W90_50.seed42.093590aaa738.json": "23ad3bb0a1ab25c3e0730ebd19c73f6c802ec42b291188814b3527880833bfbf",
+    "g_kroA200_VT40_T120_W40_25.seed42.093590aaa738.json": "74ffa82222efe9bfa03907c299deca2071e6e60707ee7b42b65aea8e58b169a1",
+    "g_kroB150_VT30_T30_W90_25.seed42.093590aaa738.json": "e8c8087dae7ac36855a0a38957b9fb0915f6a90769d596957e4f550f1788a354",
+    "g_kroC100_VT20_T20_W60_75.seed42.093590aaa738.json": "0bb568a8d8350911f0138e6d48e5669433f2cf1528d2bd07e6b6aa9695e0e310",
+    "g_lin105_VT21_T21_W63_25.seed42.093590aaa738.json": "eb9c8b2a094a735d0bc55ee6698ebbe7c81b170ee2bcc391c4fdafbe7e17cce8",
+    "g_pr136_VT26_T28_W82_25.seed42.093590aaa738.json": "2a1c14c23b56c0f41779eb9a771d135a3af0030407809586f0c3cd52b7998f18",
+    "g_pr144_VT28_T29_W87_50.seed42.093590aaa738.json": "f4875c778a11b67bbdf6a042c4822eeeb5cc37edfbb0c80e0578ef2da713e1c6"
+  },
+  "audit": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "role": "train",
+      "calls": 473,
+      "sample_capped": false,
+      "profiled_run_completed": false,
+      "unique_input_states": 106,
+      "median_feature_seconds": 0.0003428545000000449
+    },
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "role": "development",
+      "calls": 1526,
+      "sample_capped": false,
+      "profiled_run_completed": true,
+      "unique_input_states": 120,
+      "median_feature_seconds": 0.00011549950000000475
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "role": "development",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 298,
+      "median_feature_seconds": 9.675000000008982e-05
+    },
+    {
+      "instance": "g_bier127_VT24_T26_W77_50",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 354,
+      "median_feature_seconds": 0.0001826249999998808
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "role": "train",
+      "calls": 567,
+      "sample_capped": false,
+      "profiled_run_completed": false,
+      "unique_input_states": 150,
+      "median_feature_seconds": 0.00027304150000007077
+    },
+    {
+      "instance": "g_gr137_VT26_T28_W83_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 383,
+      "median_feature_seconds": 0.00020008299999974
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "role": "train",
+      "calls": 984,
+      "sample_capped": false,
+      "profiled_run_completed": false,
+      "unique_input_states": 267,
+      "median_feature_seconds": 0.0004126250000000553
+    },
+    {
+      "instance": "g_gr229_VT45_T46_W138_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": false,
+      "unique_input_states": 455,
+      "median_feature_seconds": 0.00032616599999979456
+    },
+    {
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 227,
+      "median_feature_seconds": 0.0001520409999997696
+    },
+    {
+      "instance": "g_kroA150_VT30_T30_W90_50",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 413,
+      "median_feature_seconds": 0.00022462499999953423
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "role": "train",
+      "calls": 1574,
+      "sample_capped": false,
+      "profiled_run_completed": false,
+      "unique_input_states": 421,
+      "median_feature_seconds": 0.0003785419999999817
+    },
+    {
+      "instance": "g_kroB150_VT30_T30_W90_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 418,
+      "median_feature_seconds": 0.00022427049999995674
+    },
+    {
+      "instance": "g_kroC100_VT20_T20_W60_75",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 203,
+      "median_feature_seconds": 0.00018425000000021896
+    },
+    {
+      "instance": "g_lin105_VT21_T21_W63_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 283,
+      "median_feature_seconds": 0.0001427090000003517
+    },
+    {
+      "instance": "g_pr136_VT26_T28_W82_25",
+      "role": "train",
+      "calls": 1913,
+      "sample_capped": false,
+      "profiled_run_completed": true,
+      "unique_input_states": 279,
+      "median_feature_seconds": 0.00012537499999965007
+    },
+    {
+      "instance": "g_pr144_VT28_T29_W87_50",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 383,
+      "median_feature_seconds": 0.0001963339999999647
+    }
+  ],
+  "feature_names": [
+    "log_visits",
+    "log_route_size",
+    "selected_fraction",
+    "mandatory_fraction",
+    "quota_fraction",
+    "prize_ratio",
+    "tight_coverage_fraction",
+    "mean_edge_ratio",
+    "edge_variation",
+    "optional_deletion_saving"
+  ],
+  "rows": [
+    {
+      "geometry": "g_a280",
+      "observations": 473,
+      "positive": 103,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.13439485660153683,
+          "log_loss": 0.4297151788885571,
+          "log_time_MAE": 2.684194566151333
+        },
+        "operator_size": {
+          "brier": 0.13818515265866554,
+          "log_loss": 0.43259210602319864,
+          "log_time_MAE": 0.5521727250516051
+        },
+        "operator_state": {
+          "brier": 0.1464410445912768,
+          "log_loss": 0.452275919138514,
+          "log_time_MAE": 0.3844158867870371
+        }
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "observations": 2000,
+      "positive": 371,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.08246422777918143,
+          "log_loss": 0.2890345527380868,
+          "log_time_MAE": 0.8047949725711555
+        },
+        "operator_size": {
+          "brier": 0.07937337355825388,
+          "log_loss": 0.27793166385410484,
+          "log_time_MAE": 0.3236189748988527
+        },
+        "operator_state": {
+          "brier": 0.07982279134807416,
+          "log_loss": 0.27972905226132505,
+          "log_time_MAE": 0.34664621717134764
+        }
+      }
+    },
+    {
+      "geometry": "g_gil262",
+      "observations": 567,
+      "positive": 147,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.18896352965920563,
+          "log_loss": 0.5634481806463937,
+          "log_time_MAE": 2.474444926430551
+        },
+        "operator_size": {
+          "brier": 0.18039812742551495,
+          "log_loss": 0.531074508085681,
+          "log_time_MAE": 0.602497368864193
+        },
+        "operator_state": {
+          "brier": 0.1809018895883134,
+          "log_loss": 0.5330022540805007,
+          "log_time_MAE": 0.5400087895701847
+        }
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "observations": 2000,
+      "positive": 373,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.095287249732687,
+          "log_loss": 0.3205132161186805,
+          "log_time_MAE": 1.0489060483561885
+        },
+        "operator_size": {
+          "brier": 0.0943283747225735,
+          "log_loss": 0.31658518388267975,
+          "log_time_MAE": 0.41407810199909395
+        },
+        "operator_state": {
+          "brier": 0.0916411090373174,
+          "log_loss": 0.30701948779043325,
+          "log_time_MAE": 0.3820538130765607
+        }
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "observations": 2984,
+      "positive": 704,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.14814711946390036,
+          "log_loss": 0.45680666318546115,
+          "log_time_MAE": 0.9909187133591941
+        },
+        "operator_size": {
+          "brier": 0.1484393728197584,
+          "log_loss": 0.456953062934784,
+          "log_time_MAE": 0.4866849719761374
+        },
+        "operator_state": {
+          "brier": 0.14469790497985505,
+          "log_loss": 0.445983185418288,
+          "log_time_MAE": 0.6510002627163163
+        }
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "observations": 2000,
+      "positive": 337,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.1028131317854062,
+          "log_loss": 0.3459250061760092,
+          "log_time_MAE": 1.0470251509436566
+        },
+        "operator_size": {
+          "brier": 0.10010180752112405,
+          "log_loss": 0.3383205665729558,
+          "log_time_MAE": 0.35485792040690467
+        },
+        "operator_state": {
+          "brier": 0.10107530476006692,
+          "log_loss": 0.3407214329305276,
+          "log_time_MAE": 0.41186759766036335
+        }
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "observations": 2000,
+      "positive": 405,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.11706980840783295,
+          "log_loss": 0.3724719823261256,
+          "log_time_MAE": 0.5457520469612218
+        },
+        "operator_size": {
+          "brier": 0.11852470678403142,
+          "log_loss": 0.3776322643026142,
+          "log_time_MAE": 0.457445904919498
+        },
+        "operator_state": {
+          "brier": 0.11596356553353623,
+          "log_loss": 0.36975411497790683,
+          "log_time_MAE": 0.5222898403743863
+        }
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "observations": 1574,
+      "positive": 404,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.11915787938729785,
+          "log_loss": 0.38174482078313177,
+          "log_time_MAE": 1.5006860702256806
+        },
+        "operator_size": {
+          "brier": 0.11944276422591735,
+          "log_loss": 0.3827982192933928,
+          "log_time_MAE": 0.6336906765618378
+        },
+        "operator_state": {
+          "brier": 0.11791835438072194,
+          "log_loss": 0.3792996849463269,
+          "log_time_MAE": 0.6049365173574063
+        }
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "observations": 2000,
+      "positive": 409,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.11502086967465891,
+          "log_loss": 0.36827018742661244,
+          "log_time_MAE": 0.8035868721945857
+        },
+        "operator_size": {
+          "brier": 0.1149522448522035,
+          "log_loss": 0.3689946782069859,
+          "log_time_MAE": 0.3937914209126162
+        },
+        "operator_state": {
+          "brier": 0.11200807874440301,
+          "log_loss": 0.36066927402669835,
+          "log_time_MAE": 0.41834090979193045
+        }
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "observations": 2000,
+      "positive": 317,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.060596204415862866,
+          "log_loss": 0.23427568876228638,
+          "log_time_MAE": 0.9713118372775598
+        },
+        "operator_size": {
+          "brier": 0.05646726033572474,
+          "log_loss": 0.21904421084141396,
+          "log_time_MAE": 0.3448525636607629
+        },
+        "operator_state": {
+          "brier": 0.057032516109504335,
+          "log_loss": 0.22176408344952694,
+          "log_time_MAE": 0.2724239303033735
+        }
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "observations": 2000,
+      "positive": 325,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.06642515363889516,
+          "log_loss": 0.2475289254127461,
+          "log_time_MAE": 1.4443209994865362
+        },
+        "operator_size": {
+          "brier": 0.06244733524670187,
+          "log_loss": 0.23154761464658805,
+          "log_time_MAE": 0.4336292829053011
+        },
+        "operator_state": {
+          "brier": 0.05935228829810036,
+          "log_loss": 0.22085189313929635,
+          "log_time_MAE": 0.45638496581784127
+        }
+      }
+    },
+    {
+      "geometry": "g_pr136",
+      "observations": 1913,
+      "positive": 263,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.08778516898613963,
+          "log_loss": 0.30465645900059307,
+          "log_time_MAE": 0.8621258687840696
+        },
+        "operator_size": {
+          "brier": 0.08652704007382389,
+          "log_loss": 0.2993207960798202,
+          "log_time_MAE": 0.39674109503195265
+        },
+        "operator_state": {
+          "brier": 0.08598139615633153,
+          "log_loss": 0.2994809393810495,
+          "log_time_MAE": 0.3652661595636685
+        }
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "observations": 2000,
+      "positive": 402,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.11067827725319077,
+          "log_loss": 0.356063140813853,
+          "log_time_MAE": 0.6466037646304725
+        },
+        "operator_size": {
+          "brier": 0.11014651773552422,
+          "log_loss": 0.3543722985325597,
+          "log_time_MAE": 0.4961983605582633
+        },
+        "operator_state": {
+          "brier": 0.10899867217626294,
+          "log_loss": 0.35029609549526797,
+          "log_time_MAE": 0.5757050214700872
+        }
+      }
+    }
+  ],
+  "summary": {
+    "operator_only": {
+      "brier": 0.10990795975275348,
+      "log_loss": 0.3592656924829643,
+      "log_time_MAE": 1.2172824490286311
+    },
+    "operator_size": {
+      "brier": 0.10841031368921672,
+      "log_loss": 0.3528590133274445,
+      "log_time_MAE": 0.4530968744420783
+    },
+    "operator_state": {
+      "brier": 0.10783345505413572,
+      "log_loss": 0.3508344166950509,
+      "log_time_MAE": 0.45625691628157716
+    }
+  },
+  "elapsed_seconds": 14.180236791999999,
+  "configuration": {
+    "regularization_intercepts": 0.0001,
+    "regularization_slopes": 0.01,
+    "geometry_weight": "equal",
+    "state_scaling": "train only; clip5",
+    "time_floor_seconds": 1e-06
+  }
+}

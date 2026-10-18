@@ -1,5 +1,46 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h41 — controle de tamanho e antecedentes diretos
+
+- Coleta ampliada093590aaa738 ainda ATIVA sessão26945, log
+ `/tmp/pcctp_move_profile_expanded.log`; não duplicar. Naúltimaleitura avança
+ alémdord100; planos20TRAIN, timeout90s/caso. Há checkpoints interrompidos,
+ preservados explicitamente. Nenhum sinal de falha do coletor.
+- `operator_prediction.py --all-profiles --partial` agora permite snapshot
+ explicitamentePARCIAL. Sem--partial, avaliaçãoampliada exigecompletionmanifest.
+ Corrigida saída versionada parahashdeFONTES+CODIGO, evitando sobrescrever
+ análises comcontrolesdistintos. Fonteexata salva emoperator_prediction_sources/
+ porSHAantesdeavaliar. Fontesdosdoissnapshots anteriores recuperadas, hashes
+ verificados. Default4geometriasrerodado comnovo controle/códigopreservado.
+- Dois snapshots comparáveis,13geometriasTRAIN, fontesiguais, em
+ `operator_prediction.046ea1c038fb.partial_snapshot.json`(2modelos) e
+ `operator_prediction.84a3044c9ba7.partial_snapshot.json`(3modelos).
+ Controleadicional operator_size usaSÓlog(nvisitas),log(tamanhorota), poroperador.
+ Resultado: logtempoMAE operator_only1.21728,size0.45310,estado0.45626.
+ Portanto ganhoaparente frente amédia simples é explicadoportamanho;estado
+ nãoadiciona melhora dotempo. Brier0.10991/0.10841/0.10783;logloss
+0.35927/0.35286/0.35083. Pequenosganhos preditivosnãoequivalemaganho de política.
+ Sessões81380/82833/72567 encerradas. Nãoimplementar política antesdeexaminar
+ coletaampliadacompleta e essescontrolesfortes.
+- `operator_opportunity.py`: diagnóstico dosprefixosfalhos antesdeumoperador
+ observado comsucesso, mantendoamesmarotadeentrada. Snapshot17geometrias
+ (15TRAIN+2DEV) tevefraçãomédiaporgeometria0.60492dotempo nativo emtaisfalhas.
+ Isto sugere espaço para testarordenação,mas NÃO ébounddespeedup ouganhode
+ trajetória: outraordem mudaestadosfuturos. Excluiconstrução/overhead,censura
+ mantida. Fontes/códigos congelados emoperator_opportunity.c4e78bbe1ddf.json.
+- Literatura primáriaverificada:`research_notes/operator_scheduling_prior_art.md`.
+ Dudel2026(JMS,doi10.5282/jums/v11i1pp1-26) jáestuda seleçãoaprendida sensível
+ atempoemALNS; Zou,Hao,Wu2024 arXiv2403.14405 járeordena RVNDcomRL.
+ Nãoalegarnovidadegenérica dessascombinações. Páginaeditorial/páginasDudel
+ têmmetadadodepaginaçãoambíguoa conferirantesdoreferencialfinal.
+
+Próximo: concluir eavaliartodos20TRAIN usandooperator_only,operator_size,
+ operator_state,coma mesmaavaliaçãoporgeometria. Coletorraiz aindaativo.
+ Casohajasinal contextual, testar política completa semomitir operadores,
+ contraordemoriginal,estáticaportempo/ganho eadaptaçãosimples. Nenhumteste
+ reservadoaberto; nenhumCTP; semvantagem/novidade demonstrada,artigo não pronto.
+
+
 ## Retomada às 6h31 — previsão observacional e ampliação TRAIN
 
 - Coleta inicial deoperadores terminou (sessão78060):6perfis,11526chamadas

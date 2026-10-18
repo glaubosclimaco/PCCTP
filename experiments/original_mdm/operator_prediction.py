@@ -34,6 +34,7 @@ def design(x,moves,mean,scale,context):
     hot=np.eye(15)[moves]
     if not context:return hot
     z=np.clip((x-mean)/scale,-5.,5.)
+    if context=='size':z=z[:,:2]
     return np.column_stack((hot,(hot[:,:,None]*z[:,None,:]).reshape(len(x),-1)))
 
 def fit(x,moves,y,logtime,weight,context):
@@ -56,9 +57,17 @@ def metrics(y,p,t,pred_t):
                 log_time_MAE=float(np.mean(abs(t-pred_t))))
 
 def main():
+    source_bytes=Path(__file__).read_bytes()
+    code_sha256=hashlib.sha256(source_bytes).hexdigest()
+    versions=HERE/'operator_prediction_sources';versions.mkdir(exist_ok=True)
+    (versions/(code_sha256+'.py')).write_bytes(source_bytes)
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--all-profiles',action='store_true')
+    parser.add_argument('--partial',action='store_true',help='Explicit snapshot of an unfinished expanded collection')
     args=parser.parse_args()
+    collection_complete=(HERE/'move_profiles/completion.093590aaa738.json').exists()
+    if args.all_profiles and not args.partial and not collection_complete:
+        parser.error('Expanded collection unfinished; use --partial for a labeled exploratory snapshot')
     began=time.perf_counter();blocks=[];manifest={};audit=[]
     pattern='g_*.json' if args.all_profiles else 'g_*.4e1c42c7aa48.json'
     seen=set()
@@ -100,7 +109,7 @@ def main():
         geometry_counts={g:sum(len(b['y']) for b in train if b['geometry']==g) for g in geometries if g!=geometry}
         weight=np.concatenate([np.full(len(b['y']),1./geometry_counts[b['geometry']]/len(geometry_counts)) for b in train])
         scores={}
-        for name,context in [('operator_only',False),('operator_state',True)]:
+        for name,context in [('operator_only',False),('operator_size','size'),('operator_state',True)]:
             model=fit(x,moves,y,t,weight,context)
             a=design(test['x'],test['moves'],model['mean'],model['scale'],context)
             scores[name]=metrics(test['y'],expit(a@model['probability']),test['t'],a@model['timing'])
@@ -109,12 +118,13 @@ def main():
                    for metric in rows[0]['metrics'][name]} for name in rows[0]['metrics']}
     result=dict(scope='Exploratory LOGO on TRAIN geometries; observed executed actions only, no policy-value claim',
                 training_geometries=len(geometries),
-                code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),source_hashes=manifest,
+                expanded_collection_complete=collection_complete,partial_snapshot=bool(args.all_profiles and args.partial),
+                code_sha256=code_sha256,source_hashes=manifest,
                 audit=audit,feature_names=NAMES,rows=rows,summary=summary,elapsed_seconds=time.perf_counter()-began,
                 configuration=dict(regularization_intercepts=.0001,regularization_slopes=.01,
                                    geometry_weight='equal',state_scaling='train only; clip5',time_floor_seconds=1e-6))
-    fingerprint=hashlib.sha256(json.dumps(manifest,sort_keys=True).encode()).hexdigest()[:12]
-    target=HERE/(f'operator_prediction.{fingerprint}.json' if args.all_profiles else 'operator_prediction_development.json')
+    fingerprint=hashlib.sha256(json.dumps(dict(sources=manifest,code=result['code_sha256']),sort_keys=True).encode()).hexdigest()[:12]
+    target=HERE/(f'operator_prediction.{fingerprint}'+('.partial_snapshot' if args.partial else '')+'.json' if args.all_profiles else 'operator_prediction_development.json')
     target.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k not in ('source_hashes','rows','audit')},indent=2))
 

@@ -1,7 +1,9 @@
 {
   "scope": "Exploratory LOGO on TRAIN geometries; observed executed actions only, no policy-value claim",
   "training_geometries": 4,
-  "code_sha256": "e2156fca9c09c8045a4827275957b31c1556b710b89bdaf573a9a3e1e6888627",
+  "expanded_collection_complete": false,
+  "partial_snapshot": false,
+  "code_sha256": "e7d5e0a02dee7d56f752e3b7af9063c2bc773b04a85d5f01ee8ad69b9546d2b2",
   "source_hashes": {
     "g_att48_VT16_T16_W16_75.seed42.4e1c42c7aa48.json": "6e25276ee6b41caee421fef49dce8a4f4fe8a03b34263b747901a83535342d76",
     "g_berlin52_VT16_T18_W18_50.seed42.4e1c42c7aa48.json": "8e2eb6dd2ec9a8f520a0d56ff4e5a222e3c6198347d4013f7ad6779a8cabcd5b",
@@ -18,7 +20,7 @@
       "sample_capped": false,
       "profiled_run_completed": true,
       "unique_input_states": 120,
-      "median_feature_seconds": 7.016700000000986e-05
+      "median_feature_seconds": 7.116650000005276e-05
     },
     {
       "instance": "g_berlin52_VT16_T18_W18_50",
@@ -27,7 +29,7 @@
       "sample_capped": true,
       "profiled_run_completed": true,
       "unique_input_states": 298,
-      "median_feature_seconds": 6.5395500000065e-05
+      "median_feature_seconds": 6.69584999999917e-05
     },
     {
       "instance": "g_bier127_VT24_T26_W77_50",
@@ -36,7 +38,7 @@
       "sample_capped": true,
       "profiled_run_completed": true,
       "unique_input_states": 354,
-      "median_feature_seconds": 0.00012931199999999254
+      "median_feature_seconds": 0.0001454579999999872
     },
     {
       "instance": "g_gr137_VT26_T28_W83_25",
@@ -45,7 +47,7 @@
       "sample_capped": true,
       "profiled_run_completed": true,
       "unique_input_states": 383,
-      "median_feature_seconds": 0.0001267080000000309
+      "median_feature_seconds": 0.00012595799999992607
     },
     {
       "instance": "g_gr229_VT45_T46_W138_25",
@@ -54,7 +56,7 @@
       "sample_capped": true,
       "profiled_run_completed": false,
       "unique_input_states": 455,
-      "median_feature_seconds": 0.0002054579999999362
+      "median_feature_seconds": 0.0002087920000000132
     },
     {
       "instance": "g_gr96_VT18_T20_W58_75",
@@ -63,7 +65,7 @@
       "sample_capped": true,
       "profiled_run_completed": true,
       "unique_input_states": 227,
-      "median_feature_seconds": 0.00010616599999968557
+      "median_feature_seconds": 0.00011625000000003993
     }
   ],
   "feature_names": [
@@ -89,6 +91,11 @@
           "log_loss": 0.28874032605531846,
           "log_time_MAE": 0.30691524820715016
         },
+        "operator_size": {
+          "brier": 0.0809235107256016,
+          "log_loss": 0.2848234136720988,
+          "log_time_MAE": 0.3616745342058467
+        },
         "operator_state": {
           "brier": 0.0904144262201512,
           "log_loss": 0.3135060059552322,
@@ -105,6 +112,11 @@
           "brier": 0.09676327171878811,
           "log_loss": 0.3240417671243758,
           "log_time_MAE": 0.5592841271240666
+        },
+        "operator_size": {
+          "brier": 0.09716746856461313,
+          "log_loss": 0.3243592398790064,
+          "log_time_MAE": 0.41950119594073443
         },
         "operator_state": {
           "brier": 0.09367554535833096,
@@ -123,6 +135,11 @@
           "log_loss": 0.4539285250388756,
           "log_time_MAE": 1.1578963060588878
         },
+        "operator_size": {
+          "brier": 0.15919530648142188,
+          "log_loss": 0.5392619414826081,
+          "log_time_MAE": 0.6457935126298069
+        },
         "operator_state": {
           "brier": 0.1560963896197929,
           "log_loss": 0.518360004889506,
@@ -140,6 +157,11 @@
           "log_loss": 0.3393052170094056,
           "log_time_MAE": 0.6282955773520278
         },
+        "operator_size": {
+          "brier": 0.10079351889857537,
+          "log_loss": 0.3423780661629977,
+          "log_time_MAE": 0.3699422932671066
+        },
         "operator_state": {
           "brier": 0.11317152537542398,
           "log_loss": 0.3752782965588352,
@@ -154,13 +176,18 @@
       "log_loss": 0.35150395880699387,
       "log_time_MAE": 0.6630978146855331
     },
+    "operator_size": {
+      "brier": 0.10951995116755299,
+      "log_loss": 0.3727056652991777,
+      "log_time_MAE": 0.44922788401087366
+    },
     "operator_state": {
       "brier": 0.11333947164342476,
       "log_loss": 0.3801540735465537,
       "log_time_MAE": 0.5608027512460044
     }
   },
-  "elapsed_seconds": 2.15253625,
+  "elapsed_seconds": 2.346835541,
   "configuration": {
     "regularization_intercepts": 0.0001,
     "regularization_slopes": 0.01,
