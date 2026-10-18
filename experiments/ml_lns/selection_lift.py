@@ -45,7 +45,7 @@ def lift(d,incumbent,released,assignment,seed=42,extra_edges=None):
         raise AssertionError('Lift violated an edge fixing')
     return route
 
-def best_lift(d,incumbent,released,limit=3,seed=42):
+def best_lift(d,incumbent,released,limit=3,seed=42,keep_incumbent=True):
     """Lift top additive-proxy assignments; retain incumbent as fallback.
 
     Exact feasibility enumeration, heuristic choice and routing. No claim of
@@ -71,10 +71,11 @@ def best_lift(d,incumbent,released,limit=3,seed=42):
     current=np.array([v in selected for v in u],dtype=int)
     saving=(current-masks)@np.array(contribution)
     indices=sorted(np.flatnonzero(valid),key=lambda i:(-saving[i],int(i)))[:limit]
-    best=incumbent[:]; cost=validate(d,best)
+    best=incumbent[:]; cost=validate(d,best) if keep_incumbent else float('inf')
     for i in indices:
         assignment={v for j,v in enumerate(u) if masks[i,j]}
         candidate=lift(d,incumbent,set(u),assignment,seed)
         value=validate(d,candidate)
         if value<cost: best=candidate; cost=value
+    if not np.isfinite(cost): raise AssertionError('No feasible lifted assignment')
     return dict(route=best,cost=cost,feasible_assignments=int(valid.sum()),assignments_lifted=len(indices))

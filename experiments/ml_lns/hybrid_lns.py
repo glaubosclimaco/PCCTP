@@ -40,9 +40,10 @@ def training_data():
     if not states: raise ValueError('No independent train geometry labels')
     return states,hashes
 
-def run(d,initial,method,models,seconds,seed):
+def run(d,initial,method,models,seconds,seed,acceptance='greedy'):
     began=time.perf_counter(); route=initial[:]; value=validate(d,route)
     first=value; rng=random.Random(seed); pool_id=0; trace=[]; weights={k:1. for k in ('random','coverage','prize')}
+    best_value=value; best_route=route[:]
     policy={'hybrid_uniform':'uniform','hybrid_savings':'joint_savings','hybrid_alns':'alns',
             'hybrid_generic':'learned_generic','hybrid_joint':'learned_joint'}.get(method,method)
     mip=FragmentRepair(d,backend='highspy',warm_start=True,connectivity='cuts') if method.startswith('hybrid_') else None
@@ -72,23 +73,34 @@ def run(d,initial,method,models,seconds,seed):
                 record=records.pop(index)
             else: record=records.pop(0)
             query_began=time.perf_counter()
-            repair=best_lift(d,route,record['u'],limit=3,seed=seed)
+            repair=best_lift(d,route,record['u'],limit=3,seed=seed,keep_incumbent=acceptance=='greedy')
             next_route=repair['route']; next_cost=repair['cost']; mip_used=False
             remaining=seconds-(time.perf_counter()-began)
             if mip is not None and len(trace)%8==7 and remaining>.02:
                 solved=mip.solve(route,record['u'],min(.2,remaining),'route_context',seed=seed,start_route=next_route)
                 mapping={int(v):i for i,v in enumerate(d['visits'])}
                 next_route=[mapping[v] for v in solved['route']]; next_cost=solved['cost']; mip_used=True
-            improved=next_cost<value-1e-8
-            weights[record['kind']]=.9*weights[record['kind']]+.1*(6. if improved else 1.)
-            trace.append(dict(elapsed=time.perf_counter()-began,cost=next_cost,kind=record['kind'],
+            improved=next_cost<value-1e-8; new_best=next_cost<best_value-1e-8
+            elapsed=time.perf_counter()-began
+            temperature=first*.01*(.01**min(1.,elapsed/seconds))
+            accepted=bool(improved or (acceptance=='anneal' and rng.random()<np.exp(-max(0.,next_cost-value)/max(temperature,1e-12))))
+            reward=6. if new_best else 3. if improved else 1. if accepted else 0.
+            weights[record['kind']]=max(.05,.9*weights[record['kind']]+.1*reward)
+            changed=False
+            if accepted:
+                old_edges={tuple(sorted((route[i-1],v))) for i,v in enumerate(route)}
+                new_edges={tuple(sorted((next_route[i-1],v))) for i,v in enumerate(next_route)}
+                changed=old_edges!=new_edges
+                route=next_route; value=next_cost
+            if new_best: best_route=next_route[:]; best_value=next_cost
+            trace.append(dict(elapsed=elapsed,cost=best_value,current_cost=value,candidate_cost=next_cost,
+                              accepted=accepted,kind=record['kind'],temperature=temperature,
                               query_seconds=time.perf_counter()-query_began,mip_used=mip_used))
-            if improved:
-                route=next_route; value=next_cost; break
-    assert abs(validate(d,route)-value)<1e-6
+            if accepted and changed: break
+    assert abs(validate(d,best_route)-best_value)<1e-6
     return dict(method=method,budget_seconds=seconds,total_seconds=time.perf_counter()-began,
-                initial_cost=first,cost=value,gain=(first-value)/max(1.,first),queries=len(trace),
-                trace=trace,route=[int(d['visits'][v]) for v in route])
+                acceptance=acceptance,initial_cost=first,cost=best_value,gain=(first-best_value)/max(1.,first),queries=len(trace),
+                trace=trace,route=[int(d['visits'][v]) for v in best_route])
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
@@ -96,29 +108,34 @@ def main():
     p.add_argument('--phase',type=int,default=1)
     p.add_argument('--limit',type=int,default=3)
     p.add_argument('--one-per-geometry',action='store_true')
+    p.add_argument('--acceptance',choices=['greedy','anneal'],default='greedy')
     p.add_argument('--methods',nargs='+',choices=METHODS,default=METHODS)
     args=p.parse_args(); train,hashes=training_data()
     models=dict(generic=fit(train,GENERIC,'linear'),joint=fit(train,GENERIC+list(range(12,22)),'linear'))
+    cases=[]; seen=set()
+    for path in sorted((HERE/'decoder_initialized_states').glob('g_*.json')):
+        baseline=json.loads(path.read_text())
+        if baseline['role']!='development': continue
+        if args.one_per_geometry and baseline['geometry'] in seen: continue
+        if args.limit and len(cases)>=args.limit: break
+        snapshot=next((s for s in baseline['snapshots'] if s['iteration']==args.phase),None)
+        if snapshot is None: continue
+        seen.add(baseline['geometry']); cases.append((path,baseline,snapshot))
     protocol=dict(scope='Development only; all online feature, choice and repair time included; not final benchmark',
                   code_hashes={name:hashlib.sha256((HERE/name).read_bytes()).hexdigest() for name in
                                ['hybrid_lns.py','selection_lift.py','fragment_repair.py','nonlinear_ranker.py',
                                 'highs_backend.py','pilot.py','context_study.py','exchange_signature.py']},
                   training_hashes=hashes,training_geometries=sorted({s['geometry'] for s in train}),
+                  evaluation_cases=[dict(instance=b['instance'],geometry=b['geometry'],seed=b['seed'],
+                                         baseline_sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+                                    for path,b,s in cases],
                   models={name:{k:v.tolist() if isinstance(v,np.ndarray) else v for k,v in model.items()} for name,model in models.items()},
-                  budget=args.budget,phase=args.phase,methods=args.methods,one_per_geometry=args.one_per_geometry)
+                  budget=args.budget,phase=args.phase,methods=args.methods,one_per_geometry=args.one_per_geometry,
+                  acceptance=args.acceptance,annealing_initial_fraction=.01,annealing_final_fraction=.0001)
     fingerprint=hashlib.sha256(json.dumps(protocol,sort_keys=True).encode()).hexdigest()[:12]
     out=HERE/'hybrid_development'; out.mkdir(exist_ok=True)
     (out/f'protocol.{fingerprint}.json').write_text(json.dumps(protocol,indent=2)+'\n')
-    used=0; seen=set()
-    for path in sorted((HERE/'decoder_initialized_states').glob('g_*.json')):
-        baseline=json.loads(path.read_text())
-        if baseline['role']!='development': continue
-        if args.one_per_geometry and baseline['geometry'] in seen: continue
-        if args.limit and used>=args.limit: break
-        snapshot=next((s for s in baseline['snapshots'] if s['iteration']==args.phase),None)
-        if snapshot is None: continue
-        seen.add(baseline['geometry'])
-        used+=1
+    for path,baseline,snapshot in cases:
         d=read_instance(ROOT/'data'/baseline['instance']); mapping={int(v):i for i,v in enumerate(d['visits'])}
         route=[mapping[v] for v in snapshot['route']]
         assert abs(validate(d,route)-snapshot['cost'])<1e-6
@@ -128,7 +145,7 @@ def main():
         for method in order:
             target=out/(path.stem+f'.phase{args.phase}.{method}.{fingerprint}.json')
             if target.exists(): continue
-            result=run(d,route,method,models,args.budget,baseline['seed'])
+            result=run(d,route,method,models,args.budget,baseline['seed'],args.acceptance)
             endpoint=snapshot['seconds']+result['total_seconds']
             earlier=[s for s in baseline['snapshots'] if s['seconds']<=endpoint]
             result.update(instance=d['name'],geometry=baseline['geometry'],seed=baseline['seed'],

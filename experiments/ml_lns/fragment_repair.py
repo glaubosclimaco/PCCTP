@@ -161,7 +161,7 @@ class FragmentRepair:
                 if value<route_cost(d,best): best=decoded
         return dict(operator=operator,status=status,returned_solution=returned,proven_optimal=status==0,
                     solve_seconds=time.perf_counter()-solve_began,total_seconds=time.perf_counter()-began,
-                    free_x=len(free),free_y=len(released),cost=validate(d,best),
+                    free_x=len(free),free_y=len(set(released)-d['mandatory']),cost=validate(d,best),
                     removed_optional=[int(d['visits'][v]) for v in sorted(selected-set(best))],
                     added_optional=[int(d['visits'][v]) for v in sorted(set(best)-selected)],
                     route=[int(d['visits'][v]) for v in best],

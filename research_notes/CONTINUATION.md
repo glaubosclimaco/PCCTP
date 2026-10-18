@@ -1,5 +1,54 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 5h50 — resultado negativo e novas verificações
+
+- O piloto greedy de6geometrias/dezpolíticas terminou: nenhuma política venceu
+  o MDM nos checkpoints de tempo registrados. O ranking conjunto não superou
+  os controles pareados. Preservar esse resultado; não promover o ganho contra
+  o estado inicial como superioridade frente à continuação do MDM.
+- `audit_trajectories.py` passou em105trajetórias disponíveis: custo final e
+  viabilidade recalculados, melhor custo monotônico, tempos ordenados, modelos
+  sem a geometria avaliada no treino. Protocolos podem estar incompletos no
+  instante da auditoria. Rodar novamente após cada lote.
+- Foi acrescentada aceitação `anneal`, de forma igual para todos os métodos.
+  Temperatura inicial1%do custo inicial, final0.01%, decaimento exponencial por
+  tempo. A construção pode propor pioras; retorna-se sempre a melhor solução
+  verificada, separada da solução corrente. Greedy permanece disponível.
+  Não houve ajuste em validação/teste nem escolha de temperatura por resultado.
+- Sessão63247: pilotoanneal seisgeometrias, log
+  `/tmp/pcctp_hybrid_anneal_six_geometries_round2.log`, ainda em execução.
+  A primeira tentativa falhou na serialização de um booleano NumPy antes de
+  publicar qualquer resultado; corrigida e reiniciada. Não é falha do solver.
+- Protocolos de futuras execuções agora congelam também os nomes e hashes dos
+  casos de avaliação antes das trajetórias. Não refazer o lote só por esse
+  acréscimo de rastreabilidade. O código em execução já foi carregado antes dele.
+
+### Diagnóstico de liberdade de roteamento
+
+Seleção condicional completa não implica bom espaço de roteamento: as arestas
+entre obrigatórios podem continuar presas, apesar de toda seleção viável ter
+alguma rota na vizinhança. Por isso começou um diagnóstico específico:
+
+- `routing_release_probe.py`, sessão79330, log
+  `/tmp/pcctp_routing_release_probe.log`. Três geometrias de desenvolvimento,
+  primeiro estado do MDM,12consultas de0.5s por configuração.
+- Compara8opcionais,12opcionais e8opcionais+4obrigatórios usados apenas como
+  âncoras de roteamento. A visita dos obrigatórios continua fixada emum; só
+  suas arestas incidentes são liberadas. Os dois últimos casos têm o mesmo
+  número total de vértices liberados nas arestas e o mesmo orçamento adicional.
+- Isso é diagnóstico de mecanismo, não vantagem de ML ou teste confirmatório.
+  ATENÇÃO: o processo foi carregado quando `free_y` ainda contava todos os
+  vértices liberados. Nos JSONs desse primeiro lote, derivar o número real de
+  visitas livres de `optional_released`. Corrigir esse metadado após o lote
+  (sem alterar soluções/tempos). A classe foi corrigida para os próximos lotes.
+
+Próxima decisão: se liberar apenas opcionais não altera o roteamento necessário,
+estudar vizinhanças que separem seleção e reordenação de obrigatórios, mantendo
+controles de orçamento e capacidade iguais. Se ML continuar sem benefício,
+investigar outra tarefa de aprendizado em vez de multiplicar configurações até
+encontrar uma comparação favorável. A teoria de seleção ainda requer revisão
+e confronto com literatura; não é novidade estabelecida.
+
 ## Retomada às 5h40 — busca iterativa e controles equivalentes
 
 - `hybrid_lns.py` implementa trajetórias completas de desenvolvimento com
