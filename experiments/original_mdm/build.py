@@ -10,8 +10,11 @@ ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'mdm-grasp-genius-vnd'
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--initialize-decoder-index',action='store_true')
+parser.add_argument('--profile-moves',action='store_true')
 args=parser.parse_args()
-BUILD=Path(__file__).with_name('build_decoder_initialized' if args.initialize_decoder_index else 'build')
+if args.profile_moves and not args.initialize_decoder_index:
+    parser.error('Move profiling requires the explicitly corrected decoder baseline')
+BUILD=Path(__file__).with_name('build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -44,6 +47,26 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
         assert text.count(anchor)==1
         text=text.replace(anchor,'research_mining();\n\t\t\t'+anchor)
         manifest['changes'].append('grasp: observational checkpoint and mining-call hooks; algorithm unchanged')
+        if args.profile_moves:
+            declaration='void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,\n\t\tint *vertices_solucao, int tamanho_rota, int d, int prize, int qtd_n)'
+            assert text.count(declaration)==1
+            text=text.replace(declaration,declaration.replace('obter_vizinho','profiled_obter_vizinho'))
+            wrapper='''
+void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,
+        int *vertices_solucao, int tamanho_rota, int d, int prize, int qtd_n) {
+    std::vector<int> before(rota,rota+qtd_n);
+    double before_cost=custo(C,rota);
+    auto start=std::chrono::steady_clock::now();
+    profiled_obter_vizinho(vertices,C,mov,rota,vertices_solucao,tamanho_rota,d,prize,qtd_n);
+    double elapsed=std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count();
+    research_move(mov,before_cost,custo(C,rota),elapsed,before.data(),rota);
+}
+'''
+            anchor='void busca_local(Vertice *vertices'
+            assert text.count(anchor)==1
+            text=text.replace(anchor,wrapper+'\n'+anchor)
+            text='#include <vector>\n#include <chrono>\n'+text
+            manifest['changes'].append('OBSERVATIONAL move profiling: copy successor array, time each operator, export first 2000 calls; no RNG/decision change')
     target=BUILD/name
     if not target.exists() or target.read_text()!=text: target.write_text(text)
 for name in ['research_hook.hpp','research_hook.cpp']:

@@ -1,0 +1,2471 @@
+{
+  "method": "scattered_uniform",
+  "budget_seconds": 5.0,
+  "total_seconds": 5.000879041000005,
+  "initial_cost": 347.0,
+  "cost": 332.0,
+  "queries": 101,
+  "trace": [
+    {
+      "elapsed": 0.18821295799999405,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        14,
+        25
+      ],
+      "query_seconds": 0.18776812500000517,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.2864513749999986,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        6,
+        16,
+        18,
+        23,
+        25
+      ],
+      "query_seconds": 0.09798933300000101,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.39289362499999925,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        13,
+        21,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        8,
+        18
+      ],
+      "query_seconds": 0.10636725000000524,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.5036358750000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        13,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        6,
+        8,
+        18,
+        23
+      ],
+      "query_seconds": 0.11066395900000714,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.5127263330000034,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        8
+      ],
+      "query_seconds": 0.009009458000008408,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.5871777499999951,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        6,
+        15,
+        16,
+        23
+      ],
+      "query_seconds": 0.07437066699999662,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.6078047910000066,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        5,
+        8,
+        14,
+        20
+      ],
+      "query_seconds": 0.0205493339999947,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.7539960000000008,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        17,
+        19,
+        21,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        1,
+        5,
+        23
+      ],
+      "query_seconds": 0.1461107500000054,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.771628457999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        5,
+        14,
+        16,
+        20,
+        23,
+        24
+      ],
+      "query_seconds": 0.01755662499999744,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.7887507500000055,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        6,
+        8,
+        12,
+        15,
+        16,
+        24
+      ],
+      "query_seconds": 0.017049167000010357,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.7953636250000073,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        6,
+        15,
+        24
+      ],
+      "query_seconds": 0.006556791999997813,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.828668707999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        21,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        15,
+        16,
+        18,
+        20,
+        24
+      ],
+      "query_seconds": 0.03320875000000001,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.9114579579999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        15,
+        18,
+        20
+      ],
+      "query_seconds": 0.08270416599999919,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.970012208,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        19,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        12,
+        18,
+        24,
+        25
+      ],
+      "query_seconds": 0.0583140410000027,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.066719500000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        5,
+        6,
+        14,
+        24
+      ],
+      "query_seconds": 0.09662829100000181,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.1823632499999945,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        15,
+        16,
+        20,
+        24
+      ],
+      "query_seconds": 0.11556808299999943,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.1970654999999937,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        6,
+        12,
+        14,
+        15,
+        24
+      ],
+      "query_seconds": 0.014622500000001537,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.2179080829999975,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        15,
+        23
+      ],
+      "query_seconds": 0.02076358299999015,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.2704751250000044,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        5,
+        14,
+        18,
+        23,
+        24
+      ],
+      "query_seconds": 0.05247500000000116,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.3307560410000008,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        16,
+        18,
+        23,
+        24
+      ],
+      "query_seconds": 0.06018387500000699,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.3825187500000027,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        19,
+        21,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        8,
+        18,
+        20
+      ],
+      "query_seconds": 0.05150466599999959,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.4067820409999996,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        14,
+        15,
+        18,
+        20
+      ],
+      "query_seconds": 0.02415933300000006,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.4357766659999953,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        15,
+        16,
+        23
+      ],
+      "query_seconds": 0.02888841699999034,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.5638332080000055,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        21,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        5,
+        6
+      ],
+      "query_seconds": 0.12797004099999754,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.5782533750000027,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        5,
+        8,
+        16,
+        20,
+        24
+      ],
+      "query_seconds": 0.014337832999999023,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.6600631660000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        15,
+        18,
+        23
+      ],
+      "query_seconds": 0.08155912499999829,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.7028768330000048,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        6,
+        14,
+        18
+      ],
+      "query_seconds": 0.0427228749999955,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.7030793750000015,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        17,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        5,
+        15,
+        24
+      ],
+      "query_seconds": 0.00015199999999992997,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.7147740829999947,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        6,
+        15,
+        20,
+        25
+      ],
+      "query_seconds": 0.011623416999995584,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.8052930409999988,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        19,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        5,
+        6,
+        18
+      ],
+      "query_seconds": 0.09043950000000223,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.861966541000001,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        25
+      ],
+      "query_seconds": 0.05658079200000543,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.862176415999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        17,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        5,
+        15,
+        24,
+        25
+      ],
+      "query_seconds": 0.0001545829999969328,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.8780880829999944,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        22,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        16,
+        20,
+        24
+      ],
+      "query_seconds": 0.01584616600000288,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.9394212079999988,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        21,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        3,
+        24
+      ],
+      "query_seconds": 0.0612187079999984,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.1184714160000055,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        12,
+        14,
+        23,
+        24,
+        25
+      ],
+      "query_seconds": 0.17889512499999682,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.2050742499999956,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        8,
+        20,
+        25
+      ],
+      "query_seconds": 0.08643133299999306,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.2334151660000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        13,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        18,
+        23,
+        24,
+        25
+      ],
+      "query_seconds": 0.028047332999989294,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.284064375,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22
+      ],
+      "mandatory_released": [
+        4,
+        5,
+        6,
+        16,
+        23,
+        25
+      ],
+      "query_seconds": 0.050110957999990546,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.3416281249999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        12,
+        18,
+        20,
+        23
+      ],
+      "query_seconds": 0.057461291999999276,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.385862790999994,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        17,
+        22,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        5,
+        16,
+        18,
+        24
+      ],
+      "query_seconds": 0.0441304999999943,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.416429665999999,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        17,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        5,
+        6,
+        12,
+        20
+      ],
+      "query_seconds": 0.030479833000001122,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.431366874999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        4,
+        6,
+        8,
+        15,
+        23
+      ],
+      "query_seconds": 0.014858250000003181,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.4501888329999986,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        13,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        12,
+        15,
+        20
+      ],
+      "query_seconds": 0.018743417000010254,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.525189333,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        2,
+        12,
+        15,
+        18,
+        20
+      ],
+      "query_seconds": 0.07491775000001155,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.5671482500000025,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        19,
+        21,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        5,
+        18
+      ],
+      "query_seconds": 0.041860083999992526,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.6275004160000037,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        24,
+        25
+      ],
+      "query_seconds": 0.060252625000003945,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.6449168329999964,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        13,
+        19,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        8,
+        18,
+        20
+      ],
+      "query_seconds": 0.017337792000006402,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.756898750000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        5,
+        6,
+        8,
+        14,
+        20,
+        25
+      ],
+      "query_seconds": 0.11190083299999287,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.816771375000002,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        17,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        4,
+        25
+      ],
+      "query_seconds": 0.059771916000002534,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.8313282910000055,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        12,
+        16,
+        20,
+        24
+      ],
+      "query_seconds": 0.014309957999998346,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.8415513749999946,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        21,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        6,
+        15,
+        18
+      ],
+      "query_seconds": 0.01015974999999969,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.8697803329999942,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        19,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        8,
+        16,
+        23,
+        25
+      ],
+      "query_seconds": 0.02813816600000507,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.966067499999994,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        8,
+        15,
+        16
+      ],
+      "query_seconds": 0.09619750000000238,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.071925582999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        13,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        12,
+        14,
+        15,
+        20
+      ],
+      "query_seconds": 0.10577587499999197,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.105908999999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        15,
+        18,
+        24
+      ],
+      "query_seconds": 0.03388870899999574,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.122931041000001,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        19,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        5,
+        6,
+        23
+      ],
+      "query_seconds": 0.016947625000000244,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.165899374999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        5,
+        6,
+        16,
+        24
+      ],
+      "query_seconds": 0.042875667000004114,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.190256750000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        13,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        8,
+        23,
+        24
+      ],
+      "query_seconds": 0.024272874999994087,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.2803468750000064,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        6,
+        14,
+        18
+      ],
+      "query_seconds": 0.09001254199999664,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.3261068749999936,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        21,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        16,
+        20
+      ],
+      "query_seconds": 0.045665291000005936,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.376940625000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        21,
+        22,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        5,
+        8,
+        25
+      ],
+      "query_seconds": 0.05073525000000245,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.420795041000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        6,
+        14,
+        18,
+        23,
+        25
+      ],
+      "query_seconds": 0.04359283300000527,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.465636125000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        19,
+        21,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        6,
+        23
+      ],
+      "query_seconds": 0.04473683299998754,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.4658870829999984,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        4,
+        12,
+        14,
+        20,
+        23
+      ],
+      "query_seconds": 0.00016862500000058844,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.505661540999995,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        4,
+        12,
+        15,
+        18
+      ],
+      "query_seconds": 0.03968595799999264,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.6334406659999985,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        8,
+        12,
+        20,
+        23
+      ],
+      "query_seconds": 0.12769220900000278,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.676496708000002,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        11,
+        19,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        20
+      ],
+      "query_seconds": 0.04295662500000219,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.713821582999998,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        21,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        20
+      ],
+      "query_seconds": 0.03722879099998977,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.736988832999998,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        26,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        16,
+        20
+      ],
+      "query_seconds": 0.023091250000007335,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.7983277910000055,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        4,
+        6,
+        15,
+        16
+      ],
+      "query_seconds": 0.06124708400000145,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.819040749999999,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        22,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        8,
+        12,
+        20
+      ],
+      "query_seconds": 0.020639250000002107,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.819250249999996,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        13,
+        19,
+        22
+      ],
+      "mandatory_released": [
+        14,
+        18,
+        20,
+        24
+      ],
+      "query_seconds": 0.00015345799999977316,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.8228489579999945,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        8,
+        14,
+        18
+      ],
+      "query_seconds": 0.0035491659999991043,
+      "components": 14,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.937356582999996,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        3,
+        12,
+        16,
+        23,
+        25
+      ],
+      "query_seconds": 0.11421645899999078,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.9608665410000015,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        17,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        6,
+        8,
+        15
+      ],
+      "query_seconds": 0.023429083000010564,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.9778489159999992,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        14,
+        16,
+        24
+      ],
+      "query_seconds": 0.016902416999997172,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.978066124999998,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        6,
+        8,
+        14
+      ],
+      "query_seconds": 0.00016129200000136734,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.0886910830000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        17,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        12,
+        20,
+        24
+      ],
+      "query_seconds": 0.11054691599998989,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.088927583,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        17,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        5,
+        12,
+        20
+      ],
+      "query_seconds": 0.00017833299999381325,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.1034840410000015,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        5,
+        16,
+        24,
+        25
+      ],
+      "query_seconds": 0.01448812499999974,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.117428375000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        22
+      ],
+      "mandatory_released": [
+        1,
+        6,
+        8,
+        18,
+        24,
+        25
+      ],
+      "query_seconds": 0.013876207999999224,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.128569791000004,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        6,
+        15,
+        16,
+        20,
+        25
+      ],
+      "query_seconds": 0.011074375000006853,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.128759125000002,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        17,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        2,
+        5,
+        12,
+        15
+      ],
+      "query_seconds": 0.0001414999999980182,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.142870666000007,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        19,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        16,
+        23
+      ],
+      "query_seconds": 0.014046750000005659,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.191148791000003,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        17,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        5,
+        8,
+        15,
+        20
+      ],
+      "query_seconds": 0.04818579199999817,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.2369729579999955,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        19,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        6,
+        12,
+        14,
+        18
+      ],
+      "query_seconds": 0.04557133299999805,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.242252750000006,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        17,
+        19,
+        22,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        24,
+        25
+      ],
+      "query_seconds": 0.005216374999989171,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.274650291,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        19,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        2,
+        5,
+        12,
+        18,
+        25
+      ],
+      "query_seconds": 0.032314915999990035,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.403988333000001,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        21,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        1,
+        8,
+        15,
+        16
+      ],
+      "query_seconds": 0.12924795799999345,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.434909040999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        17,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        6,
+        8,
+        23,
+        24
+      ],
+      "query_seconds": 0.030807332999998494,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.562764125000001,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        12,
+        14,
+        16,
+        24
+      ],
+      "query_seconds": 0.12775466700000493,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.584130458000004,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        2,
+        6,
+        18,
+        20,
+        23
+      ],
+      "query_seconds": 0.02127929200000267,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.617392082999999,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        11,
+        22,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        8,
+        14
+      ],
+      "query_seconds": 0.03316329099999393,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.644982749999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        13,
+        17,
+        19,
+        22,
+        28
+      ],
+      "mandatory_released": [
+        6,
+        24
+      ],
+      "query_seconds": 0.027484333000003858,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.683792457999999,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        19,
+        21,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        12,
+        16,
+        18,
+        20,
+        23
+      ],
+      "query_seconds": 0.03870062500000415,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.713268916000004,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        10,
+        13,
+        17,
+        21,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        14,
+        20,
+        24
+      ],
+      "query_seconds": 0.029392999999998892,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.758300207999994,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        13,
+        22
+      ],
+      "mandatory_released": [
+        3,
+        12,
+        14,
+        20,
+        25
+      ],
+      "query_seconds": 0.044930415999999695,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.767035165999999,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        13,
+        17,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        14,
+        15
+      ],
+      "query_seconds": 0.008494084000005842,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.842600458000007,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        19,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        4,
+        8,
+        16,
+        25
+      ],
+      "query_seconds": 0.0753892090000079,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.940482583000005,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        22,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        8,
+        14,
+        18,
+        23,
+        25
+      ],
+      "query_seconds": 0.09781016599998793,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 5.000874957999997,
+      "cost": 332.0,
+      "kind": "routing",
+      "optional_released": [
+        0,
+        7,
+        13,
+        21,
+        22,
+        26,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        14,
+        15,
+        20
+      ],
+      "query_seconds": 0.060293959000006225,
+      "components": 17,
+      "reason": "time_limit",
+      "proven_optimal": false
+    }
+  ],
+  "size_limits": 7,
+  "route": [
+    10,
+    64,
+    37,
+    9,
+    71,
+    43,
+    49,
+    24,
+    54,
+    17,
+    23,
+    55,
+    41,
+    63,
+    61,
+    60,
+    68,
+    59,
+    69,
+    56,
+    53,
+    44,
+    66,
+    52,
+    13,
+    58,
+    65
+  ],
+  "instance": "g_eil76_VT14_T16_W46_75",
+  "geometry": "g_eil76",
+  "seed": 42,
+  "protocol": "780bd67687d6",
+  "initial_MDM_seconds": 0.065081,
+  "recorded_MDM_cost_before_end": 332,
+  "baseline_final_cost": 332,
+  "baseline_completed": true
+}

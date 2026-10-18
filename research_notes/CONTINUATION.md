@@ -1,5 +1,42 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h21 — blocos refutados; perfil de operadores em andamento
+
+- Novos controles em `dp_trajectory.py`: bloco contíguo8visitados+4ausentes,
+ seleção por proxy de economia e controle8visitadosdispersos+4ausentes. MesmaDP,
+ cap18,0.2s/consulta,5s online/seisgeometrias. Protocolo780bd67687d6;18trajetórias.
+ Sessão57189 terminou; auditoria passou em42trajetórias acumuladas.
+- Nenhum superou checkpoint MDM anterior ao endpoint. Bloco uniforme empatou2/
+ perdeu4,bloco por economia3/3,disperso4/2. Blocos fizeram22738/21638consultas
+ sem limites;disperso764com143limites. Resolver mais consultas baratas não deu
+ melhor qualidade. Preservar a refutação e não promover redução de q como ganho.
+- Nova hipótese observacional: aprendizado para ordenar os operadores existentes
+ doMDM, onde há mais transições com melhoria que no rankingDP. Protocolo em
+ `research_notes/operator_scheduling_protocol.md`; ainda NÃO há política aprendida.
+- Build isolado `build_move_profile/` via `build.py --initialize-decoder-index
+ --profile-moves`, sem alterar fontes legadas, adiciona wrapper de tempo/rotas
+ sobre `obter_vizinho`. Modelo de decisões e RNG intactos. Outputs só primeira
+2000chamadas/instância; censura explícita, custo nativo exclui exportação.
+ Profiling tem overhead: não comparar seu walltime ao baseline.
+- NOVO processo ATIVO sessão78060: `python3 experiments/original_mdm/profile_moves.py`,
+ log `/tmp/pcctp_move_profile.log`. DuasgeometriasDEV +quatroTRAIN,90s/caso,
+ uma variante e semente42. Não duplicar. Build sessão52333 já terminou.
+- Passaram att48(1526movimentos,semcensura),berlin52(2000,censurado),bier127(2000,
+ censurado), com rotas/custos antes/depois recalculados e checkpoints comuns
+ iguais aos baselines. Maisgeometriasdetreino ainda em execução.
+- Protocolo4e1c42c7aa48 em `experiments/original_mdm/move_profiles/`, com sidecar
+ `provenance.4e1c42c7aa48.json` que registra hashes dasfontes ebinário capturados
+ durante coleta sem modificações posteriores. Raw ebuild ignorados noGit.
+- run.py ganhou `profile_moves=False` mantendo padrão de algoritmointacto; perfis
+ usam diretórios temporáriosprivados `.profile` ebináriosFPMaxisolados.
+
+Próximo: terminar e auditar perfis, resumir ganho/tempo por operador PORgeometria.
+Se houver sinal,predizerprobabilidade/ganho/tempo em TRAIN comcontrole médiaspor
+operador;dadosobservacionais não são contrafactuais. Não saltar de acurácia para
+alegação de melhoria; uma política será medida em trajetórias completas, com
+orçamento total econtroles. NãoimplementarCTP. Artigo ainda não pronto.
+
+
 ## Retomada às 6h11 — busca DP completa e novos rótulos
 
 - Coleta corrigida das58outrasvariantes terminou sem falhas de geração;

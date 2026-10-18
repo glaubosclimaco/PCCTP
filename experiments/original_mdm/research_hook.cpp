@@ -48,6 +48,17 @@ void research_snapshot(int iteration,double value,int* route) {
   }
 }
 void research_mining() { ++calls; }
+void research_move(int move,double before_cost,double after_cost,double seconds,int* before,int* after) {
+  static int recorded=0;
+  if(recorded>=2000) return;
+  std::ofstream out((export_path+".moves.jsonl").c_str(),std::ios::app);
+  if(!out) throw std::runtime_error("Cannot write move profile");
+  out << std::setprecision(16) << "{\"call\":" << recorded++ << ",\"move\":" << move
+      << ",\"before_cost\":" << before_cost << ",\"after_cost\":" << after_cost
+      << ",\"operator_seconds\":" << seconds << ",\"before_route\":";
+  write_route(out,decode(before));out << ",\"after_route\":";
+  write_route(out,decode(after));out << "}\n";
+}
 void research_export(const char* path,double value,int* route) {
   if(export_path==path) final_export=true;
   std::ofstream out(path);
