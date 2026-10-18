@@ -64,3 +64,9 @@ Uma faceta genuína também pode ser uma faceta conhecida. A conferência
 bibliográfica continua necessária, especialmente para partições de group
 Steiner e lifting em GTSP. Não confundir estes certificados com evidência de
 aceleração do solver ou de contribuição suficiente para submissão.
+
+## Atualização posterior
+
+Uma prova geral para q>=4 está escrita em `partition_facet_theorem.md`,
+ainda sujeita a revisão da prova e da novidade. Ela substitui a hipótese
+aberta desta nota; os certificados finitos permanecem como conferências.
