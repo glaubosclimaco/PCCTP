@@ -18,3 +18,9 @@ Média entre geometrias: 1.374%; mediana: 1.082%.
 Vitórias/empates/derrotas por geometria: 8/1/0. Gate pré-fixado: True.
 Intervalo bootstrap exploratório por geometria: [0.601, 2.244]%.
 O intervalo não corrige a seleção de método/coorte durante a pesquisa. Não alegar confirmação estatística ou publicabilidade só com este piloto.
+
+## Tempo de retorno e prazo de aceitação
+
+Os dez segundos limitam a aceitação de soluções. O processo nativo verifica o prazo cooperativamente e pode retornar depois dele; seus incumbentes tardios são descartados. Assim, os tempos reais de retorno devem acompanhar os custos.
+mdm: retorno médio 10.3013s; máximo 11.3296s; excesso médio 0.3013s; hard timeouts 0; chamadas LKH 0.
+hybrid: retorno médio 9.4706s; máximo 10.1059s; excesso médio 0.0044s; hard timeouts 0; chamadas LKH 26.

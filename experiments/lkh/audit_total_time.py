@@ -17,7 +17,7 @@ def audit(validation=False):
         cases=json.loads((OUT/'protocol.json').read_text())['cases']
     n=len(cases)
     assert n==(7 if validation else 9)
-    geometries=[];pair_rows=[];hashes={};failures=0
+    geometries=[];pair_rows=[];hashes={};failures=0;timing={'mdm':[],'hybrid':[]}
     for case in cases:
         name=case['instance'];d=read_instance(ROOT/'data'/name)
         mapping={int(v):i for i,v in enumerate(d['visits'])}
@@ -29,6 +29,8 @@ def audit(validation=False):
                 native_path=OUT/f'{name}.seed{seed}.{mode}.native.json'
                 r=json.loads(path.read_text());native=json.loads(native_path.read_text())
                 hashes[path.name]=hashlib.sha256(path.read_bytes()).hexdigest()
+                hashes[native_path.name]=hashlib.sha256(native_path.read_bytes()).hexdigest()
+                timing[mode].append(r)
                 assert r['instance']==name and r['seed']==seed and r['mode']==mode
                 assert native['input_sha256']==hashlib.sha256((ROOT/'data'/name).read_bytes()).hexdigest()
                 budget=10. if mode=='mdm' else 9.
@@ -76,13 +78,14 @@ def audit(validation=False):
     boot=sorted(statistics.mean(rng.choices(means,k=n)) for _ in range(10000))
     average=statistics.mean(means)
     gate=average>0 and wins>=4 and losses<=1 and failures==0 if validation else average>=.5 and wins>=6 and losses<=1 and failures==0
+    timing_summary={mode:dict(runs=len(rs),mean_wall_seconds=statistics.mean(r['wall_seconds'] for r in rs),max_wall_seconds=max(r['wall_seconds'] for r in rs),mean_overrun_seconds=statistics.mean(r['overrun'] for r in rs),hard_timeouts=sum(r['hard_timeout'] for r in rs),lkh_calls=sum(r['lkh_used'] for r in rs)) for mode,rs in timing.items()}
     report=dict(status='PASS',scope='frozen reserved validation' if validation else 'exploratory hard-TRAIN pilot; not confirmatory',
         geometries=n,paired_seeds=3,pairs=3*n,mean_geometry_gain_percent=average,
         median_geometry_gain_percent=statistics.median(means),
         geometry_bootstrap_95_percentile=[boot[249],boot[9749]],
         geometry_wins=wins,geometry_losses=losses,geometry_ties=n-wins-losses,
         feasibility_failures=failures,gate_passed=gate,rows=geometries,pair_rows=pair_rows,
-        result_hashes=hashes)
+        result_hashes=hashes,timing=timing_summary)
     (HERE/('validation_audit.json' if validation else 'total_time_audit.json')).write_text(json.dumps(report,indent=2)+'\n')
     lines=['# Piloto MDM10s versus MDM9s+LKH','',
            f'{n} geometrias, três sementes pareadas; '+('validação reservada com método congelado.' if validation else 'treino exploratório, não confirmatório.')+' Ambos recebem dez segundos totais. Overruns são registrados; melhorias tardias do LKH são descartadas.',
@@ -93,6 +96,9 @@ def audit(validation=False):
             f'Vitórias/empates/derrotas por geometria: {wins}/{n-wins-losses}/{losses}. Gate pré-fixado: {gate}.',
             f'Intervalo bootstrap exploratório por geometria: [{boot[249]:.3f}, {boot[9749]:.3f}]%.',
             'O intervalo não corrige a seleção de método/coorte durante a pesquisa. Não alegar confirmação estatística ou publicabilidade só com este piloto.']
+    lines+=['','## Tempo de retorno e prazo de aceitação','', 'Os dez segundos limitam a aceitação de soluções. O processo nativo verifica o prazo cooperativamente e pode retornar depois dele; seus incumbentes tardios são descartados. Assim, os tempos reais de retorno devem acompanhar os custos.']
+    for mode,row in timing_summary.items():
+        lines.append(f"{mode}: retorno médio {row['mean_wall_seconds']:.4f}s; máximo {row['max_wall_seconds']:.4f}s; excesso médio {row['mean_overrun_seconds']:.4f}s; hard timeouts {row['hard_timeouts']}; chamadas LKH {row['lkh_calls']}.")
     (ROOT/'research_notes'/('lkh_validation_results.md' if validation else 'lkh_total_time_results.md')).write_text('\n'.join(lines)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ('rows','pair_rows','result_hashes')}))
 
