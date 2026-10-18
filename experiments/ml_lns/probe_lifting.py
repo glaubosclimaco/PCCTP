@@ -34,7 +34,7 @@ def main():
                              mip_query_seconds=r.get('query_wall_seconds'),lift_cost=lifted['cost'],
                              lift_seconds=seconds,feasible_assignments=lifted['feasible_assignments'],
                              lift_route=[int(d['visits'][v]) for v in lifted['route']]))
-        row=dict(instance=source['instance'],geometry=source['geometry'],phase=source['phase'],
+        row=dict(instance=source['instance'],geometry=source['geometry'],phase=source['phase'],seed=source['seed'],
                  initial_cost=initial,source_sha256=digest,assignment_limit=3,records=rows,
                  mip_improving=sum(r['mip_cost']<initial-1e-7 for r in rows),
                  lift_improving=sum(r['lift_cost']<initial-1e-7 for r in rows),

@@ -20,10 +20,20 @@ class FragmentRepair:
         if connectivity not in ('flow','cuts'): raise ValueError('Unknown connectivity formulation')
         self.connectivity=connectivity
 
-    def solve(self,route,released,seconds,operator='incident',extra_edges=None,seed=42):
+    def solve(self,route,released,seconds,operator='incident',extra_edges=None,seed=42,start_route=None):
         began=time.perf_counter(); d=self.d; selected=set(route)
         current={tuple(sorted((route[i-1],v))) for i,v in enumerate(route)}
         free=free_edge_set(d,route,released,operator,extra_edges,seed)
+        incumbent_start=route if start_route is None else start_route
+        validate(d,incumbent_start)
+        start_selected=set(incumbent_start)
+        start_edges={tuple(sorted((incumbent_start[i-1],v))) for i,v in enumerate(incumbent_start)}
+        if any(v not in released and ((v in start_selected)!=(v in selected)) for v in range(self.n)):
+            raise ValueError('MIP start changed a fixed visit')
+        if any(e not in free and ((e in start_edges)!=(e in current)) for e in self.edges):
+            raise ValueError('MIP start changed a fixed edge')
+        if route_cost(d,incumbent_start)>route_cost(d,route):
+            incumbent_start=route; start_selected=selected; start_edges=current
         fixed=current-free
         adjacency={v:[] for v in range(self.n)}
         for a,b in fixed: adjacency[a].append(b); adjacency[b].append(a)
@@ -99,8 +109,8 @@ class FragmentRepair:
                     from highs_backend import solve
                     start=None
                     if self.warm_start:
-                        start={e:float(edge in current) for e,edge in enumerate(usable)}
-                        start.update({m+i:float(bool(c&selected)) for i,c in enumerate(nodes)})
+                        start={e:float(edge in start_edges) for e,edge in enumerate(usable)}
+                        start.update({m+i:float(bool(c&start_selected)) for i,c in enumerate(nodes)})
                     result=solve(obj,integrality,bounds,constraints,remaining,start)
                 else: raise ValueError('Unknown solver backend')
                 if self.connectivity=='flow' or result.x is None: break
@@ -126,7 +136,7 @@ class FragmentRepair:
                     break
             status=int(result.status); returned=result.x is not None; message=result.message
             if status not in (0,1): raise RuntimeError(f'Feasible fragment repair failed: {message}')
-            best=route
+            best=incumbent_start
             if returned:
                 if np.max(np.abs(result.x[:f0]-np.rint(result.x[:f0])))>1e-5:
                     raise ValueError('Nonintegral fragment solution')
@@ -148,7 +158,7 @@ class FragmentRepair:
                         raise ValueError('Fixed visit changed')
                 if any(e not in free and ((e in chosen)!=(e in current)) for e in self.edges):
                     raise ValueError('Fixed edge changed')
-                if value<route_cost(d,route): best=decoded
+                if value<route_cost(d,best): best=decoded
         return dict(operator=operator,status=status,returned_solution=returned,proven_optimal=status==0,
                     solve_seconds=time.perf_counter()-solve_began,total_seconds=time.perf_counter()-began,
                     free_x=len(free),free_y=len(released),cost=validate(d,best),

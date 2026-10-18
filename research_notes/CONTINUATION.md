@@ -1,5 +1,47 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 5h40 — busca iterativa e controles equivalentes
+
+- `hybrid_lns.py` implementa trajetórias completas de desenvolvimento com
+  custo de seleção/descritores/reparo incluído, controle adaptativo simples
+  sem ML, ranking genérico e conjunto. A variante híbrida faz MIP a cada8consultas,
+  até0.2s, com a solução construtiva como ponto inicial viável. Há híbridos
+  aleatório, regra simples, adaptativo e aprendido: não atribuir ao ML o efeito
+  de acrescentar MIP. ALNS aqui é um controle simples, não réplica de um método
+  publicado. Aceitação atual é apenas de melhora, sem simulated annealing.
+- `FragmentRepair` agora aceita `start_route` validada contra todas as fixações,
+  conserva a melhor solução inicial em timeout e usa-a como MIP start nativo.
+  `verify_native.py`:60casos comparados com SCF completo, todos passaram com
+  soluções construtivas iniciais;32cortes foram adicionados nesses testes.
+- Pilotos `/tmp/pcctp_hybrid_lns_pilot.log` (sessão33352) e
+  `/tmp/pcctp_hybrid_matched_controls.log` (sessão84230) terminaram. ATENÇÃO:
+  limit3 nesse piloto significou3instâncias da MESMA geometria att48, não3
+  geometrias independentes. Nada de inferência estatística a partir disso.
+- No primeiro caso att48, métodos construtivos sem MIP mantiveram2692;
+  híbridos aleatório/regra/genérico/conjunto chegaram2650 em5s extras. Isso
+  mostra utilidade do reparo exato nesse exemplo, não vantagem específica do ML.
+  O MDM também atingiu2650 no próprio histórico. Demais variantes não deram
+  uma vantagem geral; resultados completos nos JSONs.
+- NOVA sessão37277 em execução:
+  `hybrid_lns.py --budget 5 --limit 6 --one-per-geometry`, log
+  `/tmp/pcctp_hybrid_six_geometries.log`. Agora são até6geometrias diferentes,
+  primeira variante disponível de cada, dez políticas. Ordem dos métodos é
+  aleatorizada deterministicamente por instância/semente. Protocolo salva hashes
+  do código e dados; modelos treinados só em geometrias de treino e congelados
+  antes das trajetórias. Não iniciar cópia desse piloto em paralelo.
+- Sessão10330: coleta incremental com tempos corrigidos, log
+  `/tmp/pcctp_timed_fixed_oracle2.log`, diretório `timed_oracle_decoder_initialized_states/`.
+  Verificar término antes de reexecutar. Sessão46473 das outras variantes
+  corrigidas continua; primeiras variantes corrigidas terminaram com um timeout
+  sem primeira solução (rd400), explicitamente mantido no manifesto.
+
+Próximos passos: auditar trajetórias e curvas por tempo; ampliar geometrias e
+sementes; investigar diversificação/aceitação controlada, pois melhorias apenas
+monótonas podem ficar presas. Usar os mesmos mecanismos e orçamento nos controles
+para isolar ML. A coleta concorrente serve a desenvolvimento, não a uma alegação
+final de aceleração. Continua faltando comparação final controlada e novidade
+bibliográfica estabelecida.
+
 ## Retomada às 5h30 — lema e reparação construtiva
 
 Foi implementada e verificada uma construção de rota para qualquer atribuição
