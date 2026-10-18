@@ -11,7 +11,7 @@ import random
 from verify_partition_face import ModularBasis, PRIME
 
 
-def probe(sizes, seed=20261018, limit=5000):
+def probe(sizes, seed=20261018, limit=5000, required_blocks=None):
     rng = random.Random(seed)
     blocks = [[0]]
     for size in sizes:
@@ -22,6 +22,9 @@ def probe(sizes, seed=20261018, limit=5000):
     index = {e: i for i, e in enumerate(edges)}
     group = {v: i for i, b in enumerate(blocks) for v in b}
     d = len(edges)+n-1
+    q = len(sizes)
+    r = q-1 if required_blocks is None else required_blocks
+    assert 2 <= r < q
     rows = [[int(v in e) for e in edges]+[-2*int(i == v) for i in range(1,n)] for v in range(n)]
     eq = ModularBasis()
     for row in rows:
@@ -30,7 +33,7 @@ def probe(sizes, seed=20261018, limit=5000):
     eq.add([int(group[a] != group[b]) for a,b in edges]+[0]*(n-1))
     # For q=3, the sum of the three coverage-forced pair cuts equals
     # twice the partition cut. Equality in the latter forces all three.
-    if len(sizes) == 3:
+    if q == 3 and r == 2:
         for i,j in combinations(range(1,4),2):
             union = set(blocks[i]+blocks[j])
             eq.add([int((a in union)!=(b in union)) for a,b in edges]+[0]*(n-1))
@@ -38,11 +41,14 @@ def probe(sizes, seed=20261018, limit=5000):
     bases = [ModularBasis(), ModularBasis()]
     first = [None, None]
     generators = [[], []]
-    q = len(sizes)
     for step in range(limit):
         for tight in (False, True):
-            omitted = rng.randrange(q+1) if not tight else rng.randrange(1,q+1)
-            active = [i for i in range(1,q+1) if i != omitted]
+            if required_blocks is None:
+                omitted = rng.randrange(q+1) if not tight else rng.randrange(1,q+1)
+                active = [i for i in range(1,q+1) if i != omitted]
+            else:
+                count = r if tight else rng.randrange(r,q+1)
+                active = sorted(rng.sample(range(1,q+1),count))
             pieces = []
             for i in active:
                 selected = rng.sample(blocks[i], rng.randrange(1,len(blocks[i])+1))
@@ -53,7 +59,7 @@ def probe(sizes, seed=20261018, limit=5000):
                 rng.shuffle(order)
             route = [0]+order
             selected_set = set(route)
-            assert all(selected_set.intersection(blocks[i]+blocks[j]) for i,j in combinations(range(1,q+1),2))
+            assert sum(bool(selected_set.intersection(b)) for b in blocks[1:]) >= r
             point = [0]*d
             cross = 0
             for a,b in zip(route, route[1:]+route[:1]):
@@ -61,10 +67,10 @@ def probe(sizes, seed=20261018, limit=5000):
                 cross += group[a] != group[b]
             for v in order:
                 point[len(edges)+v-1] = 1
-            assert cross >= q
+            assert cross >= r+1
             if tight:
-                assert cross == q
-            targets = (0,1) if cross == q else (0,)
+                assert cross == r+1
+            targets = (0,1) if cross == r+1 else (0,)
             for t in targets:
                 if first[t] is None:
                     first[t] = point
@@ -74,7 +80,7 @@ def probe(sizes, seed=20261018, limit=5000):
         if bases[0].rank == full_upper and bases[1].rank == face_upper:
             break
     certified = bases[0].rank == full_upper and bases[1].rank == face_upper
-    return dict(block_sizes=sizes, vertices=n, prime=PRIME, seed=seed,
+    return dict(block_sizes=sizes, required_optional_blocks=r, vertices=n, prime=PRIME, seed=seed,
                 samples_per_mode=step+1, full_rank_lower=bases[0].rank,
                 full_dimension_upper=full_upper, face_rank_lower=bases[1].rank,
                 face_dimension_upper=face_upper,
