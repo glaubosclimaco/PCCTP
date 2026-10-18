@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance,validate
 
-def run_one(name,seed,policy,budget,target,elite_count_bounded=False):
+def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_started=None):
     build=HERE/('build_timed_elite_bounded' if elite_count_bounded else 'build_timed')
     working=HERE/'runs'/f'{name}.seed{seed}.timed.{policy}'
     if elite_count_bounded:working=working.with_name(working.name+'.elite_bounded')
@@ -31,7 +31,8 @@ def run_one(name,seed,policy,budget,target,elite_count_bounded=False):
     env.pop('PCCTP_SCHEDULE_VERIFY',None)
     timed_out=False;code=None
     with target.with_suffix('.log').open('w') as log:
-        began=time.clock_gettime(time.CLOCK_MONOTONIC);env['PCCTP_STARTED_MONOTONIC']=format(began,'.17g')
+        began=time.clock_gettime(time.CLOCK_MONOTONIC) if parent_started is None else parent_started
+        env['PCCTP_STARTED_MONOTONIC']=format(began,'.17g')
         try:
             process=subprocess.run([str((build/'original_mdm').resolve()),str((ROOT/'data'/name).resolve()),
                                     str(seed),'2','5',str(raw.resolve())],cwd=working,env=env,
