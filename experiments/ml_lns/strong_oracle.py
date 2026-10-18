@@ -4,6 +4,7 @@ Never train on test geometry labels. Cases are resumable and have unique keys.
 Current development budget k=8,24 candidates,.5s was frozen before new labels.
 """
 import argparse
+import fcntl
 import json
 from pathlib import Path
 import time
@@ -31,6 +32,11 @@ def main():
                                                else 'strong_oracle_'+args.state_dir.name)
     plan=json.loads((args.state_dir/'protocol.json').read_text())
     args.output_dir.mkdir(exist_ok=True)
+    lock=(args.output_dir/'.collector.lock').open('w')
+    try:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    except BlockingIOError:
+        raise SystemExit('A collector is already active in this output directory')
     failures=[]
     for path in sorted(args.state_dir.glob('g_*.json')):
         try:
@@ -61,15 +67,20 @@ def main():
             if abs(initial-snapshot['cost'])>1e-6: raise ValueError('Invalid baseline snapshot')
             if model is None: model=Repair(d)
             row=dict(instance=d['name'],geometry=geometry,role=plan['roles'][geometry],
+                     schema_version=2,baseline_snapshot_seconds=snapshot.get('seconds'),
                      seed=baseline['seed'],phase=phase,initial_cost=initial,initial_route=snapshot['route'],
                      baseline_method=baseline['method'],k=args.k,seconds_per_candidate=args.seconds,
                      feature_names=FEATURES+ROUTE_FEATURES+NAMES,generic_feature_indices=[0,6,7,8,9,10,11],
                      records=[])
             for kind,released in candidates(d,route,args.k,args.candidates,baseline['seed']):
+                query_began=time.perf_counter()
                 free=free_edge_set(d,route,released,'route_context',seed=baseline['seed'])
                 f=features(d,route,released)+route_features(d,route,released,free)+signature(d,route,released)
+                feature_seconds=time.perf_counter()-query_began
                 result=model.solve(route,released,args.seconds,operator='route_context',seed=baseline['seed'])
                 row['records'].append(dict(kind=kind,released=[int(d['visits'][v]) for v in sorted(released)],
+                    feature_seconds=feature_seconds,query_wall_seconds=time.perf_counter()-query_began,
+                    elapsed_after_query=time.perf_counter()-began,
                     features=f,normalized_gain=(initial-result['cost'])/max(1.,initial),**result))
                 row['elapsed_seconds']=time.perf_counter()-began
                 # .partial is never treated as a complete case by evaluators.

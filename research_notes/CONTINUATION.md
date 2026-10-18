@@ -1,5 +1,34 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 5h20 — processos e auditoria temporal
+
+- Sessão87177: primeiras variantes corrigidas, log
+  `/tmp/pcctp_decoder_initialized_states.log`, ainda em execução.
+- Sessão46473: outras58variantes corrigidas, log
+  `/tmp/pcctp_decoder_initialized_other_variants.log`, ainda em execução.
+  Casos diferentes dos da primeira coleta; não iniciar duplicatas.
+- Sessão83335 do coletor corrigido terminou com13estados/312rótulos.
+  Auditoria específica passou em8baselines corrigidos e312reparos, sem mistura
+  de métodos. Usar `audit_dataset.py --state-dir .../decoder_initialized_states`
+  para a referência corrigida; a auditoria padrão ainda trata o legado original.
+- Novo coletor **com tempos por consulta** em execução: log
+  `/tmp/pcctp_timed_fixed_oracle1.log`, saída
+  `experiments/ml_lns/timed_oracle_decoder_initialized_states/`.
+  Não misturar com o coletor anterior: rótulos schema1 não possuem todos os tempos.
+  `strong_oracle.py` agora usa trava de arquivo por diretório para impedir
+  dois coletores simultâneos na mesma saída.
+- `time_dominance_audit.py` implementa uma triagem conservadora: concede a uma
+  consulta MIP apenas seu próprio tempo, omitindo otimisticamente custo de
+  selecionar entre candidatos/modelo; se o MDM já atingiu custo igual ou melhor
+  em checkpoint anterior, a melhora local não demonstra vantagem temporal.
+  Ausência de dominância registrada não prova vantagem: checkpoints são esparsos,
+  tempos vêm de execuções separadas e a máquina tem carga concorrente.
+  Executar com `--oracle-dir experiments/ml_lns/timed_oracle_decoder_initialized_states`.
+  Ainda faltam comparações controladas do algoritmo completo e ALNS.
+
+As alterações desta retomada preparam uma comparação justa de tempo e impedem
+que melhoras sobre um estado inicial sejam confundidas com aceleração científica.
+
 ## Retomada às 5h11 — atualização prioritária
 
 Esta seção substitui o estado antigo dos processos abaixo.
