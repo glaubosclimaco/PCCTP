@@ -15,6 +15,8 @@
 - Autonomia: se faltar uma decisão do usuário por cerca de 10 minutos, seguir
   com uma escolha razoável dentro do escopo autorizado, registrando a decisão.
   Ausência de resposta não substitui uma aprovação explicitamente obrigatória.
+- Retomada automática ativa a cada 10 minutos: `avan-ar-pesquisa-e-artigo-pcctp`.
+  Estado de execução e próximos passos: `research_notes/CONTINUATION.md`.
 
 ## Extensão futura registrada em 18 de outubro de 2026
 

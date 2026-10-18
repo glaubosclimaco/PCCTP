@@ -70,10 +70,19 @@ def main():
     parser.add_argument('--seeds',nargs='+',type=int,default=[42])
     parser.add_argument('--workers',type=int,default=2)
     parser.add_argument('--limit',type=int)
+    parser.add_argument('--other-variants',action='store_true',
+                        help='All remaining variants in selected geometry roles; preserves frozen geometry split')
     args=parser.parse_args(); plan=freeze_split()
     geoms=[g for g in plan['instances'] if plan['roles'][g] in args.roles]
     if args.limit: geoms=geoms[:args.limit]
-    jobs=[(g,plan['instances'][g],seed,plan) for g in geoms for seed in args.seeds]
+    if args.other_variants:
+        variants={g:[] for g in geoms}
+        for path in sorted((ROOT/'data').glob('g_*')):
+            d=read_instance(path); g=d['geometry']
+            if g in variants and path.name!=plan['instances'][g]: variants[g].append(path.name)
+        jobs=[(g,name,seed,plan) for g in geoms for name in variants[g] for seed in args.seeds]
+    else:
+        jobs=[(g,plan['instances'][g],seed,plan) for g in geoms for seed in args.seeds]
     began=time.perf_counter(); failures=[]
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures={pool.submit(generate,job):job for job in jobs}
@@ -82,7 +91,8 @@ def main():
             except Exception as error:
                 failure=dict(job=futures[future][:3],error=str(error)); failures.append(failure)
                 print(json.dumps(failure),flush=True)
-    (OUT/'last_generation.json').write_text(json.dumps(dict(jobs=len(jobs),failures=failures,
+    manifest='other_variant_generation.json' if args.other_variants else 'last_generation.json'
+    (OUT/manifest).write_text(json.dumps(dict(jobs=len(jobs),failures=failures,
                                                          elapsed_seconds=time.perf_counter()-began),indent=2)+'\n')
     if failures: raise SystemExit(1)
 

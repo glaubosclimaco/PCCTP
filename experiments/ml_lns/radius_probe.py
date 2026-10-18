@@ -19,6 +19,9 @@ def main():
     p.add_argument('--radii',nargs='+',type=int,default=[8,16,24])
     p.add_argument('--count',type=int,default=12)
     p.add_argument('--seconds',type=float,default=.5)
+    p.add_argument('--backend',choices=['scipy','highspy'],default='scipy')
+    p.add_argument('--warm-start',action='store_true')
+    p.add_argument('--connectivity',choices=['flow','cuts'],default='flow')
     args=p.parse_args()
     output=HERE/'radius_development'; output.mkdir(exist_ok=True)
     for path in sorted((HERE/'original_states').glob('g_*.json')):
@@ -30,9 +33,11 @@ def main():
         d=read_instance(ROOT/'data'/baseline['instance'])
         mapping={int(v):i for i,v in enumerate(d['visits'])}
         route=[mapping[v] for v in snapshot['route']]; initial=validate(d,route)
-        model=FragmentRepair(d)
+        model=FragmentRepair(d,backend=args.backend,warm_start=args.warm_start,connectivity=args.connectivity)
         for k in args.radii:
-            target=output/f'{path.stem}.k{k}.count{args.count}.s{args.seconds}.json'
+            suffix=f'.{args.backend}.warm{int(args.warm_start)}' if args.backend!='scipy' else ''
+            if args.connectivity!='flow': suffix+='.'+args.connectivity
+            target=output/f'{path.stem}.k{k}.count{args.count}.s{args.seconds}{suffix}.json'
             if target.exists(): continue
             began=time.perf_counter(); records=[]
             for kind,u in candidates(d,route,k,args.count,baseline['seed']):
@@ -41,6 +46,8 @@ def main():
             row=dict(instance=d['name'],geometry=baseline['geometry'],role=baseline['role'],
                      phase=70,k=k,initial_cost=initial,seconds_per_candidate=args.seconds,
                      elapsed=time.perf_counter()-began,records=records,
+                     backend=args.backend,warm_start=args.warm_start,
+                     connectivity=args.connectivity,
                      best_gain=max((initial-r['cost'])/initial for r in records),
                      improving=sum(r['cost']<initial-1e-8 for r in records),
                      optimal=sum(r['proven_optimal'] for r in records),queries=len(records))

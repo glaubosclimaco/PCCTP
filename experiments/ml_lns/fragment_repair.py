@@ -12,9 +12,13 @@ from scipy.optimize import Bounds,LinearConstraint,milp
 from pilot import free_edge_set,route_cost,sparse_rows,validate
 
 class FragmentRepair:
-    def __init__(self,d):
+    def __init__(self,d,backend='scipy',warm_start=False,connectivity='flow'):
         self.d=d; self.n=len(d['visits'])
         self.edges=list(combinations(range(self.n),2))
+        if warm_start and backend!='highspy': raise ValueError('MIP start needs native highspy')
+        self.backend=backend; self.warm_start=warm_start
+        if connectivity not in ('flow','cuts'): raise ValueError('Unknown connectivity formulation')
+        self.connectivity=connectivity
 
     def solve(self,route,released,seconds,operator='incident',extra_edges=None,seed=42):
         began=time.perf_counter(); d=self.d; selected=set(route)
@@ -42,6 +46,7 @@ class FragmentRepair:
         usable=[e for e in sorted(free) if all(v in owner and len(adjacency[v])<2 for v in e)]
         m=len(usable); f0=m+q
         arcs=[(e,owner[a],owner[b]) for e,(a,b) in enumerate(usable) if owner[a]!=owner[b]]
+        if self.connectivity=='cuts': arcs=[]
         width=f0+2*len(arcs)
         cost0=sum(d['costs'][a,b] for a,b in fixed)
         lower=np.zeros(width); upper=np.r_[np.ones(f0),np.full(2*len(arcs),max(0,q-1))]
@@ -60,7 +65,7 @@ class FragmentRepair:
         for e,(a,b) in enumerate(usable):
             for i in set((owner[a],owner[b])): add({e:1.,m+i:-1.},b=0.)
         root=owner[min(d['mandatory'])]
-        for i in range(q):
+        for i in (range(q) if self.connectivity=='flow' else []):
             row={}
             for j,(e,a,b) in enumerate(arcs):
                 if i==a: row[f0+2*j]=-1.; row[f0+2*j+1]=1.
@@ -78,12 +83,47 @@ class FragmentRepair:
             add({m+i:1. for i,c in enumerate(nodes) if c&ns},a=1.)
         obj=np.r_[[d['costs'][a,b] for a,b in usable],np.zeros(width-m)]
         solve_began=time.perf_counter()
+        cuts_added=0
         if closed:
             status=0; returned=True; best=route; message='Retained incumbent cycle'
         else:
-            result=milp(obj,integrality=np.r_[np.ones(f0),np.zeros(width-f0)],
-                        bounds=Bounds(lower,upper),constraints=LinearConstraint(sparse_rows(rows,width),lo,hi),
-                        options=dict(time_limit=seconds,mip_rel_gap=0.,disp=False))
+            integrality=np.r_[np.ones(f0),np.zeros(width-f0)]
+            bounds=Bounds(lower,upper)
+            while True:
+                remaining=max(.001,seconds-(time.perf_counter()-solve_began))
+                constraints=LinearConstraint(sparse_rows(rows,width),lo,hi)
+                if self.backend=='scipy':
+                    result=milp(obj,integrality=integrality,bounds=bounds,constraints=constraints,
+                                options=dict(time_limit=remaining,mip_rel_gap=0.,disp=False))
+                elif self.backend=='highspy':
+                    from highs_backend import solve
+                    start=None
+                    if self.warm_start:
+                        start={e:float(edge in current) for e,edge in enumerate(usable)}
+                        start.update({m+i:float(bool(c&selected)) for i,c in enumerate(nodes)})
+                    result=solve(obj,integrality,bounds,constraints,remaining,start)
+                else: raise ValueError('Unknown solver backend')
+                if self.connectivity=='flow' or result.x is None: break
+                chosen=fixed|{edge for e,edge in enumerate(usable) if result.x[e]>.5}
+                graph={}
+                for a,b in chosen: graph.setdefault(a,[]).append(b); graph.setdefault(b,[]).append(a)
+                unseen=set(graph); disconnected=[]
+                while unseen:
+                    todo=[min(unseen)]; component=set()
+                    while todo:
+                        v=todo.pop()
+                        if v in component: continue
+                        component.add(v); todo.extend(graph[v])
+                    unseen-=component
+                    if min(d['mandatory']) not in component: disconnected.append(component)
+                if not disconnected: break
+                for component in disconnected:
+                    row={e:1. for e,(a,b) in enumerate(usable) if (a in component)!=(b in component)}
+                    row[m+owner[min(component)]]=-2.
+                    add(row,a=0.); cuts_added+=1
+                if time.perf_counter()-solve_began>=seconds:
+                    result.status=1; result.x=None
+                    break
             status=int(result.status); returned=result.x is not None; message=result.message
             if status not in (0,1): raise RuntimeError(f'Feasible fragment repair failed: {message}')
             best=route
@@ -116,4 +156,6 @@ class FragmentRepair:
                     added_optional=[int(d['visits'][v]) for v in sorted(set(best)-selected)],
                     route=[int(d['visits'][v]) for v in best],
                     contracted_nodes=q,edge_variables=m,total_variables=width,
+                    backend=self.backend,warm_start=self.warm_start,
+                    connectivity=self.connectivity,cuts_added=cuts_added,
                     fixed_edge_constant=float(cost0))
