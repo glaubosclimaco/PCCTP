@@ -1,5 +1,55 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 7h11 — prazo comum, falha de relógio detectada e repetição
+
+- Implementado --timed embuild.py, build_timed/ separado, originalsemwrapper
+ detemporização; sóadaptive medeoperadores. Hooks acompanham construção e
+ melhoriasglobais dentro da buscalocal, guardamanytime e deadline_cost somente
+ se descoberta<=prazo; melhorias tardias separadas. Iterações livres sobB,
+ estabilidade de mineração mantémnumIt70. Parada cooperativa entreoperadores;
+ operaçõesatômicas podemultrapassar e issoéregistrado. Nenhumsoluçãoantesdoprazo
+ viraNone,não usa solução tardia como fallback comparável.
+- `verify_deadline.py` passou exclusãodemelhoratardia,débito startupenovo teste
+ deépocanativaentreleiturasCLOCK_MONOTONICdoPython. Semorçamento,modooriginal
+ reproduziu2650em70iteraçõesatt48. Parentstartdebited,parse/preparaçãocobradas.
+- PRIMEIROLOTEccb595d69e76 terminou162runs(9DEV,3seeds,6políticas,1s),mas é
+ INVALIDADO PORFALHA DE RELÓGIO,registrado eminvalid_timing_protocols.json.
+ Auditordetectougr48/seed44/adaptive:nativo3.0515s vsparent0.9121s.
+ ProbeconfirmouGCCsteady_clockretornaépocadewalltime~1.792bilhões, enquanto
+ CLOCK_MONOTONICexplícito~421mil. Nãointerpretar esse loteou seuresumo como
+ evidência de política. Todo lote/fontes/evidêncianativa preservados. Não
+ selecionar sóoutlier:sumarizador recusa oPROTOCOLOINTEIRO,auditoria oexclui.
+- FIX:research_hook.cpp ewrapperadaptiveTIMED usamclock_gettime(CLOCK_MONOTONIC)
+ explícito,paitambémusaCLOCK_MONOTONICepassaPCCTP_STARTED_MONOTONIC. CLOCKSYS
+ ePythonperf_counter não entram maisnocálculodeprazos/elapsed. `clock_source`
+ salvo. .process_wallseconds inclui polling; .native_elapsedseconds já
+ explicitamente salvo. Auditoria preservanative_records/ e calcula ambos.
+- RepetiçãoINTEGRALagoraATIVA sessão36046:
+ `python3 experiments/original_mdm/timed_experiment.py --budget 1 --limit 9
+ --seeds 42 43 44`,log `/tmp/pcctp_timed_monotonic_development.log`.
+ Protocolo d0df6114da43. Não duplicar. ÚltimaauditoriaPASS54arquivos novos,
+ nenhumproblema derelógio. Antigoprocesso29568 encerrou. Builds39944/check47277/
+64538encerrados. Programa novo deveacabar em~3min desdeinício.
+- Novos scripts audit_timed.py/summarize_timed.py;sumário descritivo agrega por
+ geometria,preserva pareamentos/missing/semviáveis.Nãohátestehypothesis.
+ Rodarapósfim:python3 experiments/original_mdm/audit_timed.py e
+ python3 experiments/original_mdm/summarize_timed.py d0df6114da43.
+- IMPLICAÇÃOCIENTÍFICA:perfisantigosdeoperadores epath_dp.cpp usavamomesmo
+ chrono. Custos/viabilidade/enumeração continuamválidos,mas médiastemporais e
+ prazos precisamrevisão/recoleta. Pesosmodel52b8ainda congeladosANTIGOSpara
+ diagnósticodarepetição; conclusãofinal exigeTRAIN comCLOCK_MONOTONIC explícito.
+ Não misturar perfis/reutilizarmanifestantigosemverificarclock. Coletorhoje
+ reusecompara build_manifest;novo manifesto de profiling deveincluir código
+ instrumentado/hookseclock paraevitarreusoerrado. Usardiretóriodedatasetnovo.
+
+Próximo: finalizarrepetição/auditar,semclaimantesdisso. Depois corrigirwrapper
+ profiling(tambémdeveusarclockexplícito;hojesóTIMEDfoifixado), acrescentarhashes
+ instrumentados/clockaomanifestoe recoletarTRAINemdiretórioseparado para
+ retrainsemperderlegado. Fonteversõesloteinválidoem timed_source_versions/.
+ Preservarresultadosnegativos,9DEVsomente; testesreservadosintactos,CTPfora.
+ Nenhumacontribuiçãosuficiente/artigoprontoainda, nãoencerrarautomação.
+
+
 ## Retomada às 7h01 — política nativa e primeiro piloto completo
 
 - `operator_state.cpp` + `verify_operator_state.py`:descritoresnativos vsPython

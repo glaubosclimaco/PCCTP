@@ -12,11 +12,13 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--initialize-decoder-index',action='store_true')
 parser.add_argument('--profile-moves',action='store_true')
 parser.add_argument('--scheduled',action='store_true')
+parser.add_argument('--timed',action='store_true')
 args=parser.parse_args()
 if args.profile_moves and not args.initialize_decoder_index:
     parser.error('Move profiling requires the explicitly corrected decoder baseline')
 if args.scheduled and (not args.initialize_decoder_index or args.profile_moves):parser.error('Scheduled build requires corrected decoder and no profiling')
-BUILD=Path(__file__).with_name('build_scheduled' if args.scheduled else 'build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
+if args.timed and not args.scheduled:parser.error('Timed build requires --scheduled')
+BUILD=Path(__file__).with_name('build_timed' if args.timed else 'build_scheduled' if args.scheduled else 'build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -40,6 +42,8 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
         assert text.count(anchor)==1
         text=text.replace(anchor,anchor+'\n\tresearch_export(argv[5], custo_obtido, s_melhor_rota);')
         manifest['changes'].append('principal: sixth output argument, larger path buffer, observational initialization/export')
+        if args.timed:
+            text=text.replace('int main(int argc, char **argv) {','int main(int argc, char **argv) {\n research_process_start();')
     if name=='grasp.cpp':
         text='#include "research_hook.hpp"\n'+text
         anchor='printf("Custo solucao busca local %f \\n", custo_vizinho );'
@@ -85,6 +89,35 @@ void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,
                 before=before.replace(marker,marker+'\n\t\t\tschedule_order(vertices,C,s_melhor_vizinho,prize,qtd_n,vizinhancas);')
                 text=before+'void busca_local_v2('+after
                 manifest['changes'][-1]='EXPERIMENTAL scheduling: common per-operator timing; reorder all 15 operators after state improvements; original RNG permutation retained'
+                if args.timed:
+                    # Non-adaptive policies execute the original operator directly.
+                    anchor='    double before_cost=custo(C,rota);'
+                    fast='''    const char* policy=std::getenv("PCCTP_OPERATOR_POLICY");
+    if(!policy || std::strcmp(policy,"adaptive")) {
+      profiled_obter_vizinho(vertices,C,mov,rota,vertices_solucao,tamanho_rota,d,prize,qtd_n);return;
+    }
+'''
+                    text=text.replace(anchor,fast+anchor)
+                    text=text.replace('auto start=std::chrono::steady_clock::now();','double start=research_monotonic_seconds();')
+                    text=text.replace('std::chrono::duration<double>(std::chrono::steady_clock::now()-start).count()',
+                                      'research_monotonic_seconds()-start')
+                    begin=text.index('void busca_local(Vertice *vertices');end=text.index('void busca_local_v2(')
+                    part=text[begin:end]
+                    part=part.replace('while (ordem < qtd_vizinhanca)', 'while (ordem < qtd_vizinhanca && !research_expired())')
+                    marker='melhor_custo = (int) custo(C, s_melhor_vizinho);'
+                    assert part.count(marker)==1
+                    part=part.replace(marker,marker+'\n research_progress(melhor_custo,s_melhor_vizinho);')
+                    text=text[:begin]+part+text[end:]
+                    marker='for (int iteracao = 0; iteracao < numIt; iteracao++) {'
+                    assert text.count(marker)==1
+                    text=text.replace(marker,'for (int iteracao = 0; iteracao < (research_budget_active()?2147483647:numIt) && (iteracao==0 || !research_expired()); iteracao++) {')
+                    marker='custo_solucao_inicial = custo(C, rota);'
+                    assert text.count(marker)==1
+                    text=text.replace(marker,marker+'\n research_progress(custo_solucao_inicial,rota);')
+                    marker='busca_local(vertices, C, rota, s_melhor_vizinho_rota, d, prize, qtd_n);'
+                    assert text.count(marker)==1
+                    text=text.replace(marker,'if(!research_expired()) '+marker+' else copy_int_vetor(rota,s_melhor_vizinho_rota,qtd_n);')
+                    manifest['changes'].append('TIMED: parent-start debit, cooperative deadline between operators/iterations, strict pre-deadline progress, unlimited iterations with unchanged mining stability parameter; timing only for adaptive policy')
     target=BUILD/name
     if not target.exists() or target.read_text()!=text: target.write_text(text)
 for name in ['research_hook.hpp','research_hook.cpp']:
@@ -116,6 +149,7 @@ for source in (SOURCE/'Debug/FPMax').iterdir():
 compiler=shutil.which('g++-15') or shutil.which('g++')
 flags=[compiler,'-std=gnu++11','-O2','-fpermissive','-Wno-narrowing']
 if args.initialize_decoder_index: flags.append('-DPCCTP_DECODER_INITIALIZED')
+if args.timed:flags.append('-DPCCTP_TIMED')
 log=[]
 def run(command):
     process=subprocess.run(command,capture_output=True,text=True)

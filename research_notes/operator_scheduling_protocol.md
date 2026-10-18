@@ -154,3 +154,64 @@ pequenas, uma semente e apenas3geometrias não sustentam inferência estatístic
 Próximo: coleta de progresso dentro da busca local e prazo comum, com limites
 e overruns registrados, mais sementes/geometriasDEV e controle legado limpo.
 Não substituir isso por testes de significância sobre18execuções correlacionadas.
+
+## Comparação por prazo, às 7h11
+
+Novo build `build_timed/` mantém o piloto anterior intacto. Somente a política
+adaptativa cronometra e recalcula custos no wrapper dos operadores; as demais
+executam o operador original diretamente. A ordem original evita o cálculo dos
+descritores. Todas as políticas têm os mesmos controles cooperativos de parada
+e registro de progresso, necessários para avaliar os incumbentes ao prazo.
+
+O processo principal recebe o instante de lançamento do pai e debita startup,
+leitura da instância e preparação. Registra melhorias da construção e da busca
+local até o prazo, incluindo preparação/inferência/seleção/exportações anteriores.
+Uma operação não interrompível pode terminar depois; sua melhora tardia fica
+fora do resultado e a ultrapassagem é registrada. O melhor custo retornado
+depois da parada não substitui o melhor custo efetivamente encontrado ao prazo.
+O número de iterações fica livre sob orçamento, mantendo o parâmetro original
+de estabilidade da mineração derivado de70, para não alterar esse mecanismo.
+
+`verify_deadline.py` passou em dois controles: candidato tardio melhor é
+excluído; atraso de lançamento maior que o orçamento não cria solução fictícia
+ao prazo. Ausência de viável fica explícita. O modo sem orçamento ainda executa
+70iterações e reproduziu o custo original ematt48.
+
+Protocolo `timed_development/protocol.ccb595d69e76.json`:9geometriasDEV,
+sementes42/43/44,6políticas,1segundo desde o lançamento,162execuções previstas.
+`audit_timed.py` recalcula rotas, custos, tempos e construção inicial pareada,
+preservando os registros nativos. O tempo medido no pai também contém latência
+de polling de subprocess; a auditoria distingue esse tempo do relógio nativo
+com startup debitado. Nenhum deles deve ser apresentado como parada exata
+de1s quando houver ultrapassagem. A qualidade comparada só usa progresso<=1s.
+
+`summarize_timed.py` calcula diferenças pareadas e depois médias por geometria,
+sem tratar sementes como réplicas independentes. Resultados indisponíveis e
+pares ausentes são contados, sem exclusão silenciosa. Não abre teste reservado.
+
+### Auditoria de relógios e invalidação do primeiro lote
+
+O loteccb595d69e76 foi concluído, mas é INVÁLIDO para conclusões temporais.
+Emgr48/seed44/adaptive, o relógio nativo indicou3.0515s enquanto o pai mediu
+0.9121s. Um probe confirmou que `std::chrono::steady_clock` do GCC instalado
+retorna a época do relógio de parede (aprox1.792bilhões), ao contrário do
+`CLOCK_MONOTONIC` explícito (aprox421mil). Não atribuir a divergência somente
+ao polling. A causa é o uso de domínios de relógio incompatíveis e ajustáveis.
+
+Todo o lote, suas fontes e o exemplo nativo foram preservados, com registro em
+`invalid_timing_protocols.json`. O sumarizador recusa essa identificação; a
+auditoria exclui o protocolo inteiro, sem selecionar apenas o caso discrepante.
+
+Novo build usa `clock_gettime(CLOCK_MONOTONIC)` no relógio de pesquisa e no
+wrapper adaptativo; o pai usa o mesmo relógio e passa seu instante nessa época.
+O teste adicional confirma que o valor absoluto nativo fica entre leituras
+do pai, além da exclusão de melhorias tardias e do débito de startup.
+Repetição integral sob protocolod0df6114da43, mesmas9geometrias/3sementes/
+6políticas/1segundo. Resultados anteriores não sustentam decisões sobre vantagem.
+
+Implicação de auditoria: a antiga coleta de tempos por operador e o backendDP
+também usaram `steady_clock` do mesmo compilador. Rotas, custos, ganhos e provas
+por enumeração não são invalidados por isso, mas suas medições de tempo exigem
+revisão/recoleta antes do artigo. O piloto novo ainda usa os pesos congelados
+antigos como diagnóstico; uma conclusão final exige nova coleta TRAIN com
+relógio explícito, sem misturá-la silenciosamente com os perfis antigos.
