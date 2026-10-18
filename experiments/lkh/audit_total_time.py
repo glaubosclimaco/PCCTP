@@ -8,10 +8,15 @@ from experiments.ml_lns.pilot import read_instance,validate
 HERE=Path(__file__).resolve().parent;OUT=HERE/'total_time'
 
 
-def audit():
+def audit(validation=False):
+    global OUT
+    if validation: OUT=HERE/'validation'
     assert (OUT/'completion.json').exists(),'Batch still running'
     cases=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows']
-    assert len(cases)==9
+    if validation:
+        cases=json.loads((OUT/'protocol.json').read_text())['cases']
+    n=len(cases)
+    assert n==(7 if validation else 9)
     geometries=[];pair_rows=[];hashes={};failures=0
     for case in cases:
         name=case['instance'];d=read_instance(ROOT/'data'/name)
@@ -68,28 +73,30 @@ def audit():
     # Resample geometries, retaining their aggregated paired-seed result.
     # Exploratory only: method/cohort were selected during training.
     rng=random.Random(20261018)
-    boot=sorted(statistics.mean(rng.choices(means,k=9)) for _ in range(10000))
+    boot=sorted(statistics.mean(rng.choices(means,k=n)) for _ in range(10000))
     average=statistics.mean(means)
-    gate=average>=.5 and wins>=6 and losses<=1 and failures==0
-    report=dict(status='PASS',scope='exploratory hard-TRAIN pilot; not confirmatory',
-        geometries=9,paired_seeds=3,pairs=27,mean_geometry_gain_percent=average,
+    gate=average>0 and wins>=4 and losses<=1 and failures==0 if validation else average>=.5 and wins>=6 and losses<=1 and failures==0
+    report=dict(status='PASS',scope='frozen reserved validation' if validation else 'exploratory hard-TRAIN pilot; not confirmatory',
+        geometries=n,paired_seeds=3,pairs=3*n,mean_geometry_gain_percent=average,
         median_geometry_gain_percent=statistics.median(means),
         geometry_bootstrap_95_percentile=[boot[249],boot[9749]],
-        geometry_wins=wins,geometry_losses=losses,geometry_ties=9-wins-losses,
+        geometry_wins=wins,geometry_losses=losses,geometry_ties=n-wins-losses,
         feasibility_failures=failures,gate_passed=gate,rows=geometries,pair_rows=pair_rows,
         result_hashes=hashes)
-    (HERE/'total_time_audit.json').write_text(json.dumps(report,indent=2)+'\n')
+    (HERE/('validation_audit.json' if validation else 'total_time_audit.json')).write_text(json.dumps(report,indent=2)+'\n')
     lines=['# Piloto MDM10s versus MDM9s+LKH','',
-           'Treino exploratório: nove geometrias, três sementes pareadas. Ambos recebem dez segundos totais. Overruns são registrados; melhorias tardias do LKH são descartadas. Não é avaliação confirmatória.',
+           f'{n} geometrias, três sementes pareadas; '+('validação reservada com método congelado.' if validation else 'treino exploratório, não confirmatório.')+' Ambos recebem dez segundos totais. Overruns são registrados; melhorias tardias do LKH são descartadas.',
            '', '| Geometria | Média MDM | Média híbrido | Ganho pareado médio % |','|---|---:|---:|---:|']
     for row in geometries:
         lines.append(f"| {row['geometry']} | {row['mdm_mean']:.2f} | {row['hybrid_mean']:.2f} | {row['mean_paired_gain_percent']:.3f} |")
     lines+=['',f'Média entre geometrias: {average:.3f}%; mediana: {statistics.median(means):.3f}%.',
-            f'Vitórias/empates/derrotas por geometria: {wins}/{9-wins-losses}/{losses}. Gate pré-fixado: {gate}.',
+            f'Vitórias/empates/derrotas por geometria: {wins}/{n-wins-losses}/{losses}. Gate pré-fixado: {gate}.',
             f'Intervalo bootstrap exploratório por geometria: [{boot[249]:.3f}, {boot[9749]:.3f}]%.',
             'O intervalo não corrige a seleção de método/coorte durante a pesquisa. Não alegar confirmação estatística ou publicabilidade só com este piloto.']
-    (ROOT/'research_notes/lkh_total_time_results.md').write_text('\n'.join(lines)+'\n')
+    (ROOT/'research_notes'/('lkh_validation_results.md' if validation else 'lkh_total_time_results.md')).write_text('\n'.join(lines)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ('rows','pair_rows','result_hashes')}))
 
 
-if __name__=='__main__':audit()
+if __name__=='__main__':
+    assert sys.argv[1:] in ([],['--validation'])
+    audit(validation='--validation' in sys.argv)
