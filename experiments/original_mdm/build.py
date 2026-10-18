@@ -11,10 +11,12 @@ SOURCE=ROOT/'mdm-grasp-genius-vnd'
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--initialize-decoder-index',action='store_true')
 parser.add_argument('--profile-moves',action='store_true')
+parser.add_argument('--scheduled',action='store_true')
 args=parser.parse_args()
 if args.profile_moves and not args.initialize_decoder_index:
     parser.error('Move profiling requires the explicitly corrected decoder baseline')
-BUILD=Path(__file__).with_name('build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
+if args.scheduled and (not args.initialize_decoder_index or args.profile_moves):parser.error('Scheduled build requires corrected decoder and no profiling')
+BUILD=Path(__file__).with_name('build_scheduled' if args.scheduled else 'build_move_profile' if args.profile_moves else 'build_decoder_initialized' if args.initialize_decoder_index else 'build')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -47,7 +49,7 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
         assert text.count(anchor)==1
         text=text.replace(anchor,'research_mining();\n\t\t\t'+anchor)
         manifest['changes'].append('grasp: observational checkpoint and mining-call hooks; algorithm unchanged')
-        if args.profile_moves:
+        if args.profile_moves or args.scheduled:
             declaration='void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,\n\t\tint *vertices_solucao, int tamanho_rota, int d, int prize, int qtd_n)'
             assert text.count(declaration)==1
             text=text.replace(declaration,declaration.replace('obter_vizinho','profiled_obter_vizinho'))
@@ -67,10 +69,42 @@ void obter_vizinho(Vertice *vertices, Matriz* C, int mov, int *&rota,
             text=text.replace(anchor,wrapper+'\n'+anchor)
             text='#include <vector>\n#include <chrono>\n'+text
             manifest['changes'].append('OBSERVATIONAL move profiling: copy successor array, time each operator, export first 2000 calls; no RNG/decision change')
+            if args.scheduled:
+                text=text.replace('    std::vector<int> before(rota,rota+qtd_n);\n','')
+                text=text.replace('research_move(mov,before_cost,custo(C,rota),elapsed,before.data(),rota);',
+                                  'schedule_update(mov,before_cost-custo(C,rota),elapsed);')
+                # Include after Vertice is defined; retain the original RNG permutation.
+                marker='std::string nome_movimento(int movimentoEnum)'
+                text=text.replace(marker,'#include "scheduler.hpp"\n\n'+marker)
+                marker='\t//BUSCA LOCAL: VND\n\twhile (ordem < qtd_vizinhanca)'
+                assert text.count(marker)==1
+                text=text.replace(marker,'\tschedule_order(vertices,C,s_melhor_vizinho,prize,qtd_n,vizinhancas);\n'+marker)
+                before,after=text.split('void busca_local_v2(',1)
+                marker='\t\t\tordem = 0;'
+                assert before.count(marker)==1
+                before=before.replace(marker,marker+'\n\t\t\tschedule_order(vertices,C,s_melhor_vizinho,prize,qtd_n,vizinhancas);')
+                text=before+'void busca_local_v2('+after
+                manifest['changes'][-1]='EXPERIMENTAL scheduling: common per-operator timing; reorder all 15 operators after state improvements; original RNG permutation retained'
     target=BUILD/name
     if not target.exists() or target.read_text()!=text: target.write_text(text)
 for name in ['research_hook.hpp','research_hook.cpp']:
     shutil.copyfile(Path(__file__).with_name(name),BUILD/name)
+if args.scheduled:
+    home=Path(__file__).parent
+    frozen=home/'operator_models/models.52b8e9ae6089.json'
+    models=json.loads(frozen.read_text())['models']
+    names=['operator_only','operator_size','operator_generic','operator_state']
+    header='// Frozen TRAIN-only models; ABI modes 0/1/2/3.\n'
+    for key in ['mean','scale','probability','timing']:
+        for i,name in enumerate(names):
+            values=','.join(format(v,'.17g') for v in models[name][key])
+            header+=f'static const double {key}_{i}[]={{'+values+'};\n'
+        header+=f'static const double* model_{key}[]={{'+','.join(f'{key}_{i}' for i in range(4))+'};\n'
+    (BUILD/'schedule_models.hpp').write_text(header)
+    manifest['model_sha256']=hashlib.sha256(frozen.read_bytes()).hexdigest()
+    for name in ['scheduler.hpp','operator_state.cpp','operator_inference.cpp']:
+        shutil.copyfile(home/name,BUILD/name)
+        manifest['sha256'][name]=hashlib.sha256((home/name).read_bytes()).hexdigest()
 fp=BUILD/'FPMax'; fp.mkdir(exist_ok=True)
 for source in (SOURCE/'Debug/FPMax').iterdir():
     if source.suffix in ('.cpp','.c','.h'):
@@ -94,6 +128,7 @@ run(flags+['-DMFI',*[str(fp/name) for name in ['fpmax.cpp','data.cpp','fp_tree.c
 run(flags+[str(fp/'fpmax_hnmp.cpp'),'-o',str(fp/'fpmax_hnmp')])
 sources=['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp','mineracao.cpp',
          'principal.cpp','random_provider.cpp','research_hook.cpp']
+if args.scheduled:sources+=['operator_state.cpp','operator_inference.cpp']
 command=flags+['-I',str(BUILD),*[str(BUILD/name) for name in sources],'-o',str(BUILD/'original_mdm')]
 run(command)
 manifest['command']=command

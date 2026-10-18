@@ -1,5 +1,45 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 7h01 — política nativa e primeiro piloto completo
+
+- `operator_state.cpp` + `verify_operator_state.py`:descritoresnativos vsPython
+460estadosde23perfisPASS,erro6.66e-16,medianaobservada5.5us/estado viactypes,
+ exclui preparaçãoúnicadografo. Outputoperator_state_verification.json.
+- `scheduler.hpp` adaptaVertice/C/rota paraíndices/cobertura/prêmios ecarrega
+ modelos52b8e9ae6089. Adaptadorvalidadoem60estados3DEV,erro2.22e-16. Produz
+ features.jsonl apenasquandoPCCTP_SCHEDULE_VERIFYativado; pilotosemI/O extra.
+- `build.py --initialize-decoder-index --scheduled` criaBUILDSEPARADO
+ build_scheduled/ eheader congeladodospesos. Legadointacto. run.py aceita
+ operator_policy eusa temporáriosprivados `.scheduled.POLICY`; método final
+ `scheduled_MDM_POLICY`. Baselinepadrão nãoescalonado permanece opcionaldefault.
+- Políticas original/static/size/generic/joint/adaptive mantêm15operadores,
+ reordenam apósmelhoria,consomem permutaçãoRNGoriginal. Static/size/adaptive
+ evitam descritoresdesnecessários;generic não calcula cobertura. Jointusa
+ tempoGENERIC,isolandopredição deprobabilidade. Adaptativo sucesso/tempo com
+ priorfixo1sucesso/.001s; simplescontrole, nãoalgoritmopublicadoreproduzido.
+- PILOTO70iterações (NÃOtempoigual) COMPLETO sessão95789 terminou:
+ `scheduled_development/protocol.16776a180cf7.json`,18runs,3geometriasDEV,
+ seed42. Adapterchecksanterioresforamdiferentesruns,semusar seus tempos.
+ Auditoria `audit_scheduled.py`PASS18; custos2650/5186/20466emtodaspolíticas.
+ Jointmenortempoobservado nas3, mas diferençaspequenas frentecontroles. Tabela
+ completa emresearch_notes/operator_scheduling_protocol.md. Original5.516/7.503/
+3.196s;joint4.101/5.101/2.393;generic4.478/5.327/2.631;adaptive4.120/5.542/2.481.
+- LIMITAÇÃOIMPORTANTE:wrappercronometra ecalcula custosantes/depois paraTODAS
+ políticas; podeinflar comparação original. Próximobuilddeveevitarwrapper para
+ políticassemadaptação e incluir controle MDMcorrigidolimpo. Nãoalegar speedup
+ final. Piloto é3geometrias1semente,semtesteestatístico e semtempoigual.
+- Nadaativo desta retomada. Builds31132/64542/7269 echeck80450 encerrados.
+ Últimolog `/tmp/pcctp_scheduled_pilot.log`. Include/Utils.hpreservado.
+
+Próximo concreto: instrumentarprogressodentroda busca local (melhor aceito),
+ adicionar prazo comumcooperativoregistrandoultrapassagens e construircontroles
+ legacybare/original/static/size/generic/joint/adaptive. Não usar checkpoint
+ esparsocomo melhoratdeadline. Removeroverheadextra deoperaçãonaspolíticasnão
+ adaptativas. Sóentão ampliar sementes/geometriasDEV. Congelartudopré-reservado.
+ Preservar pilotoatual semsobrescrever. Sinalpreliminar,end-to-end nãoéainda
+ contribuição pronta; novidadegenérica limitada; artigoesqueleto,CTPnãoimplementar.
+
+
 ## Retomada às 6h51 — coleta final e inferência nativa verificada
 
 - Coleta093590aaa738 TERMINOU:20geometriasTRAIN planejadas,semfalhasdegeração.

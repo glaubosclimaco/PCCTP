@@ -112,3 +112,45 @@ estática por operador, tamanho, estado genérico, estado com cobertura/prêmio,
 e adaptação simples. Manter todos os operadores elegíveis até completar a
 varredura após a última melhoria; incluir todo overhead e preservar censura.
 Uma política pode mudar a trajetória, portanto avaliar em execução completa.
+
+## Integração e primeiro piloto, às 7h01
+
+`operator_state.cpp` reproduziu os dez descritores Python em460estados de23
+perfis, erro máximo6.66e-16. O adaptador do legado, que monta índices, custos,
+prêmios e incidência de cobertura, foi verificado em20estados de cada uma de
+att48/berlin52/brazil58; erro máximo2.22e-16. Esse segundo teste verifica a ligação
+com os tipos e conjuntos do código fornecido, além da rotina portátil.
+
+Build separado `build_scheduled/`, gerado com `--initialize-decoder-index
+--scheduled`, incorpora os modelos congelados e mantém os15operadores. A
+permutação aleatória original é sorteada antes da reordenação; a nova ordem
+é aplicada no início da busca local e após melhoria. Não omite operadores.
+Controles estático, tamanho e adaptativo evitam os descritores que não usam;
+o genérico não calcula cobertura crítica. O modelo completo usa o mesmo
+preditor de tempo genérico. A adaptação simples acumula sucessos/tempo com
+prior fixo; não reproduz um algoritmo publicado específico.
+
+Piloto `scheduled_development/protocol.16776a180cf7.json`:3geometriasDEV,
+uma semente42,6políticas,70iterações. Todos18completaram e mantiveram os custos
+2650/5186/20466. A auditoria independente recalculou rotas, custos, monotonicidade,
+método e proveniência. Nenhuma geometria reservada foi usada.
+
+| Política | att48(s) | berlin52(s) | brazil58(s) |
+|---|---:|---:|---:|
+| Ordem original instrumentada |5.516|7.503|3.196|
+| Estática por operador |4.232|5.971|2.759|
+| Tamanho |4.668|5.424|2.490|
+| Estado genérico |4.478|5.327|2.631|
+| Estado com cobertura/prêmio |4.101|5.101|2.393|
+| Adaptação simples |4.120|5.542|2.481|
+
+São observações preliminares sob número fixo de iterações, não evidência final
+de vantagem sob orçamento de tempo. O wrapper mede todo operador e calcula
+custos extras em todas as políticas; isso pode inflar a comparação com a ordem
+original. É preciso comparar também com o MDM corrigido sem esse wrapper e
+remover custos desnecessários das políticas que não adaptam online. Diferenças
+pequenas, uma semente e apenas3geometrias não sustentam inferência estatística.
+
+Próximo: coleta de progresso dentro da busca local e prazo comum, com limites
+e overruns registrados, mais sementes/geometriasDEV e controle legado limpo.
+Não substituir isso por testes de significância sobre18execuções correlacionadas.

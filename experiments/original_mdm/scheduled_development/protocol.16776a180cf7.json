@@ -1,0 +1,126 @@
+{
+  "scope": "Development fixed-70-iteration pilot, NOT a matched-time benchmark.\n\nNative timers and one-off preparation are charged to full process wall time.\nTimeout retains only legacy sparse iteration checkpoints, not best at deadline.\n",
+  "methods": [
+    "original",
+    "static",
+    "size",
+    "generic",
+    "joint",
+    "adaptive"
+  ],
+  "iterations": 70,
+  "timeout": 90,
+  "adapter_verification": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "states": 20,
+      "max_error": 1.6653345369377348e-16
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "states": 20,
+      "max_error": 2.220446049250313e-16
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "states": 20,
+      "max_error": 2.220446049250313e-16
+    }
+  ],
+  "cases": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "role": "development",
+      "seed": 42,
+      "source_sha256": "83cb77d7d6a94a374a382c33975d5d919ef99167176809d00e2c726a872c4915"
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "role": "development",
+      "seed": 42,
+      "source_sha256": "4fb303b33e272ced7ac2cdf4e7e3bd83b254c764447e5022bfb3de26ef90da12"
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "role": "development",
+      "seed": 42,
+      "source_sha256": "68a0aae3eb8b7cc0899fbb48ad5198030c0c5e20cbe723853031ed094dd77398"
+    }
+  ],
+  "code_hashes": {
+    "scheduled_pilot.py": "100887f674a50bf2e2aa59d11115fd07bef8a0a590a85848366b19e23170e3df",
+    "scheduler.hpp": "8289521f00e07eb37ff4e389fc4aa1d863f2efe2884db110dba00545b4b84710",
+    "operator_state.cpp": "daf359a6be09376a1e7a744051f9f7a1a3feeed5a8dd2eb4de54d6141192f6e6",
+    "operator_inference.cpp": "ac72d33717dc46ecd46a48882231a60105d0c65476cda4cd184af37555cdbe36",
+    "run.py": "67819e4a4e83e671340b64036afc2136d4eef2b6e08c68c9adf81f000b72e61e",
+    "build.py": "dc8faf7838229206849d1a32251302cd3f39ccba12c9b1b3fda54612fc0c64d3"
+  },
+  "build_manifest": {
+    "origin": "/Users/glaubosclimaco/Projects/papers/PCCTP/mdm-grasp-genius-vnd",
+    "sha256": {
+      "Utils.cpp": "e775aab241508ca1bde904a5f8072128f742f1a7abe6a9fc9571989dd72f21da",
+      "genius.cpp": "2115e29a4153f75727a28ed863c26d293d53b3530698f9af3e05d8bb114c5999",
+      "grasp.cpp": "071cdacecd9d34151052572979180e34b6a76ee370ff12f93deca524f2cda82d",
+      "instances.cpp": "5b0751253ee0d19e077b12f094e68b94aaf8e62297e3a09356240ab60dfa9a36",
+      "instancia_loader.cpp": "5babd2095352c94047bd71cbb8a4d2941c49f95797747215eaa49d695e451704",
+      "mineracao.cpp": "26380384e3a30b4f6753fc43f14a2a0207e4852b29e99ed4ec7a8f2ebf4715c7",
+      "principal.cpp": "61d8c0895b7b2931a4dff1f1621d62fc1e6f64afad561cd5fc168bd26d375e65",
+      "random_provider.cpp": "565e46779c753ada7a53e2c87e8ca4da4f68d76eb4839f6fc9819707e56e188b",
+      "random_provider.h": "2c8b66aecf4bec1cefe71f9a949102389eb22691996799ccf05c2c0a6c92f5b2",
+      "mineracao.h": "bef3332bae83fbdff769af1b597ebf207e7ff04410d4efe393f04a0fc99c59b2",
+      "scheduler.hpp": "8289521f00e07eb37ff4e389fc4aa1d863f2efe2884db110dba00545b4b84710",
+      "operator_state.cpp": "daf359a6be09376a1e7a744051f9f7a1a3feeed5a8dd2eb4de54d6141192f6e6",
+      "operator_inference.cpp": "ac72d33717dc46ecd46a48882231a60105d0c65476cda4cd184af37555cdbe36",
+      "FPMax/fpmax.cpp": "db7816478aa692195acf986bd02f53c3f10667b063586be194b25b76728ce8c7",
+      "FPMax/fpmax_hnmp.cpp": "37f46e68842c63de9e607c8d5f6420d5834c8938e667bcd47696a38f2491ccec",
+      "FPMax/data.h": "02625acdeda03cc41859a64694f18c1eca1e7fa71724e34d553385d1ec73cc4c",
+      "FPMax/bibrand.h": "dd889c729bc1578d4e5387d689e61920eee50fc0025ad2dfe76f8d8ebf50c44b",
+      "FPMax/fsout.cpp": "17a177d997e5c3b3729404202276f6c9088304cd3d4fa94994258b6e574b74e9",
+      "FPMax/data.cpp": "58b3c9374f068e31b58aa091da4d6d2ede93e31c26540c9e8a5d5b81d4aa3065",
+      "FPMax/buffer.cpp": "e6417b35a8546fe2430ec5628e3392ca795dbc077606dcd677c447ea414f51b9",
+      "FPMax/buffer.h": "3d8edd1519cb484a6c9bed5a415f58a213dd3b261ad9f357b60303e038237aed",
+      "FPMax/common.h": "2186bba39769209cca292ecb257e99f612258b8fcc0f4d2195cc4bfd61591275",
+      "FPMax/bibrand.c": "0107062445d44c307865c258f04779604ad73ace93b0b9fbd9b29638bd2ac955",
+      "FPMax/fp_node.cpp": "4d4c30f7bb02d04b02cf7d9962931ae036cbf935c845a110daee648634c40ae3",
+      "FPMax/fp_tree.h": "ffd6bfe477bcb60ecba66c82323ebb512d8525a5f79027ea4827e0cdf821c723",
+      "FPMax/fp_node.h": "bc23683b22457dbac22b7d35a5ea00e35c2664ed6bd06df49e848056f705dd07",
+      "FPMax/fsout.h": "15fe35b3eee1a3d7784753def9969ec378af0cdadebb947425da2b13ed5bcd42",
+      "FPMax/fp_tree.cpp": "f33e5b9e84dfbe1c8f9013dfb1068c30a96418f0f7669f2b2a3f7c975299f3f7"
+    },
+    "changes": [
+      "grasp: observational checkpoint and mining-call hooks; algorithm unchanged",
+      "EXPERIMENTAL scheduling: common per-operator timing; reorder all 15 operators after state improvements; original RNG permutation retained",
+      "EXPLICIT BUG FIX: initialize decoder component index before singleton-component access; separate from unchanged legacy",
+      "principal: sixth output argument, larger path buffer, observational initialization/export",
+      "FPMax/buffer.cpp: malloc.h -> cstdlib for macOS"
+    ],
+    "model_sha256": "64d4ea4c88595bc2c147255846fb30f4dd602e289dce448ee5d111546afcb22f",
+    "command": [
+      "/opt/homebrew/bin/g++-15",
+      "-std=gnu++11",
+      "-O2",
+      "-fpermissive",
+      "-Wno-narrowing",
+      "-DPCCTP_DECODER_INITIALIZED",
+      "-I",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/Utils.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/genius.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/grasp.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/instances.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/instancia_loader.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/mineracao.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/principal.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/random_provider.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/research_hook.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/operator_state.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/operator_inference.cpp",
+      "-o",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_scheduled/original_mdm"
+    ],
+    "compiler": "g++-15 (Homebrew GCC 15.1.0) 15.1.0"
+  }
+}
