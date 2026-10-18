@@ -75,6 +75,22 @@ def free_edge_set(d, route, released, operator='incident', extra_edges=None, see
     edges near unvisited candidates to permit insertion. Remaining slots are
     filled by proximity. Every edge choice uses only the current state, no labels.
     """
+    if operator == 'fragment_clique':
+        if not released: raise ValueError('Fragment clique needs a nonempty release set')
+        if extra_edges is not None: raise ValueError('Fragment clique defines its own complete boundary')
+        current={tuple(sorted((route[i-1],v))) for i,v in enumerate(route)}
+        base={edge for edge in current if released.intersection(edge)}
+        if not set(route)&released:
+            # Break the retained cycle once, so absent candidates can be inserted.
+            gap=min(current,key=lambda e:(min(d['costs'][e[0],v]+d['costs'][v,e[1]]-d['costs'][e[0],e[1]] for v in released),e))
+            base.add(gap)
+        fixed=current-base
+        degree={v:0 for v in route}
+        for a,b in fixed:degree[a]+=1;degree[b]+=1
+        boundary=set(released)|{v for v in route if degree[v]<2}
+        # A retained two-vertex path has both endpoints in the boundary. Its
+        # internal edge must stay fixed, rather than being inadvertently freed.
+        return set(combinations(sorted(boundary),2))-fixed
     edges = list(combinations(range(len(d['visits'])), 2))
     base = {edge for edge in edges if released.intersection(edge)}
     if operator == 'incident':

@@ -1,5 +1,52 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h00 — nova formulação do reparo e DP
+
+- Piloto anneal terminou. Continua sem vantagem de ML demonstrada. O diagnóstico
+  de âncoras também não chegou ao ótimo do MDM em berlin52/eil51. Não insistir
+  em aumentar parâmetros sem uma hipótese nova e controles.
+- Corrigido `free_y` dos nove arquivos em `routing_release_development/` para
+  contar apenas opcionais livres; os quatro obrigatórios de roteamento ficam
+  selecionados. Metadado corrigido documentado; tempos/rotas/custos intactos.
+- Implementados `path_dp.cpp` e `dp_repair.py`: DP exata sobre componentes de
+  caminhos fixos, orientações e máscaras de seleção viável. Backend experimental
+  usa Held–Karp clássico; não alegar que a DP ou contração são inéditas.
+- Primeiro diagnóstico com `route_context`:108/108casos excederam18componentes,
+  registrado em `dp_development/`. O excesso vinha da liberação de muitas
+  arestas incumbentes, que destruía os caminhos a contrair.
+- Novo operador `fragment_clique` em `pilot.free_edge_set`: remove arestas
+  incidentes na liberação J, mantém os caminhos restantes e libera a fronteira
+  completa, exceto as arestas internas fixas. Se J só tem ausentes, abre um
+  intervalo do incumbente. Tem q<=2|J| componentes ativos. Argumento e recorrência
+  estão em `research_notes/fragment_clique_dp.md`, ainda para revisão/novidade.
+- Importante: a primeira versão libertava por engano a aresta interna de
+  caminhos de tamanho2. Corrigido; outputs anteriores segregados em
+  `fragment_clique_pre_boundary_fix/` e não usados na avaliação atual.
+- `verify_dp.py` passou:30casos contra SCF completo,18vizinhanças por enumeração,
+  timeout e retorno viável. O teste revela que checar o relógio pelos bits da
+  máscara não funciona quando a raiz está no bit zero; isso já foi corrigido.
+- Em108vizinhanças pareadas com `fragment_clique`, DP certificou106 e MIP104;
+  duas excederam o limite de18componentes. Resultados em
+  `fragment_clique_development/` e `fragment_clique_vectorized_development/`.
+  Vetorização da seleção baixou mediana observada de38ms para17ms, contra36ms
+  do MIP no lote pareado. Ainda é diagnóstico sob carga, sem claim final de speedup.
+- Lotes DP e verificações terminaram; última checagem pós-otimização em
+  `/tmp/pcctp_dp_final_verification.log` (sessão7962). Verificar conclusão.
+  O caminho `dp_build/` é ignorado no Git; `library()` compila a dylib local
+  com g++-15 na primeira utilização. Compilação não deve ser contada como
+  inferência, mas construção/carregamento do modelo online deve ser medido.
+- Coleta das outras variantes corrigidas (sessão46473) ainda avança, log
+  `/tmp/pcctp_decoder_initialized_other_variants.log`. Primeiras variantes já
+  encerradas; rótulos temporizados podem ser coletados incrementalmente, com trava.
+
+Próxima hipótese: separar seleção opcional U de âncoras obrigatórias R e escolher
+vizinhanças pelo ganho esperado e pelo tamanho combinatório q, usando a mesma
+fronteira completa e o mesmo limite DP nos modelos e controles. Antes de ML,
+testar algoritmo completo com essa reparação e controles sem aprendizado.
+O ranking antigo treinado em MIP/route_context não é automaticamente validado
+para o novo operador; coletar novos alvos ou declarar explicitamente transferência.
+Controlar casos com limite de tamanho e NÃO omiti-los.
+
 ## Retomada às 5h50 — resultado negativo e novas verificações
 
 - O piloto greedy de6geometrias/dezpolíticas terminou: nenhuma política venceu

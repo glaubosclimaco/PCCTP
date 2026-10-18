@@ -36,7 +36,7 @@
       "solve_seconds": 0.04630229200000002,
       "total_seconds": 0.05135741700000018,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -104,7 +104,7 @@
       "solve_seconds": 0.05693733300000048,
       "total_seconds": 0.061714499999999894,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -172,7 +172,7 @@
       "solve_seconds": 0.05772858300000028,
       "total_seconds": 0.06233991700000008,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2650.0,
       "removed_optional": [
         1
@@ -244,7 +244,7 @@
       "solve_seconds": 0.05226350000000046,
       "total_seconds": 0.05698854099999995,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -312,7 +312,7 @@
       "solve_seconds": 0.17752604100000013,
       "total_seconds": 0.18237308300000077,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -380,7 +380,7 @@
       "solve_seconds": 0.05598170800000002,
       "total_seconds": 0.060965417000000244,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2676.0,
       "removed_optional": [
         24
@@ -452,7 +452,7 @@
       "solve_seconds": 0.021018584000000118,
       "total_seconds": 0.025963917000000336,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -520,7 +520,7 @@
       "solve_seconds": 0.05696366599999969,
       "total_seconds": 0.06099824999999992,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2650.0,
       "removed_optional": [
         1
@@ -592,7 +592,7 @@
       "solve_seconds": 0.06945604200000055,
       "total_seconds": 0.07429299999999994,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2676.0,
       "removed_optional": [
         24
@@ -664,7 +664,7 @@
       "solve_seconds": 0.06441462500000039,
       "total_seconds": 0.06961570799999972,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -732,7 +732,7 @@
       "solve_seconds": 0.04515733400000066,
       "total_seconds": 0.050015125000000715,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2650.0,
       "removed_optional": [
         1
@@ -804,7 +804,7 @@
       "solve_seconds": 0.03420666600000022,
       "total_seconds": 0.03790937499999991,
       "free_x": 330,
-      "free_y": 12,
+      "free_y": 8,
       "cost": 2692.0,
       "removed_optional": [],
       "added_optional": [],
@@ -848,5 +848,6 @@
       "fixed_edge_constant": 0.0
     }
   ],
-  "note": "Mandatory anchors remain visited; total release12 compared with optional-only12; developmental mechanism diagnostic"
+  "note": "Mandatory anchors remain visited; total release12 compared with optional-only12; developmental mechanism diagnostic",
+  "metadata_correction": "free_y counts optional visit decisions only; mandatory routing anchors stay fixed; objectives/routes/times unchanged"
 }
