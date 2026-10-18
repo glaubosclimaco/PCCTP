@@ -1,0 +1,496 @@
+{
+  "scope": "Development-only leave-one-geometry-out; not confirmatory or end-to-end",
+  "geometries": 14,
+  "states": 28,
+  "queries": 672,
+  "informative_states": 8,
+  "ridge_alpha": 1.0,
+  "summary": {
+    "uniform": {
+      "geometry_mean_gain": 0.0010495923212041035,
+      "positive_geometries": 8
+    },
+    "sampled_oracle": {
+      "geometry_mean_gain": 0.0032529416468489586,
+      "positive_geometries": 8
+    },
+    "deletion_savings": {
+      "geometry_mean_gain": 0.0018571364135923352,
+      "positive_geometries": 3
+    },
+    "joint_savings": {
+      "geometry_mean_gain": 0.0022284226873978295,
+      "positive_geometries": 4
+    },
+    "joint_flexibility": {
+      "geometry_mean_gain": 0.00039066858332793396,
+      "positive_geometries": 3
+    },
+    "generic": {
+      "geometry_mean_gain": 0.0005709689704369376,
+      "positive_geometries": 2
+    },
+    "raw_coverage_prize": {
+      "geometry_mean_gain": 0.0007600772774920958,
+      "positive_geometries": 3
+    },
+    "joint_only": {
+      "geometry_mean_gain": 0.0018571364135923352,
+      "positive_geometries": 3
+    },
+    "all": {
+      "geometry_mean_gain": 0.0018571364135923352,
+      "positive_geometries": 3
+    }
+  },
+  "rows": [
+    {
+      "geometry": "g_att48",
+      "phase": 1,
+      "source": "g_att48_VT16_T16_W16_75.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.001300148588410104,
+        "sampled_oracle": 0.015601783060921248,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "phase": 10,
+      "source": "g_att48_VT16_T16_W16_75.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "phase": 1,
+      "source": "g_berlin52_VT16_T18_W18_50.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.00015042117930204573,
+        "sampled_oracle": 0.0036101083032490976,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "phase": 10,
+      "source": "g_berlin52_VT16_T18_W18_50.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "phase": 70,
+      "source": "g_berlin52_VT16_T18_W18_50.seed42.phase70.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "phase": 1,
+      "source": "g_bier127_VT24_T26_W77_50.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "phase": 10,
+      "source": "g_bier127_VT24_T26_W77_50.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "phase": 1,
+      "source": "g_brazil58_VT11_T12_W35_75.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.002292764695453153,
+        "sampled_oracle": 0.010396015666553841,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.010396015666553841,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "phase": 10,
+      "source": "g_brazil58_VT11_T12_W35_75.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil51",
+      "phase": 1,
+      "source": "g_eil51_VT17_T17_W17_25.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0037470023980815345,
+        "sampled_oracle": 0.007194244604316547,
+        "deletion_savings": 0.007194244604316547,
+        "joint_savings": 0.007194244604316547,
+        "joint_flexibility": 0.0035971223021582736,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.007194244604316547,
+        "all": 0.007194244604316547
+      }
+    },
+    {
+      "geometry": "g_eil51",
+      "phase": 10,
+      "source": "g_eil51_VT17_T17_W17_25.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "phase": 1,
+      "source": "g_eil76_VT14_T16_W46_75.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.020292987512007685,
+        "sampled_oracle": 0.043227665706051875,
+        "deletion_savings": 0.043227665706051875,
+        "joint_savings": 0.043227665706051875,
+        "joint_flexibility": 0.005763688760806916,
+        "generic": 0.01440922190201729,
+        "raw_coverage_prize": 0.01440922190201729,
+        "joint_only": 0.043227665706051875,
+        "all": 0.043227665706051875
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "phase": 10,
+      "source": "g_eil76_VT14_T16_W46_75.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "phase": 1,
+      "source": "g_gr137_VT26_T28_W83_25.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "phase": 10,
+      "source": "g_gr137_VT26_T28_W83_25.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "phase": 1,
+      "source": "g_gr48_VT16_T16_W16_25.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "phase": 1,
+      "source": "g_gr96_VT18_T20_W58_75.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.00022062635823101787,
+        "sampled_oracle": 0.005295032597544429,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.005295032597544429,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "phase": 10,
+      "source": "g_gr96_VT18_T20_W58_75.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "phase": 1,
+      "source": "g_hk48_VT16_T16_W16_50.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0009861932938856016,
+        "sampled_oracle": 0.0015779092702169625,
+        "deletion_savings": 0.0015779092702169625,
+        "joint_savings": 0.0015779092702169625,
+        "joint_flexibility": 0.0015779092702169625,
+        "generic": 0.0015779092702169625,
+        "raw_coverage_prize": 0.0015779092702169625,
+        "joint_only": 0.0015779092702169625,
+        "all": 0.0015779092702169625
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "phase": 70,
+      "source": "g_hk48_VT16_T16_W16_50.seed42.phase70.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "phase": 1,
+      "source": "g_kroA150_VT30_T30_W90_50.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "phase": 10,
+      "source": "g_kroA150_VT30_T30_W90_50.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "phase": 70,
+      "source": "g_kroA150_VT30_T30_W90_50.seed42.phase70.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "phase": 1,
+      "source": "g_kroB150_VT30_T30_W90_25.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "phase": 10,
+      "source": "g_kroB150_VT30_T30_W90_25.seed42.phase10.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "phase": 70,
+      "source": "g_kroB150_VT30_T30_W90_25.seed42.phase70.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "phase": 1,
+      "source": "g_kroC100_VT20_T20_W60_75.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "phase": 1,
+      "source": "g_lin105_VT21_T21_W63_25.seed42.phase1.k8.json",
+      "gain": {
+        "uniform": 0.00022429068072221602,
+        "sampled_oracle": 0.002691488168666592,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "joint_flexibility": 0.0,
+        "generic": 0.0,
+        "raw_coverage_prize": 0.0,
+        "joint_only": 0.0,
+        "all": 0.0
+      }
+    }
+  ]
+}

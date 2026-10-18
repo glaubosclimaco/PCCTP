@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "witness": {
+    "mandatory": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "optional": [
+      4,
+      5,
+      6
+    ],
+    "prizes": {
+      "4": 1,
+      "5": 1,
+      "6": 2
+    },
+    "quota": 2,
+    "demand_neighbors": [
+      4,
+      5
+    ],
+    "optional_y": "1/2",
+    "terminal_optional_x": "1/4",
+    "terminal_terminal_x": "5/12",
+    "optional_optional_x": "0"
+  },
+  "existing_families_passed": {
+    "root_excluding_cutsets": 63,
+    "all_knapsack_covers": 3,
+    "all_extended_prize_covers": 3,
+    "strong_blossom_maxima_by_handle_and_odd_size": 672
+  },
+  "feasible_integer_selections": [
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      4,
+      5,
+      6
+    ]
+  ],
+  "feasible_undirected_cycles_enumerated": 540,
+  "mixed_rank": {
+    "lhs": "3/2",
+    "rhs": 2,
+    "violation": "1/2"
+  },
+  "checks": 749,
+  "interpretation": "Mixed rank is a rank-1 CG consequence of three pair obligations; generic novelty is not claimed."
+}

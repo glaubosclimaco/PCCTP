@@ -1,0 +1,295 @@
+{
+  "scope": "root-only diagnostic; no trained policy, no solver benchmark",
+  "relaxation": "degrees/linking/quota/coverage/GSEC/coverage-forced cuts; no blossoms/prize-forced/rank",
+  "candidate_selection": "balanced most-fractional shortlist, then fill; not exhaustive oracle",
+  "branch_score": "min(clipped_child_gain)+0.1*max(clipped_child_gain); infeasible clipped at all-visit UB",
+  "instances": [
+    {
+      "instance": "g_gr48_VT9_T10_W29_50",
+      "geometry": "g_gr48",
+      "visitable": 19,
+      "mandatory": 10,
+      "optional": 9,
+      "demands": 29,
+      "root_lp": 3520.5,
+      "all_visit_upper": 4242.0,
+      "root_seconds": 0.10114125000000018,
+      "root_rounds": 4,
+      "root_cuts": 22,
+      "fractional_x": 8,
+      "fractional_y": 2,
+      "probed_candidates": 8,
+      "lp_calls": 20,
+      "total_seconds": 0.5714879580000001,
+      "oracle": [
+        {
+          "variable": "x",
+          "index": 45,
+          "value": 0.5,
+          "child_gains": [
+            3.5,
+            28.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05701316700000003,
+          "score": 6.35,
+          "edge": [
+            9,
+            38
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 49,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05664520900000003,
+          "score": 4.25,
+          "edge": [
+            9,
+            46
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 98,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.06906979099999999,
+          "score": 4.25,
+          "edge": [
+            18,
+            37
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 103,
+          "value": 0.5,
+          "child_gains": [
+            3.5,
+            7.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.0565513339999999,
+          "score": 4.25,
+          "edge": [
+            18,
+            46
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 152,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.055753000000000164,
+          "score": 4.25,
+          "edge": [
+            37,
+            41
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 156,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05469908400000012,
+          "score": 4.25,
+          "edge": [
+            38,
+            39
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 183,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.06347716700000006,
+          "score": 4.25,
+          "vertex": 37,
+          "prize": 327.0,
+          "residual_demands_covered": 3,
+          "coverage_scarcity": 1.5
+        },
+        {
+          "variable": "y",
+          "index": 185,
+          "value": 0.5,
+          "child_gains": [
+            7.5,
+            3.5
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05436408299999984,
+          "score": 4.25,
+          "vertex": 39,
+          "prize": 227.0,
+          "residual_demands_covered": 2,
+          "coverage_scarcity": 1.0
+        }
+      ]
+    },
+    {
+      "instance": "g_eil51_VT9_T11_W31_50",
+      "geometry": "g_eil51",
+      "visitable": 20,
+      "mandatory": 11,
+      "optional": 9,
+      "demands": 31,
+      "root_lp": 246.8235294117647,
+      "all_visit_upper": 363.0,
+      "root_seconds": 0.1403594159999999,
+      "root_rounds": 6,
+      "root_cuts": 53,
+      "fractional_x": 3,
+      "fractional_y": 1,
+      "probed_candidates": 4,
+      "lp_calls": 14,
+      "total_seconds": 0.36038462499999957,
+      "oracle": [
+        {
+          "variable": "x",
+          "index": 48,
+          "value": 0.5882352941176471,
+          "child_gains": [
+            1.1764705882353041,
+            0.4491978609625562
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.056043041999999765,
+          "score": 0.5668449197860866,
+          "edge": [
+            12,
+            39
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 49,
+          "value": 0.4117647058823529,
+          "child_gains": [
+            0.4491978609625562,
+            1.1764705882353041
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.052756833000000114,
+          "score": 0.5668449197860866,
+          "edge": [
+            12,
+            40
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 205,
+          "value": 0.4117647058823529,
+          "child_gains": [
+            0.4491978609625562,
+            1.1764705882353041
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05606437399999953,
+          "score": 0.5668449197860866,
+          "vertex": 40,
+          "prize": 17.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 175,
+          "value": 0.4117647058823529,
+          "child_gains": [
+            0.41176470588237635,
+            1.1764705882353041
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.05242662599999992,
+          "score": 0.5294117647059068,
+          "edge": [
+            39,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "visitable": 34,
+      "mandatory": 17,
+      "optional": 17,
+      "demands": 17,
+      "root_lp": 273.0,
+      "all_visit_upper": 435.0,
+      "root_seconds": 0.945273625,
+      "root_rounds": 10,
+      "root_cuts": 131,
+      "fractional_x": 0,
+      "fractional_y": 0,
+      "probed_candidates": 0,
+      "lp_calls": 10,
+      "total_seconds": 0.9489778750000002,
+      "oracle": []
+    }
+  ]
+}

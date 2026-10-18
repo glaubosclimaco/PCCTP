@@ -1,0 +1,272 @@
+{
+  "scope": "Exploratory fixed-state cross-geometry ranking; no significance or runtime superiority claim",
+  "ridge_alpha": 1.0,
+  "alpha_selected_without_test_tuning": true,
+  "geometries": 9,
+  "states": 9,
+  "informative_states": 7,
+  "fit_and_evaluation_seconds": 0.023072749999999975,
+  "summary": {
+    "uniform_candidate_expectation": {
+      "mean_normalized_gain": 0.003709463597022493,
+      "mean_sampled_oracle_regret": 0.014582168265998082
+    },
+    "deletion_savings": {
+      "mean_normalized_gain": 0.0038277324513384878,
+      "mean_sampled_oracle_regret": 0.014463899411682092
+    },
+    "generic_pairwise_ridge": {
+      "mean_normalized_gain": 0.006364081133295364,
+      "mean_sampled_oracle_regret": 0.011927550729725213
+    },
+    "coverage_prize_pairwise_ridge": {
+      "mean_normalized_gain": 0.0015470341686946328,
+      "mean_sampled_oracle_regret": 0.016744597694325944
+    }
+  },
+  "rows": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "sampled_oracle_normalized_gain": 0.003749147920927062,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0003124289934105885,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.0034367189275164734,
+        "deletion_savings": 0.003749147920927062,
+        "generic_pairwise_ridge": 0.003749147920927062,
+        "coverage_prize_pairwise_ridge": 0.003749147920927062
+      },
+      "train_geometries": [
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "sampled_oracle_normalized_gain": 0.03637011945088251,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.008111962916740953,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.028258156534141557,
+        "deletion_savings": 0.03637011945088251,
+        "generic_pairwise_ridge": 0.03637011945088251,
+        "coverage_prize_pairwise_ridge": 0.03637011945088251
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "sampled_oracle_normalized_gain": 0.011707923157794132,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.003082289974194782,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.004635381821657268
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.00862563318359935,
+        "deletion_savings": 0.011707923157794132,
+        "generic_pairwise_ridge": 0.011707923157794132,
+        "coverage_prize_pairwise_ridge": 0.007072541336136864
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "sampled_oracle_normalized_gain": 0.04643962848297214,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.012641898864809082,
+        "deletion_savings": 0.015479876160990712,
+        "generic_pairwise_ridge": 0.009287925696594427,
+        "coverage_prize_pairwise_ridge": 0.009287925696594427
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.033797729618163054,
+        "deletion_savings": 0.030959752321981428,
+        "generic_pairwise_ridge": 0.03715170278637771,
+        "coverage_prize_pairwise_ridge": 0.03715170278637771
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "sampled_oracle_normalized_gain": 0.0,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.0,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "geometry": "g_gr48",
+      "sampled_oracle_normalized_gain": 0.0,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.0,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_hk48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "geometry": "g_hk48",
+      "sampled_oracle_normalized_gain": 0.031556879620434734,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0032274081429990074,
+        "deletion_savings": 0.0025377910184265695,
+        "generic_pairwise_ridge": 0.031556879620434734,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.02832947147743573,
+        "deletion_savings": 0.029019088602008164,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.031556879620434734
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_pr76",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_pr76_VT14_T16_W46_25",
+      "geometry": "g_pr76",
+      "sampled_oracle_normalized_gain": 0.018369063251545508,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0032705293339431764,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.015098533917602332,
+        "deletion_savings": 0.018369063251545508,
+        "generic_pairwise_ridge": 0.018369063251545508,
+        "coverage_prize_pairwise_ridge": 0.018369063251545508
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_st70"
+      ]
+    },
+    {
+      "instance": "g_st70_VT14_T14_W42_25",
+      "geometry": "g_st70",
+      "sampled_oracle_normalized_gain": 0.01643192488262911,
+      "normalized_gain": {
+        "uniform_candidate_expectation": 0.0027386541471048514,
+        "deletion_savings": 0.01643192488262911,
+        "generic_pairwise_ridge": 0.01643192488262911,
+        "coverage_prize_pairwise_ridge": 0.0
+      },
+      "sampled_oracle_regret": {
+        "uniform_candidate_expectation": 0.013693270735524258,
+        "deletion_savings": 0.0,
+        "generic_pairwise_ridge": 0.0,
+        "coverage_prize_pairwise_ridge": 0.01643192488262911
+      },
+      "train_geometries": [
+        "g_att48",
+        "g_berlin52",
+        "g_brazil58",
+        "g_eil51",
+        "g_eil76",
+        "g_gr48",
+        "g_hk48",
+        "g_pr76"
+      ]
+    }
+  ]
+}

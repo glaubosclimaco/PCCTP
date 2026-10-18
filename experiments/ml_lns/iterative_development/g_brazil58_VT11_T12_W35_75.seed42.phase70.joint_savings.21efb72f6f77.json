@@ -1,0 +1,236 @@
+{
+  "method": "joint_savings",
+  "budget_seconds": 10.0,
+  "total_seconds": 10.004173125000008,
+  "feature_seconds": 0.05065249999999821,
+  "initial_cost": 20466.0,
+  "cost": 20466.0,
+  "normalized_gain": 0.0,
+  "queries": 28,
+  "route": [
+    3,
+    21,
+    15,
+    41,
+    30,
+    6,
+    37,
+    20,
+    55,
+    44,
+    11,
+    56,
+    12,
+    39,
+    24,
+    8,
+    31,
+    19,
+    52,
+    49
+  ],
+  "trace": [
+    {
+      "elapsed": 0.13285004100001174,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.6360916250000059,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 0.7614492080000019,
+      "kind": "prize",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.8223215830000044,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.325651625000006,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.8307745830000073,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.9940411660000024,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.1859294160000076,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.449509166000013,
+      "kind": "prize",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.9730672080000033,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.480675041000012,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.996292083,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.529110416000009,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.7380997500000035,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.838032333000001,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.9067426659999995,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 5.3419905000000085,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 5.853506500000009,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 6.361198999999999,
+      "kind": "prize",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 6.865901291,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 7.265588416,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 7.454201083000001,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 7.959070208,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 8.469095833000011,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 9.030351207999999,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 9.536830291000001,
+      "kind": "coverage",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 9.75771579100001,
+      "kind": "prize",
+      "cost": 20466.0,
+      "status": 0,
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 10.004096916000009,
+      "kind": "random",
+      "cost": 20466.0,
+      "status": 1,
+      "proven_optimal": false
+    }
+  ],
+  "instance": "g_brazil58_VT11_T12_W35_75",
+  "geometry": "g_brazil58",
+  "seed": 42,
+  "initial_phase": 70,
+  "model_fingerprint": "21efb72f6f77",
+  "role": "development"
+}

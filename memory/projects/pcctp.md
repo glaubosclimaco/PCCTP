@@ -38,6 +38,10 @@ para alcançar a contribuição científica e o artigo revisado, documentando
 suposições e decisões. Esse prazo não constitui aprovação para ações que
 exijam autorização explícita por regras superiores. Não é necessário esperar
 10 minutos para tarefas já autorizadas que podem continuar independentemente.
+Reforçou depois: não esperar aprovação e seguir o plano até o final. Continuar
+testando e aprimorando; se a linha atual não funcionar, investigar outras formas
+de ML. A linha atual já usa ML para selecionar vizinhanças. Preservar controles,
+resultados negativos e testes reservados; satisfação não é um limiar de p-valor.
 
 Todas as alterações desta pesquisa devem permanecer na branch
 `codex/pcctp-learning-submission`, criada em 18 de outubro de 2026 a partir de

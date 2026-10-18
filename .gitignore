@@ -23,3 +23,15 @@ Thumbs.db
 
 # Gurobi (se tiver instalacao local no repo)
 gurobi.lic
+
+# Pesquisa PCCTP
+__pycache__/
+*.pyc
+experiments/**/*.partial
+experiments/**/*.checkpoint
+experiments/**/*.checkpoint.tmp
+experiments/**/*.log
+submission/*.aux
+submission/*.log
+submission/*.out
+submission/*.toc

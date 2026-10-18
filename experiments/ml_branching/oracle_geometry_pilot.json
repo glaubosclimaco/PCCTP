@@ -1,0 +1,1096 @@
+{
+  "scope": "Root-only branching feasibility pilot, no learned policy, not an out-of-sample performance evaluation",
+  "selection": "Lexicographically first variant for each geometry with original N<=76, fixed independently of LP outcomes",
+  "relaxation": "degree/linking/coverage/prize/GSEC/coverage-forced, missing blossoms/prize-forced/rank",
+  "instances": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "visitable": 32,
+      "mandatory": 16,
+      "optional": 16,
+      "demands": 16,
+      "root_lp": 2612.7768817204296,
+      "all_visit_upper": 3631.0,
+      "root_seconds": 0.33763199999999993,
+      "root_rounds": 5,
+      "root_cuts": 47,
+      "fractional_x": 17,
+      "fractional_y": 4,
+      "probed_candidates": 8,
+      "lp_calls": 22,
+      "total_seconds": 1.7287615420000002,
+      "oracle": [
+        {
+          "variable": "y",
+          "index": 513,
+          "value": 0.8239247311827957,
+          "child_gains": [
+            31.585950137977306,
+            1.4110533143730208
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.25137350000000014,
+          "score": 4.569648328170752,
+          "vertex": 28,
+          "prize": 146.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "y",
+          "index": 497,
+          "value": 0.8239247311827957,
+          "child_gains": [
+            4.995573369390513,
+            2.7104920169440447
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.16893033300000004,
+          "score": 3.210049353883096,
+          "vertex": 1,
+          "prize": 226.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 45,
+          "value": 0.5,
+          "child_gains": [
+            1.6693548387102055,
+            8.51676907322144
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.13979754099999964,
+          "score": 2.5210317460323495,
+          "edge": [
+            1,
+            25
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 71,
+          "value": 0.5,
+          "child_gains": [
+            5.539444810182431,
+            1.6693548387102055
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.15415358300000026,
+          "score": 2.2232993197284485,
+          "edge": [
+            2,
+            22
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 78,
+          "value": 0.5,
+          "child_gains": [
+            1.6693548387102055,
+            5.539444810182431
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.14940104200000004,
+          "score": 2.2232993197284485,
+          "edge": [
+            2,
+            33
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 289,
+          "value": 0.5,
+          "child_gains": [
+            1.6693548387102055,
+            5.539444810182431
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.1660319170000002,
+          "score": 2.2232993197284485,
+          "edge": [
+            20,
+            24
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 509,
+          "value": 0.5,
+          "child_gains": [
+            5.539444810182431,
+            1.6693548387102055
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.14826733300000017,
+          "score": 2.2232993197284485,
+          "vertex": 22,
+          "prize": 73.0,
+          "residual_demands_covered": 2,
+          "coverage_scarcity": 1.0
+        },
+        {
+          "variable": "y",
+          "index": 516,
+          "value": 0.5,
+          "child_gains": [
+            1.6693548387102055,
+            5.539444810182431
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.20880416699999982,
+          "score": 2.2232993197284485,
+          "vertex": 33,
+          "prize": 94.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        }
+      ]
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "visitable": 34,
+      "mandatory": 18,
+      "optional": 16,
+      "demands": 18,
+      "root_lp": 5102.599147121536,
+      "all_visit_upper": 7916.0,
+      "root_seconds": 1.3000254999999998,
+      "root_rounds": 14,
+      "root_cuts": 184,
+      "fractional_x": 15,
+      "fractional_y": 1,
+      "probed_candidates": 8,
+      "lp_calls": 41,
+      "total_seconds": 5.173605834000001,
+      "oracle": [
+        {
+          "variable": "y",
+          "index": 567,
+          "value": 0.15138592750533053,
+          "child_gains": [
+            14.424108692417576,
+            73.05976760714657
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.5533386250000003,
+          "score": 21.730085453132233,
+          "vertex": 10,
+          "prize": 938.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 208,
+          "value": 0.15138592750533053,
+          "child_gains": [
+            14.270193111323351,
+            73.05976760714657
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 1.4210121669999998,
+          "score": 21.576169872038008,
+          "edge": [
+            10,
+            50
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 184,
+          "value": 0.15138592750533053,
+          "child_gains": [
+            10.944562899786433,
+            73.05976760714657
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.610612917000001,
+          "score": 18.25053966050109,
+          "edge": [
+            10,
+            12
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 244,
+          "value": 0.6972281449893389,
+          "child_gains": [
+            11.121783111022523,
+            10.944562899786433
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.3369827920000006,
+          "score": 12.056741210888685,
+          "edge": [
+            12,
+            25
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 441,
+          "value": 0.8486140724946694,
+          "child_gains": [
+            62.05543710021266,
+            2.270788912579519
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.21473470799999905,
+          "score": 8.476332622600786,
+          "edge": [
+            26,
+            27
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 426,
+          "value": 0.1513859275053306,
+          "child_gains": [
+            3.0277185501063286,
+            48.10021321961631
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.22157241699999997,
+          "score": 7.83773987206796,
+          "edge": [
+            25,
+            27
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 425,
+          "value": 0.15138592750533064,
+          "child_gains": [
+            2.2707889125786096,
+            49.05756929637482
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.20771691699999995,
+          "score": 7.176545842216092,
+          "edge": [
+            25,
+            26
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 423,
+          "value": 0.6972281449893389,
+          "child_gains": [
+            4.880597014925115,
+            13.784648187632229
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.2825041669999999,
+          "score": 6.259061833688338,
+          "edge": [
+            24,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "visitable": 23,
+      "mandatory": 12,
+      "optional": 11,
+      "demands": 35,
+      "root_lp": 20325.52232357177,
+      "all_visit_upper": 22701.0,
+      "root_seconds": 0.5300690830000008,
+      "root_rounds": 5,
+      "root_cuts": 73,
+      "fractional_x": 7,
+      "fractional_y": 3,
+      "probed_candidates": 8,
+      "lp_calls": 24,
+      "total_seconds": 3.604188334,
+      "oracle": [
+        {
+          "variable": "y",
+          "index": 270,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            110.26723215699167,
+            103.823740340933
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.4245755000000013,
+          "score": 114.85046355663216,
+          "vertex": 45,
+          "prize": 800.0,
+          "residual_demands_covered": 9,
+          "coverage_scarcity": 2.6166666666666667
+        },
+        {
+          "variable": "y",
+          "index": 273,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            301.05743102945416,
+            75.67767642822946
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.5222704990000011,
+          "score": 105.78341953117487,
+          "vertex": 55,
+          "prize": 779.0,
+          "residual_demands_covered": 7,
+          "coverage_scarcity": 1.9999999999999998
+        },
+        {
+          "variable": "y",
+          "index": 261,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            111.0121919443809,
+            75.67767642822946
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.18704091599999906,
+          "score": 86.77889562266755,
+          "vertex": 20,
+          "prize": 504.0,
+          "residual_demands_covered": 19,
+          "coverage_scarcity": 5.083333333333334
+        },
+        {
+          "variable": "x",
+          "index": 159,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            111.01219194437726,
+            75.67767642822946
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.44069345899999846,
+          "score": 86.77889562266719,
+          "edge": [
+            20,
+            55
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 210,
+          "value": 0.4128660585693711,
+          "child_gains": [
+            0.0,
+            113.33581449029225
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.3707139579999996,
+          "score": 11.333581449029225,
+          "edge": [
+            37,
+            44
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 150,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            0.0,
+            75.67767642822946
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.21117308400000034,
+          "score": 7.567767642822947,
+          "edge": [
+            20,
+            30
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 190,
+          "value": 0.4128660585693711,
+          "child_gains": [
+            0.0,
+            0.0
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.49442758299999845,
+          "score": 0.0,
+          "edge": [
+            30,
+            41
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 209,
+          "value": 0.5871339414306289,
+          "child_gains": [
+            0.0,
+            0.0
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.4158430840000005,
+          "score": 0.0,
+          "edge": [
+            37,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "visitable": 34,
+      "mandatory": 17,
+      "optional": 17,
+      "demands": 17,
+      "root_lp": 273.0,
+      "all_visit_upper": 435.0,
+      "root_seconds": 3.804126,
+      "root_rounds": 10,
+      "root_cuts": 131,
+      "fractional_x": 0,
+      "fractional_y": 0,
+      "probed_candidates": 0,
+      "lp_calls": 10,
+      "total_seconds": 3.8106051670000003,
+      "oracle": []
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "visitable": 30,
+      "mandatory": 16,
+      "optional": 14,
+      "demands": 46,
+      "root_lp": 328.1538461538462,
+      "all_visit_upper": 464.0,
+      "root_seconds": 0.7258390000000006,
+      "root_rounds": 3,
+      "root_cuts": 27,
+      "fractional_x": 7,
+      "fractional_y": 1,
+      "probed_candidates": 8,
+      "lp_calls": 25,
+      "total_seconds": 5.412455790999999,
+      "oracle": [
+        {
+          "variable": "x",
+          "index": 93,
+          "value": 0.23076923076923084,
+          "child_gains": [
+            1.0279720279719982,
+            2.9765886287625563
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.8189458330000008,
+          "score": 1.3256308908482537,
+          "edge": [
+            13,
+            52
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 448,
+          "value": 0.23076923076923078,
+          "child_gains": [
+            1.0279720279719982,
+            2.9765886287625563
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.7684630830000003,
+          "score": 1.3256308908482537,
+          "vertex": 52,
+          "prize": 13.0,
+          "residual_demands_covered": 2,
+          "coverage_scarcity": 1.0
+        },
+        {
+          "variable": "x",
+          "index": 94,
+          "value": 0.7692307692307692,
+          "child_gains": [
+            1.5384615384614335,
+            1.0279720279719982
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.49456712499999966,
+          "score": 1.1818181818181415,
+          "edge": [
+            13,
+            53
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 311,
+          "value": 0.23076923076923084,
+          "child_gains": [
+            0.23076923076916955,
+            2.9765886287624994
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.41432554200000027,
+          "score": 0.5284280936454195,
+          "edge": [
+            52,
+            66
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 266,
+          "value": 0.23076923076923084,
+          "child_gains": [
+            0.23076923076916955,
+            2.307692307692264
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.24972958300000414,
+          "score": 0.46153846153839595,
+          "edge": [
+            44,
+            53
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 269,
+          "value": 0.7692307692307692,
+          "child_gains": [
+            2.307692307692264,
+            0.23076923076916955
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.4067341669999962,
+          "score": 0.46153846153839595,
+          "edge": [
+            44,
+            56
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 317,
+          "value": 0.23076923076923084,
+          "child_gains": [
+            0.23076923076916955,
+            1.807692307692264
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 1.0882422920000039,
+          "score": 0.41153846153839596,
+          "edge": [
+            53,
+            56
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 326,
+          "value": 0.7692307692307692,
+          "child_gains": [
+            1.1538461538460751,
+            0.23076923076916955
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.4372942920000007,
+          "score": 0.3461538461537771,
+          "edge": [
+            53,
+            66
+          ]
+        }
+      ]
+    },
+    {
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "geometry": "g_gr48",
+      "visitable": 32,
+      "mandatory": 16,
+      "optional": 16,
+      "demands": 16,
+      "root_lp": 3571.0,
+      "all_visit_upper": 5333.0,
+      "root_seconds": 0.5300434999999979,
+      "root_rounds": 8,
+      "root_cuts": 49,
+      "fractional_x": 0,
+      "fractional_y": 0,
+      "probed_candidates": 0,
+      "lp_calls": 8,
+      "total_seconds": 0.5348143749999998,
+      "oracle": []
+    },
+    {
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "geometry": "g_hk48",
+      "visitable": 32,
+      "mandatory": 16,
+      "optional": 16,
+      "demands": 16,
+      "root_lp": 7544.5254237288145,
+      "all_visit_upper": 12608.0,
+      "root_seconds": 0.5777251250000006,
+      "root_rounds": 7,
+      "root_cuts": 66,
+      "fractional_x": 11,
+      "fractional_y": 3,
+      "probed_candidates": 8,
+      "lp_calls": 30,
+      "total_seconds": 2.306126583000001,
+      "oracle": [
+        {
+          "variable": "x",
+          "index": 274,
+          "value": 0.5,
+          "child_gains": [
+            39.052454375022535,
+            89.99999999999818
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.2374457079999992,
+          "score": 48.05245437502235,
+          "edge": [
+            17,
+            30
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 243,
+          "value": 0.5,
+          "child_gains": [
+            39.052454375022535,
+            63.251412429377524
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.23658004199999993,
+          "score": 45.37759561796029,
+          "edge": [
+            16,
+            17
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 253,
+          "value": 0.5,
+          "child_gains": [
+            32.37900188323874,
+            39.052454375023444
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.14351295899999883,
+          "score": 36.28424732074109,
+          "edge": [
+            16,
+            30
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 342,
+          "value": 0.4999999999999998,
+          "child_gains": [
+            27.04883369692834,
+            90.47917608719308
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.3628682079999983,
+          "score": 36.09675130564765,
+          "edge": [
+            20,
+            47
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 517,
+          "value": 0.7504708097928436,
+          "child_gains": [
+            76.2828872631435,
+            10.829865692342537
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.13089716600000045,
+          "score": 18.458154418656886,
+          "vertex": 32,
+          "prize": 1087.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 42,
+          "value": 0.7495291902071565,
+          "child_gains": [
+            44.47917608719308,
+            8.570350919072553
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.1405357500000015,
+          "score": 13.01826852779186,
+          "edge": [
+            1,
+            20
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 514,
+          "value": 0.24952919020715636,
+          "child_gains": [
+            3.4791760871939914,
+            39.052454375023444
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.26589329199999767,
+          "score": 7.384421524696336,
+          "vertex": 28,
+          "prize": 771.0,
+          "residual_demands_covered": 3,
+          "coverage_scarcity": 1.3333333333333333
+        },
+        {
+          "variable": "y",
+          "index": 527,
+          "value": 0.7504708097928436,
+          "child_gains": [
+            39.052454375022535,
+            3.479176087193082
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.20602100000000334,
+          "score": 7.384421524695336,
+          "vertex": 47,
+          "prize": 746.0,
+          "residual_demands_covered": 1,
+          "coverage_scarcity": 0.5
+        }
+      ]
+    },
+    {
+      "instance": "g_pr76_VT14_T16_W46_25",
+      "geometry": "g_pr76",
+      "visitable": 30,
+      "mandatory": 16,
+      "optional": 14,
+      "demands": 46,
+      "root_lp": 65910.3965066364,
+      "all_visit_upper": 74653.0,
+      "root_seconds": 0.5673378749999998,
+      "root_rounds": 18,
+      "root_cuts": 149,
+      "fractional_x": 7,
+      "fractional_y": 5,
+      "probed_candidates": 8,
+      "lp_calls": 40,
+      "total_seconds": 2.0118945000000004,
+      "oracle": [
+        {
+          "variable": "x",
+          "index": 245,
+          "value": 0.1732372822815414,
+          "child_gains": [
+            18.509247265406884,
+            92.17556013999274
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.22564587500000144,
+          "score": 27.72680327940616,
+          "edge": [
+            23,
+            44
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 445,
+          "value": 0.1732372822815414,
+          "child_gains": [
+            18.509247265406884,
+            84.74081619823119
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.15304983400000083,
+          "score": 26.98332888523,
+          "vertex": 23,
+          "prize": 6436.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "y",
+          "index": 446,
+          "value": 0.1732372822815414,
+          "child_gains": [
+            18.509247265406884,
+            81.60753313984605
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.09636191699999941,
+          "score": 26.67000057939149,
+          "vertex": 44,
+          "prize": 6350.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 291,
+          "value": 0.8267627177184586,
+          "child_gains": [
+            57.27942440847983,
+            18.509247265406884
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.14114820799999706,
+          "score": 24.237189706254867,
+          "edge": [
+            45,
+            68
+          ]
+        },
+        {
+          "variable": "x",
+          "index": 307,
+          "value": 0.17323728228154145,
+          "child_gains": [
+            12.855849702900741,
+            111.90586815786082
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.22404333400000453,
+          "score": 24.046436518686825,
+          "edge": [
+            46,
+            68
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 448,
+          "value": 0.17323728228154142,
+          "child_gains": [
+            12.855849702900741,
+            111.90586815786082
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.15483016700000007,
+          "score": 24.046436518686825,
+          "vertex": 46,
+          "prize": 7111.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        },
+        {
+          "variable": "x",
+          "index": 205,
+          "value": 0.1732372822815414,
+          "child_gains": [
+            3.236276964089484,
+            159.40551546565257
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.27452012499999867,
+          "score": 19.176828510654744,
+          "edge": [
+            21,
+            23
+          ]
+        },
+        {
+          "variable": "y",
+          "index": 443,
+          "value": 0.17323728228154137,
+          "child_gains": [
+            3.236276964089484,
+            159.40551546563802
+          ],
+          "child_status": [
+            0,
+            0
+          ],
+          "probe_seconds": 0.16939749999999876,
+          "score": 19.176828510653287,
+          "vertex": 21,
+          "prize": 7291.0,
+          "residual_demands_covered": 0,
+          "coverage_scarcity": 0
+        }
+      ]
+    },
+    {
+      "instance": "g_st70_VT14_T14_W42_25",
+      "geometry": "g_st70",
+      "visitable": 28,
+      "mandatory": 14,
+      "optional": 14,
+      "demands": 42,
+      "root_lp": 419.0,
+      "all_visit_upper": 507.0,
+      "root_seconds": 0.5727436660000009,
+      "root_rounds": 7,
+      "root_cuts": 105,
+      "fractional_x": 0,
+      "fractional_y": 0,
+      "probed_candidates": 0,
+      "lp_calls": 7,
+      "total_seconds": 0.5772793329999999,
+      "oracle": []
+    }
+  ]
+}
