@@ -45,7 +45,7 @@ def separate(repair, values):
     return candidates
 
 
-def probe(path):
+def probe(path,with_fixing=False):
     began=time.perf_counter();profile=json.loads(path.read_text())
     d=read_instance(ROOT/'data'/profile['instance'])
     mapping={int(v):i for i,v in enumerate(d['visits'])};route=[mapping[v] for v in profile['route']]
@@ -81,9 +81,16 @@ def probe(path):
     if len(bounds)>=2 and incumbent-bounds[0]>1e-6:
         reduction=(bounds[-1]-bounds[0])/(incumbent-bounds[0])
     passes=bool(final_optimal and elapsed<=2. and reduction is not None and reduction>=.1)
-    return dict(instance=profile['instance'],geometry=profile['geometry'],mdm_cost=incumbent,
+    result=dict(instance=profile['instance'],geometry=profile['geometry'],mdm_cost=incumbent,
                 bounds=bounds,cut_count=len(cuts),cuts=cuts,seconds=elapsed,
                 final_lp_optimal=final_optimal,relative_gap_reduction=reduction,passes=passes)
+    if with_fixing:
+        if final_optimal and elapsed<=2.:
+            from experiments.ml_lns.reduced_cost_fixing import from_highs
+            result['fixing_certificate']=from_highs(h,repair,incumbent,initial)
+        result['seconds']=time.perf_counter()-began
+        result['fixing_passes']=bool(result.get('fixing_certificate',{}).get('fixed_fraction',0)>=.3 and result['seconds']<=2.)
+    return result
 
 
 if __name__=='__main__':

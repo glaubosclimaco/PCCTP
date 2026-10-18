@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "all_binary_assignments_enumerated": 8,
+  "certificate": {
+    "scale": 1000000,
+    "bound_numerator": 1000000,
+    "incumbent": 1,
+    "multipliers": [
+      [
+        0,
+        1000000
+      ]
+    ],
+    "initial_free_binary": 3,
+    "fixings": [
+      {
+        "column": 1,
+        "value": 0,
+        "reduced_numerator": 3000000,
+        "margin_numerator": 3000000
+      },
+      {
+        "column": 2,
+        "value": 0,
+        "reduced_numerator": 8000000,
+        "margin_numerator": 8000000
+      }
+    ],
+    "fixed_fraction": 0.6666666666666666
+  },
+  "rounded_dual_bound": 1000000
+}
