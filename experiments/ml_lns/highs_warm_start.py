@@ -48,9 +48,23 @@ def decode(repair, vector):
     return tour,cost
 
 
-def solve(d, route, warm, seconds=10., began=None):
+def solve(d, route, warm, seconds=10., began=None, root_cuts=None):
     began=time.perf_counter() if began is None else began
     repair=Repair(d);initial=start_vector(repair,route)
+    if root_cuts:
+        from scipy.optimize import LinearConstraint
+        from scipy.sparse import csr_matrix,vstack
+        additions=[]
+        for cut in root_cuts:
+            side=set(cut['side']);v=cut['representative']
+            assert min(d['mandatory']) not in side and v in side
+            row={i:1. for i,(a,b) in enumerate(repair.edges) if (a in side)!=(b in side)}
+            row[repair.m+v]=-2.
+            assert sum(initial[i]*a for i,a in row.items())>=-1e-8
+            additions.append(csr_matrix(([row[i] for i in row],([0]*len(row),list(row))),shape=(1,repair.width)))
+        repair.constraints=LinearConstraint(vstack([repair.constraints.A]+additions),
+                    np.r_[repair.constraints.lb,np.zeros(len(additions))],
+                    np.r_[repair.constraints.ub,np.full(len(additions),np.inf)])
     matrix=repair.constraints.A.tocsr()
     lp=highspy.HighsLp();lp.num_col_=repair.width;lp.num_row_=matrix.shape[0]
     lp.col_cost_=repair.obj;lp.col_lower_=repair.lb;lp.col_upper_=repair.ub
