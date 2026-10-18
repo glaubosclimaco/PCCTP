@@ -19,3 +19,18 @@ start melhora MDM em pelo menos2/11 geometrias. Se falhar, não aumentar prazo
 ou trocar instâncias neste lote. Se passar, comparar por tempo TOTAL contra
 MDM com tempo extra, solver sem start e híbrido em sementes pareadas. Não
 atribuir novidade ao MIP start. Validação e teste reservados fechados.
+
+Documentação primária do start: https://github.com/ERGO-Code/HiGHS/blob/master/docs/src/guide/further.md
+Consulta da API instalada confirmou setSolution e callbacks de incumbentes.
+Isso não prova suporte de cortes dinâmicos: embora o enum cbMipDefineLazyConstraints
+exista, a discussão oficial3079 (20/06/2026) informa ausência de lazy/user-cut
+callbacks utilizáveis naquele momento. Não implementar branch-and-cut usando
+o nome do enum como evidência de funcionalidade.
+https://github.com/ERGO-Code/HiGHS/discussions/3079
+
+## Resultado auditado
+
+0/11 melhorias warm e0/11 cold.3provas warm e2cold. Gate de ganho primal
+falhou; não ampliar prazo para este mecanismo. Auditoria de rotas/bounds
+PASS em highs_warm_start_audit.json. Infraestrutura validada não equivale
+a contribuição de desempenho. Próxima hipótese deve ser distinta.
