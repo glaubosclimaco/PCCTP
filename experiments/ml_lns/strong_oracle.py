@@ -23,13 +23,25 @@ def main():
     parser.add_argument('--k',type=int,default=8)
     parser.add_argument('--candidates',type=int,default=24)
     parser.add_argument('--seconds',type=float,default=.5)
-    parser.add_argument('--output-dir',type=Path,default=Path(__file__).with_name('strong_oracle'))
+    parser.add_argument('--state-dir',type=Path,default=BASE)
+    parser.add_argument('--output-dir',type=Path)
     args=parser.parse_args()
-    plan=json.loads((BASE/'protocol.json').read_text())
+    if args.output_dir is None:
+        args.output_dir=Path(__file__).with_name('strong_oracle' if args.state_dir.resolve()==BASE.resolve()
+                                               else 'strong_oracle_'+args.state_dir.name)
+    plan=json.loads((args.state_dir/'protocol.json').read_text())
     args.output_dir.mkdir(exist_ok=True)
     failures=[]
-    for path in sorted(BASE.glob('g_*.json')):
-        baseline=json.loads(path.read_text()); geometry=baseline['geometry']
+    for path in sorted(args.state_dir.glob('g_*.json')):
+        try:
+            baseline=json.loads(path.read_text())
+        except json.JSONDecodeError:
+            print(json.dumps(dict(skipped_incomplete_export=path.name)),flush=True)
+            continue
+        if not baseline.get('independently_validated') or 'geometry' not in baseline:
+            print(json.dumps(dict(skipped_unvalidated_export=path.name)),flush=True)
+            continue
+        geometry=baseline['geometry']
         if plan['roles'][geometry] not in args.roles: continue
         if baseline['seed'] not in args.seeds: continue
         d=read_instance(ROOT/'data'/baseline['instance'])

@@ -49,7 +49,8 @@ def generate(job):
     dest=OUT/f'{name}.seed{seed}.json'
     if not dest.exists():
         original_run(ROOT/'data'/name,seed,dest,support=plan['support_absolute'],
-                     stability=plan['stability_percent'],timeout=plan['wall_timeout_seconds'])
+                     stability=plan['stability_percent'],timeout=plan['wall_timeout_seconds'],
+                     initialize_decoder_index=plan.get('initialize_decoder_index',False))
     row=json.loads(dest.read_text()); d=read_instance(ROOT/'data'/name)
     mapping={int(original):i for i,original in enumerate(d['visits'])}
     measured=validate(d,[mapping[v] for v in row['route']])
@@ -59,12 +60,15 @@ def generate(job):
         if abs(validate(d,[mapping[v] for v in state['route']])-state['cost'])>1e-6:
             raise ValueError('Invalid snapshot')
     row.update(instance=name,geometry=geometry,role=plan['roles'][geometry],independently_validated=True)
-    dest.write_text(json.dumps(row,indent=2)+'\n')
+    temporary=dest.with_suffix('.validated.tmp')
+    temporary.write_text(json.dumps(row,indent=2)+'\n')
+    temporary.replace(dest)
     return dict(instance=name,geometry=geometry,seed=seed,cost=row['cost'],
                 iterations=row['iterations'],mining_calls=row['mining_calls'],seconds=row['seconds'])
 
 
 def main():
+    global OUT
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--roles',nargs='+',default=['development','train'])
     parser.add_argument('--seeds',nargs='+',type=int,default=[42])
@@ -72,7 +76,18 @@ def main():
     parser.add_argument('--limit',type=int)
     parser.add_argument('--other-variants',action='store_true',
                         help='All remaining variants in selected geometry roles; preserves frozen geometry split')
-    args=parser.parse_args(); plan=freeze_split()
+    parser.add_argument('--initialize-decoder-index',action='store_true',
+                        help='Use separately labelled decoder bug fix and isolated output bank')
+    args=parser.parse_args()
+    if args.initialize_decoder_index:
+        original_plan=json.loads((OUT/'protocol.json').read_text())
+        OUT=Path(__file__).with_name('decoder_initialized_states'); OUT.mkdir(exist_ok=True)
+        protocol=OUT/'protocol.json'
+        if not protocol.exists():
+            original_plan.update(baseline='Supplied legacy MDM with explicit decoder component-index initialization',
+                                 initialize_decoder_index=True)
+            protocol.write_text(json.dumps(original_plan,indent=2)+'\n')
+    plan=freeze_split()
     geoms=[g for g in plan['instances'] if plan['roles'][g] in args.roles]
     if args.limit: geoms=geoms[:args.limit]
     if args.other_variants:
@@ -92,6 +107,8 @@ def main():
                 failure=dict(job=futures[future][:3],error=str(error)); failures.append(failure)
                 print(json.dumps(failure),flush=True)
     manifest='other_variant_generation.json' if args.other_variants else 'last_generation.json'
+    if args.seeds!=[42] or sorted(args.roles)!=['development','train']:
+        manifest=('other_variants' if args.other_variants else 'first_variants')+'.'+('-'.join(sorted(args.roles)))+'.seeds'+('-'.join(map(str,args.seeds)))+'.json'
     (OUT/manifest).write_text(json.dumps(dict(jobs=len(jobs),failures=failures,
                                                          elapsed_seconds=time.perf_counter()-began),indent=2)+'\n')
     if failures: raise SystemExit(1)

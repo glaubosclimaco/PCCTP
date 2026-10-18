@@ -16,6 +16,13 @@ baseline, com compilação e instrumentação isoladas em `experiments/original_
 A reconstrução anterior em `experiments/legacy_grasp/` é diagnóstica, não deve
 ser apresentada como o método publicado nem misturada com estados do original.
 
+Na retomada às 5h11 foi localizado um índice não inicializado (`cc_atual`) no
+decodificador de padrões de uma aresta. Correção mínima isolada em
+`build_decoder_initialized/`, método `original_MDM_legacy_decoder_index_initialized`.
+O teste `verify_decoder.py` passou e três casos que falhavam concluíram com rotas
+validadas. Preservar o legado intacto; não misturar resultados originais e
+corrigidos. Estado e comandos atualizados em `research_notes/CONTINUATION.md`.
+
 ## Entregável final e critérios de encerramento
 
 Em 18 de outubro de 2026, o usuário definiu como objetivo um artigo completo

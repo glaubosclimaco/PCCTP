@@ -1,5 +1,6 @@
 """Compile the supplied original MDM + FPMax in an isolated instrumented copy."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import shutil
@@ -7,7 +8,10 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'mdm-grasp-genius-vnd'
-BUILD=Path(__file__).with_name('build')
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--initialize-decoder-index',action='store_true')
+args=parser.parse_args()
+BUILD=Path(__file__).with_name('build_decoder_initialized' if args.initialize_decoder_index else 'build')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -15,6 +19,11 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
     data=(SOURCE/name).read_bytes()
     manifest['sha256'][name]=hashlib.sha256(data).hexdigest()
     text=data.decode().replace('\r\n','\n')
+    if name=='mineracao.cpp' and args.initialize_decoder_index:
+        anchor='int cc_atual;'
+        assert text.count(anchor)==1
+        text=text.replace(anchor,'int cc_atual = 0; // initialized for a singleton pattern component')
+        manifest['changes'].append('EXPLICIT BUG FIX: initialize decoder component index before singleton-component access; separate from unchanged legacy')
     if name=='principal.cpp':
         text='#include "research_hook.hpp"\n'+text
         text=text.replace('if (argc != 5)', 'if (argc != 6)').replace('if (argc == 5)', 'if (argc == 6)')
@@ -49,6 +58,7 @@ for source in (SOURCE/'Debug/FPMax').iterdir():
         if text!=data: manifest['changes'].append('FPMax/'+source.name+': malloc.h -> cstdlib for macOS')
 compiler=shutil.which('g++-15') or shutil.which('g++')
 flags=[compiler,'-std=gnu++11','-O2','-fpermissive','-Wno-narrowing']
+if args.initialize_decoder_index: flags.append('-DPCCTP_DECODER_INITIALIZED')
 log=[]
 def run(command):
     process=subprocess.run(command,capture_output=True,text=True)

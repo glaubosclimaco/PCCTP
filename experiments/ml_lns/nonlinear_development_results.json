@@ -1,0 +1,2778 @@
+{
+  "scope": "Exploratory development-only LOGO; no confirmatory or end-to-end claim",
+  "architecture": {
+    "width": 64,
+    "alpha": 1.0,
+    "seed": 2026,
+    "bandwidth": "sqrt(input dimension)",
+    "scaling": "train only, standardized then clipped to [-10,10]",
+    "pair_weighting": "equal per informative geometry"
+  },
+  "geometries": 29,
+  "states": 151,
+  "source_hashes": {
+    "g_a280_VT56_T168_W56_50.seed42.phase1.k8.json": "a8af90d3f84f2f9a0a08a8392b497db25c317f949581bdb40426874efb28b885",
+    "g_a280_VT56_T56_W168_75.seed42.phase1.k8.json": "ed30d0053e7131c2362add8ca81afe124d62b087e1d3d645b0ca32453ff3da81",
+    "g_a280_VT56_T56_W168_75.seed42.phase10.k8.json": "0a6258f9279426f95ca6f45221c7215c416dd380ef75e9ab3b0b12ec75ead1ab",
+    "g_a280_VT94_T93_W93_25.seed42.phase1.k8.json": "a9fb4611b5dfd099c8f96eccd08dee47f99cbf4f0e00fc39ceea092a8e44d7d8",
+    "g_att48_VT16_T16_W16_75.seed42.phase1.k8.json": "a86f6051fae3f6b42d9155cee97fd89c5d21f46dcde5004239be4bd9b9fe52ac",
+    "g_att48_VT16_T16_W16_75.seed42.phase10.k8.json": "035def7cea3011dd870142f8fd4b328fc393a5bdf05b8e84e33ad03d9bf1ec02",
+    "g_att48_VT9_T10_W29_25.seed42.phase1.k8.json": "c54b9d654514a9a79390768db97a283dc8a96e4efd2035dd4c84d5fda8eb6864",
+    "g_att48_VT9_T29_W10_50.seed42.phase1.k8.json": "45c9edcdb5c3bdb0961aed0f41d14ace6f8f496134cfa795abdfd49482bdcaa6",
+    "g_att48_VT9_T29_W10_50.seed42.phase10.k8.json": "49c03f1063c9bf5dc104666a34bb4436087b81dd7a16c098f74c994858439d18",
+    "g_berlin52_VT16_T18_W18_50.seed42.phase1.k8.json": "1111edb81e4921d09c554192c7aca40a7bc3575b60073431930dd8bfee91255a",
+    "g_berlin52_VT16_T18_W18_50.seed42.phase10.k8.json": "b8f6ae678767d9bc65f04411922ab412a8dddacceaf77daf7b52786df43c2fa4",
+    "g_berlin52_VT16_T18_W18_50.seed42.phase70.k8.json": "ceb62a1fbc3a2fe57067ea9f35e6dc9e8fd3b70649025f1634cdd2dea1965f32",
+    "g_berlin52_VT9_T11_W32_25.seed42.phase1.k8.json": "4483e8ceed2f00f327c03cbc40c420ef3b199e8cc927c1e978094ac807748fd6",
+    "g_berlin52_VT9_T11_W32_25.seed42.phase10.k8.json": "f4056ec8fc358cd1cb1ad1edff18785ad03db3e55260737e0a343bbc7f0785c2",
+    "g_berlin52_VT9_T32_W11_75.seed42.phase1.k8.json": "629443d7fc8b0b696f7f5c5b36824ec41050745fe73f22199098d027de28cf10",
+    "g_berlin52_VT9_T32_W11_75.seed42.phase10.k8.json": "1d090518d52cc7d760c6463f712e0af703848125e99be99127b92081fde34db2",
+    "g_berlin52_VT9_T32_W11_75.seed42.phase70.k8.json": "4b71ad869e9f33db0eb2c674ff92a8df69735d205045a41677be9fce3cb34d46",
+    "g_bier127_VT24_T26_W77_50.seed42.phase1.k8.json": "fb2868b5a13dfdb602b7b50c23f1c48c9718d64353dd642ef2324443dbb81bb2",
+    "g_bier127_VT24_T26_W77_50.seed42.phase10.k8.json": "45274c6dc8d82161edcaee812a486b9d011f54e0b1331863f6a6689f80cc1544",
+    "g_bier127_VT24_T77_W26_25.seed42.phase1.k8.json": "e81d57c6760a0c6b7762af6a43913b2177f71cb86c5f07e86eb6ed1acf6aed40",
+    "g_bier127_VT24_T77_W26_25.seed42.phase10.k8.json": "c9f4efef7faa4e973ae2115c6313e8c1da59a351aff1cef2eb93e5279c7d9f87",
+    "g_bier127_VT24_T77_W26_25.seed42.phase70.k8.json": "6167d0debdb90d7ec5ee40fb17fb6a36d719e2a772556847725feac1e90b06ed",
+    "g_bier127_VT43_T42_W42_75.seed42.phase1.k8.json": "beffe9a71f136e689ea5eff9f14ea5e971e7282654652b64b53ab65b68fa874c",
+    "g_bier127_VT43_T42_W42_75.seed42.phase10.k8.json": "9c14b1092916162075062ae2927823ace194f6339f64d2a47d74ff8dd0c41e90",
+    "g_brazil58_VT11_T12_W35_75.seed42.phase1.k8.json": "69aec86707299f353964bbf6721969b252550a796e0bfe1fe7a566d6ff774ac1",
+    "g_brazil58_VT11_T12_W35_75.seed42.phase10.k8.json": "30e79ceb30150f71bcfd435e35a4f3f0a63c37dd0e838527725da474066b8bb9",
+    "g_brazil58_VT11_T35_W12_50.seed42.phase1.k8.json": "93634a035b73691a65b7584b007a1d381a1d068c21195c935f3bf2805ec2abf9",
+    "g_brazil58_VT11_T35_W12_50.seed42.phase10.k8.json": "2393813a75c4c1091528c4423c279c32feb79e5a4b53983f1407a3511ff13d81",
+    "g_brazil58_VT18_T20_W20_25.seed42.phase1.k8.json": "bed4e8a8b38031ad6206c3ea7c24a4a673ff9505470a09a9fe897895532b2158",
+    "g_eil51_VT17_T17_W17_25.seed42.phase1.k8.json": "9e4f7d396523bbf1f4ffd4766bf56a6e74a8550f62cf9712475973c5f3066c81",
+    "g_eil51_VT17_T17_W17_25.seed42.phase10.k8.json": "316fc1ea6ed7d13090837ee51a85ef51f675eaa62a7b1ae254316d513c158fff",
+    "g_eil51_VT9_T31_W11_75.seed42.phase1.k8.json": "0cb76da0fd37065a131ea2728496d4176940dc7a2c59353a52b6f7bc26455215",
+    "g_eil76_VT14_T16_W46_75.seed42.phase1.k8.json": "15ae8dd6297907c4014a1f5018c12015993658c243ed0e0e636f29cb168de269",
+    "g_eil76_VT14_T16_W46_75.seed42.phase10.k8.json": "667becad800b29c05164881a3cd9a88fa86617735149f3bf2db05ddcbb9a0590",
+    "g_eil76_VT14_T46_W16_25.seed42.phase1.k8.json": "36d4b311e59c8c0f7ab8c3b231f62feaac8318ca11e3996051ad171ddfc228eb",
+    "g_eil76_VT14_T46_W16_25.seed42.phase10.k8.json": "97a878199cf1c0059588ce4d8e8c238815c512c41648376f856a181b6c140e32",
+    "g_eil76_VT24_T26_W26_50.seed42.phase1.k8.json": "2bf4dd57b6291fb61243b381cec1b6e5d6b62be5d1fbf04a7e7c3f893d88087b",
+    "g_eil76_VT24_T26_W26_50.seed42.phase10.k8.json": "ecd851fc50a473553ea9781a39e99680117994980fb1c5ac4f02beedd70f7af4",
+    "g_gil262_VT51_T158_W53_75.seed42.phase1.k8.json": "6c83f8f00b22bfc75ccaaef8f031e8a286d70410ab0ef2718c6b0ed375ebd42c",
+    "g_gil262_VT51_T53_W158_25.seed42.phase1.k8.json": "bf25bcf96aa71e8969266cc38d64ecfad3af19e0db8eb4a07856d6dc1f51aaa6",
+    "g_gil262_VT51_T53_W158_25.seed42.phase10.k8.json": "0049176dcb533c21af5229a585740809055e44fb3a7445867f4ca4f09d5a45ed",
+    "g_gil262_VT88_T87_W87_50.seed42.phase1.k8.json": "f08557b1d135ec781b563e6921b1f581354d6762f0d8e2878b0a315b8f947aab",
+    "g_gr137_VT26_T28_W83_25.seed42.phase1.k8.json": "6925bbb4ada826a32e445e452c65325667b4c9ac48c84556259fa19c0ca446f6",
+    "g_gr137_VT26_T28_W83_25.seed42.phase10.k8.json": "c921becbc5e85a3341683cfa34d8d0666609221f5bba73f74905de8a3eee9a86",
+    "g_gr137_VT26_T83_W28_75.seed42.phase1.k8.json": "06190e44cf2553095503b34d5e74f592896324cd44bf7a5d2a4301140994533c",
+    "g_gr137_VT26_T83_W28_75.seed42.phase10.k8.json": "5c980e005375d87cf3ea506c30285a1ffc402ded926e3dd1a8664a5fda10ce12",
+    "g_gr137_VT45_T46_W46_50.seed42.phase1.k8.json": "d95716c51d79df2bdddf53db1c4fccc6878684fec3adbfa40bb95744a41b1d04",
+    "g_gr137_VT45_T46_W46_50.seed42.phase10.k8.json": "c9576d32738cd3683a9f5d1f85ccb303e6939838ac1c69cd9c915e2510b6bf2e",
+    "g_gr229_VT45_T138_W46_50.seed42.phase1.k8.json": "f4f919fe70469c52d27f816cd63c7265ef915ddccbaba81d8c0bc4566144a12d",
+    "g_gr229_VT45_T46_W138_25.seed42.phase1.k8.json": "36fa5097ce705502fa3e59bd0e0b26b3cf5f27cbb3d533645530324b97295b80",
+    "g_gr229_VT45_T46_W138_25.seed42.phase10.k8.json": "9ae72af161ef746271966ef8db831db0c93943e17dac2fb12ac21b0558e71007",
+    "g_gr229_VT77_T76_W76_75.seed42.phase1.k8.json": "2fbdeaca3e3f50cf7b5594be934080986514ee2153f61d9ec390decb5398214a",
+    "g_gr48_VT16_T16_W16_25.seed42.phase1.k8.json": "e05cf1ddf7ddb3dc20fbe1a9dfd79ac107171d3cb259c639ea3810dcc8501ecc",
+    "g_gr48_VT9_T10_W29_50.seed42.phase1.k8.json": "5f0516abae6d8c164d3e14f6650f3ca700115b8695853f9bea0ebd8c2ca0ca86",
+    "g_gr48_VT9_T10_W29_50.seed42.phase10.k8.json": "5dedffbe3afc76e7957c105931b5f1d43a3ab343472b4b03e7d86b6b36194259",
+    "g_gr48_VT9_T29_W10_75.seed42.phase1.k8.json": "266ccb7e7c5b26140f30e1138d2dcd871b09349a1535fe0ebe2968ec32fd2c2b",
+    "g_gr48_VT9_T29_W10_75.seed42.phase10.k8.json": "0c5e7d227bc9b4ed957e0fd60f73fc43152509ddf58f17ffb78eac9b4bd9c536",
+    "g_gr96_VT18_T20_W58_75.seed42.phase1.k8.json": "3c96f62eafe0b0030a7795d694d1aba33c82b14fd2f33fc6d2dc5fa41ff72c2b",
+    "g_gr96_VT18_T20_W58_75.seed42.phase10.k8.json": "6911637e564484cffab6522537e0b4c20dc9d8c75e450a42a0ae0a5ec62c61ff",
+    "g_gr96_VT18_T58_W20_25.seed42.phase1.k8.json": "b785d45e6a914ae22309206cc4d09e930348fd9b28cab4f00e2154bf57a07dc5",
+    "g_gr96_VT18_T58_W20_25.seed42.phase10.k8.json": "ec982d80fd4988e5503c6cc6412e18aeed3c0bddf902ad697c9b3c78784e6343",
+    "g_gr96_VT32_T32_W32_50.seed42.phase1.k8.json": "2488f23e04a357fcdce4a568f5f9ce68cba4cd99acba480c8728c7e678f3892f",
+    "g_gr96_VT32_T32_W32_50.seed42.phase10.k8.json": "ed4b7bd8969a24bf22f2b3cf5c6b34486f52ec940d0eeff11a67edf0287f7902",
+    "g_hk48_VT16_T16_W16_50.seed42.phase1.k8.json": "8d89b244dec1f808b16708899fb0a02c0eed949cd4222d9a6dbcb176e897d3fa",
+    "g_hk48_VT16_T16_W16_50.seed42.phase70.k8.json": "c66b84f6363daae2b70b41e5f140bb90198d487ef4b451e5489edb3a0d4091dd",
+    "g_hk48_VT9_T29_W10_25.seed42.phase1.k8.json": "12488a691585895cc621e3f2ce7b9dbe602e148cc831073caa07993d07af3bef",
+    "g_hk48_VT9_T29_W10_25.seed42.phase10.k8.json": "63bf92ce528bfa4e51c25ca1a3a04bcf219e59501594d80ece0644649100a1f5",
+    "g_hk48_VT9_T29_W10_25.seed42.phase70.k8.json": "6ad52c744b9672c132832dd60098540ab69a9efe45e876e2ef6cec1417ea5812",
+    "g_kroA150_VT30_T30_W90_50.seed42.phase1.k8.json": "b0da06b7fead3483af3588dfdd27436925c12c0ef66f2000f739f30febb36854",
+    "g_kroA150_VT30_T30_W90_50.seed42.phase10.k8.json": "c91c0ed2d1d28887bb38d68a8005b026a3d463c7bbc2da1eca0afa11d45b600a",
+    "g_kroA150_VT30_T30_W90_50.seed42.phase70.k8.json": "e1ddd64fca4eeb4e7ef75116a58b1863c59249f1054b23bd80b4472159e5739b",
+    "g_kroA150_VT30_T90_W30_75.seed42.phase1.k8.json": "fd24ca7903f30a3c7b40805eb8515c3015c1d7d97e94a51f1ef324b8d10b80ba",
+    "g_kroA150_VT30_T90_W30_75.seed42.phase10.k8.json": "685fa87761926e01e17973834be8fffe144e693a38f750dabd7b050cbd5b0aa2",
+    "g_kroA150_VT50_T50_W50_25.seed42.phase1.k8.json": "5dcffc785adf3c50ad0bd684ff79c54b2995cb52b7332317e1b4c5b4c0be6a50",
+    "g_kroA150_VT50_T50_W50_25.seed42.phase10.k8.json": "efd18f0dab201e9c7804a1efe8de3fe461349cc822a919df6883fb53f3effdf5",
+    "g_kroA200_VT40_T120_W40_25.seed42.phase1.k8.json": "99398d6770c4113dea388912ec3c6057ec03a0e8ebf6b0c95a6ddad501363eab",
+    "g_kroA200_VT40_T120_W40_25.seed42.phase10.k8.json": "f79b694ca44996beef168db59f5275d7bd9b27c102b034d4362941eca6fd2518",
+    "g_kroA200_VT40_T40_W120_75.seed42.phase1.k8.json": "c0e09f7bcf746c9d6b78b7fd79e6fb8efca65309acfabd09c04d5f9e661c2d93",
+    "g_kroA200_VT40_T40_W120_75.seed42.phase10.k8.json": "50abb31e4b0db5b83a126d72a296045f370c2c41c7fb33ed3a0ae2845a064505",
+    "g_kroA200_VT68_T66_W66_50.seed42.phase1.k8.json": "7943d27d82a22266369dac59c00a9c0d63182bdd6595daa9e0d0111ad8e12060",
+    "g_kroB150_VT30_T30_W90_25.seed42.phase1.k8.json": "71b17e9579daf846719ec0ac16cfb41a57e13921f6febe588e57505d65c8fe16",
+    "g_kroB150_VT30_T30_W90_25.seed42.phase10.k8.json": "cd2b465932f8efeab0a9565ab96fedc92a27aa8bda9552b092076ac5e882588f",
+    "g_kroB150_VT30_T30_W90_25.seed42.phase70.k8.json": "7160ec2fc89ac2f3bda272e34b5dac934275fd648382ca45565b8de71117a337",
+    "g_kroB150_VT30_T90_W30_75.seed42.phase1.k8.json": "1723abb073a4ee2fef6bacf39c626a49fa452edcbbe23d9db528b425b71f846b",
+    "g_kroB150_VT30_T90_W30_75.seed42.phase10.k8.json": "44562c235f6f2391cc7ba29fac454293fd3373a96e595508a00d6a93b73995cf",
+    "g_kroB150_VT50_T50_W50_50.seed42.phase1.k8.json": "cccfac743037a427f2a566a518661713e6e9328720ad9bf407b12322ff74eb3f",
+    "g_kroB150_VT50_T50_W50_50.seed42.phase10.k8.json": "e2f14d427906bf6b19c113917e9047a5309a63cecd04af1f9490c7112fc12cda",
+    "g_kroC100_VT20_T20_W60_75.seed42.phase1.k8.json": "1ed484001dee92df4c4c218cb56ebba663709d473fb89d1938adc2bfaf0f34b8",
+    "g_kroC100_VT20_T60_W20_25.seed42.phase1.k8.json": "3b975259cdb1e1e4123e047888a37b37069dcf71612c6d7fb50fd92f8581e27f",
+    "g_kroC100_VT34_T33_W33_50.seed42.phase1.k8.json": "487167ab3aafed25e2bd7b4a9b6bad16a894c0db9bb983ba973800682001ab2e",
+    "g_kroC100_VT34_T33_W33_50.seed42.phase10.k8.json": "6e6d81885d856ac55c1bd6175ee3b4bb0d009f0ed897198d8235406d95de31dc",
+    "g_kroC100_VT34_T33_W33_50.seed42.phase70.k8.json": "1cffa446692573857b04ced3e7d39369cdd91e8189cf0d870ab5f6229d9904f4",
+    "g_lin105_VT21_T21_W63_25.seed42.phase1.k8.json": "1bad11a88ca108b7adb2eea41e287d1d08d7557f126cc798a3990ec922cf5482",
+    "g_lin105_VT21_T21_W63_25.seed42.phase10.k8.json": "fe52db7fcb0d01dccf648263cf3cc7bb5969b8296a3f84611332286a15d5dba4",
+    "g_lin105_VT21_T63_W21_50.seed42.phase1.k8.json": "7e0bc0488adf4ec0142cb8753cb14495452a9c67979a990acfca08e1edc92163",
+    "g_lin105_VT21_T63_W21_50.seed42.phase10.k8.json": "be3d216fb117cacf6119913510b2b111118f3bf888dc41f7a70dbab25da6cad2",
+    "g_lin105_VT35_T35_W35_75.seed42.phase1.k8.json": "ecba8e1286bdea9e80af3c4b5763b816a58aeef8f8b0250d408e628ca20686b5",
+    "g_lin105_VT35_T35_W35_75.seed42.phase10.k8.json": "4d60db05198d332393886220d6a448927aad8df82da7b4d10169c3670fab9bb9",
+    "g_lin105_VT35_T35_W35_75.seed42.phase70.k8.json": "0a646b075fd8a3ed093589cbfef3803ad1dc6b5dfa9f53f699820e57a2312ad7",
+    "g_pr136_VT26_T28_W82_25.seed42.phase1.k8.json": "ceace6c2ae81794f829cb5ff9c622e499ca7540dff914a46c7e2de8bb770ce4b",
+    "g_pr136_VT26_T82_W28_75.seed42.phase1.k8.json": "30681d746fb80de79faeb5587da74c3d3934fd932f109b9cc64ae18574d87529",
+    "g_pr136_VT26_T82_W28_75.seed42.phase10.k8.json": "271a4880f7003f0761c8cca07e3a8512596f10193e069a4724f38e3adbc4fe40",
+    "g_pr136_VT46_T45_W45_50.seed42.phase1.k8.json": "107b44377aa92200a68cf5e43f032d0403b5be2d91bfb55c5865ad9c1ae1c0a6",
+    "g_pr144_VT28_T29_W87_50.seed42.phase1.k8.json": "a38765d20cf1b81e185709c66a411608a2d3bfd0d7951510a42f7f9ce4717950",
+    "g_pr144_VT28_T29_W87_50.seed42.phase10.k8.json": "1301cc8a4de58fd762f77cb4af391d128a64f3ba3085dea6bac7fefeea70dfe1",
+    "g_pr144_VT28_T87_W29_25.seed42.phase1.k8.json": "6a29ba3c2d54f225e92f6d1b50e45dcce6747cdcf7ce6dfd9a03e162a70ee1ea",
+    "g_pr144_VT48_T48_W48_75.seed42.phase1.k8.json": "9cccd2701cc8e4b58ff65224c602557c58c3efe547f6c291aacf16a8cc06114e",
+    "g_pr144_VT48_T48_W48_75.seed42.phase10.k8.json": "134e5465d209169ca41fe172f3896311e7e90d31e5987763a426dbb307025519",
+    "g_pr226_VT44_T136_W46_50.seed42.phase1.k8.json": "cc8fbc42442e0929edff463e9c13f94218221bc8cae1a52b36678dafe2b2158a",
+    "g_pr226_VT44_T46_W136_75.seed42.phase1.k8.json": "01f5107fb1acbfd0c705dde4ca76ea2cefece90ad0c2af76679672f70eb55577",
+    "g_pr226_VT44_T46_W136_75.seed42.phase10.k8.json": "f5286a3905166e8b15019d49a65d553374a17fa6606d8c310e645da113570833",
+    "g_pr226_VT76_T75_W75_25.seed42.phase1.k8.json": "ce130af2f6b7b008fd9373a012b52b4d5a6e40ab9c2940a250db0b56177793ea",
+    "g_pr76_VT14_T16_W46_25.seed42.phase1.k8.json": "26c37ea0f32a4a4bbc999c700389484ce6d159548698989087c676eac91cf900",
+    "g_pr76_VT14_T46_W16_75.seed42.phase1.k8.json": "d1ea7ce8d27220aeaafc93fa0699ac11238aaf4f0530e01679d62c30ad3ed5c5",
+    "g_pr76_VT14_T46_W16_75.seed42.phase10.k8.json": "c94c83f41af4bb927253e59e264392fc0b51cc6013f64fc7764eeb4ca2436386",
+    "g_pr76_VT24_T26_W26_50.seed42.phase1.k8.json": "0d4cf3e13eceb8f827f05e96eb34a95e0a97db23ffc03f89e5d225fb4bbc97ef",
+    "g_pr76_VT24_T26_W26_50.seed42.phase10.k8.json": "528f07dd32816b3c7ea5212a85d03fa53da793274c7b5a8917fa8487330c5d95",
+    "g_pr76_VT24_T26_W26_50.seed42.phase70.k8.json": "e51a66232a55f2b58489c60d54f9bd4ba96141e97c324c780312859d44ab7a1f",
+    "g_rd100_VT20_T20_W60_75.seed42.phase1.k8.json": "80ec675ae974bcb61475cda0dd4bbc53f4c0577bdbcb83601ad9fc7c4f30b0c0",
+    "g_rd100_VT20_T20_W60_75.seed42.phase10.k8.json": "6cade9a20056fdbb4676046c8ed76fbd76e551d7368febbcd25fd6242d407cb0",
+    "g_rd100_VT34_T33_W33_25.seed42.phase1.k8.json": "5fc7fa62234f55b30d2798b1e8ac936b74d9f52c1319329ab08c851e1bf4f078",
+    "g_rd100_VT34_T33_W33_25.seed42.phase10.k8.json": "f55bed64cfddf9a4639b9d822a16b166ee258744f7f290c8ead051e0dc9242cb",
+    "g_rd400_VT80_T240_W80_25.seed42.phase1.k8.json": "f79e1659b0a3288c6a3275f51f5def66f3f3011534f4088bcaea18ebad678450",
+    "g_rd400_VT80_T80_W240_50.seed42.phase1.k8.json": "3975dfd9c2d58db4c334cd4a72be803ddfd8dcb44f9250ddb9ceb2f383e0006c",
+    "g_si175_VT35_T105_W35_50.seed42.phase1.k8.json": "bca52c90864bcc3e24d545c936f09f05b275cae8e707531361faf76a50850ca9",
+    "g_si175_VT35_T105_W35_50.seed42.phase10.k8.json": "27ec2692db429b377766c5c4457df9c4f330f88a94fce4a3aef8b708ab88e906",
+    "g_si175_VT35_T35_W105_25.seed42.phase1.k8.json": "b9a8c6c0509c911c52c9df47aa9d4ed699528fafd0027548211d34b52405ba9c",
+    "g_si175_VT35_T35_W105_25.seed42.phase10.k8.json": "e255ab3ae30cd3e8f53b38e7c15867b90f627a50e2afa46b2022ead3443cb2b2",
+    "g_si175_VT35_T35_W105_25.seed42.phase70.k8.json": "12fc701081398495cfc98e502147359e21bad23e8a459a9ab5ffad643ccdc991",
+    "g_si175_VT59_T58_W58_75.seed42.phase1.k8.json": "998e817f4636d3494b13115193a022ac18edbf31f498d9cce012e3c6abf131d0",
+    "g_si175_VT59_T58_W58_75.seed42.phase10.k8.json": "d24204d409a9d47935e7db1965542c3773db074642958f3ee27c27c09b400a50",
+    "g_st70_VT14_T14_W42_25.seed42.phase1.k8.json": "0c8250080ed2a1b2aff7983f27ef7943ab44d95181506892ca3a08eda0ccaf7a",
+    "g_st70_VT14_T14_W42_25.seed42.phase10.k8.json": "5566db6a418c7940bf89cfa16adc9e173a4a1c44bac49023446c43df30f5c6d4",
+    "g_st70_VT14_T42_W14_50.seed42.phase1.k8.json": "1019d4a32be305d7590ec7c7ad6ae861538a8d2dcd51ac52db4c4efd25da3bb7",
+    "g_st70_VT22_T24_W24_75.seed42.phase1.k8.json": "89513917c1f513d2982a0ed565cf9551f26c6bc7ae958ee859e31631da10a303",
+    "g_st70_VT22_T24_W24_75.seed42.phase10.k8.json": "317ae0fbea09559b342119268174698f1b18a237caaa16bfc908db71c738f453",
+    "g_ts225_VT45_T135_W45_50.seed42.phase1.k8.json": "f52bb9c624cfd2f15f8e2d9866f46b3604c85bf66663cda64fd4c05bf9a314fb",
+    "g_ts225_VT45_T135_W45_50.seed42.phase10.k8.json": "47cac64ac763f101be50351fe8a684e1ad427aa6b7ae9a341c24246013073cb6",
+    "g_ts225_VT45_T45_W135_25.seed42.phase1.k8.json": "a5e665fa8f39d53f37576d954a3b7e8b20f99fa58d5a0f70f0e0a900fa3859a7",
+    "g_ts225_VT45_T45_W135_25.seed42.phase70.k8.json": "362b357f47a7417858bb9996012c4c84fb11e3386bd59c79f46bd3881c24d719",
+    "g_ts225_VT75_T75_W75_75.seed42.phase1.k8.json": "d6f5a8f4ac79f552b893974fbdf35617a1bc00c31fb949e9af06c02c46e4ea94",
+    "g_tsp225_VT45_T45_W135_75.seed42.phase1.k8.json": "2fdc154bfa43f41c6bd84c204a38fae99d9f18dc3f7a684ee2babfe4d1b21cff",
+    "g_tsp225_VT45_T45_W135_75.seed42.phase10.k8.json": "4db27bc2456e32563841188ec45b547620bab594acc737f58f9b4e06c5b4e66a",
+    "g_tsp225_VT45_T45_W135_75.seed42.phase70.k8.json": "1c0ee9b9addd94d4cee28acbee5a2654f20d26f98c4b1240841458d6094a2763",
+    "g_tsp225_VT75_T75_W75_25.seed42.phase1.k8.json": "e2bbe381d12815861581f2c64f5e15b939bf806e6a52024bee31aa306b56516f",
+    "g_tsp225_VT75_T75_W75_25.seed42.phase10.k8.json": "96487e297b12be11559f46f8c4b9a58c0e5a0a581a2ac3e574b2822fbd3209dd",
+    "g_tsp225_VT75_T75_W75_50.seed42.phase1.k8.json": "dffc8f36c2565411b354e908ea6f686a6988de61ae07e956b8fc488feec4bf27",
+    "g_tsp225_VT75_T75_W75_50.seed42.phase10.k8.json": "debc5d3fd5e7f89aa0da193512e50245b4d78a4ea58e68e778be5b2d89f2aebb",
+    "g_u159_VT31_T32_W96_50.seed42.phase1.k8.json": "91f3eacc53a8b61c4bcb22aed4e917d246ce5d3b9512180ef5808a8061f2d583",
+    "g_u159_VT31_T96_W32_25.seed42.phase1.k8.json": "4a41d80ebda47316e9d5bb67b3603c6e235dc501b883f5ad5a74e5c906c2f14d",
+    "g_u159_VT53_T53_W53_75.seed42.phase1.k8.json": "37d8d79a2de16f9ac63580e427afc006558fe42dabfb0db799f1f6313840bebc"
+  },
+  "elapsed_seconds": 4.99971825,
+  "summary": {
+    "uniform": {
+      "mean_geometry_gain": 0.0005268169500159751,
+      "positive_geometries": 24
+    },
+    "sampled_oracle": {
+      "mean_geometry_gain": 0.0016285194211719692,
+      "positive_geometries": 24
+    },
+    "deletion_savings": {
+      "mean_geometry_gain": 0.0005876958802904373,
+      "positive_geometries": 8
+    },
+    "joint_savings": {
+      "mean_geometry_gain": 0.0010465709713056292,
+      "positive_geometries": 16
+    },
+    "linear_generic": {
+      "mean_geometry_gain": 0.0006662571714643322,
+      "positive_geometries": 11
+    },
+    "linear_raw": {
+      "mean_geometry_gain": 0.0008666721020719428,
+      "positive_geometries": 15
+    },
+    "linear_joint": {
+      "mean_geometry_gain": 0.0009629076637977775,
+      "positive_geometries": 18
+    },
+    "rff_generic": {
+      "mean_geometry_gain": 0.0007452352841165829,
+      "positive_geometries": 12
+    },
+    "rff_raw": {
+      "mean_geometry_gain": 0.0008835085361152125,
+      "positive_geometries": 15
+    },
+    "rff_joint": {
+      "mean_geometry_gain": 0.0009629076637977775,
+      "positive_geometries": 18
+    }
+  },
+  "rows": [
+    {
+      "geometry": "g_a280",
+      "instance": "g_a280_VT56_T168_W56_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 3.9550704002531244e-05,
+        "sampled_oracle": 0.00047460844803037496,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.00047460844803037496,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_a280",
+      "instance": "g_a280_VT56_T56_W168_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 2.4495394865765236e-05,
+        "sampled_oracle": 0.0005878894767783657,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0005878894767783657,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0005878894767783657,
+        "rff_generic": 0.0005878894767783657,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0005878894767783657
+      }
+    },
+    {
+      "geometry": "g_a280",
+      "instance": "g_a280_VT56_T56_W168_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_a280",
+      "instance": "g_a280_VT94_T93_W93_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "instance": "g_att48_VT16_T16_W16_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.001300148588410104,
+        "sampled_oracle": 0.015601783060921248,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "instance": "g_att48_VT16_T16_W16_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "instance": "g_att48_VT9_T10_W29_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "instance": "g_att48_VT9_T29_W10_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_att48",
+      "instance": "g_att48_VT9_T29_W10_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00015042117930204573,
+        "sampled_oracle": 0.0036101083032490976,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT9_T11_W32_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0012781886241212453,
+        "sampled_oracle": 0.001437962202136401,
+        "deletion_savings": 0.001437962202136401,
+        "joint_savings": 0.001437962202136401,
+        "linear_generic": 0.001437962202136401,
+        "linear_raw": 0.001437962202136401,
+        "linear_joint": 0.001437962202136401,
+        "rff_generic": 0.001437962202136401,
+        "rff_raw": 0.001437962202136401,
+        "rff_joint": 0.001437962202136401
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT9_T11_W32_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT9_T32_W11_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT9_T32_W11_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_berlin52",
+      "instance": "g_berlin52_VT9_T32_W11_75",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT24_T26_W77_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT24_T26_W77_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT24_T77_W26_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00015299582694846813,
+        "sampled_oracle": 0.0014552673933366101,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0014552673933366101,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0014552673933366101,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0014552673933366101
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT24_T77_W26_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT24_T77_W26_25",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT43_T42_W42_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_bier127",
+      "instance": "g_bier127_VT43_T42_W42_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.002292764695453153,
+        "sampled_oracle": 0.010396015666553841,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.010396015666553841,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "instance": "g_brazil58_VT11_T35_W12_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0056214677231546965,
+        "sampled_oracle": 0.006901252449518616,
+        "deletion_savings": 0.006901252449518616,
+        "joint_savings": 0.006901252449518616,
+        "linear_generic": 0.006901252449518616,
+        "linear_raw": 0.006901252449518616,
+        "linear_joint": 0.006901252449518616,
+        "rff_generic": 0.0048990372326829686,
+        "rff_raw": 0.006901252449518616,
+        "rff_joint": 0.006901252449518616
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "instance": "g_brazil58_VT11_T35_W12_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_brazil58",
+      "instance": "g_brazil58_VT18_T20_W20_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil51",
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0037470023980815345,
+        "sampled_oracle": 0.007194244604316547,
+        "deletion_savings": 0.007194244604316547,
+        "joint_savings": 0.007194244604316547,
+        "linear_generic": 0.0035971223021582736,
+        "linear_raw": 0.0035971223021582736,
+        "linear_joint": 0.007194244604316547,
+        "rff_generic": 0.0035971223021582736,
+        "rff_raw": 0.0035971223021582736,
+        "rff_joint": 0.007194244604316547
+      }
+    },
+    {
+      "geometry": "g_eil51",
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil51",
+      "instance": "g_eil51_VT9_T31_W11_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.020292987512007685,
+        "sampled_oracle": 0.043227665706051875,
+        "deletion_savings": 0.043227665706051875,
+        "joint_savings": 0.043227665706051875,
+        "linear_generic": 0.043227665706051875,
+        "linear_raw": 0.043227665706051875,
+        "linear_joint": 0.043227665706051875,
+        "rff_generic": 0.043227665706051875,
+        "rff_raw": 0.043227665706051875,
+        "rff_joint": 0.043227665706051875
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT14_T46_W16_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT14_T46_W16_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT24_T26_W26_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_eil76",
+      "instance": "g_eil76_VT24_T26_W26_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gil262",
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0002834467120181406,
+        "sampled_oracle": 0.0014577259475218659,
+        "deletion_savings": 0.00048590864917395527,
+        "joint_savings": 0.0014577259475218659,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0014577259475218659,
+        "linear_joint": 0.0014577259475218659,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0014577259475218659,
+        "rff_joint": 0.0014577259475218659
+      }
+    },
+    {
+      "geometry": "g_gil262",
+      "instance": "g_gil262_VT51_T53_W158_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gil262",
+      "instance": "g_gil262_VT51_T53_W158_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 5.6458897922312554e-05,
+        "sampled_oracle": 0.0006775067750677507,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0006775067750677507,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gil262",
+      "instance": "g_gil262_VT88_T87_W87_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT26_T28_W83_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT26_T28_W83_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT26_T83_W28_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0012911051362057139,
+        "sampled_oracle": 0.011269335457744141,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.011269335457744141,
+        "linear_generic": 0.011269335457744141,
+        "linear_raw": 0.011269335457744141,
+        "linear_joint": 0.008879373298811657,
+        "rff_generic": 0.011269335457744141,
+        "rff_raw": 0.011269335457744141,
+        "rff_joint": 0.008879373298811657
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT26_T83_W28_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT45_T46_W46_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "instance": "g_gr137_VT45_T46_W46_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "instance": "g_gr229_VT45_T46_W138_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00040454335302154276,
+        "sampled_oracle": 0.006701263889538236,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.006701263889538236,
+        "linear_generic": 0.0,
+        "linear_raw": 0.006701263889538236,
+        "linear_joint": 0.006701263889538236,
+        "rff_generic": 0.0030077765829787896,
+        "rff_raw": 0.006701263889538236,
+        "rff_joint": 0.006701263889538236
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "instance": "g_gr229_VT45_T46_W138_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0002466525722339676,
+        "sampled_oracle": 0.000601723857537811,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.000601723857537811,
+        "linear_generic": 0.000601723857537811,
+        "linear_raw": 0.000601723857537811,
+        "linear_joint": 0.0,
+        "rff_generic": 0.000601723857537811,
+        "rff_raw": 0.000601723857537811,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "instance": "g_gr229_VT77_T76_W76_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "instance": "g_gr48_VT9_T10_W29_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0005041910884225121,
+        "sampled_oracle": 0.0005672149744753262,
+        "deletion_savings": 0.0005672149744753262,
+        "joint_savings": 0.0005672149744753262,
+        "linear_generic": 0.0005672149744753262,
+        "linear_raw": 0.0005672149744753262,
+        "linear_joint": 0.0005672149744753262,
+        "rff_generic": 0.0005672149744753262,
+        "rff_raw": 0.0005672149744753262,
+        "rff_joint": 0.0005672149744753262
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "instance": "g_gr48_VT9_T10_W29_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "instance": "g_gr48_VT9_T29_W10_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.02288014926105956,
+        "sampled_oracle": 0.024524966858152895,
+        "deletion_savings": 0.024524966858152895,
+        "joint_savings": 0.024524966858152895,
+        "linear_generic": 0.024524966858152895,
+        "linear_raw": 0.024524966858152895,
+        "linear_joint": 0.024524966858152895,
+        "rff_generic": 0.024524966858152895,
+        "rff_raw": 0.024524966858152895,
+        "rff_joint": 0.024524966858152895
+      }
+    },
+    {
+      "geometry": "g_gr48",
+      "instance": "g_gr48_VT9_T29_W10_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00022062635823101787,
+        "sampled_oracle": 0.005295032597544429,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.005295032597544429,
+        "linear_joint": 0.005295032597544429,
+        "rff_generic": 0.0,
+        "rff_raw": 0.005295032597544429,
+        "rff_joint": 0.005295032597544429
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT18_T58_W20_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT18_T58_W20_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT32_T32_W32_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "instance": "g_gr96_VT32_T32_W32_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0009861932938856016,
+        "sampled_oracle": 0.0015779092702169625,
+        "deletion_savings": 0.0015779092702169625,
+        "joint_savings": 0.0015779092702169625,
+        "linear_generic": 0.0015779092702169625,
+        "linear_raw": 0.0015779092702169625,
+        "linear_joint": 0.0015779092702169625,
+        "rff_generic": 0.0015779092702169625,
+        "rff_raw": 0.0015779092702169625,
+        "rff_joint": 0.0015779092702169625
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "instance": "g_hk48_VT9_T29_W10_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0004572944175783974,
+        "sampled_oracle": 0.000514456219775697,
+        "deletion_savings": 0.000514456219775697,
+        "joint_savings": 0.000514456219775697,
+        "linear_generic": 0.000514456219775697,
+        "linear_raw": 0.000514456219775697,
+        "linear_joint": 0.000514456219775697,
+        "rff_generic": 0.000514456219775697,
+        "rff_raw": 0.000514456219775697,
+        "rff_joint": 0.000514456219775697
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "instance": "g_hk48_VT9_T29_W10_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_hk48",
+      "instance": "g_hk48_VT9_T29_W10_25",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT30_T30_W90_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT30_T30_W90_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT30_T30_W90_50",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT30_T90_W30_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT30_T90_W30_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT50_T50_W50_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA150",
+      "instance": "g_kroA150_VT50_T50_W50_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0003454976569295957,
+        "sampled_oracle": 0.0026938294469231417,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0024412829362740972,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0024412829362740972,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "instance": "g_kroA200_VT40_T40_W120_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "instance": "g_kroA200_VT40_T40_W120_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroA200",
+      "instance": "g_kroA200_VT68_T66_W66_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0003140232470941132,
+        "sampled_oracle": 0.005961754780652418,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.005961754780652418,
+        "linear_generic": 0.0,
+        "linear_raw": 0.005961754780652418,
+        "linear_joint": 0.005961754780652418,
+        "rff_generic": 0.0,
+        "rff_raw": 0.005961754780652418,
+        "rff_joint": 0.005961754780652418
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT30_T30_W90_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT30_T30_W90_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT30_T30_W90_25",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT30_T90_W30_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0008389136068790915,
+        "sampled_oracle": 0.010516381286234326,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.010516381286234326,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.010516381286234326,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.010516381286234326
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT30_T90_W30_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT50_T50_W50_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroB150",
+      "instance": "g_kroB150_VT50_T50_W50_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "instance": "g_kroC100_VT20_T20_W60_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "instance": "g_kroC100_VT20_T60_W20_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "instance": "g_kroC100_VT34_T33_W33_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 1.8085799030601172e-05,
+        "sampled_oracle": 0.00043405917673442813,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "instance": "g_kroC100_VT34_T33_W33_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_kroC100",
+      "instance": "g_kroC100_VT34_T33_W33_50",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT21_T21_W63_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00022429068072221602,
+        "sampled_oracle": 0.002691488168666592,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT21_T21_W63_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT21_T63_W21_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT21_T63_W21_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT35_T35_W35_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT35_T35_W35_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_lin105",
+      "instance": "g_lin105_VT35_T35_W35_75",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr136",
+      "instance": "g_pr136_VT26_T28_W82_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr136",
+      "instance": "g_pr136_VT26_T82_W28_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.001817431188956317,
+        "sampled_oracle": 0.018774907033928073,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.006068534467095462,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr136",
+      "instance": "g_pr136_VT26_T82_W28_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr136",
+      "instance": "g_pr136_VT46_T45_W45_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "instance": "g_pr144_VT28_T29_W87_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "instance": "g_pr144_VT28_T29_W87_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "instance": "g_pr144_VT28_T87_W29_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "instance": "g_pr144_VT48_T48_W48_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr144",
+      "instance": "g_pr144_VT48_T48_W48_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr226",
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr226",
+      "instance": "g_pr226_VT44_T46_W136_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr226",
+      "instance": "g_pr226_VT44_T46_W136_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr226",
+      "instance": "g_pr226_VT76_T75_W75_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT14_T16_W46_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT14_T46_W16_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0006447461934400104,
+        "sampled_oracle": 0.005201042362113152,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.005201042362113152,
+        "linear_generic": 0.0,
+        "linear_raw": 0.005136433140223548,
+        "linear_joint": 0.005136433140223548,
+        "rff_generic": 0.0,
+        "rff_raw": 0.005136433140223548,
+        "rff_joint": 0.005136433140223548
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT14_T46_W16_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT24_T26_W26_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0013343076408024518,
+        "sampled_oracle": 0.010674461126419614,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT24_T26_W26_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 2.5139440094390216e-05,
+        "sampled_oracle": 0.0005363080553469913,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_pr76",
+      "instance": "g_pr76_VT24_T26_W26_50",
+      "phase": 70,
+      "gain": {
+        "uniform": 2.794769979251628e-06,
+        "sampled_oracle": 6.707447950203907e-05,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_rd100",
+      "instance": "g_rd100_VT20_T20_W60_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0013190993312473158,
+        "sampled_oracle": 0.0022087244616234127,
+        "deletion_savings": 0.0012884226026136573,
+        "joint_savings": 0.0022087244616234127,
+        "linear_generic": 0.0012884226026136573,
+        "linear_raw": 0.0012884226026136573,
+        "linear_joint": 0.0022087244616234127,
+        "rff_generic": 0.0012884226026136573,
+        "rff_raw": 0.0012884226026136573,
+        "rff_joint": 0.0022087244616234127
+      }
+    },
+    {
+      "geometry": "g_rd100",
+      "instance": "g_rd100_VT20_T20_W60_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_rd100",
+      "instance": "g_rd100_VT34_T33_W33_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.000135013501350135,
+        "sampled_oracle": 0.00054005400540054,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_rd100",
+      "instance": "g_rd100_VT34_T33_W33_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_rd400",
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_rd400",
+      "instance": "g_rd400_VT80_T80_W240_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.00025440976933514245,
+        "sampled_oracle": 0.006105834464043419,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.006105834464043419,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT35_T105_W35_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT35_T105_W35_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0005182567726737338,
+        "sampled_oracle": 0.012438162544169611,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT35_T35_W105_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT35_T35_W105_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT35_T35_W105_25",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT59_T58_W58_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_si175",
+      "instance": "g_si175_VT59_T58_W58_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_st70",
+      "instance": "g_st70_VT14_T14_W42_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.007173742138364781,
+        "sampled_oracle": 0.01179245283018868,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.01179245283018868,
+        "linear_generic": 0.0,
+        "linear_raw": 0.01179245283018868,
+        "linear_joint": 0.01179245283018868,
+        "rff_generic": 0.0,
+        "rff_raw": 0.01179245283018868,
+        "rff_joint": 0.01179245283018868
+      }
+    },
+    {
+      "geometry": "g_st70",
+      "instance": "g_st70_VT14_T14_W42_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_st70",
+      "instance": "g_st70_VT14_T42_W14_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_st70",
+      "instance": "g_st70_VT22_T24_W24_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_st70",
+      "instance": "g_st70_VT22_T24_W24_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_ts225",
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_ts225",
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_ts225",
+      "instance": "g_ts225_VT45_T45_W135_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_ts225",
+      "instance": "g_ts225_VT45_T45_W135_25",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_ts225",
+      "instance": "g_ts225_VT75_T75_W75_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "phase": 70,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT75_T75_W75_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 7.730364873222017e-05,
+        "sampled_oracle": 0.00037105751391465676,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.00037105751391465676,
+        "linear_raw": 0.00037105751391465676,
+        "linear_joint": 0.00037105751391465676,
+        "rff_generic": 0.00037105751391465676,
+        "rff_raw": 0.00037105751391465676,
+        "rff_joint": 0.00037105751391465676
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT75_T75_W75_25",
+      "phase": 10,
+      "gain": {
+        "uniform": 0.00017089236887894604,
+        "sampled_oracle": 0.0003728560775540641,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0003728560775540641,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0003728560775540641
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT75_T75_W75_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_tsp225",
+      "instance": "g_tsp225_VT75_T75_W75_50",
+      "phase": 10,
+      "gain": {
+        "uniform": 7.46982191944544e-05,
+        "sampled_oracle": 0.0017927572606669057,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0017927572606669057,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_u159",
+      "instance": "g_u159_VT31_T32_W96_50",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_u159",
+      "instance": "g_u159_VT31_T96_W32_25",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    },
+    {
+      "geometry": "g_u159",
+      "instance": "g_u159_VT53_T53_W53_75",
+      "phase": 1,
+      "gain": {
+        "uniform": 0.0,
+        "sampled_oracle": 0.0,
+        "deletion_savings": 0.0,
+        "joint_savings": 0.0,
+        "linear_generic": 0.0,
+        "linear_raw": 0.0,
+        "linear_joint": 0.0,
+        "rff_generic": 0.0,
+        "rff_raw": 0.0,
+        "rff_joint": 0.0
+      }
+    }
+  ]
+}

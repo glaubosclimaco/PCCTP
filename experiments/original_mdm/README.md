@@ -23,6 +23,14 @@ independente de cobertura, prêmio, obrigatórios, ciclo simples e custo.
 
 ## Limites e verificações
 
+**Correção isolada do decodificador:** `build.py --initialize-decoder-index`
+cria `build_decoder_initialized/` e inicializa `cc_atual=0`, usado anteriormente
+sem inicialização em componentes de uma única aresta. `verify_decoder.py`
+reproduz esse caso mínimo. O método tem identificador próprio nos JSONs; não
+misturar seus resultados com os do legado intacto. Três casos que falhavam no
+legado concluíram e foram validados após a correção. Outros defeitos ainda
+podem existir. Ver registros em `diagnostics/`.
+
 - `fpmax_verification.json`: maximalidade, suporte e completude dos padrões em
   um banco pequeno para seis limiares, por enumeração independente. Não certifica
   o algoritmo de seleção dos dez padrões no wrapper.

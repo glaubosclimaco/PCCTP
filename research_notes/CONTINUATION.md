@@ -1,5 +1,70 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 5h11 — atualização prioritária
+
+Esta seção substitui o estado antigo dos processos abaixo.
+
+- As coletas originais terminaram: 29 primeiras variantes, um timeout sem
+  primeira solução; 58 outras variantes, três SIGSEGV. As sementes 43/44 nas
+  nove primeiras variantes de desenvolvimento terminaram com duas SIGSEGV.
+- Auditoria `experiments/ml_lns/dataset_audit.json`: 99 baselines, 509 snapshots,
+  151 estados rotulados e 3384 reparos verificados; 29 geometrias; nenhum rótulo
+  reservado de validação/teste. Arquivos têm hashes. Falhas fora do corpus
+  continuam nos manifestos, não foram convertidas em soluções válidas.
+- `strong_oracle.py` rodada 5 (sessão 87985) terminou. Coletou as variantes
+  disponíveis de seed42. Sementes43/44 ainda precisam de coleta específica.
+- `nonlinear_ranker.py` e `evaluate_nonlinear.py` implementam controles lineares
+  e random Fourier features (largura64, alpha1, seed2026), escala apenas no treino,
+  ponderação igual por geometria informativa. Resultado ainda exploratório,
+  sem vantagem assegurada frente à regra `joint_savings`. Não usar teste final.
+- Exportações agora são publicadas atomicamente somente após validação. Novas
+  execuções exportam tempo por snapshot e tempo total do processo. NÃO imputar
+  tempos aos snapshots antigos que não têm esse campo.
+
+### Falha do legado localizada e correção isolada
+
+O decodificador em `mineracao.cpp` declara `int cc_atual;` sem inicializar e o
+usa ao criar componente de padrão com uma única aresta. Relatórios locais de
+crash apontaram `decode`; teste mínimo `verify_decoder.py` passa com inicialização
+em zero. A versão corrigida é separada, nunca uma substituição silenciosa:
+
+```sh
+python3 experiments/original_mdm/build.py --initialize-decoder-index
+python3 experiments/original_mdm/verify_decoder.py
+```
+
+Diretório `build_decoder_initialized/`, método JSON
+`original_MDM_legacy_decoder_index_initialized`. Fontes fornecidos intactos.
+Os três casos de seed42 que antes falhavam concluíram e passaram na validação:
+eil51_VT9_T11_W31_50 custo248, hk48_VT9_T10_W29_75 custo7803,
+rd100_VT20_T60_W20_50 custo6626. Controle brazil preservou20466.
+Resultados em `experiments/original_mdm/diagnostics/decoder_initialized_reproduction.json`.
+Não inferir daí equivalência universal com execuções de comportamento indefinido.
+
+ASAN/UBSAN com clang concluiu dois casos sem reportar erro e atingiu timeout no
+terceiro; isso não invalida o defeito de inicialização nem certifica ausência
+de outros bugs. GCC não dispõe de libasan local. LLDB foi encerrado depois da
+identificação por inspeção e teste mínimo; não há depurador útil a manter.
+
+### Processo atualmente em execução
+
+`strong_states.py --roles development train --seeds 42 --initialize-decoder-index`,
+log `/tmp/pcctp_decoder_initialized_states.log`. Coleta as primeiras variantes
+com a correção EXPLICITAMENTE identificada; arquivos em `decoder_initialized_states/`.
+Não misturar com `original_states/` nem reaproveitar seus rótulos como se fossem
+do mesmo algoritmo. Split por geometria foi copiado, preservando reservas.
+
+O coletor aceita banco separado e escolhe saída separada automaticamente:
+
+```sh
+python3 experiments/ml_lns/strong_oracle.py --state-dir experiments/ml_lns/decoder_initialized_states
+```
+
+Antes de comparar algoritmos novos, estabilizar essa referência e verificar
+consistência da correção nas outras instâncias. O teste final continua intocado.
+Próximo estudo necessário: qualidade por tempo desde o primeiro estado do MDM,
+comparado à continuação do próprio MDM, ALNS sem aprendizado e regra simples.
+
 Atualizado em 18 de outubro de 2026. Não é um relatório de contribuição concluída.
 
 ## Decisões vigentes
