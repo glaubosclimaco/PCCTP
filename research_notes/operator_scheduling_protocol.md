@@ -44,3 +44,30 @@ Não usar precisão de classificação como substituto de melhoria do algoritmo.
 Não usar movimentos da mesma trajetória como réplicas independentes. Separar
 geometrias, registrar mudança de distribuição após reordenação e manter os
 resultados negativos. CTP continua fora do escopo.
+
+## Primeiro teste preditivo, às 6h31
+
+Seis perfis concluídos, 11526chamadas auditadas: duas geometrias de desenvolvimento
+e quatro de treino. gr229 foi interrompido no limite de90s; a amostra de2000
+chamadas é válida, mas seu custo final disponível61427não equivale às70iterações
+do baseline61278. Os demais cinco perfis completaram e preservaram custo final.
+
+`operator_prediction.py`: LOGO exclusivamente em quatro geometrias TRAIN,
+8000chamadas e1524melhorias. Compara regressão logística por operador com
+interceptos e interações dos mesmos operadores com dez descritores do estado.
+Prediz também logtempo com regressão ridge. Padronização apenas no treino,
+pesos iguais por geometria, penalização fixa sem ajuste por resultados.
+
+O modelo com estado piorou Brier médio0.10585→0.11334 e logloss0.35150→0.38015.
+Erro absoluto médio do logtempo caiu0.66310→0.56080, mas melhorou em apenas duas
+das quatro geometrias. Não é demonstração robusta de benefício computacional.
+A extração Python por estado único teve medianas65–206microssegundos nesse
+diagnóstico; ela precisa entrar no custo da política, se implementada.
+
+Foi iniciada ampliação para até20geometriasdetreino, incluindo baselines com
+checkpoint incompleto. Usa apenas uma variante por geometria nesta coleta;
+perfis anteriores de mesma instância/semente/build são reutilizados. Variantes
+anteriores da mesma geometria podem existir: LOGO deve reter todas as variantes
+da geometria fora do treino simultaneamente e ponderar por geometria.
+Falhas sem primeiro checkpoint são registradas e não apagam geometrias do plano.
+Protocolo093590aaa738. Desenvolvimento/validação/teste não entram nessa ampliação.

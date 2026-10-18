@@ -1,5 +1,48 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h31 — previsão observacional e ampliação TRAIN
+
+- Coleta inicial deoperadores terminou (sessão78060):6perfis,11526chamadas
+ auditadas antes/depois. gr229 é checkpoint-only no limite90s,custo61427;
+ não misturar combaseline70iterações61278. Outros5perfis completaram e mantiveram
+ custo final. Arquivos em `experiments/original_mdm/move_profiles/`.
+- Implementado `operator_prediction.py`: auditoria de todas as rotas,custos,
+ proveniência e papéis; previsão LOGO SOMENTE4geometriasTRAIN/8000observações/
+1524melhorias. DEV auditado mas não treinado. Logistic por operador vs operador
+ com10descritores deestado e interações. Penalidadesfixas e pesosporgeometria,
+ padronização sótreino. Ridge prediz logtempo; piso1microssegundo explícito.
+- Resultado `operator_prediction_development.json`: estado pioraBrier
+0.10585→0.11334 e logloss0.35150→0.38015. Erro logtempo0.66310→0.56080,
+ melhora2/4geometrias. Semvalor depolítica/speedclaim. ExtraçãoPython mediana
+65–206us/estadoúnico,contada em auditoriadefeatures; nãoignorarna inferência.
+ Sessões67328/11802 encerradas. Log `/tmp/pcctp_operator_prediction.log`.
+- Perfil ampliado ATIVO sessão26945:
+ `python3 experiments/original_mdm/profile_moves.py --train-limit 20 --dev-limit 0
+ --include-incomplete`,log `/tmp/pcctp_move_profile_expanded.log`.
+ Protocolo093590aaa738 (20TRAIN somente); timeout90s/caso, prefixo2000chamadas.
+ Reutiliza mesmainstância/semente/build jávalidada. Primeiraa280 gera registros
+ (raw.moves.jsonl cresceu); ainda não finalizou. Não duplicar processo.
+- Coletor agora registra falhas RuntimeError emmanifest econtinua,sem excluir
+ casos do plano. Não tenta salvar como completos os casos semcheckpoint.
+ Fontes do protocolo ehashbinário congelados. Perfisgrandes podemtomar~30min.
+- Avaliador tem `--all-profiles`, saída versionada porhash dos arquivos. Agrupa
+ TODASas variantes damesmageometria fora dotreino emLOGO e ponderapesospor
+ geometria,porque ampliação podeacrescentar variante diferente deuma jáperfilada.
+ Não rodar avaliação final daampliação enquanto coleta ainda está ativa; snapshot
+ parcial deve ser explicitamente descrito. Default continua quatrogeometrias.
+- Nota `research_notes/operator_scheduling_protocol.md` cominterpretação, limites
+ observacionais, censura e próximoscontroles. Nãohámodelo nativo/nova política
+ implementada; melhoriaoffline nãoequivale acontribuição científica.
+
+Próximo: acompanharcoleta semduplicar, auditar novosperfis, e rodar
+ `OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 python3
+ experiments/original_mdm/operator_prediction.py --all-profiles` ao terminar.
+ Antes dereordenarMDM, verificarseprevisão temsinal contra médiaoperador e
+ sóentãocomparar políticas completas comtodosoperadores,tempo total econtroles.
+ Preservar falhas/resultadosnegativos; teste reservado intacto; nãoimplementarCTP.
+ Artigo continuaesqueleto e objetivo finalnãoatingido.
+
+
 ## Retomada às 6h21 — blocos refutados; perfil de operadores em andamento
 
 - Novos controles em `dp_trajectory.py`: bloco contíguo8visitados+4ausentes,

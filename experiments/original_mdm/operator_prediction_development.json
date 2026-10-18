@@ -1,0 +1,171 @@
+{
+  "scope": "Exploratory LOGO on TRAIN geometries; observed executed actions only, no policy-value claim",
+  "training_geometries": 4,
+  "code_sha256": "e2156fca9c09c8045a4827275957b31c1556b710b89bdaf573a9a3e1e6888627",
+  "source_hashes": {
+    "g_att48_VT16_T16_W16_75.seed42.4e1c42c7aa48.json": "6e25276ee6b41caee421fef49dce8a4f4fe8a03b34263b747901a83535342d76",
+    "g_berlin52_VT16_T18_W18_50.seed42.4e1c42c7aa48.json": "8e2eb6dd2ec9a8f520a0d56ff4e5a222e3c6198347d4013f7ad6779a8cabcd5b",
+    "g_bier127_VT24_T26_W77_50.seed42.4e1c42c7aa48.json": "3cd9c37f84696f5689a15ee32b19b4f925d72e5f41fe5ff8ebe5985026f4cc06",
+    "g_gr137_VT26_T28_W83_25.seed42.4e1c42c7aa48.json": "358ede5c15221e770c636d1038ceab33616a70939f1ef8add7bb3e7b00a91bfa",
+    "g_gr229_VT45_T46_W138_25.seed42.4e1c42c7aa48.json": "85f15090f3521e87d23e32f5359214f5e2ca988fec12e6c1bbe1c9403bb48721",
+    "g_gr96_VT18_T20_W58_75.seed42.4e1c42c7aa48.json": "39caaa6e442ffe7d763ee8d91300d5de03aee22f75d9c0d0f04963659eb7ef6c"
+  },
+  "audit": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "role": "development",
+      "calls": 1526,
+      "sample_capped": false,
+      "profiled_run_completed": true,
+      "unique_input_states": 120,
+      "median_feature_seconds": 7.016700000000986e-05
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "role": "development",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 298,
+      "median_feature_seconds": 6.5395500000065e-05
+    },
+    {
+      "instance": "g_bier127_VT24_T26_W77_50",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 354,
+      "median_feature_seconds": 0.00012931199999999254
+    },
+    {
+      "instance": "g_gr137_VT26_T28_W83_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 383,
+      "median_feature_seconds": 0.0001267080000000309
+    },
+    {
+      "instance": "g_gr229_VT45_T46_W138_25",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": false,
+      "unique_input_states": 455,
+      "median_feature_seconds": 0.0002054579999999362
+    },
+    {
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "role": "train",
+      "calls": 2000,
+      "sample_capped": true,
+      "profiled_run_completed": true,
+      "unique_input_states": 227,
+      "median_feature_seconds": 0.00010616599999968557
+    }
+  ],
+  "feature_names": [
+    "log_visits",
+    "log_route_size",
+    "selected_fraction",
+    "mandatory_fraction",
+    "quota_fraction",
+    "prize_ratio",
+    "tight_coverage_fraction",
+    "mean_edge_ratio",
+    "edge_variation",
+    "optional_deletion_saving"
+  ],
+  "rows": [
+    {
+      "geometry": "g_bier127",
+      "observations": 2000,
+      "positive": 371,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.08206269549697527,
+          "log_loss": 0.28874032605531846,
+          "log_time_MAE": 0.30691524820715016
+        },
+        "operator_state": {
+          "brier": 0.0904144262201512,
+          "log_loss": 0.3135060059552322,
+          "log_time_MAE": 0.37385015925903964
+        }
+      }
+    },
+    {
+      "geometry": "g_gr137",
+      "observations": 2000,
+      "positive": 373,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.09676327171878811,
+          "log_loss": 0.3240417671243758,
+          "log_time_MAE": 0.5592841271240666
+        },
+        "operator_state": {
+          "brier": 0.09367554535833096,
+          "log_loss": 0.3134719867826414,
+          "log_time_MAE": 0.8428702759254013
+        }
+      }
+    },
+    {
+      "geometry": "g_gr229",
+      "observations": 2000,
+      "positive": 443,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.14318609516341593,
+          "log_loss": 0.4539285250388756,
+          "log_time_MAE": 1.1578963060588878
+        },
+        "operator_state": {
+          "brier": 0.1560963896197929,
+          "log_loss": 0.518360004889506,
+          "log_time_MAE": 0.6480672504171023
+        }
+      }
+    },
+    {
+      "geometry": "g_gr96",
+      "observations": 2000,
+      "positive": 337,
+      "metrics": {
+        "operator_only": {
+          "brier": 0.10137454904053987,
+          "log_loss": 0.3393052170094056,
+          "log_time_MAE": 0.6282955773520278
+        },
+        "operator_state": {
+          "brier": 0.11317152537542398,
+          "log_loss": 0.3752782965588352,
+          "log_time_MAE": 0.37842331938247437
+        }
+      }
+    }
+  ],
+  "summary": {
+    "operator_only": {
+      "brier": 0.1058466528549298,
+      "log_loss": 0.35150395880699387,
+      "log_time_MAE": 0.6630978146855331
+    },
+    "operator_state": {
+      "brier": 0.11333947164342476,
+      "log_loss": 0.3801540735465537,
+      "log_time_MAE": 0.5608027512460044
+    }
+  },
+  "elapsed_seconds": 2.15253625,
+  "configuration": {
+    "regularization_intercepts": 0.0001,
+    "regularization_slopes": 0.01,
+    "geometry_weight": "equal",
+    "state_scaling": "train only; clip5",
+    "time_floor_seconds": 1e-06
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "scope": "Observe unchanged MDM operators before attempting learned scheduling.\n\nFirst 2000 calls per run only. This is an explicitly censored observational\nsample, not counterfactual rewards for unexecuted operators. Profiling adds I/O;\nprofile run wall times cannot be used as baseline speed measurements.\n",
+  "cases": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "geometry": "g_a280",
+      "role": "train",
+      "baseline_sha256": "82366eab29dbdc715581a5b454284ccd2346230f6c7d2a2a7952dd7e428a36f5"
+    },
+    {
+      "instance": "g_bier127_VT24_T26_W77_50",
+      "geometry": "g_bier127",
+      "role": "train",
+      "baseline_sha256": "0b377d4ceaa8a41b68247bb1cf4458a10e51debb22ee1701efbc49585ac0c67c"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "role": "train",
+      "baseline_sha256": "13668fb990af007165748606ec6bce55857e778d6ce9c4c80f68053de08bc42c"
+    },
+    {
+      "instance": "g_gr137_VT26_T28_W83_25",
+      "geometry": "g_gr137",
+      "role": "train",
+      "baseline_sha256": "22972288dcfc4fbd9980776c8b95775afc149f4480cdea6120592c897f8533ae"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "geometry": "g_gr229",
+      "role": "train",
+      "baseline_sha256": "9adb1f331b5ac1933bdc91c1e0185ff127903cad445d122aa1a02667149777a8"
+    },
+    {
+      "instance": "g_gr96_VT18_T20_W58_75",
+      "geometry": "g_gr96",
+      "role": "train",
+      "baseline_sha256": "d19507da73cd1d03b03b83cc7d748dece32ae6621a9febb6f11746ec533650d2"
+    },
+    {
+      "instance": "g_kroA150_VT30_T30_W90_50",
+      "geometry": "g_kroA150",
+      "role": "train",
+      "baseline_sha256": "a65ee25903b8737021e4890995cefeb661edf1c99c0510a3878c5b823e8f0f55"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "geometry": "g_kroA200",
+      "role": "train",
+      "baseline_sha256": "9cb93650b79a47be024cd5c4875f7ab76d5b948e67753afa0c4437419aabfafe"
+    },
+    {
+      "instance": "g_kroB150_VT30_T30_W90_25",
+      "geometry": "g_kroB150",
+      "role": "train",
+      "baseline_sha256": "eb6979593d07c3a03ab84a68a5bf4375878d9baf3a6bd7dcac24ab1695525a80"
+    },
+    {
+      "instance": "g_kroC100_VT20_T20_W60_75",
+      "geometry": "g_kroC100",
+      "role": "train",
+      "baseline_sha256": "4e361c3862c5c124808d8567ed29f476b8d27f349187f0667c8bfbef681bc44d"
+    },
+    {
+      "instance": "g_lin105_VT21_T21_W63_25",
+      "geometry": "g_lin105",
+      "role": "train",
+      "baseline_sha256": "cf5f1c04a95dcc226f665aee169bd56b4f02f87d91ca0128b702d9599394afd3"
+    },
+    {
+      "instance": "g_pr136_VT26_T28_W82_25",
+      "geometry": "g_pr136",
+      "role": "train",
+      "baseline_sha256": "7d9079847841bfde31a0fa3178ac39002795fe4ebb3d87947203cee1a95a31be"
+    },
+    {
+      "instance": "g_pr144_VT28_T29_W87_50",
+      "geometry": "g_pr144",
+      "role": "train",
+      "baseline_sha256": "787816e298d0709c842d4a932d2aaf53e22f2a7f6b1daf608440522b792180d4"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "geometry": "g_pr226",
+      "role": "train",
+      "baseline_sha256": "e4f802abd2431ac928af2460424d2084bf9582d3034193ec2db0360a4ab7d248"
+    },
+    {
+      "instance": "g_rd100_VT20_T20_W60_75",
+      "geometry": "g_rd100",
+      "role": "train",
+      "baseline_sha256": "0e271713100a62734425f3e67a51a963bbe9d4a19ab7b229d7c589968b200473"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "geometry": "g_rd400",
+      "role": "train",
+      "baseline_sha256": "9cc0295d2b14eb75c6cd06c212a235ce69cf21481510be2bc79a31d01d1616da"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "geometry": "g_si175",
+      "role": "train",
+      "baseline_sha256": "2ea4399afb5f94bf091a6f797388189b7b808057ebd459e1aa87f1924c6e4284"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "geometry": "g_ts225",
+      "role": "train",
+      "baseline_sha256": "f3f9198cd177cfd6cd90cbc260c6d8e69e30eb233665279de3c36a9257f1edf8"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "geometry": "g_tsp225",
+      "role": "train",
+      "baseline_sha256": "92282b4514d57abad217fa59d38135289e873e1ea0aafd7e8c44134d8ba59cea"
+    },
+    {
+      "instance": "g_u159_VT31_T32_W96_50",
+      "geometry": "g_u159",
+      "role": "train",
+      "baseline_sha256": "01f21ee2b4a7c2db3d4b94646954d68fe189940ce8134fb7554dad91f4a4c8e3"
+    }
+  ],
+  "build_manifest": {
+    "origin": "/Users/glaubosclimaco/Projects/papers/PCCTP/mdm-grasp-genius-vnd",
+    "sha256": {
+      "Utils.cpp": "e775aab241508ca1bde904a5f8072128f742f1a7abe6a9fc9571989dd72f21da",
+      "genius.cpp": "2115e29a4153f75727a28ed863c26d293d53b3530698f9af3e05d8bb114c5999",
+      "grasp.cpp": "071cdacecd9d34151052572979180e34b6a76ee370ff12f93deca524f2cda82d",
+      "instances.cpp": "5b0751253ee0d19e077b12f094e68b94aaf8e62297e3a09356240ab60dfa9a36",
+      "instancia_loader.cpp": "5babd2095352c94047bd71cbb8a4d2941c49f95797747215eaa49d695e451704",
+      "mineracao.cpp": "26380384e3a30b4f6753fc43f14a2a0207e4852b29e99ed4ec7a8f2ebf4715c7",
+      "principal.cpp": "61d8c0895b7b2931a4dff1f1621d62fc1e6f64afad561cd5fc168bd26d375e65",
+      "random_provider.cpp": "565e46779c753ada7a53e2c87e8ca4da4f68d76eb4839f6fc9819707e56e188b",
+      "random_provider.h": "2c8b66aecf4bec1cefe71f9a949102389eb22691996799ccf05c2c0a6c92f5b2",
+      "mineracao.h": "bef3332bae83fbdff769af1b597ebf207e7ff04410d4efe393f04a0fc99c59b2",
+      "FPMax/fpmax.cpp": "db7816478aa692195acf986bd02f53c3f10667b063586be194b25b76728ce8c7",
+      "FPMax/fpmax_hnmp.cpp": "37f46e68842c63de9e607c8d5f6420d5834c8938e667bcd47696a38f2491ccec",
+      "FPMax/data.h": "02625acdeda03cc41859a64694f18c1eca1e7fa71724e34d553385d1ec73cc4c",
+      "FPMax/bibrand.h": "dd889c729bc1578d4e5387d689e61920eee50fc0025ad2dfe76f8d8ebf50c44b",
+      "FPMax/fsout.cpp": "17a177d997e5c3b3729404202276f6c9088304cd3d4fa94994258b6e574b74e9",
+      "FPMax/data.cpp": "58b3c9374f068e31b58aa091da4d6d2ede93e31c26540c9e8a5d5b81d4aa3065",
+      "FPMax/buffer.cpp": "e6417b35a8546fe2430ec5628e3392ca795dbc077606dcd677c447ea414f51b9",
+      "FPMax/buffer.h": "3d8edd1519cb484a6c9bed5a415f58a213dd3b261ad9f357b60303e038237aed",
+      "FPMax/common.h": "2186bba39769209cca292ecb257e99f612258b8fcc0f4d2195cc4bfd61591275",
+      "FPMax/bibrand.c": "0107062445d44c307865c258f04779604ad73ace93b0b9fbd9b29638bd2ac955",
+      "FPMax/fp_node.cpp": "4d4c30f7bb02d04b02cf7d9962931ae036cbf935c845a110daee648634c40ae3",
+      "FPMax/fp_tree.h": "ffd6bfe477bcb60ecba66c82323ebb512d8525a5f79027ea4827e0cdf821c723",
+      "FPMax/fp_node.h": "bc23683b22457dbac22b7d35a5ea00e35c2664ed6bd06df49e848056f705dd07",
+      "FPMax/fsout.h": "15fe35b3eee1a3d7784753def9969ec378af0cdadebb947425da2b13ed5bcd42",
+      "FPMax/fp_tree.cpp": "f33e5b9e84dfbe1c8f9013dfb1068c30a96418f0f7669f2b2a3f7c975299f3f7"
+    },
+    "changes": [
+      "grasp: observational checkpoint and mining-call hooks; algorithm unchanged",
+      "OBSERVATIONAL move profiling: copy successor array, time each operator, export first 2000 calls; no RNG/decision change",
+      "EXPLICIT BUG FIX: initialize decoder component index before singleton-component access; separate from unchanged legacy",
+      "principal: sixth output argument, larger path buffer, observational initialization/export",
+      "FPMax/buffer.cpp: malloc.h -> cstdlib for macOS"
+    ],
+    "command": [
+      "/opt/homebrew/bin/g++-15",
+      "-std=gnu++11",
+      "-O2",
+      "-fpermissive",
+      "-Wno-narrowing",
+      "-DPCCTP_DECODER_INITIALIZED",
+      "-I",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/Utils.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/genius.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/grasp.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/instances.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/instancia_loader.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/mineracao.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/principal.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/random_provider.cpp",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/research_hook.cpp",
+      "-o",
+      "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_move_profile/original_mdm"
+    ],
+    "compiler": "g++-15 (Homebrew GCC 15.1.0) 15.1.0"
+  },
+  "timeout": 90,
+  "code_hashes": {
+    "profile_moves.py": "99e44dbef36ee499738705f9e6ca1f3194d93c3572083dd938ebead091e2738a",
+    "run.py": "2ca87a796c44726a4b103bc98969ebda387d7a5b868bfae4bae636620ca62f45",
+    "research_hook.cpp": "378412b878891f5596e544f5e054183a5ec41c7a4a34b7cc7002ff95963a375b",
+    "research_hook.hpp": "a9cf24b274e1e6ac81ebad7ee15d69b99b51ebb3938b37a8c4a231ab713bda77",
+    "build.py": "13df50e8e6c5ea60c91799f347498a609bd4a0353ae2cdffad698f7f06452685"
+  },
+  "binary_sha256": "005a807e461066348512c08bcaa1de55e72f098fde182f31b4493cf321c20e97"
+}
