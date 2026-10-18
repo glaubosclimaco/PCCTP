@@ -1,0 +1,2273 @@
+{
+  "method": "anchor_random",
+  "budget_seconds": 5.0,
+  "total_seconds": 5.001815958000009,
+  "initial_cost": 347.0,
+  "cost": 332.0,
+  "queries": 89,
+  "trace": [
+    {
+      "elapsed": 0.1501612080000001,
+      "cost": 347.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        21,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        4,
+        1,
+        18,
+        5
+      ],
+      "query_seconds": 0.14962695799999892,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.2594494160000096,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        17,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        12,
+        3,
+        18,
+        2
+      ],
+      "query_seconds": 0.1092134590000029,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.331332333000006,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        11,
+        13,
+        17,
+        26,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        15,
+        8,
+        1
+      ],
+      "query_seconds": 0.07138899999999637,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.33154991600000017,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        10,
+        19,
+        22,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        4,
+        24,
+        14
+      ],
+      "query_seconds": 0.00015462500000751334,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 0.33173112500000457,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        10,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        14,
+        4,
+        18
+      ],
+      "query_seconds": 0.00013212500000747696,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 0.36042637500000296,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        23,
+        4,
+        12,
+        15
+      ],
+      "query_seconds": 0.028623499999994806,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.423423083000003,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        10,
+        13,
+        17,
+        19,
+        22,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        20,
+        24,
+        3
+      ],
+      "query_seconds": 0.06290133400000286,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.4584527500000064,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        9,
+        13,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        23,
+        6,
+        5,
+        3
+      ],
+      "query_seconds": 0.03493429200000264,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.5855848329999986,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        16,
+        2,
+        24,
+        8
+      ],
+      "query_seconds": 0.12704870800000378,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.6303701660000058,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        18,
+        23,
+        6,
+        15
+      ],
+      "query_seconds": 0.04468408399999646,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.6548835830000002,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        13,
+        17,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        18,
+        12,
+        14
+      ],
+      "query_seconds": 0.024430958000010605,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.8041047910000003,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        10,
+        11,
+        13,
+        17,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        20,
+        2,
+        14,
+        5
+      ],
+      "query_seconds": 0.14913595900000587,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.8792446660000053,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        21,
+        26,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        18,
+        2,
+        1
+      ],
+      "query_seconds": 0.07503879200000085,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.9554146250000031,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        15,
+        2,
+        23,
+        4
+      ],
+      "query_seconds": 0.07604687500000296,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.9741534999999999,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        20,
+        5,
+        12,
+        16
+      ],
+      "query_seconds": 0.018201000000004797,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 0.9743715000000037,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        10,
+        11,
+        19,
+        21,
+        22,
+        26,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        6,
+        25,
+        24,
+        4
+      ],
+      "query_seconds": 0.000152959000004671,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.112273958000003,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        15,
+        16,
+        25
+      ],
+      "query_seconds": 0.13781995800000857,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.1124927910000082,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        21,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        12,
+        3,
+        25,
+        8
+      ],
+      "query_seconds": 0.0001557909999974072,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.145216208000008,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        12,
+        16,
+        6,
+        20
+      ],
+      "query_seconds": 0.03264512500000194,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.2673159160000012,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        23,
+        1
+      ],
+      "query_seconds": 0.12201249999999675,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.2675321660000094,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        17,
+        21,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        20,
+        5,
+        2,
+        4
+      ],
+      "query_seconds": 0.00015216699999598404,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.2677149579999991,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        11,
+        17,
+        21,
+        22,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        16,
+        4,
+        25,
+        12
+      ],
+      "query_seconds": 0.00013387500000305863,
+      "components": 20,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.30817041600001,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        24,
+        3,
+        5,
+        25
+      ],
+      "query_seconds": 0.04036295800000289,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.3083918330000017,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        10,
+        17,
+        21,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        14,
+        18,
+        15,
+        8
+      ],
+      "query_seconds": 0.00015354200000672336,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.471410583000008,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        18,
+        4,
+        3,
+        14
+      ],
+      "query_seconds": 0.16294187500000135,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.6209077910000076,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        20,
+        1,
+        2
+      ],
+      "query_seconds": 0.14941399999999305,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.7693693330000002,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        6,
+        20,
+        16,
+        8
+      ],
+      "query_seconds": 0.14787887500000352,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.769591166000012,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        3,
+        8,
+        24,
+        15
+      ],
+      "query_seconds": 0.0001552080000095657,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 1.9100451660000033,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        11,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        14,
+        25,
+        23,
+        1
+      ],
+      "query_seconds": 0.14038387499999772,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.9755439160000066,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        14,
+        20,
+        16,
+        6
+      ],
+      "query_seconds": 0.06538733300000388,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 1.9757685410000079,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        10,
+        17,
+        22,
+        26,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        15,
+        8,
+        3,
+        12
+      ],
+      "query_seconds": 0.00015879199999346838,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.0265612500000003,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        10,
+        11,
+        17,
+        22,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        14,
+        25,
+        20,
+        3
+      ],
+      "query_seconds": 0.05069566699999939,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.050328540999999,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        9,
+        17,
+        19,
+        21,
+        22,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        23,
+        16,
+        5
+      ],
+      "query_seconds": 0.02368091600000355,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.1695517500000108,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        8,
+        3,
+        6,
+        20
+      ],
+      "query_seconds": 0.1191424579999989,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.3266498330000047,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        26,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        15,
+        6,
+        12
+      ],
+      "query_seconds": 0.15701470900000913,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.3268696660000074,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        24,
+        6,
+        20
+      ],
+      "query_seconds": 0.00015545799999472365,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.327045125000012,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        17,
+        19,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        12,
+        1,
+        4,
+        15
+      ],
+      "query_seconds": 0.0001289580000047863,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.3699855000000127,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        18,
+        12,
+        2
+      ],
+      "query_seconds": 0.04285504100000992,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.4754475830000047,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        5,
+        3,
+        16,
+        12
+      ],
+      "query_seconds": 0.1050187080000029,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.6131114160000095,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        10,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        6,
+        5,
+        14,
+        15
+      ],
+      "query_seconds": 0.13758470800000566,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.6438773750000024,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        24,
+        14,
+        20
+      ],
+      "query_seconds": 0.03068004100001076,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.644087208000002,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        26,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        15,
+        8,
+        16,
+        23
+      ],
+      "query_seconds": 0.00014854100000150083,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.752145291000005,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        13,
+        19,
+        22,
+        26,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        24,
+        25,
+        14,
+        12
+      ],
+      "query_seconds": 0.10798225000000627,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.752362375000004,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        10,
+        11,
+        17,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        12,
+        4,
+        2,
+        6
+      ],
+      "query_seconds": 0.00015204199999629964,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.792974208000004,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        12,
+        15,
+        4,
+        1
+      ],
+      "query_seconds": 0.04052741700000695,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.933136291000011,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        4,
+        25,
+        1
+      ],
+      "query_seconds": 0.14006545800000936,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 2.9333613330000077,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        9,
+        19,
+        21,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        3,
+        14,
+        4,
+        5
+      ],
+      "query_seconds": 0.0001562500000034106,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.933545041000002,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        9,
+        10,
+        13,
+        17,
+        19,
+        26,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        25,
+        4,
+        14,
+        3
+      ],
+      "query_seconds": 0.00013295799999468727,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 2.977174875000003,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        12,
+        20,
+        25,
+        24
+      ],
+      "query_seconds": 0.04353933299999824,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.1407397500000087,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        2,
+        24,
+        16
+      ],
+      "query_seconds": 0.16347741699999574,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.1415261660000056,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        18,
+        8,
+        24,
+        12
+      ],
+      "query_seconds": 0.00016374999999868578,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.1417160830000057,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        17,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        1,
+        8,
+        18
+      ],
+      "query_seconds": 0.00013658299999974588,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.1418908750000014,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        11,
+        13,
+        17,
+        19,
+        21,
+        27,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        25,
+        24,
+        23
+      ],
+      "query_seconds": 0.0001289999999869451,
+      "components": 20,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.1420608750000127,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        10,
+        19,
+        21,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        24,
+        3,
+        8,
+        25
+      ],
+      "query_seconds": 0.00012625000000809905,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.2966588330000093,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        24,
+        4,
+        23,
+        2
+      ],
+      "query_seconds": 0.15452916699999264,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.296875958000001,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        17,
+        19,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        1,
+        16,
+        14
+      ],
+      "query_seconds": 0.0001529999999974052,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.412261791000006,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        21,
+        22,
+        26,
+        27
+      ],
+      "mandatory_released": [
+        3,
+        24,
+        20,
+        4
+      ],
+      "query_seconds": 0.11531700000000455,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.560241291000011,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        9,
+        10,
+        13,
+        19,
+        22,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        23,
+        12,
+        24,
+        4
+      ],
+      "query_seconds": 0.1478944170000034,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.7198969160000104,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        3,
+        8,
+        1
+      ],
+      "query_seconds": 0.15957283400000222,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.72600404100001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        14,
+        24,
+        20,
+        23
+      ],
+      "query_seconds": 0.006037249999991445,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.726209041000004,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        21,
+        22,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        15,
+        8,
+        18,
+        23
+      ],
+      "query_seconds": 0.00014587500000118325,
+      "components": 20,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 3.826955333000001,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        5,
+        4,
+        25,
+        24
+      ],
+      "query_seconds": 0.10058087499999147,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.971478291000011,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        9,
+        10,
+        17,
+        19,
+        26,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        18,
+        6,
+        1
+      ],
+      "query_seconds": 0.14409300000001224,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 3.99747437500001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        25,
+        14,
+        23,
+        24
+      ],
+      "query_seconds": 0.025909209000005262,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.00381358300001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        2,
+        14,
+        25,
+        3
+      ],
+      "query_seconds": 0.006265167000009342,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.07602725000001,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        9,
+        10,
+        11,
+        13,
+        19,
+        21,
+        22,
+        26
+      ],
+      "mandatory_released": [
+        3,
+        16,
+        23,
+        4
+      ],
+      "query_seconds": 0.07212316700000088,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.076242625000006,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        10,
+        11,
+        13,
+        19,
+        21,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        4,
+        24,
+        15,
+        25
+      ],
+      "query_seconds": 0.00015125000000182354,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.076420833,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        9,
+        11,
+        13,
+        17,
+        19,
+        21,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        15,
+        25,
+        8
+      ],
+      "query_seconds": 0.00012908400000810616,
+      "components": 21,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.09141279100001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        17,
+        19,
+        22,
+        26,
+        28
+      ],
+      "mandatory_released": [
+        16,
+        24,
+        5,
+        4
+      ],
+      "query_seconds": 0.014927333000002818,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.091606041000006,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        9,
+        10,
+        13,
+        19,
+        21,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        12,
+        5,
+        8,
+        3
+      ],
+      "query_seconds": 0.00013829200000259334,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.091787666000002,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        9,
+        10,
+        11,
+        21,
+        22,
+        27
+      ],
+      "mandatory_released": [
+        24,
+        6,
+        20,
+        2
+      ],
+      "query_seconds": 0.00013516699999627235,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.203729541000001,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        21,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        24,
+        15,
+        25,
+        2
+      ],
+      "query_seconds": 0.11187262500000372,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.352155916000001,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        14,
+        5,
+        3
+      ],
+      "query_seconds": 0.14834629199999938,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.352377041000011,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        3,
+        24,
+        4,
+        6
+      ],
+      "query_seconds": 0.00015529099999866958,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.36468166600001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        6,
+        12,
+        23,
+        14
+      ],
+      "query_seconds": 0.01193600000000572,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.394598916000007,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        26,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        1,
+        16,
+        23,
+        14
+      ],
+      "query_seconds": 0.029837208000003557,
+      "components": 16,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.394809625000008,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        11,
+        13,
+        17,
+        21,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        24,
+        3,
+        5
+      ],
+      "query_seconds": 0.0001509590000097205,
+      "components": 20,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.407246000000001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        13,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        4,
+        18,
+        14,
+        3
+      ],
+      "query_seconds": 0.01238095799999428,
+      "components": 15,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.407440500000007,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        10,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        15,
+        25,
+        4,
+        18
+      ],
+      "query_seconds": 0.00014154200000859873,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.407615541000013,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        10,
+        11,
+        13,
+        17,
+        19,
+        22,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        16,
+        24,
+        5
+      ],
+      "query_seconds": 0.000129624999999578,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.523687916,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        11,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        25,
+        5,
+        23,
+        1
+      ],
+      "query_seconds": 0.11589924999999823,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.523897833000007,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        0,
+        7,
+        9,
+        11,
+        13,
+        17,
+        19,
+        28
+      ],
+      "mandatory_released": [
+        23,
+        25,
+        5,
+        1
+      ],
+      "query_seconds": 0.00015100000000245473,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.578349875000001,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        11,
+        13,
+        17,
+        19,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        16,
+        20,
+        3,
+        25
+      ],
+      "query_seconds": 0.054363083999987794,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.578566833000011,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        7,
+        10,
+        11,
+        13,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        6,
+        18,
+        12,
+        14
+      ],
+      "query_seconds": 0.00015062499998919066,
+      "components": 19,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.701341541000005,
+      "cost": 332.0,
+      "kind": "prize",
+      "optional_released": [
+        7,
+        9,
+        13,
+        17,
+        19,
+        27,
+        28,
+        29
+      ],
+      "mandatory_released": [
+        1,
+        2,
+        24,
+        18
+      ],
+      "query_seconds": 0.12270379199999581,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.775226541000009,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        2,
+        23,
+        6,
+        15
+      ],
+      "query_seconds": 0.0737840829999925,
+      "components": 17,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 4.775772250000003,
+      "cost": 332.0,
+      "kind": "random",
+      "optional_released": [
+        9,
+        10,
+        11,
+        19,
+        21,
+        22,
+        27,
+        28
+      ],
+      "mandatory_released": [
+        5,
+        8,
+        3,
+        1
+      ],
+      "query_seconds": 0.0001584999999977299,
+      "components": 20,
+      "reason": "component_limit",
+      "proven_optimal": false
+    },
+    {
+      "elapsed": 4.94689025000001,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        9,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        18,
+        24,
+        20,
+        1
+      ],
+      "query_seconds": 0.17104262499999834,
+      "components": 18,
+      "reason": "optimal",
+      "proven_optimal": true
+    },
+    {
+      "elapsed": 5.001811791000009,
+      "cost": 332.0,
+      "kind": "coverage",
+      "optional_released": [
+        0,
+        7,
+        10,
+        11,
+        21,
+        22,
+        26,
+        29
+      ],
+      "mandatory_released": [
+        8,
+        16,
+        4,
+        24
+      ],
+      "query_seconds": 0.05484458400000847,
+      "components": 18,
+      "reason": "time_limit",
+      "proven_optimal": false
+    }
+  ],
+  "size_limits": 32,
+  "route": [
+    43,
+    71,
+    9,
+    37,
+    64,
+    65,
+    10,
+    58,
+    13,
+    52,
+    66,
+    44,
+    53,
+    56,
+    69,
+    59,
+    68,
+    60,
+    61,
+    63,
+    41,
+    55,
+    23,
+    17,
+    54,
+    24,
+    49
+  ],
+  "instance": "g_eil76_VT14_T16_W46_75",
+  "geometry": "g_eil76",
+  "seed": 42,
+  "protocol": "66e93b8c4d05",
+  "initial_MDM_seconds": 0.065081,
+  "recorded_MDM_cost_before_end": 332,
+  "baseline_final_cost": 332,
+  "baseline_completed": true
+}

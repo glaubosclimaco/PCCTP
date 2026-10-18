@@ -1,0 +1,59 @@
+{
+  "scope": "Development control pilot; historical sparse timings, no final speed claim",
+  "methods": [
+    "optional_uniform",
+    "anchor_uniform",
+    "anchor_random",
+    "anchor_alns"
+  ],
+  "budget": 5.0,
+  "query_limit": 0.2,
+  "component_limit": 18,
+  "optional_k": 12,
+  "anchored_optional_k": 8,
+  "mandatory_k": 4,
+  "evaluation_cases": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "seed": 42,
+      "baseline_sha256": "83cb77d7d6a94a374a382c33975d5d919ef99167176809d00e2c726a872c4915"
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "seed": 42,
+      "baseline_sha256": "4fb303b33e272ced7ac2cdf4e7e3bd83b254c764447e5022bfb3de26ef90da12"
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "seed": 42,
+      "baseline_sha256": "68a0aae3eb8b7cc0899fbb48ad5198030c0c5e20cbe723853031ed094dd77398"
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "seed": 42,
+      "baseline_sha256": "30ed121afe71b826ed71788d881befccacfc3c1dc89f566c93bf6f190c13b46c"
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "seed": 42,
+      "baseline_sha256": "73c09f66327edb4bfa438e8d143ad19f442f9325ff4f4a41d9c820db6ac6e411"
+    },
+    {
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "geometry": "g_gr48",
+      "seed": 42,
+      "baseline_sha256": "93b64dd691d7ff30079f802f2581b37e51501f253606b29d3fb9bab618354fb0"
+    }
+  ],
+  "code_hashes": {
+    "dp_trajectory.py": "d41dc7c79842de55f4ad577fcc5179476138c42bed3fa4936e92ddbc392963eb",
+    "dp_repair.py": "bea8c87ad4b38cdd2acca62163a0bfdc0689ae0c2181edf7164cfeff5795ac33",
+    "path_dp.cpp": "b29ad9a51c9108468addee2e9e24e953a169a1c8ddc298d5e24aeac7ba0ba7a5",
+    "pilot.py": "e479793277fab13c6407de0878cc56c25410dc72dc6b2f97ff8b3d6aee30b922"
+  }
+}

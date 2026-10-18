@@ -1,5 +1,44 @@
 # Estado operacional para retomada autônoma
 
+## Retomada às 6h11 — busca DP completa e novos rótulos
+
+- Coleta corrigida das58outrasvariantes terminou sem falhas de geração;
+  timeout/checkpoint não significa conclusão das70iterações. Auditoria passou:
+ 86baselines,57completos,29checkpoint-only,440snapshots,104estados/2226consultas.
+  Nada de validação/teste reservado foi rotulado. Sessões46473/72399 encerradas.
+- `dp_trajectory.py`:24trajetórias, seis geometrias, quatro controles,5s online,
+  limite18componentes e0.2s/consulta. Protocolo66e93b8c4d05 em
+  `dp_trajectory_development/`. Sessão59026 terminou; auditoria independente
+  `audit_dp_trajectories.py` passou em24. Não há processos ativos desta retomada.
+- Nenhum controle superou checkpoint MDM anterior ao endpoint. Empates/piores:
+  optional_uniform3/3, anchor_uniform4/2, anchor_alns4/2, anchor_random5/1.
+  Em berlin52, âncoras próximas5244 versus aleatórias5186=MDM; em eil51 todos276
+  versusMDM273. Não confundir vantagem contra controle restrito com ganho sobreMDM.
+- Implementados `dp_labels.py` e `evaluate_dp_labels.py`. Nova coleta apenas em
+ 20geometrias TRAIN, primeira variante/fase1,12grupos opcionais x2estratégias de
+ âncora(próxima/aleatória),480consultas. Fontes congeladas, trava, publicação atômica.
+ 123consultas excederamcap18e permanecem com motivo;24melhoraram. Auditoria de todas
+ rotas,objetivos,ganhos,footprints eproveniência passou em `dp_training_audit.json`.
+ Sessão22735 terminou. Log `/tmp/pcctp_dp_training_labels.log`.
+- LOGO exploratório APENASentregeometriasdetreino: ganho médio normalizado por
+ geometria:uniform0.0000711,capped_uniform0.0001024,regra menorq0.0004085,
+ capped_joint_saving0.0002386; quatro modelos(linear/RFF,estrutural/conjunto)
+ todos0.0003639. Portanto nenhum ML bateu o controlemenorq. Alvos escassos:
+ apenas7das20geometrias têm algum ganho na amostra. Não é confirmação nem
+ avaliação de trajetória aprendida. Outputs `dp_ranking_training_results.json`.
+- Protocolo e limitações `research_notes/dp_learning_protocol.md`. Rótulos antigos
+ MIP/route_context não foram reutilizados. Número de componentes ecap são dados
+ tantoaMLquantoacontroles; não alegar valor de ML por evitar consultasimpossíveis.
+
+Próximo passo: não insistir em ajustar o ranker sob rótulos tão esparsos. Investigar
+se a decisão com sinal é liberar âncoras/conjuntos maiores de forma contígua para
+controlar q, ou usar ML em construção/continuação do MDM. Antes de nova coleta,
+formular hipótese e controle simples correspondente. Preservar todos negativos.
+Uma avaliação adicional possível é estadofase10 de TRAIN, mantendo desenvolvimento
+como diagnóstico e teste intocado. Não confundir efeito de DP/clique com aprendizado.
+Artigo ainda esqueleto; sem vantagem/novidade suficiente, sem conclusão da tarefa.
+
+
 ## Retomada às 6h00 — nova formulação do reparo e DP
 
 - Piloto anneal terminou. Continua sem vantagem de ML demonstrada. O diagnóstico
