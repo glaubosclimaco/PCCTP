@@ -68,3 +68,12 @@ implementação, experimentos, geração de instâncias ou pesquisa específica 
 durante a etapa atual. Quando a condição estiver satisfeita, retomar a decisão
 e avaliar a transferência dos mecanismos; não presumir que um efeito ligado à
 quota de prêmio exista no CTP da mesma forma.
+
+## Esclarecimento sobre contribuição científica
+
+Em 18 de outubro de 2026, o usuário reforçou que aceita aplicação, adaptação
+e combinação de métodos publicados para melhorar a resolução do PCCTP; não
+exige técnica inédita. Priorizar evidência de desempenho e análise científica,
+sem transformar novidade de faceta em requisito. ML é opcional. Preservar
+resultados negativos e avaliações reservadas. Essa orientação atualiza a
+prioridade operacional, sem dispensar baselines fortes ou rigor experimental.

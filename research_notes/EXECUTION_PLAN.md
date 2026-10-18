@@ -32,6 +32,23 @@ investigar alternativas com ML sem apagar resultados negativos.
    metadados das referências; compilar e inspecionar o PDF completo. Só então
    classificar o manuscrito como pronto para submissão. Não prometer aceitação.
 
+## Prioridade atual: contribuição por desempenho
+
+O usuário esclareceu que métodos conhecidos, adaptações e combinações são
+aceitáveis se melhorarem a resolução do PCCTP e sustentarem artigo científico.
+Não exigir algoritmo ou desigualdade inédita como condição para avançar.
+Priorizar ganho de qualidade, tempo para atingir alvos ou capacidade de prova,
+com baselines fortes e orçamento total justo. A auditoria de lifting deixa de
+ser o caminho crítico; retomá-la apenas se as afirmações do artigo a exigirem.
+
+Próxima etapa operacional: identificar nas geometrias de desenvolvimento e
+treino os casos em que o MDM ainda deixa folga ou consome mais tempo; confrontar
+métodos da literatura aplicáveis e escolher uma hipótese distinta dos mecanismos
+já refutados. Registrar protocolo antes do novo piloto. Não retunar as mesmas
+políticas negativas nem usar teste reservado para procurar ganhos. ML é opcional.
+Explicar o mecanismo e os regimes de ganho, além de demonstrar os resultados.
+Uma aplicação bem avaliada pode sustentar contribuição; publicação não é garantida.
+
 ## Limitações já encontradas
 
 - O benefício dos descritores brutos não apareceu no piloto anterior.
