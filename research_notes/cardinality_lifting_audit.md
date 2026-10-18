@@ -49,3 +49,33 @@ não a cardinalidade em si, nem a realização mista do mesmo politopo.
 Não chamar a família inédita antes de conferir o lifting de GTSP1995 ou
 outra fonte primária que cubra duplicação com múltiplas visitas por bloco.
 Nenhum desses fatos altera os resultados negativos de ML ou de aceleração.
+
+## Atualização: antecedente mais próximo identificado
+
+O resumo publicado de Egon Balas, *The prize collecting traveling salesman
+problem: II. Polyhedral results*, Networks 25(4), 199–216, julho1995,
+DOI10.1002/net.3230250406, declara explicitamente extensão de clonagem e
+clique lifting ao politopo de PCTS. Isso torna esse texto um antecedente
+prioritário, mais direto que a clonagem de caminhos dirigidos de Stephan.
+Fonte primária: https://onlinelibrary.wiley.com/doi/pdf/10.1002/net.3230250406
+
+O sumário editorial do livro *The Traveling Salesman Problem and Its
+Variations* também identifica a seção 14.6, *Cloning and Clique Lifting for
+the PCTSP*, a partir da página680, seguida da projeção no politopo de ciclos
+na seção14.7, página686. A página oficial do capítulo confirma autoria e
+identidade do capítulo; o texto das fórmulas não foi recuperado nesta sessão.
+https://link.springer.com/chapter/10.1007/0-306-48213-4_14
+Sumário: https://excerpts.numilog.com/books/0306482134.pdf
+
+**Limite da consulta:** foram acessíveis resumo, metadados e sumário, não
+o enunciado integral do lifting de Balas. Não transcrever hipóteses ou
+coeficientes por inferência. Não afirmar nem equivalência nem independência.
+A busca de GTSP1995 por páginas de autores e repositórios também não forneceu
+texto integral utilizável: a tese autoral de Salazar1996 apareceu em índice,
+mas o acesso retornou erro de tamanho; a página da editora retornou erro.
+
+**Decisão:** manter as provas no registro, com status de validade proposta e
+novidade não estabelecida. Antes de expandir mais a família ou redigir uma
+alegação de inovação, comparar o coeficiente interno zero e a cópia dos
+coeficientes externos com a seção de clique lifting de Balas. Um resumo
+de artigo não basta para decidir essa questão.
