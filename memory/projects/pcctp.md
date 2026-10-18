@@ -1,0 +1,59 @@
+# Pesquisa PCCTP
+
+## Decisões do usuário
+
+Em 18 de outubro de 2026, o usuário escolheu continuar com aprendizado de
+vizinhanças estruturadas por cobertura e prêmio, auxiliado por programação
+inteira, e pediu atualizações dos resultados. A investigação atual permanece
+no PCCTP; resultados preliminares não equivalem a contribuição inédita ou a
+evidência de desempenho de publicação.
+
+## Baseline legado recuperado
+
+O usuário forneceu `mdm-grasp-genius-vnd/` em 18 de outubro de 2026, contendo o
+MDM original e fontes do FPMax em `Debug/FPMax/`. Priorizar essa versão como
+baseline, com compilação e instrumentação isoladas em `experiments/original_mdm/`.
+A reconstrução anterior em `experiments/legacy_grasp/` é diagnóstica, não deve
+ser apresentada como o método publicado nem misturada com estados do original.
+
+## Entregável final e critérios de encerramento
+
+Em 18 de outubro de 2026, o usuário definiu como objetivo um artigo completo
+em LaTeX, aproximadamente 20–30 páginas, pronto para submissão a periódico de
+ponta, em pasta dedicada à submissão. Pode-se usar template Elsevier ou Springer
+Nature. Pasta criada: `submission/`; `main.tex` é apenas um esqueleto inicial,
+não um artigo concluído. O template editorial será aplicado durante a redação.
+Incluir formulação matemática, tabelas, figuras, gráficos comparativos,
+testes estatísticos, diagramas e casos quando forem necessários à argumentação.
+Antes do encerramento, revisar integralmente o texto e sua consistência com os
+dados; conferir contas, cálculos e experimentos; verificar existência, metadados
+e adequação das citações e referências; compilar e inspecionar o PDF. Não inventar
+resultados para preencher o artigo nem tratar publicação ou novidade como garantidas.
+
+## Autonomia e isolamento Git
+
+O usuário autorizou avançar autonomamente se estiver ausente ou se uma decisão
+ficar sem resposta por cerca de 10 minutos. Escolher o próximo passo razoável
+para alcançar a contribuição científica e o artigo revisado, documentando
+suposições e decisões. Esse prazo não constitui aprovação para ações que
+exijam autorização explícita por regras superiores. Não é necessário esperar
+10 minutos para tarefas já autorizadas que podem continuar independentemente.
+
+Todas as alterações desta pesquisa devem permanecer na branch
+`codex/pcctp-learning-submission`, criada em 18 de outubro de 2026 a partir de
+`main`. A modificação preexistente em `include/Utils.h` pertence ao usuário;
+preservá-la e não incluí-la em commits da pesquisa sem revisão específica.
+
+## Extensão futura ao CTP
+
+Instrução explícita do usuário, em 18 de outubro de 2026:
+
+> Depois de termos resultados consolidados no PCCTP, aplicar também ao CTP
+> (Covering Tour Problem) o que funcionar. Por enquanto, guardar a ideia e não
+> implementar agora.
+
+Essa é uma intenção futura condicionada à consolidação do PCCTP. Não iniciar
+implementação, experimentos, geração de instâncias ou pesquisa específica de CTP
+durante a etapa atual. Quando a condição estiver satisfeita, retomar a decisão
+e avaliar a transferência dos mecanismos; não presumir que um efeito ligado à
+quota de prêmio exista no CTP da mesma forma.
