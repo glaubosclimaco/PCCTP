@@ -14,3 +14,9 @@ e mais melhorias que controle; OU pelo menos2geometrias adicionais com prova
 de ótimo no tratamento, sem perda de qualidade primal. Se falhar, não aumentar
 rodadas/prazo nem selecionar subconjunto favorável. Tempos/provas isolados são
 diagnósticos, não estatística confirmatória. Sem testes reservados.
+
+## Resultado auditado
+
+11pares:plain3provas e1melhoria;cuts4provas e0melhorias. Gate não passou.
+GanhoLP não se converteu em vantagem suficiente no inteiro. AuditoriaPASS
+emgsec_integer_audit.json. Não retunar rodadas/prazo neste lote.
