@@ -1,0 +1,118 @@
+{
+  "scope": "Exploratory decision ledger, not a common-baseline ranking or confirmatory meta-analysis",
+  "rows": [
+    {
+      "title": "MDM9s + LKH versus MDM10s",
+      "artifact": "experiments/lkh/total_time_audit.json",
+      "sha256": "ae56093d0f28990f2daeee0fc052f7c6bd2e5b2ff8319eb6cc473f7a5ba474a3",
+      "metric_name": "mean_geometry_gain_percent",
+      "metric_value": 1.3739411524559197,
+      "metric_interpretation": "% cost reduction, mean by geometry",
+      "gate": true
+    },
+    {
+      "title": "Frozen 9+1 validation",
+      "artifact": "experiments/lkh/validation_audit.json",
+      "sha256": "f8a52be48a10a75be27ce9ab2027249c3b2378f2bd2a8e4c9c99e2920d5e6898",
+      "metric_name": "mean_geometry_gain_percent",
+      "metric_value": 0.8931899109836088,
+      "metric_interpretation": "% cost reduction, mean by geometry",
+      "gate": false
+    },
+    {
+      "title": "MDM29s + LKH versus MDM30s",
+      "artifact": "experiments/lkh/horizon30_audit.json",
+      "sha256": "2abbdee88618dd83e17c27beb4fbdce6bc263c96d2feb92872c2f12bd650fe18",
+      "metric_name": "mean_geometry_gain_percent",
+      "metric_value": 0.4796365213827732,
+      "metric_interpretation": "% cost reduction, TRAIN persistence; no test-unlocking gate",
+      "gate": null
+    },
+    {
+      "title": "Support + LKH from fixed incumbent",
+      "artifact": "experiments/lkh/support_audit.json",
+      "sha256": "b271a24f64d228db12cbc36de83d675723c9551005a5218ac15effbe28df6677",
+      "metric_name": "wins_vs_fixed",
+      "metric_value": 5,
+      "metric_interpretation": "geometries beating fixed-support LKH",
+      "gate": true
+    },
+    {
+      "title": "Support + LKH, 15s total",
+      "artifact": "experiments/lkh/support_total_audit.json",
+      "sha256": "c2181889b0bc45b970284f3034057217f988ca1bb996640101305e52961d729d",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_interpretation": "feasibility failures retained; conditional cost comparison",
+      "gate": false
+    },
+    {
+      "title": "Support + LKH, common fallback",
+      "artifact": "experiments/lkh/support_common_fallback_audit.json",
+      "sha256": "80d370360fdf284074742c9b1ed698c8a2942dd5b7ba1e1872f8d90d0b3d7a5b",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_interpretation": "15s total; implementation confound in Python 2-opt control",
+      "gate": false
+    },
+    {
+      "title": "Cheap construction + support descent",
+      "artifact": "experiments/lkh/direct_support_summary.json",
+      "sha256": "bb7a048902eb96a6c764f494877d1d56dc5919f807ca2183dc2b3a1a4d5a57f2",
+      "metric_name": "mean_gain_percent",
+      "metric_value": -2.5728735732599266,
+      "metric_interpretation": "% relative to historical cached MDM; not paired",
+      "gate": false
+    },
+    {
+      "title": "Diversified support descent",
+      "artifact": "experiments/lkh/diversification_audit.json",
+      "sha256": "e45adef44915bc8d1632f16b37c6aa4b7b461f0e6f74078c5d37a4a0acdca476",
+      "metric_name": "mean_gain_percent",
+      "metric_value": -6.133082486835535,
+      "metric_interpretation": "% relative to historical cached MDM; not paired",
+      "gate": false
+    },
+    {
+      "title": "Candidate-selection offline oracle",
+      "artifact": "experiments/lkh/candidate_oracle_audit.json",
+      "sha256": "00c60ccc24a64e2046821d68f6c3936af5fa8573df3309ebd10aa4d09bab56dc",
+      "metric_name": "mean_gain_percent",
+      "metric_value": 0.1589579498430205,
+      "metric_interpretation": "% over best top8, one state per TRAIN geometry",
+      "gate": false
+    },
+    {
+      "title": "Contracted exact-neighborhood offline oracle",
+      "artifact": "experiments/lkh/hard_fragment_audit.json",
+      "sha256": "be2fc98459359da6fdb2b451e28f0a1226f2bb232e89c45d4e008b838e8956a5",
+      "metric_name": "mean_gain_percent",
+      "metric_value": 0.500944676430357,
+      "metric_interpretation": "% over fixed LKH incumbent; extra offline work",
+      "gate": true
+    },
+    {
+      "title": "Ridge selection, held-out TRAIN geometry",
+      "artifact": "experiments/lkh/fragment_selection_results.json",
+      "sha256": "d8b2f473cadf32deefdaae78446f13e7477477aec0b3440c77a1179eba5c3925",
+      "metric_name": "mean_delta_vs_random_pp",
+      "metric_value": 0.09860785951744629,
+      "metric_interpretation": "percentage-point advantage over random expectation",
+      "gate": false
+    },
+    {
+      "title": "Random exact repair, 15s total",
+      "artifact": "experiments/lkh/exact_random_total_audit.json",
+      "sha256": "70bb4cf537c9243714c76cb559b623499ac110bb308a808a008b947fff8639ab",
+      "metric_name": null,
+      "metric_value": null,
+      "metric_interpretation": "major return-time anomalies and one technical retry; exploratory",
+      "gate": false
+    }
+  ],
+  "publication_ready": false,
+  "reserved_test_opened": false,
+  "invalid_instrumentation": [
+    "experiments/lkh/timing_diagnostic/invalid_clock_protocol.json"
+  ]
+}
