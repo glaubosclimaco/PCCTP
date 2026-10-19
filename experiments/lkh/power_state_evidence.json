@@ -1207,6 +1207,9 @@
     "command": "caffeinate -s -w 51070 -t 14400",
     "ac_only": true,
     "permanent_settings_changed": false,
-    "limitations": "does not establish that every previous delay was sleep, nor guarantee against manual sleep or closing the lid"
+    "limitations": "does not establish that every previous delay was sleep, nor guarantee against manual sleep or closing the lid",
+    "assertion_observed": true,
+    "aggregate_prevent_system_sleep_observed": 0,
+    "effectiveness_established": false
   }
 }
