@@ -2,8 +2,8 @@
   "status": "PASS",
   "batch_complete": false,
   "scope": "fixed-work diagnostic; censored cases retained; LKH receives additional time",
-  "cases_available": 5,
-  "routes_checked": 39,
+  "cases_available": 6,
+  "routes_checked": 44,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -59,6 +59,17 @@
       "native_wall_seconds": 4282.817836000002,
       "cpu_seconds": 1073.1788179999994,
       "published_best": 67286.0
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "status": "CENSORED",
+      "last_iteration": 10,
+      "mdm_cost": 10592.0,
+      "lkh_cost": 10529.0,
+      "gain_percent": 0.5947885196374623,
+      "native_wall_seconds": 1799.99179,
+      "cpu_seconds": 1747.8523659999996,
+      "published_best": 10529.0
     }
   ],
   "result_hashes": {
@@ -66,6 +77,7 @@
     "g_gil262_VT51_T158_W53_75.json": "b93718d46ce46031747a6114514034d9eb0242d94413bc553065c443c19d1f73",
     "g_gr229_VT45_T138_W46_50.json": "0dd07b9f5ee0976bf25120764dee2f3da0c3d5de618cce91ce922177ce16668e",
     "g_kroA200_VT40_T120_W40_25.json": "e47a57b1ce5693539af55c456bfe75953b9d9b4a6e199fe45f904f3795090ab3",
-    "g_pr226_VT44_T136_W46_50.json": "8f4eb38df74da0426760aac1cf7e00f19920429b9b04256084de5d0ccae4d792"
+    "g_pr226_VT44_T136_W46_50.json": "8f4eb38df74da0426760aac1cf7e00f19920429b9b04256084de5d0ccae4d792",
+    "g_rd400_VT80_T240_W80_25.json": "2b5db33678a539e3d0d11f4ae60c75ba3a0a1ca4ec34ddab49f2f91083188b82"
   }
 }
