@@ -48,9 +48,14 @@ def decode(repair, vector):
     return tour,cost
 
 
-def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges=None, local_branching_radius=None):
+def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges=None, local_branching_radius=None, rins=False, fixed_visits=None):
     began=time.perf_counter() if began is None else began
     repair=Repair(d);initial=start_vector(repair,route)
+    if fixed_visits is not None:
+        for v,value in fixed_visits.items():
+            if type(v) is not int or not 0<=v<repair.n or value not in (0,1):raise ValueError('Invalid fixed visit')
+            if initial[repair.m+v]!=value:raise ValueError('Fixed visit excludes incumbent')
+            repair.lb[repair.m+v]=value;repair.ub[repair.m+v]=value
     if allowed_edges is not None:
         allowed_edges={tuple(sorted(map(int,e))) for e in allowed_edges}
         if not allowed_edges<=set(repair.edges):raise ValueError('Invalid pool edge')
@@ -95,6 +100,27 @@ def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges
     h=highspy.Highs();h.setOptionValue('output_flag',False);h.setOptionValue('threads',1)
     h.setOptionValue('random_seed',42);h.setOptionValue('mip_rel_gap',0.)
     assert h.passModel(lp)==highspy.HighsStatus.kOk
+    rins_info=None
+    if rins:
+        saved_integrality=list(lp.integrality_)
+        lp.integrality_=[highspy.HighsVarType.kContinuous]*repair.width
+        assert h.passModel(lp)==highspy.HighsStatus.kOk
+        remaining=seconds-(time.perf_counter()-began)
+        if remaining<=0:raise RuntimeError('Setup exhausted budget')
+        h.setOptionValue('time_limit',min(10.,remaining));h.run()
+        relaxation=h.getSolution();lp_status=h.getModelStatus();fixed=[]
+        rins_lower=np.array(lp.col_lower_,copy=True);rins_upper=np.array(lp.col_upper_,copy=True)
+        if lp_status==highspy.HighsModelStatus.kOptimal and relaxation.value_valid:
+            for j in range(repair.f0):
+                value=float(relaxation.col_value[j])
+                if abs(value-initial[j])<=1e-6:
+                    fixed.append(dict(index=j,value=int(initial[j]),relaxation_value=value))
+                    rins_lower[j]=float(initial[j]);rins_upper[j]=float(initial[j])
+        rins_info=dict(lp_status=h.modelStatusToString(lp_status),fixed=fixed,
+                       binary_count=repair.f0,lp_stage_seconds=time.perf_counter()-began)
+        lp.col_lower_=rins_lower;lp.col_upper_=rins_upper
+        lp.integrality_=saved_integrality
+        assert h.passModel(lp)==highspy.HighsStatus.kOk
     best=list(route);bestcost=validate(d,best);events=[];errors=[];calls=0
     def capture(event):
         nonlocal best,bestcost,calls
@@ -124,8 +150,8 @@ def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges
     optimal=h.getModelStatus()==highspy.HighsModelStatus.kOptimal
     proven=optimal and elapsed<=seconds and abs(info.objective_function_value-bestcost)<1e-5
     return dict(warm_start=warm,start_status=start_status,version=h.version(),
-                proof_scope='local branching neighborhood' if local_branching_radius is not None else ('restricted edge pool' if allowed_edges is not None else 'full PCCTP'),
-                local_branching_radius=local_branching_radius,
+                proof_scope='fixed visit neighborhood' if fixed_visits is not None else 'RINS neighborhood' if rins else 'local branching neighborhood' if local_branching_radius is not None else ('restricted edge pool' if allowed_edges is not None else 'full PCCTP'),
+                local_branching_radius=local_branching_radius,rins=rins_info,fixed_visits=fixed_visits,
                 allowed_edge_count=len(allowed_edges) if allowed_edges is not None else repair.m,
                 cost=validate(d,best),initial_cost=validate(d,route),
                 improved=bestcost<validate(d,route)-1e-7,seconds=elapsed,
