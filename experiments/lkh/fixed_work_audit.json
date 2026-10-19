@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "batch_complete": false,
+  "batch_complete": true,
   "scope": "fixed-work diagnostic; censored cases retained; LKH receives additional time",
-  "cases_available": 6,
-  "routes_checked": 44,
+  "cases_available": 9,
+  "routes_checked": 68,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -70,6 +70,39 @@
       "native_wall_seconds": 1799.99179,
       "cpu_seconds": 1747.8523659999996,
       "published_best": 10529.0
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "status": "COMPLETED70",
+      "last_iteration": 70,
+      "mdm_cost": 7011.0,
+      "lkh_cost": 7006.0,
+      "gain_percent": 0.0713165026387106,
+      "native_wall_seconds": 624.0294759999961,
+      "cpu_seconds": 560.7114679999997,
+      "published_best": 6987.0
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "status": "COMPLETED70",
+      "last_iteration": 70,
+      "mdm_cost": 109147.0,
+      "lkh_cost": 109147.0,
+      "gain_percent": 0.0,
+      "native_wall_seconds": 375.78727400000207,
+      "cpu_seconds": 355.5776200000002,
+      "published_best": 108805.0
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "status": "COMPLETED70",
+      "last_iteration": 70,
+      "mdm_cost": 2447.0,
+      "lkh_cost": 2447.0,
+      "gain_percent": 0.0,
+      "native_wall_seconds": 154.66066299995873,
+      "cpu_seconds": 129.80465800000138,
+      "published_best": 2447.0
     }
   ],
   "result_hashes": {
@@ -78,6 +111,9 @@
     "g_gr229_VT45_T138_W46_50.json": "0dd07b9f5ee0976bf25120764dee2f3da0c3d5de618cce91ce922177ce16668e",
     "g_kroA200_VT40_T120_W40_25.json": "e47a57b1ce5693539af55c456bfe75953b9d9b4a6e199fe45f904f3795090ab3",
     "g_pr226_VT44_T136_W46_50.json": "8f4eb38df74da0426760aac1cf7e00f19920429b9b04256084de5d0ccae4d792",
-    "g_rd400_VT80_T240_W80_25.json": "2b5db33678a539e3d0d11f4ae60c75ba3a0a1ca4ec34ddab49f2f91083188b82"
+    "g_rd400_VT80_T240_W80_25.json": "2b5db33678a539e3d0d11f4ae60c75ba3a0a1ca4ec34ddab49f2f91083188b82",
+    "g_si175_VT35_T105_W35_50.json": "6e9c9627d16103979fa04812679a1c33a1ac35741adf112da1feeeb95d5e495c",
+    "g_ts225_VT45_T135_W45_50.json": "3b8def3df6215cf8406baa884590ffbdada715852a8c8d36b9460710bec87c87",
+    "g_tsp225_VT45_T45_W135_75.json": "62e548685430b90070faf71e5ccca0b7233b96fc9ad73fbcd82d8985d34a0302"
   }
 }
