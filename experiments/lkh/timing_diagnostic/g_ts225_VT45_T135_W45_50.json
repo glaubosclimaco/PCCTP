@@ -1,0 +1,43 @@
+{
+  "instance": "g_ts225_VT45_T135_W45_50",
+  "scope": "operational diagnostic only",
+  "wall_seconds": 1.5844734580000015,
+  "parent_cpu_seconds": 0.017589000000000077,
+  "child_user_cpu_seconds": 1.503449999999999,
+  "child_system_cpu_seconds": 0.017110000000000014,
+  "calibration_before": {
+    "wall_seconds": 0.20294349999999994,
+    "cpu_seconds": 0.20043199999999972,
+    "iterations": 345000
+  },
+  "calibration_after": {
+    "wall_seconds": 0.20604858300000117,
+    "cpu_seconds": 0.20038400000000012,
+    "iterations": 339000
+  },
+  "native": {
+    "instance": "g_ts225_VT45_T135_W45_50",
+    "geometry": "g_ts225",
+    "seed": 42,
+    "operator_policy": "original",
+    "method": "timed_MDM_original",
+    "budget_seconds": 15.0,
+    "process_wall_seconds": 521945.42567016697,
+    "elite_count_bounded": true,
+    "overrun_seconds": 521930.42567016697,
+    "hard_timeout": false,
+    "exit_code": 0,
+    "native_returned": true,
+    "feasible_before_deadline": false,
+    "payload_source": "g_ts225_VT45_T135_W45_50.native.raw",
+    "payload_read_errors": [],
+    "cost": null,
+    "route": [],
+    "anytime": [],
+    "native_cost_after_return": 112619,
+    "native_elapsed_seconds": 521945.419916167,
+    "clock_source": "clock_gettime(CLOCK_MONOTONIC)",
+    "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414",
+    "startup_debit_seconds": 521943.869596167
+  }
+}

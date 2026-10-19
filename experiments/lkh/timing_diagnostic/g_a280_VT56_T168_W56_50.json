@@ -1,0 +1,43 @@
+{
+  "instance": "g_a280_VT56_T168_W56_50",
+  "scope": "operational diagnostic only",
+  "wall_seconds": 3.419854375,
+  "parent_cpu_seconds": 0.027461999999999875,
+  "child_user_cpu_seconds": 2.963439,
+  "child_system_cpu_seconds": 0.101534,
+  "calibration_before": {
+    "wall_seconds": 0.202233125,
+    "cpu_seconds": 0.20051900000000034,
+    "iterations": 348000
+  },
+  "calibration_after": {
+    "wall_seconds": 0.20858579200000005,
+    "cpu_seconds": 0.20016899999999982,
+    "iterations": 331000
+  },
+  "native": {
+    "instance": "g_a280_VT56_T168_W56_50",
+    "geometry": "g_a280",
+    "seed": 42,
+    "operator_policy": "original",
+    "method": "timed_MDM_original",
+    "budget_seconds": 15.0,
+    "process_wall_seconds": 521947.251607334,
+    "elite_count_bounded": true,
+    "overrun_seconds": 521932.251607334,
+    "hard_timeout": false,
+    "exit_code": 0,
+    "native_returned": true,
+    "feasible_before_deadline": false,
+    "payload_source": "g_a280_VT56_T168_W56_50.native.raw",
+    "payload_read_errors": [],
+    "cost": null,
+    "route": [],
+    "anytime": [],
+    "native_cost_after_return": 2266,
+    "native_elapsed_seconds": 521947.2407463341,
+    "clock_source": "clock_gettime(CLOCK_MONOTONIC)",
+    "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050",
+    "startup_debit_seconds": 521944.084491334
+  }
+}

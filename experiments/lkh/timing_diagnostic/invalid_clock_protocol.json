@@ -1,0 +1,8 @@
+{
+  "status": "INVALID_DIAGNOSTIC",
+  "reason": "Python time.monotonic epoch differs from native CLOCK_MONOTONIC; parent timestamp sent in wrong epoch",
+  "observed_python_monotonic": 0.058080291,
+  "observed_clock_gettime": 522399.620846,
+  "source_before_sha256": "7d07f48c666e93f3587d505494a204e5a0ea007891f3ea7bb12d8cc341f75204",
+  "previous_main_comparators": "support_common_fallback and total_time use clock_gettime(CLOCK_MONOTONIC) already; not this diagnostic bug"
+}
