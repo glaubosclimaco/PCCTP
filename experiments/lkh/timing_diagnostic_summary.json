@@ -1,0 +1,42 @@
+{
+  "scope": "three corrected operational observations, not algorithm benchmark or explanation of prior stalls",
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "wall_seconds": 16.005984999996144,
+      "cpu_seconds": 13.693399999999999,
+      "cpu_wall_ratio": 0.8555174829917245,
+      "startup_debit_seconds": 0.03608600003644824,
+      "native_incumbent": true,
+      "native_cost": 2219,
+      "hard_timeout": false,
+      "calibration_wall_cpu_before": 1.0923044672372657,
+      "calibration_wall_cpu_after": 1.041704435877508
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "wall_seconds": 15.122956999985036,
+      "cpu_seconds": 13.537571000000002,
+      "cpu_wall_ratio": 0.8951669306481131,
+      "startup_debit_seconds": 0.0181200000224635,
+      "native_incumbent": true,
+      "native_cost": 11298,
+      "hard_timeout": false,
+      "calibration_wall_cpu_before": 1.037597900002996,
+      "calibration_wall_cpu_after": 1.050845222213874
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "wall_seconds": 17.155561999999918,
+      "cpu_seconds": 14.684316,
+      "cpu_wall_ratio": 0.85595074064027,
+      "startup_debit_seconds": 0.02512800000840798,
+      "native_incumbent": true,
+      "native_cost": 109738,
+      "hard_timeout": false,
+      "calibration_wall_cpu_before": 1.1700759184773342,
+      "calibration_wall_cpu_after": 1.0312458945268637
+    }
+  ],
+  "interpretation": "CPU and elapsed clock describe these runs only. Prior batches lacked CPU observations; no retrospective attribution to load, sleep, or app behavior is justified."
+}
