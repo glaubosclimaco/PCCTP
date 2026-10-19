@@ -5,9 +5,12 @@ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance,validate
 HERE=Path(__file__).resolve().parent;OUT=HERE/'support_total'
 
-def audit(common_fallback=False):
+def audit(common_fallback=False,exact_random=False):
     global OUT
     if common_fallback:OUT=HERE/'support_common_fallback'
+    if exact_random:OUT=HERE/'exact_random_total';common_fallback=True
+    target_arm='exact_random' if exact_random else 'support_lkh'
+    controls=('mdm','fixed_lkh') if exact_random else ('mdm','fixed_lkh','support_2opt')
     assert (OUT/'completion.json').exists(),'Batch still running'
     protocol=json.loads((OUT/'protocol.json').read_text());modes=protocol['modes'];rows=[];hashes={};failures={m:0 for m in modes};times={m:[] for m in modes}
     for c in protocol['cases']:
@@ -47,22 +50,22 @@ def audit(common_fallback=False):
                 times[m].append(r['wall_seconds']);pair[m]=dict(feasible=r['feasible'],cost=r['cost'])
             pairs.append(dict(seed=seed,arms=pair))
         comparisons={}
-        for control in ('mdm','fixed_lkh','support_2opt'):
-            joint=[p for p in pairs if p['arms'][control]['feasible'] and p['arms']['support_lkh']['feasible']]
-            comparisons[control]=dict(jointly_feasible_pairs=len(joint),gain_percent=statistics.mean(100*(p['arms'][control]['cost']-p['arms']['support_lkh']['cost'])/p['arms'][control]['cost'] for p in joint) if joint else None)
+        for control in controls:
+            joint=[p for p in pairs if p['arms'][control]['feasible'] and p['arms'][target_arm]['feasible']]
+            comparisons[control]=dict(jointly_feasible_pairs=len(joint),gain_percent=statistics.mean(100*(p['arms'][control]['cost']-p['arms'][target_arm]['cost'])/p['arms'][control]['cost'] for p in joint) if joint else None)
             if len(joint)==3:
-                diff=statistics.mean(p['arms'][control]['cost']-p['arms']['support_lkh']['cost'] for p in joint)
+                diff=statistics.mean(p['arms'][control]['cost']-p['arms'][target_arm]['cost'] for p in joint)
                 comparisons[control]['classification']='win' if diff>0 else 'loss' if diff<0 else 'tie'
             else:comparisons[control]['classification']='incomplete_feasibility'
         rows.append(dict(instance=name,pairs=pairs,comparisons=comparisons))
     summary={}
-    for control in ('mdm','fixed_lkh','support_2opt'):
+    for control in controls:
         complete=[r['comparisons'][control] for r in rows if r['comparisons'][control]['jointly_feasible_pairs']==3]
         summary[control]=dict(fully_feasible_geometries=len(complete),wins=sum(r['classification']=='win' for r in complete),losses=sum(r['classification']=='loss' for r in complete),mean_gain_percent=statistics.mean(r['gain_percent'] for r in complete) if complete else None)
-    gate=not any(failures.values()) and summary['mdm']['mean_gain_percent']>=.5 and summary['mdm']['wins']>=6 and summary['mdm']['losses']<=1 and summary['fixed_lkh']['wins']>=3 and summary['support_2opt']['wins']>=3
+    gate=not any(failures.values()) and summary['mdm']['mean_gain_percent']>=.5 and summary['mdm']['wins']>=6 and summary['mdm']['losses']<=1 and summary['fixed_lkh']['wins']>=3 and (exact_random or summary['support_2opt']['wins']>=3)
     result=dict(status='PASS',scope='exploratory TRAIN; incomplete feasibility is retained, not silently excluded',feasibility_failures=failures,comparisons=summary,gate_passed=gate,rows=rows,result_hashes=hashes,timing={m:dict(mean=statistics.mean(t),maximum=max(t)) for m,t in times.items()})
-    (HERE/('support_common_fallback_audit.json' if common_fallback else 'support_total_audit.json')).write_text(json.dumps(result,indent=2)+'\n')
+    (HERE/('exact_random_total_audit.json' if exact_random else 'support_common_fallback_audit.json' if common_fallback else 'support_total_audit.json')).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k not in ('rows','result_hashes')}))
 if __name__=='__main__':
-    assert sys.argv[1:] in ([],['--common-fallback'])
-    audit(common_fallback='--common-fallback' in sys.argv)
+    assert sys.argv[1:] in ([],['--common-fallback'],['--exact-random'])
+    audit(common_fallback='--common-fallback' in sys.argv,exact_random='--exact-random' in sys.argv)

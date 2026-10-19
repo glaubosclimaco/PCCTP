@@ -19,7 +19,7 @@ def check(d,route,cost):
     return actual
 
 if __name__=='__main__':
-    assert len(sys.argv)==2 and sys.argv[1] in ('support_total','support_diagnostic','support_common_fallback','compiled_control','direct_support','diversification')
+    assert len(sys.argv)==2 and sys.argv[1] in ('support_total','support_diagnostic','support_common_fallback','compiled_control','direct_support','diversification','exact_random_total')
     folder=HERE/sys.argv[1];instances={};hashes={};checked=0;empty=0
     for p in sorted(folder.glob('*.json')):
         if p.name in ('protocol.json','completion.json'):continue
@@ -37,6 +37,12 @@ if __name__=='__main__':
         if r.get('post'):
             post=r['post'];check(d,post['route'],post['cost']);checked+=1
             for e in post['trace']:check(d,e['route'],e['cost']);checked+=1
+            for record in post.get('records',[]):
+                result=record['result'];check(d,result['route'],result['cost']);checked+=1
+                preceding=[e for e in post['trace'] if e['seconds']<record['seconds']]
+                assert preceding
+                fixed=set(preceding[-1]['route'])-set(record['released'])
+                assert set(result['route'])-set(record['released'])==fixed
     report=dict(status='PASS',scope='independent raw-input scalar route feasibility and cost; not deadline audit',batch=folder.name,batch_complete=(folder/'completion.json').exists(),files=len(hashes),routes_checked=checked,empty_incumbent_records=empty,input_hashes={n:d['input_hash'] for n,d in instances.items()},result_hashes=hashes)
     (HERE/(folder.name+'_raw_audit.json')).write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ('input_hashes','result_hashes')}))
