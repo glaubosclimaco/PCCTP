@@ -40,7 +40,12 @@ def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_star
             code=process.returncode
         except subprocess.TimeoutExpired:timed_out=True
         wall=time.clock_gettime(time.CLOCK_MONOTONIC)-began
-    payload=json.loads(raw.read_text()) if raw.exists() else json.loads(checkpoint.read_text()) if checkpoint.exists() else None
+    payload=None;payload_source=None;payload_read_errors=[]
+    for source in (raw,checkpoint):
+        if not source.exists():continue
+        try:payload=json.loads(source.read_text());payload_source=source.name;break
+        except (json.JSONDecodeError,UnicodeDecodeError) as error:
+            payload_read_errors.append(dict(file=source.name,error=str(error)))
     d=read_instance(ROOT/'data'/name);mapping={int(v):i for i,v in enumerate(d['visits'])}
     trace=[]
     if payload:
@@ -58,6 +63,7 @@ def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_star
              elite_count_bounded=elite_count_bounded,
              overrun_seconds=max(0.,wall-budget),hard_timeout=timed_out,exit_code=code,
              native_returned=bool(payload and payload['completed']),feasible_before_deadline=bool(trace),
+             payload_source=payload_source,payload_read_errors=payload_read_errors,
              cost=trace[-1]['cost'] if trace else None,route=trace[-1]['route'] if trace else [],anytime=trace,
              native_cost_after_return=payload['cost'] if payload else None,
              native_elapsed_seconds=payload['seconds'] if payload else None,
