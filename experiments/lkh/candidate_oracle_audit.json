@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "scope": "offline TRAIN sampled oracle; not proven neighborhood optimum or end-to-end",
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "pool_size": 465,
+      "evaluated": 48,
+      "best_top8": 2090.0,
+      "best_sample": 2090.0,
+      "gain_percent": 0.0,
+      "outside_improves": false
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "pool_size": 435,
+      "evaluated": 48,
+      "best_top8": 2045.0,
+      "best_sample": 2045.0,
+      "gain_percent": 0.0,
+      "outside_improves": false
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "pool_size": 397,
+      "evaluated": 48,
+      "best_top8": 99715.0,
+      "best_sample": 98902.0,
+      "gain_percent": 0.8153236724665296,
+      "outside_improves": true
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "pool_size": 56,
+      "evaluated": 48,
+      "best_top8": 23732.0,
+      "best_sample": 23675.0,
+      "gain_percent": 0.24018203269846622,
+      "outside_improves": true
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "pool_size": 504,
+      "evaluated": 48,
+      "best_top8": 70939.0,
+      "best_sample": 70872.0,
+      "gain_percent": 0.09444734208263438,
+      "outside_improves": true
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "pool_size": 541,
+      "evaluated": 48,
+      "best_top8": 10783.0,
+      "best_sample": 10783.0,
+      "gain_percent": 0.0,
+      "outside_improves": false
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "pool_size": 55,
+      "evaluated": 48,
+      "best_top8": 6968.0,
+      "best_sample": 6968.0,
+      "gain_percent": 0.0,
+      "outside_improves": false
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "pool_size": 64,
+      "evaluated": 48,
+      "best_top8": 109738.0,
+      "best_sample": 109430.0,
+      "gain_percent": 0.28066850133955423,
+      "outside_improves": true
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "pool_size": 24,
+      "evaluated": 24,
+      "best_top8": 2455.0,
+      "best_sample": 2455.0,
+      "gain_percent": 0.0,
+      "outside_improves": false
+    }
+  ],
+  "routes_checked": 825,
+  "wins": 4,
+  "mean_gain_percent": 0.1589579498430205,
+  "gate_passed": false,
+  "result_hashes": {
+    "g_a280_VT56_T168_W56_50.json": "f173b5f57951907e409a959eea5f71b99389c02a5aad5bb29eaa01934054732c",
+    "g_gil262_VT51_T158_W53_75.json": "e66f31dd0d0ed03af39462c5a6fb302d670bc25257ae7b3a486c528fc6de83e2",
+    "g_gr229_VT45_T138_W46_50.json": "2594801af24e27649be513952ced012efc8e5b03c3b6190e0c507f2b4e98e1ec",
+    "g_kroA200_VT40_T120_W40_25.json": "b94347180d13f46b79d8658ebebe52f8c0a29732bd48cf8b9654d695183e15f9",
+    "g_pr226_VT44_T136_W46_50.json": "2e279912a75be39d1ef9ad96b9135f9f5e61c4c932108f6e55ad2b21d99a3c24",
+    "g_rd400_VT80_T240_W80_25.json": "effdd11815e44466829c6eef0b5674326dbd1641d154362b1e15fa5413b9cec6",
+    "g_si175_VT35_T105_W35_50.json": "54a1da72ebdbf60dfed60ccf163dd4729726955899ac8173844c2069a2fb907d",
+    "g_ts225_VT45_T135_W45_50.json": "412702aed666cc1e0e06a57fbc9de2212557d06b0626bd6b0d3fdb5b7fb822b4",
+    "g_tsp225_VT45_T45_W135_75.json": "176f9a29eba1a96195c1d158642ba07313436510728be2316da12186b3ed6ca7"
+  }
+}
