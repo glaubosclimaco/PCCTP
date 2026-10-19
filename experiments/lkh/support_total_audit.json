@@ -1,0 +1,1034 @@
+{
+  "status": "PASS",
+  "scope": "exploratory TRAIN; incomplete feasibility is retained, not silently excluded",
+  "feasibility_failures": {
+    "mdm": 0,
+    "fixed_lkh": 6,
+    "support_2opt": 4,
+    "support_lkh": 3
+  },
+  "comparisons": {
+    "mdm": {
+      "fully_feasible_geometries": 8,
+      "wins": 5,
+      "losses": 2,
+      "mean_gain_percent": 0.8024960504255692
+    },
+    "fixed_lkh": {
+      "fully_feasible_geometries": 5,
+      "wins": 4,
+      "losses": 0,
+      "mean_gain_percent": 0.44089402319928217
+    },
+    "support_2opt": {
+      "fully_feasible_geometries": 7,
+      "wins": 6,
+      "losses": 1,
+      "mean_gain_percent": 1.4265181727495693
+    }
+  },
+  "gate_passed": false,
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2253
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2257
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2026
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2032
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2033
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2015.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2154
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2179
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2179
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2168
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": -0.0948509579856623,
+          "classification": "loss"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 2,
+          "gain_percent": 0.6707164487068763,
+          "classification": "incomplete_feasibility"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 2,
+          "gain_percent": 0.6951048859490729,
+          "classification": "incomplete_feasibility"
+        }
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2117
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2146
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2134
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2100.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2154
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2057.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2161
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2045.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2046
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2053
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2046
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2010.0
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 2.5409689232302326,
+          "classification": "win"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 1.6071308461004745,
+          "classification": "win"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 2.906889379606826,
+          "classification": "win"
+        }
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 99874
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 99715.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 100139
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 99715.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 101162
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 99311.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 102204
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 98948.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 102866
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 100841.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 102866
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 100841.0
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 1.4387833020957612,
+          "classification": "win"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.12183947397569252,
+          "classification": "win"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 1.8592590778604408,
+          "classification": "win"
+        }
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 23758
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 23888.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 23781
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 23888.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 23584
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 23605
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 23605
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 23554.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 23499
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 23495.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 23499
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 23495.0
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": -0.1343190736008273,
+          "classification": "loss"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.07201864011861893,
+          "classification": "win"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": -0.07228703522074145,
+          "classification": "loss"
+        }
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 71921
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 72126
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 70930.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 69890
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 69890
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 69192
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 69049
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 68169
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 68389.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 68978
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 68709
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.5963571100970707,
+          "classification": "win"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 2,
+          "gain_percent": 0.36770399791915287,
+          "classification": "incomplete_feasibility"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.7516199833791262,
+          "classification": "win"
+        }
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 11464
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_lkh": {
+              "feasible": false,
+              "cost": null
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 12282
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_lkh": {
+              "feasible": false,
+              "cost": null
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 11423
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_lkh": {
+              "feasible": false,
+              "cost": null
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 0,
+          "gain_percent": null,
+          "classification": "incomplete_feasibility"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 0,
+          "gain_percent": null,
+          "classification": "incomplete_feasibility"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 0,
+          "gain_percent": null,
+          "classification": "incomplete_feasibility"
+        }
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 7452
+            },
+            "fixed_lkh": {
+              "feasible": false,
+              "cost": null
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 7964
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 6871.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 7585
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 7006.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 7508
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 6871.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 7329
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 7366.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 7342
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 8177
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 1.8798023246036273,
+          "classification": "win"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 2,
+          "gain_percent": -4.541563187490122,
+          "classification": "incomplete_feasibility"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 3.6118732293220064,
+          "classification": "win"
+        }
+      }
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 109738
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 109738
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 109738
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 109738
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 110051
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 110538
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 110538
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 109200.0
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 108989
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 109200.0
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 110265
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 109200.0
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.19322677496435092,
+          "classification": "win"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.40348115580162475,
+          "classification": "win"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.7254328177070345,
+          "classification": "win"
+        }
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "pairs": [
+        {
+          "seed": 42,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2455
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2455
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2455
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2455
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2457
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2457
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2457
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2457
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "arms": {
+            "mdm": {
+              "feasible": true,
+              "cost": 2450
+            },
+            "fixed_lkh": {
+              "feasible": true,
+              "cost": 2450
+            },
+            "support_2opt": {
+              "feasible": true,
+              "cost": 2465
+            },
+            "support_lkh": {
+              "feasible": true,
+              "cost": 2450.0
+            }
+          }
+        }
+      ],
+      "comparisons": {
+        "mdm": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.0,
+          "classification": "tie"
+        },
+        "fixed_lkh": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.0,
+          "classification": "tie"
+        },
+        "support_2opt": {
+          "jointly_feasible_pairs": 3,
+          "gain_percent": 0.20283975659229211,
+          "classification": "win"
+        }
+      }
+    }
+  ],
+  "result_hashes": {
+    "g_a280_VT56_T168_W56_50.seed42.mdm.json": "5f34771ee54cbbc85164c0454cd9b57e3aba93d6d313a92d24969ab8365fc672",
+    "g_a280_VT56_T168_W56_50.seed42.mdm.native.json": "bdfc1253389b747ef7664a31dafd393a079727856ffcf03ea6c5efaec70aa104",
+    "g_a280_VT56_T168_W56_50.seed42.fixed_lkh.json": "e6191199b734dc08d624d7e9b8432696809e3ee6734f3a95e8fc15d2aa804d3a",
+    "g_a280_VT56_T168_W56_50.seed42.fixed_lkh.native.json": "12e341a2975a51a6a90c086957c589bb7f626cf10bee8c5e59baf5aa07226bbd",
+    "g_a280_VT56_T168_W56_50.seed42.support_2opt.json": "245bb4e23288333097972553a14876a2cc30359ce2f8b9f8b2d3812c5814c890",
+    "g_a280_VT56_T168_W56_50.seed42.support_2opt.native.json": "39d4bace80c7a83afe268e0d24430d230e217eac11fc0ab77fdbd8edec435663",
+    "g_a280_VT56_T168_W56_50.seed42.support_lkh.json": "21881223107d9d9cd016e23779360f0126f7c92378accc5abca6bb98bedacdd5",
+    "g_a280_VT56_T168_W56_50.seed42.support_lkh.native.json": "21e543caa9d777812bbe20970978d7841450c3064a1254f9ca0f5372989c846b",
+    "g_a280_VT56_T168_W56_50.seed43.mdm.json": "9d128400d6d292e2f5ae1d6a1b83128bc90dcbc73f96d3e33196a37ce3a67569",
+    "g_a280_VT56_T168_W56_50.seed43.mdm.native.json": "fca6d786d81676cb5b9b230ed1656b2d395f6dcf036e24cbbf43cd540bac82a0",
+    "g_a280_VT56_T168_W56_50.seed43.fixed_lkh.json": "7014aef45e239a6f62edb7b6bb3b9fc8133cb2a58377cd602c52f1d25ae3b6a9",
+    "g_a280_VT56_T168_W56_50.seed43.fixed_lkh.native.json": "eb4a127de206e778d67d7e0bd8cf1e3870b09964f099a403476293f599286de5",
+    "g_a280_VT56_T168_W56_50.seed43.support_2opt.json": "6b5263433f340f870bd6058ca5599561182da42fd737640fe3814b3a3586989f",
+    "g_a280_VT56_T168_W56_50.seed43.support_2opt.native.json": "9a12c24ae97555f531cd93d176581b835829e409d697d985addba394320205d2",
+    "g_a280_VT56_T168_W56_50.seed43.support_lkh.json": "723924260f3eea23b94e66883e1a77f712f04060cf1ff910b539279ee2454d2b",
+    "g_a280_VT56_T168_W56_50.seed43.support_lkh.native.json": "4f39969091daf583a698a6304ec783bbdf078b11cf732bc53aa9ccd1b9416858",
+    "g_a280_VT56_T168_W56_50.seed44.mdm.json": "43e6bdcce48e1cd72d84a147b2954ef94bfcf785620107306e56020057f9fe6b",
+    "g_a280_VT56_T168_W56_50.seed44.mdm.native.json": "ef842e5875e5a7ffd80f3bd2c52ce2c24c46904b2c182972e7695f9deafb91ef",
+    "g_a280_VT56_T168_W56_50.seed44.fixed_lkh.json": "affbc231fcfcac7d88cc0a25d799627607bb28eb6567c7be898d597ab617a72b",
+    "g_a280_VT56_T168_W56_50.seed44.fixed_lkh.native.json": "046048a820317c6e04b671756f76159c123027f74d91106e4f0018fb240d4ade",
+    "g_a280_VT56_T168_W56_50.seed44.support_2opt.json": "10255118de7064cb10a9cde58a2687ec361a6c5739d6a4e582fc7bf14ab7da1a",
+    "g_a280_VT56_T168_W56_50.seed44.support_2opt.native.json": "2b92bc00d3a7a0d871c4eb30a9004d62bbf921e4da757037846d57293639384c",
+    "g_a280_VT56_T168_W56_50.seed44.support_lkh.json": "201cfb197d9f465f5c6b04a3ec042188700f1191a4e28080080ca3a8a0be12fb",
+    "g_a280_VT56_T168_W56_50.seed44.support_lkh.native.json": "f2c1e8de2ea6c7a6fa4fac003ec0a370a5b1a4d8d7886987642e55220c1fe0fe",
+    "g_gil262_VT51_T158_W53_75.seed42.mdm.json": "c9438875d29a448a3029bfa2f0a3f4ac48342bb7faa7d29194d8bf13f5a066d5",
+    "g_gil262_VT51_T158_W53_75.seed42.mdm.native.json": "611728c1d819215cf0bee70d32c531a9e71d88838ea8abf1f0f3e63f9e27e386",
+    "g_gil262_VT51_T158_W53_75.seed42.fixed_lkh.json": "7f7d0491e857979943f892c725dd44ba8d9f28b33da2d76632c0b4892a0394f8",
+    "g_gil262_VT51_T158_W53_75.seed42.fixed_lkh.native.json": "1f63f38a5c41ee1111dbdd93f0969fc56a01d85b83f3b1233bd35cdc6c7e24cf",
+    "g_gil262_VT51_T158_W53_75.seed42.support_2opt.json": "419b5f859f726649b44ceaae30e76a38ba65f30821695e9d4254f7e4a64049f8",
+    "g_gil262_VT51_T158_W53_75.seed42.support_2opt.native.json": "46ae9e1eb89ac87f64bb5d678cc4190013345ff8cdab101c5afbb05a9ccc5cae",
+    "g_gil262_VT51_T158_W53_75.seed42.support_lkh.json": "237537dfda8e859fc07b5b2ed84b6112d8625d9d18864f087cfa065812137f33",
+    "g_gil262_VT51_T158_W53_75.seed42.support_lkh.native.json": "a3d29865b3f8c66df147273979bf6d14fcf2a00e28ca038f3fd513420e0f3898",
+    "g_gil262_VT51_T158_W53_75.seed43.mdm.json": "86d5022cfafbd554b3bd56d49108d1deee39f95f4bfb65cbef25d4718cb47802",
+    "g_gil262_VT51_T158_W53_75.seed43.mdm.native.json": "54b98b9f3daa5c09b32dd39eaf0684330c288030fa490b55252fc9dbd9f76e92",
+    "g_gil262_VT51_T158_W53_75.seed43.fixed_lkh.json": "af3dfb1210705d50f24e6ad453d084a8915fd303780b6a7dd8516c64c8b3087e",
+    "g_gil262_VT51_T158_W53_75.seed43.fixed_lkh.native.json": "e0bbee99515a1c69478b4bdb0ba5cb0578d24bbc922bec97a18a7045f4d63446",
+    "g_gil262_VT51_T158_W53_75.seed43.support_2opt.json": "7c3317e10bc547e22594cd31b100a1d595e07b7e60888adc2ede93bd292f1ede",
+    "g_gil262_VT51_T158_W53_75.seed43.support_2opt.native.json": "98f37f4509a98d675d8d9f3668b1583747eceebf5de8315d860caf6ab9f9e617",
+    "g_gil262_VT51_T158_W53_75.seed43.support_lkh.json": "2fa16f82e7b02c64849b36837c92fc9ae26373f2c92bdf2678bee61c529cbec5",
+    "g_gil262_VT51_T158_W53_75.seed43.support_lkh.native.json": "a2eb857b1bd1a768d30e7fb6f2679a84df1bb934a49d123fc84ef6a83f7dd02e",
+    "g_gil262_VT51_T158_W53_75.seed44.mdm.json": "9c3d85ef6a6180abac881be7a465b8d2503dd9c0c474b36d386f416c8d979f82",
+    "g_gil262_VT51_T158_W53_75.seed44.mdm.native.json": "1984be5403fb06f30f084febcb3b676cc6edb35712f4bdc05503e31d574ece1d",
+    "g_gil262_VT51_T158_W53_75.seed44.fixed_lkh.json": "701792ab8926cea0aaed39f29d8c63fb1c0f7cc57d9269035253d26a5d35ff6f",
+    "g_gil262_VT51_T158_W53_75.seed44.fixed_lkh.native.json": "b085ac4c64738958f50e4351beb9d3f0fb843928707d9c3fb294617dd343d313",
+    "g_gil262_VT51_T158_W53_75.seed44.support_2opt.json": "2cb4dfc326d1eac920012fdfb9ee04acbd6f6eb5f5fa74ae88e3239f01f6cba9",
+    "g_gil262_VT51_T158_W53_75.seed44.support_2opt.native.json": "2763deeff309a8dae6c802a8c6a38281051a8bcd48f3a67475159b0c64b9ff1d",
+    "g_gil262_VT51_T158_W53_75.seed44.support_lkh.json": "87c19efbf5abe931300be3a35802771b090cd967f6c1e71f58cf99371af23ce5",
+    "g_gil262_VT51_T158_W53_75.seed44.support_lkh.native.json": "bfe730f733b3fee83449d597e44b3092e27f5d0fd3ea71cf6489e9047d56c481",
+    "g_gr229_VT45_T138_W46_50.seed42.mdm.json": "6041343f9be649812f0556050e8530fd1cd9ca24272a25584ffa0c053ba0d5f4",
+    "g_gr229_VT45_T138_W46_50.seed42.mdm.native.json": "ec1365ccb6c64ba67a76d8b4d1a56878a89edf250ea7133bbc79ee809ff9f75d",
+    "g_gr229_VT45_T138_W46_50.seed42.fixed_lkh.json": "3cd09ea1c535bb6e5647cee3b441fb9806a86a1b63e9200751f41038fe1f884a",
+    "g_gr229_VT45_T138_W46_50.seed42.fixed_lkh.native.json": "85413a84a687d83fa40cb644a10f9fd952eec12a88525b100473828059530d31",
+    "g_gr229_VT45_T138_W46_50.seed42.support_2opt.json": "f57b7ceaf9f57c2c3d50a038f792e410431936a33cfba98bac444f618890eec3",
+    "g_gr229_VT45_T138_W46_50.seed42.support_2opt.native.json": "f2822b6ae50b05d7988aa007f04bc6e4e9111c3d1651d4dccc0cb9661cfed422",
+    "g_gr229_VT45_T138_W46_50.seed42.support_lkh.json": "47398c5e63e8d3a42d0f314e4043b81df526654a216d88943a5b39374e9f1aea",
+    "g_gr229_VT45_T138_W46_50.seed42.support_lkh.native.json": "bb1ab54d0f91c91ecf8fb1c3d755fe2a3892f10a72f40dc150971ac348e3b16d",
+    "g_gr229_VT45_T138_W46_50.seed43.mdm.json": "0a1e0e8768229b029d056ec407395c479c5a8c280fc64be363d25b4e72ad3a6e",
+    "g_gr229_VT45_T138_W46_50.seed43.mdm.native.json": "129769cd6770516c2cce706f0955e6c086b646aab0a10a40d98647f66e908064",
+    "g_gr229_VT45_T138_W46_50.seed43.fixed_lkh.json": "187c8ed17b13d388b63e0bb9cf058f2ea6c81d318e6771f1649339e143a2058e",
+    "g_gr229_VT45_T138_W46_50.seed43.fixed_lkh.native.json": "8cf90364bd21af5621071752b5a6fd5ae48208bdcf520b70a012319cf6a57449",
+    "g_gr229_VT45_T138_W46_50.seed43.support_2opt.json": "240e619054bf60bf1cfd6d833a825563ec11c884ac4c0ec04e577308691771a3",
+    "g_gr229_VT45_T138_W46_50.seed43.support_2opt.native.json": "aab5ef466c795e11e78ae50db8fe85d710c71e3a852586725d73f8303606e029",
+    "g_gr229_VT45_T138_W46_50.seed43.support_lkh.json": "bbac59e57e7724f6dab30e357a9d82932b6b853e9ca5adfb0f724146b0458579",
+    "g_gr229_VT45_T138_W46_50.seed43.support_lkh.native.json": "5fcf81f7b41690c0472c1a9c3959c4484c54d1bebdff38ebd3f006964985905f",
+    "g_gr229_VT45_T138_W46_50.seed44.mdm.json": "441e53e20fb9fe67962f01b1f232d9d537f7b43c44503ee0ec50f7dbfa91b725",
+    "g_gr229_VT45_T138_W46_50.seed44.mdm.native.json": "ba92c3e712f1776ac0a98f45ca2b1fdcd764344659d7f3bfdd6b208925454ced",
+    "g_gr229_VT45_T138_W46_50.seed44.fixed_lkh.json": "94d2d09d41c8eeb24f5a4cd13a223708345e5601547eb12eed8e3ae6e8d3ca5e",
+    "g_gr229_VT45_T138_W46_50.seed44.fixed_lkh.native.json": "83e591cf920641d236667bc3fef0490c3fc40e000d2e1ffd935f3c7163b132fa",
+    "g_gr229_VT45_T138_W46_50.seed44.support_2opt.json": "a54b0be3cfdb705df74c002cac913310db13c04624e223b9d4d479d18b6bf996",
+    "g_gr229_VT45_T138_W46_50.seed44.support_2opt.native.json": "b16e606e9f28d6bb3261bfba461e7c6e00aa5ea6778bf0d730cbdfb559c91d88",
+    "g_gr229_VT45_T138_W46_50.seed44.support_lkh.json": "80b073652135b1b1b90b974971acc90c2d024fd33f11fdade28ce2aa3f824f60",
+    "g_gr229_VT45_T138_W46_50.seed44.support_lkh.native.json": "c518f856ebfdae3fcf71233dde9fb7989d6086dc1e903de34b041cba970ba027",
+    "g_kroA200_VT40_T120_W40_25.seed42.mdm.json": "de11affa9124bdf1b52d6c14695f0fed002a6103194b4750ca33a51c2d37ffe4",
+    "g_kroA200_VT40_T120_W40_25.seed42.mdm.native.json": "6d16a44df68b9164735cc6e31786b3bff55db20dac6d00018dd4888167487798",
+    "g_kroA200_VT40_T120_W40_25.seed42.fixed_lkh.json": "5cf96296f2f65e4f734ba2a1478d34e5c51c7875ad43686be5d0c340d2d11f2d",
+    "g_kroA200_VT40_T120_W40_25.seed42.fixed_lkh.native.json": "5f4a6459361c947d573a54f391ca356290bd9cf45984d9fdf34b00a2e42fcb76",
+    "g_kroA200_VT40_T120_W40_25.seed42.support_2opt.json": "7f4def1b2c5c7e287fa5c9f0ae9542082a69ce12b36258801a2e9666078c430b",
+    "g_kroA200_VT40_T120_W40_25.seed42.support_2opt.native.json": "2fde8c6d74e69dfe74f64a532c044038260baf192cc7f29ceebaa644388889b7",
+    "g_kroA200_VT40_T120_W40_25.seed42.support_lkh.json": "69ba473ae3e2b9e3ae99ad86e29c88df8394790b7753b1f6e137257f635f7278",
+    "g_kroA200_VT40_T120_W40_25.seed42.support_lkh.native.json": "a0d514c0147a8d9c9597bca441172b75e9ecd743d30fe46a2b9dcc3cbe5cf28c",
+    "g_kroA200_VT40_T120_W40_25.seed43.mdm.json": "a73b7741cccc1c8a48b2be4c68b5ffd2b22b846dc707ca8cd0017391b4bead02",
+    "g_kroA200_VT40_T120_W40_25.seed43.mdm.native.json": "e4c943483e9b7bbb2ae10d6313a1de0923a8410fa655bb715341362e58c0521b",
+    "g_kroA200_VT40_T120_W40_25.seed43.fixed_lkh.json": "529ff66554fe062b404d9eda909eab0afc0ef0218c9a20d229d1f7c0c9d49d28",
+    "g_kroA200_VT40_T120_W40_25.seed43.fixed_lkh.native.json": "9b622accf7e74f03cbf43a65b1fb7e5695ad3d529c3b172d4b85b859b52ce2bd",
+    "g_kroA200_VT40_T120_W40_25.seed43.support_2opt.json": "88529b26d148448c9681243f29cb62c92cd9f5b32aaea5ad23fecb1fcd04b553",
+    "g_kroA200_VT40_T120_W40_25.seed43.support_2opt.native.json": "d46386276806db4317eb29bd13acab47edb64b7f687675e3815489d4b562d6ea",
+    "g_kroA200_VT40_T120_W40_25.seed43.support_lkh.json": "6183baf2936e610fe7d034ba76774683fc0017995549ca5fdb9a26458b036011",
+    "g_kroA200_VT40_T120_W40_25.seed43.support_lkh.native.json": "ddc0c4a1fa64af240aa14cbbca497447a66be9848d9443ca57d95454f7f63ba2",
+    "g_kroA200_VT40_T120_W40_25.seed44.mdm.json": "1da38acc7bccb506c27d001d055639c27a81c1ee1283f0b78ba09da74ffb7ecd",
+    "g_kroA200_VT40_T120_W40_25.seed44.mdm.native.json": "b63c9b974eaa1b30879f8de825ed2ad93952b13a54a7395c1962ee641bbcf90e",
+    "g_kroA200_VT40_T120_W40_25.seed44.fixed_lkh.json": "47dbe4a7eeb858da3fe3bfa82b6c6fa43b52a0ed3550fcbde3cce01583fce671",
+    "g_kroA200_VT40_T120_W40_25.seed44.fixed_lkh.native.json": "45c0aa8a56ecff81cfb756ba19df67086da679020dfae7c41ae252e0d1edde1f",
+    "g_kroA200_VT40_T120_W40_25.seed44.support_2opt.json": "0d22bb9e4e563beb20162b421ae92e7a73c0c3bfdb47ec26829b1edf3a61e4d2",
+    "g_kroA200_VT40_T120_W40_25.seed44.support_2opt.native.json": "d120b86f24ebd0d97f6aa1b886631158a43eb256c8d0ee253f2f03c47ceba8c7",
+    "g_kroA200_VT40_T120_W40_25.seed44.support_lkh.json": "982be459b27dc1f5d5a1d571094433ebf5f309012ad2980dd26259cec985d611",
+    "g_kroA200_VT40_T120_W40_25.seed44.support_lkh.native.json": "3b322de8b3e0d8cdfb842639096ee9b8720790ff7bdb457529c339d2261d7a2a",
+    "g_pr226_VT44_T136_W46_50.seed42.mdm.json": "87f4897e369bdb8b03de703ede0a1954ad23c270c19c65cfc24f3bf0085e9aea",
+    "g_pr226_VT44_T136_W46_50.seed42.mdm.native.json": "5c8f6ae236d49f6dfef8a00ae7da402551322b739599309650837530f8f85bb4",
+    "g_pr226_VT44_T136_W46_50.seed42.fixed_lkh.json": "aec8b3a58377175fe7c5abf0dafe418a9f519b4b462c78ab372d1e4b81283245",
+    "g_pr226_VT44_T136_W46_50.seed42.fixed_lkh.native.json": "e1ccae9fb76d5f70800c6928d6e8be4bef19aea6b3d94ddb32fc5949f6c9b7dd",
+    "g_pr226_VT44_T136_W46_50.seed42.support_2opt.json": "0ba682795d6d1486295975187b7fd6c2a23f4433d88e77a1c0e49a8b2b1311e9",
+    "g_pr226_VT44_T136_W46_50.seed42.support_2opt.native.json": "a182a5894bea7c663fd9a4a8557da400814ab9afe3a627238a073bb8613d549e",
+    "g_pr226_VT44_T136_W46_50.seed42.support_lkh.json": "d8921f3967a1f77a418130101da2821cbfcc810c19e48213918291a713617f18",
+    "g_pr226_VT44_T136_W46_50.seed42.support_lkh.native.json": "da18f908bc52b516f309d1b967ed62ed6209a21d69627d986be4f91ce31d374e",
+    "g_pr226_VT44_T136_W46_50.seed43.mdm.json": "5179fa7f94285539947384edbfd09794a1bdd391ad16b6712389e1282f0646f5",
+    "g_pr226_VT44_T136_W46_50.seed43.mdm.native.json": "9a41c50c47f9425d05864edd6dc9c66f85151e9910f06a12cd2bf7c952d8cc11",
+    "g_pr226_VT44_T136_W46_50.seed43.fixed_lkh.json": "38c27145e560faafded651a57dcf3e09962372dc965aaecf1da1e5c7a4ee70a1",
+    "g_pr226_VT44_T136_W46_50.seed43.fixed_lkh.native.json": "65b7bd583201556fa0d1ae20454279ab3347b87b36db7fa60e47aec786118432",
+    "g_pr226_VT44_T136_W46_50.seed43.support_2opt.json": "43bbdf59744bbc628b911359a6d2a408019c99de54a847e916b8e44bfc5a1c94",
+    "g_pr226_VT44_T136_W46_50.seed43.support_2opt.native.json": "5ac5aa82e6240ba01ab23ed6272a69b1d1f5ed22a57a8569af50e0a18110a065",
+    "g_pr226_VT44_T136_W46_50.seed43.support_lkh.json": "bec64048100021692a6e39714f955d9124060b654fff93d8ec1a7a13792cf349",
+    "g_pr226_VT44_T136_W46_50.seed43.support_lkh.native.json": "070ff017f4ff6bc3aa21f8717e5b380743ac46f627f0aa44a31ce0b6bbfa097a",
+    "g_pr226_VT44_T136_W46_50.seed44.mdm.json": "e886fced15a8adab86ab45620c31f7794e66092109090838475b425b80812366",
+    "g_pr226_VT44_T136_W46_50.seed44.mdm.native.json": "1337e78f30f6d9a60d6679f9ae2b10fa172738f22b22ae55e598c4773b182008",
+    "g_pr226_VT44_T136_W46_50.seed44.fixed_lkh.json": "6721e3d1376c91e4691fd5a94c5038dea474321bbf0af4236a429912b2ec33a1",
+    "g_pr226_VT44_T136_W46_50.seed44.fixed_lkh.native.json": "e70b7caf89cd8670ba3aa8f44ef8e9061ab2a5ef45c8f336e0f2902e46bc8896",
+    "g_pr226_VT44_T136_W46_50.seed44.support_2opt.json": "931a68349b1502f6672b861b99125baf6cdff522c97d27de9c8f38216b90591b",
+    "g_pr226_VT44_T136_W46_50.seed44.support_2opt.native.json": "83cc4f3d4065e3d51ae93d7a257616492210d588f9712ff4f0509e8971b9a7ed",
+    "g_pr226_VT44_T136_W46_50.seed44.support_lkh.json": "31c178d82421df96b8a44edb72ca6bd77a5f7920fb1067c19833d40c417b9503",
+    "g_pr226_VT44_T136_W46_50.seed44.support_lkh.native.json": "87e69b809cde33bc271510459c9ff9854e15e00f49a021f3c3af406921ca1099",
+    "g_rd400_VT80_T240_W80_25.seed42.mdm.json": "5d15658bead449d9da742f606a24b5b05eec84dc2b57b47b92054a56b235cdc1",
+    "g_rd400_VT80_T240_W80_25.seed42.mdm.native.json": "d0cd35da7b85c50145c574f326346aa311a165cb09c6dbcf5fe06d1f938cbe57",
+    "g_rd400_VT80_T240_W80_25.seed42.fixed_lkh.json": "c6f048ac517f7e42a70ad5e48578f81bfdb4044a120a1a89ff15834500dbd262",
+    "g_rd400_VT80_T240_W80_25.seed42.fixed_lkh.native.json": "73083473f7666357c509b386d2395fc99a8da14513b3da82949f7c8845f188f8",
+    "g_rd400_VT80_T240_W80_25.seed42.support_2opt.json": "1948e8297c5fad07b290a0b6a2d56794e40f14616b77530b8046046aa608a9b7",
+    "g_rd400_VT80_T240_W80_25.seed42.support_2opt.native.json": "f84d81ab3dadc81cf2aadecadf4064c3194ca4619b3f42262bbda474fab41a1e",
+    "g_rd400_VT80_T240_W80_25.seed42.support_lkh.json": "88c50691a02ffd632e7752e4e66203dc142d1cc828ef180a7d28c9e7e988ad46",
+    "g_rd400_VT80_T240_W80_25.seed42.support_lkh.native.json": "70d37645332654d5db2a8dba249fcc598078b63fcccfca1ae79f975868f8db9e",
+    "g_rd400_VT80_T240_W80_25.seed43.mdm.json": "be443ff2b81b523ca6b9d9001aa98181d4313a38c2e9eff2ecc431ab1304a708",
+    "g_rd400_VT80_T240_W80_25.seed43.mdm.native.json": "d705fd20a9fc64920fc47b19fa2ea69659e1ee22838610a8b7b10ddf9e3fead1",
+    "g_rd400_VT80_T240_W80_25.seed43.fixed_lkh.json": "817ef1af0503538fdc9d79fe23c727ceeb598ba9ef07d218b09066a6261de14e",
+    "g_rd400_VT80_T240_W80_25.seed43.fixed_lkh.native.json": "cefe3a647b8125ec458597845310af110fc2c52d3f9134cdd621826f08aab7ea",
+    "g_rd400_VT80_T240_W80_25.seed43.support_2opt.json": "7c5ad82e56f3ba7d12f087b5cc6160c0b092cba516857a93bf84f54092049d89",
+    "g_rd400_VT80_T240_W80_25.seed43.support_2opt.native.json": "c7f9bfcd5cf358dedd68dd574af20fd6965d615110c570d429e5fe3a4d4f16b5",
+    "g_rd400_VT80_T240_W80_25.seed43.support_lkh.json": "2acb8a62135c2adbc975b1e6dcf3d68bc270c42e944653d9ce1cb3e4c0b0b646",
+    "g_rd400_VT80_T240_W80_25.seed43.support_lkh.native.json": "09768452310c925ff6352ca1c8b1df69617f82b4028ecaee9ac6dd90bdf85fab",
+    "g_rd400_VT80_T240_W80_25.seed44.mdm.json": "782e3b3173deb4a526366147cf2b04eda98fcc7e1932e457a51bb76a6a2c1404",
+    "g_rd400_VT80_T240_W80_25.seed44.mdm.native.json": "5e195d22d3f20d102f0589474b835fb3726a9664e69aac2029a966a141651d3c",
+    "g_rd400_VT80_T240_W80_25.seed44.fixed_lkh.json": "26e35dd50048a9c8da36645cd1e840948982b39742abcc2a6d6193d89fc3a752",
+    "g_rd400_VT80_T240_W80_25.seed44.fixed_lkh.native.json": "b399794e173c9172b272f15b3784fc6c833afb84ff43567f31f198a6b72d9d0e",
+    "g_rd400_VT80_T240_W80_25.seed44.support_2opt.json": "7b32583e1a4290755443d1c7a28749354f91ab9350996ea17903545a316ac7b6",
+    "g_rd400_VT80_T240_W80_25.seed44.support_2opt.native.json": "c17851436fad7c15840ac937a8e0209c8710c3314fd62f39d2514c9e6489b6a9",
+    "g_rd400_VT80_T240_W80_25.seed44.support_lkh.json": "fb3fa64be344d7774a328ef5d4c9b44a074654a3e3ad6c901ef2b2718bc39ca5",
+    "g_rd400_VT80_T240_W80_25.seed44.support_lkh.native.json": "f97d34e506813165a23890ed2dd5cc9a7519f6d2b18676e4c7e6805f8e1eb488",
+    "g_si175_VT35_T105_W35_50.seed42.mdm.json": "056cb0f2da769b86a688f177018e7f4c93d978a3b5fc722e70cd5d55491b8d4f",
+    "g_si175_VT35_T105_W35_50.seed42.mdm.native.json": "823080bcac3627f52f43f17685a532dd22dcc85783c955926c62fc1862a0722c",
+    "g_si175_VT35_T105_W35_50.seed42.fixed_lkh.json": "650c368cb964ac704b0e84976350a4202a77139381bacf867a1138e9ee563604",
+    "g_si175_VT35_T105_W35_50.seed42.fixed_lkh.native.json": "a4e4097ebccc6277fde109d8ae01a6420f95732732701d62be4ffb9495a95749",
+    "g_si175_VT35_T105_W35_50.seed42.support_2opt.json": "948dad15e864b6e401bb34de4435fd9b70271841fd0c4dabbf1abdc7bda1b1e4",
+    "g_si175_VT35_T105_W35_50.seed42.support_2opt.native.json": "5d3df911924708842fc59f92d3b2ddb5b2a266fca9789c609ce5a67b04b9af8f",
+    "g_si175_VT35_T105_W35_50.seed42.support_lkh.json": "da205001b1fcc35443ec4291e49f3289f7c988d9797dcce65fdd94fa6db9a3d4",
+    "g_si175_VT35_T105_W35_50.seed42.support_lkh.native.json": "02e40ccf952d8c708bbb282ba1a63514f17868249095970a10e444d01fea101d",
+    "g_si175_VT35_T105_W35_50.seed43.mdm.json": "1bae9e118df10e51b952ab048e1ae0bad26ca094ca5c8b8b87266cb40b4d5c97",
+    "g_si175_VT35_T105_W35_50.seed43.mdm.native.json": "d1e46f3ab10ac676051cbbf04f0585cfec2e3426e6e6eb68abea6f11b423b1ee",
+    "g_si175_VT35_T105_W35_50.seed43.fixed_lkh.json": "67bd5a6cfb88c16917e07a0e51e081bea0c5905cca121509981dc70a1e282fca",
+    "g_si175_VT35_T105_W35_50.seed43.fixed_lkh.native.json": "b25719001f7464c5066c000a8c0621e01ae1a16e958ea2a4178d9d28cbea1fbe",
+    "g_si175_VT35_T105_W35_50.seed43.support_2opt.json": "3fe81255dd8be04c164775a616c9af863963676f5718ae3ef6249d9043e3f105",
+    "g_si175_VT35_T105_W35_50.seed43.support_2opt.native.json": "cf7198733be83359d4cec70009f7f7c3d8e93d8339dc55810b7f139cc70e5a8e",
+    "g_si175_VT35_T105_W35_50.seed43.support_lkh.json": "4388f2eebec4002ff1c128ce5f9eebf7f322ecd227d9df83f82b3bca485604a5",
+    "g_si175_VT35_T105_W35_50.seed43.support_lkh.native.json": "b1c062256b3ba240bd95bd0750734882aeeb118de37d8861ade0d35adf8dfbae",
+    "g_si175_VT35_T105_W35_50.seed44.mdm.json": "4fd8a7129ae2c2741d7b43f459b3dc792a8ee5867e1731482ae74b8d547875a0",
+    "g_si175_VT35_T105_W35_50.seed44.mdm.native.json": "25801dd33950372ab0c807bc1827a9688d6fe968afd164efcf5a9c9758bad693",
+    "g_si175_VT35_T105_W35_50.seed44.fixed_lkh.json": "d8066ae8b6a3028f8fca1c60291344d2de9562f46d6e12a089729e930b23e83d",
+    "g_si175_VT35_T105_W35_50.seed44.fixed_lkh.native.json": "567275a5eb97bd3682305738e49f5dfc11b71b6bedaf786ee6bb75079f10903e",
+    "g_si175_VT35_T105_W35_50.seed44.support_2opt.json": "085b727cf90084cf20b866e85ff21702ff89f14342f2354c2226e68639f333af",
+    "g_si175_VT35_T105_W35_50.seed44.support_2opt.native.json": "c5ced7f202ec08bb19374fc6d95effb9f500c99a548fa5b2c024a0459959f47b",
+    "g_si175_VT35_T105_W35_50.seed44.support_lkh.json": "6eed9cc39318bbde2ba75a01721ba43fb4bd2ad94632a6ba8e6e8f9f3f576d07",
+    "g_si175_VT35_T105_W35_50.seed44.support_lkh.native.json": "434752f09ca4c280ca1487d3cd2a65edd8e2bf97a0fe3352fa00dd592c30f407",
+    "g_ts225_VT45_T135_W45_50.seed42.mdm.json": "fff8d1c91f759694f786d40956e0398b0f7aee088b5a0ce1d1148eab963b0eda",
+    "g_ts225_VT45_T135_W45_50.seed42.mdm.native.json": "fa2cba38d4b89044e0fc6f17528d37217fc2244de95fc1e2af4bd21408a0ed0d",
+    "g_ts225_VT45_T135_W45_50.seed42.fixed_lkh.json": "e98cefbfd884486a09de3e47d2ec45ab290f9f386ddd8d34375504a377cd6ef3",
+    "g_ts225_VT45_T135_W45_50.seed42.fixed_lkh.native.json": "4c58c7c406bc81ed840a0de9ad5d5a0bbcf72111ba6539863e62898e52c6b151",
+    "g_ts225_VT45_T135_W45_50.seed42.support_2opt.json": "793cb77f968bb96092d8e2250682025e8f97f63f87a5a741d773f4df680fad95",
+    "g_ts225_VT45_T135_W45_50.seed42.support_2opt.native.json": "909651d332f252c87e346764e3d01d2283ea3a26874adaf146ea1b803f3ea980",
+    "g_ts225_VT45_T135_W45_50.seed42.support_lkh.json": "bec7eff42a6ce1995c8191798981ce52e66157e54227ec5442bb53c9a5419bdc",
+    "g_ts225_VT45_T135_W45_50.seed42.support_lkh.native.json": "73f6f8f2f311a97e120c73b8f644eaefd48a740d3869b727b05b6ad4c6aa6dc8",
+    "g_ts225_VT45_T135_W45_50.seed43.mdm.json": "db723d2b3ec7b157a111f7da08e3664e9c5015970674bdcbf769699b15709965",
+    "g_ts225_VT45_T135_W45_50.seed43.mdm.native.json": "7b75f12e96c7a6c77b47ca667705800d857abb9c62283512b7ac7e20657fc6ca",
+    "g_ts225_VT45_T135_W45_50.seed43.fixed_lkh.json": "ab998685fea67581096d282e0ba867a920ed0c05a77ba8a3989dc3e82d9701fc",
+    "g_ts225_VT45_T135_W45_50.seed43.fixed_lkh.native.json": "459ab2cb59ff9085064ae8714d0896a856a67b1b05e23341c4419f7887b518f7",
+    "g_ts225_VT45_T135_W45_50.seed43.support_2opt.json": "5cdf4620f315a4e2565832a37e3d1c48be4f64dce1db0aad0ade8b75c16e4cfd",
+    "g_ts225_VT45_T135_W45_50.seed43.support_2opt.native.json": "d4a3edfb5e540f063479c904bc3477f8c383f74730ac5fb97acdc15c2cf0af74",
+    "g_ts225_VT45_T135_W45_50.seed43.support_lkh.json": "b31a16a977a8086e3c20b1edbef0242bc601ce37f92d029e3f5e0928ab175998",
+    "g_ts225_VT45_T135_W45_50.seed43.support_lkh.native.json": "4793f21cba2e6e5d8b7dcf6fbb6fa1627611a949d3e2c4ef114f55924c8b6ce0",
+    "g_ts225_VT45_T135_W45_50.seed44.mdm.json": "a3f40ea75a00a5d27bf64c4bd4cffffcc58da43ddb7ca3adc047b9698679016d",
+    "g_ts225_VT45_T135_W45_50.seed44.mdm.native.json": "4f66ec314adfe343c3f2dee6db7a676652dde0a59cf158e03d57138122019356",
+    "g_ts225_VT45_T135_W45_50.seed44.fixed_lkh.json": "e1d6da591310c21fdd850d7952c75d73b8ef4a82f29c790d6711c6c2bf35acdc",
+    "g_ts225_VT45_T135_W45_50.seed44.fixed_lkh.native.json": "cfdb27c31b3e32650afc383cc542700118f5bcc4ae8a63d21aa79de57d0e5aeb",
+    "g_ts225_VT45_T135_W45_50.seed44.support_2opt.json": "3cf0b08438b68c07ba7862db148a0b21110568e08ed4c8c20f3cf899ebc25587",
+    "g_ts225_VT45_T135_W45_50.seed44.support_2opt.native.json": "85331e4a0e6a7ec06c1aad38482f80c45dd0ed375510350517947f00f8c8e9c3",
+    "g_ts225_VT45_T135_W45_50.seed44.support_lkh.json": "1bd4c639170f15e7de2325904dc148f2bd44b6c81856be4e81b2883446a013d5",
+    "g_ts225_VT45_T135_W45_50.seed44.support_lkh.native.json": "51d899425361380e954ae700712721ea4ca6538d905298e5d05f86e52e98afe3",
+    "g_tsp225_VT45_T45_W135_75.seed42.mdm.json": "162090e08bd571639e890e444522d56fb64caa194db60683777c61159c396351",
+    "g_tsp225_VT45_T45_W135_75.seed42.mdm.native.json": "8dd5d8b823bb9fbe0900abc24c534ac585c4f699ca0f9beaa8f21e1a559e33a7",
+    "g_tsp225_VT45_T45_W135_75.seed42.fixed_lkh.json": "d1f27bbb272724cc2fa91749be5ceef85f199a63470c29d6ee9511b85a0078ba",
+    "g_tsp225_VT45_T45_W135_75.seed42.fixed_lkh.native.json": "4f8e28d8d6a1e1ec4036496f0fc442508a20a8c6fd0ac02629d5210bc6c45510",
+    "g_tsp225_VT45_T45_W135_75.seed42.support_2opt.json": "70a79b695dec61badf336b0fa711020017748c34cb447e0700abc4c827e73d81",
+    "g_tsp225_VT45_T45_W135_75.seed42.support_2opt.native.json": "43e33c6b9ed58f2d0f434b9370cc25b294018738aa8289d2e957c51b4c2f280e",
+    "g_tsp225_VT45_T45_W135_75.seed42.support_lkh.json": "c7222b08570357c5cb4fe8d590bc66445bc43439f5e62f417cf4c53494dabcd1",
+    "g_tsp225_VT45_T45_W135_75.seed42.support_lkh.native.json": "3784ad5f813f53f5579c6eb258c4c199dedaf6d70260c418cb2f59b57b9a9fb3",
+    "g_tsp225_VT45_T45_W135_75.seed43.mdm.json": "804a86a83bf2208b49b86acfa9a7ee82da3e756bdefabda6249e91f0a0bf91f5",
+    "g_tsp225_VT45_T45_W135_75.seed43.mdm.native.json": "2b459aa2465b8c8c4248c96b618c50df849e7be308a65d615ba1af08fe7b86d9",
+    "g_tsp225_VT45_T45_W135_75.seed43.fixed_lkh.json": "b72cd78cce9a43df10c8c421aa5e83620519c667c7141999aa3b6b6c612e040b",
+    "g_tsp225_VT45_T45_W135_75.seed43.fixed_lkh.native.json": "ae90276d25d7562a0d83c2898134f16a5b5aec929abb4554b1bf9687da2e2a1d",
+    "g_tsp225_VT45_T45_W135_75.seed43.support_2opt.json": "52ac70b239dbe283049e5ec37031ec259e289ecb8b11d548774fb0a5f47d12d4",
+    "g_tsp225_VT45_T45_W135_75.seed43.support_2opt.native.json": "eb5a467e5c27b9cd2a3f037058b81161083e891326c684b086a7199bbd4af867",
+    "g_tsp225_VT45_T45_W135_75.seed43.support_lkh.json": "aacfc28e4dacdafae536c316f5cbf352e63eaeb68427ebe6c6332f82089fa1c4",
+    "g_tsp225_VT45_T45_W135_75.seed43.support_lkh.native.json": "c1a85a33f962ba22ecdc494701a152afa1cf245732bab86d28fc09c061b86049",
+    "g_tsp225_VT45_T45_W135_75.seed44.mdm.json": "5b0ea6f60e1c6ee59ac6be402655c85aa234c44f6d3567331e0ee62455c8c6ed",
+    "g_tsp225_VT45_T45_W135_75.seed44.mdm.native.json": "9b832f6128c8942c9e48e37f3606441a6089bcc94ae80635273b8a0dc486b460",
+    "g_tsp225_VT45_T45_W135_75.seed44.fixed_lkh.json": "a0cfff75110945208e4955da832e1271bba0326ddd27e1000a6aea9ac53575ad",
+    "g_tsp225_VT45_T45_W135_75.seed44.fixed_lkh.native.json": "47e1a2a58270f8b34b9deb1bdf49f8567be651fdc7608e12999e6b9fcffbf86e",
+    "g_tsp225_VT45_T45_W135_75.seed44.support_2opt.json": "048f002444b3dc5c251e8a86703235aa16fe302eb4238b29581fb553c3d82be1",
+    "g_tsp225_VT45_T45_W135_75.seed44.support_2opt.native.json": "ba9db5aadffcad15421e8d3114241849342d0fd591def12c0cde46f003347348",
+    "g_tsp225_VT45_T45_W135_75.seed44.support_lkh.json": "815e16be4b9b6dec4f7c6facec9926c66f465fb6f2cf1a93421d53beaa145f01",
+    "g_tsp225_VT45_T45_W135_75.seed44.support_lkh.native.json": "12d21de4c26094c97b74444b28df136354c6cdda011634d60d59174be89c044b"
+  },
+  "timing": {
+    "mdm": {
+      "mean": 16.02892062963737,
+      "maximum": 20.577690000005532
+    },
+    "fixed_lkh": {
+      "mean": 11.702372259266363,
+      "maximum": 17.725213000026997
+    },
+    "support_2opt": {
+      "mean": 14.771706148145583,
+      "maximum": 23.791042999946512
+    },
+    "support_lkh": {
+      "mean": 12.812053259257313,
+      "maximum": 15.578307999996468
+    }
+  }
+}
