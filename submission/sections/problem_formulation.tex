@@ -1,0 +1,63 @@
+Let $V=T\mathbin{\dot\cup}R$ be the set of locations that can be visited,
+where $T$ contains the mandatory locations and $R$ contains the optional ones.
+Let $W$ be a disjoint set of demand locations. The routing graph is the
+complete undirected graph $G=(V,E)$, with $E=\{\{i,j\}:i,j\in V,\ i<j\}$
+and edge costs $c_e$. For every $w\in W$, let $N_w\subseteq V$ denote
+its admissible covering locations. In the supplied instances, $N_w$ consists
+of the visitable locations whose input distance to $w$ does not exceed the
+coverage threshold. A nonnegative prize $p_i$ is collected when $i\in V$
+is visited, and the required total prize is $P$. A demand location is
+served when at least one location in $N_w$ is visited. Coverage itself
+does not add a prize to the visited locations' total.
+
+The prize-collecting covering tour problem seeks a minimum-cost simple cycle
+that visits every location in $T$, covers every demand in $W$, and collects
+at least $P$ units of prize. This is the problem addressed by the supplied
+MDM-GRASP implementation and manuscript~\cite{climaco2026mdm}.
+We assume $T\ne\varnothing$ and select a root $r\in T$, consistently with
+the benchmark instances used here. No triangle inequality is needed for
+the formulation below.
+
+For $S\subseteq V$, let $\delta(S)$ be the set of edges with exactly one
+endpoint in $S$, and write $x(F)=\sum_{e\in F}x_e$ for $F\subseteq E$.
+Binary variables $y_i$ indicate visited locations, and binary variables
+$x_e$ indicate used routing edges. The following degree and connectivity
+formulation serves as a reference model:
+\begin{align}
+ \min\quad &\sum_{e\in E}c_e x_e \label{eq:pcctp-objective}\\
+ \text{subject to}\quad
+ &x(\delta(\{i\}))=2y_i && i\in V,\label{eq:pcctp-degree}\\
+ &y_i=1 &&i\in T,\label{eq:pcctp-mandatory}\\
+ &\sum_{i\in N_w}y_i\ge1 &&w\in W,\label{eq:pcctp-cover}\\
+ &\sum_{i\in V}p_i y_i\ge P,\label{eq:pcctp-prize}\\
+ &x(\delta(S))\ge2y_i
+ &&\varnothing\ne S\subseteq V\setminus\{r\},\ i\in S,
+ \label{eq:pcctp-connectivity}\\
+ &\sum_{i\in V}y_i\ge3,\label{eq:pcctp-size}\\
+ &x_e\in\{0,1\} &&e\in E,\\
+ &y_i\in\{0,1\} &&i\in V.
+\end{align}
+Constraints~\eqref{eq:pcctp-degree} assign degree two to visited locations
+and degree zero to unvisited ones. Constraints~\eqref{eq:pcctp-cover} and
+\eqref{eq:pcctp-prize} enforce coverage and prize collection, respectively.
+The rooted connectivity inequalities~\eqref{eq:pcctp-connectivity} exclude
+selected components disconnected from $r$. Constraint~\eqref{eq:pcctp-size}
+explicitly states the simple-cycle convention; for integer solutions it also
+follows from the degree equations, binary edges, and the mandatory root.
+The objective minimizes the total cost of the selected routing edges.
+This reference formulation is not claimed as a new formulation.
+
+To verify the integer interpretation, any feasible PCCTP cycle directly
+satisfies the model. Conversely, the degree equations imply that the graph
+induced by selected edges is a collection of vertex-disjoint simple cycles.
+If a selected component does not contain $r$, choosing its vertex set as
+$S$ in~\eqref{eq:pcctp-connectivity} gives a contradiction. Thus all selected
+locations belong to one cycle containing the mandatory root. The remaining
+constraints give the required visits, coverage, and prize total.
+
+Fixing a subset of these routing or visit decisions defines a restricted
+repair problem. An optimality certificate for that restricted problem is
+local to its fixed decisions. By itself, it does not establish global optimality when the fixed decisions
+exclude feasible solutions of the reference problem.
+This distinction applies to the contracted repair experiments reported in
+our research record.
