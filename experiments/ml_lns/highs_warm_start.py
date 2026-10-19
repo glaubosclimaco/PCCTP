@@ -48,9 +48,17 @@ def decode(repair, vector):
     return tour,cost
 
 
-def solve(d, route, warm, seconds=10., began=None, root_cuts=None):
+def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges=None):
     began=time.perf_counter() if began is None else began
     repair=Repair(d);initial=start_vector(repair,route)
+    if allowed_edges is not None:
+        allowed_edges={tuple(sorted(map(int,e))) for e in allowed_edges}
+        if not allowed_edges<=set(repair.edges):raise ValueError('Invalid pool edge')
+        incumbent_edges={tuple(sorted((route[i-1],v))) for i,v in enumerate(route)}
+        if not incumbent_edges<=allowed_edges:raise ValueError('Pool excludes incumbent edge')
+        for i,e in enumerate(repair.edges):
+            if e not in allowed_edges:repair.ub[i]=0.
+
     if root_cuts:
         from scipy.optimize import LinearConstraint
         from scipy.sparse import csr_matrix,vstack
@@ -104,6 +112,8 @@ def solve(d, route, warm, seconds=10., began=None, root_cuts=None):
     optimal=h.getModelStatus()==highspy.HighsModelStatus.kOptimal
     proven=optimal and elapsed<=seconds and abs(info.objective_function_value-bestcost)<1e-5
     return dict(warm_start=warm,start_status=start_status,version=h.version(),
+                proof_scope='restricted edge pool' if allowed_edges is not None else 'full PCCTP',
+                allowed_edge_count=len(allowed_edges) if allowed_edges is not None else repair.m,
                 cost=validate(d,best),initial_cost=validate(d,route),
                 improved=bestcost<validate(d,route)-1e-7,seconds=elapsed,
                 overrun=max(0.,elapsed-seconds),callback_calls=calls,events=events,
