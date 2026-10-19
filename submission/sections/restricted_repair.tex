@@ -1,0 +1,65 @@
+A repair neighborhood is defined relative to a feasible incumbent
+$(\bar x,\bar y)$. Let $U\subseteq R$ contain the optional locations whose
+visit decisions may change, and let $F\subseteq E$ contain the routing edges
+whose decisions may change. The repair problem consists of the reference
+formulation with the additional restrictions
+\begin{align}
+ x_e&=\bar x_e &&e\in E\setminus F,\label{eq:repair-fixed-edges}\\
+ y_i&=\bar y_i &&i\in V\setminus U.\label{eq:repair-fixed-visits}
+\end{align}
+The incumbent satisfies these restrictions and therefore provides a feasible
+fallback. Optional locations outside $U$ keep their incumbent visit status;
+mandatory locations remain selected through the reference formulation.
+The choice of $F$ must be stated together with $U$: releasing a visit alone
+need not permit its removal when the required reconnection edges remain fixed.
+
+This neighborhood separates the feasibility of the mathematical problem from
+the behavior of a time-limited implementation. The incumbent remains
+mathematically feasible even when a solver does not return a new solution.
+An implementation can preserve it explicitly and validate every returned cycle
+against the original visits, coverage sets, prize quota, and edge costs.
+A returned feasible solution gives a valid PCCTP upper bound. In contrast,
+a lower bound for the restricted repair problem need not be a lower bound
+for the unrestricted PCCTP, because the restrictions may exclude better tours.
+
+\subsection{Contraction of retained paths}
+Let $H$ be the graph formed by the incumbent edges fixed to one in
+\eqref{eq:repair-fixed-edges}. Since these edges belong to a simple cycle,
+each nontrivial component of $H$ is a path, unless the entire incumbent cycle
+is retained. Every retained path must occur in every feasible repair. Its
+interior vertices already have degree two, while each endpoint requires one
+additional incident edge. An isolated selected vertex instead requires two
+incident edges. An isolated released vertex may be selected or omitted.
+
+The path components can consequently be represented by contracted nodes with
+their endpoint incidences retained explicitly. All routing edges fixed to zero
+remain unavailable. A retained internal edge is not made available again merely
+because both of its endpoints appear in a boundary set. The cost of fixed
+edges is collected in the constant
+\begin{equation}
+ c_{\mathrm{fixed}}=\sum_{e\in E\setminus F:\,\bar x_e=1}c_e.
+\end{equation}
+Prizes and demand coverage of retained path vertices are accounted for in the
+corresponding mandatory component. Degree requirements at the original endpoints
+and connectivity between selected components complete the contracted model.
+The endpoint representation is needed because an ordinary degree-two constraint
+on a contracted node would not distinguish which original endpoint an edge uses.
+
+The integer correspondence follows by contracting the fixed paths of a feasible
+repair tour. Conversely, a connected contracted solution satisfying the endpoint
+requirements expands uniquely along each retained path, up to its traversal
+direction. The expanded routing edges satisfy the original degree equations and
+all fixed decisions. Preserving the original prize and coverage contributions
+then yields a feasible repair tour with objective equal to the contracted edge
+cost plus $c_{\mathrm{fixed}}$. If a retained component is already the incumbent
+cycle, its vertices have no remaining degree capacity. Connectivity precludes
+adding a separate cycle, so the incumbent routing cycle is the only feasible
+routing solution of that repair problem.
+
+The contraction is used as a representation of a specified neighborhood, rather
+than as a claim that the neighborhood is new. Its correctness does not imply
+that a chosen neighborhood contains an improving solution, that a short solve
+will find one, or that contraction improves overall running time. Those are
+separate empirical questions. In particular, a short offline repair from an
+incumbent generated earlier is distinct from an end-to-end algorithm whose
+construction, selection, model assembly, and repair all share one time budget.
