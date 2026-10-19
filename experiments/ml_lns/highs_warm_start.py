@@ -48,7 +48,7 @@ def decode(repair, vector):
     return tour,cost
 
 
-def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges=None):
+def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges=None, local_branching_radius=None):
     began=time.perf_counter() if began is None else began
     repair=Repair(d);initial=start_vector(repair,route)
     if allowed_edges is not None:
@@ -58,6 +58,18 @@ def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges
         if not incumbent_edges<=allowed_edges:raise ValueError('Pool excludes incumbent edge')
         for i,e in enumerate(repair.edges):
             if e not in allowed_edges:repair.ub[i]=0.
+
+    if local_branching_radius is not None:
+        from scipy.optimize import LinearConstraint
+        from scipy.sparse import csr_matrix,vstack
+        if type(local_branching_radius) is not int or local_branching_radius<0:
+            raise ValueError('Invalid local branching radius')
+        # Hamming distance over all edge and visit binaries; flow is continuous.
+        coefficients=1.-2.*initial[:repair.f0]
+        row=csr_matrix((coefficients,(np.zeros(repair.f0,dtype=int),np.arange(repair.f0))),shape=(1,repair.width))
+        rhs=local_branching_radius-float(sum(initial[:repair.f0]))
+        repair.constraints=LinearConstraint(vstack([repair.constraints.A,row]),
+                    np.r_[repair.constraints.lb,-np.inf],np.r_[repair.constraints.ub,rhs])
 
     if root_cuts:
         from scipy.optimize import LinearConstraint
@@ -112,7 +124,8 @@ def solve(d, route, warm, seconds=10., began=None, root_cuts=None, allowed_edges
     optimal=h.getModelStatus()==highspy.HighsModelStatus.kOptimal
     proven=optimal and elapsed<=seconds and abs(info.objective_function_value-bestcost)<1e-5
     return dict(warm_start=warm,start_status=start_status,version=h.version(),
-                proof_scope='restricted edge pool' if allowed_edges is not None else 'full PCCTP',
+                proof_scope='local branching neighborhood' if local_branching_radius is not None else ('restricted edge pool' if allowed_edges is not None else 'full PCCTP'),
+                local_branching_radius=local_branching_radius,
                 allowed_edge_count=len(allowed_edges) if allowed_edges is not None else repair.m,
                 cost=validate(d,best),initial_cost=validate(d,route),
                 improved=bestcost<validate(d,route)-1e-7,seconds=elapsed,
