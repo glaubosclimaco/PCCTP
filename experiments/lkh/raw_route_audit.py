@@ -19,7 +19,7 @@ def check(d,route,cost):
     return actual
 
 if __name__=='__main__':
-    assert len(sys.argv)==2 and sys.argv[1] in ('support_total','support_diagnostic')
+    assert len(sys.argv)==2 and sys.argv[1] in ('support_total','support_diagnostic','support_common_fallback')
     folder=HERE/sys.argv[1];instances={};hashes={};checked=0;empty=0
     for p in sorted(folder.glob('*.json')):
         if p.name in ('protocol.json','completion.json'):continue

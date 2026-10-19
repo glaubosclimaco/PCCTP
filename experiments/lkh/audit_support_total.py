@@ -5,7 +5,9 @@ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance,validate
 HERE=Path(__file__).resolve().parent;OUT=HERE/'support_total'
 
-def audit():
+def audit(common_fallback=False):
+    global OUT
+    if common_fallback:OUT=HERE/'support_common_fallback'
     assert (OUT/'completion.json').exists(),'Batch still running'
     protocol=json.loads((OUT/'protocol.json').read_text());modes=protocol['modes'];rows=[];hashes={};failures={m:0 for m in modes};times={m:[] for m in modes}
     for c in protocol['cases']:
@@ -25,12 +27,20 @@ def audit():
                     assert last<=e['seconds']<=budget and e['cost']<previous
                     assert validate(d,[mapping[v] for v in e['route']])==e['cost']
                     previous=e['cost'];last=e['seconds']
-                assert bool(native['anytime'])==r['feasible']
+                if common_fallback:
+                    f=r['fallback'];assert validate(d,[mapping[v] for v in f['route']])==f['cost']
+                    assert f['accepted']==(f['accepted_seconds']<=15.)
+                    assert r['feasible']==(bool(native['anytime']) or f['accepted'])
+                    available=([native['cost']] if native['anytime'] else [])+([f['cost']] if f['accepted'] else [])
+                    assert r['pre_post_cost']==(min(available) if available else None)
+                else:assert bool(native['anytime'])==r['feasible']
                 if r['feasible']:
-                    assert validate(d,[mapping[v] for v in r['route']])==r['cost']<=native['cost']
-                    if r['cost']<native['cost']:assert r['wall_seconds']<=15 and r['post'] and r['post']['cost']==r['cost']
+                    assert validate(d,[mapping[v] for v in r['route']])==r['cost']
+                    before=r['pre_post_cost'] if common_fallback else native['cost']
+                    assert r['cost']<=before
+                    if r['cost']<before:assert r['wall_seconds']<=15 and r['post'] and r['post']['cost']==r['cost']
                     if r['post']:
-                        post=r['post'];assert post['initial_cost']==native['cost']
+                        post=r['post'];assert post['initial_cost']==before
                         assert validate(d,[mapping[v] for v in post['route']])==post['cost']
                 else:
                     assert r['cost'] is None and r['route']==[];failures[m]+=1
@@ -51,6 +61,8 @@ def audit():
         summary[control]=dict(fully_feasible_geometries=len(complete),wins=sum(r['classification']=='win' for r in complete),losses=sum(r['classification']=='loss' for r in complete),mean_gain_percent=statistics.mean(r['gain_percent'] for r in complete) if complete else None)
     gate=not any(failures.values()) and summary['mdm']['mean_gain_percent']>=.5 and summary['mdm']['wins']>=6 and summary['mdm']['losses']<=1 and summary['fixed_lkh']['wins']>=3 and summary['support_2opt']['wins']>=3
     result=dict(status='PASS',scope='exploratory TRAIN; incomplete feasibility is retained, not silently excluded',feasibility_failures=failures,comparisons=summary,gate_passed=gate,rows=rows,result_hashes=hashes,timing={m:dict(mean=statistics.mean(t),maximum=max(t)) for m,t in times.items()})
-    (HERE/'support_total_audit.json').write_text(json.dumps(result,indent=2)+'\n')
+    (HERE/('support_common_fallback_audit.json' if common_fallback else 'support_total_audit.json')).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k not in ('rows','result_hashes')}))
-if __name__=='__main__':audit()
+if __name__=='__main__':
+    assert sys.argv[1:] in ([],['--common-fallback'])
+    audit(common_fallback='--common-fallback' in sys.argv)
