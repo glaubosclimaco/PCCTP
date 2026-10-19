@@ -2,8 +2,8 @@
   "status": "PASS",
   "batch_complete": false,
   "scope": "fixed-work diagnostic; censored cases retained; LKH receives additional time",
-  "cases_available": 1,
-  "routes_checked": 8,
+  "cases_available": 2,
+  "routes_checked": 15,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -15,9 +15,21 @@
       "native_wall_seconds": 1721.5124199999264,
       "cpu_seconds": 1514.821195,
       "published_best": 2001.0
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "status": "CENSORED",
+      "last_iteration": 35,
+      "mdm_cost": 2014.0,
+      "lkh_cost": 1998.0,
+      "gain_percent": 0.7944389275074478,
+      "native_wall_seconds": 5878.028726999997,
+      "cpu_seconds": 1603.0335580000003,
+      "published_best": 1987.0
     }
   ],
   "result_hashes": {
-    "g_a280_VT56_T168_W56_50.json": "0c86a8e2a2b1dc4bef143fa63e83019b463e7ebea4da48e7f203f6e9febd71e4"
+    "g_a280_VT56_T168_W56_50.json": "0c86a8e2a2b1dc4bef143fa63e83019b463e7ebea4da48e7f203f6e9febd71e4",
+    "g_gil262_VT51_T158_W53_75.json": "b93718d46ce46031747a6114514034d9eb0242d94413bc553065c443c19d1f73"
   }
 }
