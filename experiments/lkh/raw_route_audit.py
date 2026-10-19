@@ -29,6 +29,11 @@ if __name__=='__main__':
             assert r['route']==[];empty+=1
         else:check(d,r['route'],r['cost']);checked+=1
         for e in r.get('anytime',[])+r.get('trace',[]):check(d,e['route'],e['cost']);checked+=1
+        if r.get('fallback'):
+            f=r['fallback'];check(d,f['route'],f['cost']);checked+=1
+            assert f['accepted']==(f['accepted_seconds']<=15.)
+            if r.get('pre_post_cost') is not None:
+                check(d,r['pre_post_route'],r['pre_post_cost']);checked+=1
         if r.get('post'):
             post=r['post'];check(d,post['route'],post['cost']);checked+=1
             for e in post['trace']:check(d,e['route'],e['cost']);checked+=1
