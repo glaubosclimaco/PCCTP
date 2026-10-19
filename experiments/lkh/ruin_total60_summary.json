@@ -1,0 +1,96 @@
+{
+  "batch_complete": true,
+  "runs": 54,
+  "scope": "complete seed triplets only, paired within geometry; conservative reconstruction is separate sensitivity outcome, no significance or held-out claim",
+  "summaries": {
+    "wrapper": {
+      "completed_geometries": 9,
+      "mean_gain_percent": -4.888682795656618,
+      "wins": 0,
+      "losses": 9,
+      "gate_passed": false
+    },
+    "conservative": {
+      "completed_geometries": 9,
+      "mean_gain_percent": -1.1621730739092546,
+      "wins": 7,
+      "losses": 2,
+      "gate_passed": false
+    }
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "mdm_mean": 2048.6666666666665,
+      "wrapper_hybrid_mean": 2131.3333333333335,
+      "conservative_hybrid_mean": 1992.6666666666667,
+      "wrapper_gain_percent": -4.035144809632296,
+      "conservative_gain_percent": 2.733485193621857
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "mdm_mean": 2043.0,
+      "wrapper_hybrid_mean": 2046.3333333333333,
+      "conservative_hybrid_mean": 1982.0,
+      "wrapper_gain_percent": -0.1631587534671198,
+      "conservative_gain_percent": 2.98580518844836
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "mdm_mean": 99314.66666666667,
+      "wrapper_hybrid_mean": 101033.33333333333,
+      "conservative_hybrid_mean": 96722.33333333333,
+      "wrapper_gain_percent": -1.7305265419004816,
+      "conservative_gain_percent": 2.610222055151313
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "mdm_mean": 23516.333333333332,
+      "wrapper_hybrid_mean": 23619.0,
+      "conservative_hybrid_mean": 23514.666666666668,
+      "wrapper_gain_percent": -0.436575996824907,
+      "conservative_gain_percent": 0.007087272675718613
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "mdm_mean": 68340.33333333333,
+      "wrapper_hybrid_mean": 69801.33333333333,
+      "conservative_hybrid_mean": 67286.0,
+      "wrapper_gain_percent": -2.1378297832904924,
+      "conservative_gain_percent": 1.5427687895386257
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "mdm_mean": 11388.0,
+      "wrapper_hybrid_mean": 14891.0,
+      "conservative_hybrid_mean": 13975.0,
+      "wrapper_gain_percent": -30.760449596066035,
+      "conservative_gain_percent": -22.71689497716895
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "mdm_mean": 7057.666666666667,
+      "wrapper_hybrid_mean": 7319.666666666667,
+      "conservative_hybrid_mean": 6888.0,
+      "wrapper_gain_percent": -3.7122750673026967,
+      "conservative_gain_percent": 2.4040051008359744
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "mdm_mean": 109125.33333333333,
+      "wrapper_hybrid_mean": 110018.0,
+      "conservative_hybrid_mean": 109094.33333333333,
+      "wrapper_gain_percent": -0.8180196471335757,
+      "conservative_gain_percent": 0.02840770245833537
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "mdm_mean": 2449.0,
+      "wrapper_hybrid_mean": 2454.0,
+      "conservative_hybrid_mean": 2450.3333333333335,
+      "wrapper_gain_percent": -0.2041649652919559,
+      "conservative_gain_percent": -0.054443990744527763
+    }
+  ],
+  "pending": []
+}
