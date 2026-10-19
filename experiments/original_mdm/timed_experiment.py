@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import random
+import resource
 import subprocess
 import sys
 import time
@@ -17,7 +18,7 @@ ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance,validate
 
-def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_started=None):
+def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_started=None,hard_timeout_seconds=None):
     build=HERE/('build_timed_elite_bounded' if elite_count_bounded else 'build_timed')
     working=HERE/'runs'/f'{name}.seed{seed}.timed.{policy}'
     if elite_count_bounded:working=working.with_name(working.name+'.elite_bounded')
@@ -30,16 +31,20 @@ def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_star
     env=os.environ.copy();env['PCCTP_OPERATOR_POLICY']=policy;env['PCCTP_BUDGET']=str(budget)
     env.pop('PCCTP_SCHEDULE_VERIFY',None)
     timed_out=False;code=None
+    usage_before=resource.getrusage(resource.RUSAGE_CHILDREN)
+    parent_cpu_before=time.process_time()
     with target.with_suffix('.log').open('w') as log:
         began=time.clock_gettime(time.CLOCK_MONOTONIC) if parent_started is None else parent_started
         env['PCCTP_STARTED_MONOTONIC']=format(began,'.17g')
         try:
             process=subprocess.run([str((build/'original_mdm').resolve()),str((ROOT/'data'/name).resolve()),
                                     str(seed),'2','5',str(raw.resolve())],cwd=working,env=env,
-                                   stdout=log,stderr=log,timeout=budget+15 if budget>0 else 60)
+                                   stdout=log,stderr=log,timeout=hard_timeout_seconds if hard_timeout_seconds is not None else budget+15 if budget>0 else 60)
             code=process.returncode
         except subprocess.TimeoutExpired:timed_out=True
         wall=time.clock_gettime(time.CLOCK_MONOTONIC)-began
+    usage_after=resource.getrusage(resource.RUSAGE_CHILDREN)
+    parent_cpu_seconds=time.process_time()-parent_cpu_before
     payload=None;payload_source=None;payload_read_errors=[]
     for source in (raw,checkpoint):
         if not source.exists():continue
@@ -60,6 +65,9 @@ def run_one(name,seed,policy,budget,target,elite_count_bounded=False,parent_star
         if trace:assert payload['deadline_route']==trace[-1]['route']
     row=dict(instance=name,geometry=d['geometry'],seed=seed,operator_policy=policy,
              method='timed_MDM_'+policy,budget_seconds=budget,process_wall_seconds=wall,
+             parent_cpu_seconds=parent_cpu_seconds,
+             child_user_cpu_seconds=usage_after.ru_utime-usage_before.ru_utime,
+             child_system_cpu_seconds=usage_after.ru_stime-usage_before.ru_stime,
              elite_count_bounded=elite_count_bounded,
              overrun_seconds=max(0.,wall-budget),hard_timeout=timed_out,exit_code=code,
              native_returned=bool(payload and payload['completed']),feasible_before_deadline=bool(trace),
