@@ -1,0 +1,101 @@
+This section specifies an experimental hybrid search; it does not assert
+novelty of its components or superiority over published algorithms.
+
+\subsection{Destruction and feasibility repair}
+Let $Q$ be the current feasible cycle, $S(Q)$ its visited set, and
+$Q^\star$ the best accepted cycle. A random destruction removes
+$k=\min\{6,|S(Q)\cap R|,|S(Q)|-3\}$ optional locations, sampled uniformly
+without replacement. Mandatory locations are retained. The trajectory stops
+if $k=0$. A diagnostic alternative removes locations closest in input edge
+cost to a random optional seed; it is evaluated separately from uniform removal.
+
+Destruction can violate coverage and prize collection. For the remaining
+visited set $S$, define
+\[
+ U(S)=\{w\in W:N_w\cap S=\varnothing\},\qquad
+ D(S)=\max\{0,P-\sum_{i\in S}p_i\}.
+\]
+For an absent location $v$, the least insertion cost is
+\[
+ \Delta(v,Q)=\min_{(a,b)\in Q}\{c_{av}+c_{vb}-c_{ab}\},
+\]
+where consecutive locations include the closing edge. With
+$\bar p=\max\{1,|V|^{-1}\sum_{i\in V}p_i\}$, define
+\[
+ g(v,S)=|\{w\in U(S):v\in N_w\}|+
+                     \frac{\min\{p_v,D(S)\}}{\bar p}.
+\]
+Among locations with positive gain, repair minimizes
+$\xi_v\Delta(v,Q)/g(v,S)$, with independent
+$\xi_v\sim\mathrm{Uniform}[0.8,1.2]$. It inserts that location in a
+least-cost position, updates coverage and prize, and repeats until
+$U(S)=\varnothing$ and $D(S)=0$. Ties follow location and position indices.
+The random multiplier also applies to negative insertion costs; no triangle
+inequality is assumed. Repair is abandoned upon exhaustion of time or eligible
+locations, preserving the stored feasible incumbent.
+
+Every returned repair is checked against the original instance. Removing
+only optional locations preserves mandatory visits, inserting only absent
+locations preserves distinctness, and the stopping conditions enforce
+coverage and prize. These properties justify feasibility of a completed
+repair; they provide no guarantee of an improving objective value.
+
+\subsection{Ordering and acceptance}
+The repaired sequence is passed to LKH version 3.0.6 with an explicit
+symmetric cost matrix and the visited set fixed. Each invocation has at most
+$0.2$ seconds, including matrix-file construction and subprocess execution.
+A validated output replaces the order only when it improves cost. Otherwise,
+including after a timeout, the repaired input order remains available.
+Passive counters distinguish successful exits, subprocess timeouts, and
+calls without a successful exit. These measurements must be examined before
+attributing poor performance to the neighborhood rather than its implementation.
+
+For a candidate $Q'$, the best cycle is updated only by an improvement
+accepted before the outer deadline. The current cycle is replaced whenever
+$c(Q')\le1.01c(Q^\star)$, using the best cost after any accepted improvement.
+Every twentieth destruction attempt resets the current cycle to $Q^\star$.
+The current solution can therefore worsen temporarily while the accepted
+best cost is nonincreasing. Destruction size, acceptance threshold, and reset
+interval are frozen before a batch. This configuration has no learned policy
+or adaptive operator weighting.
+
+\subsection{Charged initialization and control}
+Both total-time arms first construct a nearest-neighbor cycle through all
+visitable locations and attempt beneficial feasible optional deletions under
+a soft construction cap of $0.25$ seconds. Completing and validating the
+cycle can exceed that soft cap; construction and setup are charged to the
+outer budget, and the fallback qualifies only before that deadline. The
+supplied benchmark instances admit the all-visit fallback.
+
+The control continues the recovered MDM-GRASP under a $60$-second deadline.
+The hybrid reserves a $10$-second MDM deadline and uses the remaining outer
+time for destruction and repair. Both native deadlines debit the setup and
+fallback time already spent. The recovered baseline uses the isolated
+decoder-index and occupied-elite-count corrections, which must be disclosed
+separately from algorithmic modifications. A predeadline native export seeds
+the hybrid when it improves the fallback; otherwise the fallback is retained.
+No expensive offline incumbent seeds this total-time comparison.
+
+Native cleanup may return after its search deadline. A separate safety timeout
+limits the process but does not extend eligibility of solutions. Return-time
+overruns and the resulting loss of time for repair are retained in the records.
+The budget concerns accepted solution timestamps, not a guarantee that every
+operating-system process returns within exactly $60$ seconds.
+
+\subsection{Deadline recording and component attribution}
+The prospective collector records absolute \texttt{CLOCK\_MONOTONIC}
+timestamps for improvements and parent start time $t_0$. An event qualifies
+when its timestamp is at most $t_0+60$, even if routine cleanup finishes later.
+An earlier collector instead required the entire repair routine to return
+before the deadline. Its original outputs are preserved separately, and
+reconstructed event bounds are treated as sensitivity data rather than
+replacements for prospective measurements.
+
+A conditional component control replays the exact saved pre-repair cycle
+under its recorded remaining allowance, holding its visited set fixed and
+allocating that allowance to LKH ordering with a fixed large trial cap.
+This asks whether changing visits contributes beyond reordering the same
+initial support. The control is a conditional replay, not a new independent
+end-to-end run. It requires original scalar cost and feasibility checks,
+unchanged support, source hashes, and deadline checks. This comparison must
+precede any attribution of a performance gain to coverage and prize repair.

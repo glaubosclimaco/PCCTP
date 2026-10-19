@@ -19,6 +19,8 @@ if __name__=='__main__':
   cost,route=pre;post=r['post'];last_time=began
   if post:
    assert r['mode']=='hybrid' and post['source_sha256'] is None
+   assert post['lkh_calls']==post['lkh_timeouts']+post['lkh_completed']+post['lkh_failed']
+   assert post['attempts']>=post['feasible_repairs']>=post['lkh_calls']
    assert began+r['post_offset']-1e-5<=post['native_started']<=began+r['wall_seconds']
    assert post['initial_cost']==cost;previous=cost
    for event in post['trace']:

@@ -37,7 +37,8 @@ if __name__=='__main__':
  assert (HERE/'ruin_total60/completion.json').exists(), 'Wait for original batch, no overlap'
  OUT.mkdir(exist_ok=True)
  cases=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows'];roles=json.loads((ROOT/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())['roles'];assert all(roles[c['geometry']]=='train' for c in cases)
- protocol=dict(cases=cases,seeds=[42,43,44],budget=60,source_hashes={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in ('ruin_total60_absolute.py','ruin_repair_absolute.py','feasible_fallback.py')})
+ dependencies=['experiments/original_mdm/timed_experiment.py','experiments/lkh/screen.py','experiments/ml_lns/pilot.py','experiments/ml_branching/oracle_probe.py']
+ protocol=dict(cases=cases,seeds=[42,43,44],budget=60,dependency_hashes={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in dependencies},source_hashes={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in ('ruin_total60_absolute.py','ruin_repair_absolute.py','feasible_fallback.py')})
  p=OUT/'protocol.json'
  if p.exists():assert json.loads(p.read_text())==protocol
  else:p.write_text(json.dumps(protocol,indent=2)+'\n')
