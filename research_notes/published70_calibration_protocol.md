@@ -41,3 +41,13 @@ If the reference cannot finish within this safety limit, report it and assess
 computational feasibility rather than replacing it with the300-second baseline.
 Do not tune the algorithm using reserved data or reinterpret short-budget wins
 as proof of superiority over the completed published stopping criterion.
+
+## Atualização ambiental antes de qualquer coleta de calibração
+
+Em20/10 a fila anterior foi encerrada antes de iniciar qualquer referência70.
+O predecessor passa a ser a repetição integral ruin_total300_awake_train,
+com conclusão, auditoria de rotas PASS e environment_audit PASS. Durante
+cada referência, monitorar relógios a cada segundo e consultar o log pmset;
+intervalo >5s, diferença >3s ou suspensão interrompem a fila e preservam
+a tentativa raw, sem apresentá-la como duração controlada. Usar caffeinate-i
+temporário; tampa fechada continua podendo suspender o computador.

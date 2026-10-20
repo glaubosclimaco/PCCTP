@@ -1,20 +1,25 @@
+> **LOTE INTERROMPIDO: SUSPENSÃO DO COMPUTADOR.** Os dados abaixo são históricos e não sustentam comparação temporal controlada. Veja `ruin_total300_train/environment_interruption.json` e `awake300_repetition_protocol.md`.
+
 # Avaliação experimental PCCTP: orçamento total de 300 segundos
 
-Estado: **INCOMPLETE**. 11/81 execuções auditadas; 1/9 geometrias completas.
+Estado: **INCOMPLETE**. 43/81 execuções auditadas; 4/9 geometrias completas.
 
 Nenhuma conclusão de publicação, significância ou generalização é automática.
 Dados de treino selecionados por dificuldade; teste reservado permanece fechado.
 
 | Método contra MDM300 | Ganho médio (%) | Vitórias | Perdas | Critério |
 |---|---:|---:|---:|---|
-| hybrid10 | 1.544021 | 1 | 0 | pendente |
-| hybrid60 | 1.379763 | 1 | 0 | pendente |
+| hybrid10 | 1.165714 | 4 | 0 | pendente |
+| hybrid60 | 1.209160 | 4 | 0 | pendente |
 
 ## Custos e consistência nas geometrias completas
 
 | Instância | Média MDM | Média H10 | Média H60 | H10: sementes melhores/iguais/piores | H60: sementes melhores/iguais/piores |
 |---|---:|---:|---:|---|---|
 | g_a280_VT56_T168_W56_50 | 2029.333 | 1998.000 | 2001.333 | 3/0/0 | 3/0/0 |
+| g_gil262_VT51_T158_W53_75 | 2016.333 | 1982.667 | 1983.667 | 3/0/0 | 3/0/0 |
+| g_gr229_VT45_T138_W46_50 | 98218.000 | 97060.000 | 96722.333 | 2/0/1 | 3/0/0 |
+| g_kroA200_VT40_T120_W40_25 | 23569.000 | 23505.333 | 23495.000 | 2/0/1 | 3/0/0 |
 
 As contagens por semente são descritivas dentro da mesma instância;
 não multiplicam o número de geometrias independentes.
@@ -27,9 +32,9 @@ parciais não fundamentam aprovação ou rejeição do método.
 
 | Método | Execuções | Mineração observada | Mineração pontual comprovada | Limite superior desconhecido |
 |---|---:|---:|---:|---:|
-| hybrid10 | 4 | 0 | 0 | 0 |
-| hybrid60 | 4 | 0 | 0 | 0 |
-| mdm | 3 | 0 | 0 | 0 |
+| hybrid10 | 15 | 0 | 0 | 0 |
+| hybrid60 | 14 | 0 | 0 | 0 |
+| mdm | 14 | 1 | 1 | 0 |
 
 Mineração observada em export final pode incluir sobretempo cooperativo.
 A prova de ativação pontual usa export/checkpoint anterior ao orçamento nativo.

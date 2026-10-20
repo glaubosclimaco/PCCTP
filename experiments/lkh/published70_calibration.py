@@ -5,14 +5,16 @@ ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 from experiments.original_mdm.timed_experiment import run_one
 from experiments.lkh.raw_route_audit import load,check
+from experiments.lkh.awake300_train import ClockGuard,sleep_events_since
 
 OUT=HERE/'published70_calibration'
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 if __name__=='__main__':
-    assert (HERE/'ruin_total300_train/completion.json').exists(), 'Wait for current optimizer queue'
-    previous=json.loads((HERE/'ruin_total300_train_audit.json').read_text())
+    assert (HERE/'ruin_total300_awake_train/completion.json').exists(), 'Wait for awake repetition queue'
+    assert json.loads((HERE/'ruin_total300_awake_train/environment_audit.json').read_text())['status']=='PASS'
+    previous=json.loads((HERE/'ruin_total300_awake_train_audit.json').read_text())
     assert previous['status']=='PASS' and previous['batch_complete']
     cases=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows']
     split=json.loads((ROOT/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())
@@ -21,7 +23,7 @@ if __name__=='__main__':
     cases=sorted(cases,key=lambda c:(priority.get(c['geometry'],2),c['instance']))
     build=ROOT/'experiments/original_mdm/build_timed_elite_bounded'
     sources=[Path(__file__),ROOT/'experiments/original_mdm/timed_experiment.py',
-             HERE/'raw_route_audit.py',ROOT/'research_notes/published70_calibration_protocol.md']
+             HERE/'raw_route_audit.py',HERE/'awake300_train.py',ROOT/'research_notes/published70_calibration_protocol.md']
     binaries=[build/'original_mdm',build/'FPMax/fim_maximal',build/'FPMax/fpmax_hnmp']
     protocol=dict(scope='TRAIN reference calibration only, not ten-seed final replication',
         cases=[dict(instance=c['instance'],geometry=c['geometry']) for c in cases],
@@ -29,14 +31,22 @@ if __name__=='__main__':
         source_hashes={str(p.relative_to(ROOT)):digest(p) for p in sources},
         binary_hashes={str(p):digest(p) for p in binaries})
     OUT.mkdir(exist_ok=True);p=OUT/'protocol.json'
+    assert not (OUT/'environment_failure.json').exists(),'Preserve and review compromised reference attempt before resuming'
     if p.exists():assert json.loads(p.read_text())==protocol
     else:p.write_text(json.dumps(protocol,indent=2)+'\n')
     for case in cases:
         name=case['instance'];target=OUT/f'{name}.seed80.json'
         if target.exists():continue
         began=time.clock_gettime(time.CLOCK_MONOTONIC)
-        native=run_one(name,80,'original',0.,OUT/f'{name}.seed80.native.json',True,
-                       parent_started=began,hard_timeout_seconds=43200.)
+        with ClockGuard() as guard:
+            native=run_one(name,80,'original',0.,OUT/f'{name}.seed80.native.json',True,
+                           parent_started=began,hard_timeout_seconds=43200.)
+        environmental=dict(instance=name,max_monitor_gap_seconds=guard.max_gap,
+            max_clock_difference_seconds=guard.clock_difference,sleep_events=sleep_events_since(guard.started))
+        if guard.max_gap>5 or guard.clock_difference>3 or environmental['sleep_events']:
+            (OUT/'environment_failure.json').write_text(json.dumps(environmental,indent=2)+'\n')
+            raise AssertionError('Reference environment compromised; raw attempt preserved')
+        (OUT/f'environment.{name}.seed80.json').write_text(json.dumps(environmental,indent=2)+'\n')
         raw=OUT/f'{name}.seed80.native.raw';exports=[];errors=[]
         for source in (raw,Path(str(raw)+'.checkpoint')):
             if not source.exists():continue

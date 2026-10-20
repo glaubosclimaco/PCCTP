@@ -1,5 +1,44 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 08h30 —suspensão detectada;44runs antigos preservados;repetição ATIVA
+
+ATENÇÃO:estadoanteriornãoécomparação300scontroladaválida. pmsetconfirma
+ClamshellSleep01:00:27 eMaintenanceSleepatéWake08:25:45. Registrointegral
+research_notes/sleep_events_20261020.log. 13/44resultadosantigoswall>330s,
+até3890s;44completos+rawparcialpreservados emruin_total300_train,
+environment_interruption.json marcaPUBLICATION_INELIGIBLE. AuditorrotasPASS
+nãoauditaigualdadetempocomputável. DECISION300_REPORTrecebeuavisodestaque.
+Filasantigas43548/48191encerradas:PID79397,79398,10735;filho83042proveniente
+darepetiçãoantigaencerradoapósidentificação. Nenhumoutroprocessotocado.
+Não reiniciarfilasantigas nemusarcompletionfalsa. Nãoabrirteste12/CTP.
+
+NOVA sessão28075 ATIVA: caffeinate-i pythonawake300_train.py. RepeteTODOS81
+emruin_total300_awake_train,mesmos9casos/seeds70-72/ordem/binaries/param.
+Não mistura3geometriasboasantigascomnovas;nenhumaseleçãoporcusto.
+ClockGuardthread1smaxgap5s/wall-monodiff3s +pmsetporbloco3arms;
+qualquerfalha escreveenvironment.statusFAIL epára;semcompletion elegível.
+Caffeinateétemporário,nãoevitatampafechada;usuárioinformadosempergunta.
+Blocos environment.g_*.json hashes3resultados;resumeexigePASS ehashigual,
+parcialbloqueia. protocolonovoamarrafonte/binariesoriginais+driver/docs.
+Smoke monitor/parserPASS,semotimizadoradicional. py_compile3arquivosPASS.
+Monitor étriagem,nãogarantiaigualdadeCPU/temperatura.
+
+NOVA sessão3504 FILAaguardaawake/completion+environment_auditPASS;
+thenobserve_awake300.py reutilizaobservadoresintactoscomsubstituiçãoliteral
+nomedapasta/relatórios,geraDECISION300_AWAKE_REPORT eprovenancepróprios.
+Depoisinicia caffeinate-i published70_calibration.py eauditor. Runner70
+agoraexigeawakeauditPASS eambiente;ClockGuard+pmset emcada referência70,
+falha preservaraw+environment_failure.json ebloqueiaretomadasautomáticas.
+Fontes70modificadasANTESdequalquerprotocolodados70,nãoexistiamresultados.
+Main10seedsNÃOlançado. Ainda9seed80calibraçãoNAFILAapósnovos81.
+
+Próximo:poll28075e3504semduplicar; conferirblocoambientalprimeiroPASS.
+AtualizarobservadoresNOVOScomobserve_awake300.py; nuncaagregar.envcomo
+resultado. Guardparcialblockfalhou:preservar/revisarantesretomar;nãoapagar.
+Pareado70mainaindaprecisarámesmoproteçãoambientalanteslançamento.
+PreservarUtils.h. Repetição/documentos:awake300_repetition_protocol.md.
+
+
 ## Retomada20/10 01h00 —300s30/81; diagnóstico temporal/suporte salvo
 
 43548ATIVO;48191calibraçãoAGUARDAfim300.NÃODUPLICAR.AuditPASS30runs277
