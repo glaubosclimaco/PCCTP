@@ -1,5 +1,34 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 09h41 —awake13/81; quatrocasoscomcoberturaredundanteidentificados
+
+28075ATIVO;3504aguardando.NÃODUPLICAR.observe_awake300PASS13runs101rotas,
+curvas595eventos;1geometriacompleta,4blocosambientaisPASS. Semnovogate.
+profile_hard_train_instances.pygera9TRAINdescritoresexclusivosentradas,
+rawhash+fonte+protocolhash. nT/nOptional/nW,deficitprêmio/coberturasobrigações,
+limitescardinalidadeelementaresporprêmio(topprizes) ecobertura(unionbound),
+combinadospormáximo,nãosoma. Nãoaleganovidadenemboundcustorotaglobal.
+Leitordaproduçãopilot.read_instanceconferiu9contagens/deficit/coberturaPASS,
+semoptimizer. Quatroinstâncias(gr229,kroA200,pr226,rd400)já têmTODASdemandas
+cobertaspelosobrigatórios. Logo coberturaérestriçãoredundanteentireproblem
+nessescasos;nãocausaganhosderestaurarcoberturanessasinstâncias. Déficits
+prêmiotodos9positivos. Descriçãoemhard_train_instance_profile.md/.json.
+Nenhumoperadorativoalteradoouretunado,nenhumapilotoadicional/testeaberto.
+Próximo:poll28075/3504;observe_awake300.py;aguardargeometriascompletas.
+Calibração70nafilapós81awake;CTP/Utils.h/teste12intocados.
+
+
+## Retomada20/10 09h31 —awake11/81 auditado, fila única mantida
+
+28075ATIVO;3504aguardando. observe_awake300PASS95rotas;
+ambiente3/27blocosPASS;1geometriacompleta,nãoháconclusãonova.
+Gil262seed70H60=1990,H10=1986;MDMpareadoaindapendente.
+Nãoagregarparesparciais,nãomisturarlote44comprometido,nãoretunar.
+Semprocessosnovos oualteraçõesfontesativas. Próximo:poll28075/3504,
+observe_awake300.py. Calibração70continuanafilapós81awakeauditados.
+Teste12/CTP/Utils.hintocados.
+
+
 ## Retomada20/10 09h21 —awake9/81; primeira geometria completa auditada
 
 28075ATIVO,3504FILAAguarda.NÃODUPLICAR. observe_awake300PASS9runs77rotas,
