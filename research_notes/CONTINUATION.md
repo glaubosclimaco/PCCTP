@@ -1,5 +1,26 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 01h00 —300s30/81; diagnóstico temporal/suporte salvo
+
+43548ATIVO;48191calibraçãoAGUARDAfim300.NÃODUPLICAR.AuditPASS30runs277
+rotas;curvas1371eventos;3geometriascompletas,mesmosganhos300anteriores.
+Mineraçãoagora1/10MDMcomchamadapontual(kroA200parcial),amboshíbridos0;
+nãoestenderesseeventoparageometriascompletasainda.
+diagnose_ruin300_regimes.pygeraJSON+research_notes/ruin300_regimes.md,
+fonteshashaudit/curva/summary/rawinput/result,checacustoscalarambos.
+Somentetrêsgeometriascompletas(a280/gil262/gr229),9runs/mode:
+H10ganhomédio30s3.9764%,120s1.9500%,300s1.4642%;H60respectivos
+-.6542%,1.9738%,1.5076%. Vantagemdiminui120→300comMDMcontinuando;
+nãoprovaMDM70aindasuperado. Nenhumgate/piloto/retunagemnovo.
+Suportefinalalterado18/18híbridos;18/18melhoraminicialização. Semadicionar
+novosvértices,remoçãolíquidaquotaviolada18/18;cobertura6/18(4H10+2H60).
+São testemunhoslíquidos, NÃOtrajetóriarealdedestruição,nãoprovamcausaganho.
+Melhorincumbentepostapós120s:0/9H10 e2/9H60;descritivoparcial,nãocritério
+pararetunagem. Main70×10preparado/auditorstestadosmasNÃOlançado;
+calibração9seed80precisaconcluirantes.PreservarUtils.h,CTP/teste12intocados.
+Próximo:observar300,calibração,regenerardiagnósticoapósaudit/curva/summary.
+
+
 ## Retomada20/10 00h50 —300s28/81; fluxo90pares70 verificado sem solver
 
 43548ATIVO;48191calibraçãoAGUARDA300fim.NÃODUPLICAR.AuditorPASS28runs269
