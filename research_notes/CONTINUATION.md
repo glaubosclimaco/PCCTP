@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h52: hybrid10 da tsp225 semente 71 fechou em 2449
+
+Conferência passiva. 68208 e 68316 vivos, sem LKH filho neste instante.
+hybrid10 semente 71: custo 2449, pré/nativo 2483, orçamento 10 s, exit 0,
+viável. MDM da semente 71 em escrita nativa (log 16h51, checkpoint 16h52):
+não commitar. Faltam 4 braços, um aberto. Auditoria publicada 72/81.
+close_awake300 continua bloqueado no lote incompleto.
+
 ## 20/10, 16h50 —77finais/25blocosPASS; fechamento preparado e bloqueado
 
 Coleta13438/fila26890 seguem semduplicação. Conferência de disco77resultados,

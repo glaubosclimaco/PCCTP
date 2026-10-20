@@ -27,16 +27,12 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 20/10, 16h46: o otimizador 68208 segue
-ativo desde 16h09, com `caffeinate` 68216, comando
-`experiments/lkh/awake300_train.py`. A fila `published70_after_awake.py`,
-processo 68316, continua esperando o lote. tsp225 tem quatro braços fechados.
-Semente 70, ambiente PASS: MDM 2447, hybrid60 2449, hybrid10 2449, os três
-viáveis; os híbridos ficaram 2 acima do MDM nesta semente. Semente 71,
-hybrid60 fechado em 2449, ainda sem MDM pareado. O nativo de hybrid10 da
-semente 71 está aberto e não deve ir para o git. Faltam cinco braços.
-A auditoria publicada continua 72/81. Confirme processos e locks em outra
-máquina. Não lance outro otimizador.
+Estado operacional confirmado em 20/10, 16h52: o otimizador 68208 e a fila
+68316 seguem ativos. tsp225 tem cinco braços fechados. Semente 70, ambiente
+PASS: MDM 2447, hybrid60 2449, hybrid10 2449. Semente 71: hybrid60 2449 e
+hybrid10 2449, ainda sem MDM fechado. O MDM da semente 71 está em escrita
+nativa desde 16h51. Faltam esse MDM e os três braços da semente 72. A
+auditoria publicada continua 72/81. Não lance outro otimizador.
 
 **Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
 Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
@@ -458,6 +454,19 @@ Não o incluir no processo ativo nem substituir o protocolo300s pelo de70.
 Próximo passo: terminar os quatro resultados, acompanhar a calibração já
 enfileirada e fechar a análise descritiva quando os pré-requisitos forem reais.
 O artigo e as inferências permanecem condicionados às evidências completas.
+
+## 20/10/2026, 16h52 Fortaleza: hybrid10 da tsp225 semente 71 fechou em 2449
+
+O JSON fechou viável, custo 2449. O nativo de 10 s devolveu 2483 e o
+pós-processamento chegou a 2449, o mesmo custo do hybrid60 desta semente.
+Ainda não há MDM da semente 71, então os dois híbridos não têm par nesta
+semente. Na semente 70, os dois híbridos continuam 2 acima do MDM 2447.
+Não atualizei a média de 72/81.
+
+O MDM da semente 71 está aberto: log nativo às 16h51 e checkpoint às 16h52.
+Não foi commitado. Faltam esse braço e os três da semente 72. Otimizador
+68208 e fila 68316 seguem únicos. O fechamento descritivo continua recusado
+enquanto o lote não tiver 81 resultados.
 
 ## Modelo para próximas entradas
 
