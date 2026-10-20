@@ -20,7 +20,7 @@ qualquerfalha escreveenvironment.statusFAIL epára;semcompletion elegível.
 Caffeinateétemporário,nãoevitatampafechada;usuárioinformadosempergunta.
 Blocos environment.g_*.json hashes3resultados;resumeexigePASS ehashigual,
 parcialbloqueia. protocolonovoamarrafonte/binariesoriginais+driver/docs.
-Smoke monitor/parserPASS,semotimizadoradicional. py_compile3arquivosPASS.
+Smoke monitor/parserPASS,semotimizadoradicional. py_compilebloqueadoporcachedosistema;compileinmemory3arquivosPASS.
 Monitor étriagem,nãogarantiaigualdadeCPU/temperatura.
 
 NOVA sessão3504 FILAaguardaawake/completion+environment_auditPASS;
