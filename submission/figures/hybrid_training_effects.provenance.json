@@ -1,0 +1,146 @@
+{
+  "scope": "training only; no validation/test files read",
+  "caption": "Training screen on nine geometries and three seeds. Bars: relative reduction of seed-mean costs; markers: individual seed-pair reductions, not confidence intervals. A: fresh end-to-end comparison with MDM under60seconds including initialization. B: conditional fixed-support LKH replay from the exact saved pre-repair starts and remaining allowances. These panels have different controls; neither is independent test evidence.",
+  "source_hashes": {
+    "experiments/lkh/ruin_total60_absolute_summary.json": "be0f10227e82b58ae49c67cf3de3a16275a760ad89ef7640afe0caf99b18e32b",
+    "experiments/lkh/fixed_support_ablation_audit.json": "a55addcdf2a41636f9b564ef8c040d63fb435d131b6707f579a88d4e2f55018e",
+    "experiments/lkh/plot_hybrid_training.py": "fea1cf569ed197a0946ffa6ec2cf6d8c08015702093f13e3e73df217d5d8daee"
+  },
+  "data": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "total_gain": 3.1933862862700635,
+      "conditional_gain": 2.672750977835716,
+      "seed_total_gains": [
+        5.790223065970574,
+        0.9891196834817013,
+        2.696078431372549
+      ],
+      "seed_conditional_gains": [
+        6.279508970727101,
+        0.6451612903225806,
+        0.8986520219670494
+      ]
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "total_gain": 2.8226464349812406,
+      "conditional_gain": 2.9493237738308693,
+      "seed_total_gains": [
+        2.2156573116691285,
+        3.216374269005848,
+        3.0303030303030303
+      ],
+      "seed_conditional_gains": [
+        4.104297440849831,
+        3.4516285853184248,
+        1.2444001991040319
+      ]
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "total_gain": 2.946390345713378,
+      "conditional_gain": 3.2347674135533517,
+      "seed_total_gains": [
+        1.53741205697588,
+        3.639896373056995,
+        3.6315102740067133
+      ],
+      "seed_conditional_gains": [
+        3.016597302311588,
+        2.622066034981019,
+        4.053906645114586
+      ]
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "total_gain": 0.007087272675718613,
+      "conditional_gain": 0.35735977513170947,
+      "seed_total_gains": [
+        0.1275239107332625,
+        -0.12327311370882041,
+        0.017022000936210053
+      ],
+      "seed_conditional_gains": [
+        1.065352871820785,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "total_gain": 1.5197123523585963,
+      "conditional_gain": 2.4977177110453193,
+      "seed_total_gains": [
+        2.0867287543655415,
+        1.5120244734261332,
+        0.953866988547708
+      ],
+      "seed_conditional_gains": [
+        5.337647720877884,
+        1.1909482062352232,
+        0.8341684843482875
+      ]
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "total_gain": 4.101262834887295,
+      "conditional_gain": 2.641984184040259,
+      "seed_total_gains": [
+        2.4499908240044044,
+        6.36294864251492,
+        3.298188699648554
+      ],
+      "seed_conditional_gains": [
+        1.9008950816646673,
+        2.477457760658321,
+        3.5329018338727076
+      ]
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "total_gain": 2.4040051008359744,
+      "conditional_gain": 3.380558283069154,
+      "seed_total_gains": [
+        2.784452296819788,
+        2.525751375758431,
+        1.897018970189702
+      ],
+      "seed_conditional_gains": [
+        3.3581565266263875,
+        1.7493955340634333,
+        4.986876640419948
+      ]
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "total_gain": 0.07667025072087474,
+      "conditional_gain": 0.24456662610885516,
+      "seed_total_gains": [
+        0.3969630048730631,
+        -0.16910987546528192,
+        0.0
+      ],
+      "seed_conditional_gains": [
+        0.5385554684794693,
+        0.19322344322344323,
+        0.0
+      ]
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "total_gain": -0.09531590413943974,
+      "conditional_gain": 0.14941591958706255,
+      "seed_total_gains": [
+        -0.3269309358398038,
+        0.0,
+        0.04081632653061224
+      ],
+      "seed_conditional_gains": [
+        0.0,
+        0.407000407000407,
+        0.04081632653061224
+      ]
+    }
+  ]
+}

@@ -1,10 +1,13 @@
 """Independent scalar route and absolute-event deadline audit."""
-import json,hashlib
+import json,hashlib,sys
 from pathlib import Path
 from raw_route_audit import load,check
 HERE=Path(__file__).resolve().parent
 if __name__=='__main__':
- folder=HERE/'ruin_total60_absolute';rows=[];checked=0
+ batch=sys.argv[1] if len(sys.argv)>1 else 'ruin_total60_absolute'
+ assert batch in ('ruin_total60_absolute','ruin_validation60')
+ expected=54 if batch=='ruin_total60_absolute' else 70
+ folder=HERE/batch;rows=[];checked=0
  for p in sorted(folder.glob('g_*.json')):
   if '.native.' in p.name:continue
   r=json.loads(p.read_text());d=load(r['instance']);began=r['native_started'];deadline=began+60
@@ -37,6 +40,6 @@ if __name__=='__main__':
   if route:check(d,route,cost);checked+=1
   rows.append(dict(instance=r['instance'],seed=r['seed'],mode=r['mode'],cost=cost,feasible=bool(route),result_sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
  complete=(folder/'completion.json').exists()
- if complete:assert len(rows)==54
+ if complete:assert len(rows)==expected
  report=dict(status='PASS' if rows else 'NO_RESULTS',runs=len(rows),routes_checked=checked,batch_complete=complete,rows=rows,scope='raw scalar feasible costs and absolute monotonic-event selection; no statistical conclusion')
- (HERE/'ruin_total60_absolute_audit.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='rows'}))
+ (HERE/(batch+'_audit.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='rows'}))
