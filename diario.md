@@ -27,18 +27,21 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado às 12h38 de 20/10:** um único otimizador,
-`experiments/lkh/awake300_train.py`, executa o lote novo de81 execuções de 300 s.
-Última auditoria:48/81, 402 rotas e 2101 eventos, cinco geometrias completas.
-Sessão da ferramenta atual:28075. Uma fila na sessão 3504 aguarda esse lote e
-suas auditorias para iniciar a calibração MDM70, seed80, nove casos TRAIN.
+**Estado operacional confirmado em 20/10, após a retomada das 16h09:** um único
+otimizador, `experiments/lkh/awake300_train.py`, retoma o lote de 81 execuções
+de 300 s. Última auditoria: 69/81, 559 rotas e 3003 eventos, sete geometrias
+completas. Um bloco de três execuções foi preservado por falha ambiental e
+será repetido integralmente. Sessão atual: 13438. A fila durável
+`published70_after_awake.py`, sessão 26890, aguarda esse lote e suas auditorias
+para iniciar a calibração MDM70, seed80, nove casos TRAIN.
 Esses IDs só valem na sessão da ferramenta atual: outra IA deve verificar os
 processos reais e locks, e não presumir que um ID antigo possa ser reutilizado.
 
-**Primeiro próximo passo:** acompanhar o lote ativo sem duplicá-lo. Enquanto
-ele roda, é possível concluir a verificação do estudo isolado de cache, descrito
-na entrada contemporânea abaixo. Não lançar esse estudo antes de terminar e
-auditar tanto o lote81 quanto as nove referências de calibração.
+**Primeiro próximo passo:** acompanhar as 12 execuções restantes sem duplicar
+o otimizador. O estudo isolado de cache já tem controlador e auditoria
+verificados em dados sintéticos; não foi lançado nem enfileirado. Não o lançar
+antes de terminar e auditar tanto o lote81 quanto as nove referências de
+calibração. Ainda não existe resultado real de qualidade de solução do cache.
 
 ## Arquivos que contêm as decisões e evidências
 
@@ -199,6 +202,58 @@ CLAUDE/memória. As próximas retomadas devem acrescentar entradas materiais,
 incluindo fracassos e correções, e atualizar o resumo operacional. Este diário
 não substitui os dados brutos nem as auditorias: aponta para eles e explica
 por que cada investigação foi escolhida.
+
+## 20/10/2026, 16h09–16h10 Fortaleza — falha ambiental revista e coleta retomada
+
+Ao retomar, os IDs antigos de sessão já não existiam e uma consulta aos
+processos confirmou ausência de MDM/LKH e das duas filas antigas. Havia 72
+resultados finais, mas o bloco ts225/seed72 estava marcado ENVIRONMENT_FAILURE:
+gap máximo do monitor 9,407546s (>5s) e diferença de incrementos dos relógios
+3,608818s (>3s), sem evento de suspensão registrado. O coletor parou sozinho
+nesse bloco; a ausência de suspensão não autoriza relaxar os outros limites.
+Não é possível atribuir uma causa específica apenas a esses registros.
+
+Conferi os 14 hashes congelados de fontes/dependências/binários e os hashes de
+todos os resultados dos 24 blocos: íntegros; 23 blocos ambientalmente válidos.
+O observador inicialmente recusou corretamente o bloco inválido. Preservei
+os 16 artefatos desse bloco, incluindo todos os três métodos, em
+`experiments/lkh/ruin_total300_awake_interrupted_blocks/20261020T190941Z/`.
+`review.json` registra motivos, política de repetição e SHA256 de cada arquivo.
+Não selecionei a repetição pelo custo encontrado e não aproveitei métodos
+favoráveis do bloco. As 69 execuções válidas anteriores foram mantidas.
+
+Reiniciei o coletor congelado, sem editar suas fontes, com
+`/usr/bin/caffeinate -i /usr/bin/python3 -u experiments/lkh/awake300_train.py`.
+Nova sessão 13438; faltam 12 execuções: repetir os três métodos de ts225/seed72
+e executar os nove restantes de tsp225. A ordem e sementes são as do protocolo.
+Implementei a fila durável `published70_after_awake.py`, sessão 26890, que usa
+o lock já previsto, espera os 81 resultados, roda as auditorias e só então
+inicia as nove referências seed80. Não foi lançado outro otimizador.
+
+Nova auditoria dos 69 registros aceitos: 559 rotas e 3003 eventos; sete
+geometrias completas. H10 tem ganho médio de −1,650450% (cinco ganhos, duas
+perdas); H60, +1,253701% (sete ganhos, nenhuma perda). A regra H10 já não pode
+ser satisfeita com duas perdas, mas ambos os braços serão concluídos, sem
+interrupção seletiva ou ajuste. São resultados parciais TRAIN, não demonstração
+de superioridade sobre MDM70. Próximo passo: fechar/auditar o lote e executar
+a calibração completa; se outro bloco falhar, preservar e revisar antes de
+qualquer nova tentativa.
+
+### Consolidação do estudo de cache nesta retomada
+
+O controlador `cached30_train.py` e seus testes já foram implementados no
+trabalho iniciado anteriormente: 11 verificações sintéticas do controlador,
+16 do auditor de lote, nove da orquestração de pares, 21 da fase e 12 do polidor.
+Os certificados foram agora reconferidos contra os arquivos atuais: PASS.
+O controlador usa o mesmo lock do paired70 e bloqueia enquanto os estudos
+prioritários não estiverem completos e auditados. Nada foi lançado ou
+enfileirado para cache. Durante a verificação houve falha de importação a
+partir da raiz, pois o guard legado usa import local; a correção ficou no
+adaptador novo, sem alterar a fonte congelada. Também foi reforçada a
+checagem de todo o cronograma antes da primeira chamada: um par incompleto
+no fim da ordem impede iniciar até os pares anteriores ainda não executados.
+Esses testes validam contratos, não desempenho. As alterações e certificados
+serão salvos seletivamente, mantendo `include/Utils.h` fora dos commits.
 
 ## Modelo para próximas entradas
 

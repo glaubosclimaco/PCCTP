@@ -81,6 +81,10 @@ def main():
             (partial/phase_path.name).write_text('{}')
             rejected(starts[:1], partial)
             checks.append('orphan attempt marker blocks partial pair retry')
+            later = Path(folder)/'later-partial'; later.mkdir()
+            (later/'synthetic2.seed44.cached.json').write_text('{}')
+            rejected(starts, later)
+            checks.append('partial pair later in schedule blocks even earlier untouched pairs before any call')
 
             state['fail'] = True; failed = Path(folder)/'interrupted'
             try: module.execute_pairs(starts[:1], failed, 'protocol', sources)

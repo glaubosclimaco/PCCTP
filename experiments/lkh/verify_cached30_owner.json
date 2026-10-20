@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic owner lock routing, launch prerequisites and source certificates; no benchmark inputs, real audit subprocesses or optimizer calls. Kernel exclusion itself is covered by verify_paired70_lock.json.",
+  "checks": [
+    "collection entered only while shared paired70 lock context held",
+    "owner exception exits shared lock context",
+    "missing awake completion blocks before auditors, outputs or optimizer",
+    "missing calibration completion blocks before auditors, outputs or optimizer",
+    "both completions cause fresh read-only audits and bind seven provenance files",
+    "80 of81 awake results cannot satisfy launch prerequisite",
+    "compromised awake environment blocks launch",
+    "censored or incomplete full reference blocks launch",
+    "current source-bound certificates accepted",
+    "changed adapter/owner certificate source blocks launch",
+    "changed shared kernel-lock implementation blocks launch"
+  ],
+  "source_sha256": {
+    "experiments/lkh/cached30_train.py": "697be854f4bdf976fc2be7cb44e67eb41867d1a99fb677ce33f484aad821cb18",
+    "experiments/lkh/verify_cached30_owner.py": "fa416ae5a937156d8b99580924907a99a129500aaf4e1278bdea6bf9e69bccb2",
+    "experiments/lkh/cached30_pairs.py": "6d687a8914c9b7c77717b80905c3303392d3cbe252b975f17ec0c4d24106ba19",
+    "experiments/lkh/cached30_starts.py": "76a93412bbc2ab098a75ee5e34f4a0a7ba9e46babf0a883f4b5f267c39e0a7f8",
+    "experiments/lkh/cached30_batch_audit.py": "a7946a27cd02e7d5890affcc5cf00756a6d1fa8c036902fdacc39bb87d09f1af",
+    "experiments/lkh/cached30_phase.py": "151d68f8b08eb04b47c1e3ec5caae6885036a0f9aaf94edc8d49a7ccccd338ec",
+    "experiments/lkh/cached30_phase_audit.py": "b8e48bf82c234e846496de164af3a64e47ae3aba4cee611e8b6f8e0d1790edbf",
+    "experiments/lkh/paired70_train.py": "b71b0092a3c2870ae0fac8ca666c5b538a7e11b5d3414797e6c114ae83359c12"
+  }
+}

@@ -1,5 +1,35 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h10 — falha ambiental revista; coleta retomada; diário atualizado
+
+Sessões antigas28075/3504 não existem mais. ps confirmou nenhum otimizador/fila.
+Lote havia parado com72resultados/24blocos: ts225/seed72 ENVIRONMENT_FAILURE,
+gap9,407546>5s e clockdiff3,608818>3s, pmset sem Sleep. Não relaxar limites.
+14hashes congelados conferidos e todoshashes dos24blocos íntegros. Preservados
+os16artefatos completos do bloco em experiments/lkh/ruin_total300_awake_interrupted_blocks/
+20261020T190941Z/, com review.json/motivos/SHA256. Repetição dos3braços em conjunto,
+sem escolha pelo resultado. 23blocos/69runs válidos mantidos; não repetir tudo.
+
+ATIVO: sessão13438, caffeinate-i python3-u awake300_train.py inalterado.
+Faltam12runs (ts225seed72×3 + tsp225seeds70–72×3), nominal60min se ambiente estável.
+FILA ATIVA: sessão26890, python3-u published70_after_awake.py; usa o mesmo
+published70_awake_calibration.queue.lock, pid68316 ao iniciar. Espera81complete,
+observer/env/costPASS, depois caffeinate-i published70_calibration.py e auditor.
+NÃO duplicar nem cache/paired70. Fila durável nova tem --check read-only.
+
+Observer agora69/81 PASS,559rotas/3003eventos,setegeometrias. H10−1,650450%
+(5ganhos/2perdas),H60+1,253701%(7/0),semconclusãofinal. H10 já excede≤1perda:
+concluir ambos conforme protocolo e preservar negativo. 12teste/CTP intactos.
+
+Cache: cached30_batch_audit.py+fixture16PASS; cached30_train.py owner+fixture11PASS;
+orquestração9PASS (inclui preflight de TODAS as posições antes da primeira chamada),
+fase21PASS/polish12PASS. Certificados atuais conferidos. Import pacote-raiz falhou
+por dependência local do guard; resolvido no adaptador novo sem editar guard ativo.
+Owner adquire lock paired70, exige81+calibração9 completos/auditados e certificados,
+vincula protocolo/fontes/binário/27starts; reaudita pares antes de retomar.
+NÃO lançado/enfileirado. Diario.md contém registro portável e resumo corrigido.
+Rascunho18p continua incompleto; nenhuma vantagem real do cache medida.
+
 ##20/10,12h42 — diário portável solicitado; owner-cache ainda não verificado
 
 Novo pedido do usuário: manter minidiário para transferência a outra IA.

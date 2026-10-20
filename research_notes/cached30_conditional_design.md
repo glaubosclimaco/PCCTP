@@ -99,3 +99,17 @@ and resume without duplicate calls. Its future owner must acquire the shared
 lock and enforce prerequisites; that owner and an independent batch auditor
 are not implemented yet. Nothing has been added to the active
 collection or the planned paired70 candidates.
+
+Update20October: the independent batch auditor is now implemented in
+cached30_batch_audit.py (16 synthetic checks), and cached30_train.py provides
+the shared-lock owner (11 synthetic checks). Pair orchestration now has nine
+checks, including an orphan partial pair late in the schedule preventing all
+earlier fresh optimizer calls. All source-bound certificates are current.
+A repository-root import initially exposed a frozen guard's local-import
+dependency; the isolated adapter now supplies its module directory without
+editing the frozen guard. A real read-only prerequisite check correctly
+blocks before output creation while awake81 is incomplete. No cached search
+has been launched or queued. After both priority batches finish, the guarded
+entrypoint is `/usr/bin/caffeinate -i /usr/bin/python3 -u
+experiments/lkh/cached30_train.py`; verify workers and the shared lock first.
+These fixtures do not establish a cache quality benefit or full-search speedup.

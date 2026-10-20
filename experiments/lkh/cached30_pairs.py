@@ -8,9 +8,13 @@ source-bound fixtures remain prerequisites for a real launch.
 import hashlib
 import json
 import random
+import sys
 import time
 from pathlib import Path
 
+# The frozen awake guard imports its original worker by local module name.
+# Support importing this adapter from the repository root as well as scripts.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from experiments.lkh.awake300_train import ClockGuard, sleep_events_since
 from experiments.lkh.cached30_phase import run_phase
 from experiments.lkh.cached30_phase_audit import audit_phase
@@ -23,6 +27,15 @@ def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def execute_pairs(starts, out, protocol_hash, phase_sources, budget=30.):
     out = Path(out); out.mkdir(parents=True, exist_ok=True)
     assert len({(s['instance'], s['source_seed']) for s in starts}) == len(starts)
+    # Scan the entire schedule before any new optimizer call, including a
+    # partial pair later in the shuffled order than untouched pairs.
+    for suffix in ('*.attempt.json', '*.failed.json', '*.tmp'):
+        assert not list(out.glob(suffix)), 'Unreviewed interrupted artifact; no optimizer launched'
+    for start in starts:
+        prefix = f"{start['instance']}.seed{start['source_seed']}"
+        if not (out/(prefix+'.pair.json')).exists():
+            assert not list(out.glob(prefix+'.*')) and not (out/('environment.'+prefix+'.json')).exists(), \
+                'Unreviewed partial pair anywhere in schedule; no optimizer launched'
     for start in starts:
         name, seed = start['instance'], start['source_seed']
         prefix = f'{name}.seed{seed}'

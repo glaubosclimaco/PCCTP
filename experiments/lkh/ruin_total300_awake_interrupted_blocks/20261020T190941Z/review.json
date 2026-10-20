@@ -1,0 +1,33 @@
+{
+  "status": "REVIEWED_ENVIRONMENTAL_RETRY",
+  "reviewed_utc": "20261020T190941Z",
+  "instance": "g_ts225_VT45_T135_W45_50",
+  "seed": 72,
+  "reason": "Recorded monitor gap9.4075s>5 and clock difference3.6088s>3; all three arms excluded together, irrespective of solution cost.",
+  "sleep_events": [],
+  "preserved_valid_blocks": 23,
+  "repeat_arms": [
+    "hybrid60",
+    "hybrid10",
+    "mdm"
+  ],
+  "policy": "Repeat entire failed three-arm block with unchanged sources/binaries/order/seeds/budget; never splice favorable arms.",
+  "artifacts": {
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid10.json": "2c090f45e4798096e15807d216858f4d26afa6b0ccbd157acb49d8a51c99b262",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid10.native.json": "719fd9b12b5ba0689bfdcb5204e650c8b7f880f48d7305f71bb8b4630c4e0507",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid10.native.log": "880c8d7ca6b9c998c699342b35fe4509c5c68707644d76fd6c485d2faa27dbc3",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid10.native.raw": "244c22cf055ccaca11ddaf359780104781c4ae65520d05e8fee17796a2b73c53",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid10.native.raw.checkpoint": "317677a68745aa9d07c4f599b765c3047a631cf9772801d00a2f354e19bcd3b9",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid60.json": "c4db33099b925e4dbfbc301ea057bda74236bd417dd9bbaf0a3bf5f59ec85894",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid60.native.json": "6613683e28ae8058f2bd961544665f64773698498c11133eae54714cd557244e",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid60.native.log": "de2edceb6a5f5628b588047c30241ec341f9ca3a91cfea29c0ec07a682d1f40c",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid60.native.raw": "9653eefaab671cea6e6a796cc50ea3ed4c5a9630d88d4f733a583ffb6bd888bc",
+    "g_ts225_VT45_T135_W45_50.seed72.hybrid60.native.raw.checkpoint": "7aa2357503b0ad854ddcbb9b947811bc00870f37e6980efb61c63a62b319d94c",
+    "g_ts225_VT45_T135_W45_50.seed72.mdm.json": "a7b8ba63a215b549d11aefa9c16cf8021b2f87cda22763990059ac307c158f24",
+    "g_ts225_VT45_T135_W45_50.seed72.mdm.native.json": "9952deee846011ad763e78e58e1c047267f4a0b50050dc1380769f547555356f",
+    "g_ts225_VT45_T135_W45_50.seed72.mdm.native.log": "287ae972913a1a7984042745dbefb45a2485d59f058e7b4a8b6488f80335354b",
+    "g_ts225_VT45_T135_W45_50.seed72.mdm.native.raw": "cb90b6b8bd4022318147620fdbc556c862cf296ead3075062e6ed88746c4077c",
+    "g_ts225_VT45_T135_W45_50.seed72.mdm.native.raw.checkpoint": "1fed4533e132d2498cf2cb3ee56f5c028d7596c19451fa69f79cd4694a64166d",
+    "environment.g_ts225_VT45_T135_W45_50.seed72.json": "7cd08d0ad63587143292aa624ad1761fcde03d2323aa8e5596ddd1754405ad22"
+  }
+}
