@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "synthetic mocked clock/polish acceptance only; no benchmark or optimizer run",
+  "source_sha256": "a2fe3ef481150c44211bf61b88410ca215806e7b96f61118b1ee3d635b289065",
+  "rows": [
+    {
+      "case": "timely_repair_late_polish",
+      "cost": 3.0,
+      "expected": 3
+    },
+    {
+      "case": "late_repair",
+      "cost": 4.0,
+      "expected": 4
+    },
+    {
+      "case": "timely_both",
+      "cost": 3.0,
+      "expected": 3
+    }
+  ]
+}
