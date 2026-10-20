@@ -1,21 +1,23 @@
 {
   "status": "PASS",
-  "scope": "partial manuscript with related work, protocol and exploratory results; not submission-ready",
-  "pages": 11,
-  "pdf_sha256": "d9453d043f40e56e741d6a07ecaabc0726dffd840189578409ba5a80d326e649",
+  "scope": "partial illustrated manuscript; not submission-ready",
+  "pages": 12,
+  "pdf_sha256": "ccdfceae0437e175004f38b7577228ef9415c9ca907411c0f3f1a51afab42437",
   "source_sha256": {
-    "main.tex": "165975a1b9586a800c1e00ef06b414a1cb18ba894588e5e2ac2ffa9ed12e75d9",
+    "main.tex": "f4700d281c12b4680b8ab1cfcb493adc4e2b56640b8503988f2f2a732ec36b06",
     "references.bib": "ef626d9e3034b4a4da39d8a5b02a94db8e896deb6eb61e56dbc7f681bcb785f5",
     "sections/experimental_protocol.tex": "303ac9e2b2f470f7311ff6447806c8fdf43bb2c29507eccf60c455c1071d2d92",
     "sections/exploratory_results.tex": "f959c9f46a5e16ce06d7c303d8ba292a5857d49e344ed2cbdc6d5c607b141995",
-    "sections/hybrid_search.tex": "6046df91cb07b0925691a252cb6e9dac17454be0ccb4b8a933c93b8835d14cfc",
+    "sections/hybrid_search.tex": "55eff9d5551d0017f91158e40ae6d73d9aced8d6dcb1c3f2401d72ebd4725ff3",
     "sections/problem_formulation.tex": "c06878fc84980267e87141d6c71086d075654bc06ad03cb5badc8c78488cf122",
     "sections/related_work.tex": "ceee2bbcb7091ca100af0a76275ddc1989357009157c11c2aee842c887dec666",
     "sections/restricted_repair.tex": "34106c5d97ff7bf3a3174ea28c74170a8ff80c0e36343ba686f50250b29a8b58",
-    "tables/exploratory_complete.tex": "b8777ea589b32b9a1477b55bff3ae79e5a6c7f6d88a245572e22d5343864f3ac"
+    "tables/exploratory_complete.tex": "b8777ea589b32b9a1477b55bff3ae79e5a6c7f6d88a245572e22d5343864f3ac",
+    "figures/hybrid_flow.tex": "41c20d9696794aa4bb87fc3604a413ca815280a7db1ec59add56ab2bb35cc7a6",
+    "figures/repair_example.tex": "82236328da0df206a9ef0f8e7931479f5d9a5096db0c7dfc92144861a51b2143"
   },
-  "compiler": "local pdfLaTeX plus BibTeX and two additional passes",
-  "visual_review": "All11pages rendered at70dpi and individually inspected; no clipping or overlap. Seven bibliography entries render correctly. Introduction, statistical-analysis, discussion, conclusions and appendix still have placeholders.",
-  "current_source_status": "Current sources compiled and all11pages visually inspected",
+  "compiler": "local pdfLaTeX, final sources compiled twice; verified existing BibTeX bibliography",
+  "visual_review": "Both TikZ diagrams inspected and flow spacing corrected. All12latest pages inspected: pages1-11 raster hashes identical to individually inspected render; changed page12 inspected separately. No clipping/overlap. Empty appendix heading removed to avoid blank page; substantive sections remain incomplete.",
+  "current_source_status": "Current final sources compiled; all12pages visually checked",
   "unresolved_references": false
 }

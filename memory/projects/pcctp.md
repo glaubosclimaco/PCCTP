@@ -109,3 +109,11 @@ Ambienteisolado .venv-cplex (Python3.10.16arm64), cplex22.2.0.1
 ativada neminstalaçãoIDE/SDKC++doOptimizationStudio. Não declararsolver
 semrestriçãoparaPCCTPgrande. Check/provenance/requirements em
 experiments/cplex_installation/. Ambiente dos experimentos ativos intacto.
+
+## Preferência editorial do usuário em20/10
+
+Ao explicar a metodologia e os mecanismos propostos/avaliados, incluir
+ilustrações claras, preferencialmente em TikZ quando apropriado. Figuras
+devem representar o algoritmo de fato executado; distinguir componentes
+estudados separadamente de estágios integrados. Exemplos esquemáticos não
+são resultados experimentais e precisam de verificação de consistência.

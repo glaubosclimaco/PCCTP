@@ -1,5 +1,32 @@
 # Estado operacional para retomada autônoma
 
+## Pedido direto20/10 —figurasmetodologiaTikZ implementadas/verificadas/PDF12p
+
+Usuárioquerilustraçõesnametodologia,TikZpreferido. Preferênciagravadaem
+memory/projects/pcctp.md. Duasfigurasvetoriaisnativas:figures/hybrid_flow.tex
+(fluxobusca,deadline,loop,MDM/greedy/LKH;MIPcomponentseparadoboxdashed),
+figures/repair_example.tex(trêspainéisfeasible→destroy→repair). Incluídasem
+hybrid_search.tex comrefs/captions. TikZ/placeinsinstalados;nenhumanovadep.
+Exemplosintético6vertices:mandatorya,b,cprêmio1cada,u2,v3,P5,Nw={u,v}.
+Rotasa-b-c-u, a-b-c, a-b-c-v:prêmios5/3/6,coberturatrue/false/true;
+rawscalarchecknasduasviáveis,matrizEuclidcoordenadasfiguraverificacobertura.
+method_figures_verification.json+provenancehashes.Nãoébenchmark/solver.
+
+PDFmarkereditumavezantesautoria. Inspeçãoinicialdetectoucaixasfluxopouco
+espaçadas;ampliadaseseparadas. Figurespages5/6legíveis,semoverlap/clipping;
+suportesvisíveisporformas/preenchimento/tipoaresta,nãosócores. Últimapágina
+vaziacomappendixplaceholderremovida. PDF12paginas,fonts/refsPASSsemundefined/
+overfull. Todas12pconferidas:1-11rasterhashidênticoàversãojáinspecionada,
+12alteradainspecionadaindividualmente. compilation_audit.jsonatualizado.
+ArtigoAINDAparcial:Intro/Stats/Discussion/Conclusionsfaltam;resultados300
+ativosnãoinseridoscomoconcluídos. Seguependentecontribuiçãosustentada70.
+Coleta28075ATIVAúltimoaudit25/81PASS237rotas/curvas1239eventos,8blocos
+ambientaisPASS,2geomcompletas. Fila3504aguarda81+environment. Nenhumafonte
+ativa300alterada,nemoptimizerextra,Utils.h/CTP/teste12preservados.
+Próximo:poll28075/3504,observeawake;seguirredaçãofundamentada/figurasquando
+ajudarem,sempreencherpáginascomresultadosinexistentes.
+
+
 ## Retomada20/10 10h25 —awake22/81; relatedworkredigido7refs/PDF11p
 
 28075ATIVO;3504aguardando.NÃODUPLICAR. observeawakePASS22runs214rotas,

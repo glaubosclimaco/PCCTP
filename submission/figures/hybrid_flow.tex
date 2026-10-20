@@ -1,0 +1,38 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+ font=\small,
+ box/.style={draw,rounded corners=2pt,align=center,text width=6.8cm,
+   minimum height=.78cm,fill=blue!4,inner sep=5pt},
+ decision/.style={diamond,draw,aspect=3,align=center,inner sep=2pt,fill=blue!4},
+ arrow/.style={-{Stealth[length=2mm]},line width=.65pt},
+ note/.style={draw,dashed,align=center,text width=2.6cm,inner sep=6pt,font=\footnotesize}
+]
+\node[box] (input) at (0,0) {Instance and random seed};
+\node[box] (initial) at (0,-1.4) {Charged fallback and MDM initialization};
+\node[box] (state) at (0,-2.8) {Current feasible cycle $Q$; stored best $Q^\star$};
+\node[decision] (clock) at (0,-4.3) {Time remains?};
+\node[box] (remove) at (0,-5.9) {Remove optional locations; retain mandatory visits};
+\node[box] (repair) at (0,-7.3) {Greedy repair of coverage and prize};
+\node[box] (order) at (0,-8.8) {Feasible candidate: LKH ordering\linebreak on the selected locations};
+\node[box] (accept) at (0,-10.5) {Validate; retain improvements observed in time;\linebreak apply acceptance and periodic reset};
+\node[box,text width=2.45cm,fill=gray!8] (output) at (6,-4.3)
+ {Return stored best\linebreak feasible cycle};
+\node[note] (mip) at (6,-7.3)
+ {Separate component study:\linebreak restricted insertion MIP};
+\foreach \a/\b in {input/initial,initial/state,state/clock,remove/repair,repair/order,order/accept}
+ \draw[arrow] (\a) -- (\b);
+\draw[arrow] (clock) -- node[right,font=\footnotesize] {yes} (remove);
+\draw[arrow] (clock.east) -- node[above,font=\footnotesize] {no} (output.west);
+\draw[arrow] (accept.west) -- ++(-.65,0) |- (clock.west);
+\draw[dashed,line width=.55pt] (repair.east) -- (mip.west);
+\end{tikzpicture}
+\caption{Search flow under one charged outer time budget. The solid path
+shows successful candidate generation. Search also stops if no optional
+location can be removed. An infeasible or interrupted repair
+skips ordering and preserves the stored feasible best. Only improvements
+observed by the deadline qualify, even if cleanup returns later. The dashed
+side box identifies the insertion-MIP component comparison; it is not an
+additional stage in the tested greedy-repair search.}
+\label{fig:hybrid-flow}
+\end{figure}

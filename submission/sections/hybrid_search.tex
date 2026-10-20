@@ -1,5 +1,8 @@
 This section specifies an experimental hybrid search; it does not assert
 novelty of its components or superiority over published algorithms.
+Figure~\ref{fig:hybrid-flow} shows the search flow and the position of the
+separately evaluated integer-repair alternative.
+\input{figures/hybrid_flow}
 
 \subsection{Destruction and feasibility repair}
 Let $Q$ be the current feasible cycle, $S(Q)$ its visited set, and
@@ -9,8 +12,9 @@ without replacement. Mandatory locations are retained. The trajectory stops
 if $k=0$. A diagnostic alternative removes locations closest in input edge
 cost to a random optional seed; it is evaluated separately from uniform removal.
 
-Destruction can violate coverage and prize collection. For the remaining
-visited set $S$, define
+Destruction can violate coverage and prize collection.
+Figure~\ref{fig:repair-example} illustrates how inserting a different optional
+location can restore both requirements. For the remaining visited set $S$, define
 \[
  U(S)=\{w\in W:N_w\cap S=\varnothing\},\qquad
  D(S)=\max\{0,P-\sum_{i\in S}p_i\}.
@@ -40,6 +44,7 @@ locations preserves distinctness, and the stopping conditions enforce
 coverage and prize. These properties justify feasibility of a completed
 repair; they provide no guarantee of an improving objective value.
 
+\input{figures/repair_example}
 \subsection{Ordering and acceptance}
 The repaired sequence is passed to LKH version 3.0.6 with an explicit
 symmetric cost matrix and the visited set fixed. Each invocation has at most

@@ -1,0 +1,50 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+ x=.95cm,y=.95cm,font=\small,
+ mandatory/.style={rectangle,draw,fill=blue!18,minimum size=5.5mm,inner sep=0pt},
+ selected/.style={circle,draw,fill=blue!18,minimum size=5.5mm,inner sep=0pt},
+ absent/.style={circle,draw,fill=white,minimum size=5.5mm,inner sep=0pt},
+ removed/.style={circle,draw,dashed,text=gray,minimum size=5.5mm,inner sep=0pt},
+ demand/.style={diamond,draw,aspect=1.2,fill=gray!10,minimum size=6mm,inner sep=0pt},
+ tour/.style={line width=.8pt},cover/.style={dashed,line width=.7pt},
+ title/.style={align=center,text width=3.6cm,font=\small\bfseries},
+ status/.style={align=center,text width=3.7cm,font=\small}
+]
+\foreach \shift/\panel in {0/1,4.35/2,8.7/3}{
+ \begin{scope}[xshift=\shift cm]
+  \node[mandatory] (a\panel) at (0,0) {$a$};
+  \node[mandatory] (b\panel) at (3,0) {$b$};
+  \node[mandatory] (c\panel) at (3,2) {$c$};
+  \node[demand] (w\panel) at (1,2.4) {$w$};
+ \end{scope}
+}
+\node[selected] (u1) at (.7,1.7) {$u$};
+\node[absent] (v1) at (1.65,2.2) {$v$};
+\node[removed] (u2) at ({4.35/.95+.7},1.7) {$u$};
+\node[absent] (v2) at ({4.35/.95+1.65},2.2) {$v$};
+\node[absent] (u3) at ({8.7/.95+.7},1.7) {$u$};
+\node[selected] (v3) at ({8.7/.95+1.65},2.2) {$v$};
+\draw[tour] (a1)--(b1)--(c1)--(u1)--(a1);
+\draw[tour] (a2)--(b2)--(c2)--(a2);
+\draw[tour] (a3)--(b3)--(c3)--(v3)--(a3);
+\draw[cover] (u1)--(w1);
+\draw[cover] (v3)--(w3);
+\node[title] at (1.5,3.35) {(a) Feasible incumbent};
+\node[title] at ({4.35/.95+1.5},3.35) {(b) Remove $u$};
+\node[title] at ({8.7/.95+1.5},3.35) {(c) Insert $v$};
+\node[status] at (1.5,-.65) {Prize $=5$;\linebreak $w$ covered};
+\node[status] at ({4.35/.95+1.5},-.65) {Prize $=3<5$;\linebreak $w$ uncovered};
+\node[status] at ({8.7/.95+1.5},-.65) {Prize $=6\ge5$;\linebreak $w$ covered};
+\end{tikzpicture}
+\caption{Illustrative destruction and repair, not a benchmark outcome.
+Squares are mandatory locations, circles are optional locations, and the
+diamond is a demand. Filled visit nodes belong to the cycle; solid lines
+are routing edges and dashed links show active coverage. Let
+$p_a=p_b=p_c=1$, $p_u=2$, $p_v=3$, $P=5$, and $N_w=\{u,v\}$.
+Removing $u$ preserves three mandatory visits but violates both requirements.
+One feasible repair inserts $v$, restoring coverage and the prize quota.
+The drawing does not assert that every randomized repair selects $v$ or
+that an improvement is guaranteed.}
+\label{fig:repair-example}
+\end{figure}

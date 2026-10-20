@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "scope": "synthetic figure consistency only; no benchmark or optimizer",
+  "vertices": [
+    "a",
+    "b",
+    "c",
+    "u",
+    "v",
+    "w"
+  ],
+  "coordinates": [
+    [
+      0,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      0.7,
+      1.7
+    ],
+    [
+      1.65,
+      2.2
+    ],
+    [
+      1,
+      2.4
+    ]
+  ],
+  "quota": 5,
+  "prizes": [
+    1,
+    1,
+    1,
+    2,
+    3,
+    0
+  ],
+  "radius": 0.85,
+  "coverage_indices": [
+    3,
+    4
+  ],
+  "panels": [
+    {
+      "route": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "prize": 5,
+      "covered": true,
+      "feasible": true
+    },
+    {
+      "route": [
+        0,
+        1,
+        2
+      ],
+      "prize": 3,
+      "covered": false,
+      "feasible": false
+    },
+    {
+      "route": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "prize": 6,
+      "covered": true,
+      "feasible": true
+    }
+  ],
+  "figure_hashes": {
+    "hybrid_flow.tex": "41c20d9696794aa4bb87fc3604a413ca815280a7db1ec59add56ab2bb35cc7a6",
+    "repair_example.tex": "82236328da0df206a9ef0f8e7931479f5d9a5096db0c7dfc92144861a51b2143"
+  }
+}
