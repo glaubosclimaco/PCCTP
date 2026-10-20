@@ -1,0 +1,172 @@
+\subsection{Benchmark scope and experimental units}
+The development process separated geometries rather than individual routes or
+random seeds. The principal training screen uses nine difficult instance
+variants: a280, gil262, gr229, kroA200, pr226, rd400, si175, ts225 and tsp225.
+Each geometry contributes one fixed variant, whose mandatory, optional and
+demand sets and prize quota are retained unchanged across methods. Complete
+instance identifiers and input hashes are stored in the batch manifests.
+These selected cases are not a representative random sample of all PCCTP
+instances and do not reproduce the full published benchmark evaluation.
+
+The completed 60-second validation screen uses seven additional geometries.
+Those geometries had already informed an earlier configuration and are
+therefore treated as reused validation data, rather than untouched
+confirmation. Twelve further test geometries remain unopened. Changing the
+time budget or random seeds does not restore independence to data previously
+used during method development. Results from selected training instances,
+reused validation and conditional component replays are reported separately.
+
+An inspection of the nine training inputs also distinguishes coverage
+requirements from prize requirements. In gr229, kroA200, pr226 and rd400, the
+mandatory locations already cover every demand. Coverage constraints are
+consequently redundant in these four complete instances, although the prize
+quota and routing decisions remain restrictive. An improvement on these
+cases cannot be attributed to restoring uncovered demands. This structural
+observation follows directly from the inputs and does not identify the cause
+of any observed cost difference.
+
+\subsection{Baseline and computing environment}
+The reference implementation is the supplied MDM-GRASP associated with
+the data-mining study~\cite{climaco2026mdm}. It is compiled separately from
+the experimental Python drivers. Two isolated corrections initialize an
+otherwise uninitialized decoder index and bound elite-bank access by the
+number of occupied entries. The legacy source is preserved. Results of the
+corrected implementation are identified accordingly; they are not described
+as measurements of an unmodified published executable.
+
+The reference configuration uses 70 maximum iterations, construction
+parameter $\alpha=0.6$, an elite-bank capacity of ten, absolute mining support
+two, and a stability threshold of five percent of the iteration limit.
+Absolute support two corresponds to 20 percent only when the bank contains
+ten solutions; the experiment does not silently recompute it for a partially
+occupied bank. The reference policy bypasses experimental learned rankings
+and adaptive timing decisions. Instrumentation and collection still impose
+overhead and are not assumed to be cost-free.
+
+The local environment is an Apple M2 with 16 GiB of memory and eight physical
+cores. The recorded native compiler is GCC 15.1.0; the research driver uses
+Python 3.9, SciPy 1.13 and HiGHS through the available Python interfaces.
+The ordering component is LKH 3.0.6. Program and binary hashes identify the
+executables used by each batch. Only one research optimizer is scheduled at
+a time. This scheduling constraint does not establish a constant background
+load, temperature or effective processor frequency. Raw seconds are not
+converted into speedups against the different processor used in a prior
+paper by scaling clock frequencies.
+
+\subsection{Completed experiments and longer-horizon design}
+The completed total-time training experiment allocates 60 seconds to each
+method, using nine geometries and three matched seeds. The completed
+validation screen uses seven geometries and five seeds. Both start from a
+fresh, charged fallback and include initialization within the outer budget.
+The fixed-support replay instead starts from the saved pre-repair cycle and
+uses its recorded remaining allowance. Generation of that shared state is
+excluded from the replay, which is therefore a conditional component test.
+The matched-destruction MIP experiment similarly shares saved MDM states;
+its comparisons must not be interpreted as complete algorithms with free
+incumbent generation.
+
+The longer-horizon training design allocates 300 seconds to each of three
+methods: the reference, a hybrid with ten seconds of reference initialization,
+and a hybrid with 60 seconds of reference initialization. All use the same
+nine variants and seeds 70--72. Method order is shuffled reproducibly within
+each instance--seed block. Destruction, repair, ordering and acceptance
+parameters are frozen before collection. Both hybrid configurations are
+retained in the report, regardless of their relative performance. This
+design schedules 81 executions and remains an exploratory training screen.
+Its incomplete outcomes are excluded from the completed-results table.
+
+A separate prospective design addresses the 70-iteration stopping criterion.
+An initial nine-case calibration with seed 80 must complete and pass its
+audits before the ten-seed comparison starts. In that subsequent comparison,
+each of the nine training variants uses seeds 81--90. A reference run first
+completes all 70 iterations and provides its measured process-wall duration
+$T_{g,s}$. Each hybrid then receives that same outer solution-eligibility
+horizon, including its own fallback, setup and initialization. Initialization
+is capped at $\min\{10,T_{g,s}\}$ or $\min\{60,T_{g,s}\}$, respectively.
+Neither the reference route nor its objective value is supplied as a hybrid
+starting solution. Independent post-exit auditing does not enlarge a search
+budget.
+
+The resulting horizon is conditioned on the measured reference duration;
+it is not an independently fixed common deadline. The reference necessarily
+precedes the candidates in a pair. Shuffling pair order and the two candidate
+orders does not remove that chronological asymmetry, which is disclosed as
+a limitation. The fixed-300-second design supplies a complementary comparison
+with shuffled order among all three methods. The ten-seed design schedules
+90 reference runs and 180 candidate runs if every reference completes. It
+is not yet a completed experiment and does not constitute a replication of
+the full published instance set.
+
+\subsection{Outcome aggregation and failure handling}
+For geometry $g$, let $\bar c_{B,g}$ and $\bar c_{H,g}$ be the arithmetic
+mean final costs over all its scheduled seeds for the reference and a
+candidate, respectively. The primary descriptive effect is
+\begin{equation}
+ G_g=100\frac{\bar c_{B,g}-\bar c_{H,g}}{\bar c_{B,g}},
+ \qquad
+ \bar G=\frac{1}{|\mathcal G|}\sum_{g\in\mathcal G}G_g.
+ \label{eq:geometry-effect}
+\end{equation}
+Positive values favor the candidate. This equally weighted geometry average
+differs from averaging seed-level percentages or pooling objective values
+across differently scaled instances. Seeds describe variability conditional
+on an instance; they do not multiply the number of independent geometries.
+All scheduled configurations, ties, losses and failed runs remain visible.
+Best-seed selection is not used for the primary comparison.
+
+The nine-case training screen requires a mean reduction of at least
+$0.2\%$, at least six positive geometry means, at most one negative mean,
+and no missing or invalid scheduled comparisons. These thresholds are an
+exploratory investment rule, not a significance test or an acceptance
+criterion for publication. The earlier validation screen retains its
+original, different threshold and its observed failure. It is not relabeled
+as successful because a later training experiment looks favorable.
+
+A safety timeout of 43,200 seconds in an iteration-limited reference run
+means censoring, not completion. Without a completed reference, no valid
+$T_{g,s}$ is available for either corresponding candidate. Both candidate
+slots remain unavailable in the planned denominator. A last checkpoint is
+retained as an observation but does not replace the missing 70-iteration
+endpoint. No complete cost-only primary result is formed by dropping such
+pairs. Infrastructure interruptions are recorded separately from genuine
+algorithm or solver failures.
+
+\subsection{Deadlines, suspension and independent audits}
+Solution eligibility is determined from absolute monotonic event timestamps
+relative to the parent start time. A solution must be observed by the outer
+deadline and pass validation against the original instance. Cleanup or process return after that deadline does
+not create additional search time, nor does it erase an already eligible
+incumbent. Actual process durations, safety timeouts and cleanup overruns
+are retained separately. Descriptive curves at 1, 10, 30, 60, 120 and
+300 seconds do not replace the primary 300-second endpoint.
+
+The first longer-horizon collection was interrupted after host suspension
+was identified in the operating-system power log. Its 44 completed records
+are preserved with an explicit environmental-interruption manifest. They
+are not treated as a controlled time comparison. The replacement collection
+repeats all 81 scheduled executions in a separate directory, rather than
+combining apparently unaffected early cases with favorable later repetitions.
+It retains the same instances, seeds, parameters, method ordering and binary
+versions.
+
+During the replacement collection, a monitor samples monotonic and wall
+clocks once per second. A monitoring gap above five seconds, a difference
+between clock increments above three seconds, or a recorded system-sleep
+event invalidates the block and stops the queue. Temporary idle-sleep
+prevention does not prevent sleep caused by closing the laptop lid.
+Each block records environmental diagnostics and hashes of its three
+results. A separate auditor checks those records. These operational checks
+screen for suspension and substantial scheduling interruptions; they do not
+prove identical CPU or thermal conditions. Equivalent protection is required
+before accepting the prospective iteration-limited comparisons.
+
+An independent scalar reader checks mandatory visits, unique locations,
+coverage, prize collection and the cycle cost against the original input
+matrix. Audits also reconstruct eligible incumbent selection and check
+input, source, binary and result hashes. Feasibility verification and a
+successful environment check address different questions; neither substitutes
+for the other. Historical finite verification records without source hashes
+are retained as historical evidence and cannot by themselves certify the
+final source revision. This partial manuscript makes no confirmatory
+significance claim or new best-known-solution claim from the exploratory
+comparisons.

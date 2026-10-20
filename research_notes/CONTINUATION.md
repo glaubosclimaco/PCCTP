@@ -1,5 +1,59 @@
 # Estado operacional para retomada autônoma
 
+## Pedido direto —por queparou:coletaATIVA21/81; protocoloartigo redigido/compilado10p
+
+28075ATIVOconfirmado;3504FILAAguarda.NÃODUPLICAR. ÚltimoobserveawakePASS
+21runs193rotas,curvas1019eventos,7/27blocosambientaisPASS,2geomcompletas.
+Usuárioreforçounãoparar:explicadocoletacontinuasegundoplano;respostaanterior
+terminousemtrabalhoconcretoimediato. Nesta retomadaescritaconcretamétodos.
+Scientific-writingfontereallida;outlineantesprosa emmanuscript_protocol_outline.md.
+submission/sections/experimental_protocol.tex adicionado:escopogeometrias,
+baselinecorrigido/parâmetros/hardware,estudos60concluídos/300ativo/70futuro,
+ganhoagregaçãoporinstância,censura/denominadores,deadlines,suspensão/auditoria,
+limitesinterpretação. Quatrocasoscoberturaredundanteintegradossócomodescrição.
+Equaçãoganhofoimovidaderesultadosparaprotocoloerefcorreta,resumoresultados
+completosmantémapenas4estudosconcluídos;nada300parcialinseridonatabela.
+MarkerPDFeditexecutadouma vez antesedits. pdflatex2passesPASSsemundefined/
+overfull;PDF10p,todas10renderizadas70dpi evisualizadasindividualmente,
+semclipping/overlap. compilation_audit.jsonhashesatualizados;
+protocol_provenance.jsonamarrafontesdados/docs.SegueRASCUNHO:Intro/Related/
+Discussion/Conclusion/Statsaindaplaceholders,referênciasapenas1,nãopronto.
+Nenhumotimizadorextra,fontesativas300intactas,Utils.h/CTP/teste12preservados.
+Próximo:poll28075/3504 eobserveawake. Continuarliteratura/textoapoiadosnas
+fontesprimáriasjáverificadasenquantocoletaúnicaroda;nãoinventarcontribuição.
+
+
+## Retomada20/10 10h11 —awake19/81; duasgeometriascompletas
+
+28075ATIVO;3504aguardando.NÃODUPLICAR.observe_awake300PASS170rotas,
+ambiente6/27blocosPASS. A280+gil262completos;comparações
+{'hybrid10': {'mean_gain_percent': 1.6068592478117223, 'wins': 2, 'losses': 0, 'gate_passed': False}, 'hybrid60': {'mean_gain_percent': 1.4668696664493566, 'wins': 2, 'losses': 0, 'gate_passed': False}}.
+Ainda2/9geometrias,gateglobalfalse,nãoMDM70/publicação. Gr229seed70H60
+96753,restantedoparpendente. Calibração70nãoiniciou,aguarda81awake.
+Nenhumafonte/paramalterada,nenhumoptimizerextra. Próximo:poll28075/3504,
+observe_awake300.py. Teste12/CTP/Utils.hpreservados.
+
+
+## Retomada20/10 10h01 —awake17/81; segue bloco finalgil262
+
+28075ATIVO;3504FILAAguarda.NÃODUPLICAR.observe_awake300PASS
+146rotas,curvas775eventos,5/27blocosambientaisPASS.
+Gil262seed72H10=1981,MDM2028;H60aindapendente. Só1geometriacompleta;
+gatesglobaisaindapendentes. Semmudançaparâmetros/fontesativas/hipóteses,
+semotimizadorextra. Calibração70aguarda81awakecomauditoriasPASS.
+Próximo:poll28075/3504,observe_awake300.py. CTP/teste12/Utils.hintocados.
+
+
+## Retomada20/10 09h51 —awake15/81, ambiente5/27 blocosPASS
+
+28075ATIVO;3504FILAAguarda.NÃODUPLICAR.observe_awake300PASS
+127rotas;1geometriacompleta;semconclusãonova.
+Gil262seed71H10/H60ambos1981,MDM2012;terceirasementeaindapendente.
+Mantidosparâmetros/fontesativas e12testesfechados. Nenhumsolveradicional
+oualteraçãoCTP/Utils.h. Próximo:poll28075/3504,observe_awake300.py;
+calibração70apenasdepois81awake+auditorambientalPASS.
+
+
 ## Retomada20/10 09h41 —awake13/81; quatrocasoscomcoberturaredundanteidentificados
 
 28075ATIVO;3504aguardando.NÃODUPLICAR.observe_awake300PASS13runs101rotas,
