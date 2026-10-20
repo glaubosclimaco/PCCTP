@@ -44,3 +44,20 @@ Isso resolve a identidade desses três arquivos com o depósito v2 efetivamente
 citado em RAIRO2021. Não prova equivalência das versões1/2, igualdade do depósito
 2019gpnmh9kdr9, nem réplica dos107casos. Conferir os seis TRAIN restantes antes
 de ampliar a afirmação. O PDF17p atual não foi alterado nesta retomada.
+
+## Atualização seguinte — identidade9/9 TRAIN comv2 concluída
+
+Os seis painéis restantes foram localizados pelo nome no índice público e seus
+SHA-256 lidos no campo File information: kroA200, pr226, rd400, si175, ts225 e
+tsp225. Todos coincidem com os bytes locais e com o perfil independente. O auditor
+agora informa COMPLETE_TRAIN,9verificados,0pendentes. Permanecem fora desse
+escopo os outros135arquivos de instância, a composição exata do subconjunto107,
+os resultados históricos e a equivalência de hashes entre versões1/2.
+
+A página pública de comparação entre versões foi também acessada:
+https://data.mendeley.com/datasets/compare/8yjbfgcfvn
+Exibe título, descrição144 e DOI de v1 e v2; a lista é virtualizada e não expõe
+checksums nessa tela. Não inferir igualdade de todos os arquivos com base em
+nomes/tamanhos. A informação de dia de publicação de v1 aparece16/5 no link da
+página v2 e17/5 no comparador; conservar o ano2020 sem arbitrar essa diferença.
+Nenhum arquivo adicional ou conteúdo reservado foi aberto. Não houve download.

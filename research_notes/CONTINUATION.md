@@ -1,5 +1,34 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h36 — identidade9/9 TRAIN concluída; coleta36/81/4geometrias
+
+28075 segue único otimizador;3504 espera81+audits antes da calibração70.
+Observer36/81,299rotas/1551eventos PASS,12blocosambientais PASS,4geometrias.
+H10 média parcial1,191838%/3positivas1negativa;H60 1,128937%/4positivas0negativa.
+Nova kroA200:MDM23497,6667;H10 23505,3333(-0,032627%);H60 23495(+0,011349%).
+Não excluir pequena perda/alterar seeds ou gates. Faltam5geometrias completas.
+MDM2/12referências commineração comprovadamentetimely,hybridinit0/12cada.
+
+Conferidoschecksums oficiais dos6TRAINrestantes em painéisMendeleyv2 viaCua:
+kroA200/pr226/rd400/si175/ts225/tsp225. Agora9/9arquivoslocaisigualaSHA256
+oficial;metadata/auditor dizem COMPLETE_TRAIN,0pendentes. UUID/URL/hashdeCada
+arquivo em benchmark_metadata/mendeley_train_identity.json. Auditorrerodado
+comrolesTRAIN/perfilhashesPASS. Semdownload/solverextra/teste12/solutionsfolder.
+Isso confirma dados desses9casos, NÃO réplica107nem equivalência deversões.
+Comparadorhttps://data.mendeley.com/datasets/compare/8yjbfgcfvnacessível,
+mostrametadadosv1/v2masnãohashes;nome/tamanhoigualnãoéprovaequivalência.
+Ano2020v1certo;dia16/17MaydivergenaUI, evitarprecisãonãonecessária.
+
+PDF17p anterior continua atual; incluir identidade verificada comdatasetcitation
+no próximo conjunto de alterações substanciais do protocolo, evitando compilar
+novamente por uma frase só. Próximo útil: coletasegue; enquantoaguarda, fechar
+rastreabilidade/mecanismos com evidência existente sem novooptimizer/testeholdout.
+Utils.h/CTP/fontesativas300 ecalibraçãointactos. Main70aindapendente9calibração.
+Todas oito abas temporárias IAB foram fechadas ao concluir a conferência,
+evitando páginas de navegador sem uso durante os experimentos. Os nove UUIDs
+estão no manifesto; não é necessário repetir a busca. Novas consultas podem
+abrir diretamente URLs públicas registradas, sempre sem dados reservados.
+
 ## Retomada 20/10 11h26 — identidade pública de3/9 TRAIN confirmada por SHA-256
 
 28075 ativo;3504 aguardando81+audits. Observer34/81,288rotas/1492eventosPASS,
