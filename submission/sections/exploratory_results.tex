@@ -22,6 +22,27 @@ their generation cost. It supplied a component comparison rather than an
 independent end-to-end replication or evidence for each destruction and
 repair decision separately.
 
+Figure~\ref{fig:training-effects} displays the geometry-level heterogeneity
+behind the two training averages. The largest end-to-end reduction occurred
+on rd400, whereas kroA200 and ts225 showed small mean changes and tsp225
+showed a small deterioration. Individual seed effects also varied within
+geometries. The markers are paired observations, not uncertainty intervals;
+the two panels use different controls and cannot be combined into one effect.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=\textwidth]{figures/hybrid_training_effects.pdf}
+\caption{Completed exploratory training comparisons on nine geometries with
+three paired seeds. Bars show the relative reduction of seed-mean costs;
+markers show individual seed-pair reductions, not confidence intervals.
+Panel A compares fresh executions with MDM under a total 60-second budget,
+including initialization. Panel B uses a conditional fixed-support LKH replay
+from saved initialization states and excludes their generation cost.
+Positive values favor the hybrid. Neither panel provides independent test
+confirmation.}
+\label{fig:training-effects}
+\end{figure}
+
 The frozen validation configuration was evaluated on seven geometries with
 five seeds per method, yielding 70 executions. Audits checked 466 routes
 without missing runs or feasibility failures. The primary mean reduction

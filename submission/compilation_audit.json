@@ -1,23 +1,40 @@
 {
   "status": "PASS",
   "scope": "partial illustrated manuscript; not submission-ready",
-  "pages": 12,
-  "pdf_sha256": "ccdfceae0437e175004f38b7577228ef9415c9ca907411c0f3f1a51afab42437",
+  "pages": 14,
+  "pdf_sha256": "36b74606134569ad66dc4356336368605d79b989ed50f65297d922155f2d5277",
   "source_sha256": {
     "main.tex": "f4700d281c12b4680b8ab1cfcb493adc4e2b56640b8503988f2f2a732ec36b06",
     "references.bib": "ef626d9e3034b4a4da39d8a5b02a94db8e896deb6eb61e56dbc7f681bcb785f5",
     "sections/experimental_protocol.tex": "303ac9e2b2f470f7311ff6447806c8fdf43bb2c29507eccf60c455c1071d2d92",
-    "sections/exploratory_results.tex": "f959c9f46a5e16ce06d7c303d8ba292a5857d49e344ed2cbdc6d5c607b141995",
+    "sections/exploratory_results.tex": "9472f058cde0a22464a62472a5a47fa903bae00e29ef4a0761f6f03eb0d1b269",
     "sections/hybrid_search.tex": "55eff9d5551d0017f91158e40ae6d73d9aced8d6dcb1c3f2401d72ebd4725ff3",
     "sections/problem_formulation.tex": "c06878fc84980267e87141d6c71086d075654bc06ad03cb5badc8c78488cf122",
     "sections/related_work.tex": "ceee2bbcb7091ca100af0a76275ddc1989357009157c11c2aee842c887dec666",
     "sections/restricted_repair.tex": "34106c5d97ff7bf3a3174ea28c74170a8ff80c0e36343ba686f50250b29a8b58",
     "tables/exploratory_complete.tex": "b8777ea589b32b9a1477b55bff3ae79e5a6c7f6d88a245572e22d5343864f3ac",
     "figures/hybrid_flow.tex": "41c20d9696794aa4bb87fc3604a413ca815280a7db1ec59add56ab2bb35cc7a6",
-    "figures/repair_example.tex": "82236328da0df206a9ef0f8e7931479f5d9a5096db0c7dfc92144861a51b2143"
+    "figures/repair_example.tex": "82236328da0df206a9ef0f8e7931479f5d9a5096db0c7dfc92144861a51b2143",
+    "figures/hybrid_training_effects.pdf": "9bfb2f16f1daf36ba0bf6aab67f0368afeec5598ced0e1c2606f99e51feb9361"
   },
-  "compiler": "local pdfLaTeX, final sources compiled twice; verified existing BibTeX bibliography",
-  "visual_review": "Both TikZ diagrams inspected and flow spacing corrected. All12latest pages inspected: pages1-11 raster hashes identical to individually inspected render; changed page12 inspected separately. No clipping/overlap. Empty appendix heading removed to avoid blank page; substantive sections remain incomplete.",
-  "current_source_status": "Current final sources compiled; all12pages visually checked",
-  "unresolved_references": false
+  "compiler": "Local pdfLaTeX; two final serial successful passes after all source edits; existing BibTeX bibliography.",
+  "visual_review": "Pages 1–10 raster-identical to previously reviewed pages. Changed pages 11–14 inspected individually at 75 dpi: no overlap or clipping; training plot and caption legible. Partial draft retains empty substantive sections; final reference spills onto page 14, to rebalance with final prose.",
+  "current_source_status": "Current final sources compiled; all 14 pages covered by visual review or unchanged-page hashes.",
+  "unresolved_references": false,
+  "render_sha256": {
+    "1": "68e70094bde5277cef667a934670c4bb58932a19ef9030cdc2a87fc5591b676b",
+    "2": "0ad9158e67183d6301837f475ea572fc3861b2f45f27398b99b46543cbdfabde",
+    "3": "084300bf9c5d7a1ee5d1a7dd4113e5a62348a3efc54afcb22b61cdc83c7d608d",
+    "4": "1e98eeda7b159cb323de9091e5024416e6829142a09829abc514528571e8f09c",
+    "5": "13c8773099af16b519ab527fc8ef0f83bad61e1693f8937473935b345baa0eac",
+    "6": "8f0f9b8e0189dd40700ae5fbc745242e6134a864e2091570dfc2a0957f04fcf2",
+    "7": "4f36646615d04053cce8fa0e62608338816bb399f804ef14b2a7e7ae390e744e",
+    "8": "45ed29b588f5d71c36b13a4db2ed9713cdf7dc9e4039df58d6dc1fb6330d103a",
+    "9": "264df2af230fa7fc3106b9bec0c17b809e463d580ca707073f59976a49acbf3c",
+    "10": "619e941ec1826ab241775cff8acc9eeb18256bfb62bcb7d72a3db6283b2d9f5d",
+    "11": "d58db8455200ef680888cc2ab8e9fc5b9867d4095972a7f74fdb1689100c03fd",
+    "12": "74ceea0f3d4d12122a245500a7eb38d9ef016bd1aa16e4699de479742aca36db",
+    "13": "59214a590998547eae43106d94a8b1402d77c18051de1b67aa845335f7198979",
+    "14": "e74ea3e186a501c9314dd71ca47403c9eca3becf53e16062db9d31e9718597dd"
+  }
 }

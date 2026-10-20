@@ -1,5 +1,29 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 — figura dos resultados concluídos; coleta 300 s em 27/81
+
+Sessão 28075 continua como único otimizador; fila 3504 ainda aguarda a conclusão
+81/81 e auditoria ambiental antes da calibração de 70 iterações. Não duplicar.
+Observer awake: 27 execuções, 257 rotas auditadas, 1313 eventos de incumbentes,
+9/27 blocos ambientais PASS e três geometrias completas. Ganhos parciais H10
+1,599994% / H60 1,501467%, três médias positivas em cada; nenhum gate concluído.
+Nenhuma chamada de mineração observada nestas 27 execuções. Não extrapolar para
+superioridade frente à mineração ou protocolo publicado de 70 iterações.
+
+Integrada figura vetorial hybrid_training_effects.pdf aos resultados exploratórios:
+18 barras de médias por geometria e 54 pontos de sementes recalculados a partir
+dos dois arquivos-fonte; hashes conferidos. Certificado em
+submission/figures/hybrid_training_effects_verification.json. Painel A tem
+orçamento total 60 s; B é replay condicional sem geração dos estados. Legenda
+explicita controles distintos, pontos não são IC e ausência de teste independente.
+Resultados ativos 300 s continuam fora da tabela de estudos concluídos.
+PDF atualizado: 14 páginas, duas passagens finais seriais PASS sem warnings;
+páginas 1–10 raster-idênticas às já revistas, 11–14 inspecionadas individualmente.
+Auditoria de compilação atualizada. Figura e legenda legíveis, sem cortes ou
+sobreposição. Artigo ainda parcial; última referência isolada em p14 será
+reequilibrada quando houver texto final, sem tratar paginação como completude.
+Utils.h, fontes da coleta ativa e 12 geometrias de teste preservados.
+
 ## Pedido direto20/10 —figurasmetodologiaTikZ implementadas/verificadas/PDF12p
 
 Usuárioquerilustraçõesnametodologia,TikZpreferido. Preferênciagravadaem
