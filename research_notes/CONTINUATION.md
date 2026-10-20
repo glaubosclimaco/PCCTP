@@ -1,5 +1,28 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 10h25 —awake22/81; relatedworkredigido7refs/PDF11p
+
+28075ATIVO;3504aguardando.NÃODUPLICAR. observeawakePASS22runs214rotas,
+curvas1069eventos,7blocosambientaisPASS,2geometriascompletas. Semconclusãonova.
+Fontesprimáriasrechecadasweb:RAIRO2021PDF,Inderscience2023/2026páginas,
+SpringerLB2003/RINS2005abstract+metadata,DTUALNS2006 eElsevierHelsgaun2000.
+Relatedworkoutline→prosa emsubmission/sections/related_work.tex;
+7referênciascitadas/bibsemfaltas,ledger/provenanceatualizados. Nãoalega
+fulltextLB/RINSnemnovidadeGRASP+MIP(PCCTP2023játemhybrid). NomeRogério
+daSilva normalizadocompartículapreservadaemBibTeX;2026metadataigualaexistente.
+
+PDFmarkereditumavez;pdflatex→BibTeX→2passesPASSsemundefined/overfull.
+PDF11p,todas11renderizadas70dpi evisualizadasindividualmente,semclipping/
+overlap. compilation_audit.json+related_work_provenance.jsonhashesnovos.
+ContinuaRASCUNHO:Intro/Stats/Discussion/Conclusions/Appendixplaceholders,
+sem300parcialnatabelaconcluída,semnovidade/superioridadeconfirmada.
+Pendênciametadata:RAIRO2021citaMendeley8yjbfgcfvn.v1/v2,registro2019
+antesvistoégpnmh9kdr9.v1(completeresults);identidadedosarquivosnãoverificada.
+benchmark_identifier_followup.mdnãoconcluierrolocal,nãoabrirteste12.
+Próximo:poll28075/3504,observeawake,continuartextofundamentadoenquantofila
+únicaroda;calibração70sóapós81awakeauditados. Utils.h/CTP/teste12intocados.
+
+
 ## Pedido direto —por queparou:coletaATIVA21/81; protocoloartigo redigido/compilado10p
 
 28075ATIVOconfirmado;3504FILAAguarda.NÃODUPLICAR. ÚltimoobserveawakePASS

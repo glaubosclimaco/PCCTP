@@ -1,0 +1,73 @@
+PCCTP heuristics already combine construction, local improvement and
+diversification. Cl\'{\i}maco et al.~\cite{climaco2021reactive} developed a
+reactive GRASP using an adapted GENIUS construction and randomized variable
+neighborhood descent. Their local search changes both route order and visited
+locations while respecting the problem's feasibility requirements. This
+provides a stronger point of comparison than a construction heuristic alone.
+The experimental question here concerns the additional value of a separate
+destruction-and-repair phase after initialization, rather than the first use
+of multiple neighborhoods for the PCCTP.
+
+Exact optimization and mathematical-programming hybrids also have direct
+precedents for this problem. Cl\'{\i}maco et al.~\cite{climaco2023approaches}
+presented a branch-and-cut algorithm, valid inequalities, reduction rules and
+a hybrid combining a PCCTP heuristic with integer programming. Consequently,
+neither adding preprocessing nor combining a GRASP-derived method with a MIP
+solver is sufficient by itself to distinguish the present investigation.
+Any useful extension must be specified more precisely and evaluated against
+appropriate controls, including its model-building and optimization time.
+
+The later data-mining approach of Cl\'{\i}maco et
+al.~\cite{climaco2026mdm} exploits patterns in high-quality solutions to guide
+GRASP search. Its publisher description includes analyses of pattern mining,
+statistical comparisons and time-to-target behavior. The supplied MDM code
+and manuscript support the recovered reference used here. We distinguish
+that reference's declared corrections and parameter choices from the
+published method description. In particular, a comparison ending before
+mining is activated cannot establish superiority over the mining mechanism.
+Final-cost comparisons and mining-exposure records address different parts
+of that question.
+
+Destruction and repair also belong to the broader large-neighborhood-search
+literature. Ropke and Pisinger~\cite{ropke2006alns} used competing
+subheuristics with selection frequencies reflecting their historical
+performance in adaptive large neighborhood search for pickup and delivery
+with time windows. The uniform-removal configuration evaluated here has no
+such adaptive operator-selection layer. It should therefore not be described
+as an implementation or improvement of that complete framework. Its
+temporary coverage and prize violations, greedy reinsertion and acceptance
+rule define the specific trajectory whose incremental value is examined.
+
+The route-ordering component creates another attribution problem.
+Helsgaun~\cite{helsgaun2000} developed an effective implementation of the
+Lin--Kernighan traveling-salesman heuristic. In the present implementation,
+LKH receives a symmetric routing matrix for a fixed set of visited locations.
+Reordering that set cannot repair a missing coverage location or add prize;
+those effects require visit changes. Conversely, an observed hybrid gain
+could arise from strong reordering rather than the visit-change mechanism.
+The fixed-support component replay is designed to separate these effects,
+while retaining its conditional status and charged remaining allowance.
+
+General-purpose MIP neighborhood methods offer related alternatives.
+Fischetti and Lodi~\cite{fischetti2003local} used local branching cuts to
+define solution subspaces explored by a MIP solver. Danna, Rothberg and
+Le Pape~\cite{danna2005rins} introduced relaxation-induced neighborhood
+search, which uses information from a continuous relaxation and formulates
+neighborhood exploration as a further MIP. These methods motivate exact
+exploration around feasible incumbents, but they do not identify a unique
+PCCTP neighborhood. Fixing routing edges and visit decisions, contracting
+retained paths, and restricting insertion positions impose distinct
+structural choices. Their feasibility, computational cost and improvement
+potential require separate evaluation; a local optimality certificate is
+limited to the decisions left free.
+
+This investigation therefore separates three empirical questions: whether
+changing visits adds value beyond fixed-support reordering, whether restricted
+integer repair adds value beyond greedy repair on matched destructions, and
+whether any resulting complete search improves on a sufficiently developed
+MDM reference under an explicit total-time comparison. The completed
+exploratory tests include unfavorable outcomes and a failed validation
+screen. The ongoing longer-horizon work does not yet settle the third
+question. Differences in neighborhood construction are descriptions of the
+method under study, not evidence of novelty or of a literature-wide
+performance advantage.
