@@ -1,5 +1,14 @@
 # Memória do projeto
 
+## Diário portável obrigatório
+
+Por solicitação do usuário em20/10/2026, manter `diario.md` na raiz durante
+todo o projeto. Atualizar a cada avanço material e antes de interromper ou
+transferir o trabalho: o que foi feito, por quê, evidências, falhas, arquivos,
+processos e próximos passos. Deve permitir retomada por outra IA sem o chat.
+Leia também `AGENTS.md`; não confundir planejamento/teste sintético com
+experimento real ou conclusão. CONTINUATION mantém o detalhe operacional.
+
 ## Pesquisa ativa
 
 - PCCTP = Prize-Collecting Covering Tour Problem.

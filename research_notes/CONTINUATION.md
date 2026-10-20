@@ -1,5 +1,21 @@
 # Estado operacional para retomada autônoma
 
+##20/10,12h42 — diário portável solicitado; owner-cache ainda não verificado
+
+Novo pedido do usuário: manter minidiário para transferência a outra IA.
+Criados diario.md e AGENTS.md; regra adicionada a CLAUDE/memória. Atualizar
+diario.md a cada avanço material e antes de entregar/interromper trabalho.
+Ele contém contexto e justificativa; este arquivo conserva detalhe operacional.
+
+Na retomada atual foram escritos cached30_batch_audit.py e fixture
+verify_cached30_batch.py/JSON:16checks sintéticos PASS,27pares/54fases,
+efeitos por geometria e mean por frações exatas, gates completos e negativos,
+ambiente/rotas/fontes/corrupções. cached30_train.py foi escrito como owner com
+lock paired70 e pré-requisitos81+calibração9. AINDA NÃO VERIFICADO/LANÇADO/
+ENFILEIRADO. Próximo passo:fixture do owner, ajustar docs/status, conferir
+todoscertificados atuais e commit seletivo. Último observer48/81 permanece
+o snapshot auditado;28075otimizadorativo/3504fila sem duplicação.
+
 ### Complemento desta retomada, 12h38
 
 Observer atualizado:48/81,402rotas/2101eventosPASS; permanecem cinco geometrias

@@ -1,5 +1,14 @@
 # Pesquisa PCCTP
 
+## Diário portável solicitado em20/10/2026
+
+O usuário quer um minidiário durante todo o projeto para continuar em outra
+IA/ferramenta. Manter `diario.md` na raiz, com decisões e justificativas,
+experimentos e evidências, resultados negativos, erros/correções, arquivos,
+processos e próximos passos. Atualizar após avanços materiais e antes de
+encerrar/transferir. `AGENTS.md` torna a instrução visível a outros agentes;
+`research_notes/CONTINUATION.md` continua como estado operacional detalhado.
+
 ## Decisões do usuário
 
 Em 18 de outubro de 2026, o usuário escolheu continuar com aprendizado de
