@@ -58,7 +58,9 @@ def execute(d, original, retained, arm, label):
             details = joint(d, retained, seconds=remaining, slots=slots)
             if details['accepted']:
                 candidate = details['route']
-        details = dict(details, slot_variables=sum(map(len, slots.values())))
+        details = dict(details, slot_variables=sum(map(len, slots.values())),
+                       slots=[dict(vertex=int(d['visits'][v]), gaps=gaps)
+                              for v, gaps in slots.items()])
     repair_time = time.clock_gettime(time.CLOCK_MONOTONIC)
     feasible_repair = candidate is not None
 
