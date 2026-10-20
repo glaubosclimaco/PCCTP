@@ -11,6 +11,17 @@ O usuário reafirmou em19/10 que deseja experimentos reais para avaliar se vale
 escrever o artigo. Manter foco no PCCTP; a triagem de outros problemas deixa de
 ser prioridade enquanto este estudo roda. Não trocar por redação especulativa.
 
+## Estado após suspensão comprovada em20/10
+
+A primeira coleta300s foi interrompida com44 resultados completos preservados,
+pois o macOS suspendeu por fechamento da tampa e ciclos de manutenção.
+A auditoria de rotas não torna esses tempos controlados. A repetição integral
+em ruin_total300_awake_train mantém os81 ensaios, sementes, parâmetros e
+binários; não mistura geometrias antigas com novas. Monitor de relógios e
+registro pmset por bloco interrompem a fila diante de nova interferência.
+O protocolo está em awake300_repetition_protocol.md. A calibração70 agora
+aguarda conclusão e auditoria ambiental desta repetição.
+
 ## Estudo em execução
 
 81 execuções novas: nove instâncias de treino difíceis, três sementes e três

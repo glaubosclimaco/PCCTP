@@ -1,5 +1,20 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 09h21 —awake9/81; primeira geometria completa auditada
+
+28075ATIVO,3504FILAAguarda.NÃODUPLICAR. observe_awake300PASS9runs77rotas,
+curvas394eventos,3blocosambientaisPASS(9resultados). A2803seedscompleto:
+MDMmean2029.333333,H10=1998(+1.544021%),H60=2001.333333(+1.379763%).
+Essasmédiascoincidemcomprimeirageometriaantigaantesdanoitesuspensa;
+repetição técnica mesmassementes,nãoamostraindependente. Relatarnovobatch
+sozinho. Ainda1/9geometrias,gateglobalfalse;0miningobservada9exports.
+Semnovaotimizaçãoparalela,nãoretunarnemanteciparMDM70. Planoavaliação
+pcctp_decisive_evaluation.mdatualizadocominterrupçãoe repetiçãointegral,
+evitarestadooperacionalantigoconflitante. Cálculos/gatesinalterados.
+Próximo:poll28075/3504,observe_awake300.py,fechargeometriasseguintes;
+aguardar81awake+9calibração. Teste12/CTP/Utils.hintocados.
+
+
 ## Retomada20/10 09h11 —awake7/81; auditoriaformula/códigos sem solverextra
 
 28075ATIVO;3504aguardando.NÃODUPLICAR. observe_awake300PASS7runs60rotas,
