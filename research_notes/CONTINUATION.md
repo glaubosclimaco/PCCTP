@@ -1,5 +1,26 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 00h50 —300s28/81; fluxo90pares70 verificado sem solver
+
+43548ATIVO;48191calibraçãoAGUARDA300fim.NÃODUPLICAR.AuditorPASS28runs269
+rotas;curvas1334eventos,3geometriascompletas.Ambas3wins0loss,nãoinferência.
+gr229médiasMDM98218,H10=97060(+1.179010%),H60=96722.333(+1.522803%).
+Médiaganhos3geomH10+1.464243%,H60+1.507556%. Aindafaltam53runs,
+zeromineraçãoobservada28exports.NãoextrapolarMDM70/publicação.
+paired70_train.py refatorado main+execute_pairspara testeisolado.
+verify_paired70_orchestration.pyPASSo fluxo90pares com268chamadasMOCK
+(90ref+178candidatos,1refcensurada). Auditoresreais emdadossintéticos:
+refantescandidatos,Ttransferidoexato,ordemreprodutível,duasindisponíveis
+apóscensura,retomadacachezerochamadas,protocolodiferenterejeitado,
+calibraçãoausentebloqueiatudo.Certificadohashnowexigidopelo guardmain.
+TesteexposreferênciaaOUTglobalnocoletordecompletionapósrefatorar;
+corrigidoout.globantesqualquercoletareal70.Nenhumsolverrealexecutado.
+Main10seedsNÃOlançado;protocolorealmainnãoexiste.Pendentescalibração9
+completa eauditadaantesdisparar.Preservarteste12,Utils.h efontes300.
+Próximoheartbeat:atualizar300/filacalibração;inspecionarregimesdeganho
+apenasquandoasgeometriasfecharem.Semnovopilotoouretunagemnestelote.
+
+
 ## Retomada20/10 00h40 —300s26/81; auditorbatch70 e agregação verificados
 
 43548ATIVO;48191calibraçãoAGUARDA.NÃODUPLICAR.Auditor300PASS26runs253rotas,

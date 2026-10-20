@@ -12,7 +12,7 @@ OUT=HERE/'paired70_train'
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
-if __name__=='__main__':
+def main():
     guard=HERE/'published70_calibration_audit.json'
     assert guard.exists(), 'Wait for completed and audited seed80 calibration'
     calibration=json.loads(guard.read_text())
@@ -28,6 +28,9 @@ if __name__=='__main__':
     verification=json.loads((HERE/'verify_paired70_batch_audit.json').read_text())
     assert verification['status']=='PASS'
     for filename,hashed in verification['source_hashes'].items():assert digest(HERE/filename)==hashed
+    orchestration=json.loads((HERE/'verify_paired70_orchestration.json').read_text())
+    assert orchestration['status']=='PASS'
+    for filename,hashed in orchestration['source_hashes'].items():assert digest(HERE/filename)==hashed
     old=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows']
     roles=json.loads((ROOT/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())['roles']
     cases=[dict(instance=r['instance'],geometry=r['geometry']) for r in old]
@@ -59,8 +62,14 @@ if __name__=='__main__':
     if p.exists():assert json.loads(p.read_text())==protocol
     else:p.write_text(json.dumps(protocol,indent=2)+'\n')
     protocol_hash=digest(p)
+    execute_pairs(schedule,OUT,protocol_hash)
+
+
+def execute_pairs(schedule,out,protocol_hash):
+    out=Path(out);refs=out/'references';candidates=out/'candidates'
+    refs.mkdir(parents=True,exist_ok=True);candidates.mkdir(exist_ok=True)
     for pair in schedule:
-        name,seed=pair['instance'],pair['seed'];target=OUT/f'{name}.seed{seed}.pair.json'
+        name,seed=pair['instance'],pair['seed'];target=out/f'{name}.seed{seed}.pair.json'
         if target.exists():
             assert json.loads(target.read_text())['protocol_sha256']==protocol_hash
             continue
@@ -68,7 +77,7 @@ if __name__=='__main__':
         data=load(name)
         audit_reference(r,data,refs,seed)
         record=dict(instance=name,seed=seed,protocol_sha256=protocol_hash,
-            reference_file=str(refpath.relative_to(OUT)),reference_sha256=digest(refpath),
+            reference_file=str(refpath.relative_to(out)),reference_sha256=digest(refpath),
             status='REFERENCE_INCOMPLETE',candidate_records={},unavailable_candidate_modes=[])
         if r['status']=='COMPLETED70':
             budget=r['reference_duration_seconds']
@@ -77,15 +86,18 @@ if __name__=='__main__':
                 result=candidate(name,seed,mode,budget,candidates)
                 audit_candidate(result,data,budget)
                 source=candidates/f'{name}.seed{seed}.{mode}.json'
-                record['candidate_records'][mode]=dict(file=str(source.relative_to(OUT)),
+                record['candidate_records'][mode]=dict(file=str(source.relative_to(out)),
                     sha256=digest(source),cost=result['cost'],feasible=result['feasible'])
             record.update(status='PAIR_COMPLETED' if all(c['feasible'] for c in record['candidate_records'].values()) else 'CANDIDATE_FAILURE',
                           budget_seconds=budget,candidate_order=order)
         else:record['unavailable_candidate_modes']=['hybrid10','hybrid60']
         temp=target.with_suffix('.tmp');temp.write_text(json.dumps(record,indent=2)+'\n');temp.replace(target)
         print(json.dumps(record),flush=True)
-    rows=[json.loads(p.read_text()) for p in OUT.glob('g_*.pair.json')]
+    rows=[json.loads(p.read_text()) for p in out.glob('g_*.pair.json')]
     assert len(rows)==90
-    (OUT/'completion.json').write_text(json.dumps(dict(scheduled_pairs=90,
+    (out/'completion.json').write_text(json.dumps(dict(scheduled_pairs=90,
         planned_executions=270,reference_records=90,
         candidate_records=sum(len(r['candidate_records']) for r in rows)))+'\n')
+
+
+if __name__=='__main__':main()
