@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Post hoc descriptive analysis of completed TRAIN and reused validation 60-second results only. Active 300-second and reserved test outcomes excluded.",
+  "checks": [
+    "16 effects reconstructed from all audited seed costs using Fraction",
+    "16 leave-one-geometry-out means independently recomputed using 45-digit Decimal arithmetic",
+    "Source summary geometry effects and primary means agree within 1e-10",
+    "No confidence intervals, p-values, retuning, denominator changes or gate changes"
+  ],
+  "source_sha256": {
+    "experiments/lkh/completed60_sensitivity.py": "2ea03ce1190a04eed00dc7ae52c33c6749a85898f88cd97d90d2283a458761d1",
+    "experiments/lkh/completed60_sensitivity.json": "1dfc94fdcf9309f935f58696e4e05562993b08ac2836eda07dbb489917d14aa7",
+    "research_notes/manuscript_sensitivity_outline.md": "35f51b8ad00b274ac4b75dd5a013c74e81a425928da4ee27557f543f24d97a8e",
+    "submission/sections/descriptive_sensitivity.tex": "74135b1e385a71cbe34530831d9083e8551dba3bb623c728c2aaf2e9e033e2a1",
+    "submission/tables/geometry_sensitivity.tex": "142d8549a24dcdf3781b2e8dd5356db57965256fc258d5cfb892a99396f5c434"
+  }
+}

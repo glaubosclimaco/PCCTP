@@ -1,22 +1,27 @@
 {
-  "scope": "Partial manuscript interpretation grounded in completed exploratory evidence only; no active 300-second costs or reserved test outcomes enter prose.",
+  "scope": "Partial manuscript grounded in completed exploratory60s and300s TRAIN studies, reused validation and negative MIP evidence; no reserved outcomes or completed MDM70 superiority claim.",
   "source_sha256": {
     "research_notes/manuscript_interpretation_outline.md": "ace922e04a132f1872ce8e50a77b9043e4aa83421817d581a20d207516b48321",
     "submission/sections/introduction.tex": "3b862f4b1666e8ecd161793e8c7c25c37a8d7ca5b2f4a75b616712fdefe28ee1",
-    "submission/sections/discussion.tex": "958a6359aac580cae1d3704818ef185ee2e0eb612997adac5111ec4edb374d59",
+    "submission/sections/discussion.tex": "d95a79f11cbee17a3c41037d26af17e3874641c728f13cdf6a5a32dbf0805560",
     "submission/reference_verification.json": "f8db59d1ad93004907b0ecbdf3c9cc78d5c5ae99b4a7bf781fc192b2f72b2820",
     "experiments/lkh/diagnose_support_changes.py": "0f4ddbc09f4eec46654f59fccd89d2dd7edc43e29022a20296414a9026d0d443",
     "experiments/lkh/support_change_diagnosis.json": "4e8dd07b7ff74b180d8bd8de8b2d1bf0ee6411bbbd1855e77aaf7663d9bd098a",
     "experiments/lkh/hard_train_instance_profile.json": "dce020b5f1586c65ba92b3c55236d91ea94755db205abccdc8f8e31dc34db419",
     "experiments/lkh/ruin_total60_absolute_summary.json": "be0f10227e82b58ae49c67cf3de3a16275a760ad89ef7640afe0caf99b18e32b",
     "experiments/lkh/ruin_validation60_summary.json": "0c4c78b63c21149673b0344ebf836632e77859ce81f6f64540a144f8e71cda4f",
-    "experiments/lkh/fixed_support_ablation_audit.json": "a55addcdf2a41636f9b564ef8c040d63fb435d131b6707f579a88d4e2f55018e"
+    "experiments/lkh/fixed_support_ablation_audit.json": "a55addcdf2a41636f9b564ef8c040d63fb435d131b6707f579a88d4e2f55018e",
+    "research_notes/awake300_manuscript_outline.md": "2ddca1351876028675b72d8a98ad4e11d37269c60a9ded23131035296d427926",
+    "experiments/lkh/awake300_closing_analysis.json": "a2926a9c630e1712e32ff7b6396133b7e766836375c336d751a26a379f556a68",
+    "submission/sections/awake300_results.tex": "252be07334822661693f2e71739f369d59271f480cb4c5e85342437fd52acf00"
   },
   "checks": [
     "Support diagnostic rerun: all 27 input and final routes checked against original scalar input; endpoint result hashes verified",
     "Counts retained: 23 changed supports, 20 net quota witnesses, 5 net coverage witnesses",
     "Four mandatory-covered TRAIN geometries verified in input-profile artifact",
     "Existing verified reference keys reused; no additional literature novelty or cross-machine speedup claim",
-    "No causal attribution from endpoint support witnesses; no claim of integrated MIP benefit"
+    "No causal attribution from endpoint support witnesses; no claim of integrated MIP benefit",
+    "Completed81-run TRAIN screen retained both prespecified arms; H60 passes and H10 fails without altering gates",
+    "No causal isolation of initialization and no replacement of iteration-limited references by300s endpoints"
   ]
 }

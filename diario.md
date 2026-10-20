@@ -39,6 +39,11 @@ outra calibração. O cache continua parado até essa calibração ser auditada.
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
 
+**Rascunho conferido às17h17:**20páginas, incluindo resultados300s completos,
+tabela de nove geometrias e figura dos dois braços. Ainda faltam abstract,
+conclusão e evidências das referências/comparações70; não está pronto para
+submissão. Compilação e inspeção estão em `submission/compilation_audit.json`.
+
 ## Arquivos que contêm as decisões e evidências
 
 - `AGENTS.md`: instruções portáveis para qualquer assistente, incluindo a
@@ -559,6 +564,54 @@ Próximo passo: deixar a fila terminar as nove referências e a auditoria
 `audit_published70_calibration.py`. Se um bloco ambiental falhar, o próprio
 script preserva a tentativa e para. Não repetir em silêncio e não lançar o
 cache antes dessa auditoria.
+
+## 20/10/2026, 17h17 Fortaleza — fechamento81 e incorporação auditada ao rascunho
+
+O coletor terminou com81execuções elegíveis e a fila realizou suas auditorias:
+27blocos ambientais válidos,624rotas na auditoria de endpoint e3371registros
+de rotas/eventos na reconstrução de horizontes. Os contadores se referem a
+passagens distintas de auditoria, não a novas repetições experimentais.
+H60 passou no critério exploratório: redução0,979441%, oito ganhos e uma
+perda. H10 falhou:−1,279343%, seis ganhos e três perdas. tsp225 manteve os
+seis resultados híbridos2449contra os três MDM2447. Todas as perdas e o
+bloco ambiental inválido arquivado foram preservados.
+
+Executei `close_awake300.py` com o lote completo: hashes e81rotas finais
+conferidos, custos e critérios recompostos por frações, upstream preservado
+em `experiments/lkh/awake300_completed_snapshots/`. Sensibilidade descritiva:
+H60 varia0,840469–1,112088% ao omitir cada geometria; H10 varia−1,682921a
+0,995688%. O extremo positivo de H10 exclui rd400 somente nesse diagnóstico,
+sem excluir a instância da média principal ou alterar o critério. Conferi
+independentemente18efeitos e18omissões por Decimal com45dígitos.
+
+Gerei a figura por `plot_awake300.py`, com18barras e54marcadores. A primeira
+inspeção mostrou rótulos próximos dos pontos; movi os valores para uma coluna
+e ajustei o tamanho para leitura na página. Mantive o eixo comum, inclusive
+a perda de rd400. Aritmética dos72valores conferida independentemente. Saídas
+PNG/SVG e proveniência em `submission/figures/awake300_effects.*`.
+
+Após esboçar a seção, acrescentei resultados e tabela300s, sensibilidade e
+descrição da repetição ambiental ao LaTeX. Uma primeira aplicação de patch
+falhou por contexto textual impreciso, sem alterar as fontes; reli e apliquei
+o contexto correto. A redação preserva a validação60negativa, a reparação MIP
+negativa e a distinção entre este screen TRAIN e MDM70. Não introduzi nova
+referência ou alegação de novidade/BKS. Histórico das proveniências anteriores
+foi copiado para `submission/provenance_history/`, e os vínculos atuais foram
+reconferidos. O marcador da habilidade PDF foi executado uma vez antes da
+autoria; duas compilações seriais pdfLaTeX terminaram sem avisos finais.
+
+O PDF agora tem20páginas. Renderizei70dpi: páginas1–10 têm pixels idênticos
+às revisadas antes; inspecionei individualmente11–20, incluindo as quatro
+figuras e quatro tabelas. Não vi cortes ou sobreposição. Uma referência
+isolada na última página será reequilibrada quando forem escritas as partes
+pendentes, sem preencher páginas artificialmente. Abstract e conclusão
+continuam pendentes; o número de páginas não significa artigo concluído.
+
+A fila já iniciou a calibração seed80 por gil262. Conferência às17h17:
+zero referências completas e sem marcador de falha ambiental; não iniciar
+cache ou uma segunda calibração. Próximo passo: acompanhar checkpoints
+apenas como observações parciais, preservar eventuais censuras e só usar
+referências70completas/auditadas para dimensionar a comparação principal.
 
 ## Modelo para próximas entradas
 

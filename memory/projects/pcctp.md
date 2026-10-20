@@ -126,3 +126,13 @@ ilustrações claras, preferencialmente em TikZ quando apropriado. Figuras
 devem representar o algoritmo de fato executado; distinguir componentes
 estudados separadamente de estágios integrados. Exemplos esquemáticos não
 são resultados experimentais e precisam de verificação de consistência.
+
+## Diagnóstico300s concluído em20/10
+
+Lote awake300:81execuções elegíveis,9TRAIN×3sementes×3métodos,27blocos ambientais
+válidos. H60passa screen exploratório:+0,979441%,8ganhos/1perda. H10falha:
+−1,279343%,6ganhos/3perdas. Semgeneralização/BKS/novidade ou superioridade sobre
+MDM70completo. Umbloco adicionalinválido preservado e repetido integralmente,
+semseleção porqualidade. Fechamento/snapshots emexperiments/lkh/awake300_closing_analysis.json.
+Calibração9TRAINseed80/70iterações iniciada pela fila existente; não duplicar.
+Artigo20pcompilado/inspecionadoaindaéparcial,abstract/conclusão/evidências70pendentes.

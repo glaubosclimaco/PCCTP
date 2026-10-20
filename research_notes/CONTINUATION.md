@@ -1,5 +1,29 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h17 — fechamento exato e artigo20p compilado/inspecionado
+
+close_awake300.py executado PASS com81:81custos/rotas/hashes reconferidos,
+upstream em awake300_completed_snapshots/15cbd637166abc5a866de091d40487bb88af8e282233a8d1ae52273516048883/.
+H10−1,279343%(6/3),H60+0,979441%(8/1). LOOdescritivoH60[0,840469;1,112088],
+H10[−1,682921;0,995688],semCI/p/novo gate. 18efeitos+18LOO conferidosDecimal45.
+
+plot_awake300.py gerouPNG/SVG:18barras/54marcadores,72valoresconferidosDecimal.
+Rótulos forampara coluna semsobrepor pontos;figura inspecionada isolada e
+na página15. Tabela9geometrias, seçãoawake300_results.tex, sensibilidade e
+discussão/protocoloatualizados, semnovidade/BKS/generalização/MDM70superioridade.
+HistóricoJSON em submission/provenance_history/;proveniências atuais atualizadas.
+
+PDF20p:markerPDF1vezantesautoria,2pdflatexseriaisPASS,semwarnings/overfull.
+Render70dpi /private/tmp/pcctp-awake300-final-01.png…20.png. Páginas1–10pixeliguais
+àsinspecionadas;11–20revisadasindividualmente. 4figuras/4tabelaslegíveis.
+compilation_audit.json/methodfiguresprovenance atualizados. Abstract/conclusão
+pendentes:rascunho NÃOprontosubmissão;referênciaórfã20seráreequilibrada depois.
+
+Fila26890/processo68316 lançoucalibração:gil262seed80,MDM70. Às17h17:0referências
+completas,sem environment_failure.json. Protocoloativo nãoalterado; NÃOduplicar
+calibração/NÃOcache/paired70 ainda. Checkpoint é parcial, não70completo.
+Diário contém detales/comandos/falhas/correções. Utils.h/CTP/teste12 preservados.
+
 ## 20/10, 17h12 — awake81 auditado; calibração seed80 em curso
 
 Lote ruin_total300_awake_train completion runs=81. Auditoria de rotas PASS,
