@@ -1,5 +1,22 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h39 — fila/calibração conferidas; vínculo LKH do cache corrigido
+
+13438otimizador e26890fila ativos. tsp225seed70 MDM2447/H602449 gravados;
+faltam7resultados no instante da conferência, sembloconovo completo. Snapshot
+auditado72/81 inalterado; não lançar outrootimizador ou fidelidade concorrente.
+
+Revisão calibração confirmou PCCTP_BUDGET=0,seed80,70iterações/snapshot70/exit0/
+ambientePASS como conclusão;43200s censura preservada,nove slots/prioridadegil/rd.
+Sem alteração de fontes/protocoloativos.
+
+Bug preventivo no cacheowner (ainda nuncaexecutado): buscavaLKH no protocolo
+calibração,que contém sóMDM+FPMax. Corrigido cached30_train.verify_ordering_binary
+para verificar awake300, que congelaLKH. Fixtureowner13PASS (antes11),inclui
+calibração semLKH ebinárioalteradorejeitado. Todoscertificados atuais ehashreal
+LKH conferidos PASS sembusca. Nenhum dado cached/controle/gate alterado.
+Diário e desenho prospectivo registram erro/correção; cache nãoenfileirado.
+
 ## 20/10, 16h29 — snapshot72 auditado; apenas tsp225 falta
 
 Sessão13438 segue como único otimizador;26890 fila espera81/audits antes da

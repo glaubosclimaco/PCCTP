@@ -143,3 +143,17 @@ The partial counters contain invocations, not proven improving tours. Faster
 text generation, more invocations, lower timeouts or zero exit codes cannot
 replace the prespecified cost gate. Approximate cache bytes also cannot
 support a claim of lower total memory usage.
+
+## Ordering-binary provenance correction before collection
+
+Review on20October,16:39 found that the unused owner was looking for LKH in
+the calibration protocol, whose binary list correctly contains only MDM and
+its mining helpers. That would have blocked collection with a missing key.
+cached30_train.verify_ordering_binary now compares LKH with the completed
+awake300 predecessor, which actually runs and freezes it. The owner fixture
+now has13checks, including an MDM-only calibration protocol with no LKH entry
+and rejection of a changed ordering binary. All owner certificates and the
+real local LKH hash were checked again without launching search. No cached
+result existed, no calibration/awake source was edited, and no quality gate
+was changed. This is a pre-collection implementation correction, not a
+performance result.

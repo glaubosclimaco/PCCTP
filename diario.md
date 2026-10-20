@@ -361,6 +361,35 @@ cd PCCTP
 git checkout codex/pcctp-learning-submission
 ```
 
+## 20/10/2026, 16h39 Fortaleza — revisão da calibração e correção preventiva
+
+O único coletor continua na sessão13438 e a fila26890 espera o lote completo.
+Já foram gravados MDM/seed70/tsp225 (2447) e H60/seed70/tsp225 (2449), mas ainda
+não há um bloco completo novo para agregar. O snapshot publicado permanece
+72/81. Não lancei outro otimizador ou ensaio de fidelidade concorrente.
+
+Conferi o protocolo e o código da calibração: seed80, orçamento positivo
+desativado, limite de segurança43200s tratado como censura, prioridade gil262
+e rd400. A conclusão exige payload completo,70iterações, snapshot70, exit0,
+ambiente válido e auditoria escalar. Resultados censurados permanecem no
+denominador das nove referências e impedem chamar a calibração de completa.
+Nenhuma dessas configurações foi alterada.
+
+A revisão encontrou um erro no controlador de cache ainda não executado:
+ele procurava LKH na lista de binários da calibração, que contém apenas MDM
+e os auxiliares de mineração. Isso bloquearia o controlador por chave ausente
+mesmo após referências válidas. Corrigi somente `cached30_train.py` para
+conferir o LKH no protocolo awake300, que de fato o usa e congela. Acrescentei
+dois testes sintéticos ao fixture: calibração sem LKH e recusa de binário
+alterado. Agora são13verificações do controlador, todas PASS. Conferi também
+o hash do LKH real contra awake300 e todos os certificados atuais: PASS,
+sem executar busca. Não havia dados de cache para invalidar ou selecionar.
+
+Próximo passo: deixar concluir os sete resultados de tsp225 ainda pendentes
+no momento dessa conferência, auditar o lote e acompanhar as referências70
+pela fila. Registrar tempos reais e censuras antes de estimar o custo do
+estudo principal. O artigo permanece incompleto e o cache não foi enfileirado.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto

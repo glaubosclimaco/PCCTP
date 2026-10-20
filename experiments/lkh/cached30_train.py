@@ -56,6 +56,12 @@ def verify_prerequisites():
     return {name: digest(HERE/name) for name in paths}
 
 
+def verify_ordering_binary(binary):
+    # Calibration runs MDM only: its protocol intentionally has no LKH entry.
+    awake = json.loads((HERE/'ruin_total300_awake_train/protocol.json').read_text())
+    assert awake['binary_hashes'].get(str(binary)) == digest(binary), 'Ordering binary changed since awake300'
+
+
 def collect():
     prerequisites = verify_prerequisites()
     verify_certificates()
@@ -71,8 +77,7 @@ def collect():
     files.add('experiments/lkh/verify_paired70_lock.json')
     files.add('research_notes/cached30_conditional_design.md')
     binary = Path('/private/tmp/pcctp-lkh3-research/LKH')
-    calibration = json.loads((HERE/'published70_calibration/protocol.json').read_text())
-    assert calibration['binary_hashes'][str(binary)] == digest(binary)
+    verify_ordering_binary(binary)
     protocol = dict(scope=manifest['scope'], starts=starts, budget_seconds=30.,
                     scheduled_pairs=27, scheduled_phases=54, arms=['uncached', 'cached'],
                     repair_seed_rule='source_seed+49', prerequisite_sha256=prerequisites,

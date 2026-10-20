@@ -10,13 +10,15 @@
     "80 of81 awake results cannot satisfy launch prerequisite",
     "compromised awake environment blocks launch",
     "censored or incomplete full reference blocks launch",
+    "LKH bound to awake300 even when MDM-only calibration has no LKH entry",
+    "changed ordering binary rejected against awake300 protocol",
     "current source-bound certificates accepted",
     "changed adapter/owner certificate source blocks launch",
     "changed shared kernel-lock implementation blocks launch"
   ],
   "source_sha256": {
-    "experiments/lkh/cached30_train.py": "697be854f4bdf976fc2be7cb44e67eb41867d1a99fb677ce33f484aad821cb18",
-    "experiments/lkh/verify_cached30_owner.py": "fa416ae5a937156d8b99580924907a99a129500aaf4e1278bdea6bf9e69bccb2",
+    "experiments/lkh/cached30_train.py": "7b2dd8861b093c85f66012fa886c0a152db21533d952dfab18148e9c5cb551ad",
+    "experiments/lkh/verify_cached30_owner.py": "b945db25499be6c5d3e7e85e42e93e688370867fd37c7af62da1691727d8892a",
     "experiments/lkh/cached30_pairs.py": "6d687a8914c9b7c77717b80905c3303392d3cbe252b975f17ec0c4d24106ba19",
     "experiments/lkh/cached30_starts.py": "76a93412bbc2ab098a75ee5e34f4a0a7ba9e46babf0a883f4b5f267c39e0a7f8",
     "experiments/lkh/cached30_batch_audit.py": "a7946a27cd02e7d5890affcc5cf00756a6d1fa8c036902fdacc39bb87d09f1af",
