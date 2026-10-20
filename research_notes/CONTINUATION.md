@@ -1,5 +1,24 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 08h40 —repetiçãoATIVA1/81; auditorambiental independente pronto
+
+28075ATIVOprimeiroMDM300retornou300.55s,cost2045;H10primeiroaindaativo.
+3504FILAAguarda.NÃODUPLICAR.Nenhumbloco3armsfechouainda;0/27validados.
+observe_awake300.py executadocomnovapasta:auditoriaPASS1run3rotas,curva59
+eventos,0geometrias,semganho/conclusão. Relatóriosnovosseparadosdosantigos.
+audit_awake_environment.py independenterecheca27chaves,hashes3resultados,
+statusPASS,5sgap/3sdiferençafinita,sem_sleep ecompletion27/27consistente.
+Observadoragorainvocaesseauditorantesoutros,exigeelegibilidadeambiental
+sebatchcomplete,expõecontagemblocosvalidadosnorelatório.
+verify_awake_environment.pyPASS27blocossintéticos e5corrupçõesrejeitadas
+(gap,clockjump,sleep,NaN,hashalterado). Nenhumsolvernesseschecks.
+FONTESrunnerativoawake300_train.py eoriginais300NÃOalteradas.
+Próximo:poll28075/3504e primeiroenvironmentPASSapós3runs;observadores
+novosviaobserve_awake300.py. Preservarantigos44comprometidos,Utils.h,
+CTP/teste12intocados. Main70×10aindanãolançado;prepararproteçãoambiental
+antesdelemasaguardarcalibração9completa. Não repetirinstalaçãoCPLEX.
+
+
 ## Retomada20/10 08h30 —suspensão detectada;44runs antigos preservados;repetição ATIVA
 
 ATENÇÃO:estadoanteriornãoécomparação300scontroladaválida. pmsetconfirma
