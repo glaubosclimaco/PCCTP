@@ -1,5 +1,19 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h00 — último bloco; preparação de figura completa
+
+13438/26890 seguem ativos. Conferência inicial78finais/26blocosPASS/0falhas;
+agora H10tsp225seed72 fechado2449, restam2braços. Não fechar agregados deste
+bloco antes deMDM/H60/env. Observer publicado72/81 permanece; deixar fila
+rodar observe completo ao criar completion81. Não lançar outrootimizador.
+
+Novo plot_awake300.py preparado via skilldata:create-viz: exige fechamento
+COMPLETE81/novegeometrias; gráfico únicoeixo comum18meanbars+54seedmarkers,
+ambosbraços/perdas mantidos, médias/pares porFraction ehashesupstream.
+SaídasPNG/SVG+provenance, ainda NÃO geradas. Guardchecado recusouparcial sem
+imagem/importmatplotlib. Depoisdefila/audits81: close_awake300.py→plot_awake300.py,
+inspecionar visualmente e sóentão incorporar aoartigo. Diário atualizado.
+
 ## 20/10, 16h57: tsp225 semente 71 completa; semente 72 aberta
 
 Conferência passiva. 68208 e 68316 vivos. Semente 71 PASS, ordem hybrid60,

@@ -481,6 +481,31 @@ desde 16h55. Esse arquivo não entra no commit. Faltam os três braços dela.
 Otimizador 68208 e fila 68316 seguem únicos. O fechamento descritivo continua
 bloqueado até as 81 execuções.
 
+## 20/10/2026, 17h00 Fortaleza — figura final preparada, ainda sem renderização
+
+Conferi os78resultados e26blocos ambientais PASS observados no início desta
+retomada; não havia falha ambiental. Depois, o coletor gravou H10/seed72/tsp225
+com custo2449. Restam dois resultados do último bloco; não usar a semente
+incompleta no agregado. O otimizador e a fila permanecem os mesmos. Não rodei
+observador concorrente com o fechamento que a fila fará ao concluir81runs.
+
+Li a habilidade `data:create-viz` e preparei
+`experiments/lkh/plot_awake300.py`. A figura só aceitará o arquivo de
+fechamento auditado completo: nove geometrias, dois braços e três sementes.
+Ela terá18barras de médias e54pontos pareados, com o mesmo eixo para ambos
+os métodos, perdas mantidas, cores acessíveis e valores rotulados. Os pontos
+não serão apresentados como intervalos de confiança. O script recompõe os
+efeitos a partir dos custos com frações e exige concordância com o fechamento.
+Saídas previstas PNG/SVG e proveniência com dados/hashes; inspeção visual
+continua obrigatória antes de incorporar ao artigo.
+
+Checagem realizada: com o lote incompleto, a obtenção dos dados para o gráfico
+foi recusada antes de criar imagem ou carregar renderização. Nenhuma figura
+de resultados finais foi produzida ainda. Comandos futuros, em sequência,
+depois das auditorias completas da fila: `close_awake300.py` e
+`plot_awake300.py`, ambos em `experiments/lkh/` com `/usr/bin/python3`.
+Próximo passo é analisar o lote completo, não preencher o artigo com previsão.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto
