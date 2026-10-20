@@ -77,3 +77,14 @@ exige técnica inédita. Priorizar evidência de desempenho e análise científi
 sem transformar novidade de faceta em requisito. ML é opcional. Preservar
 resultados negativos e avaliações reservadas. Essa orientação atualiza a
 prioridade operacional, sem dispensar baselines fortes ou rigor experimental.
+
+
+## Prioridade reafirmada em19/10: avaliação experimental antes da decisão de artigo
+
+Depois de discutir eventual troca de problema, o usuário pediu explicitamente
+experimentos reais no PCCTP para decidir se vale escrever um artigo. Priorizar
+fechamento/auditoria do estudo300s81runs e relatório honesto de ganhos/perdas,
+curvas de qualidade e exposição efetiva à mineração. Não iniciar busca de outro
+problema ou priorizar páginas do rascunho em detrimento desse diagnóstico.
+Plano concreto em research_notes/pcctp_decisive_evaluation.md; respeitar gates
+originais e teste reservado fechado. Não prometer publicação a partir de treino.
