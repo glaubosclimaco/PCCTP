@@ -8,15 +8,15 @@ HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
-if __name__=='__main__':
-    folder=HERE/'paired70_train';path=folder/'protocol.json'
-    if not path.exists():print('NO_RESULTS');raise SystemExit(0)
+def audit_batch(folder,root=ROOT,here=HERE):
+    folder=Path(folder);path=folder/'protocol.json'
+    if not path.exists():return dict(status='NO_RESULTS')
     protocol=json.loads(path.read_text());protocol_hash=digest(path)
     assert protocol['seeds']==list(range(81,91)) and protocol['scheduled_pairs']==90
-    for name,hashed in protocol['source_hashes'].items():assert digest(ROOT/name)==hashed
+    for name,hashed in protocol['source_hashes'].items():assert digest(root/name)==hashed
     for name,hashed in protocol['binary_hashes'].items():assert digest(Path(name))==hashed
-    assert digest(HERE/'published70_calibration_audit.json')==protocol['calibration_audit_sha256']
-    roles=json.loads((ROOT/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())['roles']
+    assert digest(here/'published70_calibration_audit.json')==protocol['calibration_audit_sha256']
+    roles=json.loads((root/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())['roles']
     assert len(protocol['cases'])==9 and all(roles[c['geometry']]=='train' for c in protocol['cases'])
     expected={(c['instance'],s) for c in protocol['cases'] for s in range(81,91)}
     assert {(p['instance'],p['seed']) for p in protocol['schedule']}==expected
@@ -71,5 +71,10 @@ if __name__=='__main__':
         candidate_failure_pairs=sum(r['status']=='CANDIDATE_FAILURE' for r in rows),
         eligible_complete_study=finished and all(r['status']=='PAIR_COMPLETED' for r in rows),
         routes_checked=checked,rows=rows,scope='TRAIN, completed70 baseline plus reference-defined candidate budget; not full107-instance replication')
-    (HERE/'paired70_train_audit.json').write_text(json.dumps(report,indent=2)+'\n')
+    return report
+
+if __name__=='__main__':
+    report=audit_batch(HERE/'paired70_train')
+    if report['status']!='NO_RESULTS':
+        (HERE/'paired70_train_audit.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='rows'}))

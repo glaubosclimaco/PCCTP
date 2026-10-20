@@ -1,5 +1,25 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 00h40 —300s26/81; auditorbatch70 e agregação verificados
+
+43548ATIVO;48191calibraçãoAGUARDA.NÃODUPLICAR.Auditor300PASS26runs253rotas,
+2geometriascompletas;faltam55runs.Semconclusãoglobal,mineraçãoaindaausente.
+verify_paired70_batch_audit.pyPASS90paressintéticos/180candidatos:auditoria
+fimafimcustos/T/status/hash/seed;5corrupçõesrejeitadas.Refcensuradaem1par
+preserva2slotsindisponíveis e impedeeligibilidadelotetodo. Nenhumsolver/dado
+PCCTPrealutilizado. Não confundirfixturescombenchmark.
+summarize_paired70_train.py implementa9geometrias×10seeds,médiadoscustos
+porgeometria,depoismédiaganhos;ambasH10/H60,gates≥.2%,≥6wins,≤1loss,
+apenas90parescompletosvalidamdecisãoTRAIN. Geometriaincompletanãoentra
+naestatísticadescritivaeimpedequalquergate. Fixture25%/9winspassae1ref
+censuradafalhagates(com8geometriascompletas). Batchauditorrefatoradofunção
+parametrizada,testeforadapastareal. Guardmainexigecertificadobatch/hash;
+fontessummaryauditcongeladasnoprotocolomainaoserlançado.
+Main10seedsNÃOlançado/nemnafila. Ainda verificar orquestrador completo com
+mocks(guard/schedule/cache/reference→candidates)anteslançarapóscalibração.
+Próximo:conferir300+calibração,testeorquestrador.SemCTP/teste12.
+
+
 ## Retomada20/10 00h30 —300s24/81; auditorreferência70 validado
 
 43548ATIVO,48191calibraçãoAGUARDAfim300.NÃODUPLICAR. Observadores24runs

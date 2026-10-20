@@ -25,6 +25,9 @@ if __name__=='__main__':
     integration=json.loads((HERE/'verify_paired70_adapters.json').read_text())
     assert integration['status']=='PASS'
     for filename,hashed in integration['source_hashes'].items():assert digest(HERE/filename)==hashed
+    verification=json.loads((HERE/'verify_paired70_batch_audit.json').read_text())
+    assert verification['status']=='PASS'
+    for filename,hashed in verification['source_hashes'].items():assert digest(HERE/filename)==hashed
     old=json.loads((ROOT/'experiments/original_mdm/hard_training_baseline/summary.json').read_text())['rows']
     roles=json.loads((ROOT/'experiments/ml_lns/decoder_initialized_states/protocol.json').read_text())['roles']
     cases=[dict(instance=r['instance'],geometry=r['geometry']) for r in old]
@@ -33,7 +36,7 @@ if __name__=='__main__':
     random.Random(20261020).shuffle(schedule)
     paths=[Path(__file__),HERE/'paired70_reference.py',HERE/'paired70_hybrid.py',
         HERE/'paired70_candidate_audit.py',HERE/'paired70_reference_audit.py',
-        HERE/'audit_paired70_train.py',HERE/'raw_route_audit.py',
+        HERE/'audit_paired70_train.py',HERE/'summarize_paired70_train.py',HERE/'raw_route_audit.py',
         HERE/'ruin_repair_absolute.py',HERE/'feasible_fallback.py',HERE/'screen.py',
         ROOT/'experiments/original_mdm/timed_experiment.py',ROOT/'experiments/ml_lns/pilot.py',
         ROOT/'experiments/ml_branching/oracle_probe.py',ROOT/'research_notes/paired70_ten_seed_design.md']
