@@ -1,5 +1,31 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h29 — snapshot72 auditado; apenas tsp225 falta
+
+Sessão13438 segue como único otimizador;26890 fila espera81/audits antes da
+calibração9/seed80. Observer da sessão42066 terminou PASS:72/81,582rotas,
+3063eventos,24blocos ambientais válidos,oito geometrias completas. Repetição
+ts225/seed72 aprovada; negativo original arquivado permanece preservado.
+H10−1,429044% (6ganhos2perdas),H60+1,112088%(8/0),semconclusãofinal.
+Nove execuções de tsp225 faltam; não duplicar processos nem lançar cache.
+
+Revisão de contabilidade documentada em cached30_conditional_design.md:
+setup/leitura/validação/cache/search dentro do prazo externo; geração dos
+starts excluída; pós-auditoria/gravação/proveniência/estimativa de bytes fora
+da busca sem feed-back. wall_seconds é até retorno do core, NÃO process wall
+end-to-end; bytes Python NÃO RSS/pico. Nenhuma medição nova ou fonte ativa
+alterada. Diário/resumo atualizados; diagnóstico passivo69 mantém snapshot.
+
+## 20/10, 16h26 — retomada conferida; lote não duplicado
+
+Processos reais: otimizador 68208 (caffeinate 68216) e fila 68316, locks
+exclusivos confirmados com lsof. Sessões 13438/26890 não foram assumidas.
+Disco: 72 resultados não nativos, 24 environment PASS, incluindo
+ts225/seed72. Auditoria publicada permanece 69/81. Filho 76796 executa MDM
+de tsp225/seed70. Nove resultados de tsp225 ainda ausentes. Não lançar outro
+otimizador, observador concorrente nem cache. A fila chama observe e, se
+PASS, a calibração seed80. Diário atualizado.
+
 ## 20/10, 16h20 — diagnóstico passivo H10; coleta e fila seguem ativas
 
 Sessões13438/26890 confirmadas. Repetição ts225seed72 gravou H60/H10 com108805,

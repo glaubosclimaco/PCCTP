@@ -27,21 +27,22 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado em 20/10, após a retomada das 16h09:** um único
-otimizador, `experiments/lkh/awake300_train.py`, retoma o lote de 81 execuções
-de 300 s. Última auditoria: 69/81, 559 rotas e 3003 eventos, sete geometrias
-completas. Um bloco de três execuções foi preservado por falha ambiental e
-será repetido integralmente. Sessão atual: 13438. A fila durável
-`published70_after_awake.py`, sessão 26890, aguarda esse lote e suas auditorias
-para iniciar a calibração MDM70, seed80, nove casos TRAIN.
-Esses IDs só valem na sessão da ferramenta atual: outra IA deve verificar os
-processos reais e locks, e não presumir que um ID antigo possa ser reutilizado.
+**Estado operacional confirmado em 20/10, 16h29:** um único otimizador segue
+ativo, processo 68208, iniciado às 16h09 por `caffeinate -i` no processo 68216,
+comando `experiments/lkh/awake300_train.py`. Há 72 arquivos de resultado no
+disco e 24 blocos ambientais com status PASS, incluindo a repetição de
+ts225/semente 72. A geometria tsp225 ainda não tem resultado final; o processo
+filho executa o MDM da semente 70. A auditoria atual passou com 72/81,
+582 rotas e 3063 eventos, oito geometrias completas. A fila
+`published70_after_awake.py`, processo 68316, segura o lock de calibração e
+espera `completion.json`. Os IDs de sessão 13438 e 26890 foram reconhecidos
+nesta sessão da ferramenta; em outra ferramenta, confirme os processos e
+locks em vez de presumir que esses IDs continuem disponíveis.
 
-**Primeiro próximo passo:** acompanhar as 12 execuções restantes sem duplicar
-o otimizador. O estudo isolado de cache já tem controlador e auditoria
-verificados em dados sintéticos; não foi lançado nem enfileirado. Não o lançar
-antes de terminar e auditar tanto o lote81 quanto as nove referências de
-calibração. Ainda não existe resultado real de qualidade de solução do cache.
+**Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
+Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
+não foi lançado, e só pode rodar depois do lote de 81 e das nove calibrações
+auditados. Ainda não existe resultado real de qualidade de solução do cache.
 
 ## Arquivos que contêm as decisões e evidências
 
@@ -289,6 +290,52 @@ dados sugerem interação entre qualidade inicial e esforço de reparação/
 reordenação; não isolam causalidade nem provam que cache resolva o problema.
 Não eliminar rd400, trocar sementes, alterar limiares ou modificar candidatos.
 Próximo passo permanece concluir os dois braços e a calibração MDM70.
+
+## 20/10/2026, 16h26 Fortaleza — retomada sem duplicar o lote
+
+O usuário pediu para continuar o trabalho no mesmo protocolo e manter este
+diário. Confirmei os processos reais, sem usar os IDs de sessão anteriores.
+O otimizador 68208 e a fila 68316 estão vivos e seguram os dois locks. Não
+iniciei cópia, não alterei fonte congelada e não lancei o cache.
+
+No disco há 72 resultados finais, oito geometrias com os três métodos e as
+três sementes. O bloco repetido de ts225/semente 72 tem os três resultados e
+o arquivo ambiental PASS. Isso ainda não substitui a auditoria de 69/81: o
+observador não foi executado de novo, para não disputar a escrita com a fila,
+que rodará `observe_awake300.py` quando existir `completion.json`. tsp225 está
+em andamento no MDM da semente 70, binário
+`build_timed_elite_bounded/original_mdm`, processo 76796.
+
+Próximo passo: acompanhar as nove execuções de tsp225. Se o coletor parar sem
+`completion.json`, preservar o bloco e revisar antes de qualquer repetição. A
+calibração das nove referências de 70 iterações só começa pela fila já ativa,
+depois das auditorias. O cache continua condicionado a esses dois lotes.
+
+## 20/10/2026, 16h29 Fortaleza — bloco repetido aprovado e contabilidade revista
+
+O observador terminou sem erro: 72/81 execuções, 582 rotas e 3063 eventos
+auditados, 24 blocos ambientais válidos e oito geometrias completas. O bloco
+repetido ts225/seed72 foi aprovado. Ganhos parciais: H10 −1,429044% (seis
+geometrias com ganho, duas com perda); H60 +1,112088% (oito ganhos, zero perdas).
+Falta tsp225 nas três sementes e três métodos. Não finalizar a comparação
+antes de 81 resultados válidos nem chamar esse diagnóstico de comparação MDM70.
+
+Revisei as fronteiras de tempo no estudo de cache e acrescentei uma tabela a
+`research_notes/cached30_conditional_design.md`. Leitura, validação, preparação
+e cache lazy consomem os 30s de busca; geração do estado comum está excluída.
+Auditoria independente, proveniência, gravação e enumeração dos objetos do
+cache ocorrem depois da busca e não fornecem novas soluções. `wall_seconds`
+termina no retorno do núcleo: não representa tempo total de um processo
+completo. Memória reportada é estimativa de objetos Python, não RSS/pico.
+Essa revisão é de código, sem medições novas e sem alterar fontes ativas.
+
+Motivo: evitar apresentar ganho de montagem de texto ou aumento de chamadas
+como melhora de solução, ou chamar um estudo condicional de algoritmo
+completo. Próximo passo: terminar o lote e deixar a fila iniciar a calibração
+completa. Cache continua bloqueado e não enfileirado. Relatórios passivos
+anteriores conservam seus snapshots e escopos originais. Uma primeira edição
+deste resumo não encontrou o texto esperado porque a entrada de 16h26 já
+havia atualizado o parágrafo; reli o arquivo e preservei aquela entrada.
 
 ## Modelo para próximas entradas
 

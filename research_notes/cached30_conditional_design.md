@@ -113,3 +113,33 @@ has been launched or queued. After both priority batches finish, the guarded
 entrypoint is `/usr/bin/caffeinate -i /usr/bin/python3 -u
 experiments/lkh/cached30_train.py`; verify workers and the shared lock first.
 These fixtures do not establish a cache quality benefit or full-search speedup.
+
+## Accounting review before any collection
+
+Code review on20October,16:28 Fortaleza confirms the following boundaries in
+cached30_phase.py, ruin_repair_absolute.py, screen.py and cached_polish.py.
+No active source was changed and no timing observation was collected here.
+
+| Stage | Eligible30s search horizon | Interpretation |
+|---|---|---|
+| Generation of the stored common MDM start | Excluded in both arms | Conditional component study; never label end-to-end |
+| Parent checks, directory/attempt record, polisher object setup | Included | Parent monotonic clock starts before these operations |
+| Input reading, index mapping, start validation | Included | Core clock starts before reading; parent horizon is earlier |
+| Destruction, greedy repair, feasibility checks | Included | Same frozen core and repair RNG in both arms |
+| Lazy cache construction and string reuse | Included | First build consumes call allowance and outer horizon; no warm-up credit |
+| Support serialization, temporary inputs, LKH launch and execution | Included | Remaining per-call allowance debits preparation |
+| Tour parsing and validation while selecting a search candidate | Included | Core event timestamp is after receiving and validating the route |
+| Cleanup/last return after parent deadline | No additional eligible events | Preserve raw time/events; do not enlarge horizon |
+| Independent post-search audit and provenance/result output | Excluded from search horizon | Does not feed back a new incumbent or extra search |
+| Cache object-size estimation after stopping search | Excluded from search horizon | Approximate owned Python bytes; not RSS or peak allocation |
+
+`wall_seconds` in a phase measures parent start through core return, before
+post-search auditing/provenance/output and memory enumeration. It is not total
+end-to-end process wall time. A cold cache build may exhaust its0.2s call
+allowance: the build is retained and charged, and no LKH subprocess is launched
+for that exhausted call. Per-call limits are soft around Python preparation;
+the authoritative primary-solution boundary is the absolute parent deadline.
+The partial counters contain invocations, not proven improving tours. Faster
+text generation, more invocations, lower timeouts or zero exit codes cannot
+replace the prespecified cost gate. Approximate cache bytes also cannot
+support a claim of lower total memory usage.
