@@ -27,11 +27,11 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 20/10, 16h57: o otimizador 68208 e a fila
+Estado operacional confirmado em 20/10, 17h02: o otimizador 68208 e a fila
 68316 seguem ativos. tsp225 tem as sementes 70 e 71 completas, as duas com
-ambiente PASS. Em ambas, MDM 2447, hybrid60 2449 e hybrid10 2449. A semente
-72 começou pelo hybrid10, ainda só no nativo. Faltam os três braços dessa
-semente. A auditoria publicada continua 72/81. Não lance outro otimizador.
+MDM 2447 e híbridos 2449. A semente 72 fechou hybrid10 em 2449 e está no
+nativo de hybrid60 desde 17h01. Faltam esse braço e o MDM. A auditoria
+publicada continua 72/81. Não lance outro otimizador.
 
 **Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
 Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
@@ -505,6 +505,17 @@ de resultados finais foi produzida ainda. Comandos futuros, em sequência,
 depois das auditorias completas da fila: `close_awake300.py` e
 `plot_awake300.py`, ambos em `experiments/lkh/` com `/usr/bin/python3`.
 Próximo passo é analisar o lote completo, não preencher o artigo com previsão.
+
+## 20/10/2026, 17h02 Fortaleza: hybrid10 da tsp225 semente 72 fechou em 2449
+
+O JSON está viável. O pré-custo, o nativo de 10 s e o custo final são 2449,
+o mesmo valor dos hybrid10 das sementes 70 e 71. O bloco da semente 72
+continua aberto: o nativo de hybrid60 começou às 17h01 e não entra no commit.
+Falta também o MDM desta semente. Sem esses dois, a geometria não fecha e a
+média de 72/81 não muda.
+
+Otimizador 68208 e fila 68316 seguem únicos. O gráfico final continua
+recusado até o fechamento auditado das 81 execuções.
 
 ## Modelo para próximas entradas
 

@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h02: hybrid10 da tsp225 semente 72 fechou; hybrid60 aberto
+
+Conferência passiva. 68208 e 68316 vivos. hybrid10 semente 72: custo, pré e
+nativo 2449, viável, orçamento 10 s. Nativo hybrid60 desde 17h01: não
+commitar. Faltam hybrid60 e MDM. Auditoria publicada 72/81. Figura e
+close_awake300 continuam bloqueados.
+
 ## 20/10, 17h00 — último bloco; preparação de figura completa
 
 13438/26890 seguem ativos. Conferência inicial78finais/26blocosPASS/0falhas;
