@@ -1,0 +1,58 @@
+{
+  "scope": "validation screening; same geometries used by earlier different method; not independent confirmation",
+  "cases": [
+    {
+      "geometry": "g_d198",
+      "instance": "g_d198_VT39_T119_W40_50"
+    },
+    {
+      "geometry": "g_kroB100",
+      "instance": "g_kroB100_VT20_T60_W20_25"
+    },
+    {
+      "geometry": "g_kroE100",
+      "instance": "g_kroE100_VT20_T20_W60_50"
+    },
+    {
+      "geometry": "g_pr124",
+      "instance": "g_pr124_VT24_T25_W75_75"
+    },
+    {
+      "geometry": "g_pr152",
+      "instance": "g_pr152_VT29_T31_W92_75"
+    },
+    {
+      "geometry": "g_pr264",
+      "instance": "g_pr264_VT52_T159_W53_75"
+    },
+    {
+      "geometry": "g_pr299",
+      "instance": "g_pr299_VT101_T99_W99_75"
+    }
+  ],
+  "seeds": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "budget": 60,
+  "split_sha256": "167975615ca8240893717e4dcc12d1945763842382e960ae63ad7ae45e013a5a",
+  "source_hashes": {
+    "experiments/lkh/ruin_validation60.py": "ead4f457cb7f53a68687d113964a9bf660c9ade22c1eeeaf1418b413cc4abbcc",
+    "experiments/lkh/ruin_total60_absolute.py": "902e3081f74e9ea1a9ffc31e6c9670d60d59bd52b842cc401829d639a520c7bc",
+    "experiments/lkh/ruin_repair_absolute.py": "cb10e1d9621022700a629a7b9eb0875209bcedd77e8e5d1efa9fa809aaa265f8",
+    "experiments/lkh/feasible_fallback.py": "5ab2ffd95d153735deec5abe35efe7bb514cc74d75d6e0c7a8dd9884ff690064",
+    "experiments/lkh/screen.py": "3e79e64022ea442dac0320c3b63df7dfcc02d6d6b9d02c222bafedbdc3d19474",
+    "experiments/original_mdm/timed_experiment.py": "01a18a2f38d02395dad5cc5fc1cebcb79dad3f66b6aa5545d1f7fecca98ea85d",
+    "experiments/ml_lns/pilot.py": "e479793277fab13c6407de0878cc56c25410dc72dc6b2f97ff8b3d6aee30b922",
+    "experiments/ml_branching/oracle_probe.py": "4bedd6143334a41607b31d2309feac653f6a3a3d7d466cf049e6d6e011ec737b"
+  },
+  "binary_hashes": {
+    "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_timed_elite_bounded/original_mdm": "47c8c92e1febeb141e4aecc652b1823e50e25dd630c5371659d6205d51858ecf",
+    "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_timed_elite_bounded/FPMax/fim_maximal": "8196dd625c81b5b51d0863807ee49e95b97ae4a5631a0dde118e1eac9ebb305f",
+    "/Users/glaubosclimaco/Projects/papers/PCCTP/experiments/original_mdm/build_timed_elite_bounded/FPMax/fpmax_hnmp": "dd0304635d52ae307ba84bf5ef53f6a1fcb4214ac3eb5e828e792fe8193987aa",
+    "/private/tmp/pcctp-lkh3-research/LKH": "44a724196208fad0cc10868f637beb7fdbb7d54efe7f6705b2fe34c67e29cb43"
+  }
+}
