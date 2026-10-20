@@ -1,5 +1,30 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h56 — protótipo de serialização medido; coleta40/81
+
+28075únicootimizadorativo;3504aguarda81+auditsantescalibração70. Observer40/81,
+325rotas/1726eventosPASS,13blocosambientaisPASS,4geometrias completas. Efeitos
+parciais1,191838%H10 e1,128937%H60 inalterados;cinco geometrias ainda faltam.
+PDF17p intacto, nenhumparâmetro/sourceativo alterado. Utils.h/CTP/teste12intactos.
+
+Investigação concreta de overhead sem novo otimizador: matrix_text_cache.py
+protótipoisolado mantém tokensinteirosdadistância para reutilizarserialização
+TSPLIB;construção exige matrizinteirafinita eusaO(n²)memória. NÃOimportado pelo
+coletorativo nemcandidataspaired70. benchmark_matrix_text_cache.py usa9suportes
+TRAINseed42jáauditados,subprocess.run substituídoporcapturestub SEMSOLVER;
+bytesgerados iguais aosdoescritorpolishREAL emtodos9casos. Cincorepetições
+intercaladas/método;medianas sóstrings,semIO/validação/launch/search.
+Razões3,89–4,82x;rd40061,77ms→12,82ms,cachebuild141,03ms;estimativareuso2–3
+chamadasparacobrircachebuildnãoéobservaçãodebusca. Setupglobalprecisaser
+cobradoemqualquerintegraçãofutura. Hosttambémrodandoexperimento:microbenchmark
+engenharia,nãoperformancecontrolada/publicationclaim. Nãoafirmarmelhorarota,
+reduçãotimeoutsouaceleraçãoend-to-end. Nenhumsolver/LKHexecutadonoteste.
+JSONtimings/hashescódigo+origens;auditorseparadoconfere9starthashes comaudit
+original econtasderatio/breakeven. Relatórioresearch_notes/matrix_text_cache_microbenchmark.md.
+Possívelvariantefutura precisa protocolos/charge/startup/controlequalidade próprios;
+NÃOsubstituirpolishativo/screen.py,nemalterarcomparação70prospectiva semregistro.
+Próximo:seguecoleta;decidirintegraçãoapenascomprotocoloisoladoevidênciadequada.
+
 ## Retomada 20/10 11h46 — diagnóstico passivo de chamadas; coleta38/81
 
 28075únicootimizadorativo;3504aguarda81+auditsantescalibração70. Observer38/81,

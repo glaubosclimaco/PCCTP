@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "scope": "Serialization-only microbenchmark; no optimizer, active 300-second outcome or reserved test input. Five interleaved timing repetitions per method on nine fixed seed42 TRAIN supports. Not a controlled end-to-end speedup.",
+  "limits": [
+    "Cache setup measured separately and must be charged in future search.",
+    "Cache retains O(number of visitable locations squared) string tokens.",
+    "Full matrix must contain finite integral values.",
+    "Disk I/O, route validation, process launch and LKH search excluded from timings.",
+    "Host also running the ongoing study; no cross-machine or search-speed claim."
+  ],
+  "source_sha256": {
+    "experiments/lkh/benchmark_matrix_text_cache.py": "9be0317acf2cbf2e0a4133ab565c51433fe60f8f188fda3ddcc1341762988c69",
+    "experiments/lkh/matrix_text_cache.py": "447760dc619d87badc25227e3838c928b396f806e6c2a2c9895ec07530b7cc2d",
+    "experiments/lkh/screen.py": "3e79e64022ea442dac0320c3b63df7dfcc02d6d6b9d02c222bafedbdc3d19474",
+    "experiments/lkh/hard_train_instance_profile.json": "dce020b5f1586c65ba92b3c55236d91ea94755db205abccdc8f8e31dc34db419",
+    "experiments/ml_lns/decoder_initialized_states/protocol.json": "167975615ca8240893717e4dcc12d1945763842382e960ae63ad7ae45e013a5a"
+  },
+  "start_record_sha256": {
+    "experiments/lkh/ruin_total60_absolute/g_a280_VT56_T168_W56_50.seed42.hybrid.json": "a9dc30b6598457d9f62ba88800848ae46a621ea1badd5415ebc32ad91fa315a6",
+    "experiments/lkh/ruin_total60_absolute/g_gil262_VT51_T158_W53_75.seed42.hybrid.json": "dba7415a2970d7c5cb3c5619bae3b20ca315bfb86a917952f2e73f0b705596f6",
+    "experiments/lkh/ruin_total60_absolute/g_gr229_VT45_T138_W46_50.seed42.hybrid.json": "54751e1cd4840f347d8cfc48cc2d5012f8dfcead0dfeeb255a89854d11c5b61e",
+    "experiments/lkh/ruin_total60_absolute/g_kroA200_VT40_T120_W40_25.seed42.hybrid.json": "ee7767bd1b2bffedc268b14911983115d61181e8e80172fc9e1974839c2e7acd",
+    "experiments/lkh/ruin_total60_absolute/g_pr226_VT44_T136_W46_50.seed42.hybrid.json": "a4f48bc4cc0c232e5f93359eb99191ef3f6e65298dd6de0193dd684222c142a4",
+    "experiments/lkh/ruin_total60_absolute/g_rd400_VT80_T240_W80_25.seed42.hybrid.json": "ebfcea1051695a731d41b2761640e6d32bdb7d1296a196a4c79ee688342471e0",
+    "experiments/lkh/ruin_total60_absolute/g_si175_VT35_T105_W35_50.seed42.hybrid.json": "c119150aa4852dd282ae7f6cbe57155d1b818fd103dd5ebf83e5985b41236911",
+    "experiments/lkh/ruin_total60_absolute/g_ts225_VT45_T135_W45_50.seed42.hybrid.json": "33f52080f30b390293dfb7eea979d09e6c07c51edef938dc00ab51f54acd1faf",
+    "experiments/lkh/ruin_total60_absolute/g_tsp225_VT45_T45_W135_75.seed42.hybrid.json": "70a9043f590ea7c7d984e101747f753e56d5560de3d1eb72440a1f7e33cabbf2"
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "visitable_locations": 224,
+      "support_size": 197,
+      "output_bytes": 139808,
+      "output_sha256": "6cac8cc9f5854f5eb55051f63de14048c34553da479716ebf0d679351186477a",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.049679999999999946,
+      "original_median_seconds": 0.03426554199999998,
+      "cached_median_seconds": 0.007731209000000128,
+      "serialization_speed_ratio": 4.432106543750067,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.03426554199999998,
+          0.033911333999999904,
+          0.03471641700000028,
+          0.03527833299999994,
+          0.03349237500000024
+        ],
+        "cached": [
+          0.007364458000000074,
+          0.008250207999999759,
+          0.007731209000000128,
+          0.0077967079999998745,
+          0.0077116669999997
+        ]
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "visitable_locations": 209,
+      "support_size": 195,
+      "output_bytes": 132892,
+      "output_sha256": "f263d8b26bf7b7cc70e4e953a977a79213c04b6b1e520924f8de6df821ea7c83",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.0449150829999998,
+      "original_median_seconds": 0.03443804100000003,
+      "cached_median_seconds": 0.008440750000000108,
+      "serialization_speed_ratio": 4.0799740544382415,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.03443804100000003,
+          0.03301520800000013,
+          0.032557791999999974,
+          0.04892899999999978,
+          0.03499849999999993
+        ],
+        "cached": [
+          0.007586374999999812,
+          0.00850079199999998,
+          0.007153041000000027,
+          0.008559709000000026,
+          0.008440750000000108
+        ]
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "visitable_locations": 183,
+      "support_size": 163,
+      "output_bytes": 136918,
+      "output_sha256": "41bf6ba4075f71474cc0b5047b2722881b53420364a20066dc8ab59e9e98c10b",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.03465416599999971,
+      "original_median_seconds": 0.025386542000000123,
+      "cached_median_seconds": 0.0065279160000000225,
+      "serialization_speed_ratio": 3.8889198329145223,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.02682637500000018,
+          0.03822658300000015,
+          0.025386542000000123,
+          0.024011000000000227,
+          0.025134125000000118
+        ],
+        "cached": [
+          0.007850332999999932,
+          0.0075104999999999755,
+          0.005991708000000262,
+          0.005308542000000305,
+          0.0065279160000000225
+        ]
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "visitable_locations": 160,
+      "support_size": 127,
+      "output_bytes": 76703,
+      "output_sha256": "3a38b8dcb301263739552fcc4d0c5b34a1b367ad66e73477609bd9af07d7bc51",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.026383958000000263,
+      "original_median_seconds": 0.014704999999999746,
+      "cached_median_seconds": 0.003499624999999895,
+      "serialization_speed_ratio": 4.201878772725703,
+      "estimated_reuse_break_even_calls": 3,
+      "samples_seconds": {
+        "original": [
+          0.014462083000000181,
+          0.014704999999999746,
+          0.014122625000000166,
+          0.01555400000000029,
+          0.015575500000000186
+        ],
+        "cached": [
+          0.004065584000000122,
+          0.0034607499999999014,
+          0.003804457999999844,
+          0.003499624999999895,
+          0.0034711249999999083
+        ]
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "visitable_locations": 180,
+      "support_size": 157,
+      "output_bytes": 127794,
+      "output_sha256": "cf3a593e4339009bad15ff8e5a838f2dab208711b66ca0e7cb268d0c32552517",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.0332146670000002,
+      "original_median_seconds": 0.02513999999999994,
+      "cached_median_seconds": 0.005751791999999867,
+      "serialization_speed_ratio": 4.370811740063014,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.02742766600000035,
+          0.024961208000000124,
+          0.023263166000000002,
+          0.029063916000000134,
+          0.02513999999999994
+        ],
+        "cached": [
+          0.00557300000000005,
+          0.005751791999999867,
+          0.005971750000000053,
+          0.005253583000000006,
+          0.008896165999999983
+        ]
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "visitable_locations": 320,
+      "support_size": 256,
+      "output_bytes": 264372,
+      "output_sha256": "b4bf76bb14fd9e2f59f195541501ed93d4b791bf995f66c12b8ffe79a0a7200e",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.14103091600000006,
+      "original_median_seconds": 0.06176749999999931,
+      "cached_median_seconds": 0.012822209000000306,
+      "serialization_speed_ratio": 4.817227671144483,
+      "estimated_reuse_break_even_calls": 3,
+      "samples_seconds": {
+        "original": [
+          0.06148483399999982,
+          0.06203691699999947,
+          0.060479291000000046,
+          0.06215437499999954,
+          0.06176749999999931
+        ],
+        "cached": [
+          0.013231000000000215,
+          0.012205333999999901,
+          0.013364999999999405,
+          0.012822209000000306,
+          0.012376417000000473
+        ]
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "visitable_locations": 140,
+      "support_size": 123,
+      "output_bytes": 60580,
+      "output_sha256": "e93cd61d181c87a3ed7fea778577cd2155d5c49d2b32b231829daae981c14ea1",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.02018012499999955,
+      "original_median_seconds": 0.014221791999999844,
+      "cached_median_seconds": 0.0031373749999996647,
+      "serialization_speed_ratio": 4.53302267022634,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.014224249999999827,
+          0.014062749999999902,
+          0.014980249999999806,
+          0.013354333000000551,
+          0.014221791999999844
+        ],
+        "cached": [
+          0.00274945800000026,
+          0.0031373749999996647,
+          0.0027823750000006697,
+          0.003497540999999771,
+          0.0035059159999999423
+        ]
+      }
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "visitable_locations": 180,
+      "support_size": 158,
+      "output_bytes": 131588,
+      "output_sha256": "ef83465a89cabdcca8496bfa8bc1ec9c671c9043579f9bc2a01124ed0010dc7a",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.03701120800000002,
+      "original_median_seconds": 0.022731417000000143,
+      "cached_median_seconds": 0.0051007919999994655,
+      "serialization_speed_ratio": 4.456448527993794,
+      "estimated_reuse_break_even_calls": 3,
+      "samples_seconds": {
+        "original": [
+          0.02569100000000013,
+          0.022338416000000194,
+          0.02236687500000034,
+          0.0236357500000004,
+          0.022731417000000143
+        ],
+        "cached": [
+          0.0050405830000004315,
+          0.00545024999999999,
+          0.005016792000000159,
+          0.005451416999999736,
+          0.0051007919999994655
+        ]
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "visitable_locations": 90,
+      "support_size": 77,
+      "output_bytes": 22957,
+      "output_sha256": "cc1cae6e5b05cee1db337711407383c91b9c564f0a2e0296e02bd54d882549bb",
+      "exact_actual_writer_match": true,
+      "cache_setup_seconds": 0.008969666999999681,
+      "original_median_seconds": 0.0057078329999997734,
+      "cached_median_seconds": 0.0011893330000001257,
+      "serialization_speed_ratio": 4.799188284525167,
+      "estimated_reuse_break_even_calls": 2,
+      "samples_seconds": {
+        "original": [
+          0.005020374999999966,
+          0.004774666999999511,
+          0.006084124999999219,
+          0.005708291000000365,
+          0.0057078329999997734
+        ],
+        "cached": [
+          0.0011893330000001257,
+          0.0011616669999998663,
+          0.0010855830000000566,
+          0.0015081249999999713,
+          0.0014532499999999615
+        ]
+      }
+    }
+  ]
+}
