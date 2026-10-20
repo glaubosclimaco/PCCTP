@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+Study & Runs & Reduction (\%) & W/L/T \\
+\midrule
+Charged TRAIN, 60 s & 54 & 1.886 & 8/1/0 \\
+Conditional fixed-support replay & 27 & 2.014 & 9/0/0 \\
+Limited validation, 60 s & 70 & 0.907 & 2/1/4 \\
+Conditional joint insertion vs. greedy & 324 & -0.181 & 3/6/0 \\
+\bottomrule
+\end{tabular}
+\caption{Completed exploratory comparisons. Positive reduction favors the hybrid in the first three rows and nearest-gap joint insertion in the last. W/L/T counts geometry means. Conditional rows exclude generation of their common starting states and are not directly comparable with charged end-to-end rows.}
+\label{tab:exploratory-complete}
+\end{table}

@@ -1,0 +1,47 @@
+{
+  "scope": "complete exploratory studies only; no active300s/test results",
+  "source_hashes": {
+    "ruin_total60_absolute_summary.json": "be0f10227e82b58ae49c67cf3de3a16275a760ad89ef7640afe0caf99b18e32b",
+    "ruin_total60_absolute_audit.json": "0c537721f435bf65013eca31fc4e2cdcca2c7991c6a6c99a33e766879352a34e",
+    "fixed_support_ablation_audit.json": "a55addcdf2a41636f9b564ef8c040d63fb435d131b6707f579a88d4e2f55018e",
+    "ruin_validation60_summary.json": "0c4c78b63c21149673b0344ebf836632e77859ce81f6f64540a144f8e71cda4f",
+    "ruin_validation60_audit.json": "bcf2b3f9cc434d3007284c7538271a68f3ec188b2276486b26d9c9e8af95cc27",
+    "joint_insertion_train_summary.json": "bc0ed015356bf27f251d5db52c6cb07775b037cd670092e04c7e9cc787468f95",
+    "joint_insertion_train_audit.json": "75f30b44b489d9e60f6278db7dea1d480d223480bc9ca9f9db765afc6f915692"
+  },
+  "output_sha256": "b8777ea589b32b9a1477b55bff3ae79e5a6c7f6d88a245572e22d5343864f3ac",
+  "rows": [
+    {
+      "study": "Charged TRAIN, 60 s",
+      "runs": 54,
+      "effect": 1.8862049971448553,
+      "wins": 8,
+      "losses": 1,
+      "ties": 0
+    },
+    {
+      "study": "Conditional fixed-support replay",
+      "runs": 27,
+      "effect": 2.014271629355811,
+      "wins": 9,
+      "losses": 0,
+      "ties": 0
+    },
+    {
+      "study": "Limited validation, 60 s",
+      "runs": 70,
+      "effect": 0.9073472554686164,
+      "wins": 2,
+      "losses": 1,
+      "ties": 4
+    },
+    {
+      "study": "Conditional joint insertion vs. greedy",
+      "runs": 324,
+      "effect": -0.18089707234493468,
+      "wins": 3,
+      "losses": 6,
+      "ties": 0
+    }
+  ]
+}
