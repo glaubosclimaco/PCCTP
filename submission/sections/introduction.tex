@@ -1,0 +1,41 @@
+Selecting locations and ordering their visits are coupled decisions in the
+prize-collecting covering tour problem (PCCTP). A tour must include mandatory
+locations, serve demands through nearby visited locations and collect a
+minimum prize. An optional location can contribute to both coverage and
+prize collection, while also changing the routing cost. Consequently, a
+shorter ordering of a fixed visited set and a better choice of that set are
+different sources of improvement. An algorithm that changes visits must
+account for the feasibility requirements that those visits were satisfying.
+
+Existing PCCTP methods already address this interaction through several
+optimization components. Reactive GRASP with GENIUS construction and variable
+neighborhood descent provides a heuristic precedent~\cite{climaco2021reactive}.
+Reduction rules, valid inequalities, branch-and-cut and a heuristic--integer
+programming hybrid have also been studied~\cite{climaco2023approaches}.
+The later MDM-GRASP approach uses patterns mined from high-quality
+solutions~\cite{climaco2026mdm}. These precedents make a comparison with
+construction alone insufficient and prevent treating generic hybridization
+as a contribution by itself. The relevant question is whether a specified
+combination improves the solution process after its additional work is charged.
+
+This study evaluates destruction and repair after MDM initialization, with
+route ordering performed by LKH and with greedy and restricted integer-repair
+alternatives examined separately. It asks three questions. Does changing the
+visited set add value beyond reordering the same set from common starts?
+Does joint integer insertion improve on greedy repair after matched
+destructions? Finally, does a complete hybrid improve on a sufficiently
+developed MDM reference under an explicit total-time comparison? Separating
+these questions avoids attributing a strong ordering component's gains to
+repair, or presenting a conditional improvement from an existing solution
+as a complete algorithmic advantage.
+
+The completed evidence is exploratory. It includes a positive short-budget
+training comparison, a failed validation screen, a conditional fixed-support
+replay and an unfavorable mean result for the evaluated joint-insertion MIP
+variant. The manuscript reports these outcomes with their denominators,
+geometry-level sensitivity and independent feasibility checks. The
+longer-horizon comparison and the iteration-limited reference study remain
+necessary before making a broader performance claim. The formulation,
+neighborhood descriptions and audited exploratory results presented here
+therefore do not establish a new best-known solution, a novel general
+hybridization principle or superiority over the published PCCTP methods.

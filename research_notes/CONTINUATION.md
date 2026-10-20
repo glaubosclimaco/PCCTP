@@ -1,5 +1,29 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h15 — introdução/discussão em redação; coleta32/81
+
+28075 segue único otimizador;3504 aguarda81+ambiente antes de calibração70.
+Observer desta retomada32/81,278rotas/1435eventos PASS,3geometrias completas.
+Não iniciar worker adicional. Aguardar nove geometrias antes do gate300.
+
+Nova redação com outline em manuscript_interpretation_outline.md: introduction.tex
+explica três perguntas e antecedentes verificados; discussion.tex interpreta
+replay condicional, mudanças de suporte, redundância da cobertura, negativo MIP,
+seleção/reuso e limites de horizonte/hardware. Ambos incluídos em main.tex.
+Não há nova alegação de novidade, BKS, vantagem geral ou integração MIP bem-sucedida.
+Diagnose_support_changes rerodado sem solver:27rotas iniciais/finais originais,
+23suportes mudaram,20testemunhos quota/5cobertura;hashes fontes conferidos.
+Quatro perfis gr229/kroA200/pr226/rd400 já cobertos pelos obrigatórios: sem causa
+coverage-driven atribuível ali. Todos nove precisam prêmio opcional.
+Endpointnetwitnesses NÃO são estados intermediários nem evidência causal.
+interpretation_provenance.json guarda hashes/escopo. Abstract/conclusão finais
+permanecem pendentes de evidência. Sessão2708 concluiu duas passagens seriais
+PASS sem warnings. PDF17p renderizado70dpi; todas17 páginas inspecionadas
+individualmente, incluindo três figuras/tabelas/equações/referências, sem
+cortes/sobreposição. compilation_audit.json atualizado; TikZ agora páginas6/7
+e provenance de figuras atualizado com PDF/render atual. Nada alterado nas fontes ativas300,
+Utils.h, CTP, teste12 ou protocolos congelados.
+
 ## Retomada 20/10 11h05 — coleta30/81; bloqueio de duplicação no futuro estudo70
 
 28075 único otimizador ativo; 3504 espera81+ambiente/auditPASS antes de calibração.

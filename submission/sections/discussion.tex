@@ -1,0 +1,78 @@
+\subsection{Visit changes, coverage and prize restoration}
+The fixed-support replay provides conditional evidence that reordering alone
+does not account for all of the observed training advantage. Both alternatives
+started from the same saved MDM states and had the corresponding remaining
+allowance. The comparison nevertheless excludes generation of those states,
+uses previously examined training geometries and evaluates the complete
+visit-changing phase. It cannot separately identify the effect of the
+destruction size, greedy scoring, temporary infeasibility, acceptance rule or
+sequence of LKH calls.
+
+A descriptive check of the 27 completed training trajectories found that
+the final visited set differed from the pre-repair set in 23 runs. Removing
+the locations absent from the final set, without yet adding the final new
+locations, would violate the prize quota in 20 runs and coverage in five.
+The five coverage cases were included among the 20 quota cases. These are
+feasibility witnesses for net differences between two feasible endpoints.
+They do not reconstruct an intermediate destruction state, establish the
+necessity of a particular insertion, or prove which search component caused
+the final improvement.
+
+The input structure further limits a coverage-based explanation. In gr229,
+kroA200, pr226 and rd400, the mandatory locations already cover every demand.
+Because all admissible tours retain those locations, each coverage constraint
+is automatically satisfied in these four instances. Optional-visit changes
+there still affect routing and prize collection, but their gains cannot be
+attributed to restoring missing demand coverage. In all nine selected training
+instances, mandatory prize alone is insufficient. Thus the available evidence
+supports examining prize and visit selection alongside coverage, rather than
+assuming that coverage restoration is the dominant mechanism throughout the
+training set.
+
+\subsection{Restricted integer repair and computational allocation}
+The evaluated joint-insertion model did not improve on greedy repair in the
+primary mean comparison. Its advantage over the equal-size random-gap control
+suggests that the chosen insertion positions matter within that experiment;
+it does not establish an advantage for MIP repair over the simpler repair
+routine. Restricting candidates and positions can exclude useful tours, and
+a model that restores coverage and prize exactly need not find a lower-cost
+tour within its allowance. The present comparison does not isolate which
+restriction or runtime component explains the unfavorable mean effect.
+
+The same distinction applies to path contraction and local optimality.
+An exact representation of a restricted repair preserves the meaning of its
+feasible solutions and objective values. It does not show that solving the
+restricted model is a good allocation of an end-to-end search budget. Likewise,
+an optimal restricted repair is not a certificate for the unrestricted PCCTP.
+The negative repair result is retained separately from the uniform-removal,
+greedy-repair hybrid; the successful training screen of the latter cannot be
+used as evidence for an integer component that it did not execute.
+
+\subsection{Limits of the current performance evidence}
+The training set contains nine selected difficult geometries, rather than a
+representative sample of the full published evaluation set. The seven
+validation geometries have also been reused. Their two positive means and
+zero median, together with the failed breadth criterion, limit any claim of
+general improvement. The twelve reserved test geometries remain unopened;
+their existence is not evidence of performance on them. Descriptive omission
+analyses do not repair selection bias or supply independent confirmation.
+
+Search horizons create another limitation. A short-budget comparison can end
+before MDM activates its mining component. It then compares the observed
+algorithm trajectories within that horizon, rather than isolating the value
+of mining or outperforming a completed 70-iteration reference. The replacement
+300-second experiment and the planned iteration-limited comparisons address
+different parts of this issue. Neither is substituted for a completed study
+while its scheduled observations are missing. The reference-defined duration
+rule also requires disclosure of the reference-first order and possible
+machine-state drift within a pair.
+
+Finally, the recovered baseline includes declared decoder and elite-count
+corrections, and measured times refer to the present hardware and executable
+versions. They do not establish speedups over seconds reported on the older
+processor. Any final performance contribution requires valid complete
+comparisons, a separately frozen broader evaluation and an account of failures,
+mining exposure and computational cost. The completed results currently justify
+continued evaluation of the visit-changing hybrid, while retaining the failed
+validation screen and negative integer-repair comparison as constraints on
+its interpretation.
