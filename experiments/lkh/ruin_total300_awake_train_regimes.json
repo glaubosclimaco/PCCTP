@@ -1,22 +1,22 @@
 {
-  "status": "PARTIAL",
-  "runs": 72,
-  "completed_geometries": 8,
+  "status": "COMPLETE",
+  "runs": 81,
+  "completed_geometries": 9,
   "modes": {
     "hybrid10": {
-      "runs": 24,
-      "support_changed_runs": 23,
-      "net_coverage_repair_witnesses": 6,
-      "net_prize_repair_witnesses": 20,
-      "improved_after_initialization": 24,
+      "runs": 27,
+      "support_changed_runs": 25,
+      "net_coverage_repair_witnesses": 8,
+      "net_prize_repair_witnesses": 22,
+      "improved_after_initialization": 26,
       "final_incumbent_first_seen_after120": 2
     },
     "hybrid60": {
-      "runs": 24,
-      "support_changed_runs": 21,
+      "runs": 27,
+      "support_changed_runs": 22,
       "net_coverage_repair_witnesses": 5,
-      "net_prize_repair_witnesses": 18,
-      "improved_after_initialization": 24,
+      "net_prize_repair_witnesses": 19,
+      "improved_after_initialization": 25,
       "final_incumbent_first_seen_after120": 2
     }
   },
@@ -1518,14 +1518,134 @@
       "final_incumbent_post_event_seconds": 93.62210500007495,
       "source_sha256": "4b3d1d3f4eccb2ef7413f51c5a2a6bf4bd2070fbbc5b0166b944496335762ac8",
       "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 2483,
+      "final_cost": 2449.0,
+      "post_initialization_gain_percent": 1.369311316955296,
+      "removed": [
+        52,
+        200
+      ],
+      "added": [
+        49,
+        207
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        51,
+        54
+      ],
+      "net_removed_without_added_prize_deficit": 76.0,
+      "final_incumbent_post_event_seconds": 73.65886700002011,
+      "source_sha256": "67aab52a0b840ed526768da823e33589c23764c4eb862da3e91d81b035e94d72",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 2450,
+      "final_cost": 2449.0,
+      "post_initialization_gain_percent": 0.04081632653061224,
+      "removed": [
+        84,
+        200
+      ],
+      "added": [
+        193,
+        207
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 96.0,
+      "final_incumbent_post_event_seconds": 66.45318200008478,
+      "source_sha256": "2c42305a2d5599584d816ee01661a41f2dfc7597ba3a8e16d867e2994c5e88bf",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 2483,
+      "final_cost": 2449.0,
+      "post_initialization_gain_percent": 1.369311316955296,
+      "removed": [
+        106,
+        200
+      ],
+      "added": [
+        109,
+        193
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        107,
+        108
+      ],
+      "net_removed_without_added_prize_deficit": 67.0,
+      "final_incumbent_post_event_seconds": 34.505959999980405,
+      "source_sha256": "2a80f35f510d82a750281065cbca1edf0cdb8867a6be3fd2019bf372e2a9918f",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 2449,
+      "final_cost": 2449,
+      "post_initialization_gain_percent": 0.0,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": null,
+      "source_sha256": "432de696cecb5b845c0430cb7db4fb0f8454402613a13f263c5ced9a3cd1e59c",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 2449,
+      "final_cost": 2449,
+      "post_initialization_gain_percent": 0.0,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": null,
+      "source_sha256": "8f089338b54596ac27d146434828391dc1b4328ebad06de8869827db4b1f15c0",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 2449,
+      "final_cost": 2449,
+      "post_initialization_gain_percent": 0.0,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": null,
+      "source_sha256": "26d68502845357643f24d5dd67164d8ec84be919c79a776a0f2363b54914b538",
+      "input_sha256": "4761840f5c604565e7e401acdc3e9ce597390a9a4f3d5206b7dc8595081a2f0c"
     }
   ],
   "curve": [
     {
       "horizon": 1,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": -0.10188574981004352,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -0.4840541413739678,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1559,14 +1679,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.0
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -3.541401273885362
         }
       ]
     },
     {
       "horizon": 1,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 0.2883884782758859,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -0.16262142341506663,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1600,14 +1724,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.0
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -3.7707006369426868
         }
       ]
     },
     {
       "horizon": 10,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": -0.021986308693245055,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -0.019543385505106717,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1641,14 +1769,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": -0.17659006394609045
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": 0.0
         }
       ]
     },
     {
       "horizon": 10,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 1.1764277024049812,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 1.0457135132488722,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1682,14 +1814,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.06268043225389958
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": 0.0
         }
       ]
     },
     {
       "horizon": 30,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 1.091266118415176,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 0.9413112532298347,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1723,14 +1859,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 1.1843958342148007
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.2583276682528954
         }
       ]
     },
     {
       "horizon": 30,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 0.08347388833771097,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 0.07570969997417966,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1764,14 +1904,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.0
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": 0.013596193065929171
         }
       ]
     },
     {
       "horizon": 60,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": -0.009065822119355194,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -0.01561605929949054,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1805,14 +1949,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.7950771397866436
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.06801795674057333
         }
       ]
     },
     {
       "horizon": 60,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 0.06999792272668087,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 0.06675490620642163,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1846,14 +1994,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.0
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": 0.04081077404434771
         }
       ]
     },
     {
       "horizon": 120,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": -0.7257340967398742,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -0.6466095138277668,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1887,14 +2039,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.34733869639730514
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.013612850530907362
         }
       ]
     },
     {
       "horizon": 120,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 1.775129065939274,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 1.5763799641092537,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1928,14 +2084,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.34733869639730514
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.013612850530907362
         }
       ]
     },
     {
       "horizon": 300,
       "mode": "hybrid10",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": -1.4290444707021748,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": -1.2793431666197055,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -1969,14 +2129,18 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.12079732349829495
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.08173273395995095
         }
       ]
     },
     {
       "horizon": 300,
       "mode": "hybrid60",
-      "complete_geometry_pairs": 8,
-      "mean_gain_percent": 1.1120876967324869,
+      "complete_geometry_pairs": 9,
+      "mean_gain_percent": 0.9794409822111049,
       "unavailable_due_to_feasibility": [],
       "effects": [
         {
@@ -2010,12 +2174,16 @@
         {
           "instance": "g_ts225_VT45_T135_W45_50",
           "gain_percent": 0.12079732349829495
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.08173273395995095
         }
       ]
     }
   ],
-  "audit_sha256": "1667e3975be616809e2be0a4e5742f14301283213cca43a59fce3f9ae4ec8bbd",
-  "curve_sha256": "8931c7835797fd4b3d149f95b9ff6833a06e0983544bab5b1cd280261ffaf98a",
-  "summary_sha256": "f3a2750415b165b7cc6749b1542e714dfb96b8441d450fe998e580912985253f",
+  "audit_sha256": "15cbd637166abc5a866de091d40487bb88af8e282233a8d1ae52273516048883",
+  "curve_sha256": "98e75ff2d2826361f936210be682cfb2ac5d427556f23f2a421f7b629de19ed8",
+  "summary_sha256": "fd34cb9c08d170a250fe625481ddd145947ebdbab92b0f30724a082d9bcdb2de",
   "scope": "descriptive complete TRAIN geometries only; net-support witnesses do not reconstruct destruction paths or establish causality; no new selection gate"
 }

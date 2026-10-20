@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "batch_complete": false,
-  "validated_blocks": 24,
+  "batch_complete": true,
+  "validated_blocks": 27,
   "expected_blocks": 27,
-  "eligible_complete_environment": false,
+  "eligible_complete_environment": true,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -172,6 +172,27 @@
       "environment_sha256": "863c3135e06baa8d6617eecc7ff82d2c7baa713b29931dded150ab4a884cf522",
       "max_monitor_gap_seconds": 1.1681318283081055,
       "max_clock_difference_seconds": 0.0004044142917489779
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "environment_sha256": "18d2875398d66c6683fa363daa591155b132d1fbc9ecc9d2a224757ebc6e317b",
+      "max_monitor_gap_seconds": 1.8294799327850342,
+      "max_clock_difference_seconds": 0.0002422335662686237
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "environment_sha256": "d771cf4f697b18b4b59476e51b8b5be46a9a5a89b96f15941b137800f6aa8f23",
+      "max_monitor_gap_seconds": 2.1581571102142334,
+      "max_clock_difference_seconds": 0.0028758955688772403
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "environment_sha256": "fca92d45e98edbc0ce263a475557da552e7bccbcffe5423859e2b9f75d1d5ba2",
+      "max_monitor_gap_seconds": 1.0400099754333496,
+      "max_clock_difference_seconds": 4.770878649651422e-05
     }
   ],
   "scope": "independent recorded clock/pmset/result-hash checks; not proof of equal CPU or thermal conditions"

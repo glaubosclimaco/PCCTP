@@ -1,19 +1,19 @@
 {
-  "status": "PARTIAL",
-  "runs": 72,
-  "completed_geometries": 8,
+  "status": "COMPLETE",
+  "runs": 81,
+  "completed_geometries": 9,
   "comparisons": {
     "hybrid10": {
-      "mean_gain_percent": -1.4290444707021748,
+      "mean_gain_percent": -1.2793431666197055,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "gate_passed": false
     },
     "hybrid60": {
-      "mean_gain_percent": 1.1120876967324869,
+      "mean_gain_percent": 0.9794409822111049,
       "wins": 8,
-      "losses": 0,
-      "gate_passed": false
+      "losses": 1,
+      "gate_passed": true
     }
   },
   "rows": [
@@ -118,6 +118,19 @@
       "gains": {
         "hybrid10": 0.12079732349829495,
         "hybrid60": 0.12079732349829495
+      },
+      "hybrid60_vs_10_percent": 0.0
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "means": {
+        "mdm": 2447.0,
+        "hybrid10": 2449.0,
+        "hybrid60": 2449.0
+      },
+      "gains": {
+        "hybrid10": -0.08173273395995095,
+        "hybrid60": -0.08173273395995095
       },
       "hybrid60_vs_10_percent": 0.0
     }

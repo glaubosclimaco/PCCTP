@@ -1,5 +1,19 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h12 — awake81 auditado; calibração seed80 em curso
+
+Lote ruin_total300_awake_train completion runs=81. Auditoria de rotas PASS,
+624 rotas. Ambiente PASS, 27/27. Relatório DECISION300_AWAKE_REPORT:
+hybrid10 −1,279343% (6 vitórias, 3 perdas) não passou; hybrid60 0,979441%
+(8 vitórias, 1 perda) passou. Critério em awake300_repetition_protocol.md.
+tsp225 pior nos dois híbridos, 2449 contra média MDM 2447; preservado.
+
+Fila 68316 segue dona do lock e lançou published70_calibration.py. Filho
+65637 executa MDM gil262 seed80, 70 iterações, caffeinate 65629. Não duplicar.
+Cache bloqueado até a calibração de nove geometrias ser auditada. Teste
+reservado fechado. Diário atualizado. Próximo: deixar a fila auditar as nove
+referências.
+
 ## 20/10, 17h07: hybrid60 da tsp225 semente 72 fechou; MDM aberto
 
 Conferência passiva. 68208 e 68316 vivos. hybrid60 semente 72: custo, pré e

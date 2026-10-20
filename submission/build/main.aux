@@ -48,17 +48,25 @@
 \newlabel{tab:exploratory-complete}{{1}{12}{}{table.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Completed exploratory training comparisons on nine geometries with three paired seeds. Bars show the relative reduction of seed-mean costs; markers show individual seed-pair reductions, not confidence intervals. Panel A compares fresh executions with MDM under a total 60-second budget, including initialization. Panel B uses a conditional fixed-support LKH replay from saved initialization states and excludes their generation cost. Positive values favor the hybrid. Neither panel provides independent test confirmation.}}{13}{}\protected@file@percent }
 \newlabel{fig:training-effects}{{3}{13}{}{figure.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Statistical analysis and ablations}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Geometry-level sensitivity of completed comparisons}{14}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Descriptive sensitivity of completed 60-second comparisons. The leave-one-geometry-out (LOO) range recomputes the equally weighted mean after each possible single omission. It is not a confidence interval or an alternative primary endpoint. All original geometries remain in the reported primary means.}}{14}{}\protected@file@percent }
-\newlabel{tab:geometry-sensitivity}{{2}{14}{}{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Passive ordering-call diagnostics}{15}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Passive counters in completed 60-second hybrid runs. Calls are invocations of the ordering wrapper. Exit 0 records normal process exit; timeouts record a reported subprocess timeout; other combines nonzero or absent exit codes. These categories partition wrapper invocations, rather than validated improvements or feasible final solutions.}}{15}{}\protected@file@percent }
-\newlabel{tab:ordering-counters}{{3}{15}{}{table.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion and limitations}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Visit changes, coverage and prize restoration}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Restricted integer repair and computational allocation}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Limits of the current performance evidence}{16}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Completed 300-second TRAIN screen: costs averaged over seeds 70--72. H10 and H60 are geometry-level relative cost reductions against MDM300; positive values favor the hybrid. Both arms use 300 seconds total, including initialization. All nine geometries and both prespecified arms are retained.}}{14}{}\protected@file@percent }
+\newlabel{tab:awake300}{{2}{14}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Completed 300-second training screen}{14}{}\protected@file@percent }
+\newlabel{sec:awake300-results}{{7.2}{14}{}{subsection.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Completed 300-second screen on nine selected TRAIN geometries and three paired seeds. Bars show relative reductions of seed-mean costs; markers show individual seed-pair reductions, not confidence intervals. Both variants use the same horizontal axis and include initialization in the total budget. Positive values favor the hybrid. The right-hand labels give the geometry means. All losses are retained. This screen does not establish performance on reserved test geometries or superiority over a completed 70-iteration MDM reference.}}{15}{}\protected@file@percent }
+\newlabel{fig:awake300-effects}{{4}{15}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Statistical analysis and ablations}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Geometry-level sensitivity of completed comparisons}{16}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Descriptive sensitivity of completed 60-second comparisons. The leave-one-geometry-out (LOO) range recomputes the equally weighted mean after each possible single omission. It is not a confidence interval or an alternative primary endpoint. All original geometries remain in the reported primary means.}}{16}{}\protected@file@percent }
+\newlabel{tab:geometry-sensitivity}{{3}{16}{}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Sensitivity of the completed 300-second screen}{16}{}\protected@file@percent }
+\newlabel{sec:awake300-sensitivity}{{8.2}{16}{}{subsection.8.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Passive ordering-call diagnostics}{17}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Passive counters in completed 60-second hybrid runs. Calls are invocations of the ordering wrapper. Exit 0 records normal process exit; timeouts record a reported subprocess timeout; other combines nonzero or absent exit codes. These categories partition wrapper invocations, rather than validated improvements or feasible final solutions.}}{17}{}\protected@file@percent }
+\newlabel{tab:ordering-counters}{{4}{17}{}{table.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion and limitations}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Visit changes, coverage and prize restoration}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Restricted integer repair and computational allocation}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Limits of the current performance evidence}{18}{}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{climaco2021data}{1}
@@ -69,5 +77,5 @@
 \bibcite{fischetti2003local}{6}
 \bibcite{helsgaun2000}{7}
 \bibcite{ropke2006alns}{8}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusions}{17}{}\protected@file@percent }
-\gdef \@abspage@last{18}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusions}{19}{}\protected@file@percent }
+\gdef \@abspage@last{20}

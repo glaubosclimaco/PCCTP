@@ -1,28 +1,28 @@
 {
-  "status": "PARTIAL",
-  "runs": 72,
+  "status": "COMPLETE",
+  "runs": 81,
   "modes": {
     "hybrid10": {
-      "runs": 24,
+      "runs": 27,
       "runs_with_observed_call": 0,
       "runs_with_proven_timely_call": 0,
-      "runs_with_final_export": 24,
+      "runs_with_final_export": 27,
       "runs_with_unknown_upper_bound": 0,
       "call_return_count_mismatches": 0
     },
     "hybrid60": {
-      "runs": 24,
-      "runs_with_observed_call": 0,
-      "runs_with_proven_timely_call": 0,
-      "runs_with_final_export": 24,
+      "runs": 27,
+      "runs_with_observed_call": 2,
+      "runs_with_proven_timely_call": 1,
+      "runs_with_final_export": 27,
       "runs_with_unknown_upper_bound": 0,
       "call_return_count_mismatches": 0
     },
     "mdm": {
-      "runs": 24,
-      "runs_with_observed_call": 8,
-      "runs_with_proven_timely_call": 6,
-      "runs_with_final_export": 24,
+      "runs": 27,
+      "runs_with_observed_call": 11,
+      "runs_with_proven_timely_call": 9,
+      "runs_with_final_export": 27,
       "runs_with_unknown_upper_bound": 0,
       "call_return_count_mismatches": 0
     }
@@ -1322,6 +1322,168 @@
       "export_hashes": {
         "g_ts225_VT45_T135_W45_50.seed72.mdm.native.raw": "93a14b80e8cf569db4104cdba070ec3c6534fb3b7464da0196d7924e5dab7365",
         "g_ts225_VT45_T135_W45_50.seed72.mdm.native.raw.checkpoint": "edc18cdc5f5a7efd1052f14216cbb9d8b198ecf250a6135c8b27156299f03e62"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 6,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed70.hybrid10.native.raw": "d16b070fdbf7f9dd6f14fcd6dcae2e49c9370e4e06f4755056cd98df6b40a5d6",
+        "g_tsp225_VT45_T45_W135_75.seed70.hybrid10.native.raw.checkpoint": "aa660e8b85bbd2a9e6f4eaf27c669fc4e4add2af6f9105245f7cd7a26cd96edb"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 1,
+      "observed_iterations": 24,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 1,
+      "logged_mining_returns": 1,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed70.hybrid60.native.raw": "fd36020f462264e6b33fa51043700ae9b57763015f1bda19e666b4ea2d52b7b6",
+        "g_tsp225_VT45_T45_W135_75.seed70.hybrid60.native.raw.checkpoint": "3b1e57f55801d41549db57bdb6b8ba282b6149ab09e5e75f65cce04bbf52aa0f"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 6,
+      "observed_iterations": 98,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 4,
+      "timely_mining_calls_upper_bound": 6,
+      "logged_mining_returns": 6,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed70.mdm.native.raw": "65cf6604a0feda7ca4e5018cd6cf2c509c64ec2d5dff23581d67f60a84331731",
+        "g_tsp225_VT45_T45_W135_75.seed70.mdm.native.raw.checkpoint": "284bfb2f212bf281d96530e4fec5a8aa02e2c114b5a9b8954158e20e72687a32"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed71.hybrid10.native.raw": "f69ea3e8bc333265928a670d068ec915a450bd03d6dd6551538e5004539eb752",
+        "g_tsp225_VT45_T45_W135_75.seed71.hybrid10.native.raw.checkpoint": "71161faed89def59b58de92003ed2199f81b7ac7646186f1df198e8a2d162c5f"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 16,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed71.hybrid60.native.raw": "6fd145dc89d49f5087669c54c08d94f0a1368c3cf359bfa49f38ddaf0710fb9c",
+        "g_tsp225_VT45_T45_W135_75.seed71.hybrid60.native.raw.checkpoint": "586fa3c9881bd614f04ecb01d3942f7cecf731f99848fec92a2dd4788616032a"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 10,
+      "observed_iterations": 187,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 5,
+      "timely_mining_calls_upper_bound": 10,
+      "logged_mining_returns": 10,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed71.mdm.native.raw": "88eb127f76ca8de6b5d21e321a64e202c08f25f85b6c1c47dfcba7ed88e336e3",
+        "g_tsp225_VT45_T45_W135_75.seed71.mdm.native.raw.checkpoint": "601beb672e4121fecaccbb54ec83f4e1e6b41d941b416bc5855aeb4fc33f5291"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 5,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed72.hybrid10.native.raw": "737a9c69108e0937977bee08dad453cc66b409b3a6cbb0998d54034375526a01",
+        "g_tsp225_VT45_T45_W135_75.seed72.hybrid10.native.raw.checkpoint": "24ec3dbfdce431aeecff5a0bd0f9966cdd486b0bb769b36fe86381977c7fabae"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 2,
+      "observed_iterations": 29,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 1,
+      "timely_mining_calls_upper_bound": 2,
+      "logged_mining_returns": 2,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed72.hybrid60.native.raw": "8ea6acbb8c761401632178c2cc1537f2360bb1cab57ae1e4b7290ef86d0ab6ca",
+        "g_tsp225_VT45_T45_W135_75.seed72.hybrid60.native.raw.checkpoint": "f5b38cbe9160055cc9eecfbb4469fbc2786ed65ae6eca81fdac159fcc9e49774"
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 8,
+      "observed_iterations": 203,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 4,
+      "timely_mining_calls_upper_bound": 8,
+      "logged_mining_returns": 8,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_tsp225_VT45_T45_W135_75.seed72.mdm.native.raw": "baf209843124d7fd8017f17d2b5c9d7a2c2e770dd1b3fd2b017f47437c053f41",
+        "g_tsp225_VT45_T45_W135_75.seed72.mdm.native.raw.checkpoint": "20200bbcf688bf58b4c076f5d45cb19b28e1ed3969fc0ff28002e565ca8635bb"
       }
     }
   ],

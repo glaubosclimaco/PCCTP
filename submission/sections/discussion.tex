@@ -60,10 +60,15 @@ analyses do not repair selection bias or supply independent confirmation.
 Search horizons create another limitation. A short-budget comparison can end
 before MDM activates its mining component. It then compares the observed
 algorithm trajectories within that horizon, rather than isolating the value
-of mining or outperforming a completed 70-iteration reference. The replacement
-300-second experiment and the planned iteration-limited comparisons address
-different parts of this issue. Neither is substituted for a completed study
-while its scheduled observations are missing. The reference-defined duration
+of mining or outperforming a completed 70-iteration reference. The completed
+300-second experiment favored the 60-second initialization variant in the
+selected training set, while the 10-second variant failed its screen.
+This difference cautions against treating additional repair time as a
+substitute for adequate initialization. It does not isolate the causal
+effect of initialization length, because the resulting search trajectories
+and computational allocation also differ. The planned iteration-limited
+comparisons address a different stopping rule and remain necessary.
+The reference-defined duration
 rule also requires disclosure of the reference-first order and possible
 machine-state drift within a pair.
 

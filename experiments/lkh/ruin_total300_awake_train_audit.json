@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "runs": 72,
-  "routes_checked": 582,
-  "batch_complete": false,
+  "runs": 81,
+  "routes_checked": 624,
+  "batch_complete": true,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -579,6 +579,78 @@
       "cost": 108805,
       "feasible": true,
       "result_sha256": "7c901abf0298f1ec1ab23a1ce5b84ee41cd25d8d87f9e529ba0aa85eefd5465f"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "cost": 2449.0,
+      "feasible": true,
+      "result_sha256": "67aab52a0b840ed526768da823e33589c23764c4eb862da3e91d81b035e94d72"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "cost": 2449.0,
+      "feasible": true,
+      "result_sha256": "2c42305a2d5599584d816ee01661a41f2dfc7597ba3a8e16d867e2994c5e88bf"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 70,
+      "mode": "mdm",
+      "cost": 2447,
+      "feasible": true,
+      "result_sha256": "efc894528870f5591d06a8cdd6087c5f150aacdb5297b73c8ad95babc3c17875"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "cost": 2449.0,
+      "feasible": true,
+      "result_sha256": "2a80f35f510d82a750281065cbca1edf0cdb8867a6be3fd2019bf372e2a9918f"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "cost": 2449,
+      "feasible": true,
+      "result_sha256": "432de696cecb5b845c0430cb7db4fb0f8454402613a13f263c5ced9a3cd1e59c"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 71,
+      "mode": "mdm",
+      "cost": 2447,
+      "feasible": true,
+      "result_sha256": "8de4e45af6c80f0e28c66da6dd151989b15b15858ec54c136827a5db6ac68253"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "cost": 2449,
+      "feasible": true,
+      "result_sha256": "8f089338b54596ac27d146434828391dc1b4328ebad06de8869827db4b1f15c0"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "cost": 2449,
+      "feasible": true,
+      "result_sha256": "26d68502845357643f24d5dd67164d8ec84be919c79a776a0f2363b54914b538"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 72,
+      "mode": "mdm",
+      "cost": 2447,
+      "feasible": true,
+      "result_sha256": "c70371eee5df3d9cc3cc7d79f2a2f3dbb62e5f8e8197b4fc35c218cf9e1a2b4a"
     }
   ],
   "scope": "raw scalar feasible costs and absolute monotonic-event selection; no statistical conclusion"

@@ -1,16 +1,16 @@
-> Auditoria ambiental independente: 24/27 blocos validados; elegibilidade ambiental do lote completo: False. Execuções no bloco ainda aberto aguardam seu diagnóstico ambiental.
+> Auditoria ambiental independente: 27/27 blocos validados; elegibilidade ambiental do lote completo: True. Execuções no bloco ainda aberto aguardam seu diagnóstico ambiental.
 
 # Avaliação experimental PCCTP: orçamento total de 300 segundos
 
-Estado: **INCOMPLETE**. 72/81 execuções auditadas; 8/9 geometrias completas.
+Estado: **TRAIN_SCREEN_PASS_WITH_LIMITATIONS**. 81/81 execuções auditadas; 9/9 geometrias completas.
 
 Nenhuma conclusão de publicação, significância ou generalização é automática.
 Dados de treino selecionados por dificuldade; teste reservado permanece fechado.
 
 | Método contra MDM300 | Ganho médio (%) | Vitórias | Perdas | Critério |
 |---|---:|---:|---:|---|
-| hybrid10 | -1.429044 | 6 | 2 | pendente |
-| hybrid60 | 1.112088 | 8 | 0 | pendente |
+| hybrid10 | -1.279343 | 6 | 3 | não passou |
+| hybrid60 | 0.979441 | 8 | 1 | passou |
 
 ## Custos e consistência nas geometrias completas
 
@@ -24,6 +24,7 @@ Dados de treino selecionados por dificuldade; teste reservado permanece fechado.
 | g_rd400_VT80_T240_W80_25 | 10773.667 | 12872.333 | 10670.333 | 1/0/2 | 2/0/1 |
 | g_si175_VT35_T105_W35_50 | 7045.333 | 6908.000 | 6898.000 | 3/0/0 | 3/0/0 |
 | g_ts225_VT45_T135_W45_50 | 108998.000 | 108866.333 | 108866.333 | 1/2/0 | 1/2/0 |
+| g_tsp225_VT45_T45_W135_75 | 2447.000 | 2449.000 | 2449.000 | 0/0/3 | 0/0/3 |
 
 As contagens por semente são descritivas dentro da mesma instância;
 não multiplicam o número de geometrias independentes.
@@ -36,9 +37,9 @@ parciais não fundamentam aprovação ou rejeição do método.
 
 | Método | Execuções | Mineração observada | Mineração pontual comprovada | Limite superior desconhecido |
 |---|---:|---:|---:|---:|
-| hybrid10 | 24 | 0 | 0 | 0 |
-| hybrid60 | 24 | 0 | 0 | 0 |
-| mdm | 24 | 8 | 6 | 0 |
+| hybrid10 | 27 | 0 | 0 | 0 |
+| hybrid60 | 27 | 2 | 1 | 0 |
+| mdm | 27 | 11 | 9 | 0 |
 
 Mineração observada em export final pode incluir sobretempo cooperativo.
 A prova de ativação pontual usa export/checkpoint anterior ao orçamento nativo.

@@ -27,16 +27,17 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 20/10, 17h07: o otimizador 68208 e a fila
-68316 seguem ativos. tsp225 tem as sementes 70 e 71 completas, MDM 2447 e
-híbridos 2449. A semente 72 fechou hybrid10 e hybrid60 em 2449. O MDM dessa
-semente está em escrita nativa desde 17h07. A auditoria publicada continua
-72/81. Não lance outro otimizador.
+**Estado operacional confirmado em 20/10, 17h12:** o lote de 81 execuções de
+300 s terminou. `completion.json` registra 81 corridas. A auditoria de rotas
+está PASS, com 624 rotas. A auditoria ambiental está PASS, com 27/27 blocos.
+O relatório `research_notes/DECISION300_AWAKE_REPORT.md` marca
+TRAIN_SCREEN_PASS_WITH_LIMITATIONS. Pelo critério anterior à repetição,
+hybrid60 passou e hybrid10 não passou. A fila 68316 iniciou a calibração MDM
+de 70 iterações, semente 80. O processo 65637 executa gil262. Não lançar
+outra calibração. O cache continua parado até essa calibração ser auditada.
 
-**Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
-Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
-não foi lançado, e só pode rodar depois do lote de 81 e das nove calibrações
-auditados. Ainda não existe resultado real de qualidade de solução do cache.
+**Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
+substitui a avaliação final de dez sementes.
 
 ## Arquivos que contêm as decisões e evidências
 
@@ -46,8 +47,9 @@ auditados. Ainda não existe resultado real de qualidade de solução do cache.
 - `research_notes/EXECUTION_PLAN.md`: critérios científicos e objetivo final.
 - `research_notes/CONTINUATION.md`: estado operacional detalhado, histórico
   de retomadas, sessões, artefatos e próximos passos. Use junto com este diário.
-- `research_notes/DECISION300_AWAKE_REPORT.md`: diagnóstico do lote300s novo;
-  parcial enquanto as81 execuções não terminarem.
+- `research_notes/DECISION300_AWAKE_REPORT.md`: diagnóstico do lote de 300 s.
+  Em 20/10, 17h10, está completo: 81/81, hybrid60 passou e hybrid10 não passou.
+  Ainda não é a comparação com MDM de 70 iterações.
 - `research_notes/paired70_ten_seed_design.md`: comparação prospectiva com
   MDM70 completo, dez sementes pareadas. Código preparado, não lançado.
 - `research_notes/cached30_conditional_design.md`: estudo de cache prospectivo,
@@ -527,6 +529,36 @@ Sem ele, o bloco e a geometria continuam abertos, e a média de 72/81 não muda.
 
 Otimizador 68208 e fila 68316 seguem únicos. Fechamento descritivo e figura
 continuam bloqueados até as 81 execuções.
+
+## 20/10/2026, 17h12 Fortaleza — lote de 81 auditado; calibração iniciada
+
+Acompanhei o otimizador 68208 sem lançar outro. tsp225, sementes 70, 71 e 72,
+gravou os três métodos. O coletor encerrou e escreveu
+`experiments/lkh/ruin_total300_awake_train/completion.json` com 81 corridas.
+A fila 68316, que já esperava esse arquivo, executou o observador. Não rodei
+um segundo observador.
+
+Auditoria de rotas: PASS, 81 corridas, 624 rotas, lote completo. Auditoria
+ambiental: PASS, 27 blocos, elegível. Relatório
+`research_notes/DECISION300_AWAKE_REPORT.md`. O critério prévio, em
+`research_notes/awake300_repetition_protocol.md`, pede ganho médio de pelo
+menos 0,2%, ao menos seis vitórias e no máximo uma perda em nove geometrias.
+hybrid10 ficou em −1,279343%, com seis vitórias e três perdas: não passou.
+hybrid60 ficou em 0,979441%, com oito vitórias e uma perda: passou. As duas
+variantes permanecem no relatório. tsp225 piorou nos dois híbridos nas três
+sementes, 2449 contra a média MDM 2447. Isso entra na média e não foi removido.
+
+A fila em seguida iniciou `published70_calibration.py`. Às 17h12 o binário
+MDM corre gil262, semente 80, 70 iterações, processo 65637, com caffeinate no
+65629. O limite de segurança é 43200 s por caso. Nove geometrias de treino,
+nenhuma reservada. Essa calibração mede a duração real da referência; não é
+a comparação final de dez sementes e não autoriza escrever superioridade no
+artigo.
+
+Próximo passo: deixar a fila terminar as nove referências e a auditoria
+`audit_published70_calibration.py`. Se um bloco ambiental falhar, o próprio
+script preserva a tentativa e para. Não repetir em silêncio e não lançar o
+cache antes dessa auditoria.
 
 ## Modelo para próximas entradas
 

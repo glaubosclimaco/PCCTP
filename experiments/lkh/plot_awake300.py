@@ -44,7 +44,7 @@ def main():
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
     plt.rcParams.update({'font.size': 10, 'svg.fonttype': 'none'})
-    fig, ax = plt.subplots(figsize=(9.4, 6.0))
+    fig, ax = plt.subplots(figsize=(7.0, 5.4))
     colors = {'hybrid10': '#D55E00', 'hybrid60': '#0072B2'}
     offsets = {'hybrid10': -.18, 'hybrid60': .18}
     allvalues = [x for row in data for values in row['paired_seed_effects'].values() for x in values]
@@ -59,9 +59,8 @@ def main():
             for j, marker in enumerate(('o','s','D')):
                 ax.scatter(row['paired_seed_effects'][mode][j], y+(j-1)*.055, marker=marker,
                            s=15, c='#222222', alpha=.55, edgecolors='white', linewidths=.35, zorder=3)
-            ax.annotate(f'{gain:+.2f}', (gain,y), xytext=(4 if gain>=0 else -4,0),
-                        textcoords='offset points', ha='left' if gain>=0 else 'right',
-                        va='center', fontsize=8, color=colors[mode], zorder=4)
+            ax.text(.985, y, f'{gain:+.2f}', transform=ax.get_yaxis_transform(),
+                    ha='right', va='center', fontsize=9, color=colors[mode], zorder=4)
     ax.set_yticks(range(9), [r['instance'].split('_VT')[0].removeprefix('g_') for r in data])
     ax.invert_yaxis(); ax.axvline(0, color='#666666', linewidth=.8)
     ax.grid(axis='x', color='#e1e1e1', linewidth=.6); ax.set_axisbelow(True)
@@ -69,13 +68,14 @@ def main():
     ax.tick_params(axis='y', length=0)
     ax.set_xlabel('Cost reduction versus paired MDM300 (%)')
     ax.set_title('TRAIN only: both prespecified hybrids, 300 s total', fontsize=12, pad=14)
+    ax.text(.985, 1.01, 'Mean (%)', transform=ax.transAxes, ha='right', fontsize=9)
     handles = [Line2D([0],[0], color=colors[m], linewidth=6, label=label)
                for m,label in (('hybrid10','MDM10 + repair'),('hybrid60','MDM60 + repair'))]
     handles += [Line2D([0],[0], color='#333333', marker=marker, linestyle='None', markersize=4,
                       label=f'Seed {70+j}') for j,marker in enumerate(('o','s','D'))]
-    fig.legend(handles=handles, loc='lower center', ncol=5, frameon=False, fontsize=8,
+    fig.legend(handles=handles, loc='lower center', ncol=3, frameon=False, fontsize=9,
                bbox_to_anchor=(.54,.025))
-    fig.subplots_adjust(left=.13,right=.97,top=.9,bottom=.18)
+    fig.subplots_adjust(left=.15,right=.97,top=.88,bottom=.22)
     out = ROOT/'submission/figures'; out.mkdir(parents=True,exist_ok=True)
     for extension in ('png','svg'): fig.savefig(out/f'awake300_effects.{extension}',dpi=240)
     caption = ('Selected TRAIN geometries, three paired seeds, 300 seconds including initialization. '

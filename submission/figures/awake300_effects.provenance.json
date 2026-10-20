@@ -1,0 +1,185 @@
+{
+  "scope": "Selected TRAIN geometries, three paired seeds, 300 seconds including initialization. Bars show reductions of seed-mean costs; markers show each seed-pair reduction, not confidence intervals. One shared axis includes all losses and both arms. Positive values favor the hybrid. This is an exploratory short-horizon screen, not independent test evidence or superiority over completed MDM70.",
+  "data": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "means": {
+        "hybrid10": 1.5440210249671484,
+        "hybrid60": 1.3797634691195795
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          2.5916870415647923,
+          0.8424182358771061,
+          1.1851851851851851
+        ],
+        "hybrid60": [
+          2.15158924205379,
+          0.8424182358771061,
+          1.1358024691358024
+        ]
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "means": {
+        "hybrid10": 1.6696974706563068,
+        "hybrid60": 1.553975863779137
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          1.1448481831757094,
+          1.540755467196819,
+          2.3175542406311638
+        ],
+        "hybrid60": [
+          0.9457441513190642,
+          1.540755467196819,
+          2.1696252465483234
+        ]
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "means": {
+        "hybrid10": 1.5862625659670877,
+        "hybrid60": 1.5706610953589017
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          0.6472358917985966,
+          1.4183096438942382,
+          2.6720476640969384
+        ],
+        "hybrid60": [
+          0.599977398111715,
+          1.4183096438942382,
+          2.6720476640969384
+        ]
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "means": {
+        "hybrid10": -0.03262735307051764,
+        "hybrid60": 0.011348644546267005
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          -0.11489850631941785,
+          0.017022000936210053,
+          0.0
+        ],
+        "hybrid60": [
+          0.017022000936210053,
+          0.017022000936210053,
+          0.0
+        ]
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "means": {
+        "hybrid10": 1.2098076640728235,
+        "hybrid60": 1.2098076640728235
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          0.7376154368158617,
+          1.2504035927089143,
+          1.6372832792445107
+        ],
+        "hybrid60": [
+          0.7376154368158617,
+          1.2504035927089143,
+          1.6372832792445107
+        ]
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "means": {
+        "hybrid10": -19.479595309551065,
+        "hybrid60": 0.9591287398285944
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          -28.992062026952187,
+          0.9471631534961463,
+          -30.38813211420041
+        ],
+        "hybrid60": [
+          1.8829610485508583,
+          1.2814560312006686,
+          -0.29856316476954653
+        ]
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "means": {
+        "hybrid10": 1.9492808478425436,
+        "hybrid60": 2.091218773656321
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          2.4569330697543066,
+          1.7493955340634333,
+          1.637476861739997
+        ],
+        "hybrid60": [
+          2.8805422197119457,
+          1.7493955340634333,
+          1.637476861739997
+        ]
+      }
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "means": {
+        "hybrid10": 0.12079732349829049,
+        "hybrid60": 0.12079732349829049
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          0.0,
+          0.3617216117216117,
+          0.0
+        ],
+        "hybrid60": [
+          0.0,
+          0.3617216117216117,
+          0.0
+        ]
+      }
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "means": {
+        "hybrid10": -0.08173273395995095,
+        "hybrid60": -0.08173273395995095
+      },
+      "paired_seed_effects": {
+        "hybrid10": [
+          -0.08173273395995095,
+          -0.08173273395995095,
+          -0.08173273395995095
+        ],
+        "hybrid60": [
+          -0.08173273395995095,
+          -0.08173273395995095,
+          -0.08173273395995095
+        ]
+      }
+    }
+  ],
+  "source_sha256": {
+    "experiments/lkh/plot_awake300.py": "eb30ad030a3165c5ca49a4cbda2661d77922012d147edf5cfcb2b0b5d8c44935",
+    "experiments/lkh/awake300_closing_analysis.json": "a2926a9c630e1712e32ff7b6396133b7e766836375c336d751a26a379f556a68",
+    "experiments/lkh/ruin_total300_awake_train_audit.json": "15cbd637166abc5a866de091d40487bb88af8e282233a8d1ae52273516048883"
+  },
+  "output_sha256": {
+    "awake300_effects.png": "618e996b3441aed91416eb5478007cf162b5ba2e7e6cc8c4fef6f2408046c8ec",
+    "awake300_effects.svg": "b7e5a838b7cdd1ddb444cdd83636b16d25478a3c7f0276720cdf72a976f8e906"
+  }
+}
