@@ -27,17 +27,18 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado em 20/10, 16h29:** um único otimizador segue
-ativo, processo 68208, iniciado às 16h09 por `caffeinate -i` no processo 68216,
-comando `experiments/lkh/awake300_train.py`. Há 72 arquivos de resultado no
-disco e 24 blocos ambientais com status PASS, incluindo a repetição de
-ts225/semente 72. A geometria tsp225 ainda não tem resultado final; o processo
-filho executa o MDM da semente 70. A auditoria atual passou com 72/81,
-582 rotas e 3063 eventos, oito geometrias completas. A fila
-`published70_after_awake.py`, processo 68316, segura o lock de calibração e
-espera `completion.json`. Os IDs de sessão 13438 e 26890 foram reconhecidos
-nesta sessão da ferramenta; em outra ferramenta, confirme os processos e
-locks em vez de presumir que esses IDs continuem disponíveis.
+**Estado operacional confirmado em 20/10, 16h42:** o otimizador 68208 segue
+ativo desde 16h09, com `caffeinate` 68216, comando
+`experiments/lkh/awake300_train.py`. A fila `published70_after_awake.py`,
+processo 68316, continua esperando o lote. No disco há 75 resultados não
+nativos: oito geometrias completas e, em tsp225, só a semente 70 nos três
+braços. O bloco ambiental dessa semente está PASS. Custos lidos dos JSON
+fechados, ainda sem nova auditoria do observador: MDM 2447, hybrid60 2449,
+hybrid10 2449, os três viáveis. O híbrido desta semente ficou 2 unidades
+acima do MDM. Isso é uma semente, não o resultado do lote. Faltam as sementes
+71 e 72. Há arquivo nativo de hybrid60 da semente 71 e um LKH filho ativo;
+esse braço não está fechado. A auditoria publicada continua a de 72/81.
+Confirme processos e locks em outra máquina. Não lance outro otimizador.
 
 **Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
 Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
@@ -389,6 +390,26 @@ Próximo passo: deixar concluir os sete resultados de tsp225 ainda pendentes
 no momento dessa conferência, auditar o lote e acompanhar as referências70
 pela fila. Registrar tempos reais e censuras antes de estimar o custo do
 estudo principal. O artigo permanece incompleto e o cache não foi enfileirado.
+
+## 20/10/2026, 16h42 Fortaleza: tsp225 semente 70 fechada, monitoramento de 30 minutos
+
+Conferência passiva, sem lançar observador nem outro otimizador. O lote
+300s segue no processo 68208. A fila 68316 segue no lock de calibração.
+Oito geometrias permanecem completas no disco. tsp225 semente 70 gravou os
+três braços e o ambiente PASS. Custos fechados: MDM 2447, hybrid60 2449,
+hybrid10 2449. Os dois híbridos perderam 2 unidades para o MDM nesta semente.
+Não entra em média auditada e não muda a leitura de H10/H60 já registrada
+em 72/81. Faltam seis execuções (sementes 71 e 72). O arquivo nativo
+hybrid60 da semente 71 e o LKH 88149 indicam busca aberta, não resultado.
+
+O usuário pediu acompanhamento e um texto de situação pelo menos a cada
+30 minutos, diário nos fatos relevantes e commit quando houver avanço de
+método, resultado ou decisão de experimento. A regra está em
+`.cursor/rules/commitar-avanco-relevante.mdc` e em `AGENTS.md`. Um aviso
+sem mudança de resultado não gera commit.
+
+Próximo passo: deixar 68208 terminar tsp225 e a fila auditar o lote antes
+da calibração. Cache continua bloqueado.
 
 ## Modelo para próximas entradas
 

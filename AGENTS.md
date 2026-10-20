@@ -25,3 +25,13 @@ literatura para melhorar resultados. ML é opcional. Preserve resultados
 negativos, cobrança justa do tempo total e separação por geometria. O objetivo
 é contribuição sustentada e artigo completo, auditado e compilado; um rascunho
 ou efeito parcial não permite declarar conclusão ou garantir publicação.
+
+O usuário pediu, em 20/10/2026, acompanhamento do experimento em curso e um
+texto de situação pelo menos a cada 30 minutos. Grave no diário o que mudar
+a leitura científica ou o plano operacional. Faça commit nessa branch quando
+houver avanço relevante de método, resultado auditado, falha que mude o
+plano, ou decisão sobre o que entra no artigo. A mensagem deve dizer o que
+aconteceu e qual foi o avanço. Não faça commit de conferência sem mudança,
+de `include/Utils.h`, de `*.queue.lock`, nem de arquivo que um processo
+ativo ainda esteja escrevendo. A mesma regra está em
+`.cursor/rules/commitar-avanco-relevante.mdc`.

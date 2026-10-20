@@ -1,5 +1,17 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h42: tsp225 semente 70 no disco; seis execuções ainda abertas
+
+Conferência passiva. Otimizador 68208 e fila 68316 seguem vivos desde 16h09
+e 16h10. Não foi lançado observador. Resultados não nativos `g_*.json`: 75.
+Oito geometrias com 9 arquivos. tsp225 só semente 70: MDM 2447, hybrid60
+2449, hybrid10 2449, viáveis, ambiente PASS. Híbridos piores por 2 nesta
+semente isolada. Auditoria publicada permanece 72/81. Faltam sementes 71 e
+72. Nativo hybrid60 da semente 71 existe e LKH filho 88149 estava ativo;
+não tratar como JSON fechado. Não duplicar processo. Cache continua fora
+da fila. Usuário pediu texto de situação a cada 30 minutos e commit só com
+avanço relevante.
+
 ## 20/10, 16h39 — fila/calibração conferidas; vínculo LKH do cache corrigido
 
 13438otimizador e26890fila ativos. tsp225seed70 MDM2447/H602449 gravados;

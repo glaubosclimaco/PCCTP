@@ -1,0 +1,18 @@
+---
+description: Diário do PCCTP e commit só quando houver avanço relevante para o artigo
+alwaysApply: true
+---
+
+# Acompanhamento e commit
+
+O objetivo é um artigo sobre o PCCTP, com contribuição de método ou de resultado. Resultado parcial, teste sintético ou rascunho não é conclusão.
+
+A cada conferência do experimento em curso, conte processos, locks e resultados antes de agir. Não lance otimizador, fila ou observador duplicado. Não altere fonte congelada de coleta ativa. Não abra as 12 geometrias reservadas e não implemente CTP.
+
+Informe o usuário da situação pelo menos a cada 30 minutos enquanto o lote estiver ativo.
+
+Atualize `diario.md` quando mudar a leitura científica ou o plano: bloco fechado, auditoria, ganho ou perda, falha ambiental, decisão de método. Uma conferência em que nada mudou não precisa de entrada nova.
+
+Faça commit na branch `codex/pcctp-learning-submission` só nesse caso. A mensagem diz o que aconteceu e qual foi o avanço, por exemplo: "tsp225 semente 70 fechou abaixo do MDM nesta semente; o lote segue sem conclusão."
+
+Não commite `include/Utils.h`, `*.queue.lock`, nem arquivo que um processo ainda esteja escrevendo. Não declare vitória de método a partir de uma semente ou de um lote incompleto.
