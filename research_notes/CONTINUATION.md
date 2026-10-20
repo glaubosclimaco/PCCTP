@@ -1,5 +1,20 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h50 —77finais/25blocosPASS; fechamento preparado e bloqueado
+
+Coleta13438/fila26890 seguem semduplicação. Conferência de disco77resultados,
+25environmentPASS,0falhas,4resultadosfaltam. Auditoria publicada72/81; não lançar
+observador ao mesmo tempo que a fila concluir. Não commitar nativos abertos.
+
+Novo close_awake300.py: só aceita completion81+auds completas,27blocos,
+81chaves esperadas; reconfere hashes/rotas/custos, ganhos/gates por frações,
+copia upstream imutável e calcula leave-one-geometry-out DESCRITIVO sem novo
+gate/p/seleção. Guarda snapshot porhash e recusa overwrite diferente. Ainda
+NÃO executado com lote completo; checagem atual recusou parcial antes de criar
+outputs/otimizador. Quando fila terminar observe completo, executar python3
+experiments/lkh/close_awake300.py e conferir resultado; não alterarworkers.
+Diário contém justificativa/limites e comando. Meta científica/artigo pendente.
+
 ## 20/10, 16h46: hybrid60 da tsp225 semente 71 fechou; hybrid10 segue aberto
 
 Conferência passiva. 68208 e 68316 vivos. tsp225 fechados: semente 70 MDM

@@ -431,6 +431,34 @@ O nativo de hybrid10 da semente 71 começou às 16h45 e continua aberto. Não
 foi commitado. Faltam esse braço, o MDM da semente 71 e os três braços da
 semente 72. Otimizador 68208 e fila 68316 seguem únicos. Cache bloqueado.
 
+## 20/10/2026, 16h50 Fortaleza — preparação do fechamento, sem análise parcial nova
+
+Conferência passiva:77arquivos finais,25blocos ambientais PASS, nenhum bloco
+com falha e quatro resultados ainda ausentes. A fila continua esperando a
+conclusão. Não atualizei os agregados publicados de72/81 apenas por haver
+arquivos de um bloco ainda aberto; a fila fará o observador completo antes
+da calibração. Nenhum arquivo nativo em escrita foi selecionado para commit.
+
+Preparei `experiments/lkh/close_awake300.py` para executar depois do término e
+das auditorias finais. Ele exige81chaves esperadas, nove geometrias,27blocos
+ambientais validados e consistência das auditorias/curvas. Reconfere hashes e
+custos/viabilidade das81rotas finais, recompõe os dois ganhos por geometria
+com frações exatas e verifica concordância com os critérios já definidos.
+Preserva uma cópia das auditorias/protocolo e calcula sensibilidade descritiva
+ao retirar uma geometria por vez, mantendo todos os dados e sem criar outro
+critério de aprovação ou teste de significância. Isso permitirá mostrar se
+o efeito médio depende muito de uma geometria, sem eliminá-la da conclusão.
+
+Verificação realizada agora: o script recusou corretamente o lote incompleto,
+antes de criar análise de fechamento, snapshot ou otimizador. A execução
+completa ainda não ocorreu e precisa ser conferida após a fila publicar as
+auditorias81. Comando futuro: `/usr/bin/python3 experiments/lkh/close_awake300.py`.
+Não o incluir no processo ativo nem substituir o protocolo300s pelo de70.
+
+Próximo passo: terminar os quatro resultados, acompanhar a calibração já
+enfileirada e fechar a análise descritiva quando os pré-requisitos forem reais.
+O artigo e as inferências permanecem condicionados às evidências completas.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto
