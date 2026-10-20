@@ -99,3 +99,13 @@ superioridade sobreMDMcompleto. Antes da decisão de artigo, reproduzir referên
 MDM70completa, sem confundir censura com término, e preparar comparação justa
 comdezsementes. Calibração9TRAIN/seed80 está nafila após81runs300s;
 éapenasdimensionamento/validação, não réplica final. Nãoabrirteste12/CTP.
+
+
+## CPLEX instalado por solicitação direta em20/10
+
+Ambienteisolado .venv-cplex (Python3.10.16arm64), cplex22.2.0.1
+(engine22.2.0.0) e docplex2.32.264. TesteMIP CPLEX/DOcplexPASSótimo3.
+ÉCommunity: teste1001variáveis resultouerro1016. Não éversãoacadêmica
+ativada neminstalaçãoIDE/SDKC++doOptimizationStudio. Não declararsolver
+semrestriçãoparaPCCTPgrande. Check/provenance/requirements em
+experiments/cplex_installation/. Ambiente dos experimentos ativos intacto.

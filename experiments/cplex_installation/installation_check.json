@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "python": "/Users/glaubosclimaco/Projects/papers/PCCTP/.venv-cplex/bin/python",
+  "python_version": "3.10.16",
+  "architecture": "arm64",
+  "cplex": "22.2.0.1",
+  "docplex": "2.32.264",
+  "low_level": {
+    "status": "integer optimal solution",
+    "objective": 3.0,
+    "values": [
+      1.0,
+      0.0
+    ],
+    "engine_version": "22.2.0.0"
+  },
+  "modeling": {
+    "status": "integer optimal solution",
+    "objective": 3.0
+  },
+  "size_limit_probe": {
+    "variables": 1001,
+    "constraints": 1,
+    "restricted_at_1000": true,
+    "error_code": 1016,
+    "message": "CPLEX Error  1016: Community Edition. Problem size limits exceeded. Purchase at http://ibm.biz/error1016."
+  },
+  "scope": "isolated Python runtime; not full Optimization Studio IDE or C++ SDK"
+}
