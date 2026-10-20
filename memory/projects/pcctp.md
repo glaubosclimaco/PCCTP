@@ -88,3 +88,14 @@ curvas de qualidade e exposição efetiva à mineração. Não iniciar busca de 
 problema ou priorizar páginas do rascunho em detrimento desse diagnóstico.
 Plano concreto em research_notes/pcctp_decisive_evaluation.md; respeitar gates
 originais e teste reservado fechado. Não prometer publicação a partir de treino.
+
+
+## Alinhamento com os artigos, após questionamento direto sobre tempo
+
+Em19/10 o usuário pediu conferir se os experimentos eram os mesmos dosartigos.
+A conferência confirmou70iterações/10sementes no protocolo heurístico, não
+300segundos/3sementes. Os lotescurtos são complementares e não sustentam
+superioridade sobreMDMcompleto. Antes da decisão de artigo, reproduzir referência
+MDM70completa, sem confundir censura com término, e preparar comparação justa
+comdezsementes. Calibração9TRAIN/seed80 está nafila após81runs300s;
+éapenasdimensionamento/validação, não réplica final. Nãoabrirteste12/CTP.

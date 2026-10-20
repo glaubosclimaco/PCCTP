@@ -1,5 +1,12 @@
 # Decisão sobre investir em um artigo PCCTP
 
+**Atualização após a conferência dos artigos:** o lote300s abaixo é uma análise
+anytime complementar. Seu gate permanece inalterado, mas não basta para decidir
+publicação ou abandono. Primeiro é necessário confrontar o MDM que completou
+70iterações, conforme published_experiment_alignment.md e o protocolo de
+calibração published70_calibration_protocol.md. A replicação final com dez
+sementes ainda não foi executada.
+
 O usuário reafirmou em19/10 que deseja experimentos reais para avaliar se vale
 escrever o artigo. Manter foco no PCCTP; a triagem de outros problemas deixa de
 ser prioridade enquanto este estudo roda. Não trocar por redação especulativa.

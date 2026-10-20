@@ -1,6 +1,6 @@
 # Avaliação experimental PCCTP: orçamento total de 300 segundos
 
-Estado: **INCOMPLETE**. 9/81 execuções auditadas; 1/9 geometrias completas.
+Estado: **INCOMPLETE**. 11/81 execuções auditadas; 1/9 geometrias completas.
 
 Nenhuma conclusão de publicação, significância ou generalização é automática.
 Dados de treino selecionados por dificuldade; teste reservado permanece fechado.
@@ -27,8 +27,8 @@ parciais não fundamentam aprovação ou rejeição do método.
 
 | Método | Execuções | Mineração observada | Mineração pontual comprovada | Limite superior desconhecido |
 |---|---:|---:|---:|---:|
-| hybrid10 | 3 | 0 | 0 | 0 |
-| hybrid60 | 3 | 0 | 0 | 0 |
+| hybrid10 | 4 | 0 | 0 | 0 |
+| hybrid60 | 4 | 0 | 0 | 0 |
 | mdm | 3 | 0 | 0 | 0 |
 
 Mineração observada em export final pode incluir sobretempo cooperativo.
@@ -36,6 +36,11 @@ A prova de ativação pontual usa export/checkpoint anterior ao orçamento nativ
 Ativação não demonstra eficácia da mineração. Tempo de CPU do processo pai
 não deve ser apresentado como CPU total: LKH e mineradores são subprocessos.
 A comparação principal usa tempo de parede debitado e incumbentes pontuais.
+
+Este orçamento não reproduz as70iterações dos artigos. A decisão sobre
+publicação ou abandono exige confronto com a referência completa;
+published70_calibration_protocol.md define a calibração inicial, que
+também não substitui a avaliação final com dez sementes.
 
 Se o filtro de treino passar, a próxima etapa é desenhar confirmação
 prospectiva mais ampla, com parâmetros congelados e controles pertinentes.
