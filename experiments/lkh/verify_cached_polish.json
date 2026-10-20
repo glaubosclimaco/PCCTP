@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic clocks, tours and subprocess stubs; zero optimizer calls or benchmark inputs.",
+  "checks": [
+    "cold cache construction charged; exhausted allowance blocks launch",
+    "cache reused with same matrix and changed supports",
+    "timely improving tour accepted with original location IDs",
+    "different matrix object rejected",
+    "late output preserves original feasible route",
+    "timeout output preserves original feasible route",
+    "nonzero output preserves original feasible route",
+    "missing output preserves original feasible route",
+    "unchanged output preserves original feasible route",
+    "malformed tour rejected",
+    "external start-time debit retained",
+    "TSP, initial-tour and parameter files match the actual original writer"
+  ],
+  "source_sha256": {
+    "experiments/lkh/verify_cached_polish.py": "68f5c3f3155e5519a887c128547b025017efa29b51b2ad099536ef09ab0ec638",
+    "experiments/lkh/cached_polish.py": "1898f10848655b9ff328ead1b5af332a2f90d3db886772786ed294cc5dc0a23f",
+    "experiments/lkh/matrix_text_cache.py": "447760dc619d87badc25227e3838c928b396f806e6c2a2c9895ec07530b7cc2d",
+    "experiments/lkh/screen.py": "3e79e64022ea442dac0320c3b63df7dfcc02d6d6b9d02c222bafedbdc3d19474",
+    "experiments/ml_lns/pilot.py": "e479793277fab13c6407de0878cc56c25410dc72dc6b2f97ff8b3d6aee30b922"
+  }
+}

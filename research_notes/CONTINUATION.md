@@ -1,5 +1,34 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 12h06 — adaptadorcache isolado/deadline verificado; coleta42/81
+
+28075únicootimizador;3504aguarda81+auditsantescalibração70. Observer42/81,
+344rotas/1841eventosPASS,4geometriascompletas. EfeitosparciaisH10 1,191838%
+(3/1),H60 1,128937%(4/0),semgatefinal. Faltafinalizar5geometrias. Não duplicar.
+
+Novo cached_polish.py é adaptadorcompleto NÃOUSADO,umaCachedPolisherporfase:
+cacheinicializadolazydepoisdebegan,logo setupcobradooprimeiraallowance;
+remainingdebitatodapreparaçãoanteslaunch,tourcusto/suporte/IDsvalidados,
+saídatardia/timeout/nonzero/ausenteconservaincumbente. Reusoparaoutrosuporte
+mesmamatriz;outroobjetomatrizrejeitado. ContratoEXIGEmatrizimutável:teste
+identidadenãodetectamutaçãoinplace;talestadoteriaquerecriaroobjeto.
+Nenhumimportnovoemcoletorativo/paired70,nenhumworker/configuraçãoalterado.
+
+verify_cached_polish.py usaapenasdados/relógios/subprocessSTUBs,sintéticos:
+12checksPASSincluindocachecold.3s>.2bloqueialaunch,setupcharged,warmreuso,
+rotaválidamelhora,suportetrocado,matriztrocadarejeitada,late/timeout/nonzero/
+missing/unchangedfallback,malformedrejeitado,externalstartdebit. Comparou
+TSP/initialtour/runpar byteatextocomoescitorpolishREAL,cópiadasconfigurações
+preservada. NenhumLKH/MIP/chamadaotimizadorreal/instânciabenchmarklidanofixture.
+Primeiraassertivafixtureajustadatolerância1e-10parafloat100.3-100;nenhuma
+falhareal/protocolobenchmarkmascarada. Certificatecomhashesfontesatual.
+
+Conferidos todoshashesfontes/dependências/binários+awakeRunner congelados
+noprotocol300 contraarquivosatuais:inalterados. PDF17p,novehashespúblicosTRAIN,
+Utils.h/CTP/12testeintactos. Nãoafirmarbenefíciocompletoouqualidadedocache.
+Antesdeusarfuturoadaptador,estudoisoladocomsetupcobrado efontescongeladas;
+nãosubstituiraescondidascandidata70prevista. Prioridadecontinua81+calibração70.
+
 ## Retomada 20/10 11h56 — protótipo de serialização medido; coleta40/81
 
 28075únicootimizadorativo;3504aguarda81+auditsantescalibração70. Observer40/81,
