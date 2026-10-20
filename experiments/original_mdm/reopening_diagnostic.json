@@ -1,0 +1,231 @@
+{
+  "rule": "Last mining call, seed 42. Release exactly 2 edges of the last mined pattern. Priority is edge cost over the median positive visit cost, plus the average redundancy of its endpoints. An optional vertex is redundant when removing it from the pattern union does not reduce covered demands. Ties prefer higher cost, then the smaller index pair. Random uses SHA-256 of instance, mining index, 2 and 20261018. A geometry counts only when the unrestricted model and both reopenings are proven, the released sets differ, and the fully fixed pattern is strictly worse than the unrestricted optimum. Informed release continues only if it is strictly better than random on more such geometries than the reverse. Fewer than three development geometries with a gap makes this sample inconclusive and sends the unchanged rule to training geometries.",
+  "role": "development",
+  "release_count": 2,
+  "code_sha256": "cdb81f6ac8498bdd8a27193572a04473106be7a5f91baae50c2c278f559036e9",
+  "geometries": 9,
+  "countable": 3,
+  "informed_better": 1,
+  "random_better": 0,
+  "tied": 2,
+  "continues": true,
+  "inconclusive": false,
+  "rows": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "status": "compared",
+      "mining_index": 2,
+      "pattern_size": 23,
+      "support": 2,
+      "room": true,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 2676.0,
+        "unrestricted": 2650.0,
+        "informed": 2676.0,
+        "random": 2676.0,
+        "mdm": 2650
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "status": "compared",
+      "mining_index": 1,
+      "pattern_size": 25,
+      "support": 2,
+      "room": true,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 5263.0,
+        "unrestricted": 5186.0,
+        "informed": 5263.0,
+        "random": 5263.0,
+        "mdm": 5186
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "status": "saturated",
+      "mining_index": 2,
+      "pattern_size": 19,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 20466.0,
+        "unrestricted": 20466.0,
+        "informed": 20466.0,
+        "random": 20466.0,
+        "mdm": 20466
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "status": "unavailable",
+      "mining_index": 2,
+      "pattern_size": 23,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 275.0,
+        "unrestricted": null,
+        "informed": 275.0,
+        "random": 275.0,
+        "mdm": 273
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": false,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "status": "saturated",
+      "mining_index": 0,
+      "pattern_size": 24,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 332.0,
+        "unrestricted": 332.0,
+        "informed": 332.0,
+        "random": 332.0,
+        "mdm": 332
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "geometry": "g_gr48",
+      "status": "saturated",
+      "mining_index": 1,
+      "pattern_size": 21,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 3571.0,
+        "unrestricted": 3571.0,
+        "informed": 3571.0,
+        "random": 3571.0,
+        "mdm": 3571
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "geometry": "g_hk48",
+      "status": "compared",
+      "mining_index": 1,
+      "pattern_size": 21,
+      "support": 2,
+      "room": true,
+      "same_release": false,
+      "informed_vs_random": "left",
+      "costs": {
+        "fixed": 7605.0,
+        "unrestricted": 7593.0,
+        "informed": 7593.0,
+        "random": 7605.0,
+        "mdm": 7593
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_pr76_VT14_T16_W46_25",
+      "geometry": "g_pr76",
+      "status": "unavailable",
+      "mining_index": 5,
+      "pattern_size": 17,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 66012.0,
+        "unrestricted": null,
+        "informed": 66012.0,
+        "random": 66012.0,
+        "mdm": 66007
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": false,
+        "informed": true,
+        "random": true
+      }
+    },
+    {
+      "instance": "g_st70_VT14_T14_W42_25",
+      "geometry": "g_st70",
+      "status": "saturated",
+      "mining_index": 0,
+      "pattern_size": 19,
+      "support": 2,
+      "room": false,
+      "same_release": false,
+      "informed_vs_random": "tie",
+      "costs": {
+        "fixed": 419.0,
+        "unrestricted": 419.0,
+        "informed": 419.0,
+        "random": 419.0,
+        "mdm": 419
+      },
+      "proven": {
+        "fixed": true,
+        "unrestricted": true,
+        "informed": true,
+        "random": true
+      }
+    }
+  ]
+}

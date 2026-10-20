@@ -1,0 +1,807 @@
+{
+  "status": "PARTIAL",
+  "runs": 43,
+  "modes": {
+    "hybrid10": {
+      "runs": 15,
+      "runs_with_observed_call": 0,
+      "runs_with_proven_timely_call": 0,
+      "runs_with_final_export": 15,
+      "runs_with_unknown_upper_bound": 0,
+      "call_return_count_mismatches": 0
+    },
+    "hybrid60": {
+      "runs": 14,
+      "runs_with_observed_call": 0,
+      "runs_with_proven_timely_call": 0,
+      "runs_with_final_export": 14,
+      "runs_with_unknown_upper_bound": 0,
+      "call_return_count_mismatches": 0
+    },
+    "mdm": {
+      "runs": 14,
+      "runs_with_observed_call": 1,
+      "runs_with_proven_timely_call": 1,
+      "runs_with_final_export": 14,
+      "runs_with_unknown_upper_bound": 0,
+      "call_return_count_mismatches": 0
+    }
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed70.hybrid10.native.raw": "6982bee7c2305cddc9ade724c6f9378a40333595673a7d1af96e1eb42f91a79d",
+        "g_a280_VT56_T168_W56_50.seed70.hybrid10.native.raw.checkpoint": "cb4e063bc893b0a5556b3fa30f296312db9fdcb46c69afca6d35c22be89ede78"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 3,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed70.hybrid60.native.raw": "4cb760a3cfb5ae3d122f3695d1d2c1c040dfc0783262a4ae83314da2502a7010",
+        "g_a280_VT56_T168_W56_50.seed70.hybrid60.native.raw.checkpoint": "accbf62028f52787bcc65eeb0e0262a33e55f3ac22851a231c53ba7419989f21"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 10,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed70.mdm.native.raw": "c940a360edbfc2d51bfa3ae38d30ba0d385200492b865ff1eb768448ecbc5208",
+        "g_a280_VT56_T168_W56_50.seed70.mdm.native.raw.checkpoint": "2d9c71dfd47e94e13fd6e6a2b78be80a079b2b367cf5537b8a6f54ae693c1db3"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed71.hybrid10.native.raw": "5ddaf4fce20b7b88a04f78c57cefd24e05952eeb6a58c80b55dcdd7c2ac0fd7c",
+        "g_a280_VT56_T168_W56_50.seed71.hybrid10.native.raw.checkpoint": "34b29b53b6c1499ca5db3c39ff526557f3124d8d16a17edfe4fcf0cc7cfb8aa1"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 4,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed71.hybrid60.native.raw": "ab074491c4e2c9b60940345b141f473353abcb5fd2751fdd74ff0c7732887a64",
+        "g_a280_VT56_T168_W56_50.seed71.hybrid60.native.raw.checkpoint": "ecccc55a027e30d47dc60272643b2178bb2332b08bee74f684f1ded55638de2e"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 11,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed71.mdm.native.raw": "6def01d9a88cd25d3fc2ddd58bca778346a64ca2bfd0aebd0af31d82956a5d98",
+        "g_a280_VT56_T168_W56_50.seed71.mdm.native.raw.checkpoint": "4f7bd5d8bc9de8cabae61c4ebcb1b57b13e650be6b19bc01f6dae0ed0ca33832"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed72.hybrid10.native.raw": "49711a5806046d8fbdddb94824b898a4366fa7ea303174410e4d1463ce9656ae",
+        "g_a280_VT56_T168_W56_50.seed72.hybrid10.native.raw.checkpoint": "1531eb2e26624315c7e332c04d6e69158fcd34c68dca382a698779b09e1030f2"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed72.hybrid60.native.raw": "7e8abba819950ebb5f75fe16ef77f4751211c65e5382b3f7333e874d4a71ac3a",
+        "g_a280_VT56_T168_W56_50.seed72.hybrid60.native.raw.checkpoint": "40d6d153e732ccd311408458500ca1cb65def732baceae0f085345a352f82cbf"
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 5,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_a280_VT56_T168_W56_50.seed72.mdm.native.raw": "f7726f363f78539cfef260fb04fe3d8455454f11d585975d62b54e4a03da1d80",
+        "g_a280_VT56_T168_W56_50.seed72.mdm.native.raw.checkpoint": "cf5a766182e199604b858a9aea8bdd2bcdd143ef3e1b9c860ae5eabb459884a6"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed70.hybrid10.native.raw": "151011ba45528d05ded2d66fc6f2dcdc12d3f2ab7c0c34c722b6b45947e92945",
+        "g_gil262_VT51_T158_W53_75.seed70.hybrid10.native.raw.checkpoint": "8067fe8fcd43e66ab633530c6b4456a48ac05172a91afd0a9f29fad49c29fae9"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed70.hybrid60.native.raw": "7ebef58436a30d58c8496d0f19fa6820e19949a58bc6f29c5ca7e78f54a75f31",
+        "g_gil262_VT51_T158_W53_75.seed70.hybrid60.native.raw.checkpoint": "97d79a600d2860a1bf54c1a4dffd38a9ed8d40497b410dbaea68b24c29c717c3"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 10,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed70.mdm.native.raw": "167200c45414f8772e9b9a6cbfe77f9d1f01b0b64988a048b3c1f78dc9323d8f",
+        "g_gil262_VT51_T158_W53_75.seed70.mdm.native.raw.checkpoint": "d1f77e85d9a07f7f09e0ce2671905466312ddcedf09d8ac8870115b8540174b6"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed71.hybrid10.native.raw": "122c181b58e66373394550502650abf93038eb91830618191627033c236c816f",
+        "g_gil262_VT51_T158_W53_75.seed71.hybrid10.native.raw.checkpoint": "c361baab479ce5c941daf855b0c8468b9c51ffc4acd18db9a93c69fe80d8cfa1"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 4,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed71.hybrid60.native.raw": "8acf272f8e859810e50ec0345c0b74f48c01027e612ff345dbd5b485f4b5abac",
+        "g_gil262_VT51_T158_W53_75.seed71.hybrid60.native.raw.checkpoint": "089f11b8cb11adff38dcf8c685cbfc42b1b38adef9f598ac07849461d21f1e89"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 12,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed71.mdm.native.raw": "10505e5d3e32740fc515b420a71d3153e819ed22237422438f87052720326e62",
+        "g_gil262_VT51_T158_W53_75.seed71.mdm.native.raw.checkpoint": "c91de61c7ff4c99191ab115ed41445a7ed2b6eb5726d6e2f6a3bbbc6e9113fb3"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed72.hybrid10.native.raw": "280fdb2207168194e45bfe760ce5194441d625a0eb6a1bf1fa14545e62b83f04",
+        "g_gil262_VT51_T158_W53_75.seed72.hybrid10.native.raw.checkpoint": "d9dac3d2c50a9742fc8db88ceaa8c65b66a2b3e08ea602ffc37003159ff5d876"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed72.hybrid60.native.raw": "9ad7b745fcb8c29d4294335c4d9b63150259aa04c49a490ea468934e689d547a",
+        "g_gil262_VT51_T158_W53_75.seed72.hybrid60.native.raw.checkpoint": "75c77a430f68384f7c35ecfed65d338bc2661f41f472c06925418f618649891f"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 12,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gil262_VT51_T158_W53_75.seed72.mdm.native.raw": "5fb1766b12034df64a574b11a022a2951ba5816a82f256b185d8a014265e9382",
+        "g_gil262_VT51_T158_W53_75.seed72.mdm.native.raw.checkpoint": "e91d00ed4ae60157ba3c7357820e6a9e65169a6d5dadeecfaa9ba095d37adbfe"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed70.hybrid10.native.raw": "bd7963cf28758999bea5fc6657b03220999c709ce776bf113fdb1e1ccf1db1b9",
+        "g_gr229_VT45_T138_W46_50.seed70.hybrid10.native.raw.checkpoint": "fca4f78a7843ab151b16a4d01f43299904a8138f416971d6b6ce471f939b4fba"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 3,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed70.hybrid60.native.raw": "ed26ae8f50238323e6da7af399773d04f3aef4095cb77996625e1a5a58b99fa7",
+        "g_gr229_VT45_T138_W46_50.seed70.hybrid60.native.raw.checkpoint": "33efa36a0f012ead31f8dfec45cf2fdab8124104140a56a6882f498e89de7689"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 15,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed70.mdm.native.raw": "0226c40718d602964c3dc46059e5677684dce02a62af1369f7f0b8002bdba7c6",
+        "g_gr229_VT45_T138_W46_50.seed70.mdm.native.raw.checkpoint": "b0dab52ebd73821fc5c7ae56dea4c72665bf79d68a1182dba8bca2328550e64c"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed71.hybrid10.native.raw": "8ed69f0b336264016720f456b8798d7c35805bcb729ba9cb3256739a75b1effc",
+        "g_gr229_VT45_T138_W46_50.seed71.hybrid10.native.raw.checkpoint": "fc9418f25c6c1a76ec5963e20e014c19c0fd6e5eab7a829c772628c7548fa4a2"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 3,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed71.hybrid60.native.raw": "093c2b5a52c21de5fb0882cfe31e3bc48021051a1cc535a258a81cf346f851c8",
+        "g_gr229_VT45_T138_W46_50.seed71.hybrid60.native.raw.checkpoint": "063dcfd0c165d9f3048031032504a5173308ac40839ec68ad4c389b5d1d48e2f"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 11,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed71.mdm.native.raw": "e6a40530310c98120042a624145e1a863da8223db30f06eedddbe1f993b0f5b8",
+        "g_gr229_VT45_T138_W46_50.seed71.mdm.native.raw.checkpoint": "1952b6b791515029ffc2d4535b76088f36de5cb47e510685fcee0c7f3b4feb23"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed72.hybrid10.native.raw": "addd1b82603de3d4762769b89326bacc7f1235e9bd19d38aa555864e3bedf8b4",
+        "g_gr229_VT45_T138_W46_50.seed72.hybrid10.native.raw.checkpoint": "c477d57f92bebae59d26aea46025cac6bdab5d37df3589fcf46b2363d0cb63ee"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 4,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed72.hybrid60.native.raw": "68a87fe0079248ae38c20dcd709e50490a646422d1434617365828cfd0875655",
+        "g_gr229_VT45_T138_W46_50.seed72.hybrid60.native.raw.checkpoint": "0e4878a5285de3c66f7769be0fdb3360c712d09c4a8fae3a1c817ad3a4bc0138"
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 17,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_gr229_VT45_T138_W46_50.seed72.mdm.native.raw": "91b775945b863450271dc6ab3995b666ebae1aa21c47363f2182f5000b653b16",
+        "g_gr229_VT45_T138_W46_50.seed72.mdm.native.raw.checkpoint": "2fa653b74ca91be922e1973b68a15a11b9988c14a1b344afdf1e44aaffd078b1"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed70.hybrid10.native.raw": "55e06d66eeb5d90b8b83327f1555a91b8d4c4b9f0994c57e4f330ea6e762e7fe",
+        "g_kroA200_VT40_T120_W40_25.seed70.hybrid10.native.raw.checkpoint": "9b39b4c3eb63727659d14850191610750193bc304e361d4adda1123adbe6473f"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 11,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed70.hybrid60.native.raw": "e36cc64c9eebbc429156bb8f218c9e7c848df24b469a9872344739a828879186",
+        "g_kroA200_VT40_T120_W40_25.seed70.hybrid60.native.raw.checkpoint": "0aaaf187ef0be3038c0e4d0211578ebfe8d73b4bd46ad211618b1612b07541bf"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 4,
+      "observed_iterations": 78,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 4,
+      "timely_mining_calls_upper_bound": 4,
+      "logged_mining_returns": 4,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed70.mdm.native.raw": "5f2c4afeb3b16718cbae3b698c0f5cfc28dc28515ac1f7b5679bac142874bd51",
+        "g_kroA200_VT40_T120_W40_25.seed70.mdm.native.raw.checkpoint": "43e2882687dae00c1375f1ca743c9ab60a6c53aaa4e41bf553d3c5f063200cb9"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed71.hybrid10.native.raw": "f85075011c53916ee9904635fe0ce1bfb20d3a116696ac0fca1435292afb601d",
+        "g_kroA200_VT40_T120_W40_25.seed71.hybrid10.native.raw.checkpoint": "6e0e6f3dbc55c6b62420a1951e55c1779e5e7cc3a66b9dbdb7a69133ab3389a0"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 9,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed71.hybrid60.native.raw": "d58af3c8da10a0030341374a1629b23bccb5ca2f0a282f65da8160fc504148be",
+        "g_kroA200_VT40_T120_W40_25.seed71.hybrid60.native.raw.checkpoint": "d01ff5dff431698344a0ee11f981e4a28c2fc1dfc021bfac792fbd97a9468738"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed71.mdm.native.raw": "8be71d51cb42a971d1396677a9c6ae2377008da368a3d249cce865a1607827a4",
+        "g_kroA200_VT40_T120_W40_25.seed71.mdm.native.raw.checkpoint": "8a9af8d045df5992a1392fea2a59fb92f0de2a238b3db93d65587e2f20d6b3ce"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed72.hybrid10.native.raw": "ec40206627f5bf69cc1ea2c5f610ccecb9a2205e754980ff6d9e32473e812b16",
+        "g_kroA200_VT40_T120_W40_25.seed72.hybrid10.native.raw.checkpoint": "fc794cd9b1119d1a1147c1a1209057083c7f4d92e8cb7f947d60dacd6e0cbac5"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 3,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed72.hybrid60.native.raw": "58a438dfa6cc24d6ee721af680cbd9be42df616e3b4acedb329f5f6e24833bc4",
+        "g_kroA200_VT40_T120_W40_25.seed72.hybrid60.native.raw.checkpoint": "7afc202ccf259aa66ef44dcccffce53d92a4f60ff61ddef5b91f26e3f0c28a7e"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 7,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_kroA200_VT40_T120_W40_25.seed72.mdm.native.raw": "60f5005c007aff3dfb394113a9ba2e847d6d00c46d04ad0233a1514bd79b0469",
+        "g_kroA200_VT40_T120_W40_25.seed72.mdm.native.raw.checkpoint": "46dbf3eb7c2e9ec5069b629f0037b02a1f8ade8a59e71514d2e721a38816db79"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed70.hybrid10.native.raw": "85145eda226b6b6d8893070ea8b076f81a547593b018dcefaa78952f7fe17c23",
+        "g_pr226_VT44_T136_W46_50.seed70.hybrid10.native.raw.checkpoint": "d589e1ccd07908c249a55b2e893b41839dbbcd66df0e56aa44d9211f477c5878"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed70.hybrid60.native.raw": "7723d53059832e83b1b77efa2cb6ac68744f4197e39907309f6b1726813563b3",
+        "g_pr226_VT44_T136_W46_50.seed70.hybrid60.native.raw.checkpoint": "566fd751500644638eb1d47feb23573f05de070cf2949dae6ef5b196b19ec859"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 4,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed70.mdm.native.raw": "73094b893f03d7b98b5f65ac29cded5887ba2d9f2ac8ef91e61ac15ccf1444a5",
+        "g_pr226_VT44_T136_W46_50.seed70.mdm.native.raw.checkpoint": "c574ab4f04dcaa85393e38f35ad07e87fad2e90029c05cdea58642b49539233f"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed71.hybrid10.native.raw": "d83670c7bd36f687b3d1b98eb07e3d5c131f8a492fa2d03e2236e7a9ddeee609",
+        "g_pr226_VT44_T136_W46_50.seed71.hybrid10.native.raw.checkpoint": "6f66afcfb0e4261bb2d2ce654c4ba77c5a1d32a8d1379480893bf5305ffda6c6"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "native_budget_seconds": 60.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed71.hybrid60.native.raw": "bb25f6d34463be76d670b31fdd98211466d824b1758889b1a1649f559c8fb1b3",
+        "g_pr226_VT44_T136_W46_50.seed71.hybrid60.native.raw.checkpoint": "d264ad4557451d4f1b83d3de869c65e1fedb4b78371354fd4bd2da38573e8009"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "mdm",
+      "native_budget_seconds": 300.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 2,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed71.mdm.native.raw": "1f4c455144dd8de2d2af5ec56e1208fd7c938e6cb5c5a038fd39da611126ab5f",
+        "g_pr226_VT44_T136_W46_50.seed71.mdm.native.raw.checkpoint": "324857467d77955e9fac7cdf6c5ddca3821a51293d142d1a183d37e85ab9b99b"
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "native_budget_seconds": 10.0,
+      "observed_mining_calls": 0,
+      "observed_iterations": 1,
+      "final_export_present": true,
+      "timely_mining_calls_lower_bound": 0,
+      "timely_mining_calls_upper_bound": 0,
+      "logged_mining_returns": 0,
+      "completed_call_return_count_agrees": true,
+      "payload_read_errors": [],
+      "export_hashes": {
+        "g_pr226_VT44_T136_W46_50.seed72.hybrid10.native.raw": "cb63d38ec491b8ffebd221d8501d37c07838e7e1e838bcf081d857ee9be1521c",
+        "g_pr226_VT44_T136_W46_50.seed72.hybrid10.native.raw.checkpoint": "dea2e245b046db70e68d46bac9e806de58cca4be0e72270fd4f7d46b665fb2ee"
+      }
+    }
+  ],
+  "scope": "passive cumulative native exports only; un-timestamped calls are not automatically timely; exposure is not mining effectiveness"
+}

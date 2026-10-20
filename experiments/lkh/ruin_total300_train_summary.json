@@ -1,0 +1,75 @@
+{
+  "status": "PARTIAL",
+  "runs": 43,
+  "completed_geometries": 4,
+  "comparisons": {
+    "hybrid10": {
+      "mean_gain_percent": 1.165714323655618,
+      "wins": 4,
+      "losses": 0,
+      "gate_passed": false
+    },
+    "hybrid60": {
+      "mean_gain_percent": 1.2091601810905959,
+      "wins": 4,
+      "losses": 0,
+      "gate_passed": false
+    }
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "means": {
+        "mdm": 2029.3333333333333,
+        "hybrid10": 1998.0,
+        "hybrid60": 2001.3333333333333
+      },
+      "gains": {
+        "hybrid10": 1.5440210249671449,
+        "hybrid60": 1.3797634691195795
+      },
+      "hybrid60_vs_10_percent": -0.1668335001668297
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "means": {
+        "mdm": 2016.3333333333333,
+        "hybrid10": 1982.6666666666667,
+        "hybrid60": 1983.6666666666667
+      },
+      "gains": {
+        "hybrid10": 1.6696974706562995,
+        "hybrid60": 1.6201024962803694
+      },
+      "hybrid60_vs_10_percent": -0.05043712172158708
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "means": {
+        "mdm": 98218.0,
+        "hybrid10": 97060.0,
+        "hybrid60": 96722.33333333333
+      },
+      "gains": {
+        "hybrid10": 1.1790099574416095,
+        "hybrid60": 1.5228030164192627
+      },
+      "hybrid60_vs_10_percent": 0.3478947729926556
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "means": {
+        "mdm": 23569.0,
+        "hybrid10": 23505.333333333332,
+        "hybrid60": 23495.0
+      },
+      "gains": {
+        "hybrid10": 0.2701288415574181,
+        "hybrid60": 0.3139717425431711
+      },
+      "hybrid60_vs_10_percent": 0.04396165409268303
+    }
+  ],
+  "feasibility_failures": [],
+  "scope": "exploratory TRAIN at300seconds; both prespecified arms retained; no test or inferential conclusion"
+}

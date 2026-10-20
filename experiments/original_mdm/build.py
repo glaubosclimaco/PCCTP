@@ -14,6 +14,7 @@ parser.add_argument('--profile-moves',action='store_true')
 parser.add_argument('--scheduled',action='store_true')
 parser.add_argument('--timed',action='store_true')
 parser.add_argument('--bound-elite-size',action='store_true')
+parser.add_argument('--export-elite',action='store_true')
 parser.add_argument('--model-file',type=Path)
 args=parser.parse_args()
 if args.profile_moves and not args.initialize_decoder_index:
@@ -24,6 +25,12 @@ BUILD=Path(__file__).with_name('build_timed' if args.timed else 'build_scheduled
 if args.bound_elite_size:
     if not args.initialize_decoder_index:parser.error('Elite-count correction requires corrected decoder')
     BUILD=BUILD.with_name(BUILD.name+'_elite_bounded')
+if args.export_elite:
+    if args.profile_moves or args.scheduled or args.timed:
+        parser.error('Elite export stays outside profiling and scheduling builds')
+    if not args.initialize_decoder_index or not args.bound_elite_size:
+        parser.error('Elite export requires the corrected decoder and bounded elite count')
+    BUILD=Path(__file__).with_name('build_elite_export')
 BUILD.mkdir(exist_ok=True)
 manifest={'origin':str(SOURCE),'sha256':{},'changes':[]}
 for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loader.cpp',
@@ -57,7 +64,11 @@ for name in ['Utils.cpp','genius.cpp','grasp.cpp','instances.cpp','instancia_loa
         anchor='qtd_de_padroes = mining(conjunto_elite, elite_size, qtd_n, padroes, sup_min, max_padroes);'
         assert text.count(anchor)==1
         corrected=anchor.replace('conjunto_elite, elite_size,','conjunto_elite, elite_element,') if args.bound_elite_size else anchor
-        text=text.replace(anchor,'research_mining();\n\t\t\t'+corrected)
+        if args.export_elite:
+            text=text.replace(anchor,'research_elite(elite_element, qtd_n, conjunto_elite->v, conjunto_elite->coluna);\n\t\t\tresearch_mining();\n\t\t\t'+corrected+'\n\t\t\tresearch_capture_patterns();')
+            manifest['changes'].append('OBSERVATIONAL elite export: write occupied routes and the miner output at each mining call; construction and search unchanged')
+        else:
+            text=text.replace(anchor,'research_mining();\n\t\t\t'+corrected)
         if args.bound_elite_size:manifest['changes'].append('EXPLICIT BUG FIX: pass occupied elite count to mining/encode, not allocated capacity; never read uninitialized elite rows')
         manifest['changes'].append('grasp: observational checkpoint and mining-call hooks; algorithm unchanged')
         if args.profile_moves or args.scheduled:
@@ -161,6 +172,7 @@ flags=[compiler,'-std=gnu++11','-O2','-fpermissive','-Wno-narrowing']
 if args.initialize_decoder_index: flags.append('-DPCCTP_DECODER_INITIALIZED')
 if args.timed:flags.append('-DPCCTP_TIMED')
 if args.bound_elite_size:flags.append('-DPCCTP_ELITE_BOUNDED')
+if args.export_elite:flags.append('-DPCCTP_EXPORT_ELITE')
 log=[]
 def run(command):
     process=subprocess.run(command,capture_output=True,text=True)

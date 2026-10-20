@@ -1,0 +1,73 @@
+\relax 
+\citation{climaco2021reactive}
+\citation{climaco2023approaches}
+\citation{climaco2026mdm}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\citation{climaco2021reactive}
+\citation{climaco2023approaches}
+\citation{climaco2026mdm}
+\citation{ropke2006alns}
+\citation{helsgaun2000}
+\citation{fischetti2003local}
+\citation{danna2005rins}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}{}\protected@file@percent }
+\citation{climaco2026mdm}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Problem definition and mathematical formulation}{3}{}\protected@file@percent }
+\newlabel{eq:pcctp-objective}{{1}{4}{}{equation.1}{}}
+\newlabel{eq:pcctp-degree}{{2}{4}{}{equation.2}{}}
+\newlabel{eq:pcctp-mandatory}{{3}{4}{}{equation.3}{}}
+\newlabel{eq:pcctp-cover}{{4}{4}{}{equation.4}{}}
+\newlabel{eq:pcctp-prize}{{5}{4}{}{equation.5}{}}
+\newlabel{eq:pcctp-connectivity}{{6}{4}{}{equation.6}{}}
+\newlabel{eq:pcctp-size}{{7}{4}{}{equation.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Structured neighborhoods and conditional feasibility}{4}{}\protected@file@percent }
+\newlabel{eq:repair-fixed-edges}{{10}{4}{}{equation.10}{}}
+\newlabel{eq:repair-fixed-visits}{{11}{4}{}{equation.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Contraction of retained paths}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Hybrid search with coverage and prize repair}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Search flow under one charged outer time budget. The solid path shows successful candidate generation. Search also stops if no optional location can be removed. An infeasible or interrupted repair skips ordering and preserves the stored feasible best. Only improvements observed by the deadline qualify, even if cleanup returns later. The dashed side box identifies the insertion-MIP component comparison; it is not an additional stage in the tested greedy-repair search.}}{6}{}\protected@file@percent }
+\newlabel{fig:hybrid-flow}{{1}{6}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Destruction and feasibility repair}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Illustrative destruction and repair, not a benchmark outcome. Squares are mandatory locations, circles are optional locations, and the diamond is a demand. Filled visit nodes belong to the cycle; solid lines are routing edges and dashed links show active coverage. Let $p_a=p_b=p_c=1$, $p_u=2$, $p_v=3$, $P=5$, and $N_w=\{u,v\}$. Removing $u$ preserves three mandatory visits but violates both requirements. One feasible repair inserts $v$, restoring coverage and the prize quota. The drawing does not assert that every randomized repair selects $v$ or that an improvement is guaranteed.}}{7}{}\protected@file@percent }
+\newlabel{fig:repair-example}{{2}{7}{}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Ordering and acceptance}{7}{}\protected@file@percent }
+\citation{climaco2021data}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Charged initialization and control}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Deadline recording and component attribution}{8}{}\protected@file@percent }
+\citation{climaco2026mdm}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Experimental protocol}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Benchmark scope and experimental units}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Baseline and computing environment}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Completed experiments and longer-horizon design}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Outcome aggregation and failure handling}{10}{}\protected@file@percent }
+\newlabel{eq:geometry-effect}{{13}{10}{}{equation.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Deadlines, suspension and independent audits}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Computational results}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Completed exploratory comparisons}{12}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Completed exploratory comparisons. Positive reduction favors the hybrid in the first three rows and nearest-gap joint insertion in the last. W/L/T counts geometry means. Conditional rows exclude generation of their common starting states and are not directly comparable with charged end-to-end rows.}}{12}{}\protected@file@percent }
+\newlabel{tab:exploratory-complete}{{1}{12}{}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Completed exploratory training comparisons on nine geometries with three paired seeds. Bars show the relative reduction of seed-mean costs; markers show individual seed-pair reductions, not confidence intervals. Panel A compares fresh executions with MDM under a total 60-second budget, including initialization. Panel B uses a conditional fixed-support LKH replay from saved initialization states and excludes their generation cost. Positive values favor the hybrid. Neither panel provides independent test confirmation.}}{13}{}\protected@file@percent }
+\newlabel{fig:training-effects}{{3}{13}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Statistical analysis and ablations}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Geometry-level sensitivity of completed comparisons}{14}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Descriptive sensitivity of completed 60-second comparisons. The leave-one-geometry-out (LOO) range recomputes the equally weighted mean after each possible single omission. It is not a confidence interval or an alternative primary endpoint. All original geometries remain in the reported primary means.}}{14}{}\protected@file@percent }
+\newlabel{tab:geometry-sensitivity}{{2}{14}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Passive ordering-call diagnostics}{15}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Passive counters in completed 60-second hybrid runs. Calls are invocations of the ordering wrapper. Exit 0 records normal process exit; timeouts record a reported subprocess timeout; other combines nonzero or absent exit codes. These categories partition wrapper invocations, rather than validated improvements or feasible final solutions.}}{15}{}\protected@file@percent }
+\newlabel{tab:ordering-counters}{{3}{15}{}{table.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion and limitations}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Visit changes, coverage and prize restoration}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Restricted integer repair and computational allocation}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Limits of the current performance evidence}{16}{}\protected@file@percent }
+\bibstyle{plain}
+\bibdata{references}
+\bibcite{climaco2021data}{1}
+\bibcite{climaco2021reactive}{2}
+\bibcite{climaco2023approaches}{3}
+\bibcite{climaco2026mdm}{4}
+\bibcite{danna2005rins}{5}
+\bibcite{fischetti2003local}{6}
+\bibcite{helsgaun2000}{7}
+\bibcite{ropke2006alns}{8}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusions}{17}{}\protected@file@percent }
+\gdef \@abspage@last{18}

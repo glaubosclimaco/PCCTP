@@ -12,14 +12,16 @@ sys.path.insert(0,str(ROOT))
 from experiments.ml_lns.pilot import read_instance, validate
 
 
-def run(instance,seed,output,support=2,stability=5,timeout=180,initialize_decoder_index=False,profile_moves=False,operator_policy=None,bound_elite_size=False):
+def run(instance,seed,output,support=2,stability=5,timeout=180,initialize_decoder_index=False,profile_moves=False,operator_policy=None,bound_elite_size=False,export_elite=False):
     instance=Path(instance).resolve(); output=Path(output).resolve()
     if profile_moves and not initialize_decoder_index:raise ValueError('Profiling requires explicit decoder correction')
     if operator_policy is not None and (operator_policy not in ['original','static','size','generic','joint','adaptive'] or profile_moves or not initialize_decoder_index):raise ValueError('Invalid scheduled run')
-    build=Path(__file__).with_name('build_scheduled' if operator_policy else 'build_move_profile' if profile_moves else 'build_decoder_initialized' if initialize_decoder_index else 'build').resolve()
-    if bound_elite_size:build=build.with_name(build.name+'_elite_bounded')
-    working=Path(__file__).with_name('runs')/(instance.name+f'.seed{seed}'+('.scheduled.'+operator_policy if operator_policy else '.profile' if profile_moves else '.decoder_initialized' if initialize_decoder_index else ''))
-    if bound_elite_size:working=working.with_name(working.name+'.elite_bounded')
+    if export_elite and (operator_policy or profile_moves or not initialize_decoder_index or not bound_elite_size):
+        raise ValueError('Elite export requires the corrected bounded build and no other instrumentation')
+    build=Path(__file__).with_name('build_elite_export' if export_elite else 'build_scheduled' if operator_policy else 'build_move_profile' if profile_moves else 'build_decoder_initialized' if initialize_decoder_index else 'build').resolve()
+    if bound_elite_size and not export_elite:build=build.with_name(build.name+'_elite_bounded')
+    working=Path(__file__).with_name('runs')/(instance.name+f'.seed{seed}'+('.elite_export' if export_elite else '.scheduled.'+operator_policy if operator_policy else '.profile' if profile_moves else '.decoder_initialized' if initialize_decoder_index else ''))
+    if bound_elite_size and not export_elite:working=working.with_name(working.name+'.elite_bounded')
     fp=working/'FPMax'; fp.mkdir(parents=True,exist_ok=True)
     for name in ['fim_maximal','fpmax_hnmp']:
         target=fp/name
@@ -28,6 +30,7 @@ def run(instance,seed,output,support=2,stability=5,timeout=180,initialize_decode
     log=output.with_suffix('.log')
     raw=output.with_suffix('.raw')
     raw.unlink(missing_ok=True)
+    if export_elite:Path(str(raw)+'.elites.jsonl').unlink(missing_ok=True)
     if profile_moves:Path(str(raw)+'.moves.jsonl').unlink(missing_ok=True)
     checkpoint=Path(str(raw)+'.checkpoint')
     checkpoint.unlink(missing_ok=True)
@@ -56,6 +59,7 @@ def run(instance,seed,output,support=2,stability=5,timeout=180,initialize_decode
                move_profiling=profile_moves,
                operator_policy=operator_policy,
                elite_count_bounded=bound_elite_size,
+               elite_export=export_elite,
                timed_out=timed_out,wall_timeout_seconds=timeout,
                process_wall_seconds=process_wall_seconds,
                input_sha256=__import__('hashlib').sha256(instance.read_bytes()).hexdigest())

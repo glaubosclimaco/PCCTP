@@ -1,0 +1,173 @@
+{
+  "protocol": "f312dec5a350",
+  "budget_seconds": 1.0,
+  "definition": "Average incumbent cost on [0,1], holding the first recorded incumbent from time 0. Time-to-target is the first anytime stamp at or below the original policy deadline cost. Negative time or average-cost difference favors the named method. Two hard timeouts remain in the sample with their pre-deadline incumbents. No hypothesis test.",
+  "methods": {
+    "static": {
+      "runs": 27,
+      "reached_original_deadline_cost": 27,
+      "censored_never_reached": 0,
+      "faster_than_original": 16,
+      "same_time": 0,
+      "slower_than_original": 11,
+      "mean_time_difference_when_reached": 0.009762296302209575,
+      "mean_geometry_average_cost_difference": -12.858661114203711,
+      "geometry_average_cost_difference": {
+        "g_att48": 4.527919001295231,
+        "g_berlin52": -58.316729668314416,
+        "g_brazil58": -3.668239664596816,
+        "g_eil51": 0.4744550002700028,
+        "g_eil76": 0.9522559999410495,
+        "g_gr48": -0.9121146665226357,
+        "g_hk48": -18.482819660081685,
+        "g_pr76": -40.67836137032524,
+        "g_st70": 0.3756850005011074
+      },
+      "mean_geometry_relative_average_cost_difference": -0.0008225951883120565,
+      "geometry_relative_average_cost_difference": {
+        "g_hk48": -0.0024299044743366794,
+        "g_brazil58": -0.00017923578933825936,
+        "g_berlin52": -0.011133963187692076,
+        "g_eil76": 0.0028682409636778595,
+        "g_eil51": 0.0017379304039194243,
+        "g_st70": 0.0008966229128904712,
+        "g_gr48": -0.0002554227573572209,
+        "g_pr76": -0.0006162734463060774,
+        "g_att48": 0.0017086486797340495
+      }
+    },
+    "size": {
+      "runs": 27,
+      "reached_original_deadline_cost": 27,
+      "censored_never_reached": 0,
+      "faster_than_original": 16,
+      "same_time": 0,
+      "slower_than_original": 11,
+      "mean_time_difference_when_reached": 0.02023759258359119,
+      "mean_geometry_average_cost_difference": -9.308271775640875,
+      "geometry_average_cost_difference": {
+        "g_att48": -3.775422999790559,
+        "g_berlin52": -17.104278326810647,
+        "g_brazil58": -6.563097329402808,
+        "g_eil51": -0.22863133327336982,
+        "g_eil76": 2.497515999149376,
+        "g_gr48": -0.9591060001015043,
+        "g_hk48": -18.88469966147871,
+        "g_pr76": -38.66691332878933,
+        "g_st70": -0.08981300027032073
+      },
+      "mean_geometry_relative_average_cost_difference": -0.00021019240802709014,
+      "geometry_relative_average_cost_difference": {
+        "g_hk48": -0.002482885270822696,
+        "g_brazil58": -0.0003206829536500932,
+        "g_berlin52": -0.0032799037250537872,
+        "g_eil76": 0.007522638551654747,
+        "g_eil51": -0.0008374774112577649,
+        "g_st70": -0.00021435083596735258,
+        "g_gr48": -0.0002685819098576041,
+        "g_pr76": -0.0005858001928399916,
+        "g_att48": -0.0014246879244492678
+      }
+    },
+    "generic": {
+      "runs": 27,
+      "reached_original_deadline_cost": 26,
+      "censored_never_reached": 1,
+      "faster_than_original": 19,
+      "same_time": 0,
+      "slower_than_original": 7,
+      "mean_time_difference_when_reached": -0.027995346147620767,
+      "mean_geometry_average_cost_difference": -11.592899629837593,
+      "geometry_average_cost_difference": {
+        "g_att48": -5.432154997892212,
+        "g_berlin52": -59.25112933574322,
+        "g_brazil58": 8.783659333557202,
+        "g_eil51": -0.35495999961858615,
+        "g_eil76": 3.858338333297676,
+        "g_gr48": -0.9026099996408448,
+        "g_hk48": -18.696296989743132,
+        "g_pr76": -32.09709467925131,
+        "g_st70": -0.24384833350389576
+      },
+      "mean_geometry_relative_average_cost_difference": -0.0007101590833709388,
+      "geometry_relative_average_cost_difference": {
+        "g_hk48": -0.002457986114085354,
+        "g_brazil58": 0.00042918300271460965,
+        "g_berlin52": -0.011313033950220592,
+        "g_eil76": 0.011621501003908664,
+        "g_eil51": -0.0013002197788226598,
+        "g_st70": -0.0005819769296035699,
+        "g_gr48": -0.0002527611312351848,
+        "g_pr76": -0.00048626804246900047,
+        "g_att48": -0.002049869810525363
+      }
+    },
+    "joint": {
+      "runs": 27,
+      "reached_original_deadline_cost": 25,
+      "censored_never_reached": 2,
+      "faster_than_original": 14,
+      "same_time": 0,
+      "slower_than_original": 11,
+      "mean_time_difference_when_reached": 0.010907040003221482,
+      "mean_geometry_average_cost_difference": -4.285927112817903,
+      "geometry_average_cost_difference": {
+        "g_att48": 4.085960666008759,
+        "g_berlin52": -5.04272167229404,
+        "g_brazil58": 13.725180002492076,
+        "g_eil51": -0.017993666328645002,
+        "g_eil76": 4.111511000005218,
+        "g_gr48": -0.8855833330890164,
+        "g_hk48": -17.116709988350824,
+        "g_pr76": -37.28684935699372,
+        "g_st70": -0.1461376668109248
+      },
+      "mean_geometry_relative_average_cost_difference": 0.0011298274784883242,
+      "geometry_relative_average_cost_difference": {
+        "g_hk48": -0.0022507901196156836,
+        "g_brazil58": 0.0006706332455043524,
+        "g_berlin52": -0.0009497634900279538,
+        "g_eil76": 0.01238406927712415,
+        "g_eil51": -6.591086567269225e-05,
+        "g_st70": -0.00034877724775877046,
+        "g_gr48": -0.0002479930924360169,
+        "g_pr76": -0.0005648923501597364,
+        "g_att48": 0.0015418719494372677
+      }
+    },
+    "adaptive": {
+      "runs": 27,
+      "reached_original_deadline_cost": 27,
+      "censored_never_reached": 0,
+      "faster_than_original": 18,
+      "same_time": 0,
+      "slower_than_original": 9,
+      "mean_time_difference_when_reached": -0.014745777770359484,
+      "mean_geometry_average_cost_difference": -10.071067407679813,
+      "geometry_average_cost_difference": {
+        "g_att48": -0.2139743355413278,
+        "g_berlin52": -34.6714696668981,
+        "g_brazil58": -5.53197598948221,
+        "g_eil51": -0.1913860000592346,
+        "g_eil76": 0.9603596667875536,
+        "g_gr48": -0.7860083334186735,
+        "g_hk48": -15.398503661175104,
+        "g_pr76": -34.933576016842075,
+        "g_st70": 0.12692766751085097
+      },
+      "mean_geometry_relative_average_cost_difference": -0.000803774844442513,
+      "geometry_relative_average_cost_difference": {
+        "g_hk48": -0.0020249844974748717,
+        "g_brazil58": -0.00027030079104281297,
+        "g_berlin52": -0.00660312603158051,
+        "g_eil76": 0.0028926495987576916,
+        "g_eil51": -0.0007010476192645957,
+        "g_st70": 0.00030292999405931025,
+        "g_gr48": -0.0002201087464067974,
+        "g_pr76": -0.0005292404747502852,
+        "g_att48": -8.074503227974633e-05
+      }
+    }
+  },
+  "relative_definition": "Relative average-cost difference divides the absolute incumbent-average gap by the original policy deadline cost. Negative favors the named method."
+}

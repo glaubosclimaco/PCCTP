@@ -1,0 +1,517 @@
+{
+  "rule": "Last mining call of each development geometry, seed 42. Quality comparisons use only patterns whose edge count equals the largest pattern in that call. Utility is the coverage fraction of the vertex union, plus the prize fraction capped at 1, minus the fraction of optional vertices that can be removed without losing coverage, minus the pattern cost divided by its edge count times the median positive visit cost. Each score breaks ties by the earlier file index and by nothing else. The MDM control is the last pattern in the miner file, and its cost is compared only when that pattern has the same edge count. A proven infeasible model is worse than a proven finite cost. A pair counts only when both outcomes are proven. Random uses SHA-256 of instance, mining index and 20261018.",
+  "code_sha256": "92599dcd19721e735bacbf3ee345174f1fb6dce43abf006ad59a96ed3f5ea79d",
+  "geometries": 9,
+  "compared": 5,
+  "no_mining": 0,
+  "no_pattern": 0,
+  "no_size_contrast": 4,
+  "utility_vs_marginal": {
+    "left": 1,
+    "right": 1,
+    "tie": 3,
+    "unavailable": 0,
+    "different_cardinality": 0
+  },
+  "utility_vs_support": {
+    "left": 0,
+    "right": 1,
+    "tie": 4,
+    "unavailable": 0,
+    "different_cardinality": 0
+  },
+  "utility_vs_random": {
+    "left": 0,
+    "right": 1,
+    "tie": 4,
+    "unavailable": 0,
+    "different_cardinality": 0
+  },
+  "utility_vs_mdm_first": {
+    "left": 1,
+    "right": 1,
+    "tie": 3,
+    "unavailable": 0,
+    "different_cardinality": 0
+  },
+  "utility_vs_size": {
+    "left": 0,
+    "right": 1,
+    "tie": 4,
+    "unavailable": 0,
+    "different_cardinality": 0
+  },
+  "rows": [
+    {
+      "instance": "g_att48_VT16_T16_W16_75",
+      "geometry": "g_att48",
+      "status": "compared",
+      "mining_index": 2,
+      "elite_routes": 9,
+      "patterns": 10,
+      "pool": 3,
+      "max_size": 23,
+      "utility_vs_marginal": "left",
+      "utility_vs_support": "tie",
+      "utility_vs_random": "tie",
+      "utility_vs_mdm_first": "left",
+      "utility_vs_size": "tie",
+      "same_pattern_as_marginal": false,
+      "same_pattern_as_support": true,
+      "same_pattern_as_size": true,
+      "same_pattern_as_mdm_first": false,
+      "selections": {
+        "size": {
+          "index": 7,
+          "size": 23,
+          "support": 2,
+          "marginal": 83,
+          "utility": 1.1726468397265233,
+          "outcome": "optimal",
+          "cost": 2652.0,
+          "proven": true,
+          "seconds": 0.007555042000000012
+        },
+        "marginal": {
+          "index": 9,
+          "size": 23,
+          "support": 2,
+          "marginal": 99,
+          "utility": 0.8851297484633126,
+          "outcome": "optimal",
+          "cost": 2676.0,
+          "proven": true,
+          "seconds": 0.011225250000000075
+        },
+        "support": {
+          "index": 7,
+          "size": 23,
+          "support": 2,
+          "marginal": 83,
+          "utility": 1.1726468397265233,
+          "outcome": "optimal",
+          "cost": 2652.0,
+          "proven": true,
+          "seconds": 0.007555042000000012
+        },
+        "utility": {
+          "index": 7,
+          "size": 23,
+          "support": 2,
+          "marginal": 83,
+          "utility": 1.1726468397265233,
+          "outcome": "optimal",
+          "cost": 2652.0,
+          "proven": true,
+          "seconds": 0.007555042000000012
+        },
+        "random": {
+          "index": 8,
+          "size": 23,
+          "support": 2,
+          "marginal": 98,
+          "utility": 1.1726468397265233,
+          "outcome": "optimal",
+          "cost": 2652.0,
+          "proven": true,
+          "seconds": 0.005831916999999964
+        },
+        "mdm_first": {
+          "index": 9,
+          "size": 23,
+          "support": 2,
+          "marginal": 99,
+          "utility": 0.8851297484633126,
+          "outcome": "optimal",
+          "cost": 2676.0,
+          "proven": true,
+          "seconds": 0.011225250000000075
+        }
+      }
+    },
+    {
+      "instance": "g_berlin52_VT16_T18_W18_50",
+      "geometry": "g_berlin52",
+      "status": "no_size_contrast",
+      "mining_index": 1,
+      "patterns": 10,
+      "max_size": 25,
+      "pool": 1
+    },
+    {
+      "instance": "g_brazil58_VT11_T12_W35_75",
+      "geometry": "g_brazil58",
+      "status": "compared",
+      "mining_index": 2,
+      "elite_routes": 10,
+      "patterns": 10,
+      "pool": 4,
+      "max_size": 19,
+      "utility_vs_marginal": "tie",
+      "utility_vs_support": "tie",
+      "utility_vs_random": "tie",
+      "utility_vs_mdm_first": "tie",
+      "utility_vs_size": "tie",
+      "same_pattern_as_marginal": false,
+      "same_pattern_as_support": true,
+      "same_pattern_as_size": true,
+      "same_pattern_as_mdm_first": false,
+      "selections": {
+        "size": {
+          "index": 6,
+          "size": 19,
+          "support": 2,
+          "marginal": 102,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0021947920000000565
+        },
+        "marginal": {
+          "index": 9,
+          "size": 19,
+          "support": 2,
+          "marginal": 104,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0020562499999999817
+        },
+        "support": {
+          "index": 6,
+          "size": 19,
+          "support": 2,
+          "marginal": 102,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0021947920000000565
+        },
+        "utility": {
+          "index": 6,
+          "size": 19,
+          "support": 2,
+          "marginal": 102,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0021947920000000565
+        },
+        "random": {
+          "index": 6,
+          "size": 19,
+          "support": 2,
+          "marginal": 102,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0021947920000000565
+        },
+        "mdm_first": {
+          "index": 9,
+          "size": 19,
+          "support": 2,
+          "marginal": 104,
+          "utility": 0.7619826002377608,
+          "outcome": "optimal",
+          "cost": 20466.0,
+          "proven": true,
+          "seconds": 0.0020562499999999817
+        }
+      }
+    },
+    {
+      "instance": "g_eil51_VT17_T17_W17_25",
+      "geometry": "g_eil51",
+      "status": "no_size_contrast",
+      "mining_index": 2,
+      "patterns": 10,
+      "max_size": 23,
+      "pool": 1
+    },
+    {
+      "instance": "g_eil76_VT14_T16_W46_75",
+      "geometry": "g_eil76",
+      "status": "no_size_contrast",
+      "mining_index": 0,
+      "patterns": 10,
+      "max_size": 24,
+      "pool": 1
+    },
+    {
+      "instance": "g_gr48_VT16_T16_W16_25",
+      "geometry": "g_gr48",
+      "status": "no_size_contrast",
+      "mining_index": 1,
+      "patterns": 1,
+      "max_size": 21,
+      "pool": 1
+    },
+    {
+      "instance": "g_hk48_VT16_T16_W16_50",
+      "geometry": "g_hk48",
+      "status": "compared",
+      "mining_index": 1,
+      "elite_routes": 10,
+      "patterns": 10,
+      "pool": 2,
+      "max_size": 21,
+      "utility_vs_marginal": "tie",
+      "utility_vs_support": "tie",
+      "utility_vs_random": "tie",
+      "utility_vs_mdm_first": "tie",
+      "utility_vs_size": "tie",
+      "same_pattern_as_marginal": true,
+      "same_pattern_as_support": true,
+      "same_pattern_as_size": true,
+      "same_pattern_as_mdm_first": false,
+      "selections": {
+        "size": {
+          "index": 8,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004810792000000008
+        },
+        "marginal": {
+          "index": 8,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004810792000000008
+        },
+        "support": {
+          "index": 8,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004810792000000008
+        },
+        "utility": {
+          "index": 8,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004810792000000008
+        },
+        "random": {
+          "index": 9,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004829500000000042
+        },
+        "mdm_first": {
+          "index": 9,
+          "size": 21,
+          "support": 2,
+          "marginal": 95,
+          "utility": 1.1690344646145752,
+          "outcome": "optimal",
+          "cost": 7605.0,
+          "proven": true,
+          "seconds": 0.004829500000000042
+        }
+      }
+    },
+    {
+      "instance": "g_pr76_VT14_T16_W46_25",
+      "geometry": "g_pr76",
+      "status": "compared",
+      "mining_index": 5,
+      "elite_routes": 8,
+      "patterns": 10,
+      "pool": 4,
+      "max_size": 17,
+      "utility_vs_marginal": "right",
+      "utility_vs_support": "right",
+      "utility_vs_random": "right",
+      "utility_vs_mdm_first": "right",
+      "utility_vs_size": "right",
+      "same_pattern_as_marginal": false,
+      "same_pattern_as_support": false,
+      "same_pattern_as_size": false,
+      "same_pattern_as_mdm_first": false,
+      "selections": {
+        "size": {
+          "index": 6,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.5914090415160467,
+          "outcome": "optimal",
+          "cost": 66012.0,
+          "proven": true,
+          "seconds": 0.024836832999999947
+        },
+        "marginal": {
+          "index": 6,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.5914090415160467,
+          "outcome": "optimal",
+          "cost": 66012.0,
+          "proven": true,
+          "seconds": 0.024836832999999947
+        },
+        "support": {
+          "index": 6,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.5914090415160467,
+          "outcome": "optimal",
+          "cost": 66012.0,
+          "proven": true,
+          "seconds": 0.024836832999999947
+        },
+        "utility": {
+          "index": 7,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.626197232041209,
+          "outcome": "optimal",
+          "cost": 66020.0,
+          "proven": true,
+          "seconds": 0.03430058300000005
+        },
+        "random": {
+          "index": 6,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.5914090415160467,
+          "outcome": "optimal",
+          "cost": 66012.0,
+          "proven": true,
+          "seconds": 0.024836832999999947
+        },
+        "mdm_first": {
+          "index": 9,
+          "size": 17,
+          "support": 2,
+          "marginal": 65,
+          "utility": 0.5914090415160467,
+          "outcome": "optimal",
+          "cost": 66012.0,
+          "proven": true,
+          "seconds": 0.02265824999999999
+        }
+      }
+    },
+    {
+      "instance": "g_st70_VT14_T14_W42_25",
+      "geometry": "g_st70",
+      "status": "compared",
+      "mining_index": 0,
+      "elite_routes": 10,
+      "patterns": 10,
+      "pool": 2,
+      "max_size": 19,
+      "utility_vs_marginal": "tie",
+      "utility_vs_support": "tie",
+      "utility_vs_random": "tie",
+      "utility_vs_mdm_first": "tie",
+      "utility_vs_size": "tie",
+      "same_pattern_as_marginal": false,
+      "same_pattern_as_support": true,
+      "same_pattern_as_size": true,
+      "same_pattern_as_mdm_first": false,
+      "selections": {
+        "size": {
+          "index": 8,
+          "size": 19,
+          "support": 2,
+          "marginal": 68,
+          "utility": 1.507731192387749,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.0038449160000000315
+        },
+        "marginal": {
+          "index": 9,
+          "size": 19,
+          "support": 2,
+          "marginal": 103,
+          "utility": 1.4898899791852511,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.003964708000000039
+        },
+        "support": {
+          "index": 8,
+          "size": 19,
+          "support": 2,
+          "marginal": 68,
+          "utility": 1.507731192387749,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.0038449160000000315
+        },
+        "utility": {
+          "index": 8,
+          "size": 19,
+          "support": 2,
+          "marginal": 68,
+          "utility": 1.507731192387749,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.0038449160000000315
+        },
+        "random": {
+          "index": 9,
+          "size": 19,
+          "support": 2,
+          "marginal": 103,
+          "utility": 1.4898899791852511,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.003964708000000039
+        },
+        "mdm_first": {
+          "index": 9,
+          "size": 19,
+          "support": 2,
+          "marginal": 103,
+          "utility": 1.4898899791852511,
+          "outcome": "optimal",
+          "cost": 419.0,
+          "proven": true,
+          "seconds": 0.003964708000000039
+        }
+      }
+    }
+  ]
+}

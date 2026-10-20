@@ -21,6 +21,10 @@ double began=0.;
 struct Snapshot { int iteration; double cost; std::vector<int> route; double seconds; };
 std::vector<Snapshot> snapshots;
 double budget=0.,startup_debit=0.;bool early_start=false;
+struct EliteCapture { std::vector<std::vector<int>> routes; std::vector<double> costs; std::string patterns; };
+std::vector<EliteCapture> elite_captures;
+EliteCapture pending_elite;
+bool elite_pending=false;
 std::vector<Snapshot> progress;
 double seconds_now() {return startup_debit+research_monotonic_seconds()-began;}
 std::vector<int> decode(int* successors) {
@@ -57,6 +61,7 @@ void research_initialize(const char* path,int size,int s,int sup,int stable,cons
   instance=path; n=size; seed=s; support=sup; stability=stable;
   export_path=output; observed_iterations=0; final_export=false;
   calls=0; snapshots.clear();progress.clear();
+  elite_captures.clear(); elite_pending=false;
   if(!early_start)began=research_monotonic_seconds();
 }
 void research_progress(double value,int* route) {
@@ -81,6 +86,46 @@ void research_snapshot(int iteration,double value,int* route) {
   }
 }
 void research_mining() { ++calls; }
+static std::string json_escape(const std::string& text) {
+  std::string out;
+  for(unsigned char c: text) {
+    if(c=='\\' || c=='"') { out.push_back('\\'); out.push_back(char(c)); }
+    else if(c=='\n') out += "\\n";
+    else if(c=='\r') continue;
+    else out.push_back(char(c));
+  }
+  return out;
+}
+void research_elite(int rows, int vertices, const float* matrix, int columns) {
+  if(vertices!=n || columns<n+2 || rows<1) throw std::runtime_error("Unexpected elite matrix");
+  pending_elite.routes.clear(); pending_elite.costs.clear(); pending_elite.patterns.clear();
+  for(int i=0;i<rows;i++) {
+    std::vector<int> successors(n);
+    for(int j=0;j<n;j++) successors[j]=static_cast<int>(matrix[(size_t)i*columns+j]);
+    pending_elite.routes.push_back(decode(successors.data()));
+    pending_elite.costs.push_back(matrix[(size_t)i*columns+n]);
+  }
+  elite_pending=true;
+}
+void research_capture_patterns() {
+  if(!elite_pending) throw std::runtime_error("Pattern capture without an elite bank");
+  std::ifstream in("padroes.txt");
+  if(!in) throw std::runtime_error("Mined pattern file is missing");
+  pending_elite.patterns.assign(std::istreambuf_iterator<char>(in), std::istreambuf_iterator<char>());
+  elite_captures.push_back(pending_elite);
+  elite_pending=false;
+  std::ofstream out((export_path+".elites.jsonl").c_str(), std::ios::app);
+  if(!out) throw std::runtime_error("Cannot write elite bank");
+  const EliteCapture& bank=elite_captures.back();
+  out << std::setprecision(16) << "{\"mining_index\":" << (elite_captures.size()-1)
+      << ",\"n\":" << n << ",\"routes\":[";
+  for(size_t r=0;r<bank.routes.size();r++) {
+    out << (r?",":""); write_route(out, bank.routes[r]);
+  }
+  out << "],\"costs\":[";
+  for(size_t r=0;r<bank.costs.size();r++) out << (r?",":"") << bank.costs[r];
+  out << "],\"patterns_text\":\"" << json_escape(bank.patterns) << "\"}\n";
+}
 void research_move(int move,double before_cost,double after_cost,double seconds,int* before,int* after) {
   static int recorded=0;
   if(recorded>=2000) return;

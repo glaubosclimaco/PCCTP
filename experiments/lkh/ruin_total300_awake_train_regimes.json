@@ -1,0 +1,2021 @@
+{
+  "status": "PARTIAL",
+  "runs": 72,
+  "completed_geometries": 8,
+  "modes": {
+    "hybrid10": {
+      "runs": 24,
+      "support_changed_runs": 23,
+      "net_coverage_repair_witnesses": 6,
+      "net_prize_repair_witnesses": 20,
+      "improved_after_initialization": 24,
+      "final_incumbent_first_seen_after120": 2
+    },
+    "hybrid60": {
+      "runs": 24,
+      "support_changed_runs": 21,
+      "net_coverage_repair_witnesses": 5,
+      "net_prize_repair_witnesses": 18,
+      "improved_after_initialization": 24,
+      "final_incumbent_first_seen_after120": 2
+    }
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 2148,
+      "final_cost": 1992.0,
+      "post_initialization_gain_percent": 7.262569832402234,
+      "removed": [
+        130,
+        132,
+        133,
+        145,
+        210,
+        220,
+        264
+      ],
+      "added": [
+        19,
+        98,
+        127,
+        135,
+        140,
+        211,
+        267
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        18,
+        20,
+        129,
+        131,
+        134,
+        268
+      ],
+      "net_removed_without_added_prize_deficit": 394.0,
+      "final_incumbent_post_event_seconds": 19.10594699997455,
+      "source_sha256": "845780cc9b064b61137cf9a738427278f2258381ac2dc22aaa9e0c721cf97fa7",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 2067,
+      "final_cost": 2001.0,
+      "post_initialization_gain_percent": 3.193033381712627,
+      "removed": [
+        32,
+        53,
+        137,
+        140
+      ],
+      "added": [
+        33,
+        133,
+        147
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 225.0,
+      "final_incumbent_post_event_seconds": 65.45402499998454,
+      "source_sha256": "5056ee544c2d1ce3eac1620b108166f484fd24b0b6272785aadf57802dbf2dd8",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 2084,
+      "final_cost": 2001.0,
+      "post_initialization_gain_percent": 3.9827255278310942,
+      "removed": [
+        137,
+        145,
+        256
+      ],
+      "added": [
+        33,
+        98,
+        199,
+        211,
+        255,
+        264
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        253,
+        254,
+        265
+      ],
+      "net_removed_without_added_prize_deficit": 192.0,
+      "final_incumbent_post_event_seconds": 22.556649999925867,
+      "source_sha256": "5219a2cfe8b328b52c03b3f768844c44d8786aab72cd4210ab53658487f73fa5",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 2071,
+      "final_cost": 2001.0,
+      "post_initialization_gain_percent": 3.380009657170449,
+      "removed": [
+        140,
+        214,
+        256
+      ],
+      "added": [
+        33,
+        98,
+        199,
+        211,
+        215,
+        255
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        212,
+        213,
+        216,
+        217,
+        253,
+        254
+      ],
+      "net_removed_without_added_prize_deficit": 94.0,
+      "final_incumbent_post_event_seconds": 99.17002800002228,
+      "source_sha256": "901453a75cb5a4844b9939af683effe7962d577661eedbc790257067c5b06558",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 2148,
+      "final_cost": 2001.0,
+      "post_initialization_gain_percent": 6.843575418994414,
+      "removed": [
+        32,
+        94,
+        137,
+        165,
+        190,
+        194,
+        208,
+        214,
+        240
+      ],
+      "added": [
+        98,
+        199,
+        207,
+        215,
+        243,
+        267
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        136,
+        216,
+        217,
+        239,
+        251,
+        252
+      ],
+      "net_removed_without_added_prize_deficit": 196.0,
+      "final_incumbent_post_event_seconds": 20.303982000099495,
+      "source_sha256": "5f728843e1f3e8e4ed78c4c89ea585b0d32dac3379720bec927760f5a6fb5bc9",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 2025,
+      "final_cost": 2002.0,
+      "post_initialization_gain_percent": 1.1358024691358024,
+      "removed": [
+        32,
+        53,
+        135
+      ],
+      "added": [
+        33,
+        98,
+        145
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 137.0,
+      "final_incumbent_post_event_seconds": 64.0241709999973,
+      "source_sha256": "608415827bee7e664d993375282b1c76d508b6c55c3c6aeaf7d824196a9f56d4",
+      "input_sha256": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 2101,
+      "final_cost": 1986.0,
+      "post_initialization_gain_percent": 5.473584007615421,
+      "removed": [
+        16,
+        86,
+        126,
+        142,
+        154,
+        173,
+        194,
+        246
+      ],
+      "added": [
+        81,
+        167,
+        190,
+        196
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 222.0,
+      "final_incumbent_post_event_seconds": 11.770542999962345,
+      "source_sha256": "fd162888176e9ac1be7d2ff84b82629ded5da4346c0d7e9f74ea43d6740b2c02",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 2009,
+      "final_cost": 1990.0,
+      "post_initialization_gain_percent": 0.9457441513190642,
+      "removed": [
+        171,
+        199
+      ],
+      "added": [
+        133,
+        167,
+        196,
+        215,
+        259
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        62
+      ],
+      "net_removed_without_added_prize_deficit": 170.0,
+      "final_incumbent_post_event_seconds": 75.35083899996243,
+      "source_sha256": "7c5fa2bc704ab369575aa6e6b9bfa9d5f4d01d35e96106671db5e6027e0998d7",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 2034,
+      "final_cost": 1981.0,
+      "post_initialization_gain_percent": 2.6057030481809242,
+      "removed": [
+        104,
+        176,
+        194
+      ],
+      "added": [
+        28,
+        142,
+        167,
+        169,
+        171,
+        196,
+        199,
+        259
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 265.0,
+      "final_incumbent_post_event_seconds": 14.931914999964647,
+      "source_sha256": "39273d055ab7605bff92232feb0069b2c3daa464c345bcbc47c184fed211fd85",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 2034,
+      "final_cost": 1981.0,
+      "post_initialization_gain_percent": 2.6057030481809242,
+      "removed": [
+        104,
+        176,
+        194
+      ],
+      "added": [
+        28,
+        142,
+        167,
+        169,
+        171,
+        196,
+        199,
+        259
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 265.0,
+      "final_incumbent_post_event_seconds": 65.25622199999634,
+      "source_sha256": "3d6d4cbd0deba8bac5de13b88fad2f14648247a6d995ff8bc8a756c440b59595",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 2189,
+      "final_cost": 1981.0,
+      "post_initialization_gain_percent": 9.502055733211511,
+      "removed": [
+        0,
+        126,
+        148,
+        154,
+        173,
+        194,
+        211,
+        246
+      ],
+      "added": [
+        78
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 106.0,
+      "final_incumbent_post_event_seconds": 35.44758899998851,
+      "source_sha256": "df71932e3442ec75fc647a6fdb98167d8b27f06a83095ac905c267c8f3bb4997",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 2042,
+      "final_cost": 1984.0,
+      "post_initialization_gain_percent": 2.840352595494613,
+      "removed": [
+        16,
+        194
+      ],
+      "added": [
+        167,
+        169,
+        190
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 121.0,
+      "final_incumbent_post_event_seconds": 101.46274300001096,
+      "source_sha256": "cbc963c648e9baa0fad529b47b3c7bc66bc650f4ed30aee68c1fc2b259fbe546",
+      "input_sha256": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 105453,
+      "final_cost": 96707.0,
+      "post_initialization_gain_percent": 8.293742235877595,
+      "removed": [
+        165,
+        166,
+        167,
+        168,
+        171,
+        172,
+        173,
+        174,
+        177,
+        200,
+        220
+      ],
+      "added": [
+        179,
+        181,
+        186,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        199
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 40601.0,
+      "final_incumbent_post_event_seconds": 48.65139100002125,
+      "source_sha256": "110f15d0ac19b8a127f258c7963f830b514c70519969cb2071d720bebedddd4e",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 99978,
+      "final_cost": 96753.0,
+      "post_initialization_gain_percent": 3.2257096561243475,
+      "removed": [
+        166,
+        178,
+        179,
+        180,
+        199,
+        201,
+        220
+      ],
+      "added": [
+        174,
+        175,
+        182,
+        186,
+        195,
+        196,
+        197,
+        198,
+        200
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 32774.0,
+      "final_incumbent_post_event_seconds": 63.19764499994926,
+      "source_sha256": "81816a7d94de7df2126b410302ba932cff96b8b4b5da92ae7448bdb4114182fe",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 104894,
+      "final_cost": 96753.0,
+      "post_initialization_gain_percent": 7.761168417640666,
+      "removed": [
+        165,
+        168,
+        173,
+        178,
+        179,
+        180,
+        201,
+        203,
+        211,
+        220
+      ],
+      "added": [
+        174,
+        175,
+        177,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        194,
+        195,
+        196,
+        197,
+        198
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 46739.0,
+      "final_incumbent_post_event_seconds": 34.88542399997823,
+      "source_sha256": "d26756604fd086346e1fe0f5c5fa0f662aba01dda52a005e6520c01528da4546",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 104167,
+      "final_cost": 96753.0,
+      "post_initialization_gain_percent": 7.117417224264883,
+      "removed": [
+        167,
+        178,
+        179,
+        180,
+        201,
+        203,
+        211,
+        220
+      ],
+      "added": [
+        174,
+        175,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        190,
+        195,
+        196,
+        197
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 40393.0,
+      "final_incumbent_post_event_seconds": 83.85327199997846,
+      "source_sha256": "53e1acaadbf1b28848e0cb8d78a448a33ab8fdbb6e54acd86fae2920614919a0",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 103284,
+      "final_cost": 96707.0,
+      "post_initialization_gain_percent": 6.367878858293637,
+      "removed": [
+        176,
+        177,
+        178,
+        203
+      ],
+      "added": [
+        199,
+        201
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 12556.0,
+      "final_incumbent_post_event_seconds": 170.32357899995986,
+      "source_sha256": "6b5b23de8b918b739dc237af24d5daf9b204d372e26004defbc43a93a97fe702",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 101370,
+      "final_cost": 96707.0,
+      "post_initialization_gain_percent": 4.599980270296932,
+      "removed": [
+        176,
+        177,
+        178,
+        203,
+        211
+      ],
+      "added": [
+        199,
+        201,
+        202
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 19893.0,
+      "final_incumbent_post_event_seconds": 182.01176600006875,
+      "source_sha256": "317cc231aafd683912927c96663e3a90934ba7b99e517dedde6c390a9249a583",
+      "input_sha256": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 23545,
+      "final_cost": 23526.0,
+      "post_initialization_gain_percent": 0.08069653854321512,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 10.376855000038631,
+      "source_sha256": "3a51cec11180df51be2a9744b7d326b5320212e5e251cb39af56676bd40f2f66",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 23499,
+      "final_cost": 23495.0,
+      "post_initialization_gain_percent": 0.017022000936210053,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 60.750614000018686,
+      "source_sha256": "65224fd472c3ccd5ad78a17766a4bbffe67c54d843511e0e1d6733535b680e52",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 23806,
+      "final_cost": 23495.0,
+      "post_initialization_gain_percent": 1.30639334621524,
+      "removed": [
+        165,
+        169,
+        173,
+        187
+      ],
+      "added": [
+        152,
+        156,
+        159,
+        164,
+        171,
+        197
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 1883.0,
+      "final_incumbent_post_event_seconds": 10.492418000008911,
+      "source_sha256": "57164772353622fbedec680cbc6c52a678af9cd4f6ab25e8ae809acf051dcf46",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 23514,
+      "final_cost": 23495.0,
+      "post_initialization_gain_percent": 0.0808029259164753,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 60.91203400003724,
+      "source_sha256": "a8a98c495fbff787c430e06963217df69b6b78274b6fe972a8148e457474ac13",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 23550,
+      "final_cost": 23495.0,
+      "post_initialization_gain_percent": 0.23354564755838642,
+      "removed": [
+        187,
+        196
+      ],
+      "added": [
+        156,
+        190,
+        191,
+        197
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 855.0,
+      "final_incumbent_post_event_seconds": 11.32206099992618,
+      "source_sha256": "1859b037fed47ce51fe30273235e8fc857483d2b90b6d3aecca34eab28ad8ff8",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 23514,
+      "final_cost": 23495.0,
+      "post_initialization_gain_percent": 0.0808029259164753,
+      "removed": [],
+      "added": [],
+      "support_changed": false,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 60.18828300002497,
+      "source_sha256": "005c3c777fbc65e7b9d605773a435e2331337396557897ebd5e12aefd5f1d32a",
+      "input_sha256": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 88536.0,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 24.001536098310293,
+      "removed": [
+        189,
+        223,
+        224,
+        225
+      ],
+      "added": [
+        1,
+        166,
+        167
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 26734.0,
+      "final_incumbent_post_event_seconds": 22.797901000012644,
+      "source_sha256": "e03e08e2b0469dbd9e775fb3b59311773a81395b9240ab7f10d4250edcc06ba6",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 67889,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 0.8882145855735097,
+      "removed": [
+        163,
+        164,
+        165
+      ],
+      "added": [
+        185,
+        186,
+        187,
+        188
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 26038.0,
+      "final_incumbent_post_event_seconds": 62.079402000061236,
+      "source_sha256": "eb8e77ed8099a6b74f230a7a98eb16a733ca6321c5d7ab955a40a2092136e584",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 75481,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 10.857036870205746,
+      "removed": [
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        165
+      ],
+      "added": [
+        168,
+        169,
+        170,
+        173,
+        177,
+        180,
+        182,
+        184,
+        186
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 68239.0,
+      "final_incumbent_post_event_seconds": 13.78685100004077,
+      "source_sha256": "3d5496370f84eaa7692e62fea2fb1f8d80d2c343545202a9d9ce4535609f8a90",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 68650,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 1.9868900218499637,
+      "removed": [
+        163,
+        164,
+        165
+      ],
+      "added": [
+        185,
+        186,
+        187,
+        188
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 26038.0,
+      "final_incumbent_post_event_seconds": 61.79412199999206,
+      "source_sha256": "d4c639edb84c8f777d0f642b85e2a13964a2029ecaf6e086888d2f5428d2b1b1",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 71963,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 6.4991731862206965,
+      "removed": [
+        151,
+        152,
+        159,
+        160,
+        161,
+        163,
+        164,
+        165,
+        189
+      ],
+      "added": [
+        166,
+        167,
+        170,
+        172,
+        176,
+        177,
+        181,
+        183,
+        185,
+        188
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 76190.0,
+      "final_incumbent_post_event_seconds": 12.741482999990694,
+      "source_sha256": "0821a339df5eeb0aa8339477296d9e84ffd54563be5aae457643e6b4ef5ac7b7",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 68406,
+      "final_cost": 67286.0,
+      "post_initialization_gain_percent": 1.6372832792445107,
+      "removed": [
+        163,
+        164,
+        165
+      ],
+      "added": [
+        185,
+        186,
+        187,
+        188
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 26038.0,
+      "final_incumbent_post_event_seconds": 64.34800399991218,
+      "source_sha256": "22217369cc69e84b3e549a10187070585865003d6a77c1f5d53dae5725cfae26",
+      "input_sha256": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 15499.0,
+      "final_cost": 13975.0,
+      "post_initialization_gain_percent": 9.832892444673849,
+      "removed": [
+        6,
+        21,
+        22,
+        23,
+        33,
+        34,
+        41,
+        44,
+        46,
+        58,
+        63,
+        65,
+        68,
+        75,
+        88,
+        95,
+        99,
+        107,
+        122,
+        123,
+        146,
+        159,
+        160,
+        177,
+        178,
+        198,
+        205,
+        208,
+        210,
+        214,
+        223,
+        226,
+        244,
+        255,
+        256,
+        257,
+        264,
+        270,
+        285,
+        289,
+        305,
+        308,
+        340,
+        346,
+        362,
+        385,
+        390,
+        399
+      ],
+      "added": [
+        117
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 257.0,
+      "final_incumbent_post_event_seconds": 24.89916200004518,
+      "source_sha256": "df2ef0303fdb89478347d24c31eb00071f9c66261e3388e1fa8ee410ca69859a",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 10919,
+      "final_cost": 10630.0,
+      "post_initialization_gain_percent": 2.646762524040663,
+      "removed": [
+        46,
+        63,
+        106,
+        117,
+        122,
+        195,
+        382
+      ],
+      "added": [
+        21,
+        65,
+        68,
+        75,
+        340,
+        357,
+        366,
+        381,
+        385
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 2190.0,
+      "final_incumbent_post_event_seconds": 61.98806599993259,
+      "source_sha256": "d555583ed2a01a6b8da22bbcd777c5daa9b55899fafc0b7c581ac3bcb1b2a6d8",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 11453,
+      "final_cost": 10667.0,
+      "post_initialization_gain_percent": 6.862830699380075,
+      "removed": [
+        21,
+        41,
+        65,
+        76,
+        95,
+        117,
+        146,
+        178,
+        198,
+        210,
+        256,
+        262,
+        283,
+        289,
+        297,
+        383
+      ],
+      "added": [
+        106,
+        150,
+        214,
+        237,
+        239,
+        305,
+        308,
+        381,
+        385,
+        386,
+        389,
+        390,
+        399
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 4256.0,
+      "final_incumbent_post_event_seconds": 12.845956999924965,
+      "source_sha256": "aadbca795ad5132ffb1718695e0a54e3ee02cdd52047ac1a2fd9ab3906fc0e05",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 11022,
+      "final_cost": 10631.0,
+      "post_initialization_gain_percent": 3.547450553438577,
+      "removed": [
+        41,
+        146,
+        235,
+        262,
+        289,
+        297,
+        383
+      ],
+      "added": [
+        248,
+        308,
+        399
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 738.0,
+      "final_incumbent_post_event_seconds": 66.76370899996255,
+      "source_sha256": "6b7dd72ff13b475e7d900040b222716a1fe8f00c4572c1ac7c89392fd6576367",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 14143.0,
+      "final_cost": 13975.0,
+      "post_initialization_gain_percent": 1.1878667892243513,
+      "removed": [
+        23,
+        33,
+        44,
+        177,
+        255,
+        257,
+        285,
+        305,
+        308,
+        346,
+        385
+      ],
+      "added": [
+        106,
+        117,
+        150,
+        164,
+        195,
+        235,
+        376,
+        382
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 2469.0,
+      "final_incumbent_post_event_seconds": 23.443057000054978,
+      "source_sha256": "7d2e936696ddd41167560d2797ad560fa9b1e3fa3b516645febe16621922ad62",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 11486,
+      "final_cost": 10750.0,
+      "post_initialization_gain_percent": 6.4078008009751,
+      "removed": [
+        6,
+        21,
+        31,
+        58,
+        65,
+        107,
+        177,
+        208,
+        223,
+        235,
+        244,
+        257,
+        262,
+        315
+      ],
+      "added": [
+        150,
+        159,
+        214,
+        226,
+        237,
+        239,
+        305,
+        308,
+        381,
+        382,
+        389,
+        390,
+        399
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 4159.0,
+      "final_incumbent_post_event_seconds": 102.7852960000746,
+      "source_sha256": "7a1d08311f98e8d6da85f58d7b51e81e731312324386928a86f2019a406007bf",
+      "input_sha256": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 7225,
+      "final_cost": 6908.0,
+      "post_initialization_gain_percent": 4.387543252595155,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 11.54603099997621,
+      "source_sha256": "4b962ff49902248c36b168bd1d50845fc767b3ad95babf75c17e94b30bb1c25f",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 7102,
+      "final_cost": 6878.0,
+      "post_initialization_gain_percent": 3.154041115178823,
+      "removed": [],
+      "added": [
+        147,
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 62.289661999908276,
+      "source_sha256": "a66feccbfc957d92ddcd73238156eea2817eb2a42a5dfa812cffa041120a9401",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 7148,
+      "final_cost": 6908.0,
+      "post_initialization_gain_percent": 3.357582540570789,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 10.222155000083148,
+      "source_sha256": "46d6500ba09e9a6eab526d8c915ae7e61591a7479e628df9c73f0e8937c08e4e",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 7118,
+      "final_cost": 6908.0,
+      "post_initialization_gain_percent": 2.9502669289126158,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 61.07350499997847,
+      "source_sha256": "687df1990427c2012987f53c256750abc0fc8d7dfb92a3f3546552403c736dcc",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 7077,
+      "final_cost": 6908.0,
+      "post_initialization_gain_percent": 2.388017521548679,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 10.210573000018485,
+      "source_sha256": "5b841c33b2332a33260ed6317da899c4941990cc6b9a5a7d76460b1a47c93d61",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 7061,
+      "final_cost": 6908.0,
+      "post_initialization_gain_percent": 2.1668318934995043,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        169
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [],
+      "net_removed_without_added_prize_deficit": 0.0,
+      "final_incumbent_post_event_seconds": 60.25645099999383,
+      "source_sha256": "737b5d402a8863bc31f43b8902efa49371ade3ff7e99f4a88e1beca3dd59ad20",
+      "input_sha256": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "initialization_cost": 110469,
+      "final_cost": 108989.0,
+      "post_initialization_gain_percent": 1.3397423711629506,
+      "removed": [
+        55,
+        80,
+        86,
+        139,
+        144,
+        183,
+        224
+      ],
+      "added": [
+        1,
+        57,
+        82,
+        88,
+        160,
+        165,
+        181,
+        200,
+        222
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        37,
+        43,
+        56,
+        81,
+        87,
+        180,
+        182,
+        184,
+        210,
+        223
+      ],
+      "net_removed_without_added_prize_deficit": 30286.0,
+      "final_incumbent_post_event_seconds": 19.565651000011712,
+      "source_sha256": "5d3a87fcf2c081aa19111b4a336aaaa1ee28c0c090daadc703b486d91ab6fee7",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "initialization_cost": 110469,
+      "final_cost": 108989.0,
+      "post_initialization_gain_percent": 1.3397423711629506,
+      "removed": [
+        55,
+        80,
+        86,
+        139,
+        144,
+        183,
+        224
+      ],
+      "added": [
+        1,
+        57,
+        82,
+        88,
+        160,
+        165,
+        181,
+        200,
+        222
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        37,
+        43,
+        56,
+        81,
+        87,
+        180,
+        182,
+        184,
+        210,
+        223
+      ],
+      "net_removed_without_added_prize_deficit": 30286.0,
+      "final_incumbent_post_event_seconds": 68.93243300006725,
+      "source_sha256": "d20dd37f8cb7360af6a90f81025653f3620bf71626a0225aa3a70819c0719368",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "initialization_cost": 110742,
+      "final_cost": 108805.0,
+      "post_initialization_gain_percent": 1.7491105452312583,
+      "removed": [
+        63,
+        88,
+        139,
+        155,
+        181,
+        200,
+        206,
+        213
+      ],
+      "added": [
+        1,
+        61,
+        86,
+        134,
+        160,
+        183,
+        208,
+        211,
+        219,
+        220,
+        224
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        31,
+        37,
+        62,
+        87,
+        182,
+        189,
+        207,
+        210,
+        212
+      ],
+      "net_removed_without_added_prize_deficit": 33905.0,
+      "final_incumbent_post_event_seconds": 169.43553300003987,
+      "source_sha256": "84aef19623348c68bab3a4d4a0ef3a6f165aaefe6e1c7cf8bcd36dcb338e8717",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "initialization_cost": 109200,
+      "final_cost": 108805.0,
+      "post_initialization_gain_percent": 0.3617216117216117,
+      "removed": [
+        57,
+        88,
+        94,
+        139,
+        144,
+        181,
+        193,
+        200,
+        206,
+        218,
+        224
+      ],
+      "added": [
+        1,
+        55,
+        86,
+        92,
+        160,
+        165,
+        183,
+        191,
+        202,
+        208,
+        209,
+        214,
+        216,
+        222
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        37,
+        43,
+        56,
+        87,
+        93,
+        180,
+        182,
+        192,
+        194,
+        201,
+        207,
+        210,
+        215,
+        217,
+        223
+      ],
+      "net_removed_without_added_prize_deficit": 55287.0,
+      "final_incumbent_post_event_seconds": 299.03312299994286,
+      "source_sha256": "6afaec8c4b9bde51bc5cd52c1d4fd248ab4845b0d37b1c52e6eede9db5c01410",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "initialization_cost": 111217,
+      "final_cost": 108805.0,
+      "post_initialization_gain_percent": 2.168733197263008,
+      "removed": [
+        80,
+        92
+      ],
+      "added": [
+        82,
+        94,
+        204,
+        209,
+        224
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        81,
+        93,
+        194,
+        205
+      ],
+      "net_removed_without_added_prize_deficit": 5066.0,
+      "final_incumbent_post_event_seconds": 43.323764999979176,
+      "source_sha256": "f71c43f410c74414cf3825979a49f374130a18cfa8efa544297794048a08e75c",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "initialization_cost": 109733,
+      "final_cost": 108805.0,
+      "post_initialization_gain_percent": 0.8456890816800781,
+      "removed": [
+        57,
+        155,
+        181,
+        193,
+        200,
+        206,
+        218
+      ],
+      "added": [
+        1,
+        55,
+        134,
+        183,
+        191,
+        202,
+        208,
+        209,
+        214,
+        216
+      ],
+      "support_changed": true,
+      "net_removed_without_added_uncovered_vertices": [
+        31,
+        56,
+        180,
+        182,
+        192,
+        201,
+        207,
+        217
+      ],
+      "net_removed_without_added_prize_deficit": 33211.0,
+      "final_incumbent_post_event_seconds": 93.62210500007495,
+      "source_sha256": "4b3d1d3f4eccb2ef7413f51c5a2a6bf4bd2070fbbc5b0166b944496335762ac8",
+      "input_sha256": "e68c5b5251818b36df32ec49a182672ec3c0b28feb963bdb9e58981e26503414"
+    }
+  ],
+  "curve": [
+    {
+      "horizon": 1,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": -0.10188574981004352,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -0.8150859984803481
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.0
+        }
+      ]
+    },
+    {
+      "horizon": 1,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 0.2883884782758859,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 2.307107826207087
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.0
+        }
+      ]
+    },
+    {
+      "horizon": 10,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": -0.021986308693245055,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.1877346683354193
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 0.4094488188976307
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": -0.21184274430612712
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.005641351103584179
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": -5.768929088472444
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 5.3786465888420665
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": -0.17659006394609045
+        }
+      ]
+    },
+    {
+      "horizon": 10,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 1.1764277024049812,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.7822277847309066
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 0.9763779527558984
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": -0.8023184478924362
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": -0.1960369508497234
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": -0.08964228247178324
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 8.67813313071309
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.06268043225389958
+        }
+      ]
+    },
+    {
+      "horizon": 30,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 1.091266118415176,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 4.781572676727569
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 2.580434427568189
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 5.30973164162637
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.3856531381994378
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 5.951582243095158
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -14.217687074829938
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.75444606071982
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 1.1843958342148007
+        }
+      ]
+    },
+    {
+      "horizon": 30,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 0.08347388833771097,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.6671961874503574
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 0.29397354238118567
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": -0.23753123276113836
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": -0.08246673375824667
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 0.026619343389529725
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.0
+        }
+      ]
+    },
+    {
+      "horizon": 60,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": -0.009065822119355194,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 3.5869390381212876
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 2.2353714661406934
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 4.770482068040072
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.08076743230413898
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.5062577764766156
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -15.664779704675478
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.617358206851186
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.7950771397866436
+        }
+      ]
+    },
+    {
+      "horizon": 60,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 0.06999792272668087,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 0.8685861347917001
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": -0.016436554898089623
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": -0.23753982237007834
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.06518073484193157
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -0.1198071105520167
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 0.0
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.0
+        }
+      ]
+    },
+    {
+      "horizon": 120,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": -0.7257340967398742,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 2.026806145799277
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 2.042160737812908
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 3.6766999634951714
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": -0.005672793283407593
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.259581378740216
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -17.591352009744227
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.4385651068637646
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.34733869639730514
+        }
+      ]
+    },
+    {
+      "horizon": 120,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 1.775129065939274,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 1.8633540372670807
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 1.9268774703557312
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 3.6614343079016267
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.03829135466303608
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.259581378740216
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 2.5243605359317796
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.5797947462574187
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.34733869639730514
+        }
+      ]
+    },
+    {
+      "horizon": 300,
+      "mode": "hybrid10",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": -1.4290444707021748,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 1.5440210249671449
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 1.6696974706562995
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 1.5862625659670877
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": -0.03262735307050732
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.2098076640728235
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": -19.47959530955108
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 1.9492808478425394
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.12079732349829495
+        }
+      ]
+    },
+    {
+      "horizon": 300,
+      "mode": "hybrid60",
+      "complete_geometry_pairs": 8,
+      "mean_gain_percent": 1.1120876967324869,
+      "unavailable_due_to_feasibility": [],
+      "effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 1.3797634691195795
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 1.5539758637791334
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 1.5706610953588918
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.011348644546272166
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.2098076640728235
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 0.9591287398285833
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.091218773656317
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.12079732349829495
+        }
+      ]
+    }
+  ],
+  "audit_sha256": "1667e3975be616809e2be0a4e5742f14301283213cca43a59fce3f9ae4ec8bbd",
+  "curve_sha256": "8931c7835797fd4b3d149f95b9ff6833a06e0983544bab5b1cd280261ffaf98a",
+  "summary_sha256": "f3a2750415b165b7cc6749b1542e714dfb96b8441d450fe998e580912985253f",
+  "scope": "descriptive complete TRAIN geometries only; net-support witnesses do not reconstruct destruction paths or establish causality; no new selection gate"
+}

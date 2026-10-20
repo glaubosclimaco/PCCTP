@@ -2,11 +2,17 @@
 // Finite nonnegative transition costs; optional-selection feasibility is supplied
 // separately. This is an experimental backend, not a novelty claim for DP.
 #include <algorithm>
-#include <chrono>
+#include <time.h>
 #include <cmath>
 #include <cstdint>
 #include <limits>
 #include <vector>
+
+static double monotonic_seconds() {
+  struct timespec now;
+  if(clock_gettime(CLOCK_MONOTONIC,&now)!=0)return -1.;
+  return double(now.tv_sec)+double(now.tv_nsec)*1e-9;
+}
 
 extern "C" int pcctp_path_dp(int n,int root,const double* edge,const int* orientations,
   const unsigned char* feasible,double upper,double seconds,int* order,int* length,
@@ -14,7 +20,7 @@ extern "C" int pcctp_path_dp(int n,int root,const double* edge,const int* orient
   if(n<1 || n>20 || root<0 || root>=n) return 2;
   const int width=2*n; const std::uint32_t total=1u<<n;
   const double inf=std::numeric_limits<double>::infinity();
-  auto began=std::chrono::steady_clock::now();
+  double began=monotonic_seconds();if(began<0)return 4;
   std::vector<double> dp(std::size_t(total)*width,inf);
   std::vector<unsigned char> parent(std::size_t(total)*width,255);
   const std::uint32_t start=1u<<root;
@@ -24,8 +30,9 @@ extern "C" int pcctp_path_dp(int n,int root,const double* edge,const int* orient
   std::uint32_t scanned=0;
   for(std::uint32_t mask=start;mask<total;++mask) {
     if(!(mask&start)) continue;
-    if((++scanned&255u)==0 && std::chrono::duration<double>(std::chrono::steady_clock::now()-began).count()>=seconds) {
-      status=1; break;
+    if((++scanned&255u)==0) {
+      double now=monotonic_seconds();if(now<0)return 4;
+      if(now-began>=seconds){status=1;break;}
     }
     for(int last=0;last<n;++last) if(mask&(1u<<last)) {
       for(int orientation=0;orientation<orientations[last];++orientation) {

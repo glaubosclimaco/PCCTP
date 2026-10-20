@@ -1,0 +1,1472 @@
+{
+  "scope": "TRAIN net-support feasibility witnesses only; does not reconstruct actual destruction path or establish causality",
+  "runs": 27,
+  "support_changed_runs": 23,
+  "runs_with_net_coverage_repair_need": 5,
+  "runs_with_net_prize_repair_need": 20,
+  "runs_with_any_net_repair_need": 20,
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 42,
+      "initial_cost": 2222,
+      "final_cost": 1985.0,
+      "removed": [
+        32,
+        94,
+        128,
+        130,
+        140,
+        149,
+        165,
+        208,
+        233,
+        236,
+        238,
+        245,
+        256,
+        264
+      ],
+      "added": [
+        19,
+        98,
+        127,
+        135,
+        145,
+        207,
+        231,
+        243,
+        255
+      ],
+      "removed_details": [
+        {
+          "vertex": 32,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 94,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 128,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 130,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 140,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 149,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 208,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 233,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 236,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 238,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 245,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 256,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 264,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 45,
+      "prize_slack_before": 199.0,
+      "prize_slack_after": 1.0,
+      "net_removal_without_additions_violates_coverage": true,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "a9dc30b6598457d9f62ba88800848ae46a621ea1badd5415ebc32ad91fa315a6"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 43,
+      "initial_cost": 2026,
+      "final_cost": 2002.0,
+      "removed": [
+        94,
+        140
+      ],
+      "added": [
+        33,
+        98,
+        145
+      ],
+      "removed_details": [
+        {
+          "vertex": 94,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 140,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 45,
+      "prize_slack_before": 1.0,
+      "prize_slack_after": 15.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "2adf2156afa40e7ba6ce74f971f63b8268e6ecca6484985b3db28d3b91c43b5d"
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 44,
+      "initial_cost": 2152,
+      "final_cost": 1985.0,
+      "removed": [
+        130,
+        214,
+        256,
+        264
+      ],
+      "added": [
+        19,
+        53,
+        98,
+        127,
+        199,
+        211,
+        215,
+        255
+      ],
+      "removed_details": [
+        {
+          "vertex": 130,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 214,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 256,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 264,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 45,
+      "prize_slack_before": 28.0,
+      "prize_slack_after": 1.0,
+      "net_removal_without_additions_violates_coverage": true,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "781c34f6809f411b6cdd0c7da8c0287a179ce7d9bff6533db6f2657cde3f3cb8"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 42,
+      "initial_cost": 2117,
+      "final_cost": 1986.0,
+      "removed": [
+        16,
+        57,
+        126,
+        133,
+        148,
+        154,
+        173,
+        194
+      ],
+      "added": [
+        81,
+        171,
+        193
+      ],
+      "removed_details": [
+        {
+          "vertex": 16,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 57,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 126,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 133,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 148,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 154,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 173,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 194,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 38,
+      "prize_slack_before": 42.0,
+      "prize_slack_after": 5.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "dba7415a2970d7c5cb3c5619bae3b20ca315bfb86a917952f2e73f0b705596f6"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 43,
+      "initial_cost": 2152,
+      "final_cost": 1986.0,
+      "removed": [
+        0,
+        16,
+        57,
+        154,
+        155,
+        246
+      ],
+      "added": [
+        110
+      ],
+      "removed_details": [
+        {
+          "vertex": 0,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 16,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 57,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 154,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 155,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 246,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 38,
+      "prize_slack_before": 12.0,
+      "prize_slack_after": 5.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "735da5d8c7f163409edcbad3de33e467ad31bff3654721a51326b74943d0ca50"
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 44,
+      "initial_cost": 2046,
+      "final_cost": 1984.0,
+      "removed": [
+        176,
+        194,
+        236
+      ],
+      "added": [
+        42,
+        142,
+        167,
+        169,
+        190,
+        196,
+        259
+      ],
+      "removed_details": [
+        {
+          "vertex": 176,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 194,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 236,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 38,
+      "prize_slack_before": 11.0,
+      "prize_slack_after": 11.0,
+      "net_removal_without_additions_violates_coverage": true,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "aaf3b5d92c5b69b4978eb7cfa7ece1100f28ba5e2cf0c7373de4a04aa8098d57"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 42,
+      "initial_cost": 100020,
+      "final_cost": 96707.0,
+      "removed": [
+        165,
+        166,
+        167,
+        168,
+        169,
+        174,
+        175,
+        176,
+        177,
+        200
+      ],
+      "added": [
+        179,
+        180,
+        186,
+        190,
+        195,
+        196,
+        197,
+        201
+      ],
+      "removed_details": [
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 166,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 167,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 168,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 169,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 174,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 175,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 176,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 177,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 200,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 474.0,
+      "prize_slack_after": 58.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "54751e1cd4840f347d8cfc48cc2d5012f8dfcead0dfeeb255a89854d11c5b61e"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 43,
+      "initial_cost": 101162,
+      "final_cost": 96707.0,
+      "removed": [
+        165,
+        168,
+        169,
+        173,
+        174,
+        175,
+        198,
+        200
+      ],
+      "added": [
+        179,
+        180,
+        181,
+        182,
+        199,
+        201
+      ],
+      "removed_details": [
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 168,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 169,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 173,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 174,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 175,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 198,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 200,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 1925.0,
+      "prize_slack_after": 58.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "d6dc7e2e7a2637d271220e72d64c7b22683972a5141169ecbfe71be7cae41106"
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 44,
+      "initial_cost": 102866,
+      "final_cost": 96753.0,
+      "removed": [
+        165,
+        167,
+        168,
+        169,
+        176,
+        201,
+        220
+      ],
+      "added": [
+        177,
+        181,
+        182,
+        184,
+        185,
+        186,
+        195,
+        196,
+        197
+      ],
+      "removed_details": [
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 167,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 168,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 169,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 176,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 201,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 220,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 165.0,
+      "prize_slack_after": 267.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "a0ed062a2775a8fb82db996316c7790822087332f1bca709890d91b953f7a43e"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 42,
+      "initial_cost": 23774,
+      "final_cost": 23495.0,
+      "removed": [
+        165,
+        187,
+        193
+      ],
+      "added": [
+        156,
+        159,
+        171,
+        190,
+        191,
+        197
+      ],
+      "removed_details": [
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 187,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 193,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 157.0,
+      "prize_slack_after": 104.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "ee7767bd1b2bffedc268b14911983115d61181e8e80172fc9e1974839c2e7acd"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 43,
+      "initial_cost": 23584,
+      "final_cost": 23554.0,
+      "removed": [],
+      "added": [],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 152.0,
+      "prize_slack_after": 152.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "98d433ff626268f62510ae5dcf546e83c43d48ecb898d2cd06abecb0ed2a6d87"
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 44,
+      "initial_cost": 23499,
+      "final_cost": 23495.0,
+      "removed": [],
+      "added": [],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 104.0,
+      "prize_slack_after": 104.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "89537080b966e0e9e5be5836e6d954db29daaf6d1f94d8586ebf57a21ed062cc"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 42,
+      "initial_cost": 71682,
+      "final_cost": 67286.0,
+      "removed": [
+        151,
+        152,
+        153,
+        154,
+        155,
+        157,
+        158,
+        159,
+        162,
+        163,
+        165
+      ],
+      "added": [
+        166,
+        167,
+        169,
+        174,
+        175,
+        176,
+        178,
+        180,
+        181,
+        182,
+        183,
+        185,
+        186,
+        188
+      ],
+      "removed_details": [
+        {
+          "vertex": 151,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 152,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 153,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 154,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 155,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 157,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 158,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 159,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 162,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 163,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 299.0,
+      "prize_slack_after": 990.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "a4f48bc4cc0c232e5f93359eb99191ef3f6e65298dd6de0193dd684222c142a4"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 43,
+      "initial_cost": 68367,
+      "final_cost": 67286.0,
+      "removed": [
+        161,
+        162,
+        163,
+        164,
+        165
+      ],
+      "added": [
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "removed_details": [
+        {
+          "vertex": 161,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 162,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 163,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 164,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 123.0,
+      "prize_slack_after": 990.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "5c2663f92cebfd870acbb5e86af1df0f62001361d27d75ec35bb9e5d83881d4c"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 44,
+      "initial_cost": 68169,
+      "final_cost": 67286.0,
+      "removed": [
+        163,
+        164,
+        165
+      ],
+      "added": [
+        185,
+        186,
+        187,
+        188
+      ],
+      "removed_details": [
+        {
+          "vertex": 163,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 164,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 165,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 1789.0,
+      "prize_slack_after": 990.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "9658effad4eae1dfd8a9c53650255a9725589ac5498699ad5463fd1afdc2eb00"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 42,
+      "initial_cost": 11298,
+      "final_cost": 10631.0,
+      "removed": [
+        6,
+        34,
+        63,
+        99,
+        122,
+        178,
+        205,
+        223,
+        244,
+        270,
+        362
+      ],
+      "added": [
+        106,
+        195,
+        237,
+        239,
+        248,
+        305,
+        308,
+        381,
+        382,
+        385,
+        389,
+        390,
+        399
+      ],
+      "removed_details": [
+        {
+          "vertex": 6,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 34,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 63,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 99,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 122,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 178,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 205,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 223,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 244,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 270,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 362,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 28.0,
+      "prize_slack_after": 81.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "ebfcea1051695a731d41b2761640e6d32bdb7d1296a196a4c79ee688342471e0"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 43,
+      "initial_cost": 12282,
+      "final_cost": 11140.0,
+      "removed": [
+        6,
+        31,
+        65,
+        146,
+        177,
+        205,
+        208,
+        210,
+        226,
+        244,
+        257,
+        285,
+        353,
+        357,
+        362
+      ],
+      "added": [
+        76,
+        198,
+        233,
+        297,
+        381,
+        382,
+        383,
+        386,
+        389,
+        394,
+        399
+      ],
+      "removed_details": [
+        {
+          "vertex": 6,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 31,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 65,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 146,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 177,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 205,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 208,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 210,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 226,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 244,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 257,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 285,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 353,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 357,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 362,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 334.0,
+      "prize_slack_after": 102.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "6e5919517116bb5a2002ebdeeff569d46771f857ee0b31a3f5962b0980a336f2"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 44,
+      "initial_cost": 11422,
+      "final_cost": 10731.0,
+      "removed": [
+        21,
+        33,
+        95,
+        102,
+        146,
+        178,
+        235,
+        256,
+        257,
+        346,
+        387,
+        394
+      ],
+      "added": [
+        164,
+        214,
+        226,
+        236,
+        285,
+        381,
+        382,
+        385,
+        389,
+        399
+      ],
+      "removed_details": [
+        {
+          "vertex": 21,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 33,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 95,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 102,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 146,
+          "coverage_blocked": false,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 178,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 235,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 256,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 257,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 346,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 387,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 394,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 0,
+      "prize_slack_before": 190.0,
+      "prize_slack_after": 101.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "23fbce88b68aac9a59f0c03922133dcc0d4fea9ddb0a67a09ab3058d152c7639"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 42,
+      "initial_cost": 7371,
+      "final_cost": 6878.0,
+      "removed": [],
+      "added": [
+        153,
+        158,
+        165,
+        169
+      ],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 19,
+      "prize_slack_before": 51.0,
+      "prize_slack_after": 361.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "c119150aa4852dd282ae7f6cbe57155d1b818fd103dd5ebf83e5985b41236911"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 43,
+      "initial_cost": 7278,
+      "final_cost": 6908.0,
+      "removed": [],
+      "added": [
+        140,
+        153,
+        169
+      ],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 19,
+      "prize_slack_before": 47.0,
+      "prize_slack_after": 283.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "43ec01db098a3ead9a22184ff359bf3f611141838de1b1302781b6b77a0e043d"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 44,
+      "initial_cost": 7329,
+      "final_cost": 6878.0,
+      "removed": [],
+      "added": [
+        147,
+        152,
+        153,
+        165
+      ],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 19,
+      "prize_slack_before": 50.0,
+      "prize_slack_after": 361.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "d1ba34e91181dccbcbe258adb6ca2481f3b85e214fbe1f93d9f5e7532a04f9df"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 42,
+      "initial_cost": 109738,
+      "final_cost": 109147.0,
+      "removed": [
+        92,
+        139,
+        183,
+        193,
+        208,
+        218
+      ],
+      "added": [
+        1,
+        94,
+        160,
+        181,
+        191,
+        202,
+        206,
+        216,
+        224
+      ],
+      "removed_details": [
+        {
+          "vertex": 92,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 139,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 183,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 193,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 208,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 218,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 34,
+      "prize_slack_before": 6272.0,
+      "prize_slack_after": 31879.0,
+      "net_removal_without_additions_violates_coverage": true,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "33f52080f30b390293dfb7eea979d09e6c07c51edef938dc00ab51f54acd1faf"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 43,
+      "initial_cost": 110051,
+      "final_cost": 108989.0,
+      "removed": [
+        67,
+        80,
+        88,
+        92,
+        139,
+        144,
+        193,
+        218,
+        224
+      ],
+      "added": [
+        1,
+        69,
+        82,
+        86,
+        94,
+        160,
+        165,
+        191,
+        204,
+        216,
+        222
+      ],
+      "removed_details": [
+        {
+          "vertex": 67,
+          "coverage_blocked": true,
+          "prize_blocked": false
+        },
+        {
+          "vertex": 80,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 88,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 92,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 139,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 144,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 193,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 218,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 224,
+          "coverage_blocked": true,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 34,
+      "prize_slack_before": 3872.0,
+      "prize_slack_after": 20410.0,
+      "net_removal_without_additions_violates_coverage": true,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "93d06aa7cd9048b99f3f4435d70674f89f00287b41defb6e81beee4d3f77e8e6"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "seed": 44,
+      "initial_cost": 108989,
+      "final_cost": 108989,
+      "removed": [],
+      "added": [],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 34,
+      "prize_slack_before": 3872.0,
+      "prize_slack_after": 3872.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "079f9353fb7f3b90a133af28d05378cc6e8683143d828ab9141fc58caac954a1"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 42,
+      "initial_cost": 2455,
+      "final_cost": 2455,
+      "removed": [],
+      "added": [],
+      "removed_details": [],
+      "coverage_rows_not_satisfied_by_mandatory": 127,
+      "prize_slack_before": 2.0,
+      "prize_slack_after": 2.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": false,
+      "source_sha256": "70a9043f590ea7c7d984e101747f753e56d5560de3d1eb72440a1f7e33cabbf2"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 43,
+      "initial_cost": 2457,
+      "final_cost": 2447.0,
+      "removed": [
+        144
+      ],
+      "added": [
+        167,
+        207
+      ],
+      "removed_details": [
+        {
+          "vertex": 144,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 127,
+      "prize_slack_before": 2.0,
+      "prize_slack_after": 29.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "1abea9e55a5979d4d994f31c400c5cd3a0ebfce1cfce48deb454716caa05b1d8"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "seed": 44,
+      "initial_cost": 2450,
+      "final_cost": 2449.0,
+      "removed": [
+        84,
+        200
+      ],
+      "added": [
+        193,
+        207
+      ],
+      "removed_details": [
+        {
+          "vertex": 84,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        },
+        {
+          "vertex": 200,
+          "coverage_blocked": false,
+          "prize_blocked": true
+        }
+      ],
+      "coverage_rows_not_satisfied_by_mandatory": 127,
+      "prize_slack_before": 8.0,
+      "prize_slack_after": 9.0,
+      "net_removal_without_additions_violates_coverage": false,
+      "net_removal_without_additions_violates_prize": true,
+      "source_sha256": "ad65c8170e17fd228142b02f32c9c553a5c5b936621777fb9a5ebb8ddb6c5edb"
+    }
+  ]
+}

@@ -249,3 +249,33 @@ O avaliador eexportador aceitam diretório explícito echecagemobrigatória
 monotonic+elitebounded; novo buildaceita--model-filecongelado. A coleta deve
 concluir antesdenovotreino/benchmark. As probabilidades antigas efeatures são
 apenas diagnóstico de desenvolvimento; nadafoiabertodevalidação/teste.
+
+## Retreino e piloto com pesos novos, às 8h25
+
+A coleta `59eb88271c01` foi auditada por completo: 20 geometrias TRAIN,
+30250 chamadas, 5654 melhorias, 11 buscas completas, 9 checkpoints, nenhuma
+falha de geração. O LOGO em `operator_prediction.91a13bc40523.json` repetiu
+o padrão anterior. Brier médio: operador 0,119943, tamanho 0,118421,
+genérico 0,117124, estado 0,115798. O estado vence o genérico em 14 de 20
+geometrias no Brier e em 6 de 20 no tempo. O MAE do logtempo fica em
+0,465806 no genérico e 0,480348 no estado.
+
+Pesos finais em `operator_models/models.6a4290f73aed.json`, só TRAIN.
+A inferência nativa passou em 6120 comparações, erro máximo 5,33e-15.
+O binário `build_timed_elite_bounded` embute esse arquivo, relógio monotônico
+e elite delimitada.
+
+Protocolo `f312dec5a350`: mesmas 9 geometrias DEV, sementes 42/43/44, prazo
+1 s. Auditoria passou. Custo no prazo contra a ordem original: static 3/24/0,
+size 1/26/0, generic 3/23/1, joint 3/22/2, adaptive 2/25/0. A média relativa
+por geometria do joint é +0,000875, pior que a ordem original. Na curva de
+incumbente, a diferença relativa média do joint também é positiva
+(+0,001130); static, size, generic e adaptive ficam levemente negativas.
+Dois processos não retornaram e foram mortos aos 16 s; seus incumbentes
+anteriores ao último progresso registrado permanecem na comparação.
+
+Conclusão deste protocolo: reordenar os 15 operadores com os modelos
+retreinados não melhora o MDM corrigido sob prazo comum. Não usar este
+conjunto de desenvolvimento para escolher outra cabeça ou outro prazo.
+A pergunta seguinte está na agenda de padrões conjuntos, não numa nova
+variante deste escalonador.

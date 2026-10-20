@@ -1,5 +1,6 @@
 """Verify exact subset-DP repair by independent SCF and exhaustive tiny tours."""
 import json
+import hashlib
 from pathlib import Path
 import numpy as np
 from dp_repair import DPRepair
@@ -28,7 +29,10 @@ def main():
     assert timed['status']==1 and timed['reason']=='time_limit',timed
     assert timed['cost']==n
     result=dict(status='PASS',independent_SCF_comparisons=30,exhaustive_neighborhoods=18,
-                includes_fixed_mandatory_routing_anchors=True,timeout_retains_feasible_route=True,rows=rows)
+                includes_fixed_mandatory_routing_anchors=True,timeout_retains_feasible_route=True,rows=rows,
+                native_clock='clock_gettime(CLOCK_MONOTONIC)',
+                source_hashes={n:hashlib.sha256(Path(__file__).with_name(n).read_bytes()).hexdigest()
+                               for n in ['verify_dp.py','path_dp.cpp','dp_repair.py']})
     Path(__file__).with_name('dp_verification.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='rows'}))
 

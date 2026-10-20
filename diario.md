@@ -337,6 +337,30 @@ anteriores conservam seus snapshots e escopos originais. Uma primeira edição
 deste resumo não encontrou o texto esperado porque a entrada de 16h26 já
 havia atualizado o parágrafo; reli o arquivo e preservei aquela entrada.
 
+## 20/10/2026, 16h38 Fortaleza: cópia enviada ao GitHub
+
+O usuário pediu para colocar o projeto em outro PC. O remoto já era
+`https://github.com/glaubosclimaco/PCCTP` e estava público. A branch
+`codex/pcctp-learning-submission` não tinha upstream. O índice local, cerca
+de mil arquivos de artigos, experimentos, notas e o rascunho em `submission/`,
+foi commitado e enviado nessa branch.
+
+Ficaram de fora do commit: `include/Utils.h`, alteração preexistente do
+usuário, e quatro locks de fila (`awake300_train.queue.lock`,
+`published70_awake_calibration.queue.lock`, `published70_calibration.queue.lock`,
+`ruin_total300_train.queue.lock`). Um clone não herda esses locks. Os
+processos desta máquina, se ainda estiverem ativos, continuam aqui. No outro
+PC, confira processos e locks antes de lançar otimizador. Não trate o push
+como fim do lote 300s nem como resultado científico novo.
+
+No outro computador:
+
+```
+git clone https://github.com/glaubosclimaco/PCCTP.git
+cd PCCTP
+git checkout codex/pcctp-learning-submission
+```
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto
