@@ -1,5 +1,24 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 09h00 —awake5/81; calibração70proveniênciaambiental fechada
+
+28075ATIVO,3504FILAAguarda.NÃODUPLICAR. observe_awake300PASS5runs42rotas,
+curvas216eventos,0geometriascompletas;primeiroblocoambientalcontinuaPASS.
+A280seed71H10=2001,MDM2018;H60aindaemexecução.Nãocompararporgeometria
+antes9runs,nãousardadosantigoscomprometidos.
+
+Calibração70AINDASEMRESULTADOS. Runnerpublished70_calibration.pyagora
+amarraenvironment_file/hashnosresultados;resumeexigePASS/hashigual e
+parcialnative.jsonsemrecordbloqueiareusoatéreview. Auditorsourcecongelada
+noprotocolodecalibraçãoantescoleta. Auditorindependenterelêenvhash/status,
+instância,thresholdsfinitos/sem_sleep etimestamp;70completoexige duração
+finita/positivaewrapper≥duraçãonativa. CompileinmemoryPASS2arquivos;
+auditor70NO_RESULTSesperadosemprotocoloreal. Nenhumsolverextralançado.
+Proteção nãoprovacargaCPU/temperaturaconstante,apenassuspensãogrossa.
+Próximo:poll28075/3504;observe_awake300.py;fechargeometriascompletas.
+Aindaaguardar81awake+9calibraçãoantesmain70×10. Utils.h/CTP/teste12intocados.
+
+
 ## Retomada20/10 08h50 —primeiroblocoawakePASS; proteçãoambientalpareado70 pronta
 
 28075ATIVO,3504aguardando.NÃODUPLICAR.Novobatch3/81auditPASS29rotas,

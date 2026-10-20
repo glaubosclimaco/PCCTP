@@ -22,7 +22,7 @@ if __name__=='__main__':
     priority={'g_gil262':0,'g_rd400':1}
     cases=sorted(cases,key=lambda c:(priority.get(c['geometry'],2),c['instance']))
     build=ROOT/'experiments/original_mdm/build_timed_elite_bounded'
-    sources=[Path(__file__),ROOT/'experiments/original_mdm/timed_experiment.py',
+    sources=[Path(__file__),HERE/'audit_published70_calibration.py',ROOT/'experiments/original_mdm/timed_experiment.py',
              HERE/'raw_route_audit.py',HERE/'awake300_train.py',ROOT/'research_notes/published70_calibration_protocol.md']
     binaries=[build/'original_mdm',build/'FPMax/fim_maximal',build/'FPMax/fpmax_hnmp']
     protocol=dict(scope='TRAIN reference calibration only, not ten-seed final replication',
@@ -36,17 +36,25 @@ if __name__=='__main__':
     else:p.write_text(json.dumps(protocol,indent=2)+'\n')
     for case in cases:
         name=case['instance'];target=OUT/f'{name}.seed80.json'
-        if target.exists():continue
+        if target.exists():
+            prior=json.loads(target.read_text());envpath=OUT/prior['environment_file']
+            assert digest(envpath)==prior['environment_sha256']
+            assert json.loads(envpath.read_text())['status']=='PASS'
+            continue
+        assert not (OUT/f'{name}.seed80.native.json').exists(),'Review and preserve incomplete reference attempt before reuse'
         began=time.clock_gettime(time.CLOCK_MONOTONIC)
         with ClockGuard() as guard:
             native=run_one(name,80,'original',0.,OUT/f'{name}.seed80.native.json',True,
                            parent_started=began,hard_timeout_seconds=43200.)
-        environmental=dict(instance=name,max_monitor_gap_seconds=guard.max_gap,
+        environmental=dict(status='PASS',instance=name,started_unix=guard.started,finished_unix=time.time(),
+            max_monitor_gap_seconds=guard.max_gap,
             max_clock_difference_seconds=guard.clock_difference,sleep_events=sleep_events_since(guard.started))
         if guard.max_gap>5 or guard.clock_difference>3 or environmental['sleep_events']:
+            environmental['status']='ENVIRONMENT_FAILURE'
             (OUT/'environment_failure.json').write_text(json.dumps(environmental,indent=2)+'\n')
             raise AssertionError('Reference environment compromised; raw attempt preserved')
-        (OUT/f'environment.{name}.seed80.json').write_text(json.dumps(environmental,indent=2)+'\n')
+        envpath=OUT/f'environment.{name}.seed80.json'
+        envpath.write_text(json.dumps(environmental,indent=2)+'\n')
         raw=OUT/f'{name}.seed80.native.raw';exports=[];errors=[]
         for source in (raw,Path(str(raw)+'.checkpoint')):
             if not source.exists():continue
@@ -65,6 +73,7 @@ if __name__=='__main__':
                       and not native['hard_timeout'] and native['exit_code']==0)
         if complete:assert max(s['iteration'] for s in payload['snapshots'])==70
         record=dict(instance=name,seed=80,status='COMPLETED70' if complete else 'CENSORED_OR_FAILED',
+            environment_file=envpath.name,environment_sha256=digest(envpath),
             cost=payload['cost'] if complete else None,route=payload['route'] if complete else [],
             observed_cost=payload['cost'] if payload else None,
             observed_iterations=payload['iterations'] if payload else None,

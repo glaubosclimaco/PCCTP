@@ -1,5 +1,5 @@
 """Independent final-iteration, scalar route and provenance audit of reference runs."""
-import hashlib,json
+import hashlib,json,math
 from pathlib import Path
 from raw_route_audit import load,check
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
@@ -17,6 +17,12 @@ if __name__=='__main__':
         r=json.loads(p.read_text());assert r['seed']==80 and r['instance'] not in keys
         assert r['instance'] in {c['instance'] for c in protocol['cases']}
         keys.add(r['instance']);d=load(r['instance']);assert d['input_hash']==r['input_sha256']
+        envpath=folder/r['environment_file'];assert digest(envpath)==r['environment_sha256']
+        environment=json.loads(envpath.read_text())
+        assert environment['status']=='PASS' and environment['instance']==r['instance']
+        assert not environment['sleep_events'] and environment['started_unix']<=environment['finished_unix']
+        for field,limit in (('max_monitor_gap_seconds',5.),('max_clock_difference_seconds',3.)):
+            assert math.isfinite(environment[field]) and 0<=environment[field]<=limit
         native=r['native'];assert native['budget_seconds']==0 and native['elite_count_bounded']
         payloads={}
         for name,hashed in r['export_hashes'].items():
@@ -29,6 +35,8 @@ if __name__=='__main__':
                       and not native['hard_timeout'] and native['exit_code']==0)
         assert (r['status']=='COMPLETED70')==complete
         if complete:
+            assert math.isfinite(native['process_wall_seconds']) and native['process_wall_seconds']>0
+            assert r['wrapper_wall_seconds']>=native['process_wall_seconds']
             assert max(s['iteration'] for s in chosen['snapshots'])==70
             assert (r['route'],r['cost'])==(chosen['route'],chosen['cost'])
             check(d,r['route'],r['cost']);checked+=1
