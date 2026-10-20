@@ -255,6 +255,41 @@ no fim da ordem impede iniciar até os pares anteriores ainda não executados.
 Esses testes validam contratos, não desempenho. As alterações e certificados
 serão salvos seletivamente, mantendo `include/Utils.h` fora dos commits.
 
+## 20/10/2026, 16h20 Fortaleza — diagnóstico passivo da perda de H10
+
+Confirmei as sessões 13438 (único otimizador) e 26890 (fila aguardando). A
+repetição de ts225/seed72 já gravou H60 e H10, ambos com custo108805; o bloco
+de três ainda precisa terminar e passar pela auditoria ambiental. O resumo
+aceito continua sendo69/81: não promover linhas isoladas a um bloco validado.
+
+Investiguei por que o ganho médio de H10 ficou negativo quando rd400 entrou
+no conjunto completo. Novo script passivo
+`experiments/lkh/diagnose_awake300_initialization.py` lê somente os resultados
+completos e ligados aos hashes das auditorias; conferiu escalarmente custos e
+rotas iniciais/finais, reconciliação de contadores e efeitos por geometria.
+Foram63resultados dos três braços, dos quais42híbridos, sete geometrias.
+Nenhum otimizador ou dado reservado foi usado. Relatório legível em
+`research_notes/awake300_initialization_diagnostics.md`, dados/proveniência em
+`experiments/lkh/awake300_initialization_diagnostics.json`. As três auditorias
+de entrada foram preservadas em `awake300_initialization_snapshots/`, pois os
+observadores as atualizarão quando o lote avançar.
+
+Em rd400, H10 perde19,479595% na média das três sementes. Nas sementes70e72,
+não houve incumbente MDM tempestivo nos10s: a fase começou do fallback,
+custos15499e14143, e terminou em13975em ambas. Os contadores dessas fases são,
+respectivamente,1065chamadas/0exit0/1032timeouts/33other e
+1187chamadas/0exit0/1186timeouts/1other. H60 melhora0,959129% em rd400.
+Exit0 significa apenas retorno normal do processo, não uma rota melhor e
+validada; contadores não fornecem decomposição detalhada do tempo por chamada.
+
+Contraponto importante: pr226/seed70/H10 também não teve incumbente MDM no
+prazo, mas recuperou o fallback88536para67286, com3189registros exit0. Além
+disso, rd400/seed72/H60 melhora11486para10750mesmo sem exit0. Portanto, os
+dados sugerem interação entre qualidade inicial e esforço de reparação/
+reordenação; não isolam causalidade nem provam que cache resolva o problema.
+Não eliminar rd400, trocar sementes, alterar limiares ou modificar candidatos.
+Próximo passo permanece concluir os dois braços e a calibração MDM70.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto

@@ -1,5 +1,24 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h20 — diagnóstico passivo H10; coleta e fila seguem ativas
+
+Sessões13438/26890 confirmadas. Repetição ts225seed72 gravou H60/H10 com108805,
+mas bloco ainda aberto; snapshot aceito segue69/81/setegeometrias. Não duplicar.
+
+Novo diagnose_awake300_initialization.py/JSON e research_notes/
+awake300_initialization_diagnostics.md:63arquivos auditados completos (42híbridos),
+custos/rotas escalarmente conferidos, contadores reconciliados, ganhos porfração
+recomputados. Snapshots imutáveis das3auditorias em awake300_initialization_snapshots/
+runs69_73fa5ffd4358/ para preservar upstream quando observer atualizar.
+
+rd400 H10−19,479595%: seeds70/72 semincumbenteMDMnos10s, fallback15499/14143→13975;
+respectivos contadores calls/exit0/timeout/other1065/0/1032/33 e1187/0/1186/1.
+H60rd400+0,959129%. Contraponto pr226seed70H10: também semMDMtempestivo,
+fallback88536→67286,3189exit0; rd400seed72H60 melhora11486→10750com0exit0.
+Não atribuir causaúnica, nem considerar exit0 rota válida/melhora, nem prometer
+que cache resolva. Nenhum parâmetro/controle/gate/fonte ativa alterado.
+Diário atualizado com motivos/limites/caminhos. Próximo: concluir81+auds→calibração9.
+
 ## 20/10, 16h10 — falha ambiental revista; coleta retomada; diário atualizado
 
 Sessões antigas28075/3504 não existem mais. ps confirmou nenhum otimizador/fila.

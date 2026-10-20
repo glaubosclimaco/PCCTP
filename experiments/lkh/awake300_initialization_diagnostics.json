@@ -1,0 +1,936 @@
+{
+  "status": "PASS",
+  "scope": "Passive diagnostics on all currently complete TRAIN geometries; no reserved inputs, optimization, new gate, causal claim or independent confirmation.",
+  "batch_runs": 69,
+  "batch_complete": false,
+  "completed_geometries": 7,
+  "upstream_snapshot_sha256": {
+    "experiments/lkh/awake300_initialization_snapshots/runs69_73fa5ffd4358/ruin_total300_awake_train_audit.json": "73fa5ffd4358f65434b382f5c74a7b3722b40108701b60d2819ee26ddcf8d122",
+    "experiments/lkh/awake300_initialization_snapshots/runs69_73fa5ffd4358/ruin_total300_awake_train_summary.json": "34f74c5bcf7fa53eb6574d7316cbc31f231b16f2ceff8f5cf4a7c31c603038ef",
+    "experiments/lkh/awake300_initialization_snapshots/runs69_73fa5ffd4358/ruin_total300_awake_environment_audit.json": "4accab0a0deec7dc7466268501c9c68d7973d371f803cd4ab64e26fa391f8d11"
+  },
+  "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2148,
+      "initial_cost": 2148,
+      "final_cost": 1992.0,
+      "initial_support": 192,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 7.262569832402234,
+      "counters": {
+        "lkh_calls": 1959,
+        "lkh_completed": 1822,
+        "lkh_timeouts": 117,
+        "lkh_failed": 20
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2067,
+      "initial_cost": 2067,
+      "final_cost": 2001.0,
+      "initial_support": 193,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 3.193033381712627,
+      "counters": {
+        "lkh_calls": 2023,
+        "lkh_completed": 1942,
+        "lkh_timeouts": 66,
+        "lkh_failed": 15
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2084,
+      "initial_cost": 2084,
+      "final_cost": 2001.0,
+      "initial_support": 189,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 3.9827255278310942,
+      "counters": {
+        "lkh_calls": 1718,
+        "lkh_completed": 1514,
+        "lkh_timeouts": 144,
+        "lkh_failed": 60
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2071,
+      "initial_cost": 2071,
+      "final_cost": 2001.0,
+      "initial_support": 189,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 3.380009657170449,
+      "counters": {
+        "lkh_calls": 2717,
+        "lkh_completed": 2695,
+        "lkh_timeouts": 20,
+        "lkh_failed": 2
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2148,
+      "initial_cost": 2148,
+      "final_cost": 2001.0,
+      "initial_support": 195,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 6.843575418994414,
+      "counters": {
+        "lkh_calls": 2437,
+        "lkh_completed": 2308,
+        "lkh_timeouts": 104,
+        "lkh_failed": 25
+      }
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2025,
+      "initial_cost": 2025,
+      "final_cost": 2002.0,
+      "initial_support": 192,
+      "final_support": 192,
+      "reduction_after_initialization_percent": 1.1358024691358024,
+      "counters": {
+        "lkh_calls": 2282,
+        "lkh_completed": 2252,
+        "lkh_timeouts": 27,
+        "lkh_failed": 3
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2101,
+      "initial_cost": 2101,
+      "final_cost": 1986.0,
+      "initial_support": 192,
+      "final_support": 188,
+      "reduction_after_initialization_percent": 5.473584007615421,
+      "counters": {
+        "lkh_calls": 2197,
+        "lkh_completed": 2050,
+        "lkh_timeouts": 119,
+        "lkh_failed": 28
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2009,
+      "initial_cost": 2009,
+      "final_cost": 1990.0,
+      "initial_support": 185,
+      "final_support": 188,
+      "reduction_after_initialization_percent": 0.9457441513190642,
+      "counters": {
+        "lkh_calls": 1768,
+        "lkh_completed": 1643,
+        "lkh_timeouts": 115,
+        "lkh_failed": 10
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2034,
+      "initial_cost": 2034,
+      "final_cost": 1981.0,
+      "initial_support": 185,
+      "final_support": 190,
+      "reduction_after_initialization_percent": 2.6057030481809242,
+      "counters": {
+        "lkh_calls": 2307,
+        "lkh_completed": 2163,
+        "lkh_timeouts": 104,
+        "lkh_failed": 40
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2034,
+      "initial_cost": 2034,
+      "final_cost": 1981.0,
+      "initial_support": 185,
+      "final_support": 190,
+      "reduction_after_initialization_percent": 2.6057030481809242,
+      "counters": {
+        "lkh_calls": 3091,
+        "lkh_completed": 3062,
+        "lkh_timeouts": 23,
+        "lkh_failed": 6
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 2189,
+      "initial_cost": 2189,
+      "final_cost": 1981.0,
+      "initial_support": 197,
+      "final_support": 190,
+      "reduction_after_initialization_percent": 9.502055733211511,
+      "counters": {
+        "lkh_calls": 3492,
+        "lkh_completed": 3457,
+        "lkh_timeouts": 29,
+        "lkh_failed": 6
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 2042,
+      "initial_cost": 2042,
+      "final_cost": 1984.0,
+      "initial_support": 188,
+      "final_support": 189,
+      "reduction_after_initialization_percent": 2.840352595494613,
+      "counters": {
+        "lkh_calls": 1642,
+        "lkh_completed": 1512,
+        "lkh_timeouts": 108,
+        "lkh_failed": 22
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 105453,
+      "initial_cost": 105453,
+      "final_cost": 96707.0,
+      "initial_support": 161,
+      "final_support": 161,
+      "reduction_after_initialization_percent": 8.293742235877595,
+      "counters": {
+        "lkh_calls": 1733,
+        "lkh_completed": 1474,
+        "lkh_timeouts": 209,
+        "lkh_failed": 50
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 99978,
+      "initial_cost": 99978,
+      "final_cost": 96753.0,
+      "initial_support": 160,
+      "final_support": 162,
+      "reduction_after_initialization_percent": 3.2257096561243475,
+      "counters": {
+        "lkh_calls": 1777,
+        "lkh_completed": 1624,
+        "lkh_timeouts": 129,
+        "lkh_failed": 24
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 104894,
+      "initial_cost": 104894,
+      "final_cost": 96753.0,
+      "initial_support": 158,
+      "final_support": 162,
+      "reduction_after_initialization_percent": 7.761168417640666,
+      "counters": {
+        "lkh_calls": 3983,
+        "lkh_completed": 3976,
+        "lkh_timeouts": 7,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 104167,
+      "initial_cost": 104167,
+      "final_cost": 96753.0,
+      "initial_support": 158,
+      "final_support": 162,
+      "reduction_after_initialization_percent": 7.117417224264883,
+      "counters": {
+        "lkh_calls": 2615,
+        "lkh_completed": 2578,
+        "lkh_timeouts": 31,
+        "lkh_failed": 6
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 103284,
+      "initial_cost": 103284,
+      "final_cost": 96707.0,
+      "initial_support": 163,
+      "final_support": 161,
+      "reduction_after_initialization_percent": 6.367878858293637,
+      "counters": {
+        "lkh_calls": 1937,
+        "lkh_completed": 1776,
+        "lkh_timeouts": 135,
+        "lkh_failed": 26
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 101370,
+      "initial_cost": 101370,
+      "final_cost": 96707.0,
+      "initial_support": 163,
+      "final_support": 161,
+      "reduction_after_initialization_percent": 4.599980270296932,
+      "counters": {
+        "lkh_calls": 1988,
+        "lkh_completed": 1920,
+        "lkh_timeouts": 62,
+        "lkh_failed": 6
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 23545,
+      "initial_cost": 23545,
+      "final_cost": 23526.0,
+      "initial_support": 130,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 0.08069653854321512,
+      "counters": {
+        "lkh_calls": 3260,
+        "lkh_completed": 3218,
+        "lkh_timeouts": 35,
+        "lkh_failed": 7
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 23499,
+      "initial_cost": 23499,
+      "final_cost": 23495.0,
+      "initial_support": 130,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 0.017022000936210053,
+      "counters": {
+        "lkh_calls": 2980,
+        "lkh_completed": 2938,
+        "lkh_timeouts": 39,
+        "lkh_failed": 3
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 23806,
+      "initial_cost": 23806,
+      "final_cost": 23495.0,
+      "initial_support": 128,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 1.30639334621524,
+      "counters": {
+        "lkh_calls": 3138,
+        "lkh_completed": 3068,
+        "lkh_timeouts": 60,
+        "lkh_failed": 10
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 23514,
+      "initial_cost": 23514,
+      "final_cost": 23495.0,
+      "initial_support": 130,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 0.0808029259164753,
+      "counters": {
+        "lkh_calls": 2691,
+        "lkh_completed": 2630,
+        "lkh_timeouts": 52,
+        "lkh_failed": 9
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 23550,
+      "initial_cost": 23550,
+      "final_cost": 23495.0,
+      "initial_support": 128,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 0.23354564755838642,
+      "counters": {
+        "lkh_calls": 3230,
+        "lkh_completed": 3163,
+        "lkh_timeouts": 52,
+        "lkh_failed": 15
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 23514,
+      "initial_cost": 23514,
+      "final_cost": 23495.0,
+      "initial_support": 130,
+      "final_support": 130,
+      "reduction_after_initialization_percent": 0.0808029259164753,
+      "counters": {
+        "lkh_calls": 3466,
+        "lkh_completed": 3451,
+        "lkh_timeouts": 15,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": true,
+      "native_cost": null,
+      "initial_cost": 88536.0,
+      "final_cost": 67286.0,
+      "initial_support": 161,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 24.001536098310293,
+      "counters": {
+        "lkh_calls": 3235,
+        "lkh_completed": 3189,
+        "lkh_timeouts": 31,
+        "lkh_failed": 15
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 67889,
+      "initial_cost": 67889,
+      "final_cost": 67286.0,
+      "initial_support": 159,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 0.8882145855735097,
+      "counters": {
+        "lkh_calls": 1187,
+        "lkh_completed": 959,
+        "lkh_timeouts": 176,
+        "lkh_failed": 52
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 75481,
+      "initial_cost": 75481,
+      "final_cost": 67286.0,
+      "initial_support": 158,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 10.857036870205746,
+      "counters": {
+        "lkh_calls": 3216,
+        "lkh_completed": 3141,
+        "lkh_timeouts": 68,
+        "lkh_failed": 7
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 68650,
+      "initial_cost": 68650,
+      "final_cost": 67286.0,
+      "initial_support": 159,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 1.9868900218499637,
+      "counters": {
+        "lkh_calls": 3122,
+        "lkh_completed": 3106,
+        "lkh_timeouts": 14,
+        "lkh_failed": 2
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 71963,
+      "initial_cost": 71963,
+      "final_cost": 67286.0,
+      "initial_support": 159,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 6.4991731862206965,
+      "counters": {
+        "lkh_calls": 3347,
+        "lkh_completed": 3310,
+        "lkh_timeouts": 30,
+        "lkh_failed": 7
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 68406,
+      "initial_cost": 68406,
+      "final_cost": 67286.0,
+      "initial_support": 159,
+      "final_support": 160,
+      "reduction_after_initialization_percent": 1.6372832792445107,
+      "counters": {
+        "lkh_calls": 3384,
+        "lkh_completed": 3372,
+        "lkh_timeouts": 10,
+        "lkh_failed": 2
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": true,
+      "native_cost": null,
+      "initial_cost": 15499.0,
+      "final_cost": 13975.0,
+      "initial_support": 306,
+      "final_support": 259,
+      "reduction_after_initialization_percent": 9.832892444673849,
+      "counters": {
+        "lkh_calls": 1065,
+        "lkh_completed": 0,
+        "lkh_timeouts": 1032,
+        "lkh_failed": 33
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 10919,
+      "initial_cost": 10919,
+      "final_cost": 10630.0,
+      "initial_support": 257,
+      "final_support": 259,
+      "reduction_after_initialization_percent": 2.646762524040663,
+      "counters": {
+        "lkh_calls": 1081,
+        "lkh_completed": 852,
+        "lkh_timeouts": 199,
+        "lkh_failed": 30
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 11453,
+      "initial_cost": 11453,
+      "final_cost": 10667.0,
+      "initial_support": 262,
+      "final_support": 259,
+      "reduction_after_initialization_percent": 6.862830699380075,
+      "counters": {
+        "lkh_calls": 1482,
+        "lkh_completed": 1037,
+        "lkh_timeouts": 445,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 11022,
+      "initial_cost": 11022,
+      "final_cost": 10631.0,
+      "initial_support": 262,
+      "final_support": 258,
+      "reduction_after_initialization_percent": 3.547450553438577,
+      "counters": {
+        "lkh_calls": 1002,
+        "lkh_completed": 596,
+        "lkh_timeouts": 383,
+        "lkh_failed": 23
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": true,
+      "native_cost": null,
+      "initial_cost": 14143.0,
+      "final_cost": 13975.0,
+      "initial_support": 262,
+      "final_support": 259,
+      "reduction_after_initialization_percent": 1.1878667892243513,
+      "counters": {
+        "lkh_calls": 1187,
+        "lkh_completed": 0,
+        "lkh_timeouts": 1186,
+        "lkh_failed": 1
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 11486,
+      "initial_cost": 11486,
+      "final_cost": 10750.0,
+      "initial_support": 259,
+      "final_support": 258,
+      "reduction_after_initialization_percent": 6.4078008009751,
+      "counters": {
+        "lkh_calls": 985,
+        "lkh_completed": 0,
+        "lkh_timeouts": 984,
+        "lkh_failed": 1
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 70,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 7225,
+      "initial_cost": 7225,
+      "final_cost": 6908.0,
+      "initial_support": 123,
+      "final_support": 126,
+      "reduction_after_initialization_percent": 4.387543252595155,
+      "counters": {
+        "lkh_calls": 6194,
+        "lkh_completed": 6192,
+        "lkh_timeouts": 2,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 70,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 7102,
+      "initial_cost": 7102,
+      "final_cost": 6878.0,
+      "initial_support": 123,
+      "final_support": 127,
+      "reduction_after_initialization_percent": 3.154041115178823,
+      "counters": {
+        "lkh_calls": 5270,
+        "lkh_completed": 5270,
+        "lkh_timeouts": 0,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 71,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 7148,
+      "initial_cost": 7148,
+      "final_cost": 6908.0,
+      "initial_support": 123,
+      "final_support": 126,
+      "reduction_after_initialization_percent": 3.357582540570789,
+      "counters": {
+        "lkh_calls": 7338,
+        "lkh_completed": 7337,
+        "lkh_timeouts": 1,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 71,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 7118,
+      "initial_cost": 7118,
+      "final_cost": 6908.0,
+      "initial_support": 123,
+      "final_support": 126,
+      "reduction_after_initialization_percent": 2.9502669289126158,
+      "counters": {
+        "lkh_calls": 6077,
+        "lkh_completed": 6076,
+        "lkh_timeouts": 1,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 72,
+      "mode": "hybrid10",
+      "no_timely_native": false,
+      "native_cost": 7077,
+      "initial_cost": 7077,
+      "final_cost": 6908.0,
+      "initial_support": 123,
+      "final_support": 126,
+      "reduction_after_initialization_percent": 2.388017521548679,
+      "counters": {
+        "lkh_calls": 7332,
+        "lkh_completed": 7331,
+        "lkh_timeouts": 1,
+        "lkh_failed": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "seed": 72,
+      "mode": "hybrid60",
+      "no_timely_native": false,
+      "native_cost": 7061,
+      "initial_cost": 7061,
+      "final_cost": 6908.0,
+      "initial_support": 123,
+      "final_support": 126,
+      "reduction_after_initialization_percent": 2.1668318934995043,
+      "counters": {
+        "lkh_calls": 6056,
+        "lkh_completed": 6055,
+        "lkh_timeouts": 1,
+        "lkh_failed": 0
+      }
+    }
+  ],
+  "geometry_effects": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "gains": {
+        "hybrid10": 1.5440210249671484,
+        "hybrid60": 1.3797634691195795
+      },
+      "no_timely_native": {
+        "hybrid10": 0,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "gains": {
+        "hybrid10": 1.6696974706563068,
+        "hybrid60": 1.553975863779137
+      },
+      "no_timely_native": {
+        "hybrid10": 0,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "gains": {
+        "hybrid10": 1.5862625659670877,
+        "hybrid60": 1.5706610953589017
+      },
+      "no_timely_native": {
+        "hybrid10": 0,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "gains": {
+        "hybrid10": -0.03262735307051764,
+        "hybrid60": 0.011348644546267005
+      },
+      "no_timely_native": {
+        "hybrid10": 0,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "gains": {
+        "hybrid10": 1.2098076640728235,
+        "hybrid60": 1.2098076640728235
+      },
+      "no_timely_native": {
+        "hybrid10": 1,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "gains": {
+        "hybrid10": -19.479595309551065,
+        "hybrid60": 0.9591287398285944
+      },
+      "no_timely_native": {
+        "hybrid10": 2,
+        "hybrid60": 0
+      }
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "gains": {
+        "hybrid10": 1.9492808478425436,
+        "hybrid60": 2.091218773656321
+      },
+      "no_timely_native": {
+        "hybrid10": 0,
+        "hybrid60": 0
+      }
+    }
+  ],
+  "input_sha256": {
+    "g_a280_VT56_T168_W56_50": "9b02a59ae42eb4109f4b8764fd9baaceea08d97ffa8a46250aaa05b4ecee3050",
+    "g_gil262_VT51_T158_W53_75": "ecf308f8ed09e5efd64a2c9c9ec838969765be154a46d88577a5ffc97115f883",
+    "g_gr229_VT45_T138_W46_50": "68fc079bd688e4a028b99e866c53b175a032b28d388a2adda9916f40345b72a1",
+    "g_kroA200_VT40_T120_W40_25": "aae406f66facc1ac1070154d077ade41b44340bab2d3472dee40c36358ad5040",
+    "g_pr226_VT44_T136_W46_50": "08f3acfad7f524ff66a9f77d49c444cba41b1f04f4f37d77af07c1d793fac7c9",
+    "g_rd400_VT80_T240_W80_25": "67f8b6866b5dd0d5b5b140816b314973b92a68969e1e6c420142fe055e67c0be",
+    "g_si175_VT35_T105_W35_50": "1c1242dca32f99d6b97e47843a4cc526d4ef8ed74fdfe7e138e309cb7fd75dac"
+  },
+  "result_sha256": {
+    "g_a280_VT56_T168_W56_50.seed70.mdm.json": "4700f785dd5224b42133482dac71c2fdc0db92806df8904c4cbc8df06aab25f0",
+    "g_a280_VT56_T168_W56_50.seed70.hybrid10.json": "845780cc9b064b61137cf9a738427278f2258381ac2dc22aaa9e0c721cf97fa7",
+    "g_a280_VT56_T168_W56_50.seed70.hybrid60.json": "5056ee544c2d1ce3eac1620b108166f484fd24b0b6272785aadf57802dbf2dd8",
+    "g_a280_VT56_T168_W56_50.seed71.mdm.json": "94b88c76a136da04815463ae329fd6b54bf0bbd3b25c21fe1529127c2df9ec17",
+    "g_a280_VT56_T168_W56_50.seed71.hybrid10.json": "5219a2cfe8b328b52c03b3f768844c44d8786aab72cd4210ab53658487f73fa5",
+    "g_a280_VT56_T168_W56_50.seed71.hybrid60.json": "901453a75cb5a4844b9939af683effe7962d577661eedbc790257067c5b06558",
+    "g_a280_VT56_T168_W56_50.seed72.mdm.json": "2f507315586141fa4ba7f5a051a135711adc3a44fabf41f014c458bc202d78dd",
+    "g_a280_VT56_T168_W56_50.seed72.hybrid10.json": "5f728843e1f3e8e4ed78c4c89ea585b0d32dac3379720bec927760f5a6fb5bc9",
+    "g_a280_VT56_T168_W56_50.seed72.hybrid60.json": "608415827bee7e664d993375282b1c76d508b6c55c3c6aeaf7d824196a9f56d4",
+    "g_gil262_VT51_T158_W53_75.seed70.mdm.json": "1e857d700e9156c9101c77056bd304c269526093ba2faf5b866f866e4ada38d8",
+    "g_gil262_VT51_T158_W53_75.seed70.hybrid10.json": "fd162888176e9ac1be7d2ff84b82629ded5da4346c0d7e9f74ea43d6740b2c02",
+    "g_gil262_VT51_T158_W53_75.seed70.hybrid60.json": "7c5fa2bc704ab369575aa6e6b9bfa9d5f4d01d35e96106671db5e6027e0998d7",
+    "g_gil262_VT51_T158_W53_75.seed71.mdm.json": "b366acf41dfe15005b13ae9b350d260345df40de0907f6f617cec2a2f3e97b85",
+    "g_gil262_VT51_T158_W53_75.seed71.hybrid10.json": "39273d055ab7605bff92232feb0069b2c3daa464c345bcbc47c184fed211fd85",
+    "g_gil262_VT51_T158_W53_75.seed71.hybrid60.json": "3d6d4cbd0deba8bac5de13b88fad2f14648247a6d995ff8bc8a756c440b59595",
+    "g_gil262_VT51_T158_W53_75.seed72.mdm.json": "4d8b71061b434e6cb473c66d709659142ece54000fcbd3488e308646c7193074",
+    "g_gil262_VT51_T158_W53_75.seed72.hybrid10.json": "df71932e3442ec75fc647a6fdb98167d8b27f06a83095ac905c267c8f3bb4997",
+    "g_gil262_VT51_T158_W53_75.seed72.hybrid60.json": "cbc963c648e9baa0fad529b47b3c7bc66bc650f4ed30aee68c1fc2b259fbe546",
+    "g_gr229_VT45_T138_W46_50.seed70.mdm.json": "b7aa922c52ed9b62b10df329c51bd0dcf286848735b29d06cb200c627e004387",
+    "g_gr229_VT45_T138_W46_50.seed70.hybrid10.json": "110f15d0ac19b8a127f258c7963f830b514c70519969cb2071d720bebedddd4e",
+    "g_gr229_VT45_T138_W46_50.seed70.hybrid60.json": "81816a7d94de7df2126b410302ba932cff96b8b4b5da92ae7448bdb4114182fe",
+    "g_gr229_VT45_T138_W46_50.seed71.mdm.json": "1f4a4d652337c05e709b8acf7ddfa5b107806d16ab0f755bc69276d2092f71eb",
+    "g_gr229_VT45_T138_W46_50.seed71.hybrid10.json": "d26756604fd086346e1fe0f5c5fa0f662aba01dda52a005e6520c01528da4546",
+    "g_gr229_VT45_T138_W46_50.seed71.hybrid60.json": "53e1acaadbf1b28848e0cb8d78a448a33ab8fdbb6e54acd86fae2920614919a0",
+    "g_gr229_VT45_T138_W46_50.seed72.mdm.json": "24525966f78028a46f51ef504cf23c0b247692d4bab02746c767880360f9d128",
+    "g_gr229_VT45_T138_W46_50.seed72.hybrid10.json": "6b5b23de8b918b739dc237af24d5daf9b204d372e26004defbc43a93a97fe702",
+    "g_gr229_VT45_T138_W46_50.seed72.hybrid60.json": "317cc231aafd683912927c96663e3a90934ba7b99e517dedde6c390a9249a583",
+    "g_kroA200_VT40_T120_W40_25.seed70.mdm.json": "8a3531e2fa4a25df9662d856de17f8b16b243b48aa651c4e460b831a0bd75b67",
+    "g_kroA200_VT40_T120_W40_25.seed70.hybrid10.json": "3a51cec11180df51be2a9744b7d326b5320212e5e251cb39af56676bd40f2f66",
+    "g_kroA200_VT40_T120_W40_25.seed70.hybrid60.json": "65224fd472c3ccd5ad78a17766a4bbffe67c54d843511e0e1d6733535b680e52",
+    "g_kroA200_VT40_T120_W40_25.seed71.mdm.json": "adba566c3857460994312b94f98e570f02e5476cbf5ce66f0f19330467ef1354",
+    "g_kroA200_VT40_T120_W40_25.seed71.hybrid10.json": "57164772353622fbedec680cbc6c52a678af9cd4f6ab25e8ae809acf051dcf46",
+    "g_kroA200_VT40_T120_W40_25.seed71.hybrid60.json": "a8a98c495fbff787c430e06963217df69b6b78274b6fe972a8148e457474ac13",
+    "g_kroA200_VT40_T120_W40_25.seed72.mdm.json": "8083e52f0b44a5c4524e88d7239d7d3b8b262d155c9ef94fd65555069783440d",
+    "g_kroA200_VT40_T120_W40_25.seed72.hybrid10.json": "1859b037fed47ce51fe30273235e8fc857483d2b90b6d3aecca34eab28ad8ff8",
+    "g_kroA200_VT40_T120_W40_25.seed72.hybrid60.json": "005c3c777fbc65e7b9d605773a435e2331337396557897ebd5e12aefd5f1d32a",
+    "g_pr226_VT44_T136_W46_50.seed70.mdm.json": "6e1212e0d548b036c15c2a9c2d71e7c1c0bbe517b42d04fb8343bb911faffe06",
+    "g_pr226_VT44_T136_W46_50.seed70.hybrid10.json": "e03e08e2b0469dbd9e775fb3b59311773a81395b9240ab7f10d4250edcc06ba6",
+    "g_pr226_VT44_T136_W46_50.seed70.hybrid60.json": "eb8e77ed8099a6b74f230a7a98eb16a733ca6321c5d7ab955a40a2092136e584",
+    "g_pr226_VT44_T136_W46_50.seed71.mdm.json": "bbdaa5ec51925800d85bde2d6809170e6278f7a55b0f6ae5cf1b47813c016f72",
+    "g_pr226_VT44_T136_W46_50.seed71.hybrid10.json": "3d5496370f84eaa7692e62fea2fb1f8d80d2c343545202a9d9ce4535609f8a90",
+    "g_pr226_VT44_T136_W46_50.seed71.hybrid60.json": "d4c639edb84c8f777d0f642b85e2a13964a2029ecaf6e086888d2f5428d2b1b1",
+    "g_pr226_VT44_T136_W46_50.seed72.mdm.json": "7eec7886d2288d18ce4a6488738d0fff3ab70e4b478805796313b1c77bb8f44f",
+    "g_pr226_VT44_T136_W46_50.seed72.hybrid10.json": "0821a339df5eeb0aa8339477296d9e84ffd54563be5aae457643e6b4ef5ac7b7",
+    "g_pr226_VT44_T136_W46_50.seed72.hybrid60.json": "22217369cc69e84b3e549a10187070585865003d6a77c1f5d53dae5725cfae26",
+    "g_rd400_VT80_T240_W80_25.seed70.mdm.json": "2d7f21ccb178fbd56d0866d8527e36eb86955928ed639f65cca3cf905065a7a7",
+    "g_rd400_VT80_T240_W80_25.seed70.hybrid10.json": "df2ef0303fdb89478347d24c31eb00071f9c66261e3388e1fa8ee410ca69859a",
+    "g_rd400_VT80_T240_W80_25.seed70.hybrid60.json": "d555583ed2a01a6b8da22bbcd777c5daa9b55899fafc0b7c581ac3bcb1b2a6d8",
+    "g_rd400_VT80_T240_W80_25.seed71.mdm.json": "8313e961ff55c2a0749dc86dd407be026e43e79e276817bbccefc20fac09dc54",
+    "g_rd400_VT80_T240_W80_25.seed71.hybrid10.json": "aadbca795ad5132ffb1718695e0a54e3ee02cdd52047ac1a2fd9ab3906fc0e05",
+    "g_rd400_VT80_T240_W80_25.seed71.hybrid60.json": "6b7dd72ff13b475e7d900040b222716a1fe8f00c4572c1ac7c89392fd6576367",
+    "g_rd400_VT80_T240_W80_25.seed72.mdm.json": "f243a1b62a488be89138142a3e3055443576d349fb7c2192110715cb3ef057d7",
+    "g_rd400_VT80_T240_W80_25.seed72.hybrid10.json": "7d2e936696ddd41167560d2797ad560fa9b1e3fa3b516645febe16621922ad62",
+    "g_rd400_VT80_T240_W80_25.seed72.hybrid60.json": "7a1d08311f98e8d6da85f58d7b51e81e731312324386928a86f2019a406007bf",
+    "g_si175_VT35_T105_W35_50.seed70.mdm.json": "ff35040e987302612e22cf536ce93b81dd7650e31a81d6d65243ebf0454c5ba2",
+    "g_si175_VT35_T105_W35_50.seed70.hybrid10.json": "4b962ff49902248c36b168bd1d50845fc767b3ad95babf75c17e94b30bb1c25f",
+    "g_si175_VT35_T105_W35_50.seed70.hybrid60.json": "a66feccbfc957d92ddcd73238156eea2817eb2a42a5dfa812cffa041120a9401",
+    "g_si175_VT35_T105_W35_50.seed71.mdm.json": "4f280a2dc3fd9dd860c8234eba177df0736ba40242fd247bb4b505636510f424",
+    "g_si175_VT35_T105_W35_50.seed71.hybrid10.json": "46d6500ba09e9a6eab526d8c915ae7e61591a7479e628df9c73f0e8937c08e4e",
+    "g_si175_VT35_T105_W35_50.seed71.hybrid60.json": "687df1990427c2012987f53c256750abc0fc8d7dfb92a3f3546552403c736dcc",
+    "g_si175_VT35_T105_W35_50.seed72.mdm.json": "18f66ab57e3d2e55f97243176877a985e6d90b31470be1f6bceb487c0d3301e4",
+    "g_si175_VT35_T105_W35_50.seed72.hybrid10.json": "5b841c33b2332a33260ed6317da899c4941990cc6b9a5a7d76460b1a47c93d61",
+    "g_si175_VT35_T105_W35_50.seed72.hybrid60.json": "737b5d402a8863bc31f43b8902efa49371ade3ff7e99f4a88e1beca3dd59ad20"
+  },
+  "source_sha256": {
+    "experiments/lkh/diagnose_awake300_initialization.py": "15b2f3d24a1793cb4f3daf97d6ac66a2cbeb8baeb7dc639f97d6d232c9157e71",
+    "experiments/lkh/raw_route_audit.py": "93a853447f107e7b6879eaf84e2d3f02259d91071dd51c47bd2fa4c5bca01ee3",
+    "experiments/lkh/ruin_total300_awake_train_audit.json": "73fa5ffd4358f65434b382f5c74a7b3722b40108701b60d2819ee26ddcf8d122",
+    "experiments/lkh/ruin_total300_awake_train_summary.json": "34f74c5bcf7fa53eb6574d7316cbc31f231b16f2ceff8f5cf4a7c31c603038ef",
+    "experiments/lkh/ruin_total300_awake_environment_audit.json": "4accab0a0deec7dc7466268501c9c68d7973d371f803cd4ab64e26fa391f8d11"
+  },
+  "limitations": [
+    "Exit code zero does not prove a timely validated improving tour.",
+    "Counter buckets can include the final call after the outer event deadline.",
+    "Other status combines nonzero exit and exhausted setup allowance; no per-call logs separate them.",
+    "Poor initialization and ordering statuses are associated observations, not isolated causal effects."
+  ]
+}
