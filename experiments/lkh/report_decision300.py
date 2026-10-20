@@ -25,6 +25,21 @@ if __name__=='__main__':
         effect='—' if c['mean_gain_percent'] is None else f"{c['mean_gain_percent']:.6f}"
         status='pendente' if not complete else ('passou' if c['gate_passed'] else 'não passou')
         lines.append(f"| {mode} | {effect} | {c['wins']} | {c['losses']} | {status} |")
+    lines += ['', '## Custos e consistência nas geometrias completas', '',
+        '| Instância | Média MDM | Média H10 | Média H60 | H10: sementes melhores/iguais/piores | H60: sementes melhores/iguais/piores |',
+        '|---|---:|---:|---:|---|---|']
+    lookup={(r['instance'],r['seed'],r['mode']):r for r in audit['rows']}
+    for row in summary['rows']:
+        name=row['instance'];counts=[]
+        for mode in ('hybrid10','hybrid60'):
+            differences=[lookup[name,s,'mdm']['cost']-lookup[name,s,mode]['cost'] for s in (70,71,72)]
+            counts.append('/'.join(str(sum(test(d) for d in differences)) for test in
+                                   (lambda d:d>0,lambda d:d==0,lambda d:d<0)))
+        means=row['means']
+        lines.append(f"| {name} | {means['mdm']:.3f} | {means['hybrid10']:.3f} | {means['hybrid60']:.3f} | {counts[0]} | {counts[1]} |")
+    lines += ['', 'As contagens por semente são descritivas dentro da mesma instância;',
+        'não multiplicam o número de geometrias independentes.',
+        f"Geometrias com falha de factibilidade: {len(summary['feasibility_failures'])}."]
     lines += ['', 'O desfecho primário é a média das reduções relativas das médias por',
         'geometria. Curvas em outros tempos são descritivas e não substituem300s.',
         'As contagens acima referem-se apenas a geometrias completas; resultados',
