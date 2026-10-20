@@ -613,6 +613,37 @@ cache ou uma segunda calibração. Próximo passo: acompanhar checkpoints
 apenas como observações parciais, preservar eventuais censuras e só usar
 referências70completas/auditadas para dimensionar a comparação principal.
 
+## 20/10/2026, 17h20 Fortaleza — acompanhamento passivo das nove referências
+
+A calibração segue no único processo enfileirado. Ainda há zero registros
+finais de referência e nenhum marcador de falha ambiental. O checkpoint de
+gil262/seed80 observado nesta retomada registrava20iterações, custo2017 e
+nenhuma chamada de mineração exportada. Isso é observação parcial, não um
+resultado MDM70 nem evidência de ausência de mineração durante todo o resto
+da execução. Não estimei o término por regra de três das iterações.
+
+Criei `experiments/lkh/calibration_progress.py`, observador que não inicia
+otimizador nem atualiza a auditoria oficial da fila. Ele mantém os nove slots
+TRAIN do protocolo, distingue ainda não iniciado, checkpoint, conclusão pelo
+runner, censura/falha e falha ambiental. Confere escalarmente a rota exibida
+do checkpoint e só marca cobertura pela auditoria independente quando o hash
+do registro final coincide. Um checkpoint com flags de conclusão, sem o
+registro final e a auditoria, não basta para promover a referência.
+
+O comando `/usr/bin/python3 experiments/lkh/calibration_progress.py` gerou
+`experiments/lkh/published70_progress.json` e
+`research_notes/published70_progress.md`, com instante UTC de observação.
+Resultado atual:PROGRESS_ONLY, nove referências previstas, zero concluídas
+e zero cobertas por auditoria. São arquivos passivos de situação que serão
+atualizados; não substituirão os artefatos finais nem a decisão de calibração.
+Uma projeção grosseira do custo das dez sementes/três métodos só será
+calculada depois de nove referências completas e auditadas, com limitações
+explícitas. Nenhum dado reservado, nova busca ou mudança de protocolo.
+
+Próximo passo: observar a execução sem duplicá-la, relatar censuras se
+ocorrerem e esperar as referências completas antes de dimensionar o lote
+principal ou liberar o estudo de cache. O manuscrito de20páginas não mudou.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto

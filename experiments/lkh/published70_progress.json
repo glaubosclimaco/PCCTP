@@ -1,0 +1,93 @@
+{
+  "status": "PROGRESS_ONLY",
+  "observed_utc": "2026-10-20T20:20:31.102896+00:00",
+  "scheduled_references": 9,
+  "completed70_by_runner": 0,
+  "records_covered_by_independent_audit": 0,
+  "rows": [
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "status": "CHECKPOINT_ONLY",
+      "observed_iterations": 20,
+      "observed_cost": 2017,
+      "reference_duration_seconds": null,
+      "independently_audited": false,
+      "mining_calls": 0,
+      "checkpoint_elapsed_seconds": 496.8271930000046,
+      "checkpoint_completed_flag": false,
+      "checkpoint_sha256": "a2dd6da84b59d968cd511a3503b1be1de3f904fa35e617f782135de3149a9196"
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "status": "NOT_STARTED",
+      "observed_iterations": null,
+      "observed_cost": null,
+      "reference_duration_seconds": null,
+      "independently_audited": false
+    }
+  ],
+  "rough_ten_seed_three_method_process_hours": null,
+  "scope": "Passive calibration progress, not the authoritative final audit or a performance comparison. Checkpoint costs/iterations are provisional, not70-iteration endpoints. No linear extrapolation from iteration count. Any full-calibration projection is planning only: 30times the nine reference durations, excluding audit overhead and duration variability.",
+  "source_sha256": {
+    "experiments/lkh/calibration_progress.py": "e04c6dc101de97ed4376d78df4ced908407c937e379b991b067c53c93c78d35e",
+    "experiments/lkh/published70_calibration/protocol.json": "9f25461ff9e4a06ce85d7ae1e2aa575f572a6bf3d93fe404cc9238a07999417a",
+    "experiments/lkh/raw_route_audit.py": "93a853447f107e7b6879eaf84e2d3f02259d91071dd51c47bd2fa4c5bca01ee3"
+  },
+  "authoritative_audit_sha256": null
+}

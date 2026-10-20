@@ -1,5 +1,20 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h20 — progresso passivo MDM70, sem nova busca
+
+Fila26890 segue;gil262seed80 checkpoint20iterações/custo2017/mining0 observado,
+0referências finais/sem environment_failure.json. Não extrapolar tempo pela
+iteração, nem interpretar checkpoint como MDM70 completo. Não duplicar.
+
+Novo calibration_progress.py observa nove slotsTRAIN, semotimizador/semrefresh
+do auditor oficial. Estados separados:NOT_STARTED/CHECKPOINT_ONLY/COMPLETED70/
+CENSORED_OR_FAILED/ENVIRONMENT_FAILURE; cobertura de auditoria exigehashfinal.
+Confere rota escalar exibida e guarda timestampUTC. Outputs published70_progress.json
+e research_notes/published70_progress.md:PROGRESS_ONLY,9previstas/0completas/0auditadas.
+Projeção10sementes×3métodos somente após9completas+auditadas;éplanejamento,
+não inferência/garantia. Comando python3 experiments/lkh/calibration_progress.py.
+Nenhuma mudança nativo/calibração/parâmetros/manuscrito20p. Diário atualizado.
+
 ## 20/10, 17h17 — fechamento exato e artigo20p compilado/inspecionado
 
 close_awake300.py executado PASS com81:81custos/rotas/hashes reconferidos,
