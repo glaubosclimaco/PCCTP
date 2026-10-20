@@ -90,6 +90,12 @@ fallback, accounting/source/route corruptions, and restoration after failures.
 An exclusive attempt marker persists after interruption or a post-search
 assertion; such a phase cannot be silently retried. These checks launch zero
 optimizers and do not establish a search benefit. The shared-lock batch owner,
-27-start binding, environmental/resume audit and batch fixtures are still
-required before any real execution. Nothing has been added to the active
+environmental/resume audit and batch fixtures are still required before any
+real execution. cached30_starts.py/JSON now binds all27starts to the completed
+60-second audit and approved TRAIN input hashes, with independent scalar route
+checks. cached30_pairs.py provides a pair loop without a launch entrypoint;
+eight orchestration stub checks pass, including interruption/sleep preservation
+and resume without duplicate calls. Its future owner must acquire the shared
+lock and enforce prerequisites; that owner and an independent batch auditor
+are not implemented yet. Nothing has been added to the active
 collection or the planned paired70 candidates.

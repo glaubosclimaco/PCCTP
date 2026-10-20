@@ -1,5 +1,28 @@
 # Estado operacional para retomada autônoma
 
+### Complemento desta retomada, 12h38
+
+Observer atualizado:48/81,402rotas/2101eventosPASS; permanecem cinco geometrias
+completas e os mesmos efeitos agregados abaixo. Sessão28075 segue ativa;
+3504 aguarda. Conferidas14entradas congeladas (fontes/dependências/binários/
+awake_runner): todas iguais. Nenhuma fonte da coleta alterada.
+
+Novos cached30_starts.py/JSON ligam os27estados pré-reparo aos hashes dos27
+resultados hybrid da auditoria60completa, verificam papéis TRAIN, hashes de
+entrada contra perfil e custos/viabilidade por leitor escalar. Ordem dos pares
+shuffle20261020, seeds de reparo source+49. Executado sem otimizador;9geometrias.
+
+cached30_pairs.py implementa somente função de orquestração, SEM main/launch:
+duas fases por par, ordem determinística, auditoria por fase, ClockGuard/pmset,
+marcador de tentativa, hashes de ambiente/fases, reauditoria ao retomar e
+rejeição de par parcial. Futuro owner DEVE adquirir mesmo lock paired70 e
+validar pré-requisitos; esse owner ainda não foi implementado, não presumir
+bloqueio compartilhado já integrado. verify_cached30_pairs.py/JSON:8checks
+sintéticos PASS (3pares/6chamadasSTUB, resume0, corrupção fase/ambiente/protocolo,
+partial/interrupção/sleep). Certificados phase/pairs/polish com hashes atuais.
+Faltam auditor independente do lote, seus fixtures e owner com lock/gates
+antes de qualquer execução real. Nenhum novo coletor enfileirado.
+
 ## Retomada 20/10 12h26 — comparação de cache: fase e auditor verificados
 
 O único otimizador continua na sessão28075 (awake300_train); sessão3504

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic pair orchestration only; scalar phase audit verified separately; zero benchmark reads and native optimizer launches.",
+  "checks": [
+    "three pairs: both arms, common start and prescribed repair seeds",
+    "completed pairs reaudited and resumed with zero new calls",
+    "changed protocol blocks resume before optimizer",
+    "changed phase bytes block resume before optimizer",
+    "changed environment bytes block resume before optimizer",
+    "orphan attempt marker blocks partial pair retry",
+    "interrupted pair preserves exclusive marker and blocks retry",
+    "sleep invalidates pair, preserves phases, stops before next pair and blocks retry"
+  ],
+  "source_sha256": {
+    "experiments/lkh/cached30_pairs.py": "90051abb68305936c956b03f66dac9ff52efd46f9a9ec9b395443159daf96f18",
+    "experiments/lkh/verify_cached30_pairs.py": "05eda3ed6133013e93cd73b219c7dfcbf4e09f2857f6602bae4a040cfa750f41",
+    "experiments/lkh/cached30_phase.py": "151d68f8b08eb04b47c1e3ec5caae6885036a0f9aaf94edc8d49a7ccccd338ec",
+    "experiments/lkh/cached30_phase_audit.py": "b8e48bf82c234e846496de164af3a64e47ae3aba4cee611e8b6f8e0d1790edbf",
+    "experiments/lkh/cached30_starts.py": "76a93412bbc2ab098a75ee5e34f4a0a7ba9e46babf0a883f4b5f267c39e0a7f8",
+    "experiments/lkh/raw_route_audit.py": "93a853447f107e7b6879eaf84e2d3f02259d91071dd51c47bd2fa4c5bca01ee3",
+    "experiments/lkh/awake300_train.py": "dba19611cdf7372a65f7dfb958de6ee51eac0d1081b3b432f636e63b41adb6e9",
+    "experiments/lkh/paired70_train.py": "b71b0092a3c2870ae0fac8ca666c5b538a7e11b5d3414797e6c114ae83359c12"
+  }
+}
