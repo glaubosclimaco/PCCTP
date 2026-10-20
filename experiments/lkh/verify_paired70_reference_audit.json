@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "valid_cases": 2,
+  "rejected_corruptions": [
+    "wrong_seed",
+    "positive_reference_budget",
+    "wrong_duration",
+    "timeout_as_complete",
+    "nonzero_exit_as_complete",
+    "partial_iterations_as_complete",
+    "missing_final_snapshot",
+    "negative_event_time",
+    "nonfinite_event_time",
+    "wrong_route_cost",
+    "missing_mandatory",
+    "short_wrapper_time",
+    "false_mining_count",
+    "changed_payload_hash"
+  ],
+  "source_sha256": "ebbe0bbca788531031a2edd8c352a63f8b30d2f0789cd37674af16280e7180a4",
+  "scope": "synthetic audit fixtures only; no native solver or PCCTP benchmark execution"
+}

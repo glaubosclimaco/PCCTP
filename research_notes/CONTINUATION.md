@@ -1,5 +1,2019 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 00h30 —300s24/81; auditorreferência70 validado
+
+43548ATIVO,48191calibraçãoAGUARDAfim300.NÃODUPLICAR. Observadores24runs
+PASS239rotas;curvas1178eventos;2geometriascompletas. AindaINCOMPLETE,
+semconclusãoglobal. Nenhumachamadamineraçãoobservadanos24exports.
+paired70_reference_audit.py independente checa rawhash,seed,budget0,
+70iterscomsnapshotfinal,custos/viabilidade,temposemordem,processwallT,
+timeout/exitcode e censura semcost/T. VerificaçãosintéticaPASS2válidos+
+14corrupçõesrejeitadas. verify_paired70_adapters.py agora invocaauditor
+na referência completa e censurada:PASS,semotimizador/datasetreal.
+paired70_train.py chama auditorreferência ANTEScandidatos econgela fontes
+batch/referenceaudit;guardexige certificadoauditPASS/hashválido.
+audit_paired70_train.py criado para90pares/270slots:rolesTRAIN,schedule
+congelado,hashesfontes/binaries/calibração/records,custo/viabilidadecandidate,
+Tpareado,reference70 e candidatosindisponíveisapóscensura. Semprotocolo
+mainretornaNO_RESULTS;mainNÃOlançado. Ainda testar auditor/orquestrador
+batchsintético e fazer summary antesmain10seeds;calibração9seed80nafila.
+Nãoalteradasfontesativos300,nemCTP/teste12. CPLEXCommunityjáinstalado.
+
+
+## Pedido direto20/10 —instalarCPLEX:concluído,CommunityPythonisolado
+
+UsuáriopediuminstalarCPLEX;instalado .venv-cplexcomPython3.10.16arm64,
+packagecplex22.2.0.1(engine22.2.0.0),docplex2.32.264,six1.17.0.
+SMOKErealCPLEX+DOcplexPASSMIP2binaryótimo3. Probe1001vars→erro1016:
+Communitylimitada,não acadêmicafull/IDE/C++SDK. NãoafirmarPCCTPgrande
+liberado. FontesIBMconsultadas eREADMEinstalação/upgradeoficialregistrado.
+check_installation.py→installation_check.json+requirementspinados.
+.gitignoreignora.venv-cplex. Dependênciasglobaisativasnãoalteradas.
+43548lote300spermaneceATIVO;48191fila70aguardando;nenhumnovoexperimento
+PCCTPfoiiniciadooureescritoCPLEX.Memóriaprojetoatualizadalimitesreais.
+Próximoheartbeat:observadores300,implementarauditorbatch70antesmain10seeds.
+
+## Retomada20/10 00h16 —300s21/81; orquestrador70×10 pronto para auditorbatch
+
+43548ATIVO;48191calibraçãoaguardando300fim.NÃODUPLICAR.AuditorPASS21runs202
+rotas,curvas1013eventos;2geometriascompletas,semconclusãoglobal/mineração.
+paired70_reference.py e paired70_train.py implementadosisolados:90pares
+seeds81-90,MDM70primeiro medeT,duascandidatascomTsemacessorotaref;
+ordrepar/shuffle ecandidato segundo desenho;270execuções apenas se90refs
+completas.Censurareferência produzstatussemT e candidatosindisponíveis,
+nãose substitui porcheckpoint. Fontes/binaries/hashescongeladosporprotocolo
+mainaoserlançado. Guard exige calibração9completa+auditoriaPASS everificações.
+verify_paired70_adapters.pyPASStesteintegraçãocomMOCKS:tempo2srefer70,
+clampinit10para2s,retornotardio2.1sretémnativeincumbente.5s,nãoexecuta
+searchpósdeadline,referênciaincompletanãoforneceT. NenhumLKH/solver/dataset
+realexecutado.Clocks/adapterstrocadossóprocessoteste;otimizadorativo intacto.
+AindaFALTA auditorbatchindependente70 e testeorquestrador antesmain;
+nãolançado nemnafilaestudo10.Apenascalibração9seed80nafila48191.
+Próximo:auditorbatch70checarrefraw70,Tporpar,hashes e custos/eventostodos.
+
+## Retomada20/10 00h06 —300s19/81; auditorparamétrico validado sem otimizador
+
+43548ATIVO;48191aguardando. Auditor300PASS19runs180rotas;duasgeometrias
+completas. MédiasparciaisH10vsMDM+1.606859%,H60+1.499933%,2wins0loss
+cada. Nãoéresultado81global;nãopredizMDM70. Novo gr229registroparcial
+H60cost96707,nãonovorecorde(refjáexistente). Semalteraçãofontesativas.
+paired70_candidate_audit.py criado independentedoseletor:checa custo raw,
+budgetT/minphase,pre/fallback/native/post,origemsemofflinepool eeventoabsoluto
+pontual. verify_paired70_candidate_audit.pyPASScaso retornotardio comincumbente
+pontual e5corrupçõesrejeitadas(aceitarlatecost,phaseoverrun,Terrado,pooloffline,
+custorotafalso). Artefatoestático,somenteinstânciasintéticanãométrica.
+AindaNÃOmain10sementes; faltaorquestrador e auditorbatchde referência,
+calibração9seed80nafila. Teste12fechado. Nãoabriroutraprocessobenchmark.
+Próximo:implementarorquestraçãopareada alinhada70,semcoletarantespré-requisitos.
+
+## Retomada19/10 23h56 —300s17/81; módulo deadline paramétrico70 preparado
+
+43548ATIVO;48191fila70AGUARDA. Não duplicar. Auditor300PASS17runs157rotas;
+1geomcompleta,restantessemconclusão. Observadoresatualizadossequenciais.
+paired70_hybrid.py implementadoseparado,semalterarfontes/binariesativos.
+APIrecebenome/semente/policy/budgetT,SEMrotacustodareferência;inicialização
+MDMmin(10ou60,T),fallbackdebitado,eventosnative/postselecionadosporclock
+absolutoatéstart+T;retornoatrasadonãoanulaeventopontual.
+verify_paired70_deadlines.pyPASS5cenários(bordaexata/latebetter/semfallback/
+lateonly/Tfracionário)e7inputsinválidosrejeitados. Apenasverificaçãosintética
+seletor,nenhumbenchmark/novaotimizaçãolançada. Certificadohashsourcesalvo.
+Ainda faltaorquestrador70×10seeds e auditorindependenteendtoendANTEScoleta;
+aguardarcalibração9seed80completa.Nãodizerqueestudofinalestárodando.
+Próximo:auditorparamétrico e preparaçãomainconforme desenho,sem concorrência
+com43548/48191. Teste12fechado e CTPintocado.
+
+## Retomada19/10 23h46 —300s15/81; desenho70×10sementes preparado
+
+43548ATIVO15/81auditorPASS137rotas;curvas651eventos;1geomcompleta.
+48191fila70aguarda300summaryCOMPLETE.NÃODUPLICAR nem abrirteste12.
+paired70_ten_seed_design.md preparadoantescalibração/outcomesmain:
+9hardTRAIN,seeds81-90,MDM70completo medeTporpar,ambosH10/H60 comT
+semusarrotareferência;270runsse90refscompletas. Referênciaprimeiroé
+assimetriaexplícita,parordemrandomizada eordemcandidatosrandomizada.
+Estudo comTcondicionadoreferência,nãofixedhorizonaleatório. Complementa300s.
+AindaNÃOimplementado/lançado nemréplicados107casos. Exigerunner/auditor
+verificadoscalibração9completaantescoleta. GatesTRAIN/nãoinferênciaexplícitos.
+Descobertaparaauditoriadefontes:manuscritoMDMmain_review869-880descreve
+TTT100seeds1-100,kroA150,corpoalvo12918vslegenda12962. Não escolheralvo
+semversãopublicadafinal. Native70budget0nãotemtracecompletadeimprovements;
+snapshotsesparsosnãopermitemcompararTTTexato comcandidatopreciso.
+Nãoalterarotimizadorativoparalogging. Próximo:observadores300e estágio70
+nafila; depoisimplementar/validar desenho10sementes comdeadlineparamétrico.
+
+## Retomada19/10 23h36 —300s13/81; parâmetros e hardware conferidos
+
+43548ATIVO;48191fila70AGUARDANDO;NÃODUPLICAR. AuditorPASS13runs115rotas,
+curvas574eventos;1geomcompleta(a280);mineração0nos13exports,semconclusão.
+Parâmetros doMDMrecuperadoconferidosestaticamente,16fontesinstrumentadas
+batemmanifesto. numIt70,alpha.6fixo,elite10,padrões10,supportabsolute2,
+stability5%→4iters. Policyoriginal retornaantesfeatures/ordenaçãoaprendida
+etimeadaptativo;semalegaroverheadzero. Suporte2=20%apenasbank10.
+R-GRASP2021alphaREATIVO nãoéigualalpha.6fixo desselegadoMDM; nãoafirmar
+identidade totaldos3artigos. ManuscritoMDMnãofixatodosvaloresemtrechoslidos.
+Artefatos published_parameter_inventory.json e notaMD; nenhuma alteração
+emfontes/binaries/protocolosativos/futuroscongelados.
+Hardwareleituraread-only:AppleM2arm64,16GiB,8/8cores;compiladorGCC15.1.0;
+paperMDMInteli7-6700/3.40GHz16GBg++5.4.0. Snapshotresearch_machine_snapshot.
+NãoestimaraceleraçãoporGHz/segundosdehardwaredistinto. Teste12fechado.
+Próximo: observar43548; fila48191sócomeçaapós300COMPLETE; preparar desenho
+10sementessemconfundircalibração1seedcomréplicafinal. PDFparcialjáinspecionado.
+
+## Retomada19/10 23h26 —referência70 preparada e emfila;300s11/81
+
+43548otimizador300sATIVO;auditorPASS11runs109rotas,curvas474eventos,
+1geometriacompleta(a280);restosemconclusão. NÃO DUPLICAR.
+48191FILAATIVAaguardasummary300COMPLETE. Lockpublished70_calibration.queue.lock.
+Depoisroda published70_calibration.py→audit_published70_calibration.py.
+9TRAINseed80,70iterações completas,budget0,timeoutsegurança43200s
+classificadocensura,nenhumcandidatoesteteste. Prioriza gil262/rd400antes
+censurados. Guarda custoscalar,temposwall/CPUchild,mineração,iter70,
+logs/checkpoints/hashes. Binarytimedexistingcombudget0preservanumIt70.
+Fontes/protocolo/auditorcommit5cc0062; nenhumoptimizeradicionalantes43548fim.
+Essa éCALIBRAÇÃO1seed,nãoréplica10sementes/107instâncias. Não afirmar
+reproduçãofinaliniciada. Próximoestudo10sementesprecisaprotocolocomparativo
+porcomputador/tempojusto,sem tratar iteraçõesheterogêneascomoiguaisesforços.
+Plano decisórioe report300agoraexplicitam300ssuplementar, nãoverditosobre
+artigosemreferência70. Memóriaprojetoatualizada. Teste12fechado.
+PDF7p jáauditadocomoras cunhoparcialanterior,semprioridadederedaçãoagora.
+
+## Pergunta direta19/10: alinhamento com tempo e protocolo dos artigos
+
+Usuárioquestionase mesmos experimentos: auditoria published_experiment_alignment.md.
+Resposta: NÃOintegralmente. RAIROpublicado4.3:70iterações,10sementes,
+107avaliaçãoapós37tuning. MDMmanuscritomesmomaxIt,10runs; temposmédios
+MDMa280946.62s/rd4004641s(emhardwarepublicado).300s3sementes9TRAIN
+éanytimeexploratório, não réplica deMDMcompleto. Ganhosnãojustificam
+superioridadeaoartigo. Fixed70anterior7completos2censurados, nãoréplica10.
+Precisaalinharreferência70iterações+10sementes e comparação justa por
+máquina/tempo;nãoimporsegundosdeoutramáquina nem70iterações de método
+novo comounidadeigualla70MDM. Lote43548permaneceativosemretune.
+Próximaação: planejar/implementarreferência70completaapós43548,emfilaúnica,
+comtimeoutscensuradosexplícitos.Nãoiniciaroutrooptimizerparalelo.
+
+## Retomada19/10 23h16 —primeira geometria300s completa favorável, sem mineração
+
+43548continuaATIVO;nãoduplicar. AuditorPASS9runs76rotas;curvas393eventos/
+rotas. Apenas a280 completa3seeds70-72:MDMmean2029.333,H10mean1998
+(ganho1.544021%),H60mean2001.333(1.379763%);amboshíbridosmelhoresnas3
+sementes,descritivoNgeom=1. Mineração0nos9exports;nenhumaclaimcontra
+mineradorativado. Gatesglobaispendentes,81runs/9geom necessáriostotais.
+Reportdecision300atualizadocomtabelaporinstância econsistênciadesementes,
+semtratar3sementescomogeometriasindependentes. EstadoINCOMPLETE.
+PDF7pfoirenderizado65dpi etodas7inspecionadas:equações/tabelalegíveis,
+semcorte/overlap;logsegundapassagemsemoverfull/referênciasindefinidas.
+compilation_auditPASSescopoRASCUNHOPARCIAL,seçõesvaziaspersistem.
+main+auditcommitce3ed56;nenhumaentregacomoartigofinal.
+Prioridadecontinua81experimentos; fontesotimizador/protocolofrozenintactos.
+Próximo: sequênciadeauditor→summary→curvas→mineração→report,semalterar
+parâmetrosnemtestereservado,semnovooptimizerparalelo. Comunicar apenas
+novosachadosmateriais; nãoinferirviabilidadedoartigo deumageometria.
+
+## Retomada19/10 23h06 —300s7/81; relatório decisório bloqueia conclusões parciais
+
+43548ATIVO,nãoduplicar. AuditorPASS7runs56rotas;curvasPASS312eventos/rotas;
+nenhumageometriacom9execuçõescompletas. Mineração0emexports7observados,
+nãoinferir81. Nenhumaalteraçãoaofonte/binaries/protocoloativo.
+report_decision300.py criado: usa auditor/summary/curvas/exposição com mesmo
+snapshotdecontagens/hash; gera DECISION300_REPORT.md com estadoINCOMPLETE.
+Nãoatribui sucesso/fracassoporgate atélotecompleto;preservaamboscontrastes,
+factibilidadee limitesmineração. TempoCPUparentnãorepresentaCPUtotalLKH/
+mineradores; comparação éwallcominicializaçãodebitada. Semnovotesteestatístico.
+Próximoheartbeat: rodarauditor300→summary→anytime_curve300→profile_mining
+exposure300→report_decision300 (sequencial;snapshotspodemrequererrefreshse
+novo run terminarentreobservadores). Nãoexecutaroutrorunner nemabrirteste12.
+Pedidoativo édiagnósticoexperimentalparadecidirartigo,nãopáginasartificiais.
+PDF7pcontinuapendentevisual;nãoentreguecomoconcluído.
+
+## Pedido direto19/10 23h00 — experimentos reais para decidir viabilidade de artigo
+
+Usuário reafirma focoPCCTP e pede avaliação concreta antes de decidir artigo.
+43548ATIVO,últimaauditoria5/81runsPASS36rotas;nenhumageometriacompleta.
+NÃO DUPLICAR ouretunar300s. Semmudançasnasfontescongeladas/hashes.
+Plano decisório em pcctp_decisive_evaluation.md:81runs,mesmogateprimário300s,
+amboscontrastesrelatados,semseleçãooportunista de tempo/semente/geometria.
+Ferramenta anytime_curve300.py reconstrói curvas1/10/30/60/120/300s de todos
+oseventosponteados;checa custo/factibilidade originales e final300contraauditor.
+PASS220rotas/eventosem5runs;relatórioPARTIAL. Análises intermediárias apenas
+sobregeometriascom9runscompletos;semconfundir3sementescom3instâncias.
+Curvasdescritivas,nãonovogate/p-valor. Memóriaprojetoatualizadafocoexperimentos.
+pmset -g assertionsleituramostrouassertionPreventUserIdleSystemSleepativo
+porClaude;nenhumanovaconfiguraçãopermanente oucaffeinateduplicadocriado.
+PDF7ppendentevisualcontinua rascunho,prioridadeagoraavaliarresultados300s.
+Próximo: acompanhar43548 e reconstruircurvas/perfilmineraçãoatualizados;
+fechar81antesdecidir.PassagemTRAINnãoéartigopronto;testes12fechados.
+
+## Intervenção do usuário19/10 22h56 — decisão de foco científico em discussão
+
+Usuário pergunta se vale continuarPCCTP ou buscarGitHub+artigo. Nãoépedido
+explícito de parar/cancelar43548; fila300spermaneceATIVA. Recomendaçãodada:
+terminar300s e usar evidência para decidir, sem insistênciaindefinida.
+Consulta preliminar apenasfontesprimárias: PyVRP repo+IJOC2024paper e
+HGS-CVRP repo+COR140105643. Não selecionado novo problema nemclonadorepo.
+PDF: skillPDFlida,markereditrodado1vez,incluídoexploratory_results emmain;
+2passesLaTeX concluídos,7p. compilation_audit.json agoraPENDINGVISUALREVIEW,
+nãoPASS: renderizar/inspecionartodas7p na próxima oportunidade. Nãoentregue
+comoartigo pronto. PDF anterior6psubstituído pelo rascunho7paindaemrevisão.
+Fontes300ativasintactas; teste12fechado.
+
+## Retomada 19/10 22h46 —300s ativo; seção de resultados rastreável preparada
+
+43548 continuaATIVA;nãoduplicar. a280seed70 trêsarms:MDM2045,
+hybrid101992,hybrid602001. Apenas1par/tripla,nenhumageometriacompleta;
+nãoconcluir. Checagempassivaextra nãoalterou fontescongeladas.
+Inventário revisitado: src/Regras.cpp contém stubs22linhas; implementação
+legada regras_reducao.cpp tem2rotinas e chamada comentada emprincipal.
+Reduçõesestruturaisisoladas jáverificadas/semganhodecusto60s;nãorepetidas.
+Scientificwriting aplicado: outlineemexploratory_results_outline.md;
+submission/sections/exploratory_results.tex e tabelagerada por
+experiments/lkh/export_exploratory_results.py a partir de7JSONscompletos,
+comhashes/provenance. Incluitreino,ablaçãocondicional,validaçãonegativa,
+MIPnegativo e limitação relógio. NÃO incluídaainda emmain.tex,portantoPDF
+existente6ppermaneceinalterado. Nãoémanuscritofinal ouafirmaçãodenovidade.
+Próximo: integrarfontes aoPDF com compilaçãomarcada/inspeçãovisual,
+seguirauditoria43548 e mineraçãoefetiva. Semteste12/CTP.
+
+## Retomada 19/10 22h36 —300s segue; exposição à mineração limitada por timestamps
+
+43548ATIVO,nãoduplicar. Primeiroregistroa280seed70MDM300cost2045,
+300.576754sretorno;raw0miningcalls/10iterações. Auditor300PASS1run3rotas,
+semgeometriacompleta. Nãoéresultadofinal nemconclusãosobremineração.
+Profilerpassivo profile_mining_exposure.py criado semalterarfontescongeladas:
+lowerbounddecallsportimestampdeexport<=budget;upperboundporfinalexport;
+seexportfinalausente upperboundNone. Logretornosseparado.3fixtures sintéticas
+PASS,incluitruncatedraw/latecheckpoint. commit e3685f7.
+Refinamento60s54runs:2/27MDMexports têmcallobservada,masapenas1/27 tem
+callcomprovadapontual(checkpoint);outraambígua.Nãodizer2pontuais.27hybrid0.
+Custos/gatesinalterados. Nota mining_exposure_scope.md atualizada.
+Novoperfil300partialemruin_total300_train_mining_exposure_bounds.json,
+regerarcomnovosruns. Fontes300e dependências permanecem congeladas.
+Próximo: acompanhar43548,salvarperfilmineraçãofinal81runs; redação/aplicação
+editorialapenascomafirmaçõesauditadas. Teste12fechado;nenhumCTP.
+
+## Retomada 19/10 22h25 — validação70 e inserção324 completas;300s ATIVO
+
+12167 e71157 TERMINARAM;71157 bloqueou antescoleta por rd400variant.
+Corrigidaapenaschecagem porgeometria TRAIN (g_rd400roletrain),preservada
+variantehistórica VT80/T240/W80/25,semabrirnovadado antescorreção.
+Falha anterior em joint_insertion_train_launch_failure.json.
+Validação70/auditPASS466rotas:mean+0.907347%,2wins1loss4ties;gate>=3
+winsFALHOU. Duasmelhoriaspr2642.730126% epr2993.771234%. Nãoafirmar
+média negativa;teste12permanecefechado. Nota ruin_validation_results.md,
+manifestoe todosraw/checkpointscommitc98e5a3.
+15073 TERMINOU324insertionruns/auditPASS1296rotas:meanvsGreedy-0.180897%,
+3winsvsGreedy8winsvsrandom,gatemédioFALHOU. Oracleofflinebestofgreedy/MIP
+apenas+0.133979% (nãoonline). NãointegrarMIPpor essaevidência.
+Notas joint_insertion_train_results.md,artefatos/manifestocompletos.
+NOVA fila43548ATIVA,lockruin_total300_train.queue.lock. NÃO DUPLICAR.
+TRAIN300s,9mesmasgeometrias,seeds70-72,3armsMDM300/MDM10+resto/MDM60+resto,
+81runssequenciais (~6h45nominais). Fontes/auditor/protocolo congelados
+commitf1b2f09,semofflinepool. Critério porhíbrido mean>=.2%,>=6wins,<=1loss.
+Hipótese distinta: examinar mineraçãoativada e custo da troca precoce.
+Auditar mineraçãoefetiva;300s nominalnão prova ativação. Comparar ambasarms
+semseleçãoomissa. Auditor e summary rodamnafina43548. Nativeworkdirsseeds
+novas;nenhumoutrooptimizerativo. Teste12fechado,nãoimplementarCTP.
+Próximo: acompanhar43548, completar análise de exposiçãoàmineração,
+redigir resultadosnegativos/limitações; nãoalterarfontescongeladas ativas.
+
+## Retomada 19/10 22h15 — auditor do screen pronto; próxima execução na fila
+
+12167validação permaneceATIVA (última auditoria67/70,431rotasPASS;
+6geometriascompletasmean+0.430033%,1win1loss4ties). Gate>=3winscontinua
+inalcançável; não confundir falha de gate com ganho médio negativo.
+71157FILAATIVA aguarda summaryvalidaçãoCOMPLETE; lock
+experiments/lkh/joint_insertion_train.queue.lock previne duplicação.
+NÃO DUPLICAR. Após validaçãoCOMPLETE/gatefalse, lança sequencialmente
+joint_insertion_train.py324runs→audit_joint_insertion_train.py→summary.
+Nenhum optimizer do novo screen roda antes da validação acabar.
+Auditor independente agora checa custo/factibilidade scalar original,
+hashesfontes,remoçõespareadas,slotsnearest/random/mesmaquantidade,
+expansãodeassignments e retenção por deadlineabsoluto. Runnerregistraslots.
+Verificação sintética semLKH/HiGHS(mockclock)PASS3casos:reparopontual+
+polishatrasadopreserva3;reparoatrasadoretémfallback4;ambospontuais3.
+Certificado joint_insertion_deadline_verification.json. Dados do novo screen
+não existem ainda naúltimaconsulta; nenhum teste12aberto.
+Próximo: reportarvalidaçãofinal, acompanhar71157 e corrigirsomentefalhas
+ técnicas preservandoartefatos. RespeitargatesTRAINcondicional do protocolo.
+
+## Retomada 19/10 22h05 — gate de validação inalcançável; próximo screen preparado
+
+12167ATIVA58/70;auditorPASS305rotas. Cinco geometrias completas:
+0vitórias1perda4empates. Restam2geometrias; logo o critério congelado
+>=3vitórias é matematicamente inalcançável. Concluir todo lote, sem mudar
+gate e sem abrir teste12. Média final ainda desconhecida; não confundir
+inviabilidade do gate com fracasso em toda instância restante.
+Protocolo TRAIN prévio joint_insertion_train_protocol.md e runner
+experiments/lkh/joint_insertion_train.py preparados (sintaxePASS). NÃO LANÇADOS.
+Exigem validação COMPLETE, auditPASS e gatefalse.324execuções condicionais:
+9hardTRAIN×3startsMDM10salvos×4destruições×3arms(greedy,3gapsmaisbaratos,
+3gapsaleatórios);1s/arminclui seleção,MIP<=.5s,LKH<=.2s. Mesmos estados,
+fallbackoriginal,tempoabsoluto,nenhumaalegaçãodeendtoend/novidade.
+Próximo: completarvalidação e escrever auditor independente do novo screen
+ANTESlançar; auditar retenção de reparo pontual mesmo que polishing retorne
+tarde, custos/fontes/removals/timestamps e slots iguais em quantidade.
+Nãoháfilaautomáticadopróximoscreen;nãoduplicarprocesso12167.
+
+## Retomada 19/10 21h55 — validação47/70; auditoria adicional da inserção MIP
+
+12167 continua ATIVA; auditor PASS223rotas,47/70execuções. Quatro geometrias
+completas,0vitórias1perda3empates,meanparcial -0.037482%; aguardarsete.
+Nenhuma configuração alterada e teste12fechado. NÃO DUPLICAR.
+Verificação adicional do protótipo insertion_mip_repair:60modelos/2500
+assignments por enumerador independente do validador e construtor de linhas.
+PASS: tamanhos/ordens variados, custos/prêmios zero, demanda vazia,
+slots ausentes, nenhuma inserção e identidade fora do prazo rejeitada.
+Artefatos verify_insertion_mip_boundaries.py/.json; hipótese atualizada para
+não dizer erroneamente que protótipo não existe. Sem integração nem coleta
+hardTRAIN/val/test desta alternativa. Decisão continua após validação final.
+Próximo: completarvalidação; se falhar,nãolançarteste,definir experimento
+TRAIN pareado com reparação conjunta e greedy sob mesmo tempo total.
+
+## Retomada 19/10 21h45 — validação 40/70; protocolo prospectivo fechado
+
+Sessão 12167 continua ATIVA; não duplicar. Auditor PASS 189 rotas, 40/70
+execuções, quatro geometrias completas: 0 vitórias, 1 perda, 3 empates,
+média parcial -0.037482%. Nenhuma conclusão antes das sete completas.
+Configuração congelada preservada; teste12 permanece fechado.
+research_notes/ruin_final_test_protocol.md registra avaliação CONDICIONAL:
+exige gate de validação integral PASS, mesmos parâmetros/hashes, teste12,
+seeds100-109, 240 execuções60s. Não há runner nem lançamento do teste.
+Unidade estatística é geometria; bootstrap descritivo e teste de sinais
+secundário, limitações e falhas explícitas. Não confundir protocolo futuro
+com resultados obtidos. Se validação falhar, NÃO executar este teste para
+a configuração atual; investigar novo candidato só em treino.
+Consulta ao PDF autoral Derrac2011 falhou timeout e publisher403; nenhum
+conteúdo não lido foi atribuído à referência nem incorporado como evidência.
+
+## Retomada19/10 21h35 — validação27/70; inserçãoMIP sótoyverificada
+
+12167ATIVO27/70,auditorPASS143rotas;2geometriascompletas,meannegativo
+-0.074965%,0wins1loss1tie. Semalterarconfignemabrirteste.
+Protótipoinsertion_mip_repair.py criado evalidadoAPENASem21modelospequenos
+contraenumeração,negativedeltas/adjacentgaps/infeasibilidadelocalincluídos.
+verify_insertion_mip.py eJSON preservamcertificadofinito. Não integrado em
+corecongelado, nãoleuqualquerinstânciareservada e nãoexecutadoemhardTRAIN.
+Decisãointegraçãodepoisvalfinal,conformehipótesedocumentada.
+
+
+## Retomada19/10 21h25 — validação17/70; mecanismo descrito em treino
+
+12167ATIVO17/70,auditorPASS108rotas;1geomcompleta(d198)-0.14993%,
+0wins1loss;nenhumaalteraçãoaoconfigcongelado. NÃO DUPLICAR/retunar.
+DiagnósticoTRAIN27estados:23mudamsuporte;remoçãolíquidasemadição viola
+quota20casos,cobertura5,qualquer20. NÃO prova trajetóriaintermediária ou
+causalidade;support_change_interpretation.md previne atribuição excessiva
+a cobertura. diagnose_support_changes.py+JSONpreservamIDs/hash/slacks.
+Hipótese alternativa concreta preparada(NÃOimplementada): pequeno MIPde
+inserção porgaps,distintosvértices/gaps,exatocusto,restauraquota/cobertura,
+escopo restrito e fallbacknecessário. Ver insertion_mip_repair_hypothesis.md.
+Não alterarnemretestar validação atual por essa ideia.
+
+
+## Retomada19/10 21h15 — componente9/9PASS; validaçãoATIVA
+
+71209terminou27ablationruns,auditorPASS54rotas,9/9geometrymeansfavorhybrid.
+Resultados em fixed_support_ablation_results.md;condicional,nãoindependente.
+12167ATIVAagoraruin_validation60.py70runs,seeds45-49,7geometrias.7/70outputs
+auditPASS47rotas,nenhumageometriacompletaainda. NÃO DUPLICAR ouretunar.
+Figura estática híbrido treino9geom,3seeds:plot_hybrid_training.py→
+submission/figures/hybrid_training_effects.pdf/svg/png+provenance. PDFfigura
+renderizado evisualizadolegível. Nãointegraaindacorpodomanuscrito.
+
+
+## Retomada19/10 21h05 — ablação23/27, validação congelada na fila
+
+71209ATIVOablação23/27,auditorPASS46rotas,7geometriasjácontrolefavorável
+aohíbrido masgateaguarda27. NÃO DUPLICAR.
+Fila12167 ATIVAaguarda ablaçãocompletion→audit→ruin_validation60.py;runner
+exigegateTRAIN ecomponentePASS. Validação7geometriasoriginais,seeds45-49,
+60stotal2arms70runs,mesmoparâmetro/fontes/binárioshasheados;gatepróprio
+mean>=0.2%,>=3wins,<=1loss,semregressãofactibilidade. Protocoloescritoantes
+ruin_validation_protocol.md. NÃOtesteval;geometriasjáusadaspor9+1anterior,
+portantoescopolimitado explícito. Semnovosresultadosdelasainda. Teste12fechado.
+Auditor absoluto agoraaceita argumento ruin_validation60(espera70runs),
+summaryvalidação preparaagregação5sementes/geom. Nenhumretuneporvalidação.
+
+
+## Retomada19/10 20h55 — absoluto54 completo, gateTRAIN PASS; ablação ATIVA
+
+69208terminou. AuditorPASS54runs/334rotas comclockabsoluto;mean1.886205%,
+8vitórias1perda;gateTRAINPASS. NÃOéconfirmação/teste/novorecorde.
+Resultados em ruin_total_absolute_results.md eJSONsummary;manifestohashes
+raw/checkpoints fechado. Preservaroriginal54negativo, nãoescolhermelhorseed
+nematribuir diferenças de partidasentrecoletas sóclock.
+71209ATIVO agoraexecutando fixed_support_ablation.py27runs eauditorfinal.
+Primeiros2a280controle2118/2015 versus híbrido1985/2002. Nãoconcluircomponente
+anteslotecompleto; NÃO DUPLICAR. Próximopreparar protocolo de validaçãocongelado
+semabrir resultadosnovos; teste12aindafechado.
+
+
+## Retomada19/10 20h45 —45/54 absolutos; referências primárias organizadas
+
+69208ATIVO45/54,auditorPASS301rotas,7geometriascompletas+2.42778%,7wins,
+não concluir gateantes9. Fila71209aindaaguardaabsolutofinal→audit→ablação,
+NÃO DUPLICAR. Ledger submission/reference_verification.json com8referências
+primárias verificadas;escopo metadata/abstract explícito,Silva2021nomeainda
+conferirnoPDF. NãointegroubibnemmudouPDFatual6p. Outline related_work antes
+prosa,semalegar novidadeGRASP+MIP/ALNS ou ausência de antecessor.
+
+
+## Retomada19/10 20h35 — timing observado, controle exato de partidas necessário
+
+69208ATIVO35/54,auditorPASS235rotas;5geometriascompletas+2.09784%,5wins.
+rd400parcial agora10631/11140,maspartidasdiferem:originalnative10semexport
+14143;corrigidoexport11298/12282. Não atribuir diferençaentrecoletas sóclock.
+LKHrd4002seeds475calls:241completed233timeouts1noexit. Nota
+initialization_timing_sensitivity.md registra sensibilidade e exige controle
+condicional de mesmapartida. Fila71209aguardaabsfinal, NÃO DUPLICAR.
+Original54runs imutáveis ganharamfile_manifest comhashes(preservarraw/checkpoint).
+
+
+## Retomada19/10 20h25 — absoluto26/54; ablação encadeada
+
+69208 ATIVO absoluto26/54,auditorPASS172rotas,4geometriascompletas,
+média+2.24238%,4vitórias;rd400pendente,nãoextrapolar. NÃO DUPLICAR.
+Fila71209ATIVAaguarda absolutocompletion,executa auditor absoluto(e precisa
+PASS completo),depois fixed_support_ablation.py27runs e seu auditor.
+Não iniciar controle manualmente. Guardfila5400s. Auditor ablação preparado
+reconstrói suporte/partida/budget do registrooriginal,NO_RESULTS até agora.
+confirmatory_analysis_plan.md fixa ratioofseedmeans porgeometria e preserva
+outliers; treinoexploratório não é confirmação. Teste12permanecefechado.
+
+
+## Retomada19/10 20h15 — absoluto ativo; método documentado sem claims
+
+69208ATIVO15/54outputs,auditorPASS98rotas,2geometriascompletas+3.0080%,
+2vitórias;NÃOextrapolar,rd400aindapendente. Não duplicarworkers.
+Aplicada scientific-writing(outline→prosa), seção hybrid_search.tex com fórmulas
+reparo,destruição,aceite,tempoecusto de inicialização econtrolecondicional.
+main.tex título provisório agora híbrido,não learning semvantagemdemonstrada.
+PDFparcial6pcompiladolocal2passes,6pvisualizadaslegíveis,semerrosrefs/overfull.
+compilation_audit.json atualizado hashes;seçõesvazias aindaintencionais.
+NÃOpaperpronto,nãocitar resultadosincompletos. Ainda referênciasLKH/ruin
+precisam integrar revisão final e templateElsevier/Springer nãoaplicado.
+
+
+## Retomada19/10 20h05 — original final; absoluto começou automaticamente
+
+62685terminou54runs;auditorPASS420rotas. Originalwrapper-4.88868%,0vitórias,
+9perdas;conservador-1.16217%,7vitórias2perdas. GateFALHOUambas métricas.
+69208ATIVO agora rodando absoluto,5/54outputs,auditorPASS30rotas,nenhuma
+geometriacompletaainda. NÃO DUPLICAR. a2802hybrids:909chamadasLKH,900
+completed,9timeouts(~0.99%);não extrapolar a rd400.
+Leitura primária refrescada2023/2026/datasetMendeley em
+pcctp_primary_sources_refresh.md;abstract2023jápropõeGRASP+MIP/reduções,
+não alegar novidade genérica. Ainda conferir resultados completos/maisfortes
+antespublicar. Guarddaablação exige absolutofinaleauditorPASScompleto.
+
+
+## Retomada19/10 19h55 —49/54 originais, ablação futura preparada
+
+62685ativo49/54,auditorPASS395rotas,8geometrias completas. Conservador
+-1.30064%,7vitórias1perda;wrapper-5.47425%,0vitórias. Não esconderrd400.
+69208fila esperaoriginalcompletion e inicia absolutoautomaticamente, NÃOduplicar.
+Criado summarize_ruin_total60_absolute.py para tripletasgeometry e contadores
+passivosLKH,sem resultados ainda.
+Preparada ablaçãoCONDICIONAL (NÃOiniciada): fixed_support_ablation.py mais
+fixed_support_engine.py, partepre_routeEXATA de cada híbrido absoluto e usa
+60-post_offset, inclui leitura/setup, suporte FIXO,LKHtrialcap1Mseedmatching.
+Guardexige absolutofinal EauditorPASScompleto. Protocoloantesdequalquercoleta
+fixed_support_ablation_protocol.md. É replaycondicional,não novo end-to-end;
+necessário separar ganho de reordenação vsreparação antes atribuircontribuição.
+
+
+## Retomada19/10 19h45 — rd400 refuta extrapolação; instrumentação passiva pronta
+
+62685ATIVO40/54outputs,auditorPASS343rotas.6geometrias completas; reconstrução
+conservadoraagoramédia-2.13959%,5vitórias1perda(rd400grande);wrapper-6.54395%.
+NÃO repetir afirmação de+2% como lote inteiro. rd400native10semexportviável
+3seeds, fallbackruim, trajectories13975; não excluir nem dar partida cara.
+Fila69208 ainda aguardando, NÃO DUPLICAR. Fonte absoluta (não iniciada) ganhou
+somente contadorespassivosLKH(completed/timeout/fail), sem alterarbudget.2s
+ou decisões, e hashesdependências. Medir antes de concluir gargaloLKH.
+Nota ruin_total_implementation_limits.md registra ablação necessária LKHsuporte
+fixo para separar reordenação e reparação. Hipótese futura precisa protocolo
+antes de coletar; não tunar a repetição congelada.
+
+
+## Retomada19/10 19h35 — repetição absoluta na fila, não duplicar
+
+62685ATIVO30/54runs;auditorPASS246rotas.5geometrias completas: reconstrução
+conservadora+1.97587%,5vitórias;outcomeoriginalwrapper-1.70065%,0vitórias.
+Não apresentar reconstrução comoresultado confirmatório.
+Fila69208ATIVA aguarda originalcompletion (guard5400s), depois executa
+ruin_total60_absolute.py automaticamente. NÃO INICIAR manualmente. Fonte
+separada agora não lê pool offline quando partida fornecida; sóremoveIO
+inútil, parâmetros inalterados. Checks fronteiradeprazoPASS. Auditor novo
+audit_ruin_total60_absolute.py verifica escolhas fallback/native e todos
+eventos por clockabsoluto;sem dados aindaNO_RESULTS. Não misturar coletas.
+
+
+## Retomada19/10 19h25 —19/54runs; reconstrução conservadora separada
+
+62685segue ATIVO, auditorPASS172rotas. Três geometrias completas: wrapper
+-1.9763%0vitórias; reconstrução conservadora+2.7765%3vitórias, não inferir
+lote todo. summarize_ruin_total60.py agrega só tripletas completas porgeometria.
+Preparada repetição técnica SEPARADA ruin_total60_absolute.py, mesmoalgoritmo
+e parâmetros, cadaevento eparentstart comclockabsoluto. NÃO INICIADA;guard
+exige ruin_total60completion. Protocolo correção em ruin_total_clock_correction.md.
+Fontes separadas preservamhash e workerantigo; não misturar coletas nem alegar
+novo treinamento. Próxima auditoria absoluta e repetição após fimloteatual.
+
+
+## Retomada19/10 19h15 — tempo total ativo; extração estrita e anytime separados
+
+62685 ATIVO,10/54outputs, não duplicar nem editar worker carregado. Auditor
+audit_ruin_total60.py PASS90rotas, conserva wrapper_cost original. Detectada
+limitação: wrapper recusa todas melhorias post se rotina retorna milissegundos
+após60, mesmo trace já as tenha aceito antes. Não apagar resultados.
+Auditor produz conservative_anytime_cost SEPARADO usando limite superior do
+instante parent=wall_seconds-post.native_elapsed+event.native_seconds. Esses
+relógios são todosCLOCK_MONOTONIC e a medição parent ocorre após retorno, logo
+o limite é conservador. Não substituir outcome pré-registrado silenciosamente.
+Após lote analisar ambas séries e documentar desvio; futuro wrapper deve
+registrar clock absoluto e capturar melhor antesdeadline explicitamente.
+
+
+## Retomada19/10 19h04 — ruin offline final; comparação total ATIVA
+
+29920 terminou18runs, auditorPASS40rotas. Related5/9ganhos,média0.3575659%,
+4vitóriasfull;arms empataram9/9. GateRELATEDvsRANDOMfalhou0vitórias; não
+rebaixar. Ganho genérico motivou hipótese nova de tempo total pré-registrada.
+rd40010524 acima10523cabeçalho, NÃO recorde. Outros ganhos iguais referências.
+Sessão62685 ATIVA ruin_total60.py54runs (noveTRAIN,3seeds,2arms),
+MDM60 versusMDM10+ruinrandom restante60. Fallbackcomum cobrado,timeout
+externo90s,nenhum start do pool offline. NÃO DUPLICAR nem editar wrappers
+ativos. search recebe initial_override=native/fallback; ainda lê pool para
+metadados mas não usa suas rotas como partida quando override presente.
+Gate mean>=0.2%,>=6vitóriasporgeometria,<=1perda,semregressãofactibilidade.
+Após fim auditor escalar rotas, pre/post/fallback,nativeaceite,prazo.
+
+
+## Retomada19/10 18h54 — ruin/recreate parcial mais promissor
+
+29920ATIVO,9/18runs. AuditorPASS21rotas/trace,pr22667286
+(related) igualrefMDM, gil1981egr96707ambosarms. NÃO novosrecordes.
+Dados em ruin_repair60/; auditor audit_ruin_repair.py confere escalar custo,
+viabilidade, trace estritamente melhor até60s,hash partida. Sem gate final.
+Após fim analisar arms separadamente e preservar gate de relatedversusrandom.
+Se efeito genérico promissor, próximo teste deve cobrar inicialização e usar
+sementes pareadas, não alegar vantagem de método offline com partida cara.
+
+
+## Retomada19/10 18h44 — consenso negativo; ruin/recreate ATIVO
+
+43639terminou18runs, auditorPASS36rotas.1ganho,média0.1427348%,vence
+random1/9 e full0/9,gateFALHOU. Não insistir aumentando orçamento.
+Sessão29920 ATIVA: smoke10reparações seguido ruin_repair.py18runs60s/arm,
+noveTRAIN,random/relatedremoção6,permiteinviabilidade temporária com reparação
+conjunta cobertura/prêmio, LKH.2s,aceita corrente<=best1.01,reset20tentativas.
+Difere diversificação anterior:partidas fortes e suporta remoções inviáveis
+reparadas em vez de só swapsviáveis. Protocolo escrito antes; NÃO DUPLICAR.
+Auditar próximas rotas/trace e prazo nativo, sourcehash, melhor nunca piora.
+Não ALNS adaptativo, não novidade por apenas chamar ruin/recreate.
+
+
+## Retomada19/10 18h34 — consenso parcial auditado
+
+43639 segue ATIVA,10/18runs disponíveis sem ganhos novos. Auditor independente
+audit_consensus_fix60.py reconstrói ranking frequência e RNG pelas rotas cruas,
+valida fixações/rotas/prazo:PASS10runs/20rotas. Não duplicar ou concluir gate
+antes lote completo. Perfil expressão prêmio legado salvo separadamente;
+não prova que rotina é chamada nem impacto em baseline publicado.
+
+
+## Retomada19/10 18h24 — cortes completos negativo; consenso ATIVO
+
+5552 terminou9casos, auditorPASS18rotas, nenhuma vitória sobrefullSCF.
+Somente si1756871conhecido melhorou partida. Não insistir aumentando tempo.
+Sessão43639 ATIVA consensus_fix60.py,18runs,noveTRAIN,60s/arm. NÃO DUPLICAR.
+Fix-and-optimize de VISITAS, todasarestas livres,release12opcionais por
+discordância pool versusrandomseed42mesmo tamanho,fixaoutrosyàpartida.
+Não confundir com fragmentrepair(arestas fixas) ou uniãoarestas.
+API fixed_visits defaultNone,verificação dois modelos por enumeraçãoPASS,
+startincompatível rejeitado. Protocolo consensus_fix_protocol.md escrito antes.
+Próximo: auditor reconstruir escolha e fixações a partir pool original/dados
+crus; testar outputs contra yfix, prazo e custo; gate>=3ganhos,média>=0.2%,
+vence random>=5 e full>=3. Teste/validação fechados.
+
+
+## Retomada19/10 18h14 — RINS corrigido negativo; modelo sem fluxo pronto
+
+71368terminou; auditorPASS9casos/18rotas respeitando fixações;1melhoria,
+média0.0570939%,0vitóriasfullSCF;gateFALHOU. LP10s não ótimo7/9: nesses
+casos fallback sem fixações, não interpretar como refutação geral deRINS.
+Preparado full_cuts60.py: libera TODOS vértices incluindo endpoints mandatórios
+(mantém y obrigatórios), portanto nenhuma aresta fixa e modelo completo.
+Backend externo inteiro de cortes existente, sem fluxo. Três checks adicionais
+contraSCF PASS, apoiados por60checks anteriores. Protocolo antes da coleta em
+full_cuts_protocol.md. Gate>=3ganhos,média>=0.2%,>=3vitóriasSCF.
+Sessão5552 ATIVA full_cuts60.py, NÃO DUPLICAR; próximo auditar rotas
+contra original, zero arestas fixas e cortes/tempo, comparar fullSCF.
+
+
+## Retomada19/10 18h04 — auditor detectou RINS inválido; correção ATIVA
+
+26542terminou mas NÃO interpretar comoRINS: auditor raw detectou solução
+violando fixações registradas. Pybindcol_lower_[j] assignment não persistiu.
+Corrigido usando arrayscópia e atribuição completa lp.col_lower_/col_upper_.
+Dados originais preservados rins60/ e invalid_fixing_audit.json. Pequeno smoke
+PASS agora confere TODAS fixações na rota retornada. Ainda reforçar enumeração.
+Repetição corrigida mesma configuração: sessão71368 ATIVA rins60_corrected.py,
+diretório separado. NÃO DUPLICAR. Auditor aceita argumento rins60_corrected;
+executar após cada parcial/fim. Não ocultar falha técnica nem atribuir ao método.
+
+
+## Retomada19/10 17h54 — local branching negativo; RINS verificado
+
+19959terminou9casos. AuditorPASS18rotas:1melhoria,média0.0618517%,
+0vitórias sobrefull60;gateFALHOU. si1756967pior quefull6871conhecido.
+RINS implementado opcional rins=False(defaultinalterado) em highs_warm_start:
+LP10s dentro60, fixa concordância1e-6 sobrex/y, registra fixações eLPstatus,
+semLPótimo usa fallbacksemfixar. Enumeração6vPASSrestrito. Protocolo
+rins_protocol.md escrito antes da coleta, noveTRAIN,semtestesreservados.
+RINS sessão26542 ATIVA, não duplicar. Após fim auditar fixações retornadas
+contra x/y bruto, tolerância, prazo e matriz original; resumir gate.
+
+
+## Retomada19/10 17h44 — redução auditada; local branching ATIVO
+
+1734 terminou. preprocessed60 auditPASS9casos/18rotas originais; certificados
+independentes de fixação/remoção verificados. Custos iguais full60em9/9;gate
+falhou0melhorias. Não inferir aceleração de contagens.
+Fila19959 iniciou automaticamente local_branching12:ATIVA,primeiroa280semganho.
+NÃO DUPLICAR. Auditor audit_local_branching12.py verifica distânciaHamming
+sobre arestas+visitas e rotas cruas, descarte tardio; parcialPASS1caso/2rotas.
+Próximo trabalho: preparar RINS com orçamento da relaxação incluído, sem usar
+teste; ler literatura e verificar fixações por concordância antes de coleta.
+
+
+## User explicitly requests autonomous GRASP-MIP hybrids
+
+Preprocessed60 session1734 still active,5cases available. Local branching12
+implemented as optional backend arg (default unchanged), Hamming over x+y,
+no flow variables. Three small neighborhoods independently enumerated PASS.
+Protocol local_branching_protocol.md written before collection.
+A background sequential queue was launched after preprocessed completion;
+DO NOT launch local_branching12 manually while queue active. Queue has1800s
+wait guard then fails explicitly. Queue session19959 ACTIVE; do not duplicate.
+Next audit preprocessing original constraints, local branching distances and
+raw/accepted routes. RINS primary publisher abstract verified, not implemented.
+No global optimality claims for local neighborhoods; test closed.
+
+
+## Retomada19/10 17h34 — full60 concluído; reduções ATIVAS
+
+92620terminou. AuditorPASS9casos/18rotas;1melhoria(si1756871conhecido),
+média0.2141022%,gatefalhou por exigir3melhorias. Sete casos0nodes reportados,
+possível gargalo raiz, não atribuir causa sem instrumentação.
+Sessão1734ATIVA preprocessed60.py noveTRAIN60s/caso com structural.py,mesmas
+partidas,presolve padrão. NÃO DUPLICAR. Protocolo escrito antes. Auditar
+contra instância ORIGINAL, não só reduzida, verificar mandatories/rows e hashes.
+Gate>=3custos melhores que full60,média>=0.2%,nenhuma perda de viabilidade.
+
+
+## Preprocessing investigation requested by user
+
+92620 ACTIVE; no duplicates. experiments/preprocessing/structural.py implements
+constraint-only safe reductions without metric assumptions. Finite verification
+PASS20320 subsets in140 systems. Profile9TRAIN: fewer coverage rows9/9, newly
+mandatory visits5/9, no speed claim. Next compare full model with these rules
+and default solver presolve after current batch finishes; not launched yet.
+Read research_notes/structural_preprocessing.md. Legacy rules01/02 located;
+R1-R14 main declarations not full implementations. Preserve user Utils.h.
+
+
+## Retomada19/10 17h24 — modelo completo em execução, auditor preparado
+
+92620ATIVO, PID86399Python confirmadoRs, CPU56.64s/64s elapsed; não está
+parado e NÃO DUPLICAR. Primeiro a280semganho disponível. audit_full_graph60.py
+confere igualdade exata do grafo com todasarestas possíveis, hashes e viabilidade
+escalar, regra descarte tardio; auditorparcial PASS1caso/2rotas. Sem concluir
+gate enquanto lote incompleto. CPUfoi consulta pontual, não medida final.
+
+
+## Continuação na mesma rodada — busca forte concluída; modelo global ATIVO
+
+67838terminou27runs, auditorPASS54rotas (resultado+trace). Apenas si175 ganhou
+7006→6871,jáconhecido; gatefalhou1/9. Não repetir aumentando orçamento.
+Sessão92620ATIVA full_graph60.py noveTRAIN,60s/caso,SCFwarm completo sem
+restrições adicionais de arestas/visitas. NÃO DUPLICAR. Protocolo escrito em
+full_graph_protocol.md. Mesmas partidas edge_pool; verificar raw/aceito e custos,
+comparar com pool/expansão. allowed_edges contém grafo completo mas metadata
+solver ainda conservador restricted edge pool: não usar como prova global sem
+verificar conjunto completo. Nenhum teste aberto. Continua investigar sem pedir
+aprovação.
+
+
+## Retomada após cobrança de autonomia — busca em estados fortes ATIVA
+
+Usuário reiterou que não parar após hipótese negativa; buscar quaisquer ganhos
+publicáveis, com métodos conhecidos permitidos. Sessão67838 ATIVA:
+strong_state_support.py,27execuções,noveTRAIN x fixedLKH/supportC++/supportLKH,
+30s adicionais partindo de fixed_workLKH (inclui dois censurados). NÃO DUPLICAR.
+Protocolo strong_state_support_protocol.md escrito antes. ControleC++ verificado,
+mesmaenumeração, ordem rotacionada, prazo CLOCK_MONOTONIC externo com raw salvo.
+Gate>=3melhorias,média>=0.2%,supportLKHvenceC++>=5/9; não avaliar como end-to-end.
+Após fim auditar rotas/trace/bruto por dados crus e resumir; se negativo não só
+aumentar orçamento novamente. Pesquisa primária: Numdam ReactiveGRASP2021 e
+arXiv1401.3794v2 seleçãoimplícita, resumos lidos; não alegar implementação desta
+última. Nenhuma validação/teste aberta.
+
+
+## Retomada19/10 17h12 — expansão encerrada; critério FALHOU
+
+Sessão42664 encerrou.18execuções, auditoria independente PASS36rotas, nove
+geometrias. Nearest melhora2/9,média0.2015418%,vence random2/9; gate exigia
+3melhorias e5vitórias: FALHOU. gil262melhoria tardia descartada; não recontar
+como aceita. gr22996707 igualrefMDM;si1756885 acima6871conhecido. Nenhum
+recorde sustentado. audit_edge_expansion.py reconstrói pools com dados crus
+e reproduz RNG e desempates. Nenhum job científico ativo iniciado agora.
+Próximo: síntese de gargalos por geometria antes de nova hipótese, sem ampliar
+grafo por tentativa e erro nem retunar validação/teste.
+
+
+## Retomada 19/10 17h02 — expansão de arestas INICIADA
+
+Sessão42664 ATIVA: experiments/lkh/edge_expansion.py,18execuções sequenciais
+(nove hardTRAIN x nearest/random),60s cada. NÃO DUPLICAR. Protocolo escrito
+ANTES da coleta em edge_expansion_protocol.md. Mesmas partidas do pool original,
+não usar suas melhorias; nearest cinco vizinhos por visita, random mesmo número
+de arestas adicionais seed42; ordem alternada por geometria. Gate>=3melhorias,
+média>=0.2%, nearest vence random em>=5/9. Piloto OFFLINE, não tempo total.
+Precisa auditor independente de expansão e resumo após conclusão. Não abrir teste.
+
+
+## Retomada 19/10 16h52 — edge pool completo, gate FALHOU
+
+Sessão90891 terminou: nove casos, todos Optimal apenas no pool restrito.
+Auditor PASS9casos/79rotas. Duas melhorias, média0.1548048%; critério>=3
+e>=0.2% FALHOU. gil2621981 já consta cabeçalho; si1756968 acima de6871
+previamente conhecido/auditado. NÃO alegar recorde. Resumo em edge_pool_summary
+e research_notes/edge_pool_results.md. Nenhum job científico novo iniciado.
+Próxima possibilidade: expansão de arestas fora do pool, protocolo próprio,
+sem tocar teste. Preservar negativos e não confundir ótimo restrito/global.
+
+
+## Retomada 19/10 16h42 — MDM70 encerrado; edge pool INICIADO
+
+Sessão64426 terminou, completion.json presente. Sete COMPLETED70, dois CENSORED.
+Últimos si1757011→LKH7006(ref6987); ts225109147→109147(ref108805);
+tsp2252447→2447(ref2447). Auditor PASS9casos/68rotas. Nenhum novo recorde
+sustentado nesse lote. Custos LKH usam tempo adicional.
+
+Sessão90891 ATIVA: experiments/lkh/edge_pool_study.py, nove hardTRAIN,60s/caso
+OFFLINE, custos de gerar pool excluídos. NÃO DUPLICAR. Gate original >=3/9
+melhorias e média>=0.2%, sem perda de factibilidade. Após fim executar
+audit_edge_pool.py; bounds/status restritos ao pool, não globais. Teste fechado.
+
+
+## Retomada 19/10 16h31 — rd400 censurado, LKH iguala referência
+
+Sessão64426 ativa e avança para si175; NÃO DUPLICAR. rd400 timeout externo
+1799.992s, CPU filhos1747.196s, último checkpoint10 custo10592. LKH adicional
+0.179s obteve10529, igual referência MDM fornecida, sem alegar novo recorde
+ou comparação por mesmo tempo. Auditor parcial PASS6casos/44rotas; quatro
+COMPLETED70, dois CENSORED, três pendentes. Futura coleta edge_pool permanece
+bloqueada até completion.json. Auditor independente e timestamp exato de retorno
+preparados, sem dados grandes dessa hipótese.
+
+
+## Retomada 19/10 16h21 — rd400 avança; auditoria de prazo preparada
+
+Sessão64426 ainda ativa; rd400 checkpoint10 custo10592,1379.24s; sem resultado
+final. Não iniciar coleta concorrente. Runner edge_pool agora preserva instante
+exato de retorno nativo; auditor confere flag de descarte por esse instante,
+separado do tempo até gravar resultado. Smoke check aceita rota real e rejeita
+união incompleta, flag incorreta e relógios inconsistentes. Sem grandes testes
+da nova hipótese ainda.
+
+
+## Retomada 19/10 16h11 — auditor de edge pool preparado
+
+Sem nova coleta paralela. audit_edge_pool.py verifica viabilidade/custo por leitor
+escalar independente, união exata de arestas, inclusão de ambas rotas retornadas,
+escopo restrito dos bounds e hashes dos insumos. Smoke check: rota real a280
+aceita; união incompleta rejeitada. Sem resultados da futura coleta: NO_RESULTS,
+não PASS vazio. Não certifica cumprimento de deadline nem ótimo global.
+
+
+## Retomada19/10 16h01 — pr226COMPLETED70; runneredgepool pronto masNÃOiniciado
+
+Sessão64426 segue ATIVAemrd400,NÃODUPLICAR. pr226COMPLETED70:custo67852,
+LKH67852semganho,referênciaMDM67286. Wall4282.818s,CPUfilhos1072.009s.
+AuditorparcialPASS5casos/39rotas:4completos,1censurado,4pendentes.
+rd400checkpoint5:custo10813,446.982s. Nãoinferirresultadofinal.
+
+Prepared edge_pool_study.py:sintaxePASS,recusaexecutarsefixed_work/completion
+nãoexiste. Recolhe8rotaspré-definidas(ou6sevalidexportausente),valida/deduplica,
+unionpool,melhorwarmstart,HiGHS60sincluisetup,CPU+ambosrelógiosreportados.
+Melhoriasretornadasapós60sCLOCK_MONOTONIC são descartadasexplicitamente,
+raw_resultpreservado e proof_scope sempre restrito;initialreadinessregistrada.
+NÃOcoletagrandeiniciada,nãoconcorrercomjoblonga. Lerprotocolopré-registrado.
+
+Antecedenteprimário conferido:Cook&Seymour2003,TourMergingviaBranch-Decomposition,
+IJOC15(3)233–248,DOI10.1287/ijoc.15.3.233.16078,editoraePrinceton.
+Resumo confirma recombinaçãoclássica,nãocitarcomonovidade. PDFsautorestimeout,
+nãoalegarleituraintegral;notaedge_pool_prior_art.md documentaescopodaleitura.
+
+
+## Retomada19/10 15h51 — pr226checkpoint35; edgepool preparado semcoletapesada
+
+Sessão64426 MDM70segue ATIVA,pr226checkpoint35:custo67852,3849.323s.
+Nenhumcasofinalnovo;3completos/1censurado/5pendentes. ProteçãoACsessão46840
+assertionPID69362registrada,agregadoPreventSystemSleepainda0;eficáciaNÃOconfirmada,
+fimjobou4h. Nãocriarproteçãobaterianemalterarpreferênciaspermanentes.
+
+Hipótesedistinta PREPARADA,sóexecutarAPÓSMDM70terminar: edge_pool_protocol.md.
+União dearestasde8rotas porcaso (fixed_worknative+LKH maisMDM/fixo3seeds do
+fallbackcomum),todasvisitaslivres,fixarxforaunião0,warmstartmelhorpool.
+Backendhighs_warm_start.solveganhouallowed_edgesOPCIONAL(defaultinalterado),
+verificapartidacontida e retorna proof_scope/allowed_edge_count. NÃOaltera
+workerMDMativo,que nãoimportaessebackend. Boundsrestritosnão são globais.
+Verificadorverify_edge_pool.py usa enumeração6v em3pools e rejeiçãopartidainválida;
+sessão85361 FINALIZOU PASSnos3pools epartidainválida;resultadoedge_pool_verification.json. Nenhumensaiodeotimizaçãograndeiniciado.
+Coletafuturaoffline60s/caso,custodegerarrotasnãoincluído;gate3/9 e0.2%,
+reservadosfechados. Próximo manter baseline,confirmartestes e sódepoispool.
+
+
+## Retomada19/10 15h41 — suspensãoobservada; proteçãoACtemporária ATIVA
+
+Sessão64426 MDM70 segue ATIVA,processopaiPID51070,nativoPID66931empr226.
+Leiturapsautorizadafora sandbox confirmou nativoR consumindoCPU,semduplicata
+ativaoriginal_mdm. Doismineradoresantigos(shpaisPID1) nãoforamencerrados;
+CPU0.02cada,nãoatribuircargaaelesnemmatarprocessosdeorigemnãoreconstruída.
+Pr226checkpoint20:custo67889,3601.044s;jobavançando,nãocompleto70.
+
+EVIDÊNCIAOPERACIONALNOVA:pmset-glog mostrou Sleep/DarkWake/Wakeem19/10,
+comintervalosde1347s,993s,526sentreoutrosnajanela. power_state_evidence.json
+preserva240eventosnormalizados(timestamp/evento/duração),semIDsdispositivos.
+Issoestabelece queocorreramsuspensões;NÃOreconstróicausadecadaatrasoouvalida
+comparaçõesantigas. PythonmonotonicvCLOCKorigens/duraçõesjádocumentados.
+
+LidadocumentaçãolocalOFICIALmancaffeinate: -s sóvale emAC,-wliberaaoexitarPID,
+-texpiraapósprazo. Fontepmset-gbattindicouAC. Iniciadocaffeinate-s-w51070-t14400,
+sessão46840 ATIVA,proteçãoatéfimjobou4h,sóAC,semconfiguraçãopermanente.
+NÃOduplicar. Nãoassumirqueprevinefecharatampaou sleepmanual. Verificarassertion
+antesdeconsiderarcondiçõescontroladas;partialbenchmarkcontinuacensurado.
+Checagempmset:assertiondecaffeinatePID69362observada,mascontadoragregado
+PreventSystemSleep=0;EFICÁCIAAINDA NÃOESTABELECIDA,nãodeclararproteçãogarantida.
+
+
+## Retomada19/10 — quarto caso auditado; monitor concluído; PDFparcial4p sincronizado
+
+Sessão64426 segue ATIVAempr226,NÃODUPLICAR. kroA200COMPLETED70:custo23499,
+LKH23495=referênciaMDMfornecida. Wall453.253s,CPUfilhos395.029s.
+AuditorparcialPASS4casos/31rotas:3completos/1censurado/5pendentes.
+pr226checkpoint10:custo67889,3292.741s;job/timeoutcontinuamobservados,nãocausas
+inferidas. Semnovoexperimento nemtuningreservado.
+
+Monitor69304 FINALIZOU:6amostras,maiordiferençaentreintervalosCLOCK ePython
+0.000124708s. ConcordâncianesteintervaloNÃOexplicaeventoshistóricos,némpode
+apagarlimitaçãodoretornonativoemoutrosruns. JSONobservaçõespreservado.
+
+Skillpdfaplicada commarkoperationEDITantesdecompilar. PDFatual4p compilado
+2passeslocais,semreferênciasindefinidas/overfull. TODAS4p renderizadas e
+inspecionadas em/private/tmp/pcctp-repair-preview-1..4.png. compilation_audit.json
+sincronizaSHAdemain/modelo/reparo/bib ePDF. Equações/textoreferênciaslegíveis;
+seçõesvazias=esqueletoemdesenvolvimento,NÃOprontosubmissão. Nenhumclaimnovidade.
+
+
+## Retomada19/10 14h39 — monitorparcialcoerente; descrição reparação redigida
+
+Sessão64426 MDM70 segue ATIVAemkroA200,checkpoint35:custo23499,300.672s.
+Nenhumcasofinalnovo;auditoria3casosPASS,2completos/1censurado/6pendentes.
+Monitor69304 aindaATIVO noinstantechecagem:4/6amostras,intervalos30sCLOCKvs
+Pythonconcordaram dentro0.000125s;NÃOconclusãofinal ouexplicaçãodeatrasoshistóricos.
+Não duplicar;aguardarcomplete=true eestadofinaldasessão.
+
+Redigida seçãoLaTeX restricted_repair.tex, inputnomain: definição(U,F),fixações,
+fallback,limiteslocaisvsglobais,contraçãocaminhoscom incidênciasdeextremos,
+constantecustofixoecorrespondênciainteira. SEMnovidade/ganhoalegado.
+FontesLaTeXATUAISaindanãorecompiladas;compilation_audit.jsonmarca explicitamente
+PDFanteriorapenasinspecionadoantesdanovaseção. NãoalegarPDFsincronizado.
+Próximorevisar/compilaressaseçãocomoutlineemrestricted_repair_outline.md econtinuarjoblongosemcolisão.
+
+
+## Retomada19/10 14h03 — gr229COMPLETED70 auditado; monitorrelógios ATIVO
+
+Sessão64426 ATIVAagoraemkroA200,NÃODUPLICAR. gr229COMPLETED70:custo97196,
+LKH96791(405unidadesganho,0.4167%),MDMfornecido96707 (nãoótimoprovado).
+Wall3410.675s,CPUfilhos1380.096s;timeoutsolicitado1800não foi traduzido
+emretornoaté1800wall. Nãoatribuircausa,nãoalegarbenchmarktemporalcontrolado.
+AuditorparcialPASS3casos/23rotas:2completos,1censurado,6pendentes.
+KroA200checkpoint20:23525,semresultadofinal.
+
+MonitorPASSIVOclock_monitor.py sessão69304 ATIVA,
+6amostras espaçadas30s (150s),escreveclock_monitor_observations.jsoncomcomplete.
+MedeCLOCK_MONOTONIC,Pythonmonotonic,perf_countereUTC/CPU,semalterarworkerMDM
+nem gerarcargacomputacionalsubstancial. NÃO duplicar monitor(searquivoexiste
+scriptrecusa). Próximoinspecionardiferençasdeduração (nãoorigens),sem inferir
+causas históricas não medidas. Código daexecuçãoMDMativa permaneceintacto.
+
+
+## Retomada19/10 13h52 — gr229checkpoint35; progresso semmisturarcensura
+
+Sessão64426 ATIVA,NÃODUPLICAR. gr229checkpoint35:custo97225,854.105s.
+Nãoinferir70completas,menorcustoglobal ouLKHantesderetorno.
+Preservado emGit checkpointCRUdegil262censurado(antesignorado),permitindo
+reexecutarauditoria tokens/snapshots semdependerdesessãotemporária.
+Novo fixed_work_progress.py gera research_notes/FIXED_WORK_PROGRESS.md
+separando1completo/1censurado/7pendentes,CPU/relógio,snapshotúltimo,custose
+referênciafornecida. Semmédiaque misture censurados/completos,semclaimfinal.
+Últimaiteraçãosalva não é necessáriamenteiteraçãoexata ao interromper.
+PDFparcial compilado/inspecionado continua3p,nãoartigo pronto;semfontesalteradas.
+
+
+## Retomada19/10 13h42 — gil262CENSORED auditado; LaTeXparcialcompilado
+
+Sessão64426 segue ATIVA,NÃODUPLICAR. gil262CENSORED,últimosnapshot35,custo2014;
+LKHadicional1998,referênciaMDM1987. Wall5878.029s apesar timeoutsolicitado1800s,
+CPUfilhos1601.795s:limitaçãooperacionalpersistente,nãoatribuircausasemmedida.
+NÃO70iterações completas. AuditorparcialPASS2casos/15rotas. gr229emexecução,
+checkpoint10:custo97549(antes98217,98111),nãoinferirconvergênciafinal.
+
+Seçãomatemáticaverificada independentementepor verify_reference_model.py:
+33,864grafos e16configurações n3..6,comparaçãoequações/cortes vsenumeraçãode
+ciclos, incluindoquotas/coberturainviável eobrigatórios. PASS;finito,nãoprova
+universal substituta daargumentaçãodotexto. Nenhumsolvernecessário.
+
+Skillpdf lida/aplicada;mark_artifact_operation_started.mjs executadoantesdecriarPDF.
+Compilaçãolocal pdflatex/BibTeX/2pdflatex PASS,semundefinedrefs/overfull.
+PDFparcial3p emsubmission/build/main.pdf;TODAS3p renderizadas em/private/tmp/
+pcctp-manuscript-preview-1..3.png einspecionadas:equações/textos/referêncialegíveis,
+seçõesvaziasintencionaisdoesqueleto. compilation_audit.json registraSHA/status.
+NÃOartigo20–30ppronto,nãoentregarcomo final. Rigor/referências/resultados
+continuamemdesenvolvimento. Próximo seguirrestantes7casos e auditarcensura.
+
+
+## Retomada19/10 12h20 — gil262checkpoint20; seção matemática redigida
+
+Sessão64426 segue ATIVA,NÃODUPLICAR. gil262checkpoint20:custo2014,651.045s;
+a280únicocasocompleto70. AuditorparcialPASS1caso/8rotas;restanteemexecução.
+
+Skill scientific-writing lida nafonterealreferenciada peloSKILL.mdponteiro.
+Outline formulation_outline.md antesdaprosa. Nova seção LaTeX conhecida em
+submission/sections/problem_formulation.tex, inputemmain.tex; V=TdotcupR,
+coberturaW,quota,raizmandatory,grau+conectividade enunciados/provados.
+SEMnovidadealegada,semcontribuição/resultadosinventados. Esclarecido certificado
+localdavizinhança não implicaótimoglobalpor si. ReferênciaBibTeX MDM2026 conferida
+napáginaOFICIALhttps://www.inderscience.com/info/inarticle.php?artid=150960:
+4autores,título,ano2026,53(1),136–162,DOI10.1504/IJLSM.2026.150960.
+
+Solicitadocompile_latex_document(projectsubmission,main.tex); ferramenta não
+retornoudiagnósticosdurantejanela deespera e célulaorquestração704terminada.
+Estado compilação DESCONHECIDO, NÃOconfirmadoPASS, nenhumPDFinspecionado.
+Fontespreservadas. Próximo verificarcompilador/projeto e validar seção em
+instânciaspequenas antesdeartigo final; manuscritocontinuaparcial.
+
+
+## Retomada19/10 12h10 — gil262checkpoint10; registroevidência consolidado
+
+Sessão64426 segue ATIVA,NÃODUPLICAR. a280completo70jáauditado;gil262ainda
+checkpoint10:custo2014,362.406s. NãochamarMDM70 nem interpretarLKHantesderetorno.
+Novo evidence_ledger.py gerou evidence_ledger.json e research_notes/EVIDENCE_LEDGER.md
+com12estudosexploratórios,hashes,unidades/baselinesdistintas,decisõesPASS/FALHA,
+instrumentaçãoV1inválida e limitaçõestemporais. Nãoémeta-análise/ranking,
+nemcorrige seleção sequencial. Serve evitarseleçãodeapenasresultadospositivos.
+O legado dosdemaisMIP/cortesanterior estáemnotas/auditoriaspróprias,esseledger
+cobre a sequênciaLKH/suporte/exato recente. TesteFECHADO eartigoincompleto.
+
+
+## Retomada19/10 12h00 — PRIMEIRO70completo; a280 semganhoLKH
+
+Sessão64426 segue ATIVA no próximo caso;NÃODUPLICAR. a280COMPLETED70,custo2001
+igualàtabelaMDMfornecida;LKH2sadicionais retornou2001em0.085s(semganho).
+Wall1721.512s(28.7min),CPUfilhos1513.619s(25.2min),parent1.202s.
+Snapshots1:2107,5:2061,10:2022,20/35/70:2001. AuditorPARCIALPASS1caso/8rotas.
+Não generalizar para9geometrias,nem tratar2001comoprovaótimo.
+
+Skilldata:create-viz lida e aplicada; plot_fixed_work.py criou figuraPNG+SVG e
+proveniência emsubmission/figures/a280_fixed_work_checkpoints.*. Inspeção visual
+PASS:textoslegíveis,seispontos observadosSEMinterpolação,referência2001nãoótimo,
+únicogeometriatreinoseed42 explicados. Fontconfig avisoucache nãoescrevível,
+masarquivosgerados/inspecionados;semnecessidadeaprovação. Figuradiagnóstica,
+aindanãoartigo pronto. Continuar restantes8casos e guardar censurados.
+
+
+## Retomada19/10 11h50 — MDM70 ATIVO; checkpoint35 auditado
+
+Sessão64426 segue ATIVA,NÃODUPLICAR. a280avançou decheckpoint20 para35duranteverificação:custo2001,
+1169.326s,completed=false. Rota esnapshots validados via tokenscrus,sequência
+iterações/custosnão crescentes/hash em fixed_work_checkpoint_audit.json.
+Esse custo coincidecomtabelaMDMfornecida,mascheckpoint35 NÃOé70completas
+nem provaótimo. Auditorcasosconcluídos aindaNO_COMPLETED_CASES.
+
+Enquantojoblongoroda, nova consulta primária aoabstractBalas1995 DOI
+10.1002/net.3230250406 reafirmou clonagem/cliqueliftingPCTS,massemobter
+fórmulasteoremascompletos. Nenhumavanço sobre novidade; manterincerteza de
+cardinality_lifting_audit.md. Não alegarfamília inédita por faltadeacesso.
+
+
+## Retomada19/10 11h40 — MDM70 segueATIVO; checkpointa280it10
+
+Sessão64426 ATIVA,NÃODUPLICAR. Checkpointa280:10iterações,custo2022,
+360.024s noúltimosnapshot. Nenhumcasoconcluído ainda;nenhuma inferênciade
+convergência ou deLKH. Timeout1800s pré-fixadopermanece,nãoalterarporresultadoparcial.
+Auditoraudit_fixed_work.py preparado: checa tokenscrus/rotas/snapshots,LKHmesmas
+visitas,statusCOMPLETED70vsCENSORED,CPU/wall,hashes;--partial permite somente
+casosjásalvos e retornaNO_COMPLETED_CASES sezero. Exigirbatchcompletionpara
+relatóriocompleto.Nãoconfundir checkpoint10comMDM70. Reservadosfechados.
+
+
+## Retomada19/10 11h30 — convergênciaMDM70 ATIVA; CPUinstrumentada
+
+Novo run_one registraparent_cpu_seconds,child_user_cpu_seconds,child_system_cpu_seconds
+usandorusageantes/depois e process_time;apenasmetadados. Novo hard_timeout_seconds
+opcional,defaultpreservado. Nenhumalgoritmo/prazoantigoalterado.
+
+Protocolofixed_work_protocol.md ANTESdosruns. Runnerfixed_work.py sessão64426
+ATIVA;NÃODUPLICAR. Todos9hardTRAIN,seed42,70iteraçõesoriginais,budget0inativo,
+bináriocorrigidoelitebounded,semprofiling. principalnumIt70 e research_snapshot
+inclui70verificadosnafonte. Timeoutsegurança1800sporcaso;seestourar CENSORED,
+nunca chamarMDM70completo. Depois LKH2sADICIONAIS(cobrado/reportado separado).
+Nãoécomparaçãoigualtempo,nãolibera teste. Artefatosfixed_work/,completion.json
+sófim deTODOS9. Jobpodedurarhoras;consultar logs/checkpointssemduplicar.
+Próximo auditarrotas/snapshots/últimaiteração/status,CPUvswall,ganhospósLKH
+contraMDMconvergidoevalorespublicadossócomoreferência. Semoutroprocessoativo.
+
+
+## Continuação19/10 — diagnósticoV2 concluído; tempos observados coerentes
+
+Sessão28147 FINALIZOU. timing_diagnostic_v2/ e timing_diagnostic_summary.json.
+CLOCK_MONOTONIC compartilhado corrigido;retornos a28016.006s,rd40015.123s,
+ts22517.156s;CPUfilhos13.64/13.45/14.65s,calibrações0.2sCPU~0.21..0.23srelógio.
+Esses3runsnão reproduziramatrasode714s e NÃOexplicamretrospectivamente sua
+causa. V1permanece INVÁLIDO, não usar seuscustos/factibilidade/tempos para inferência.
+Nenhumprocessoativo. Próximo definir protocolo commedidaCPUeCLOCK_MONOTONIC
+emTODASexecuções futuras e considerar trabalhofixo/custosconstrução para
+separar mudançaalgorítmica de censuratemporal. NÃOreclassificarbatchesanteriores
+comoconfirmatórios nem descartá-los seletivamente. TesteFECHADO;artigoaindaincompleto.
+
+
+## Continuação19/10 — diagnósticoV1 INVÁLIDO; V2 comrelógio correto ATIVO
+
+Sessão95361 FINALIZOU,masdadosINVÁLIDOSparadiagnósticonativo: scriptpassou
+began=time.monotonic() aoC++CLOCK_MONOTONIC;origensdiferem~522milsegundos
+nesteambiente. Startup_debit~521944s,0incumbentes,retornos3.4/6.9/1.6s
+nãorepresentam execuçãoMDM15s. Preservado timing_diagnostic/invalid_clock_protocol.json.
+Erroemdiagnóstico, nãoexplicarporisso atrasosdosbatchesanteriores: wrappers
+support_common_fallback.py,total_time.py,support_total.py etimed_experiment.py
+jáusamclock_gettime(CLOCK_MONOTONIC);revisãocallsiteJSONregistrada.
+
+Corrigido timing_diagnostic.py paraCLOCK_MONOTONIC noinstantepassado e duração;
+calibraçãomonotonic sómededuração dentrodoprocesso,nãoatravessaC++.
+Novosoutputs timing_diagnostic_v2/,sessão28147 ATIVA;NÃODUPLICAR.3casosTRAIN,
+15sMDM,CPUparent/children ecalibração. Próximo conferir startup_debit razoável,
+CPUvswall eflags;NÃOconsiderarV1 comodiagnósticoválido ou ganhoalgorítmico.
+
+
+## Retomada19/10 11h19 — exatoaleatórioFALHOU; diagnósticoCPU/relógio ATIVO
+
+Sessão88240 FINALIZOU. AuditorgeralPASS,rawescalarPASS162arquivos/2734rotas;
+10registrosnativossemincumbente,masfallbackgarantiu0falhasfinais. Comparação:
+exactvsMDM-3.19528%,1win/7loss/1tie;vsfixo-1.80176%,3win/5loss/1tie.
+GateFALHOU. Nãoalegar superaçãonemganhodevelocidade. Umretrytécnicopreservado.
+
+LIMITAÇÃOOPERACIONALMATERIAL: retornosmédiosMDM25.115s,fixo43.799s,
+exato28.990s;máximos66.986/714.234/109.195s,apesardeprazos15s deaceitação.
+Incumbentestardiosdescartados,masatrasosgrandesdesbalanceiamcensura. Causa
+não medida: NÃO atribuir a suspensão/AppNap/carga semevidência. NÃO iniciar
+maiscomparaçõescurtasatéinvestigarcontroletemporal. Resultadonãosustenta
+experimento develocidadecontrolada;preservá-lo como exploratóriolimitado.
+
+Novo timing_diagnostic.py sessão95361 ATIVA;NÃODUPLICAR. TrêscasosTRAIN
+(a280,rd400,ts225) MDM15s,resourceRUSAGE_CHILDREN(usuário/sistema)antes/depois,
+CPUparental ecalibraçõesde0.2sCPUantes/depois. Sódiagnósticooperacional,
+nenhuma comparaçãodealgoritmos. Pasta timing_diagnostic/,completion.json sófinal.
+Próximo comparar CPU/relógio ecalibração,documentarincerteza;antesdequalquer
+novométodo resolver reprodutibilidade temporal ou definirprotocolo fixo detrabalho.
+
+
+## Retomada19/10 11h09 — loteexato retomado segueATIVO; auditores3braços preparados
+
+Sessão88240 ATIVA,22pares reportados atéts225seed42;NÃODUPLICAR. Arquivos
+concluídos reutilizadossemreexecutar;umretrytécnicopreservado(arquivosignorados
+raw/checkpoint/log tambémforamversionadosexplicitamente no commit84cecff).
+Ainda não inferir gateparcial. Preparados audit_support_total.py --exact-random
+(3braços,targetexact_random,gateMDM/fixo) e raw_route_audit.py exact_random_total
+incluindorecords dosrepairs,viabilidadeescala e visitasfixadas portempo/trace.
+Exigircompletion antesdaauditorfinal. Depois conferir tambémarestasfixadas,
+statuslocal e todasintervenções. Códigoativo doalgoritmoinvariável nessa retomada.
+
+
+## Retomada19/10 10h59 — falhatécnica preservada; exatoaleatório RETOMADO
+
+Sessão63006 FALHOU emgr229seed44fixed_lkh:JSONraw truncado(7164bytes),
+checkpointválido(35.241s),timeoutduranteexport. Parserantigo tentavafinalraw
+semfallbackJSON;crashantesdeproduzirresultado dessebraço. NÃO resultado científico.
+Arquivosraw/checkpoint/log eparserantes preservados em exact_random_total/
+technical_failure_gr229_seed44_fixed_lkh/,intervention.jsonexplica a repetição.
+
+Correção mínima timed_experiment.py: tenta rawdepoischeckpoint seJSONinválido,
+registra payload_source/payload_read_errors;seambosinválidosretorna semincumbente
+nativo ewrapper mantémfallbackexternoválido. Não muda prazo,algoritmo,gate.
+Replay EXATOdoprimeirobloco novo sobrearquivoscorrompidos PASS. Fonteantes/depois
+hashguardada. Nenhumdadofalhoapagado. Osbraçosconcluídos permanecemintactos.
+Runner retomado sessão88240 ATIVA;repeteSÓbraçointerrompidosemresultado econtinua.
+NÃODUPLICAR. Auditoriadeve mencionarintervenção/retry,misturadeparser éfalhatécnica
+exploratória,nãoestudoconfirmatório. Próximo preparar auditor3braços exatos.
+
+
+## Retomada19/10 10h25 — seletorMLFALHOU; exatoaleatórioendtoend ATIVO
+
+Sessão33302 FINALIZOU. ridgeleaveonegeometryout delta0.0986079ppvsrandom,
+3/9wins;gateFALHOU(>=0.1pp e6wins). NÃOintegrar/nãoretunar. Semreservados.
+
+Novo protocolo exact_random_total_protocol.md ANTESdosruns. Runner
+exact_random_total.py sessão63006 ATIVA (~20min),NÃODUPLICAR.81runs:
+9hardTRAIN,seeds42/43/44,MDM15s vsMDM10s+LKHfixo vsMDM10s+LKH0.2s+reparação
+aleatóriacontraída no saldoaté15s. MESMOwrapperfallbackcomum e relógioexterno,
+modelo/construção/solvercobrados. FragmentRepair warmhighspycuts,route_context,
+k8,geradorrandomcount1,seeds42+10007t,subsolve<=3sousaldo. Aceitar sóretornonoprazo.
+Artefatos exact_random_total/,completion.json sófinal. Nãoalterarcódigoativo.
+Gate>=0.5%médio,>=6wins<=1lossvsMDM,>=3winsvsfixo,0falhas.Nãolibera teste.
+Próximo preparar auditor com3modos e campospost.records dosrepairs,rotas/fixações,
+aceitaçãoexterna<=15s;reutilizar raw_audit e wrapperauditorsemassumir4modos.
+Nenhumoutroprocessoexperimentalativo.
+
+
+## Retomada19/10 10h15 — reparaçãohard PASS; triagemMLporgeometria ATIVA
+
+Sessão51032 FINALIZOU. audit_hard_fragment.py PASS81subproblemas/9geometrias,
+rotasescalares/fixaçõesarestas evisitas verificadas.81statusótimoLOCAL,
+6/9melhorias,ganhomédio0.50094%contraestadoLKHpolido:gateoráculoPASS.
+Maiormodelo308variáveis,tempo médio0.703s,máx6.294s(nãoalgoritmocompletocom3s).
+Random ganha5dos6casosmelhorados;coverageganhard400. NãoalegarMLsuperior.
+
+Próxima triagemPRÉ-REGISTRADA hard_fragment_selection_protocol.md: ridgealpha1,
+featuresexistentes+kindonehot,leaveoneGEOMETRYout (escala só8treinogeoms),
+comparar1candidatopredito comexpectativarandomonly euniformeall,semhyperparam.
+GateMLdelta>=0.1pp sobrealeatórios,>=6/9wins. SóTRAIN;reservadosfechados.
+Runnerfragment_selection.py sessão33302 ATIVA;NÃODUPLICAR. Lê81arquivos e
+instâncias(podeserlento);outputsfragment_selection_results.json sófinal.
+Próximoauditarfolds/normalização/semvazamento e interpretargate. Se falhar,
+nãointegrarseletor;reparaçãoaleatória pode seravaliadasemMLnoendtoend.
+
+
+## Retomada19/10 09h26 — oráculoLKHfalhou; reparaçãohardTRAIN ATIVA
+
+Sessão90512 FINALIZOU. audit_candidate_oracle.py PASS825rotas escalares,
+4/9vantagensfora8,ganhomédio0.15896%<0.2:gateFALHOU. Não treinarseletor.
+Todos408candidatosamostrados preservados,rótulosmelhorobservado nãoótimoprovado.
+
+Nova hipótese: FragmentRepair contraído emhardTRAIN ondeantesnãofoitestadorigoroso;
+negativos anteriores concentraram11fáceis. Protocolo hard_fragment_protocol.md
+ANTESdosruns. Reusa candidatoexistente k8,count9,seed42,random/coverage/prize,
+initialfixed_lkhdocompiled_control;81subproblemas highspywarmstartcuts,
+route_context,3scada. Runnerhard_fragment.py sessão51032 ATIVA,NÃODUPLICAR.
+Outputs hard_fragment/,completion.json sófinal. ColetaOFFLINE nãoequivalente
+algoritmocompletode3s. Ótimostatus é LOCALdavizinhança,nãoglobalPCCTP.
+Gatepotencial>=3/9melhorias,ganhomédio>=0.2%vsestadopolido. Próximo auditar
+rotas/fixações/releases e todosresultados,sem treinarmodelo atépotencial.
+Reservadosfechados,nenhumoutroexperimentativo.
+
+
+## Retomada19/10 09h16 — diversificaçãoFALHOU; oráculocandidatos ATIVO
+
+Sessão91815 FINALIZOU. raw_audit PASS27arquivos/107rotas; auditortraces/hashPASS.
+Ganho-6.13308%vsMDMcacheado,2/9wins;gateFALHOU. Encerrar variante, não retunar
+restarts/temposcomvalidação. Preserve resultados negativos,semclaimendtoend.
+
+Nova hipótese específica: top8custobruto pode excluir suportes bonsapósLKH.
+Protocolocandidate_oracle_protocol.md ANTESdacoleta. Runnercandidate_oracle.py
+sessão90512 ATIVA. NÃO DUPLICAR.9hardTRAIN,initialfixed_lkhdocompiled_control,
+enumeracandidatosfactíveis e deduplicasuporte;avalia top8+até40restantesRNG42,
+LKH0.2s/candidato. ColetaOFFLINE semequivalênciatempo/ótimoprovado.
+Pasta candidate_oracle/,completion.json sófinal. Gateoráculo>=3/9vantagens
+fora top8 e ganho>=0.2%médio;senão não treinarML nessa hipótese. Reservadosfechados.
+Próximo auditar rotasbrutas/finais de TODOSrecords, identificar best8vsbestamostra
+incluindoincumbentecomo fallback;agregarpor9geometrias. Ainda nenhumMLnovo.
+
+
+## Retomada19/10 09h06 — diversificação aindaATIVA; auditorfinal preparado
+
+Sessão91815 segue ATIVA;6/27braços reportados,a280/gil262. NÃODUPLICAR.
+AuditoriaescalarPARCIAL PASS6arquivos/26rotas. Nenhumainferência de gate/qualidade
+parcial. Retornos15.00..15.08s,melhorias globaisaceitas sóantes15s porrunner.
+Preparado audit_diversification.py (sintaxePASS): exigecompletion e raw_audit
+COMPLETO27arquivos,verifica hashes,tracesglobaisestritos<=15s,suportefixo
+preservado,resultadoigualúltimotrace. ComparaMDMcacheado deoutrobatch
+explicitamente apenasdiagnóstico. Rodar raw_route_audit.py diversification
+apósfim e depois audit_diversification.py. Códigoativo intacto.
+
+
+## Retomada19/10 08h04 — diretoFALHOU; diversificaçãoTRAIN ATIVA
+
+Sessão25125 FINALIZOU. raw_route_audit direct_support PASS9arquivos/95rotas;
+tracesglobais<=15s e custo mínimo conferidos. Média-2.57287%frenteMDMcacheado,
+4/9wins:gateFALHOU. Busca direta encerra0.33..3.17s emestagnação. Comparação
+cacheada descritiva, não contemporânea/confirmatória. direct_support_summary.json.
+
+Hipótese DISTINTA protocolo diversification_protocol.md ANTESdosruns:
+perturbar melhorrota(reversãoordem+até2trocasopcionaisfactíveis),descidaaté1s,
+reter melhorglobal15sTOTALdesdeantesleitura/fallback.3braços:ordemfixaLKH,
+suporte2optC++,suporteLKH.9hardTRAIN,seed42. Sessão91815 ATIVA(~7min),NÃODUPLICAR.
+Outputs diversification/,completion.json sófinal. Nenhumoutroexperiment ativo.
+RNG42,até20tentativasportroca,sem tuningreservado. raw_route_audit.py aceita
+agoradiversification. Próximoauditarrotas,traces<=15s,origemcusto e custos9casos,
+comparar3controles eMDMcacheadosem alegarconfirmação. Gate>=6/9vsMDMcacheado,
+ganhomédio>=0.5%,0falhas apenasjustifica futuracomparaçãojusta;nãolibera teste.
+
+
+## Retomada19/10 07h41 — controlecompilado concluído; diagnóstico semMDM ATIVO
+
+Sessão49993 FINALIZOU. raw_route_audit.py compiled_control PASS27arquivos,
+100rotas. LKHsuporte vence2optcompilado7/9 efixo5/9;summarysalvo. Continua
+estadofixo,não comprova desempenhoalgoritmocompleto. Gate15santeriorFALHOU.
+
+Nova hipótese DISTINTA em protocolo direct_support_protocol.md ANTESdosruns:
+removerMDM inicial e usar fallbackrápido+support_lkh até15sTOTAL, mesmos9TRAIN,
+mesmasregras,sem tuningreservado. Sessão25125 ATIVA. NÃO DUPLICAR.
+Pasta direct_support/, completion.json sófinal. Triagem só compara com médias
+MDM15s CACHEADAS deoutromomento,sem inferênciapareada ou alegarvelocidade.
+Gateviabilidade>=6/9custosmenores,ganhomédio>=0.5%,0falhas;somente justificaria
+futuroensaiojusto. NÃOlibera teste. Próximo auditar rotas/prazosglobaistraçados
+(comoffsetpós),confrontar9custos e preservarnegativos. Nenhumaoutraexecuçãoativa.
+
+
+## Retomada19/10 07h21 — controlecompilado em estadofixo ATIVO
+
+Compilação2opt FINALIZOU e verificação100matrizessimétricasnãométricas PASS;
+resultado two_opt_verification.json. Controleusa deltaO(1),custo/trajeto
+recalculados independentemente e TODOSvizinhos2opt conferidos nofim.
+Novo compiled_two_opt.py adaptercobra serialização/processo/validação em0.2s,
+retém inicial se timeout/retornotardio. Alterações não mudam suportes.
+
+Protocolo compiled_control_protocol.md registrado ANTESdosruns. Runner
+compiled_control.py substitui função2opt só emprocessoisolado, preservando
+support_search.py e resultadosanteriores.9hardTRAIN,seed42,mesmosMDM10s
+cacheados,5sADICIONAISporbraço,3braços reexecutados. Sessão49993 ATIVA;
+NÃODUPLICAR. Pasta compiled_control/,completion.json sófinal.
+Não é comparação endtoend, não libera teste. Próximo: auditar rotas por
+raw_route_audit.py compiled_control e comparar3custos/9casos; relatório
+explicita limitação de estadosfixos e falha dogate15s anterior.
+
+
+## Retomada19/10 06h30 — fallbackcomum auditado; gateFALHOU; controleC++ compilando
+
+Sessão8714 FINALIZOU. Auditorias completas PASS:216arquivos/3437rotas,
+0falhasfactibilidadeTODOSbraços. vsMDMganho0.74800%,6wins/2loss/1tie;
+vsfixo0.36993%,3wins/3loss;vsPython2opt1.28132%,7wins/1loss. GateFALHOU
+por2derrotasvsMDM,limite1. Não abrirteste nem alegarsuficiência científica.
+TemposretornomédiosMDM15.587s,fixo10.641s,2opt14.325s,suporteLKH11.992s.
+
+Preparado two_opt.cpp controlecompilado deltaO(1). Compilação ATIVA sessão64679
+para /private/tmp/pcctp-two-opt. Nãorodarverificação antesdecompileterminar:
+tentativa antecipada de100matrizes falhouFileNotFoundError porquebinárioainda
+nãopronto; não é falhaalgorítmica. Próximo aguardarcompilação, salvar/rerodar
+verificador100matrizessimétricasnãométricas n3..12, custoescala e checartodos
+vizinhos2opt quando complete=true. Ainda NÃOintegrar ouexecutarnovobatch
+antesdeverificação/protocolo. Nenhum experimentoheurísticoativo agora.
+
+
+## Retomada19/10 06h20 — lotecomum segue ATIVO; limitação controle documentada
+
+Sessão8714 segue ATIVA;21pares reportados até si175seed44, faltam ts225/tsp225.
+Não duplicar, aguardarcompletion paraauditoriasfinais. Não inferir gateparcial.
+Nota two_opt_control_limitations.md: controle2opt atual emPython,recalcula
+custo O(n)porreversão, enquantoLKHcompilado. Comparação não isola vizinhança;
+antesdeavaliaçãofinalprecisa controle2optcompilado deltaO(1)verificado.
+MDMcompilado continua controleprincipal;não alegar superioridade intrínsecaLKH
+combaseemPython2opt. Prepararcomponenteemseparado semalterarfonte ou
+configuração do batchativo. Validação/teste permanecemfechados.
+
+
+## Retomada19/10 06h10 — fallbackcomum ATIVO; verificação parcial PASS
+
+Sessão8714 segue ATIVA;47/108braços concluídos naúltimacontagem,0falhasde
+factibilidade nosresultadosconcluídos,nenhumincumbente final apenasfallback.
+Não interpretar qualidade/gateparcial, não duplicar. Máximotempoaceitaçãofallback
+1.491s INCLUI leitura e validação externas;capsuave0.25 é sóconstrutor.
+AuditoriaescalaPARCIAL ampliada para conferir também rota fallback e pre_post,
+alémderotasfinais/posts/traces:92arquivos/1530rotas PASS. Reexecutar nofinal;
+esta fotografia parcial não implica auditoria de TODOS108runs. Próximo
+aguardarcompletion e executar audit_support_total.py --common-fallback,
+raw_route_audit.py support_common_fallback, registrarorigens e tempos.
+
+
+## Retomada19/10 06h00 — novo lote comfallbackcomum ATIVO
+
+Verificação9fallbacks FINALIZOU PASS: tempo máximo0.1203s, todasrotas auditadas
+independentemente. Novo protocolo lkh_common_fallback_protocol.md ANTESdosruns.
+Runner support_common_fallback.py, sessão8714 ATIVA,108runs~25min;NÃODUPLICAR.
+Diretório support_common_fallback/, completion.json sófinal. TODOS4braços
+recebem MESMOconstrutor externo,tempo cobrado; retém melhorfallback/nativo,
+pósprocessa melhorincumbente só no saldoaté15s. Native15/10s usa relógioexterno
+iniciadoANTESdaleitura/fallback. Fonte intactadurantebatch. Não passa fallback
+paraMDMinterno; é incumbentesegurança externo. Registraorigem/fallback/tempo.
+Auditores preparados: audit_support_total.py --common-fallback e
+raw_route_audit.py support_common_fallback; executar apóscompletion.
+Gate igualaoanterior;esteTRAIN não libera teste. Resultadosanteriores preservados.
+
+
+## Retomada19/10 05h50 — lote15s concluído, gateFALHOU; fallback em verificação
+
+Sessão22852 FINALIZOU. audit_support_total.py PASS:0falhasMDM,6fixed_lkh,
+4support_2opt,3support_lkh(27runscada). GateFALHOU; não excluir casos.
+ComparaçãoMDM:8geometrias completamentefactíveis,5wins/2loss/1tie,
+ganhoCONDICIONAL0.80250%; não é ganho global. vsfixo5geometrias,4wins/0loss;
+vs2opt7geometrias,6wins/1loss. Temposretornomédios:MDM16.029s,fixo11.702s,
+2opt14.772s,suporteLKH12.812s. Auditoriaescala COMPLETA PASS216arquivos,
+2502rotas,26registrosvazios=nativo+resultado13runssemincumbente.
+
+Novo feasible_fallback.py protótipo:NN sobreTODOSvisitáveis+remoçõesopcionais
+factíveis em capsuave0.25s; completar/validarcicloantesderetornar mesmo se cap
+excedido,caller deve conferir prazoexterno. NÃO nova comparação executada.
+Verificação independente9hardTRAIN lançada sessão42691 (consultar status),
+resultado fallback_verification.json. Próximo integrar MESMO fallback emTODOS
+4braços,cobrar tempo desdeantesdele; comparar melhorfallback/nativo apósretorno,
+registrarorigem. Não reaproveitar resultadosantigos para comparação oficial;
+protocolo novo ANTESdosruns,mesmo15s egeometrias,seeds. TesteFECHADO.
+
+
+## Continuação após autorização explícita do usuário — lote15s perto do fim
+
+Sessão22852 ATIVA;100/108braços concluídos na última contagem, tsp225seed42
+completo. Não duplicar. AuditoriaescalaPARCIAL passou194arquivos/2164rotas;
+26registrossemincumbente incluem nativo+resultado, não26runs. Arquivosmaisrecentes
+não necessariamente incluídos. Próximo executar raw_route_audit.py support_total
+e audit_support_total.py SOMENTE após completion.json, preservar faltasdeincumbente.
+
+Causa de código da vulnerabilidade: primeiro research_progress da construção
+sódepois de construirsoluçãoinicial(grasp.cpp~3491); construção pode estourar10s.
+Nota initial_incumbent_design.md propõe fallback externo rápido COMUMaTODOSbraços,
+com tempo cobrado, sem usar alvo/rota reservada. Ainda NÃOimplementado/NÃOexecutado;
+auditar atual antes de decidir próximoestudo. Isso melhora disponibilidade,
+masnão é por si contribuição científica. Usuário instalará Gurobi nauniversidade;
+continuar HiGHS/heurísticas semaguardar licença, CTP foraescopo.
+
+
+## Retomada 19/10 05h30 — lote15s ATIVO; auditoria escalar independente
+
+Sessão22852 segue ATIVA,12pares completos atékroA200seed44; novosarquivos
+continuamgerados. Não duplicar. Ainda semcompletion. Não inferir resultadosparciais.
+Novo raw_route_audit.py usa SOMENTE biblioteca padrão, tokenscrus e loops
+escalares: confere tipos,obrigatórios,prêmio,cobertura e custo na matrizoriginal;
+nenhum parser/validador compartilhado comalgoritmo. support_diagnostic PASS,
+27arquivos/89rotas. SnapshotPARCIAL support_total PASS,102arquivos/1406rotas,
+6registrossemincumbente (inclui nativo e resultado; NÃO6execuçõesdistintas).
+Reexecutar nofinal e depois audit_support_total.py para prazos/agregação.
+Auditoria parcial é verificação operacional; não completa e não evidênciadeganho.
+
+
+## Retomada 19/10 05h20 — lote15s ativo, falhas de factibilidade preservadas
+
+Sessão22852 segue ATIVA, a280seed42 completo e43parcial. Não duplicar.
+Primeiro par apresentou nativefeasible=false em fixed_lkh e support_2opt;
+MDM2253,support_lkh2257. Retornos nativos12..20s, startup0.03..0.82s.
+Não descartar nem substituir essas observações. Gate exige0falhas e já não
+poderá passar neste batch; ainda concluir TODASgeometrias para mapear robustez.
+Não ajustar orçamento com resultados parciais ou atribuir falha a causa
+não medida (carga/energia/etc). Comportamento operacional é resultado.
+
+Preparado audit_support_total.py: exigecompletion, confere rotas/tracesnativos,
+hashes,prazos dasmelhorias; retém faltasdeincumbente e marca geometrias
+incomplete_feasibility. Médiasdecusto disponíveis são explicitamentecondicionais,
+não conclusão global de superioridade. Rodar apósfim. Compilação sintáticaPASS
+via compile();py_compile tentou cache fora workspace e falhou por permissão,
+sem problema nafonte (não pediracesso adicional por cache).
+
+
+## Retomada 19/10 — comparação15s ATIVA
+
+Diagnóstico suporte concluído e audit_support.py PASS: support_lkh vence
+fixo em5/9 e2opt em7/9; gate3/9PASS. si1756871 validado independentemente
+por tokens crus/Python escalar (si175_independent_audit.json), MAS6871 já
+estava no quarto campo do arquivo e loader chama-o valor_otimo. NÃO recorde.
+
+Novo protocolo lkh_support_total_protocol.md registrado antes dosruns:
+MDM15s vsMDM10s+fixed_lkh/support_2opt/support_lkh usando saldo realaté15s,
+9hardTRAIN,seeds42/43/44,108runs,ordempareadarandomizada,cada braço dozero.
+Runner support_total.py; sessão22852 ATIVA (~20–27min). NÃO DUPLICAR.
+Outputs support_total/ e completion.json sófinal. Preparar auditor independente
+por rotas originais, traces nativos<=10/15s e melhorias pós aceitas<=15s.
+Gate exploratório >=0.5%médio,>=6wins/9,<=1lossvsMDM,>=3winsvsamboscontroles,
+0inviabilidade. NÃO libera teste reservado. Ps indisponível no sandbox;
+nenhuma outra sessão experimental conhecida ativa.
+
+
+## Retomada às 12h56 — piloto suporte/ordenação ATIVO
+
+Novo protocolo research_notes/lkh_support_protocol.md registrado ANTES dosruns.
+Runner experiments/lkh/support_search.py, sessão74722 ATIVA. Não duplicar.
+9hardTRAIN,seed42, incumbentes MDM10s originais cacheados, 5sADICIONAIS porbraço:
+fixed_lkh,support_2opt,support_lkh. NÃO é comparação endtoend vsMDM15s.
+Gerador remove1opcional, adiciona1pela inserção barata, troca1por1factível;
+ordena top8candidatos por custo bruto e otimiza comLKH<=0.2s ou2opt,
+aceita somente melhoria antesprazo. Descida estrita, sem ILS/reinícios ainda.
+Mesma ordenação inicial porbraço segundo método. Usa validador PCCTPoriginal.
+Gate diagnóstico prévio: support_lkh supera fixed_lkh em>=3/9, nenhuma
+inviabilidade; reportar controle2opt. NÃO libera teste nem reutiliza validação.
+Diretório support_diagnostic/; completion.json sófinal. Próximo: auditar todas
+rotas/tracecustos/prazos por arquivo e comparar3braços, verificar se geração
+consome prazo e limita exploração. Sem inferir desempenho global deste diagnóstico.
+
+
+## Retomada às 12h46 — horizonte30 concluído e auditado; sem recordes
+
+Sessão20900 FINALIZOU. audit_total_time.py --horizon30 PASS:27pares,
+9geometrias, ganho médio0.47964%,mediana0.25776%,7wins/1loss/1tie,
+nenhuma inviabilidade. Bootstrap exploratório[0.0710,1.0425]%. gate_passed=false
+é marcado por desenho: este diagnóstico NÃO libera teste e não possui gate
+confirmatório. Ganho menor que10s(1.37394%). Retorno médioMDM30.590s,híbrido29.691s,
+maxhíbrido34.353s;aceitação dentro30s verificada,23/27chamadasLKH.
+Decomposição30s:0.52204pp ordenação -0.04240ppdiferençanativa =0.47964%líquido.
+
+Confronto com MDM fornecido:0melhorias estritas,2igualdades entre9TRAIN.
+Não alegar recordes;tempos/hardware do artigo diferentes. Artefatos
+horizon_published_comparison.json e nota homônima. Pós-processamento isolado
+não sustenta por si contribuição principal suficiente. Todosresultados preservados.
+
+Nenhum processo experimental ativo. Próxima hipótese a operacionalizar APENAS
+em TRAIN/desenvolvimento: alternar perturbação do conjunto visitado e ordenaçãoLKH,
+em vez de apenas ordenar suporte fixo no final. Ler implementação e descritores
+existentes antesdecriar duplicata; aproveitar validador original. Predefinir piloto
+com controles:MDMmesmotempo, pós-processamento fixo e busca de suporte semLKH;
+mesmas sementes/tempo total, medir custo de selecionar/reparar. Não reutilizar
+validação para calibrar e não abrir teste(gate anterior3/7falhou). Não alegar
+ILS inédita: busca primária mostrou tese UFRJ2020 já tem4híbridosILP/mineração,
+ReactiveGRASP2021 DOI10.1051/ro/2021057 e heurísticasILS/evolutivas2009.
+Literatura relevante ainda precisa ser lida integralmente antes de afirmar novidade.
+
+
+## Retomada às 12h36 — horizonte30 ATIVO; decomposição contábil concluída
+
+Sessão20900 ainda ATIVA;19pares reportados, até si175seed42. Não duplicar,
+aguardar completion.json. Fontes/parametrização do runner intactos.
+Novo decompose_gains.py: verifica por par identidade exata
+MDM-finalhíbrido = (nativohíbrido-finalhíbrido) - (nativohíbrido-MDM).
+TRAIN10s:1.51910pp de ordenação -0.14515pp diferença nativa =1.37394%líquido.
+Validação10s:0.92898pp -0.03579pp =0.89319%líquido. Agregado por geometria.
+NÃO é estimativa causal de sacrificar1s: diferença nativa inclui trajetória,
+variação de execução e tempo. Artefatos *_decomposition.json e notas respectivas.
+Após auditar30s, executar decompose_gains.py horizon30 para persistência.
+Gate validação segue FALHOU3/7; teste FECHADO e CTP fora de escopo.
+
+
+## Retomada às 12h26 — horizonte30 ainda ATIVO; fontes compiladas preservadas
+
+Sessão20900 segue ATIVA, nove pares concluídos (a280,gil262,gr229). Não duplicar,
+não inferir resultado do batch parcial. Há ganhos/empates/perdas individuais.
+Nenhuma configuração alterada durante execução. Completion.json ainda ausente.
+
+Proveniência retrospectiva adicionada em experiments/lkh/provenance/: cópias
+por SHA256 de31fontes compiladas e6wrappers, hashes dos4binários, plataforma,
+manifesto original de compilação.16entradas instrumented_sha256 verificadas.
+A chave sha256 do manifesto registra fontes ORIGINAIS antes das transformações;
+NÃO deve ser comparada às fontes instrumentadas. A tentativa inicial assim falhou
+emUtils.cpp; corrigido o escopo da checagem, não houve mudança de fonte ou binário.
+Snapshot é posterior aos pilotos e durante horizonte30, explicitamente declarado;
+não fingir que hashes foram registrados antesdosruns de10s.
+
+
+## Retomada às 12h16 — validação auditada, gate FALHOU; persistência TRAIN ativa
+
+Sessão97506 FINALIZOU. audit_total_time.py --validation PASS nas rotas/prazos;
+gate científico FALHOU: ganho médio0.89319%, mediana0%,3wins/4ties/0losses,
+0inviabilidades. Exigia4wins. NÃO abrir teste, NÃO retunar9/1 com validação.
+Resultados em validation_audit.json e lkh_validation_results.md. Ganhos d198,
+pr264,pr299; quatroempates. Não chamar gate aprovado nem contribuição pronta.
+
+Novo diagnóstico exploratório PRÉ-REGISTRADO lkh_horizon_protocol.md:
+TODOS9hardTRAIN,seeds42/43/44,MDM30s vsMDM29s+LKH1s. Verificar persistência
+com mais tempo, SEM dados reservados, SEM autorização para abrir teste qualquer
+que seja resultado. Runner horizon_training.py; sessão20900 ATIVA (~27min).
+NÃO DUPLICAR. Diretório experiments/lkh/horizon30/ e completion.json sófinal.
+Auditar após término: /usr/bin/python3 experiments/lkh/audit_total_time.py --horizon30
+Parâmetros do runner total_time.run agora opcionais total_budget=10,polish_budget=1;
+usos antigos idênticos; auditor suporta30s. Não mudar fontes durante o batch.
+
+
+## Retomada às 12h06 — validação segue ATIVA; auditoria temporal ampliada
+
+Sessão97506 segue ativa; NÃO DUPLICAR. Completados d198,kroB100,kroE100 até seed44.
+Nenhum resultado final disponível ainda. Auditor ganhou hashes dos arquivos nativos
+além dos resultados e resumo de tempos reais: TRAIN MDM retorno médio10.301s,
+máx11.330s; híbrido9.471s,máx10.106s. Incumbentes aceitos SOMENTE dentrodo prazo;
+não confundir prazo de aceitação com retorno estritamente até10s.
+Reexecutada auditoria TRAIN PASS sem mudar custos/gate. Isso mudou hashdoJSON;
+a cópia EXATA da auditoria inicial usada para liberar validação foi preservada
+em validation/train_audit_at_launch.json, hash verificado contra protocol.json.
+Auditor --validation já preparado; aguardar completion.json antesdeexecutar.
+
+## Retomada às 11h56 — piloto igual tempo passou; validação ATIVA
+
+Sessão34525 FINALIZOU. Auditoria /usr/bin/python3 experiments/lkh/audit_total_time.py
+PASS: 27pares/9geometrias, ganho médio por geometria1.37394%, mediana1.08188%,
+8vitórias/1empate/0derrotas por média bruta; nenhuma inviabilidade. Bootstrap
+exploratório por geometria[0.6013,2.2443]%, não confirmatório. Há perda individual
+rd400seed43, preservada. Gate pré-registrado PASSOU. Resultados/auditoria em
+experiments/lkh/total_time*; nota research_notes/lkh_total_time_results.md.
+
+Validação CONGELADA lançada, sessão97506:
+/usr/bin/python3 experiments/lkh/reserved_validation.py
+7geometrias,3seeds,42runs~7min. NÃO DUPLICAR. Diretório experiments/lkh/validation/;
+completion.json só no final. Nenhum teste aberto. Após terminar:
+/usr/bin/python3 experiments/lkh/audit_total_time.py --validation
+Auditor agora suporta validação; gate congelado: ganho médio>0,>=4wins,<=1loss,
+sem inviabilidade. Se falhar NÃO abrir teste nem ajustar9/1 usando validação.
+Se passar, planejar/congelar avaliação final com todos12testes antes de executá-la.
+Artigo ainda NÃO completo; este ganho é evidência preliminar, não recorde/publicabilidade.
+
+
+## Retomada às 11h46 — grandesTRAIN mapeados; LKHscreen positivo; pareado ativo
+
+hard_training_baseline.py executouTODOS9casos maiores semprofiling,10s,seed42,
+wrapperverificado. Todosfactíveis antesprazo,nenhumhardtimeout. Gap contraBS
+MDM publicado0.33..10.89%,mediana3.20%. Tabela correta extraída por rótulo
+(tab:mdm-grasp),144linhas,BScolunaMDM e linha fonteguardada. ParserTeX foi
+corrigido antesdosruns (falha inicialsemexecutarbaseline). Nota hard_training_baseline.md.
+Tempospublicados NÃOcomparáveis;essesBSnão são ótimosprovados.
+
+LKH3.0.6mirrorcerebis/LKH3,pin9a51de3161f2746e969f7a2e33220f637da64e54,
+READMEautoriza pesquisa. Clonadoem/private/tmp/pcctp-lkh3-research;compilado
+clangcomSDKexplícito apósccnãolocalizarassert.h. Semalterarfontes. Backend.json
+guardaorigem/hashbinário/comando. Nãoéversãomaisrecente,nãoalegarisso.
+SiteoficialHelsgaunretornoutimeout;referênciaprimáriaEJOR2000DOIregistrada.
+
+Screenpré-registrado:9incumbentesMDM10s+até1sADICIONAL,LKHmesmasvisitas.
+Teste6v ótimoenumerado6 PASS. Screen7/9melhorias,0timeouts,tempos0.03..0.23s.
+Auditoriaindependente screen_audit.json PASS,custosoriginais evisitaspreservadas.
+Ex:a2802219->2112,rd40011346->10801,si1757203->7006. NÃOécomparaçãoigualtempo.
+
+NOVO protocolo lkh_total_time_protocol.md ANTES dopareado:MDM10s vsMDM9s+LKH
+no restanteaté10s,seeds42/43/44,9geometrias,ordemrandomizadareprodutível.
+Gate>=0.5%ganhomédioporgeometria,>=6wins/9e<=1loss/9,semperderfactibilidade.
+Nãoajustar9/1segundoscustoseleção. Wrapperrun_oneagoraaceitaparent_started
+opcional,cobrandoinicializaçãoexterna;nãomudausosantigos. LKHaceitasaldoreal.
+
+PAREADOATIVO sessão34525,comando /usr/bin/python3 experiments/lkh/total_time.py.
+Arquivos experiments/lkh/total_time/porcaso/seed/arm,completion.jsonsónoFINAL.
+NÃODUPLICAR. Job54runs~9min. Auditor audit_total_time.py exigecompletion.json,confere
+todasrotas/prazos/27pares e faz bootstrapPORGEOMETRIA apenasexploratório.
+Skill statistical-analysis lida/aplicada para evitar pseudorreplicação.
+Validação preparada MASNÃOINICIADA: reserved_validation.py verifica gate
+da auditoriaTRAIN antesdeexecutar,7geometriasvalidation do splitoriginal,
+21pares,9/1congelado. Protocolo lkh_validation_protocol.md registrado antes
+deabrir dados;test12continua fechado.
+Correção deproveniência: jáexistia highs_backend.py no commit4577315;
+o adaptador nativo de 11h16 acrescentou startcompleto/capturatemporal,
+não foi primeiro usoabsoluto dehighspy no projeto.
+Próximo:aguardar/auditarrotas,prazo,27pares,
+agregarPOR9GEOMETRIAS,nãotratar27comoinstânciasindependentes. Testereservadofechado.
+
+## Retomada às 11h36 — fixação exata auditada; gate de tamanho falhou
+
+Novos reduced_cost_fixing.py e protocolo pré-fixado reduced_cost_protocol.md.
+Dual arredondado escala10^6,sinais corrigidos,custos reduzidos e bound
+recomputados com inteiros. Fixação se B+abs(rc)>U estritamente, preservando
+TODAS soluções de custo<=incumbent (não todas soluções sem cutoff).
+Verificação3binárias por enumeração PASS,inclusive dual arredondado acima
+do custo que precisa correção por limites de coluna. MDMstart respeita cadafixação.
+
+11certificados TRAIN em reduced_cost_results.json.4/11 fixam>=30%binárias
+em<=2s (bier12766.3%,gr9658.0%,rd10066.3%,u15987.2%). Gate exigia6;FALHOU.
+Não iniciar piloto inteiro,não baixar limiar nem aumentar prazo/rodadas.
+Auditoria INDEPENDENTE por loops de inteiros Python,sobre matriz reconstruída
+sem resolverLP: reduced_cost_audit.json PASS,4097fixações certificadas,11bounds.
+
+Próxima prioridade deve voltar ao mapeamento de headroom em TODO TRAIN,
+incluindo9geometrias cujos perfis MDM não completaram70iterações. As comparações
+recentes focaram só11completas e NÃO esgotam casos difíceis. Não excluir os
+9timeouts da avaliação final. Os checkpoints desses9 são validados,mas não
+chamá-los MDM70iterações. Investigar baseline por tempo total e confrontar
+valores publicados antes de propor mais MIP curto sobre11casos fáceis.
+Dados: a280,gil262,gr229,pr226,rd400 fizeram1iteração; kroA200,si175,ts225
+fizeram10;tsp225 fez35. Sem novos benchmarks/teste reservado abertos.
+
+## Resultado final GSEC — gate inteiro não passou
+
+Sessão40707 concluída,11pares. Auditoria gsec_integer_audit.json PASS:
+plain3provas/1ganho,cuts4provas/0ganhos,net+1prova,gatefalse. Cortes ajudam
+gr96,mas perdem melhoria11467kroB150 queplaincaptura; valorjápublicado,nenhum
+recorde novo. Não aumentar rodadas/prazo nem selecionar só casos favoráveis.
+Guardar ganhoLP9/11 e resultado inteiro negativo de forma separada.
+
+Próxima hipótese distinta a considerar: fixação SEGURA por custos reduzidos
+após LP fortalecido, para reduzir tamanho/presolve antes do MIP, já que10s
+frequentemente se gastam na raiz. Não é método inédito. Primeiro medir quantas
+variáveis binárias podem ser fixadas por bound+reducedcost>incumbent,com prova
+numérica/enumeração e conservação do incumbent. Só então escolher gate e piloto
+inteiro com mesmo tempoTOTAL; registrar antes. Não aplicar fixação heurística
+como se fosse globalmente válida. Nenhum heldoutaberto,CTPfora,Utilsintacto.
+
+## Retomada às 11h26 — GSEC clássicos passaram gate da raiz; inteiro ativo
+
+Protocolo gsec_root_protocol.md registrado antes. Novo gsec_root.py separa
+GSEC x(delta(S))>=2y_v via mincut com capacidades piso10^6 e confirma violação
+nos valores originais. Até3rodadas/2s incluindo leitura/modelo. Cortes conferidos
+contra startMDM completo. Verificação sintética PASS: todos mincuts por sink
+comparados a enumeração e cortes emitidos passam TODOS ciclos simples enraizados.
+Resultado gsec_root_verification.json.
+
+Gate da raiz PASS9/11 com redução>=10% da folga MDM-LP. Casos gr96=77.2%,
+lin105=82.1%,pr144=64.5%; todos terminam LPótimo,0.22..0.93s. Não é
+aceleração inteira ainda. Resultado gsec_root_results.json; sem retuning.
+
+Protocolo INTEIRO registrado gsec_integer_protocol.md antes do piloto:
+10sTOTAL plain/cuts,mesmohighspy1.13.1,SCF,MDMstart,1thread,seed42,ordemalternada.
+Tratamento cobra separação/reconstrução no prazo. Gate:>=2ganhos MDM e mais
+quecontrole OU>=2provas líquidas adicionais sem perda primal. Não mudar gate.
+
+Piloto ATIVO sessão40707: /usr/bin/python3 experiments/ml_lns/gsec_integer.py.
+Checkpoint gsec_integer_results.json por par. NÃO DUPLICAR. Adaptador solve
+agora aceita root_cuts e valida cada um contra startantesdepassar aoHiGHS.
+Observaçãointermediária: plain emkroB150 encontra11467 removendo145 e
+acrescentando44,141,às8.90s;cuts permanece11479.11467 JÁ CONSTA nos
+artigosMDM/IJISE (main_review.tex linha672;IJISElinha994),não novo recorde.
+Cuts prova gr96 em1.26s vsplain não prova10s. Não confundir os efeitos.
+Próximo: aguardar conclusão, auditarrotas/custos/bounds/gate e decidir, sem
+classificar ganhoLP como contribuição. Teste reservado fechado,CTPfora.
+
+## Resultado final do HiGHS nativo — piloto refutado para melhoria primal
+
+11pares completos;warm0/11ganhos,cold0/11. Warm prova3 geometrias (bier127,
+rd100,u159),cold2(rd100,u159). Auditoria independente highs_warm_start_audit.json
+PASS:rotas/custos no modelo original,11geometrias únicas,eventos dentro do prazo,
+limites e certificados. Gate>=2ganhos falhou. Não aumentar prazo ou trocar
+instâncias para salvar este mecanismo. MIPstart está funcional e disponível
+como infraestrutura para outro método, mas não há contribuição primal aqui.
+Provas de ótimo já conhecido não são novas soluções; tempos de versões/máquinas
+anteriores não são comparáveis diretamente. Overruns pequenos são registrados;
+melhorias de callback seriam aceitas somente se validadas a tempo.
+
+Próxima hipótese distinta: reforçar a relaxação de conectividade (GSEC fracionários
+por mincut antes da busca) com overhead cobrado, em vez de insistir no start.
+Primeiro diagnosticar força/custo desses cortes em TRAIN e verificar por
+pequena enumeração; registrar regra antes de novo piloto. Interface lazy do
+HiGHS continua não assumida. CTP fora,heldoutfechado,MLrefutado não retunado.
+
+## Retomada às 11h16 — HiGHS nativo validado; piloto pareado em execução
+
+Novo `experiments/ml_lns/highs_warm_start.py`, protocolo registrado antes em
+`research_notes/highs_warm_start_protocol.md`. highspy1.13.1, SCF Repair idêntica,
+1thread,seed42,10s incluindo montagem/leitura,11TRAIN completas. Braços cold/warm
+na MESMA versão. Start MDM COMPLETO com fluxo decrescente na ordem da rota,
+verificado em todas as linhas A*x, limites e objetivo. Callback captura somente
+ciclos validados antes do prazo; fallbackMDM em ambos. Retorno após prazo não
+apaga melhorias capturadas a tempo.
+
+Verificação sintética6v PASS em highs_warm_start_verification.json: enumeração
+ótimo22, ambos braços provam22; callbacks disparados, warm encontra23 depois22;
+setSolution kOk. Não depende só de solução final do solver.
+
+Piloto CONCLUÍDO sessão61639, não reexecutar. Comando original
+/usr/bin/python3 experiments/ml_lns/highs_warm_start.py.
+Checkpoint highs_warm_start_results.json por par completo; não duplicar processo.
+Auditor salvo audit_highs_warm_start.py exige11pares e confere rotas/custos,
+monotonicidade/prazo dos eventos, bounds e provas. Executar só após conclusão.
+Cuidado: a prova de bier127=74745 já consta no artigo IJISE local (linha712);
+não chamar novo ótimo. Enum de lazyconstraints NÃO comprova suporte; discussão
+oficial3079 informa falta da funcionalidade. Protocolo contém fonte.
+Gate pré-fixado warm melhorar MDM em>=2/11. Se passar, orçamento TOTAL justo
+contraMDM comtempoextra,solvercold,híbrido e sementes pareadas. Nenhuma alegação
+de novidade do MIPstart. Valid/test fechados. Preserve include/Utils.h.
+
+## Execução após autorização — novos diagnósticos de desempenho
+
+Usuário disse "ok, então pode fazer". Implementado route_polishing.py:
+DFJ binário no suporte EXATO MDM, e modo --variable-visits com seleção global,
+graus x=2y, linking, quota/cobertura e GSEC condicionais para componentes semraiz.
+Protocolo de cada piloto registrado antes,10s/caso,11TRAIN completas,gate>=2ganhos.
+
+Ordem fixa:0/11 ganhos,11/11 ótimos do suporte provados, tempos0.04..1.89s.
+Não é ótimo global PCCTP; não insistir só em ordenação. Resultado guardado.
+Seleção global SciPy: concluída sessão72039,11/11 sem ganhos no prazo,
+resultado full_dfj_results.json. u159 provado globalmente ótimo28613 neste
+modelo exato; demais10sem prova. Não reexecutar este piloto. Limites ultrapassados retornados são descartados;
+não concluir ausência de soluções melhores a partir disso.
+
+Verificação independente sintética6v por enumeração: ótimo22, custo inicial24,
+modo global encontra22 e prova, três cortes condicionais; JSONguardado.
+Tentativa py_compile falhou só por cache externo ao sandbox; ast.parse passou.
+
+Descoberta operacional IMPORTANTE: /usr/bin/python3 tem highspy1.13.1 instalado.
+API setSolution aceita solução parcial ou completa; callbacks cbMipImprovingSolution,
+cbMipSolution e cbMipDefineLazyConstraints existem. Antes, usou-se só scipy.milp,
+sem MIP start e sem observar melhorias antes do retorno. Documentação primária
+HiGHS further.md confirma MIP start. Próximo passo útil é adaptador highspy com
+incumbent MDM completo e captura de soluções dentro do prazo, verificado por
+A*x e enumeração, comparando MESMA versão com/sem start. Isso é investigação
+nova de infraestrutura, não retuning dos modelos MLrefutados. Não comparar
+resultados de versões distintas como se isolassem efeito de MIP start.
+Sem validação/teste abertos, sem alterar legado/include/Utils.h.
+
+## Nova orientação explícita do usuário — desempenho também é contribuição
+
+Usuário esclareceu que aceita métodos da literatura e combinações para melhorar
+a resolução do PCCTP, sem exigir método novo. Prioridade mudou: NÃO continuar
+usando novidade de lifting como caminho crítico. Plano e memória atualizados.
+Próximo passo: mapear folga/tempo do MDM em DEV/TRAIN e selecionar um método
+publicado ou combinação com hipótese distinta dos pilotos refutados, protocolo
+registrado e comparação por tempo total. ML opcional, teste reservado fechado.
+Não reciclar as mesmas políticas negativas por ajuste de limiar. A pesquisa
+teórica existente permanece preservada, com novidade não demonstrada.
+
+## Retomada às 11h04 — antecedente direto de clique lifting no PCTS
+
+A conferência encontrou antecedente mais próximo: Balas1995, Networks25(4),
+199–216, DOI10.1002/net.3230250406, cujo resumo primário declara explicitamente
+clonagem e clique lifting para PCTS. Capítulo14 do livro TSP Variations,
+DOI10.1007/0-306-48213-4_14, tem seção14.6 sobre esse procedimento, página680,
+e14.7 sobre projeção no politopo de ciclos, página686. Metadados/resumo/sumário
+consultados, MAS fórmulas integrais não recuperadas. Não inventar enunciados.
+Atualizado `research_notes/cardinality_lifting_audit.md` com links e distinção
+entre o que foi lido e o que permanece pendente.
+
+Próxima comparação deve priorizar Balas/clique lifting (coeficiente interno
+zero e externos copiados), antes de expandir mais os teoremas ou alegar novidade.
+GTSP1995 e tese Salazar1996 ainda sem texto integral utilizável por estas
+ferramentas. As provas propostas permanecem registradas; não houve nova medição
+computacional nem abertura de validação/teste. Não duplicar buscas já registradas
+sem uma rota nova de acesso. Nenhuma contribuição pronta para submissão ainda.
+
+## Retomada às 10h54 — antecedente confirmado e facetas de posto intermediário
+
+Fonte primária Stephan2009, seção3.6/corolário3.53(f): cardinalidade inferior
+já é faceta clássica. Teorema3.11 clonagem exige caminhos dirigidos de tamanho
+fixo, regularidade e bowties; não aplicar automaticamente à extensão por blocos.
+Auditoria em `research_notes/cardinality_lifting_audit.md`. Ainda não obtido
+texto integral GTSP1995. Não afirmar novidade do caso singleton ou por ausência
+de correspondência de busca.
+
+Argumento de faceta estendido em `research_notes/general_rank_facet_theorem.md`:
+3<=r<=q-1, q blocos opcionais arbitrários, seleção ocupa>=r. Realização por
+demandas em toda união de q-r+1 blocos. Dimensão m-1, face r+1 de dimensão m-2.
+Colagem local usa conectividade do grafo de subconjuntos r por trocas de um
+bloco, preservando o bloco cujo potencial se compara; interseção tem r>=3
+vértices. Posto2 é combinação explícita dos cortes de cobertura+grau para
+qualquer q>=3. Prova proposta, revisão independente e novidade pendentes.
+
+`probe_partition_facets.py` agora aceita required_blocks sem mudar o fluxo
+padrão antigo. Quatro casos intermediários certificados exatamente em
+`general_rank_facet_checks.json`; semente27182. Não alterados resultados antigos,
+nem testes reservados. Próxima lacuna principal continua lifting por blocos
+em fonte primária, além de revisão formal desta generalização. Nenhuma evidência
+nova de aceleração; ML refutado permanece encerrado. Artigo ainda pendente.
+
+## Retomada às 10h44 — revisão da prova e realização mista infinita
+
+Revisão interna de `partition_facet_theorem.md` sem erro identificado:
+eliminação y, inserções opostas, lema em K4, colagem por triângulos e dimensão.
+Ainda não houve revisão independente.
+
+Novo corolário em `research_notes/mixed_facet_realization.md`: q>=4,
+q-2 blocos singleton, dois duplos A,B, todas demandas por pares exceto AB,
+prêmios unitários e quota q-1. Seleções viáveis são EXATAMENTE as da construção
+com todos os pares e quota não ativa. Logo herda a faceta geral. Postos:
+cobertura q-2, prêmio2 se q4 e q-3 se q>=5, conjunto q-1. Demonstra uma
+realização onde ambos requisitos são essenciais ao posto, mas é o MESMO
+politopo e não uma faceta nova por esse motivo.
+
+`verify_mixed_facet_realization.py` e `mixed_facet_realization.json`:1984seleções
+q4..8 verificadas exaustivamente, equivalência e postos PASS. Sem testes reservados.
+Lida prop3.1 de Sundar–Rathinam arXiv1508.01813: lifting sequencial ao liberar
+visitas fixadas, via Padberg1975/Fischetti1995. Não é automaticamente o mesmo
+teorema de duplicação, mas não foi descartada dedução por lifting conhecido.
+Próxima lacuna: cardinality-constrained cycle polytopes e lifting por duplicação;
+fontes primárias encontradas Stephan2009 e Fischetti1995, conferir texto integral.
+Nenhuma aceleração nem novidade bibliográfica reivindicada. Artigo pendente.
+
+## Retomada às 10h34 — prova geral de faceta para cobertura por pares
+
+Escrita prova em `research_notes/partition_facet_theorem.md`: raiz singleton,
+q>=4 blocos opcionais disjuntos não vazios, demanda em cada união de par,
+quota não ativa. Para n vértices e m arestas, dimensão do politopo m-1 e
+face x(Eentre)=q de dimensão m-2, quaisquer tamanhos positivos dos blocos.
+
+Argumento: eliminar y pelos graus; qualquer igualdade nas rotas justas tem
+coeficientes internos zero por inserir u,v nas duas ordens no mesmo bloco;
+coeficientes entre blocos uniformes. Em cada quociente que omite um bloco,
+custo constante em ciclos Hamiltonianos implica potenciais aditivos (lema
+com prova por trocas de duas arestas). Quocientes se intersectam em completos
+com q-1>=3 vértices, tornando os potenciais compatíveis. Comparar omissões
+iguala os potenciais opcionais. Toda igualdade da face é combinação do grau
+da raiz e da partição; rota com todos os blocos fornece dimensão inteira.
+
+Checagens adicionais guardadas em `partition_theorem_checks.json`: tamanhos
+(1,1,1,1):9/8; (1,1,2,3):27/26; (3,1,2,1,2):44/43. Ranks exatos certificados
+por menores modulares atingindo limites superiores; semente diferente31827.
+Nenhum benchmark reservado aberto. Não é prova computacional do teorema;
+a prova é o argumento geral escrito, ainda precisa revisão independente.
+
+Próxima etapa: revisão rigorosa do argumento e confronto com lifting de
+cardinalidade/duplicação em GTSP. Todos-singletons reduz a cardinalidade,
+então é possível que seja lifting conhecido. Não chamar família nova ainda.
+Não demonstra sinergia de prêmio/cobertura nem aceleração. Não reabrir ML
+refutado nem retunar separador. Artigo e auditoria final continuam pendentes.
+
+## Retomada às 10h24 — obstrução q=3 e novos certificados finitos
+
+Criados `experiments/pcctp_cuts/probe_partition_facets.py`, resultados
+`partition_facet_probe.json` e análise `research_notes/partition_facet_generalization.md`.
+Construção: raiz singleton, q blocos opcionais, demandas em toda união de par,
+quota não ativa. Para q=3, demonstrado que o corte de partição é metade da
+soma dos três cortes forçados por cobertura. Caso (2,2,2): dimensão inteira20,
+face17, portanto NÃO faceta (certificado exato, não apenas amostragem negativa).
+Para q=4,5,6 com blocos de tamanho2: dimensões35/34,54/53,77/76, facetas
+certificadas nestes casos. Também tamanhos(3,2,2,2):44/43 e(1,2,2,2):27/26.
+Os geradores inteiros estão guardados; ranks modulares atingem limites superiores
+analíticos, logo certificados racionais. Nenhum benchmark/teste reservado aberto.
+
+Próxima etapa concreta: prova por coeficientes de hiperplano nas rotas justas
+com blocos contíguos, q>=4. Não extrapolar certificados finitos para teorema.
+Esta subfamília NÃO demonstra sinergia da quota, nem aceleração.
+Busca bibliográfica localizou Ferreira–Oliveira Filho2006, Some formulations
+for the group Steiner tree problem, DOI10.1016/j.dam.2006.03.028: estudar a
+formulação estendida de grupos antes de reivindicar novidade. Também consultada
+introdução de Feremans–Labbé–Letchford–Salazar-González2011, Generalized Network
+Design Polyhedra, DOI10.1002/net.20455, que usa clusters disjuntos; não foi
+estabelecida equivalência com a construção de cobertura sobreposta.
+
+## Retomada Codex às 10h13 — origem do fortalecimento de partição
+
+Conferidos os resultados e as decisões recentes da sessão Cursor. Não reabrir
+linhas de aprendizado refutadas. Nenhum experimento duplicado foi iniciado.
+
+Nova auditoria em `research_notes/partition_rank_projection.md`: o corte
+x(Eentre)>=rho+1 resulta da soma de conectividade por indicadores de ocupação
+zi e do posto sum zi>=rho. Isso explica o ganho sem atribuir novidade à
+contração do ciclo. Não prova redundância em (x,y), pois zi é disjunção por
+bloco. Conferência racional independente: na testemunha de nove vértices,
+fronteiras 2 e quatro vezes 5/4, sum zi<=5/2<3; PASS com Fraction.
+
+Lidas introdução de Baïou–Barahona–Mahjoub2000 e seção3 de Maziero et al.
+arXiv2104.01173. A primeira trata RHS afim no número de partes, não fornece
+automaticamente separação do posto dependente da partição. A segunda não
+contém a fórmula conjunta nesta seção. Ausência nessas fontes NÃO estabelece
+novidade. Próxima investigação útil: caracterização geral de facetas ou
+separação com garantias para subfamília de obrigações; antes de executá-la,
+confrontar os antecedentes group-Steiner/partições já listados em prior_art.md.
+Não retunar o separador nem apresentar o ganho LP como aceleração inteira.
+Artigo ainda não pronto; validação/teste reservados continuam fechados.
+
+## Leitura às 9h46 — revisão ML para MIP
+
+O usuário pediu leitura de `artigos/ml_to_mip_review.pdf`. O miolo útil para o
+PCCTP é a seção 5.1: imitar strong branching, neural diving e backdoors. Khalil
+2016, Gasse 2019 e Nair 2020 estão descritos de forma reconhecível. O restante
+do PDF não serve como fonte: o texto fala em 30 artigos, a bibliografia passa
+de 50, e vários números trocam de artigo. Exemplos: o texto usa [1] como
+referência genérica de otimização, mas a bibliografia aponta Bertsimas e
+Stellato, The Voice of Optimization; o texto usa [25] para o RL4CO e [18] para
+fronteiras de objetivo, e na bibliografia essas duas entradas estão invertidas,
+com o RL4CO em [45].
+
+Decisão: não citar esse PDF. Não abrir aprendizado de branching. O HiGHS
+chamado pelo SciPy não expõe a escolha de variável no nó, e a licença do Gurobi
+está vencida. A parte executável dessa literatura, prever um suporte e resolver
+o que resta, já foi medida na imitação do conjunto ótimo e não bateu o MDM.
+Validação e teste continuam fechados.
+
+## Resposta às 9h29 — aplicação de imitação do conjunto ótimo
+
+O usuário aceitou contribuição de aplicação, desde que o aprendizado melhore
+os resultados. A regra foi escrita em `research_notes/visit_set_prediction.md`
+antes da comparação.
+
+Regressão logística treinada só nas oito geometrias de desenvolvimento com
+ótimo provado. Nas 11 geometrias de treino com MDM de 70 iterações, o conjunto
+previsto foi resolvido por no máximo 15 segundos e comparado ao custo do MDM
+e a um ranking sem aprendizado de mesma cardinalidade.
+
+Resultado em `experiments/ml_lns/visit_set_prediction.json`. Melhor que o MDM
+em 0 de 11. Melhor que o controle em 1 e pior em 3. A regra não foi satisfeita.
+Não alterar limiar nem descritores. Validação e teste continuam fechados.
+Não há contribuição de aplicação.
+
+## Resposta às 9h27 — aprendizado não abre outra linha
+
+O usuário perguntou se machine learning ainda pode ser a contribuição.
+
+Decisão: não abrir nova linha de aprendizado sobre escolha de operador,
+utilidade de padrão ou reabertura de arestas.
+
+- Escalonamento: cobertura e prêmio melhoram um pouco a previsão de qual
+  operador melhora, e a política conjunta não melhora o custo nem a curva
+  frente à ordem original e à reordenação estática.
+- Seleção de fragmentos por programação dinâmica: a regra de menor número
+  de componentes teve ganho médio maior que os quatro modelos.
+- Utilidade de cobertura e prêmio, com a mesma cardinalidade, não supera
+  frequência marginal.
+- Reabertura informada de duas arestas não supera o MDM.
+
+A agenda de 18 de outubro condiciona aprendizado pesado a um sinal de
+cobertura e prêmio acima da frequência simples. Esse sinal não apareceu.
+Um modelo maior sobre as mesmas decisões ajustaria ruído. A pergunta de
+regimes, sobre quando a memória ajuda, continua sem evidência neste
+conjunto, em que o MDM já empata com os ótimos provados. Não é o caminho
+desta submissão.
+
+## Retomada às 8h44 — reabertura rejeitada como método; corte de partição medido
+
+O usuário pediu decisões até uma contribuição publicável. Nenhuma das medições
+desta etapa chega a isso.
+
+- Reabertura de 2 arestas, regra em `research_notes/reopening_diagnostic.md`.
+  Três geometrias com folga. Informada melhor só em hk48 (7593 contra 7605) e
+  empate em att48 e berlin52, onde o custo do padrão não se moveu. Onde o
+  modelo sem força provou o ótimo, o MDM já o tinha. A reabertura não supera
+  o MDM. k não foi aumentado. Não construir a matheurística.
+- Corte de partição na raiz, regra em `research_notes/rank_partition_root.md`.
+  Limite estritamente melhor em 7 de 9 geometrias DEV, nenhum corte inválido.
+  A queda de folga relevante é brazil58, de 36,75% para 25,19%. Nas outras, a
+  variação é de frações de ponto a cerca de dois pontos percentuais.
+- Prova inteira de 30 s, mesmo separador: as duas versões provam as mesmas
+  oito geometrias. pr76 não prova. A versão com cortes não é mais rápida pela
+  regra dos 80% e é mais lenta em berlin52, gr48 e hk48. Não escrever artigo
+  de aceleração.
+- Próxima decisão já tomada: parar de ajustar seletor, k e limiar nestes
+  dados. A porta que ainda pode virar artigo é o estatuto bibliográfico do
+  corte de partição frente a GTSP, covering salesman e comb. Sem essa
+  conferência, o efeito no limite não sustenta submissão. Teste reservado
+  fechado. CTP fora.
+
+## Retomada às 8h29 — diagnóstico de seletores no banco elite
+
+- A linha de escalonamento permanece negativa. Novo build observacional
+  `build_elite_export`: decodificador inicializado, elite delimitada, exporta
+  as rotas ocupadas e o texto do minerador em cada chamada. A construção e a
+  busca não mudam. Coleta das 9 geometrias DEV, semente 42, completa, em
+  `experiments/original_mdm/elite_banks/`. Custos finais conferidos: att48
+  2650, berlin52 5186, brazil58 20466, eil51 273, eil76 332, gr48 3571,
+  hk48 7593, pr76 66007, st70 419.
+- Regra escrita antes dos custos em `research_notes/pattern_selector_diagnostic.md`.
+  Comparação só entre padrões com o mesmo número de arestas, o do maior padrão
+  da última mineração. Utilidade: cobertura da união, prêmio limitado a 1,
+  redundância opcional e custo normalizado, com pesos iguais e sem ajuste.
+- Resultado em `pattern_selector_diagnostic.json`. Quatro geometrias sem
+  contraste de tamanho. Nas cinco comparáveis, todos os modelos foram
+  provados. Utilidade contra frequência marginal: 1 melhor, 3 empates, 1 pior.
+  Contra suporte, tamanho e aleatório: 0/4/1. O ganho em att48 (2652 contra
+  2676) usa o mesmo padrão de tamanho e suporte. Em pr76 a utilidade escolhe
+  outro padrão e piora o custo, 66020 contra 66012. Os maiores padrões têm
+  suporte 2, então o suporte conjunto não os separa.
+- A regra não foi satisfeita. Não implementar a matheurística completa com
+  esta utilidade e não ajustar a fórmula neste lote. Teste reservado fechado.
+  CTP fora. Artigo não está pronto.
+
+## Retomada às 8h18 — sessão Cursor; auditoria, retreino e piloto em execução
+
+O usuário pediu para assumir a pesquisa até os créditos do Codex voltarem,
+por volta das 10h ou 11h. Interpretador usado: `/usr/bin/python3`
+(NumPy 1.24.3, SciPy 1.13.0). O `python3` do Anaconda base falha porque
+NumPy 2.5.3 não carrega o SciPy compilado contra NumPy 1.x.
+
+- Auditoria completa da coleta `59eb88271c01` PASS: 20 geometrias TRAIN,
+  30250 chamadas, 5654 melhorias, 11 buscas completas, 9 somente checkpoint,
+  0 falhas de geração. Saída `experiments/original_mdm/monotonic_profile_audit.json`.
+  Código `f3efe1520d0627ac3369af8e78469c625c3e5ac7f57346b7934113ef751ff41f`.
+- LOGO exploratório em `operator_prediction.91a13bc40523.json`, 27,2 s.
+  Brier/logloss/MAE logtempo: operador 0.119943/0.382732/1.296217;
+  tamanho 0.118421/0.376993/0.485464; genérico 0.117124/0.372763/0.465806;
+  estado 0.115798/0.369463/0.480348. Estado vence Brier do genérico em 14/20
+  e o tempo em 6/20. Melhor Brier por geometria: estado 11, só operador 5,
+  genérico 3, tamanho 1. Mesmo padrão da coleta anterior: cobertura e prêmio
+  ajudam pouco a ocorrência; o tempo continua melhor no estado genérico.
+  Isto não é valor de política.
+- Modelos TRAIN congelados em `operator_models/models.6a4290f73aed.json`
+  (SHA-256 do arquivo `8279adf9fb1fdde001c91e099cb5b4b51e536605a68fd7438177fe7fc5940c86`).
+  Verificação nativa PASS, 6120 escores, erro máximo 5.33e-15. A chamada
+  ctypes de cerca de 20 us não inclui extração de descritores da rota.
+  Não reutilizar `models.52b8e9ae6089.json` neste binário.
+- Build `build_timed_elite_bounded` recompilado com esse arquivo, relógio
+  `CLOCK_MONOTONIC` e `PCCTP_ELITE_BOUNDED`.
+- Piloto `f312dec5a350` TERMINOU: 162 execuções, 9 geometrias DEV, sementes
+  42/43/44, seis políticas, prazo 1 s, elite delimitada, pesos
+  `models.6a4290f73aed.json`. Log `/tmp/pcctp_timed_retrained_elite.log`.
+  `audit_timed.py` PASS em 324 arquivos, excluindo o protocolo inválido
+  `ccb595d69e76`. Todas as 162 têm incumbente anterior ao prazo. Dois
+  hard timeouts do pai aos 16 s, com log vazio e `completed=false`:
+  hk48 semente 44 size (último progresso nativo 0,542 s, custo 7593) e
+  st70 semente 42 adaptive (0,462 s, custo 419). Os incumbentes desses
+  checkpoints entram na comparação; a operação que não retornou não entra.
+  Saídas anormais: 0. `timed_summary.f312dec5a350.json`.
+- Custo no prazo, conjunto contra original (melhor/empate/pior, diferença
+  relativa média por geometria; negativo favorece o método nomeado):
+  static 3/24/0, −0,000878; size 1/26/0, −0,000058; generic 3/23/1,
+  +0,000461; joint 3/22/2, +0,000875; adaptive 2/25/0, −0,000819.
+  As três melhoras do joint estão em berlin52 sementes 42 e 43 (5186 contra
+  5244) e hk48 semente 42 (7593 contra 7605). Em berlin52 semente 44 o joint
+  fica em 5244 enquanto static, generic e adaptive chegam a 5186. Em eil76
+  semente 42, generic e joint ficam em 344 contra 332 do original.
+- Curva no intervalo [0, 1] em `timed_anytime.f312dec5a350.json`: média do
+  incumbente, segurando o primeiro registro desde o tempo 0. Diferença
+  relativa média por geometria: static −0,000823, size −0,000210,
+  generic −0,000710, adaptive −0,000804, joint +0,001130. O joint atinge o
+  custo final do original em 25 de 27 pares e, nesses, chega em média 0,011 s
+  mais tarde. Não há vantagem da política aprendida nem no custo final nem
+  na curva. Não ajustar esta comparação no conjunto de desenvolvimento e
+  não abrir validação ou teste. A linha de escalonamento aprendido fica
+  registrada como resultado negativo.
+- Próxima pergunta, já formulada na agenda de 18 de outubro: no mesmo banco
+  elite, um seletor de padrões por cobertura e prêmio melhora a construção
+  mais do que tamanho, frequência marginal e suporte conjunto. Ainda não
+  implementada. CTP fora. Artigo não está pronto.
+
 ## Retomada às 7h23 — diagnóstico negativo e baseline com elite delimitada
 
 - Repetiçãomonotônicad0df6114da43 TERMINOU162runs,9DEV/3seeds/6políticas/1s.
@@ -714,3 +2728,13 @@ Antes de escrever o manuscrito: aplicar scientific-writing (o SKILL.md instalado
 é um ponteiro textual para outro arquivo; localizar a fonte real), usar fontes
 primárias verificadas e copiar/aplicar template editorial de forma rastreável.
 Ao gerar PDF, seguir skill de PDF, compilar e inspecionar todas as páginas.
+
+Literature addendum: primaryPDF2021Numdam sections3.2/3.3 inspected;
+15neighborhoods/feasible-onlymoves documented vsnewremove6+repair.
+rairo_neighborhood_comparison.md scopesdifference, noabsence/noveltyclaim.
+Local pcctp-solution.pdf is FIGURE, not manuscript.
+
+Scope addendum: ruin_total60_mining_exposure.json checksall54native.raw:
+miningactiveMDM2/27,hybridinit0/27;mostly pre-mining comparison. See
+mining_exposure_scope.md;no superiorityclaim overminingcomponent. Future
+longerhorizon/stoppingcriterionneededbeforebroaderpublicationclaim.

@@ -6,6 +6,7 @@ sys.path.insert(0,str(ROOT))
 from experiments.lkh.paired70_reference import run as reference
 from experiments.lkh.paired70_hybrid import run as candidate
 from experiments.lkh.paired70_candidate_audit import audit_candidate
+from experiments.lkh.paired70_reference_audit import audit_reference
 from experiments.lkh.raw_route_audit import load
 OUT=HERE/'paired70_train'
 
@@ -17,7 +18,8 @@ if __name__=='__main__':
     calibration=json.loads(guard.read_text())
     assert calibration['status']=='PASS' and calibration['all_references_completed']
     for name,source in (('verify_paired70_deadlines.json','paired70_hybrid.py'),
-                        ('verify_paired70_candidate_audit.json','paired70_candidate_audit.py')):
+                        ('verify_paired70_candidate_audit.json','paired70_candidate_audit.py'),
+                        ('verify_paired70_reference_audit.json','paired70_reference_audit.py')):
         verification=json.loads((HERE/name).read_text())
         assert verification['status']=='PASS' and verification['source_sha256']==digest(HERE/source)
     integration=json.loads((HERE/'verify_paired70_adapters.json').read_text())
@@ -30,7 +32,8 @@ if __name__=='__main__':
     schedule=[dict(instance=c['instance'],seed=s) for c in cases for s in range(81,91)]
     random.Random(20261020).shuffle(schedule)
     paths=[Path(__file__),HERE/'paired70_reference.py',HERE/'paired70_hybrid.py',
-        HERE/'paired70_candidate_audit.py',HERE/'raw_route_audit.py',
+        HERE/'paired70_candidate_audit.py',HERE/'paired70_reference_audit.py',
+        HERE/'audit_paired70_train.py',HERE/'raw_route_audit.py',
         HERE/'ruin_repair_absolute.py',HERE/'feasible_fallback.py',HERE/'screen.py',
         ROOT/'experiments/original_mdm/timed_experiment.py',ROOT/'experiments/ml_lns/pilot.py',
         ROOT/'experiments/ml_branching/oracle_probe.py',ROOT/'research_notes/paired70_ten_seed_design.md']
@@ -59,11 +62,13 @@ if __name__=='__main__':
             assert json.loads(target.read_text())['protocol_sha256']==protocol_hash
             continue
         r=reference(name,seed,refs);refpath=refs/f'{name}.seed{seed}.reference.json'
+        data=load(name)
+        audit_reference(r,data,refs,seed)
         record=dict(instance=name,seed=seed,protocol_sha256=protocol_hash,
             reference_file=str(refpath.relative_to(OUT)),reference_sha256=digest(refpath),
             status='REFERENCE_INCOMPLETE',candidate_records={},unavailable_candidate_modes=[])
         if r['status']=='COMPLETED70':
-            budget=r['reference_duration_seconds'];data=load(name)
+            budget=r['reference_duration_seconds']
             order=['hybrid10','hybrid60'];random.Random(name+str(seed)+'paired70').shuffle(order)
             for mode in order:
                 result=candidate(name,seed,mode,budget,candidates)

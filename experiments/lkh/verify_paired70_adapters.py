@@ -4,6 +4,7 @@ from pathlib import Path
 import paired70_reference as ref
 import paired70_hybrid as hybrid
 from paired70_candidate_audit import audit_candidate
+from paired70_reference_audit import audit_reference
 from raw_route_audit import check
 
 if __name__=='__main__':
@@ -18,10 +19,11 @@ if __name__=='__main__':
         clock['now']=parent_started+2.1
         if budget==0:
             raw=Path(target).with_suffix('.raw');iteration=70 if clock['complete'] else 35
-            payload=dict(completed=clock['complete'],iterations=iteration,route=[0,1,2,3],
-                         cost=4,mining_calls=1,snapshots=[dict(iteration=iteration,route=[0,1,2,3],cost=4)])
+            payload=dict(seed=seed,budget_seconds=0,completed=clock['complete'],iterations=iteration,route=[0,1,2,3],
+                         cost=4,mining_calls=1,snapshots=[dict(iteration=iteration,seconds=1.9,route=[0,1,2,3],cost=4)])
             raw.write_text(json.dumps(payload))
-            return dict(payload_source=raw.name,process_wall_seconds=2.,hard_timeout=False,exit_code=0)
+            return dict(budget_seconds=0,elite_count_bounded=True,payload_source=raw.name,
+                        process_wall_seconds=2.,hard_timeout=False,exit_code=0)
         assert budget==2.
         return dict(budget_seconds=budget,feasible_before_deadline=True,cost=3,route=[0,1,2],
                     anytime=[dict(seconds=.5,cost=3,route=[0,1,2])])
@@ -37,6 +39,7 @@ if __name__=='__main__':
         with tempfile.TemporaryDirectory(prefix='pcctp-adapters-',dir='/private/tmp') as tmp:
             folder=Path(tmp);reference=ref.run('synthetic_complete',81,folder)
             assert reference['status']=='COMPLETED70' and reference['cost']==4
+            assert audit_reference(reference,d,folder,81)['completed70']
             budget=reference['reference_duration_seconds'];assert budget==2.
             candidate=hybrid.run('synthetic_complete',81,'hybrid10',budget,folder)
             assert candidate['initialization_budget_seconds']==2.
@@ -46,6 +49,7 @@ if __name__=='__main__':
             incomplete=ref.run('synthetic_incomplete',82,folder)
             assert incomplete['status']=='REFERENCE_INCOMPLETE'
             assert incomplete['cost'] is None and incomplete['reference_duration_seconds'] is None
+            assert not audit_reference(incomplete,d,folder,82)['completed70']
     finally:
         ref.time.clock_gettime=original_clock
         (ref.run_one,ref.load,hybrid.run_one,hybrid.read_instance,
@@ -55,6 +59,7 @@ if __name__=='__main__':
                 'timely incumbent retained after late process return','no search after horizon',
                 'incomplete reference supplies no comparison budget'],
         source_hashes={n:hashlib.sha256(Path(__file__).with_name(n).read_bytes()).hexdigest()
-                       for n in ('paired70_reference.py','paired70_hybrid.py','paired70_candidate_audit.py')})
+                       for n in ('paired70_reference.py','paired70_hybrid.py','paired70_candidate_audit.py',
+                                 'paired70_reference_audit.py')})
     Path(__file__).with_suffix('.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report))
