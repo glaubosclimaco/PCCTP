@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "valid_scenarios": 5,
+  "invalid_inputs_rejected": 7,
+  "rows": [
+    {
+      "case": "exact_boundary",
+      "expected_cost": 8,
+      "observed_cost": 8
+    },
+    {
+      "case": "late_better_rejected",
+      "expected_cost": 8,
+      "observed_cost": 8
+    },
+    {
+      "case": "no_initial_feasible",
+      "expected_cost": 8,
+      "observed_cost": 8
+    },
+    {
+      "case": "late_only",
+      "expected_cost": null,
+      "observed_cost": null
+    },
+    {
+      "case": "fractional_horizon",
+      "expected_cost": 8,
+      "observed_cost": 8
+    }
+  ],
+  "source_sha256": "ca7043a3112b1dd4b13e2f698ac9e9e62671e2adab7296b547991b9efc891d39",
+  "scope": "finite selector checks only; main ten-seed study not launched"
+}
