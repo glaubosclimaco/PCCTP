@@ -1,5 +1,6 @@
 """Ten-seed paired TRAIN study; launch blocked until full-reference calibration passes."""
-import hashlib,json,random,sys,time
+import fcntl,hashlib,json,os,random,sys,time
+from contextlib import contextmanager
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
@@ -13,12 +14,35 @@ OUT=HERE/'paired70_train'
 
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
+@contextmanager
+def study_lock(path):
+    """Hold a kernel lock for the entire study, including resume checks.
+
+    Keep the inode after release: deleting a lock file can let another process
+    lock a replacement inode while an existing worker still owns the old one.
+    """
+    with Path(path).open('a+') as handle:
+        try:fcntl.flock(handle,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:
+            raise RuntimeError('Paired70 study already running; no optimizer launched') from None
+        try:
+            handle.seek(0);handle.truncate()
+            json.dump(dict(pid=os.getpid(),started_unix=time.time()),handle)
+            handle.flush()
+            yield
+        finally:fcntl.flock(handle,fcntl.LOCK_UN)
+
 def main():
+    with study_lock(HERE/'paired70_train.queue.lock'):
+        collect()
+
+def collect():
     guard=HERE/'published70_calibration_audit.json'
     assert guard.exists(), 'Wait for completed and audited seed80 calibration'
     calibration=json.loads(guard.read_text())
     assert calibration['status']=='PASS' and calibration['all_references_completed']
-    for name,source in (('verify_paired70_deadlines.json','paired70_hybrid.py'),
+    for name,source in (('verify_paired70_lock.json','paired70_train.py'),
+                        ('verify_paired70_deadlines.json','paired70_hybrid.py'),
                         ('verify_paired70_candidate_audit.json','paired70_candidate_audit.py'),
                         ('verify_paired70_reference_audit.json','paired70_reference_audit.py')):
         verification=json.loads((HERE/name).read_text())

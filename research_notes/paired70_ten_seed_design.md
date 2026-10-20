@@ -88,3 +88,16 @@ sem registrar um par elegível. Par parcial exige revisão antes de retomada.
 A auditoria independente exige hash e PASS do ambiente em cada par.
 Esse controle não demonstra igualdade de carga/CPU/temperatura. Nenhum par
 real deste estudo foi coletado antes desta especificação.
+
+## Exclusive study ownership before collection
+
+Before any calibration guard, resume check or optimizer call, the main-study
+entry point holds an exclusive nonblocking OS file lock for the entire run.
+A second process fails without entering collection or changing owner metadata.
+The lock is released on normal exit and Python exceptions; its file is kept
+so contenders always lock the same inode. Stale text in a released lock file
+is not evidence of a live process and is not a reason to delete the file.
+A separate two-process synthetic fixture verifies contention and release;
+its source-bound PASS certificate is required before real main collection.
+This guard does not launch or schedule the main study. The existing single
+300-second worker and calibration waiter are unchanged.

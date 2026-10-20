@@ -1,5 +1,32 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h05 — coleta30/81; bloqueio de duplicação no futuro estudo70
+
+28075 único otimizador ativo; 3504 espera81+ambiente/auditPASS antes de calibração.
+Observer:30/81,270rotas/1364eventos PASS,10blocosambientais,3geometriascompletas.
+Efeitos parciais H10 1,600% / H60 1,501% inalterados; não é resultado final.
+Primeira chamada MDM de mineração comprovadamente antes do deadline observada:
+1/10 referências completas, zero nas duas inicializações híbridas. Exposição
+não demonstra efeito/efetividade da mineração; calibração70 ainda necessária.
+
+Revisão da etapa futura confirmou numIt70, alfa0.6 no principal.cpp gerado,
+PCCTP_BUDGET0 e safety43200, que censura e não substitui custo final. Parâmetros
+support2/elite10/stability5 e correções continuam declarados; não alegar execução
+idêntica ao artigo. Nenhuma referência70 real iniciada nesta retomada.
+
+Encontrada falta de exclusão mútua no entrypoint paired70_train.py. Adicionado
+flock nonblocking antes de guard/resume/optimizer; mantido por todo estudo e
+liberado por finally. Arquivo persiste para não dividir inodes; PID só metadata.
+Novo verify_paired70_lock.py testa processos reais concorrentes sintéticos:
+segundo rejeitado, metadata intacta, liberação normal/exceção e reaquisição PASS.
+Certificado com hash do runner exigido antes da coleta. Orchestration90pares
+mockados e batchaudit90pares/180candidatos+6corrupções rerodados PASS; sete
+certificados de deadline/adapters/audits/orchestration/lock conferidos com fontes
+atuais. Testes sintéticos, NÃO resultados PCCTP. Protocolo prospectivo atualizado
+antes dos dados. Main270 ainda NÃO enfileirado nem iniciado: espera calibração9.
+Fontes da coleta300/ClockGuard/calibração, Utils.h e teste12 não alterados.
+PDF14p da retomada anterior continua atual; nenhuma mudança no artigo agora.
+
 ## Retomada 20/10 10h55 — sensibilidade descritiva concluída, sem retuning
 
 28075 ativo, único otimizador. 3504 segue aguardando 81/81 + ambiente PASS.
