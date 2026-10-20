@@ -27,18 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado em 20/10, 16h42:** o otimizador 68208 segue
+Estado operacional confirmado em 20/10, 16h46: o otimizador 68208 segue
 ativo desde 16h09, com `caffeinate` 68216, comando
 `experiments/lkh/awake300_train.py`. A fila `published70_after_awake.py`,
-processo 68316, continua esperando o lote. No disco há 75 resultados não
-nativos: oito geometrias completas e, em tsp225, só a semente 70 nos três
-braços. O bloco ambiental dessa semente está PASS. Custos lidos dos JSON
-fechados, ainda sem nova auditoria do observador: MDM 2447, hybrid60 2449,
-hybrid10 2449, os três viáveis. O híbrido desta semente ficou 2 unidades
-acima do MDM. Isso é uma semente, não o resultado do lote. Faltam as sementes
-71 e 72. Há arquivo nativo de hybrid60 da semente 71 e um LKH filho ativo;
-esse braço não está fechado. A auditoria publicada continua a de 72/81.
-Confirme processos e locks em outra máquina. Não lance outro otimizador.
+processo 68316, continua esperando o lote. tsp225 tem quatro braços fechados.
+Semente 70, ambiente PASS: MDM 2447, hybrid60 2449, hybrid10 2449, os três
+viáveis; os híbridos ficaram 2 acima do MDM nesta semente. Semente 71,
+hybrid60 fechado em 2449, ainda sem MDM pareado. O nativo de hybrid10 da
+semente 71 está aberto e não deve ir para o git. Faltam cinco braços.
+A auditoria publicada continua 72/81. Confirme processos e locks em outra
+máquina. Não lance outro otimizador.
 
 **Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
 Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
@@ -410,6 +408,28 @@ sem mudança de resultado não gera commit.
 
 Próximo passo: deixar 68208 terminar tsp225 e a fila auditar o lote antes
 da calibração. Cache continua bloqueado.
+
+## 20/10/2026, 16h45 Fortaleza — tsp225 semente 70 fechou o bloco
+
+O coletor não foi duplicado. Os três resultados de tsp225/semente 70 estão no
+disco e o arquivo ambiental está PASS, com folga de monitor abaixo de 2 s e
+sem evento de suspensão. A semente 71 já tem o artefato nativo de hybrid60; o
+processo 68208 segue em CPU, então o intervalo entre o nativo e o JSON final
+é processamento, não parada. Ainda faltam seis execuções. Nenhum custo novo
+entra na comparação antes do observador. A fila 68316 continua aguardando.
+
+## 20/10/2026, 16h46 Fortaleza: hybrid60 da tsp225 semente 71 fechou em 2449
+
+O braço hybrid60 da semente 71 gravou JSON viável, custo 2449, igual ao
+pré-custo e ao nativo, orçamento nativo de 60 s, relógio do braço cerca de
+300 s. Ainda não há MDM desta semente, então 2449 não se compara com o 2447
+da semente 70. O bloco da semente 70 permanece o único completo em tsp225:
+os dois híbridos ficaram 2 acima do MDM. Isso é uma semente, não uma
+conclusão de método.
+
+O nativo de hybrid10 da semente 71 começou às 16h45 e continua aberto. Não
+foi commitado. Faltam esse braço, o MDM da semente 71 e os três braços da
+semente 72. Otimizador 68208 e fila 68316 seguem únicos. Cache bloqueado.
 
 ## Modelo para próximas entradas
 

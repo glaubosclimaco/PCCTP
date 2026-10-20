@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h46: hybrid60 da tsp225 semente 71 fechou; hybrid10 segue aberto
+
+Conferência passiva. 68208 e 68316 vivos. tsp225 fechados: semente 70 MDM
+2447, hybrid60 2449, hybrid10 2449, ambiente PASS; semente 71 hybrid60 2449
+viável, sem MDM pareado ainda. Nativo hybrid10 da semente 71 em escrita
+desde 16h45: não commitar. Faltam 5 braços, um deles aberto. Auditoria
+publicada 72/81. Sem observador novo, sem cache.
+
 ## 20/10, 16h42: tsp225 semente 70 no disco; seis execuções ainda abertas
 
 Conferência passiva. Otimizador 68208 e fila 68316 seguem vivos desde 16h09
@@ -44,6 +52,13 @@ starts excluída; pós-auditoria/gravação/proveniência/estimativa de bytes fo
 da busca sem feed-back. wall_seconds é até retorno do core, NÃO process wall
 end-to-end; bytes Python NÃO RSS/pico. Nenhuma medição nova ou fonte ativa
 alterada. Diário/resumo atualizados; diagnóstico passivo69 mantém snapshot.
+
+## 20/10, 16h45 — tsp225/seed70 no disco; coletor segue
+
+75 resultados não nativos. environment tsp225/seed70 PASS, gap 1,829480 s,
+clock diff 0,000242 s, sleep vazio. seed71 hybrid60 nativo já gravado; pai
+68208 em CPU, sem segundo otimizador. Faltam 6 execuções. Auditoria publicada
+ainda 69/81. Fila 68316 intacta. Diário atualizado. Cache não lançado.
 
 ## 20/10, 16h26 — retomada conferida; lote não duplicado
 
