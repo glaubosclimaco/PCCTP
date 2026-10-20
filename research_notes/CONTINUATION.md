@@ -1,5 +1,31 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h46 — diagnóstico passivo de chamadas; coleta38/81
+
+28075únicootimizadorativo;3504aguarda81+auditsantescalibração70. Observer38/81,
+314rotas/1601eventosPASS,4geometrias completas. Efeitosparciais H10 1,191838%
+(3positivas/1negativa),H60 1,128937%(4/0) inalterados. Não interpretar38como
+lote completo,nemalterararmas/gates/ordem. PDF17p anterior permanece atual.
+
+completed60_call_diagnostics.py lê apenas27TRAIN+35validações híbridasconcluídas,
+conferehashdecadaresultado comauditorindependente ehashdas fontespolish/ruin
+comprotocolosoriginais. Semsolver,chamadaLKHnova,ativo300outcomeouteste12.
+As62linhasreconciliamcontadores calls=completed+timeouts+other e attempts>=
+feasible>=calls;reconciliaçãoindependenteporlinhas/geometrias/totaisPASS.
+TRAIN19778polishcalls,19443exitzero,327timeout,8other;val72388,72234,150,4.
+rd400277/735timeouts=37,687%,84,71%dos327timeoutsTRAIN. Val150/72388=.2072%.
+QuatrogeometriasempatadasnãocaracterizamfalhasgeneralizadasdeexecuçãoLKH.
+
+ATENÇÃO semântica: lkh_calls conta invocaçõespolish,não necessariamenteprocessos
+lançados;lkh_completed=exitzero,não rotaaceita/melhora;lkh_failed podeincluir
+preparaçãoqueconsumiutempoanteslaunch. Semlogs porcallnão dá separarcrash/
+setupnemefeitocausal. Contadorespodemincluirúltimachamadaretornaapósdeadline;
+não tratá-loscomo contagem sódeeventoselegíveis. Não modificarinstrumentação
+ativa para corrigirnomes. Relatório research_notes/completed60_call_diagnostics.md
++JSONcomhasheslimites. Possívelablaçãofutura deallowance/númeroattempts anotada,
+NÃOenfileirada/retunada;nãopriorizarfrenteàreferência70pendente. Todosnegativos
+mantidos;Utils.h/CTP/12testes/fontesativas intactos.
+
 ## Retomada 20/10 11h36 — identidade9/9 TRAIN concluída; coleta36/81/4geometrias
 
 28075 segue único otimizador;3504 espera81+audits antes da calibração70.
