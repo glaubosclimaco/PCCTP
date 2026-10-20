@@ -1,5 +1,27 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 10h55 — sensibilidade descritiva concluída, sem retuning
+
+28075 ativo, único otimizador. 3504 segue aguardando 81/81 + ambiente PASS.
+Observer desta retomada: 28/81, 262 rotas PASS, 1327 eventos, três geometrias
+completas e nove blocos ambientais PASS; efeitos parciais continuam H10 1,600%
+e H60 1,501%. Não alterar fontes/protocolo ativos, nem iniciar otimização extra.
+
+Novo completed60_sensitivity.py reconstrói custos dos audits 60 s completos com
+Fraction e valida resumos originais. Conferência independente Decimal45 PASS:
+16 efeitos e 16 médias leave-one-geometry-out. Gera JSON e tabela LaTeX.
+TRAIN média1,886%, mediana2,404%, médias LOO1,609–2,134%. Validação reutilizada:
+média0,907%, mediana0; LOO0,430–1,084%. As duas melhorias pr264/pr299 concentram
+o ganho; outras cinco médias -0,029986%. Diagnóstico retrospectivo, NÃO exclusão
+das duas geometrias, novo gate, IC, p-valor ou confirmação. Critério de três
+geometrias positivas permanece falho. Sem consulta aos 12 testes.
+Outline→prosa em sections/descriptive_sensitivity.tex, tabela geometry_sensitivity.
+Manifesto submission/descriptive_sensitivity_provenance.json. PDF14p compilado
+duas vezes sequencialmente sem warnings; páginas1–12 raster-idênticas às já
+revistas,13–14 inspecionadas individualmente, sem cortes/sobreposição. Tabela
+legível e referências agora juntas na14. compilation_audit.json atualizado.
+Introdução/discussão/conclusões ainda incompletas; sem contribuição confirmada.
+
 ## Retomada 20/10 — figura dos resultados concluídos; coleta 300 s em 27/81
 
 Sessão 28075 continua como único otimizador; fila 3504 ainda aguarda a conclusão

@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "scope": "Post hoc descriptive sensitivity only; all primary denominators and failed gates retained; no p-values, confidence intervals, retuning, or independent generalization claim.",
+  "source_sha256": {
+    "experiments/lkh/completed60_sensitivity.py": "2ea03ce1190a04eed00dc7ae52c33c6749a85898f88cd97d90d2283a458761d1",
+    "experiments/lkh/ruin_total60_absolute_audit.json": "0c537721f435bf65013eca31fc4e2cdcca2c7991c6a6c99a33e766879352a34e",
+    "experiments/lkh/ruin_total60_absolute_summary.json": "be0f10227e82b58ae49c67cf3de3a16275a760ad89ef7640afe0caf99b18e32b",
+    "experiments/lkh/ruin_validation60_audit.json": "bcf2b3f9cc434d3007284c7538271a68f3ec188b2276486b26d9c9e8af95cc27",
+    "experiments/lkh/ruin_validation60_summary.json": "0c4c78b63c21149673b0344ebf836632e77859ce81f6f64540a144f8e71cda4f"
+  },
+  "studies": {
+    "TRAIN": {
+      "geometries": 9,
+      "seeds_per_geometry": 3,
+      "mean_percent": 1.8862049971448562,
+      "median_percent": 2.4040051008359704,
+      "min_percent": -0.09531590413943355,
+      "max_percent": 4.101262834887289,
+      "wins": 8,
+      "losses": 1,
+      "ties": 0,
+      "geometry_effects": [
+        {
+          "instance": "g_a280_VT56_T168_W56_50",
+          "gain_percent": 3.19338628627006,
+          "gain_exact": "19700/6169"
+        },
+        {
+          "instance": "g_gil262_VT51_T158_W53_75",
+          "gain_percent": 2.8226464349812366,
+          "gain_exact": "17300/6129"
+        },
+        {
+          "instance": "g_gr229_VT45_T138_W46_50",
+          "gain_percent": 2.946390345713368,
+          "gain_exact": "220225/74744"
+        },
+        {
+          "instance": "g_kroA200_VT40_T120_W40_25",
+          "gain_percent": 0.007087272675728926,
+          "gain_exact": "500/70549"
+        },
+        {
+          "instance": "g_pr226_VT44_T136_W46_50",
+          "gain_percent": 1.5197123523586034,
+          "gain_exact": "311500/204973"
+        },
+        {
+          "instance": "g_rd400_VT80_T240_W80_25",
+          "gain_percent": 4.101262834887289,
+          "gain_exact": "34750/8473"
+        },
+        {
+          "instance": "g_si175_VT35_T105_W35_50",
+          "gain_percent": 2.4040051008359704,
+          "gain_exact": "50900/21173"
+        },
+        {
+          "instance": "g_ts225_VT45_T135_W45_50",
+          "gain_percent": 0.07667025072088363,
+          "gain_exact": "6275/81844"
+        },
+        {
+          "instance": "g_tsp225_VT45_T45_W135_75",
+          "gain_percent": -0.09531590413943355,
+          "gain_exact": "-175/1836"
+        }
+      ],
+      "leave_one_geometry_out": [
+        {
+          "omitted_instance": "g_a280_VT56_T168_W56_50",
+          "remaining_mean_percent": 1.7228073360042058
+        },
+        {
+          "omitted_instance": "g_gil262_VT51_T158_W53_75",
+          "remaining_mean_percent": 1.7691498174153089
+        },
+        {
+          "omitted_instance": "g_gr229_VT45_T138_W46_50",
+          "remaining_mean_percent": 1.7536818285737923
+        },
+        {
+          "omitted_instance": "g_kroA200_VT40_T120_W40_25",
+          "remaining_mean_percent": 2.1210947127034974
+        },
+        {
+          "omitted_instance": "g_pr226_VT44_T136_W46_50",
+          "remaining_mean_percent": 1.932016577743138
+        },
+        {
+          "omitted_instance": "g_rd400_VT80_T240_W80_25",
+          "remaining_mean_percent": 1.6093227674270523
+        },
+        {
+          "omitted_instance": "g_si175_VT35_T105_W35_50",
+          "remaining_mean_percent": 1.821479984183467
+        },
+        {
+          "omitted_instance": "g_ts225_VT45_T135_W45_50",
+          "remaining_mean_percent": 2.112396840447853
+        },
+        {
+          "omitted_instance": "g_tsp225_VT45_T45_W135_75",
+          "remaining_mean_percent": 2.1338951098053927
+        }
+      ],
+      "loo_min_percent": 1.6093227674270523,
+      "loo_max_percent": 2.1338951098053927,
+      "retrospective_two_largest": [
+        "g_rd400_VT80_T240_W80_25",
+        "g_a280_VT56_T168_W56_50"
+      ],
+      "remaining_after_two_largest_mean_percent": 1.3830279790209083
+    },
+    "Reused validation": {
+      "geometries": 7,
+      "seeds_per_geometry": 5,
+      "mean_percent": 0.9073472554686157,
+      "median_percent": 0.0,
+      "min_percent": -0.1499294449670743,
+      "max_percent": 3.771233852100498,
+      "wins": 2,
+      "losses": 1,
+      "ties": 4,
+      "geometry_effects": [
+        {
+          "instance": "g_d198_VT39_T119_W40_50",
+          "gain_percent": -0.1499294449670743,
+          "gain_exact": "-1275/8504"
+        },
+        {
+          "instance": "g_kroB100_VT20_T60_W20_25",
+          "gain_percent": 0.0,
+          "gain_exact": "0"
+        },
+        {
+          "instance": "g_kroE100_VT20_T20_W60_50",
+          "gain_percent": 0.0,
+          "gain_exact": "0"
+        },
+        {
+          "instance": "g_pr124_VT24_T25_W75_75",
+          "gain_percent": 0.0,
+          "gain_exact": "0"
+        },
+        {
+          "instance": "g_pr152_VT29_T31_W92_75",
+          "gain_percent": 0.0,
+          "gain_exact": "0"
+        },
+        {
+          "instance": "g_pr264_VT52_T159_W53_75",
+          "gain_percent": 2.7301263811468863,
+          "gain_exact": "632300/231601"
+        },
+        {
+          "instance": "g_pr299_VT101_T99_W99_75",
+          "gain_percent": 3.771233852100498,
+          "gain_exact": "37075/9831"
+        }
+      ],
+      "leave_one_geometry_out": [
+        {
+          "omitted_instance": "g_d198_VT39_T119_W40_50",
+          "remaining_mean_percent": 1.083560038874564
+        },
+        {
+          "omitted_instance": "g_kroB100_VT20_T60_W20_25",
+          "remaining_mean_percent": 1.0585717980467184
+        },
+        {
+          "omitted_instance": "g_kroE100_VT20_T20_W60_50",
+          "remaining_mean_percent": 1.0585717980467184
+        },
+        {
+          "omitted_instance": "g_pr124_VT24_T25_W75_75",
+          "remaining_mean_percent": 1.0585717980467184
+        },
+        {
+          "omitted_instance": "g_pr152_VT29_T31_W92_75",
+          "remaining_mean_percent": 1.0585717980467184
+        },
+        {
+          "omitted_instance": "g_pr264_VT52_T159_W53_75",
+          "remaining_mean_percent": 0.6035507345222374
+        },
+        {
+          "omitted_instance": "g_pr299_VT101_T99_W99_75",
+          "remaining_mean_percent": 0.43003282269663534
+        }
+      ],
+      "loo_min_percent": 0.43003282269663534,
+      "loo_max_percent": 1.083560038874564,
+      "retrospective_two_largest": [
+        "g_pr299_VT101_T99_W99_75",
+        "g_pr264_VT52_T159_W53_75"
+      ],
+      "remaining_after_two_largest_mean_percent": -0.029985888993414863
+    }
+  }
+}

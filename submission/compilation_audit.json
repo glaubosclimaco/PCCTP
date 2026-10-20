@@ -2,9 +2,9 @@
   "status": "PASS",
   "scope": "partial illustrated manuscript; not submission-ready",
   "pages": 14,
-  "pdf_sha256": "36b74606134569ad66dc4356336368605d79b989ed50f65297d922155f2d5277",
+  "pdf_sha256": "80b9fd147f73cdc419cc3ff7f23d40706c22b5ead24e1ec137c62139b2b54860",
   "source_sha256": {
-    "main.tex": "f4700d281c12b4680b8ab1cfcb493adc4e2b56640b8503988f2f2a732ec36b06",
+    "main.tex": "4ae1e1ca8b7b44644fec7cc6c32a6b8b2fcebaa6c3748eb2d64f6b486d2aefc3",
     "references.bib": "ef626d9e3034b4a4da39d8a5b02a94db8e896deb6eb61e56dbc7f681bcb785f5",
     "sections/experimental_protocol.tex": "303ac9e2b2f470f7311ff6447806c8fdf43bb2c29507eccf60c455c1071d2d92",
     "sections/exploratory_results.tex": "9472f058cde0a22464a62472a5a47fa903bae00e29ef4a0761f6f03eb0d1b269",
@@ -15,11 +15,13 @@
     "tables/exploratory_complete.tex": "b8777ea589b32b9a1477b55bff3ae79e5a6c7f6d88a245572e22d5343864f3ac",
     "figures/hybrid_flow.tex": "41c20d9696794aa4bb87fc3604a413ca815280a7db1ec59add56ab2bb35cc7a6",
     "figures/repair_example.tex": "82236328da0df206a9ef0f8e7931479f5d9a5096db0c7dfc92144861a51b2143",
-    "figures/hybrid_training_effects.pdf": "9bfb2f16f1daf36ba0bf6aab67f0368afeec5598ced0e1c2606f99e51feb9361"
+    "figures/hybrid_training_effects.pdf": "9bfb2f16f1daf36ba0bf6aab67f0368afeec5598ced0e1c2606f99e51feb9361",
+    "sections/descriptive_sensitivity.tex": "74135b1e385a71cbe34530831d9083e8551dba3bb623c728c2aaf2e9e033e2a1",
+    "tables/geometry_sensitivity.tex": "142d8549a24dcdf3781b2e8dd5356db57965256fc258d5cfb892a99396f5c434"
   },
-  "compiler": "Local pdfLaTeX; two final serial successful passes after all source edits; existing BibTeX bibliography.",
-  "visual_review": "Pages 1–10 raster-identical to previously reviewed pages. Changed pages 11–14 inspected individually at 75 dpi: no overlap or clipping; training plot and caption legible. Partial draft retains empty substantive sections; final reference spills onto page 14, to rebalance with final prose.",
-  "current_source_status": "Current final sources compiled; all 14 pages covered by visual review or unchanged-page hashes.",
+  "compiler": "Local pdfLaTeX; two serial successful passes after sensitivity section edits; existing BibTeX bibliography.",
+  "visual_review": "Pages 1–12 raster-identical to prior reviewed render; changed pages 13–14 individually inspected at 75 dpi. Sensitivity table, prose and all references legible without clipping/overlap. Introduction, discussion and conclusions remain incomplete.",
+  "current_source_status": "Current final sources compiled twice; all 14 pages visually reviewed or confirmed unchanged.",
   "unresolved_references": false,
   "render_sha256": {
     "1": "68e70094bde5277cef667a934670c4bb58932a19ef9030cdc2a87fc5591b676b",
@@ -34,7 +36,7 @@
     "10": "619e941ec1826ab241775cff8acc9eeb18256bfb62bcb7d72a3db6283b2d9f5d",
     "11": "d58db8455200ef680888cc2ab8e9fc5b9867d4095972a7f74fdb1689100c03fd",
     "12": "74ceea0f3d4d12122a245500a7eb38d9ef016bd1aa16e4699de479742aca36db",
-    "13": "59214a590998547eae43106d94a8b1402d77c18051de1b67aa845335f7198979",
-    "14": "e74ea3e186a501c9314dd71ca47403c9eca3becf53e16062db9d31e9718597dd"
+    "13": "3184fb11e0498438a7e96d98cc2e4277c5039897a0651fe1ea08cb6e3006720d",
+    "14": "ff163f88b8ec27f343922b7486e3c67726a82c9fa83a0d0febb2e4d88cd2ad3e"
   }
 }

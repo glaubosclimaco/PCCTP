@@ -1,0 +1,34 @@
+\subsection{Geometry-level sensitivity of completed comparisons}
+The mean reduction alone does not describe how broadly improvements occur.
+We therefore reconstructed each geometry effect directly from the audited
+seed costs of the two completed fresh 60-second studies. Rational arithmetic
+was used to check the reported seed-mean effects before rounding. Training
+and reused validation were analyzed separately; their different geometry
+sets and selection histories preclude pooling them into one confirmation.
+
+\input{tables/geometry_sensitivity}
+
+For the nine training geometries, the median reduction was 2.404\%, compared
+with a mean of 1.886\%. Recomputing the mean after each possible single
+geometry omission gave values from 1.609\% to 2.134\%
+(Table~\ref{tab:geometry-sensitivity}). Thus, no single training geometry
+accounted for the entire positive average. This observation concerns the
+selected training set and does not establish performance on new geometries.
+
+For the seven reused validation geometries, the median effect was zero,
+despite the positive mean of 0.907\%. The single-omission means ranged from
+0.430\% to 1.084\%. The breadth of improvement remained limited: four
+geometry means tied, one deteriorated and only two improved. As a
+retrospective concentration diagnostic, the five geometries other than
+pr264 and pr299 had a mean reduction of $-0.030\%$. This is not an alternative
+primary comparison: both positive cases remain in the seven-case result.
+It explains why the positive overall mean can coexist with failure of the
+original requirement for at least three positive geometry means.
+
+The omission ranges are descriptive sensitivity measures, not confidence
+intervals. Seed repetitions characterize stochastic variation conditional
+on each geometry; they are not additional independent benchmark geometries.
+Because several candidate methods had already been examined and validation
+geometries had been reused, no confirmatory hypothesis test is attached to
+these post hoc diagnostics. They neither change a screening threshold nor
+justify stopping the incomplete longer-horizon collection early.
