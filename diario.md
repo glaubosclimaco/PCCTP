@@ -644,6 +644,43 @@ Próximo passo: observar a execução sem duplicá-la, relatar censuras se
 ocorrerem e esperar as referências completas antes de dimensionar o lote
 principal ou liberar o estudo de cache. O manuscrito de20páginas não mudou.
 
+## 20/10/2026, 17h32 Fortaleza — guia de reprodução e manifesto de integridade
+
+Atualizei o observador passivo: ainda não há referência completa. O checkpoint
+de gil262/seed80 agora registra35iterações, custo2003 e zero chamadas de
+mineração exportadas, após827,711s observados. Esses dados continuam
+provisórios; não comparei esse custo com os endpoints nem estimei uma duração
+para70iterações. Uma leitura paralela do relatório ainda mostrou a versão
+anterior; reli depois do término do observador e usei o timestamp UTC novo.
+Ao retomar, leia o relatório depois que seu comando terminar.
+
+Criei `submission/REPRODUCIBILITY.md`, que registra denominadores, arquivos,
+ambiente local, correções declaradas do baseline, comandos passivos e comandos
+que lançam otimização. A separação evita que outra IA execute o coletor como
+se fosse uma auditoria ou duplique a calibração. O guia inclui as limitações
+de renderização entre máquinas e os pré-requisitos dos dois estudos futuros.
+Versões locais conferidas:Python3.9.6, NumPy1.24.3, SciPy1.13.0,
+Matplotlib3.8.4 e highspy1.13.1. O lote300s usa MDM/FPMax/LKH, não exige CPLEX
+nem Gurobi para seus81resultados.
+
+Gerei `submission/reproducibility_manifest.json` com183artefatos do repositório
+e o hash do LKH externo. A lista deriva dos81resultados elegíveis,27blocos,
+inputs das nove instâncias, fechamento/snapshots, fontes e binários congelados,
+fontes/figura/PDF atuais e registros de revisão ambiental. Não inclui
+checkpoints ativos da calibração, teste reservado ou a alteração do usuário
+em`include/Utils.h`. Isso é integridade do escopo declarado, não reprodução
+independente ou aprovação científica de todos os estudos anteriores.
+
+Novo comando passivo: `/usr/bin/python3 experiments/lkh/verify_submission_manifest.py`.
+Executado com183hashes de artefatos PASS e LKH externo PASS. Em outra máquina,
+a falta do binário externo aparece separadamente da integridade dos arquivos.
+Não há instalação, download ou otimizador nesse verificador. Mudanças futuras
+no rascunho devem produzir uma nova versão revisada do manifesto, preservando
+a anterior; não atualizar hashes apenas para esconder divergências.
+
+Próximo passo: manter a calibração única em andamento e usar apenas referências
+completas/auditadas para os próximos experimentos. O PDF de20páginas não mudou.
+
 ## Modelo para próximas entradas
 
 ### AAAA-MM-DD,HH:MM Fortaleza — assunto

@@ -1,5 +1,22 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 17h32 — progresso35/70 e pacote de integridade183artefatos
+
+calibration_progress.py atualizado:gil262seed80 CHECKPOINT_ONLY35iterações,
+custo2003,mining0,827,711s exportados. 0referências finais/0auditadas; fila26890
+continua. Não comparar checkpoint comendpoints nem extrapolar tempo linear.
+
+Novo submission/REPRODUCIBILITY.md separa auditorias/renderização de comandos
+otimizadores,ambiente/limites/repetições/escopo. Manifest183artefatos repo+LKH
+externo1 em submission/reproducibility_manifest.json, derivado dos81resultados,
+27blocos,9inputs,fontes/binários congelados,snapshots/manuscrito. Exclui calibração
+mutável/teste12/Utils.h. verify_submission_manifest.py PASS183+LKHPASS,semotimizador.
+Outrohost pode ter runtimeexternoMISSING separado. Versões locais conferidas:
+Python3.9.6,numpy1.24.3,scipy1.13.0,matplotlib3.8.4,highspy1.13.1.
+Ao alterarartefato listado, preservarmanifestohistórico e revisarconteúdo antes
+de novo hash; nunca suprimirdivergência só trocandoSHA. PDF20pinalterado.
+Diário explica criação/escopo; próximoaguardar referências70completas/auditadas.
+
 ## 20/10, 17h20 — progresso passivo MDM70, sem nova busca
 
 Fila26890 segue;gil262seed80 checkpoint20iterações/custo2017/mining0 observado,
