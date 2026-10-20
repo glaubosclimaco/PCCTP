@@ -1,0 +1,22 @@
+{
+  "scope": "read-only manuscript/model correspondence audit; no new solver run or claim of historic certificate/source identity",
+  "source_hashes": {
+    "submission/sections/problem_formulation.tex": "c06878fc84980267e87141d6c71086d075654bc06ad03cb5badc8c78488cf122",
+    "submission/sections/restricted_repair.tex": "34106c5d97ff7bf3a3174ea28c74170a8ff80c0e36343ba686f50250b29a8b58",
+    "submission/sections/hybrid_search.tex": "6046df91cb07b0925691a252cb6e9dac17454be0ccb4b8a933c93b8835d14cfc",
+    "experiments/ml_lns/pilot.py": "e479793277fab13c6407de0878cc56c25410dc72dc6b2f97ff8b3d6aee30b922",
+    "experiments/ml_lns/fragment_repair.py": "3f86f477b6ec8caa64653ec6b20598f884fd82dfa952e736d8a508020ec1d1e4",
+    "experiments/ml_lns/fragment_verification.json": "371fa05851bc97144cfeb3ba4b37a6360f4ceeed53080027d0ae6e188754584a",
+    "experiments/ml_lns/native_cut_verification.json": "642d7859b92a16ba9b0e46a7585edeb93295655c973b5b26f8ac9402ff9bd159",
+    "experiments/lkh/raw_route_audit.py": "93a853447f107e7b6879eaf84e2d3f02259d91071dd51c47bd2fa4c5bca01ee3",
+    "experiments/lkh/insertion_mip_repair.py": "aefc0a1f5609167690abbee8d052350ee9dbc513fcfff996c75b7e3e6362abde"
+  },
+  "findings": [
+    "reference undirected degree/cut model integer interpretation valid with mandatory root and at least3vertices",
+    "implementation uses SCF or separated cuts rather than materializing all rooted inequalities",
+    "fixed-one path endpoints retain incidence; fixed-zero edges absent; constants include fixed costs",
+    "SCF and contracted repair support local upper bounds, not unrestricted lower bounds",
+    "historical finite verification certificates lack source hashes and cannot certify current source by themselves",
+    "stored native_cut_verification.json reports32cuts, not35from older continuation wording"
+  ]
+}

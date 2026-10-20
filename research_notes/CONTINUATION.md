@@ -1,5 +1,22 @@
 # Estado operacional para retomada autônoma
 
+## Retomada20/10 09h11 —awake7/81; auditoriaformula/códigos sem solverextra
+
+28075ATIVO;3504aguardando.NÃODUPLICAR. observe_awake300PASS7runs60rotas,
+curvas313eventos,0geometriascompletas;2blocosambientaisPASS. Nenhumganho
+agregadoaindaválido. Fontesativasintactas;semnovoMIP/benchmarkparalelo.
+formulation_code_audit.md/.jsonregistra correspondência do rascunho com
+pilot.SCF/fragmentendpoint/modelo de referência enraizado; limites locais
+não são globais. Nenhumacorreçãomatemáticanecessáriadetectadanaleitura.
+Certificadoshistóricosfragment37/nativecut60NÃOcontenhamhashfontes:
+nãocertificamversãofinalporassimilarstatusPASS. Antesdefinalartigo,
+reexecutarserialcomhashcongelado(nãoagoraenquantoloteativo). Arquivonative
+cutatualregistra32cortes,notaantigadizia35;usarartefatonãofraseantiga.
+PDF7p eLaTeXnãoalterados,nãosubmissãopronta. Auditorialeituracomhashes
+somente,nãonovoteste/resultado/teorema. Próximo:fecharprimeirageometria
+awake,poll28075/3504,observe_awake300.py.Teste12/CTP/Utils.hintocados.
+
+
 ## Retomada20/10 09h00 —awake5/81; calibração70proveniênciaambiental fechada
 
 28075ATIVO,3504FILAAguarda.NÃODUPLICAR. observe_awake300PASS5runs42rotas,
