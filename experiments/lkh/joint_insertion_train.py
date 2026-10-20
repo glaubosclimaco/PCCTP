@@ -105,7 +105,7 @@ if __name__ == '__main__':
     names = sorted({json.loads(p.read_text())['instance'] for p in sources})
     assert len(names) == 9
     for name in names:
-        geometry = [g for g, instance in split['instances'].items() if instance == name]
+        geometry = [g for g in split['roles'] if name.startswith(g+'_VT')]
         assert len(geometry) == 1 and split['roles'][geometry[0]] == 'train'
     paths = [Path(__file__), HERE/'insertion_mip_repair.py',
              HERE/'ruin_repair_absolute.py', HERE/'screen.py',

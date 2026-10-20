@@ -18,6 +18,13 @@ min(6,optional_count,route_length-3) optional vertices, preserving mandatory vis
 Use the same destroyed retained cycle for all three arms, including cases already
 feasible after removal. Original incumbent is the common feasible fallback.
 
+Launch correction before any collection: the original split assigns roles by
+geometry. The historical hardTRAIN rd400 instance uses VT80/T240/W80/quota25,
+whereas the split's initial one-instance selection differs. Match its original
+geometry prefix to the train role; do not silently substitute another instance.
+The first launch stopped on this stricter instance-equality assertion before
+creating outputs or loading benchmark data. No outcome prompted this correction.
+
 Arms: (a) existing randomized greedy repair; (b) joint insertion MIP with the three
 cheapest retained gaps per absent vertex; (c) the same MIP with three uniformly
 sampled distinct gaps per absent vertex. All absent vertices are candidates in
