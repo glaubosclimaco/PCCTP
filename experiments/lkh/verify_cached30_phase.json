@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic adapter and independent scalar auditor contracts; no native optimizer or benchmark inputs; not evidence of cache search benefit.",
+  "checks": [
+    "uncached: audited parent deadline excludes late improvement retained in raw phase",
+    "cached: audited parent deadline excludes late improvement retained in raw phase",
+    "single lazy build measured inside phase; approximate owned memory recorded",
+    "empty: no-call fallback or event exactly at outer deadline remains eligible",
+    "boundary: no-call fallback or event exactly at outer deadline remains eligible",
+    "auditor rejects wrong endpoint",
+    "auditor rejects wrong start",
+    "auditor rejects wrong source",
+    "auditor rejects wrong budget",
+    "auditor rejects nonfinite wall",
+    "auditor rejects infeasible route",
+    "auditor rejects wrong scalar cost",
+    "auditor rejects bad event clock",
+    "auditor rejects counter partition",
+    "auditor rejects missing build",
+    "auditor rejects missing footprint",
+    "auditor rejects unaccounted build time",
+    "auditor rejects nonfinite build clock",
+    "auditor rejects changed raw final",
+    "exception restores hook, records failure and blocks silent retry",
+    "post-search assertion leaves attempt marker and blocks silent retry"
+  ],
+  "source_sha256": {
+    "experiments/lkh/cached30_phase.py": "151d68f8b08eb04b47c1e3ec5caae6885036a0f9aaf94edc8d49a7ccccd338ec",
+    "experiments/lkh/cached_polish.py": "1898f10848655b9ff328ead1b5af332a2f90d3db886772786ed294cc5dc0a23f",
+    "experiments/lkh/matrix_text_cache.py": "447760dc619d87badc25227e3838c928b396f806e6c2a2c9895ec07530b7cc2d",
+    "experiments/lkh/ruin_repair_absolute.py": "cb10e1d9621022700a629a7b9eb0875209bcedd77e8e5d1efa9fa809aaa265f8",
+    "experiments/lkh/screen.py": "3e79e64022ea442dac0320c3b63df7dfcc02d6d6b9d02c222bafedbdc3d19474",
+    "experiments/ml_lns/pilot.py": "e479793277fab13c6407de0878cc56c25410dc72dc6b2f97ff8b3d6aee30b922",
+    "experiments/ml_branching/oracle_probe.py": "4bedd6143334a41607b31d2309feac653f6a3a3d7d466cf049e6d6e011ec737b",
+    "experiments/lkh/cached30_phase_audit.py": "b8e48bf82c234e846496de164af3a64e47ae3aba4cee611e8b6f8e0d1790edbf",
+    "experiments/lkh/raw_route_audit.py": "93a853447f107e7b6879eaf84e2d3f02259d91071dd51c47bd2fa4c5bca01ee3",
+    "experiments/lkh/verify_cached30_phase.py": "b78af004d8f8b6e28451665a2c8ec9bd6d1ab39829299c51819bcbfec4bef8db"
+  }
+}

@@ -1,5 +1,42 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 12h26 — comparação de cache: fase e auditor verificados
+
+O único otimizador continua na sessão28075 (awake300_train); sessão3504
+aguarda o lote81 e suas auditorias antes da calibração seed80/70iterações.
+Observer encerrado nesta retomada:46/81,373rotas/2021eventos auditados, cinco
+geometrias completas. Ganhos parciais H10=1,195432% (4positivas/1negativa),
+H60=1,145111% (5positivas/0negativas). Não há conclusão do gate nem comparação
+com MDM70 completo. Depois desse snapshot, rd400/seed70/H60 terminou com10630;
+não misturar essa linha isolada com os agregados auditados acima.
+
+Implementados cached30_phase.py e cached30_phase_audit.py, isolados e sem
+entrypoint de coleta. A fase usa o mesmo reparador random e restaura o hook
+polish inclusive em exceção. Relógio externo começa antes da preparação;
+seleção independente aceita somente eventos até parent_start+budget. Melhorias
+tardias ficam no registro bruto. Cache lazy debitado na chamada/tempo total,
+construção e estimativa de bytes Python retidos registrados (não RSS/pico).
+Marcador exclusivo .attempt.json é criado antes da busca; só removido após
+gravação do resultado. Falha/interrupção/assertiva posterior bloqueia retry
+silencioso, mesmo sem resultado final. .failed.json preserva exceção de busca.
+
+verify_cached30_phase.py/JSON:21checks PASS, apenas relógios/rotas/polisher/run
+sintéticos, ZERO otimizadores e ZERO leitura de benchmark. Inclui melhoria
+tardia só para relógio externo, fronteira exata, fallback sem chamadas,
+14corrupções rejeitadas, isolamento/restauração e falha após busca. Certificate
+vincula hashes dos adaptadores/auditores/dependências/fixture. Isso valida
+contratos do coletor futuro, não desempenho do cache. A primeira checagem manual
+de hashes usou diretório relativo errado e foi corrigida; as sete fontes
+listadas em source_hashes do protocolo ativo permanecem iguais.
+
+Próximo trabalho independente: coletor de54fases com27starts TRAIN ligados aos
+hashes da auditoria60 completa, mesmo lock paired70, ClockGuard/pmset por par,
+resume somente com par completo e hashes válidos, auditor/fixtures de lote.
+NÃO lançar antes de awake81+calibração9 completos/auditados; NÃO editar fontes
+ativas; NÃO adicionar cache às candidatas70 sem protocolo prospectivo novo.
+Rascunho continua18p, abstract/conclusão pendentes, nenhuma vantagem do cache
+alegada. include/Utils.h, CTP e12geometrias de teste preservados.
+
 ## Retomada 20/10 12h16 — artigo18p/protocolo-cachefuturo; coleta44/81
 
 28075únicootimizador;3504aguarda81+auditsantescalibração70. Observer44/81,

@@ -1,6 +1,7 @@
 # Prospective conditional comparison of cached matrix serialization
 
-Status: design only; no search observations collected and no runner queued.
+Status: prospective design with phase adapter and scalar audit verified on
+synthetic stubs; no search observations collected and no runner queued.
 Written after the serialization microbenchmark, before any cached optimizer run.
 The ongoing 81-run collection and seed80 reference calibration take priority.
 
@@ -79,3 +80,16 @@ restoration/isolation, exact source files and interrupted-pair handling using
 synthetic stubs. Reuse current cached adapter certificates only if their source
 hashes still match. Do not edit active screen.py, ruin_repair_absolute.py,
 awake300_train.py, or calibration code to implement this study.
+
+Implementation status on20October,12:26–12:36 Fortaleza: cached30_phase.py
+implements the isolated phase and cached30_phase_audit.py independently
+reconstructs eligibility and scalar feasibility/costs. verify_cached30_phase.py
+has21 synthetic checks, including a raw improvement timely for the inner clock
+but late for the parent deadline, an event exactly on that deadline, no-call
+fallback, accounting/source/route corruptions, and restoration after failures.
+An exclusive attempt marker persists after interruption or a post-search
+assertion; such a phase cannot be silently retried. These checks launch zero
+optimizers and do not establish a search benefit. The shared-lock batch owner,
+27-start binding, environmental/resume audit and batch fixtures are still
+required before any real execution. Nothing has been added to the active
+collection or the planned paired70 candidates.
