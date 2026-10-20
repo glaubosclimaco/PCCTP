@@ -77,3 +77,14 @@ The supplied MDM manuscript describes a100-run TTT experiment on kroA150 with
 seeds1-100, but the inspected text gives target12918 while its caption gives
 12962. Resolve this against the final published version before reusing that
 target or reproducing its plot. Do not silently choose either value.
+
+## Proteção ambiental antes de lançar o estudo
+
+Após suspensão comprovada na primeira coleta300s, cada par completo
+(referência70 e duas candidatas) terá ClockGuard e verificação pmset.
+Gap de monitor >5s, diferença wall/monotonic >3s ou suspensão preserva
+os arquivos, escreve environment failure e interrompe antes do próximo par,
+sem registrar um par elegível. Par parcial exige revisão antes de retomada.
+A auditoria independente exige hash e PASS do ambiente em cada par.
+Esse controle não demonstra igualdade de carga/CPU/temperatura. Nenhum par
+real deste estudo foi coletado antes desta especificação.

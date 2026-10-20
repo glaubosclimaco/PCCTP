@@ -1,5 +1,5 @@
 """Independent full-batch audit of reference-defined paired candidates."""
-import hashlib,json,random
+import hashlib,json,math,random
 from pathlib import Path
 from raw_route_audit import load
 from paired70_reference_audit import audit_reference
@@ -29,6 +29,13 @@ def audit_batch(folder,root=ROOT,here=HERE):
         r=json.loads(path.read_text());key=(r['instance'],r['seed'])
         assert key in expected and key not in seen;seen.add(key)
         assert r['protocol_sha256']==protocol_hash
+        if protocol.get('environment_guarded'):
+            envpath=folder/r['environment_file'];assert digest(envpath)==r['environment_sha256']
+            environment=json.loads(envpath.read_text())
+            assert environment['status']=='PASS' and not environment['sleep_events']
+            for name,limit in (('max_monitor_gap_seconds',5.),('max_clock_difference_seconds',3.)):
+                assert math.isfinite(environment[name]) and 0<=environment[name]<=limit
+            assert environment['started_unix']<=environment['finished_unix']
         source=folder/r['reference_file'];assert digest(source)==r['reference_sha256']
         reference=json.loads(source.read_text());data=load(r['instance'])
         assert reference['instance']==r['instance'] and reference['seed']==r['seed']

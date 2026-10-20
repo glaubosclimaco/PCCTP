@@ -24,7 +24,7 @@ if __name__=='__main__':
             schedule=[dict(instance=c['instance'],seed=s) for c in cases for s in range(81,91)]
             random.Random(20261020).shuffle(schedule)
             protocol=dict(cases=cases,seeds=list(range(81,91)),scheduled_pairs=90,schedule=schedule,
-                source_hashes={},binary_hashes={},
+                source_hashes={},binary_hashes={},environment_guarded=True,
                 calibration_audit_sha256=digest(here/'published70_calibration_audit.json'))
             write(folder/'protocol.json',protocol);protocol_hash=digest(folder/'protocol.json')
             for pair in schedule:
@@ -57,6 +57,10 @@ if __name__=='__main__':
                     write(path.with_name(path.stem+'.native.json'),native)
                     record['candidate_records'][mode]=dict(file=str(path.relative_to(folder)),
                         sha256=digest(path),cost=3,feasible=True)
+                envpath=folder/f'environment.{name}.seed{seed}.json'
+                write(envpath,dict(status='PASS',sleep_events=[],started_unix=100.,finished_unix=107.,
+                    max_monitor_gap_seconds=1.1,max_clock_difference_seconds=.01))
+                record.update(environment_file=envpath.name,environment_sha256=digest(envpath))
                 write(folder/f'{name}.seed{seed}.pair.json',record)
             completion=dict(scheduled_pairs=90,planned_executions=270,reference_records=90,candidate_records=180)
             write(folder/'completion.json',completion)
@@ -69,6 +73,7 @@ if __name__=='__main__':
             for label,change in (
                 ('wrong_pair_duration',lambda r:r.update(budget_seconds=3.)),
                 ('wrong_reference_hash',lambda r:r.update(reference_sha256='wrong')),
+                ('wrong_environment_hash',lambda r:r.update(environment_sha256='wrong')),
                 ('missing_candidate',lambda r:r['candidate_records'].pop('hybrid10')),
                 ('false_candidate_cost',lambda r:r['candidate_records']['hybrid10'].update(cost=2)),
                 ('false_completion_status',lambda r:r.update(status='REFERENCE_INCOMPLETE'))):

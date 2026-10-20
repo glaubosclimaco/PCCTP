@@ -44,9 +44,14 @@ if __name__=='__main__':
         path=folder/f'{name}.seed{seed}.{mode}.json';write(path,record)
         write(path.with_name(path.stem+'.native.json'),native)
         return record
-    saved=runner.reference,runner.candidate,runner.load,runner.HERE
+    class Guard:
+        started=100.;max_gap=1.;clock_difference=0.
+        def __enter__(self):return self
+        def __exit__(self,*args):pass
+    saved=runner.reference,runner.candidate,runner.load,runner.HERE,runner.ClockGuard,runner.sleep_events_since
     try:
         runner.reference=reference;runner.candidate=candidate;runner.load=lambda _:data
+        runner.ClockGuard=Guard;runner.sleep_events_since=lambda _:[]
         with tempfile.TemporaryDirectory(prefix='pcctp-orchestration-',dir='/private/tmp') as tmp:
             folder=Path(tmp);runner.HERE=folder
             try:runner.main()
@@ -77,14 +82,27 @@ if __name__=='__main__':
             except AssertionError:pass
             else:raise AssertionError('Changed protocol was accepted')
             assert calls==[]
+            Guard.max_gap=6.
+            failure_folder=folder/'environment_failure';failure_folder.mkdir()
+            try:runner.execute_pairs(schedule,failure_folder,'synthetic-protocol')
+            except AssertionError as error:assert 'Compromised pair' in str(error)
+            else:raise AssertionError('Environmental gap was accepted')
+            assert len(calls) in (1,3) and not list(failure_folder.glob('g_*.pair.json'))
+            assert len(list(failure_folder.glob('environment.*.json')))==1
+            calls.clear()
+            try:runner.execute_pairs(schedule,failure_folder,'synthetic-protocol')
+            except AssertionError as error:assert 'review' in str(error)
+            else:raise AssertionError('Compromised partial pair resumed')
+            assert calls==[]
     finally:
-        runner.reference,runner.candidate,runner.load,runner.HERE=saved
+        runner.reference,runner.candidate,runner.load,runner.HERE,runner.ClockGuard,runner.sleep_events_since=saved
         if hasattr(runner,'print'):del runner.print
     report=dict(status='PASS',synthetic_pairs=90,synthetic_optimizer_calls=268,
         checks=['missing calibration blocks all calls','reference before candidates',
             'both candidates get exact reference T','prespecified candidate order',
             'censored reference skips both candidates','resume makes no optimizer calls',
-            'changed protocol rejected'],source_hashes={n:digest(Path(__file__).with_name(n)) for n in
-            ('paired70_train.py','paired70_reference_audit.py','paired70_candidate_audit.py')},
+            'changed protocol rejected','environmental gap blocks next pair',
+            'compromised partial pair cannot silently resume'],source_hashes={n:digest(Path(__file__).with_name(n)) for n in
+            ('paired70_train.py','paired70_reference_audit.py','paired70_candidate_audit.py','awake300_train.py')},
         scope='mocked optimizers, synthetic data and real scheduler/audits; not a PCCTP experiment')
     write(Path(__file__).with_suffix('.json'),report);print(json.dumps(report))
