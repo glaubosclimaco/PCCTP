@@ -1,5 +1,34 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 11h26 — identidade pública de3/9 TRAIN confirmada por SHA-256
+
+28075 ativo;3504 aguardando81+audits. Observer34/81,288rotas/1492eventosPASS,
+3geom completas,11blocosambientais. Sem novo gate/retuning; não duplicar filas.
+PDF17p anterior intacto e auditado; nenhuma mudança no artigo nesta retomada.
+
+Pendência Mendeley avançou: web lêv2; navegadorIAB páginaoficial exibe arquivos
+individuais e painelcomSHA256. a280/gil262/gr229 coincidem integralmentecomlocais.
+Estado PARTIAL_TRAIN3/9 em research_notes/benchmark_metadata/; auditor novo
+experiments/lkh/audit_benchmark_train_identity.py executadoPASS parcial,
+permite só noveTRAINjáaprovados e conferehashesperfil. Nenhumdownload,pasta
+resultadosouconteúdoteste12aberto. v2descrição144=conjunto;107éavaliaçãopós37
+ajuste conforme manuscrito fornecido, não discrepância. V1/igualdadeversões
+continuampendentes, nadafullreplicationclaimed. ConsultaHTTPdireta403; usarIAB.
+
+BrowserCua persistente: variáveltab, IABid3/tab1, marcadohandoff. URLatual
+https://data.mendeley.com/datasets/8yjbfgcfvn/2/files/464380bc-5769-48cd-a189-5b6f441ae413
+(gr229). Ao usarapóscompactação, cua.rewriteDocumentation. Não há login.
+PainelFILEINFORMATION traz SHA256; não precisa baixararquivo. CliqueBacktoDataset,
+aguardeUIcarregar usandoobservações, scrolltablegrid paraindicenomes. Índice
+virtualiza~20linhas: clicks emnóoffscreenpodemapenasrolar; reobservar.
+UUIDs já conferidos/URLs em manifesto. Próximo: verificar metadados dos seis
+TRAIN restantes(kroA200,pr226,rd400,si175,ts225,tsp225); conferirlocalhash e
+appendmanifesto, rerunauditor. NÃO abrir arquivos/pastas de soluções/teste.
+Seguinteindicenome->UUIDpermiteabrirURLfileespecífica no padrãoobservado;
+getAXapósgotoàsvezesexibeLoading, fazertrabalhoindependenteeobservarnovamente.
+Fonteprimáriahttps://data.mendeley.com/datasets/8yjbfgcfvn/2; revisão da pendência
+em benchmark_identifier_followup.md. Utils.h/CTP/active300sources intactos.
+
 ## Retomada 20/10 11h15 — introdução/discussão em redação; coleta32/81
 
 28075 segue único otimizador;3504 aguarda81+ambiente antes de calibração70.
