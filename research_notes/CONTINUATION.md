@@ -1,5 +1,37 @@
 # Estado operacional para retomada autônoma
 
+## Retomada 20/10 12h16 — artigo18p/protocolo-cachefuturo; coleta44/81
+
+28075únicootimizador;3504aguarda81+auditsantescalibração70. Observer44/81,
+362rotas/1910eventosPASS,4geometriascompletas,efeitosH10 1,191838%/3positivas
+1negativa,H60 1,128937%/4positivas0negativas. Nenhumnovogateouretuning.
+
+Paperatualizado: fonteMendeleyv2citada,identidadeSHA256noveTRAINdeclaradacom
+escoporestrito. Novo ordering_diagnostics.tex+tabela decontadores27TRAIN/35val
+parseadoseconferidoscomJSON;descritasdiferençasinvocação/launch/exit0/rota
+validada/melhora/timeout/other,semcausalidade. Cachenãoentroucomoresultado,
+ativo300continuaforadastabelasconcluídas. Ledgerdatasetreal+código/fontes
+protocolo/interpretation/relatedworkprovenanceatualizados. Bibliografia8citados,
+9registrosledgerincluiuncitedCook. Nenhumareferênciafabricada.
+
+PDF18p:markerantesautoria,pdflatex→BibTeX→2passesserialPASSsemwarnings.
+Render70dpi,páginas4–8/13hashidênticoàsrevisadas;1–3/9–12/14–18inspecionadas
+individualmente,semcortes/overlap. 3figuras/3tabelaslegíveis;últimareferênciana
+18seráreequilibradacomresultadosfinais,semtratarnúmeropáginascomoobjetivo.
+compilation_audit+methodfigureprovenanceatualizados(TikZ6/7).
+
+Plano prospectivo novo research_notes/cached30_conditional_design.md,SEMCOLETA:
+27estadosTRAINpré-reparo60seed42/43/44,repairRNG91/92/93,mesmostartporpar,
+2implementações(unchanged vsCachedPolisher),30soutertotalcada,54fases27min.
+Cachelazysetupcobradona1ªchamada,inputs/validação/LKHcobrados,commonstart
+geraçãoEXCLUÍDAlogoestudocondicional,nãoalgoritmocompleto. Ordemparesearmas
+shufflefixo;evt<=parent+30;gatemédia>=.2%,>=6geomspositivas,<=1negativa,54válidos.
+Exigeawake81+calibração9PASSanteslaunch;mesmolockdopaired70evitarconcomitância.
+Nenhumrunnerenfileirado/implementado;próximoútilimplementarphaseadapter/audit
+independente/fixturessemotimizador,enquantocoletacontinua. Nãoadicionarcache
+silenciosamenteàs2candidatas70;nãomudarprotocoloatual/fontesativas. Abstract/
+conclusão/artigofinaldependemresultadossustentados;Utils.h/CTP/teste12intactos.
+
 ## Retomada 20/10 12h06 — adaptadorcache isolado/deadline verificado; coleta42/81
 
 28075únicootimizador;3504aguarda81+auditsantescalibração70. Observer42/81,

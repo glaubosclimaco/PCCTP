@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Study & Runs & Calls & Exit 0 & Timeouts & Other \\
+\midrule
+TRAIN & 27 & 19,778 & 19,443 & 327 & 8 \\
+Reused validation & 35 & 72,388 & 72,234 & 150 & 4 \\
+\bottomrule
+\end{tabular}
+\caption{Passive counters in completed 60-second hybrid runs. Calls are
+invocations of the ordering wrapper. Exit 0 records normal process exit;
+timeouts record a reported subprocess timeout; other combines nonzero or
+absent exit codes. These categories partition wrapper invocations, rather
+than validated improvements or feasible final solutions.}
+\label{tab:ordering-counters}
+\end{table}

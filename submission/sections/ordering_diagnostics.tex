@@ -1,0 +1,29 @@
+\subsection{Passive ordering-call diagnostics}
+The completed hybrid records also contain cumulative counters for the
+ordering phase. We reconciled these counters across all 27 training runs
+and all 35 reused-validation runs, checking each result hash against the
+independent audit and the interpreted source code against its collection
+protocol. Table~\ref{tab:ordering-counters} reports the retained categories.
+
+\input{tables/ordering_counters}
+
+The counters require a distinction between a call to the ordering wrapper
+and a launched LKH subprocess. A wrapper call can exhaust its allowance
+during matrix preparation, yielding no process exit code. A zero exit code
+does not by itself show that an improving tour was returned, validated and
+accepted before the deadline. Similarly, the other/absent-exit category
+cannot distinguish a process failure from a preparation-only invocation.
+The retained aggregate records do not supply per-call output-validity or
+improvement counts. Final route feasibility and incumbent eligibility are
+checked separately.
+
+In training, rd400 accounted for 277 of the 327 reported subprocess timeouts.
+Its 735 wrapper invocations therefore had a timeout fraction of 37.7\%.
+The corresponding fraction across reused validation was 150 of 72,388
+invocations, or 0.21\%. Each of the four tied validation geometries had at
+most four such timeouts. Widespread timeouts thus do not describe the
+execution status of those tied cases. This observation does not explain
+their objective values or establish optimality of their visited supports.
+The counters can include a final call returning after the outer deadline;
+they are not counts restricted to eligible improvement events. No operator,
+budget allocation or screening threshold is changed by this diagnostic.
