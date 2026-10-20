@@ -1,0 +1,113 @@
+{
+  "status": "SOURCE_REVIEW_PASS",
+  "scope": "static recovered implementation inventory, not proof of identity to published executable",
+  "settings": {
+    "numIt": 70,
+    "alpha": 0.6,
+    "elite_capacity": 10,
+    "max_patterns": 10,
+    "support_absolute": 2,
+    "stability_percent": 5,
+    "stability_iterations": 4,
+    "policy": "original",
+    "fixed70_budget": 0
+  },
+  "support_fraction_when_full": 0.2,
+  "support_fraction_at_occupancy": {
+    "1": 2.0,
+    "2": 1.0,
+    "3": 0.6666666666666666,
+    "4": 0.5,
+    "5": 0.4,
+    "6": 0.3333333333333333,
+    "7": 0.2857142857142857,
+    "8": 0.25,
+    "9": 0.2222222222222222,
+    "10": 0.2
+  },
+  "paper_support_fraction": 0.2,
+  "identity_limitations": [
+    "Paper excerpt does not specify all numeric alpha/elite/stability settings.",
+    "Bounded occupied elite export is an explicit correction, not byte-identical legacy behavior.",
+    "Recovered fixed alpha=.6 is not the reactive-alpha R-GRASP2021 algorithm."
+  ],
+  "original_policy_source_checks": [
+    "schedule_order returns before feature extraction/reordering for policy original.",
+    "obter_vizinho bypasses adaptive timing/reward updates for policy original.",
+    "Zero positive budget disables deadline exit; numIt70 remains active."
+  ],
+  "instrumented_source_checks": [
+    {
+      "file": "Utils.cpp",
+      "match": true
+    },
+    {
+      "file": "genius.cpp",
+      "match": true
+    },
+    {
+      "file": "grasp.cpp",
+      "match": true
+    },
+    {
+      "file": "instances.cpp",
+      "match": true
+    },
+    {
+      "file": "instancia_loader.cpp",
+      "match": true
+    },
+    {
+      "file": "mineracao.cpp",
+      "match": true
+    },
+    {
+      "file": "mineracao.h",
+      "match": true
+    },
+    {
+      "file": "operator_inference.cpp",
+      "match": true
+    },
+    {
+      "file": "operator_state.cpp",
+      "match": true
+    },
+    {
+      "file": "principal.cpp",
+      "match": true
+    },
+    {
+      "file": "random_provider.cpp",
+      "match": true
+    },
+    {
+      "file": "random_provider.h",
+      "match": true
+    },
+    {
+      "file": "research_hook.cpp",
+      "match": true
+    },
+    {
+      "file": "research_hook.hpp",
+      "match": true
+    },
+    {
+      "file": "schedule_models.hpp",
+      "match": true
+    },
+    {
+      "file": "scheduler.hpp",
+      "match": true
+    }
+  ],
+  "source_hashes": {
+    "mdm-grasp-genius-vnd/principal.cpp": "61d8c0895b7b2931a4dff1f1621d62fc1e6f64afad561cd5fc168bd26d375e65",
+    "mdm-grasp-genius-vnd/mineracao.cpp": "26380384e3a30b4f6753fc43f14a2a0207e4852b29e99ed4ec7a8f2ebf4715c7",
+    "experiments/original_mdm/build_timed_elite_bounded/grasp.cpp": "92a673da19c87d4855a86855a813b6485b5a9ce93e227a4741f6b7b06a98fac8",
+    "experiments/original_mdm/build_timed_elite_bounded/scheduler.hpp": "8289521f00e07eb37ff4e389fc4aa1d863f2efe2884db110dba00545b4b84710",
+    "artigos/mdm/main_review.tex": "9ba13a18b564aa660da3e9c9c7fbdcb370a4796b9df4386a347090eb9bfcadd1"
+  },
+  "binary_sha256": "47c8c92e1febeb141e4aecc652b1823e50e25dd630c5371659d6205d51858ecf"
+}
