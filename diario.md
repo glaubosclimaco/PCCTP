@@ -27,12 +27,11 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 20/10, 16h52: o otimizador 68208 e a fila
-68316 seguem ativos. tsp225 tem cinco braços fechados. Semente 70, ambiente
-PASS: MDM 2447, hybrid60 2449, hybrid10 2449. Semente 71: hybrid60 2449 e
-hybrid10 2449, ainda sem MDM fechado. O MDM da semente 71 está em escrita
-nativa desde 16h51. Faltam esse MDM e os três braços da semente 72. A
-auditoria publicada continua 72/81. Não lance outro otimizador.
+Estado operacional confirmado em 20/10, 16h57: o otimizador 68208 e a fila
+68316 seguem ativos. tsp225 tem as sementes 70 e 71 completas, as duas com
+ambiente PASS. Em ambas, MDM 2447, hybrid60 2449 e hybrid10 2449. A semente
+72 começou pelo hybrid10, ainda só no nativo. Faltam os três braços dessa
+semente. A auditoria publicada continua 72/81. Não lance outro otimizador.
 
 **Primeiro próximo passo:** deixar o otimizador 68208 e a fila 68316 terminarem.
 Não lançar outro otimizador. O cache já tem controlador e auditoria sintéticos,
@@ -467,6 +466,20 @@ O MDM da semente 71 está aberto: log nativo às 16h51 e checkpoint às 16h52.
 Não foi commitado. Faltam esse braço e os três da semente 72. Otimizador
 68208 e fila 68316 seguem únicos. O fechamento descritivo continua recusado
 enquanto o lote não tiver 81 resultados.
+
+## 20/10/2026, 16h57 Fortaleza: tsp225 semente 71 fechou o bloco
+
+O MDM da semente 71 gravou 2447, viável, orçamento nativo de 300 s. Com os
+híbridos já em 2449, o bloco repete a semente 70: os dois híbridos ficaram
+2 acima do MDM. O ambiente está PASS, folga máxima do monitor 2,158 s,
+diferença de relógio 0,003 s, sem suspensão. A ordem desta semente foi
+hybrid60, hybrid10, MDM.
+
+Isso são duas sementes da mesma geometria, não a geometria completa e não
+a média auditada de 72/81. A semente 72 está aberta no nativo de hybrid10
+desde 16h55. Esse arquivo não entra no commit. Faltam os três braços dela.
+Otimizador 68208 e fila 68316 seguem únicos. O fechamento descritivo continua
+bloqueado até as 81 execuções.
 
 ## Modelo para próximas entradas
 

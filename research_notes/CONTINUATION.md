@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 20/10, 16h57: tsp225 semente 71 completa; semente 72 aberta
+
+Conferência passiva. 68208 e 68316 vivos. Semente 71 PASS, ordem hybrid60,
+hybrid10, mdm. Custos 2449, 2449 e 2447. Gap 2,158 s, clock diff 0,003 s,
+sleep vazio. Igual à semente 70: híbridos 2 acima do MDM. Semente 72 só tem
+nativo hybrid10 desde 16h55: não commitar. Faltam 3 braços. Auditoria
+publicada 72/81. close_awake300 segue bloqueado.
+
 ## 20/10, 16h52: hybrid10 da tsp225 semente 71 fechou em 2449
 
 Conferência passiva. 68208 e 68316 vivos, sem LKH filho neste instante.
