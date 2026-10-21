@@ -704,3 +704,9 @@ Fila única reiniciada: /usr/bin/python3 -u experiments/lkh/published70_after_aw
 ### 20/10/2026 23:14 Fortaleza — confirmação da retomada e integridade
 
 Conferi processos: fila71865, coletor71966 e único MDM72003 em gil262seed80, com caffeinate71967. Observador passivo registra somente checkpoint1, sem referência completa/auditada; não é resultado científico final. verify_submission_manifest.py reconfirmou183artefatos e LKH PASS após a correção textual. Nenhuma nova busca lançada. Consolidação seletiva das fontes/proveniências e arquivo da tentativa ambiental; Utils.h excluído. Próximo: deixar coleta única avançar e auditar referências completas; cache e paired70 continuam bloqueados.
+
+### 20/10/2026, 23:24 Fortaleza — portabilidade do ensaio excluído
+
+Calibração retomada avança: checkpoint10, custo provisório2017; zero referências finais/auditadas. Não iniciar outro otimizador. Conferi os seis hashes do arquivo da tentativa ambiental contra review.json e identidade do protocolo da repetição; preservation_audit.json PASS. A preservação local já estava completa, mas regras .gitignore excluíam raw/checkpoint/log do commit anterior. Incluí explicitamente esses três arquivos pequenos no arquivo histórico para outra IA também poder recuperar as evidências pelo Git. Não os reclassifiquei como elegíveis. Próximo: aguardar calibração completa e ambiente válido; não extrapolar prazo ou qualidade do checkpoint.
+
+Nota de integridade: git diff --check aponta espaços finais emitidos pelo log nativo arquivado. Mantidos byte a byte para preservar os hashes; não são erro de fonte editada.
