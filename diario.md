@@ -27,16 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 19h28: gil262, semente 80, custo
-2001, continua a única referência aceita. A repetição de rd400 que estava na
-iteração 44 foi rejeitada às 19h25. O checkpoint arquivado tem 70 iterações
-e custo 10577, com `completed` falso. Houve 19 suspensões, lacuna de 3367 s
-e diferença de relógios de 3366 s. Esse custo não entra. Os arquivos estão em
-`experiments/lkh/published70_calibration_interrupted/20261021T222541Z/`.
-A nova tentativa começou às 19h26: fila 161, coletor 197 e MDM 204, de novo
-rd400, semente 80. Às 19h28 o checkpoint está na iteração 1, custo provisório
-10794, e o log está vazio. Não lançar outra calibração. O computador precisa
-permanecer acordado. O cache continua parado.
+Estado operacional confirmado em 21/10, 19h58: gil262, semente 80, custo
+2001, continua a única referência aceita. A tentativa rejeitada às 19h25,
+custo 10577, não entra. A repetição atual segue com a fila 161 e o MDM 204
+desde 19h26. Às 19h58 o processo está em execução, com cerca de 30 minutos
+de CPU e 33 minutos de parede. O checkpoint das 19h56 tem 10 iterações,
+custo provisório 10691 e busca incompleta. O log continua vazio. Não lançar
+outra calibração. O computador precisa permanecer acordado. O cache continua
+parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -986,3 +984,13 @@ esta repetição terminar com o computador acordado.
 ### 21/10/2026, 19:34 Fortaleza — relatório descritivo prospectivo entre sementes
 
 Preparei experiments/lkh/paired70_dispersion.py separado de qualquer fonte congelada/runner/gate. Completa a exigência já prevista no desenho de reportar dispersão: média, mediana, mínimo/máximo, SD amostral n−1, vitórias/empates/perdas e pares brutos, por geometria com dez sementes completas. Geometrias incompletas mantêm contagem sem resumo de custos; sem p/CI, sem combinar sementes como geometrias independentes, sem mudar efeito primário ou critérios. Verificador reproduzível verify_paired70_dispersion.py PASS_SYNTHETIC_ONLY com contas manuais (variância55/6), empates/ganhos constantes, falhas/ausências/duplicatas. Execução real do novo relatório retorna NO_RESULTS: nenhum experimento paired70 lançado. Isso é preparação, não resultado científico novo. Coleta ativa rd400 permanece única, gil2621/9auditada. Próximo: aguardar calibração válida; executar relatório somente sobre auditoria do estudo paired70 futuro.
+
+### 21/10/2026, 19h58 Fortaleza: repetição de rd400 no checkpoint 10
+
+Conferência passiva. Os processos continuam os das 19h26. O MDM 204 está
+em execução, cerca de 30 minutos de CPU, 33 minutos de parede e 98% de uso
+agora. O checkpoint das 19h56 tem 10 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 1860 s internos. O log segue com 0 bytes.
+Não há falha ambiental nova. O custo 10577 das tentativas rejeitadas
+continua de fora. gil262 segue 1 de 9. Não reiniciei a coleta. Próximo
+passo: esperar o endpoint com o computador acordado.

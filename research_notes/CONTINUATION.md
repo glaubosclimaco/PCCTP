@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 19h58 Fortaleza: rd400 no checkpoint 10
+
+Fila 161 e MDM 204 vivos desde 19h26. Cerca de 30 min de CPU e 33 min de
+parede. Checkpoint 19h56: iteração 10, custo provisório 10691, completed
+falso, mining 0. Log 0 bytes. gil262 continua 1/9. Sem falha nova. Não
+duplicar. Host acordado.
+
 ## 21/10/2026, 19h28 Fortaleza: repetição de rd400 na iteração 1
 
 A tentativa anterior foi excluída: checkpoint 70, custo 10577, completed
