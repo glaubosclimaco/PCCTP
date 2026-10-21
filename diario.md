@@ -27,14 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 19h58: gil262, semente 80, custo
-2001, continua a única referência aceita. A tentativa rejeitada às 19h25,
-custo 10577, não entra. A repetição atual segue com a fila 161 e o MDM 204
-desde 19h26. Às 19h58 o processo está em execução, com cerca de 30 minutos
-de CPU e 33 minutos de parede. O checkpoint das 19h56 tem 10 iterações,
-custo provisório 10691 e busca incompleta. O log continua vazio. Não lançar
-outra calibração. O computador precisa permanecer acordado. O cache continua
-parado.
+Estado operacional confirmado em 21/10, 20h28: gil262, semente 80, custo
+2001, continua a única referência aceita. A repetição de rd400 segue com a
+fila 161 e o MDM 204 desde 19h26. Às 20h28 o processo está em execução, com
+cerca de 60 minutos de CPU e 63 minutos de parede. O checkpoint das 20h20
+tem 20 iterações, custo provisório 10691 e busca incompleta. O log das 20h11
+tem 18 marcações. Nenhum dos dois é referência. O custo 10577 das tentativas
+rejeitadas continua de fora. Não lançar outra calibração. O computador
+precisa permanecer acordado. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -994,3 +994,13 @@ agora. O checkpoint das 19h56 tem 10 iterações, custo provisório 10691,
 Não há falha ambiental nova. O custo 10577 das tentativas rejeitadas
 continua de fora. gil262 segue 1 de 9. Não reiniciei a coleta. Próximo
 passo: esperar o endpoint com o computador acordado.
+
+### 21/10/2026, 20h28 Fortaleza: repetição de rd400 no checkpoint 20
+
+Conferência passiva. Os processos continuam os das 19h26. O MDM 204 está
+em execução, cerca de 60 minutos de CPU, 63 minutos de parede e 99% de uso
+agora. O checkpoint das 20h20 tem 20 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 3286 s internos. O log das 20h11 tem 18
+marcações. O custo provisório não mudou em relação ao checkpoint 10.
+gil262 segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
+Próximo passo: esperar o endpoint com o computador acordado.
