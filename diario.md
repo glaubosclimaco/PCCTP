@@ -27,14 +27,17 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado em 20/10, 17h12:** o lote de 81 execuções de
-300 s terminou. `completion.json` registra 81 corridas. A auditoria de rotas
-está PASS, com 624 rotas. A auditoria ambiental está PASS, com 27/27 blocos.
-O relatório `research_notes/DECISION300_AWAKE_REPORT.md` marca
-TRAIN_SCREEN_PASS_WITH_LIMITATIONS. Pelo critério anterior à repetição,
-hybrid60 passou e hybrid10 não passou. A fila 68316 iniciou a calibração MDM
-de 70 iterações, semente 80. O processo 65637 executa gil262. Não lançar
-outra calibração. O cache continua parado até essa calibração ser auditada.
+Estado operacional confirmado em 20/10, 23h29: o lote de 81 execuções de
+300 s continua auditado (624 rotas, 27/27 blocos, hybrid60 passou o filtro
+de treino e hybrid10 não passou). A primeira calibração de gil262, semente 80,
+foi invalidada por lacuna de relógio de 6,178795 s, acima do limite de 5 s.
+Os arquivos dessa tentativa estão em
+`experiments/lkh/published70_calibration_interrupted/20261021T021307Z/` e não
+são referência. A fila foi reiniciada às 23h13, processo 71865. Às 23h29 o
+MDM 72003 está na iteração 17 de 70 da mesma instância, com cerca de 16
+minutos de execução. Nenhuma das nove referências fechou. Não lançar outra
+calibração. O cache continua parado. Os processos 68316 e 65637 não existem
+mais.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -710,3 +713,18 @@ Conferi processos: fila71865, coletor71966 e único MDM72003 em gil262seed80, co
 Calibração retomada avança: checkpoint10, custo provisório2017; zero referências finais/auditadas. Não iniciar outro otimizador. Conferi os seis hashes do arquivo da tentativa ambiental contra review.json e identidade do protocolo da repetição; preservation_audit.json PASS. A preservação local já estava completa, mas regras .gitignore excluíam raw/checkpoint/log do commit anterior. Incluí explicitamente esses três arquivos pequenos no arquivo histórico para outra IA também poder recuperar as evidências pelo Git. Não os reclassifiquei como elegíveis. Próximo: aguardar calibração completa e ambiente válido; não extrapolar prazo ou qualidade do checkpoint.
 
 Nota de integridade: git diff --check aponta espaços finais emitidos pelo log nativo arquivado. Mantidos byte a byte para preservar os hashes; não são erro de fonte editada.
+
+### 20/10/2026, 23h29 Fortaleza: retomada viva na iteração 17
+
+Conferência passiva, sem novo otimizador. Os processos da retomada continuam
+os mesmos da entrada de 23h13: fila 71865, coletor 71966, caffeinate 71967 e
+MDM 72003. O log nativo de gil262, semente 80, está na iteração 17 de 70.
+O relatório `published70_progress.md`, observado às 23h23, ainda dizia
+checkpoint 10 e custo provisório 2017. Esse custo não é resultado de 70
+iterações. `completion.json` da calibração não existe. Zero referências
+fechadas. O filtro de treino das 81 execuções não mudou.
+
+O aviso de 30 minutos não disparou entre 17h44 e 23h28. A falha ambiental
+já registrada explica a interrupção; esta entrada só confirma que a repetição
+está em andamento. Próximo passo: deixar esta única calibração terminar as
+nove referências e auditá-las. Não extrapolar prazo a partir da iteração 17.

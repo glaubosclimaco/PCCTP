@@ -1,5 +1,15 @@
 # Estado operacional para retomada autônoma
 
+## 20/10/2026, 23h29 Fortaleza: gil262 semente 80 na iteração 17
+
+Conferência passiva. PIDs da retomada vivos: fila 71865, coletor 71966,
+caffeinate 71967, MDM 72003, elapsed cerca de 16 min. Log nativo na iteração
+17 de 70. Progresso gravado às 23h23 ainda era checkpoint 10, custo 2017,
+não elegível. completion da calibração ausente. 0 de 9 referências. Não
+duplicar. Cache e paired70 bloqueados. O aviso de 30 minutos ficou em silêncio
+de 17h44 até 23h28; a falha ambiental desse intervalo já está na entrada
+de 23h13.
+
 ## 20/10/2026, 23:13 Fortaleza — calibração reiniciada após falha ambiental
 
 Gil262seed80 excluído: gap6,178795s>5s; clockdiff0,326508s, semSleep.
