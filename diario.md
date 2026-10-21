@@ -27,17 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 13h45: gil262, semente 80, custo
-2001, continua a única referência aceita e auditada. A busca de rd400 que
-estava na iteração 44 foi rejeitada às 13h38. O checkpoint arquivado tem
-70 iterações e custo 10577, com `completed` falso. O processo retornou com
-código 0, mas a lacuna do monitor foi 8,329185 s, acima do limite de 5 s.
-Não houve suspensão. Esse custo não entra. Os arquivos estão em
-`experiments/lkh/published70_calibration_interrupted/20261021T163849Z/`.
-A repetição começou às 13h39: fila 90912, coletor 90968 e MDM 90998, de
-novo rd400, semente 80. Às 13h45 o checkpoint está na iteração 1, custo
-provisório 10794, e o log ainda está vazio. Não lançar outra calibração.
-O cache continua parado.
+Estado operacional confirmado em 21/10, 14h31: gil262, semente 80, custo
+2001, continua a única referência aceita. A tentativa de rd400 rejeitada às
+13h38, custo 10577, não entra. A repetição segue com os mesmos processos
+desde 13h39: fila 90912 e MDM 90998. Às 14h31 o processo está em execução,
+com cerca de 28 minutos de CPU e 52 minutos de parede. O último checkpoint,
+gravado às 14h00, tem 5 iterações, custo provisório 10691 e busca incompleta.
+O log nativo continua vazio. Não há checkpoint mais novo, então a iteração
+atual pode estar à frente de 5. Não lançar outra calibração. O cache continua
+parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -904,3 +902,13 @@ esse custo. gil262 permanece a única referência válida.
 provisório 10794 e 0 minerações. O log nativo tem 0 bytes. Não lancei outro
 processo. Próximo passo: deixar esta repetição de rd400 terminar com o
 computador acordado e sem lacuna de monitor acima de 5 s.
+
+### 21/10/2026, 14h31 Fortaleza: repetição de rd400 no checkpoint 5
+
+Conferência passiva. Os processos continuam os das 13h39. O MDM 90998 está
+em execução, cerca de 28 minutos de CPU, 52 minutos de parede e 98% de uso
+agora. O checkpoint das 14h00 tem 5 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 1286 s internos. O log segue com 0 bytes.
+Não há falha ambiental nova. O custo 10577 da tentativa rejeitada continua
+de fora. gil262 segue 1 de 9. Não reiniciei a coleta. Próximo passo: esperar
+o endpoint desta repetição.

@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 14h31 Fortaleza: repetição de rd400 no checkpoint 5
+
+Fila 90912 e MDM 90998 vivos desde 13h39. Cerca de 28 min de CPU e 52 min
+de parede. Checkpoint 14h00: iteração 5, custo provisório 10691, completed
+falso. Log 0 bytes. Sem falha nova. gil262 continua 1/9. Custo 10577 excluído
+não entra. Não duplicar.
+
 ## 21/10/2026, 13h45 Fortaleza: repetição de rd400 na iteração 1
 
 A tentativa anterior está excluída: checkpoint 70, custo 10577, completed
