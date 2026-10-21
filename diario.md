@@ -754,3 +754,13 @@ ambiental nova. Zero de nove referências. Não reiniciei a coleta.
 O filtro de treino das 81 execuções não mudou. Próximo passo: esperar o
 retorno desta instância e a auditoria ambiental do coletor. Cache e a
 comparação de dez sementes continuam bloqueados.
+
+### 21/10/2026, 09:47 Fortaleza — suspensão da tampa invalida repetição
+
+Coletor retornou e rejeitou gil262seed80 por Clamshell Sleep às23h34 e vários Maintenance Sleep. Gap máximo3619,117s, diferença relógios3617,782s; duração processo37720,267s não é referência elegível. Custo2001 não entra em comparação. ps confirmou nenhum otimizador ativo. Preservei seis arquivos byte a byte em experiments/lkh/published70_calibration_interrupted/20261021T124719Z com review/hashes; fontes/binários congelados PASS. Não relaxei critérios. Retomar mesma configuração/semente com fila única; usuário informado de que computador precisa permanecer acordado. A coleta válida não está concluída. Próximo: acompanhar repetição e auditar9referências antes dos estudos posteriores.
+
+Retomada efetivamente lançada: sessão95614, fila PID76634, published70_after_awake.py; não iniciar outra. Artefatos da tentativa excluída permanecem locais íntegros, pendentes de commit seletivo.
+
+### 21/10/2026, 09:57 Fortaleza — arquivo ambiental conferido
+
+Nova tentativa gil262seed80 em checkpoint10, zero endpoints finais/auditados; nenhuma busca adicional. Conferi os seis hashes da tentativa excluída20261021T124719Z e identidade do protocolo da repetição: preservation_audit.json PASS. Preparado commit seletivo com logs/raw/checkpoint históricos explicitamente incluídos, espaços nativos preservados; Utils.h e diretório ativo excluídos. Próximo: continuar coleta única sessão95614 e aceitar somente endpoints com ambiente válido.

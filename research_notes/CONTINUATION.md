@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 09:47 Fortaleza — tentativa excluída por suspensão; nova retomada
+
+Gil262seed80 rejeitado por suspensão tampa/manutenção; evidência em
+experiments/lkh/published70_calibration_interrupted/20261021T124719Z/review.json. Nenhum endpoint elegível.
+Fontes/binários congelados conferidos; repetir mesma semente/protocolo.
+Não duplicar fila; cache/paired70 bloqueados. Computador deve permanecer acordado.
+
 ## 21/10/2026, 09h41 Fortaleza: log na iteração 62, checkpoint ainda 35
 
 MDM 72003 em execução, cerca de 33 min de CPU e 10h28 de parede. Log nativo
@@ -3697,3 +3704,5 @@ Scope addendum: ruin_total60_mining_exposure.json checksall54native.raw:
 miningactiveMDM2/27,hybridinit0/27;mostly pre-mining comparison. See
 mining_exposure_scope.md;no superiorityclaim overminingcomponent. Future
 longerhorizon/stoppingcriterionneededbeforebroaderpublicationclaim.
+
+Atualização operacional21/10 09h47: nova fila sessão95614 PID76634; não duplicar.
