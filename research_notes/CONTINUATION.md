@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 11:17 Fortaleza — primeira referência70 auditada
+
+Auditor independente PASS parcial: gil262seed80 COMPLETED70, custo2001,
+15verificações de rotas,3minerações, processo2129,847s, wrapper2135,259s.
+1/9concluída e1auditada; batch_complete=false/all_references_completed=false.
+Fila79387 continua em rd400; não duplicar. Cache/paired70 seguem bloqueados.
+Auditoria em experiments/lkh/published70_calibration_audit.json; observador atualizado.
+
 ## 21/10/2026, 11h15 Fortaleza: gil262 semente 80 aceita; rd400 começou
 
 COMPLETED70, custo 2001, 70 iterações, 14 rotas, 3 minerações, ambiente PASS,

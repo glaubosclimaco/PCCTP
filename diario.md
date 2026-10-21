@@ -824,3 +824,11 @@ foi promovido. O valor aceito é o desta corrida com ambiente PASS.
 O filtro de treino das 81 execuções de 300 s não mudou e não se compara,
 neste registro, com a referência de 70 iterações. Próximo passo: deixar
 rd400 e as sete instâncias seguintes terminarem com o computador acordado.
+
+### 21/10/2026, 11:17 Fortaleza — primeira referência70 com auditoria independente
+
+Executei audit_published70_calibration.py sobre o único registro final atômico existente, sem interferir na coleta de rd400. PASS parcial:1run COMPLETED70,15verificações de rotas/custos (inclui reconferência do endpoint),70iterações,3chamadas mineração, custo2001, processo2129,847022s e wrapper2135,259169s. Fontes/binários/exports/input/ambiente vinculados por hash e critérios ambientais conferidos. all_references_completed=false, batch_complete=false: não é aprovação das nove nem comparação de dez sementes. Atualizei observador:1concluída/1auditada. Não reutilizei tentativas excluídas. rd400 já iniciado pela fila única; não duplicar. Próximo: auditar novos endpoints atômicos e só liberar estudos condicionados após9válidos.
+
+### 21/10/2026, 11h28 Fortaleza — preservação da primeira referência elegível
+
+rd400 iniciou e tem checkpoint1, custo10794 provisório; não comparei esse checkpoint. gil262 continua único endpoint70 concluído/auditado, SHA confere com auditoria parcial. Preparada preservação seletiva no Git do endpoint, ambiente e exports/log de gil262, protocolo e auditoria parcial; não incluir arquivos mutáveis de rd400, locks ou Utils.h. Isso permite recuperar a primeira referência válida sem promover o lote incompleto. Nenhum novo otimizador iniciado. Próximo: aguardar rd400 e demais referências; manter9casos como denominador.
