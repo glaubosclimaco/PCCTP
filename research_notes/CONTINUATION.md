@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 16h39 Fortaleza: rd400 no checkpoint 35, custo provisório 10644
+
+Fila 90912 e MDM 90998 vivos, cerca de 108 min de CPU e 3 h de parede.
+Checkpoint 16h25: iteração 35, custo provisório 10644, completed falso,
+mining 1, seconds 10007. Log 16h15: 31 marcações. gil262 continua 1/9.
+Custo 10577 excluído não entra. Sem falha nova. Não duplicar.
+
 ## 21/10/2026, 16h09 Fortaleza: rd400 no checkpoint 20 das 15h04
 
 Fila 90912 e MDM 90998 vivos, cerca de 82 min de CPU e 2h30 de parede.
