@@ -27,16 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 11h15: a quarta tentativa de
-gil262, semente 80, fechou como referência. São 70 iterações, custo 2001,
-14 rotas conferidas, 3 chamadas de mineração e ambiente PASS, sem suspensão
-e com lacuna máxima de 1,04 s. O tempo de parede do wrapper foi cerca de
-2135 s. Essa é 1 de 9 referências. O auditor das nove ainda não rodou.
-A fila 79387 segue na segunda instância, rd400, semente 80: o MDM 85124
-começou às 11h14 e o log ainda não tem iteração. Não lançar outra
-calibração. O cache continua parado até as nove serem auditadas. O custo
-2001 da tentativa rejeitada às 10h38 não entra; o número aceito é o desta
-execução com ambiente PASS.
+Estado operacional confirmado em 21/10, 11h45: gil262, semente 80, segue
+como a única referência aceita e auditada. Custo 2001, 70 iterações, ambiente
+PASS. A auditoria parcial está em
+`experiments/lkh/published70_calibration_audit.json`: 1 de 9, lote incompleto.
+rd400, semente 80, continua na mesma fila 79387. O MDM 85124 está em execução
+há cerca de 31 minutos, com 98% de CPU. O checkpoint lido às 11h45 marca
+iteração 10, custo provisório 10691, ainda incompleto. O log nativo de rd400
+continua vazio. Isso não é referência e não justifica reiniciar a coleta.
+Não lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -832,3 +831,14 @@ Executei audit_published70_calibration.py sobre o único registro final atômico
 ### 21/10/2026, 11h28 Fortaleza — preservação da primeira referência elegível
 
 rd400 iniciou e tem checkpoint1, custo10794 provisório; não comparei esse checkpoint. gil262 continua único endpoint70 concluído/auditado, SHA confere com auditoria parcial. Preparada preservação seletiva no Git do endpoint, ambiente e exports/log de gil262, protocolo e auditoria parcial; não incluir arquivos mutáveis de rd400, locks ou Utils.h. Isso permite recuperar a primeira referência válida sem promover o lote incompleto. Nenhum novo otimizador iniciado. Próximo: aguardar rd400 e demais referências; manter9casos como denominador.
+
+### 21/10/2026, 11h45 Fortaleza: rd400 segue no checkpoint 10
+
+Conferência passiva. gil262 permanece a única referência fechada e auditada,
+1 de 9. O MDM de rd400, processo 85124, está em execução há cerca de 31
+minutos. O checkpoint das 11h45 tem 10 iterações, custo provisório 10691,
+`completed` falso e 0 chamadas de mineração. O log nativo continua com 0
+bytes. O relatório das 11h37 ainda dizia iteração 5. Nenhum desses números
+é resultado de 70 iterações. Não há falha ambiental nova nem `completion.json`.
+Não reiniciei a coleta. Próximo passo: esperar o endpoint de rd400 com o
+computador acordado.

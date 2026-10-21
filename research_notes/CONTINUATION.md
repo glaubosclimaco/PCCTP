@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 11h45 Fortaleza: rd400 no checkpoint 10, log ainda vazio
+
+MDM 85124 vivo, cerca de 31 min de CPU. Checkpoint: iteração 10, custo
+provisório 10691, completed falso, mining 0. Log 0 bytes. gil262 continua
+1/9 auditada, custo 2001. Sem completion do lote. Não duplicar. Não tratar
+o log vazio como travamento.
+
 ## 21/10/2026, 11:17 Fortaleza — primeira referência70 auditada
 
 Auditor independente PASS parcial: gil262seed80 COMPLETED70, custo2001,
