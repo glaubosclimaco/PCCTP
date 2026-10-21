@@ -692,3 +692,15 @@ e artefatos congelados, quando houver. Resultados com escopo, tamanho do lote,
 auditoria e limitações. Falhas e correções sem apagar o resultado anterior.
 
 Próximo passo concreto e condições que precisam ser satisfeitas antes dele.
+
+### 20/10/2026, 23:13 Fortaleza — correção do manuscrito e retomada ambiental da calibração
+
+Corrigi trechos que ainda descreviam o estudo300s como incompleto: introdução, protocolo, método e sensibilidade agora distinguem81ensaios elegíveis concluídos da comparação70iterações ainda pendente. Outline em research_notes/awake300_status_consistency_outline.md. A segunda passagem TeX foi iniciada antes da confirmação da primeira; corrigi executando duas passagens explicitamente seriais, logs consistency-serial-pass-1/2.txt. PDF20p sem warnings/overfull/underfull. Páginas1,2,3,8,10,16,17 inspecionadas diretamente; outras13 pixel-iguais ao render já revisado. Abstract/conclusão continuam pendentes. Proveniências anteriores arquivadas em submission/provenance_history; manifesto183artefatos+LKH novamente PASS. Nenhum resultado científico mudou.
+
+A leitura atual do relógio foi23h09, bem posterior ao horário nominal do heartbeat. Não assumo trabalho contínuo nesse intervalo. O monitor mostrou ENVIRONMENT_FAILURE para gil262seed80: lacuna6,178795s excedeu limiar fixo5s, diferença de relógios0,326508s, nenhum Sleep. Nenhum processo otimizador estava ativo. Checkpoint70/custo2001 não constitui referência válida. Preservei todos os seis arquivos, com hashes, em experiments/lkh/published70_calibration_interrupted/20261021T021307Z/, review.json; conferi todas as fontes/binários congelados. Mantive protocolo e repeti a mesma semente/configuração, sem seleção por qualidade nem alteração dos limiares.
+
+Fila única reiniciada: /usr/bin/python3 -u experiments/lkh/published70_after_awake.py, sessão71426, PID71865. Aguarda/conferirá awake81 e executa calibração, depois auditor oficial. Não iniciar cache/paired70 até9referências completas/auditadas. Próximo passo: verificar nova execução e ambiente, preservar qualquer nova falha; completar comparação científica antes de declarar artigo pronto. Utils.h e teste12 preservados.
+
+### 20/10/2026 23:14 Fortaleza — confirmação da retomada e integridade
+
+Conferi processos: fila71865, coletor71966 e único MDM72003 em gil262seed80, com caffeinate71967. Observador passivo registra somente checkpoint1, sem referência completa/auditada; não é resultado científico final. verify_submission_manifest.py reconfirmou183artefatos e LKH PASS após a correção textual. Nenhuma nova busca lançada. Consolidação seletiva das fontes/proveniências e arquivo da tentativa ambiental; Utils.h excluído. Próximo: deixar coleta única avançar e auditar referências completas; cache e paired70 continuam bloqueados.

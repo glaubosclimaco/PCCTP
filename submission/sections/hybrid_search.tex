@@ -88,13 +88,14 @@ The budget concerns accepted solution timestamps, not a guarantee that every
 operating-system process returns within exactly $60$ seconds.
 
 \subsection{Deadline recording and component attribution}
-The prospective collector records absolute \texttt{CLOCK\_MONOTONIC}
+The event-based collector records absolute \texttt{CLOCK\_MONOTONIC}
 timestamps for improvements and parent start time $t_0$. An event qualifies
-when its timestamp is at most $t_0+60$, even if routine cleanup finishes later.
+when its timestamp is at most $t_0+B$, with $B=60$ or $B=300$ seconds in the
+two charged comparisons, even if routine cleanup finishes later.
 An earlier collector instead required the entire repair routine to return
 before the deadline. Its original outputs are preserved separately, and
 reconstructed event bounds are treated as sensitivity data rather than
-replacements for prospective measurements.
+replacements for fresh charged executions.
 
 A conditional component control replays the exact saved pre-repair cycle
 under its recorded remaining allowance, holding its visited set fixed and

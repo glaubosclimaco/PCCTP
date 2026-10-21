@@ -1,5 +1,20 @@
 # Estado operacional para retomada autônoma
 
+## 20/10/2026, 23:13 Fortaleza — calibração reiniciada após falha ambiental
+
+Gil262seed80 excluído: gap6,178795s>5s; clockdiff0,326508s, semSleep.
+Arquivos completos preservados em published70_calibration_interrupted/20261021T021307Z
+com review/hashes. Fontes/binários congelados conferidos; protocolo intacto.
+Nenhum otimizador ativo antes da retomada. Nova fila sessão71426 PID71865:
+python3 -u experiments/lkh/published70_after_awake.py. Não duplicar.
+9referências continuam pendentes; checkpoint70 não é resultado elegível.
+
+Manuscrito20p: status300s corrigido, duas passagens TeX seriais PASS,
+7páginas alteradas inspecionadas/13iguais. Proveniências históricas preservadas,
+manifest183+LKH PASS. Abstract/conclusão pendentes. Diário registra erro
+de compilação concorrente e correção, além do intervalo não observado.
+
+
 ## 20/10, 17h32 — progresso35/70 e pacote de integridade183artefatos
 
 calibration_progress.py atualizado:gil262seed80 CHECKPOINT_ONLY35iterações,

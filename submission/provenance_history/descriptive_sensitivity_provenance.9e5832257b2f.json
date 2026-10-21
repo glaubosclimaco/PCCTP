@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Descriptive completed60s TRAIN/reused validation and completed300s selected TRAIN sensitivity; no reserved data, confidence intervals or inference.",
+  "checks": [
+    "16 effects reconstructed from all audited seed costs using Fraction",
+    "16 leave-one-geometry-out means independently recomputed using 45-digit Decimal arithmetic",
+    "Source summary geometry effects and primary means agree within 1e-10",
+    "No confidence intervals, p-values, retuning, denominator changes or gate changes",
+    "18 completed300s geometry effects and18leave-one-out means independently checked using45-digit Decimal against exact Fraction closing analysis",
+    "Both failed H10 and passing H60 retain all nine geometries; omission does not change the primary gate"
+  ],
+  "source_sha256": {
+    "experiments/lkh/completed60_sensitivity.py": "2ea03ce1190a04eed00dc7ae52c33c6749a85898f88cd97d90d2283a458761d1",
+    "experiments/lkh/completed60_sensitivity.json": "1dfc94fdcf9309f935f58696e4e05562993b08ac2836eda07dbb489917d14aa7",
+    "research_notes/manuscript_sensitivity_outline.md": "35f51b8ad00b274ac4b75dd5a013c74e81a425928da4ee27557f543f24d97a8e",
+    "submission/sections/descriptive_sensitivity.tex": "81bf690740fad8d01b81697fe06be113a6f584ba0333a9a60553a61d3eb402ff",
+    "submission/tables/geometry_sensitivity.tex": "142d8549a24dcdf3781b2e8dd5356db57965256fc258d5cfb892a99396f5c434",
+    "experiments/lkh/awake300_closing_analysis.json": "a2926a9c630e1712e32ff7b6396133b7e766836375c336d751a26a379f556a68",
+    "experiments/lkh/close_awake300.py": "feb12fcb1f69ffcd7b88614c41b7b29b31827dc86dc559b9cf1b24f3ac9eedfb",
+    "research_notes/awake300_manuscript_outline.md": "2ddca1351876028675b72d8a98ad4e11d37269c60a9ded23131035296d427926"
+  }
+}
