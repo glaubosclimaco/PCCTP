@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 11h15 Fortaleza: gil262 semente 80 aceita; rd400 começou
+
+COMPLETED70, custo 2001, 70 iterações, 14 rotas, 3 minerações, ambiente PASS,
+lacuna 1,040193 s, sem sleep, wrapper cerca de 2135 s. 1 de 9. Auditor das
+nove ainda não rodou. Fila 79387 iniciou rd400 seed80 às 11h14, MDM 85124,
+log vazio. Não duplicar. Custo 2001 da tentativa excluída às 10h38 não entra.
+
 ## 21/10/2026, 10h45 Fortaleza: quarta tentativa de gil262 acabou de começar
 
 A terceira foi excluída com 70 iterações e custo 2001, sem endpoint:

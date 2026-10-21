@@ -27,16 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 10h45: o lote de 81 execuções de
-300 s continua auditado. A terceira tentativa de gil262 também foi rejeitada.
-Às 10h07 a máquina dormiu por 155 s e houve outra suspensão de 78 s. O MDM
-chegou a 70 iterações com custo 2001, mas o ambiente falhou (lacuna 154 s).
-Os arquivos estão em
-`experiments/lkh/published70_calibration_interrupted/20261021T133833Z/` e não
-são referência. A quarta tentativa começou às 10h38: fila 79387, coletor
-79433, MDM 79449, de novo gil262, semente 80. Às 10h45 o log ainda não tem
-marcação de iteração. Nenhuma das nove referências fechou. Não lançar outra
-calibração. O computador precisa permanecer acordado. O cache continua parado.
+Estado operacional confirmado em 21/10, 11h15: a quarta tentativa de
+gil262, semente 80, fechou como referência. São 70 iterações, custo 2001,
+14 rotas conferidas, 3 chamadas de mineração e ambiente PASS, sem suspensão
+e com lacuna máxima de 1,04 s. O tempo de parede do wrapper foi cerca de
+2135 s. Essa é 1 de 9 referências. O auditor das nove ainda não rodou.
+A fila 79387 segue na segunda instância, rd400, semente 80: o MDM 85124
+começou às 11h14 e o log ainda não tem iteração. Não lançar outra
+calibração. O cache continua parado até as nove serem auditadas. O custo
+2001 da tentativa rejeitada às 10h38 não entra; o número aceito é o desta
+execução com ambiente PASS.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -805,3 +805,22 @@ custo 2001 não entram, porque a tampa dormiu 155 s e houve manutenção de
 79449 estão vivos há cerca de 6 minutos, outra vez em gil262, semente 80.
 O log nativo ainda tem 0 marcações de iteração. Não há referência fechada.
 Não lancei outro processo. O custo 2001 da tentativa excluída não é baseline.
+
+### 21/10/2026, 11h15 Fortaleza: primeira referência de 70 iterações aceita
+
+A quarta tentativa de gil262, semente 80, gravou `COMPLETED70`. Custo 2001,
+70 iterações, 14 rotas conferidas e 3 chamadas de mineração. O ambiente está
+PASS: nenhum evento de suspensão, lacuna máxima 1,040193 s e diferença de
+relógios 0,001453 s. O wrapper levou cerca de 2135 s. Os arquivos fechados
+são `experiments/lkh/published70_calibration/g_gil262_VT51_T158_W53_75.seed80.json`
+e o ambiente correspondente. O auditor independente das nove referências
+ainda não foi chamado. Uma referência isolada não completa a calibração.
+
+A mesma fila, processo 79387, iniciou rd400, semente 80, às 11h14. O MDM
+85124 está em execução e o log dessa instância ainda está vazio. Não
+dupliquei a coleta. O custo 2001 da tentativa rejeitada por suspensão não
+foi promovido. O valor aceito é o desta corrida com ambiente PASS.
+
+O filtro de treino das 81 execuções de 300 s não mudou e não se compara,
+neste registro, com a referência de 70 iterações. Próximo passo: deixar
+rd400 e as sete instâncias seguintes terminarem com o computador acordado.
