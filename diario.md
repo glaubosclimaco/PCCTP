@@ -27,14 +27,17 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 13h15: gil262, semente 80, segue
-como a única referência aceita e auditada, custo 2001. rd400, semente 80,
-continua na fila 79387. O MDM 85124 está em execução há cerca de 2 horas,
-com 98% de CPU. O checkpoint das 12h42 permanece na iteração 35, custo
-provisório 10644. O log nativo, atualizado às 13h01, tem 45 marcações e a
-última cabeçalho lida foi a iteração 44, ainda em escrita. Log e checkpoint
-não são a referência de 70 iterações. Não há falha ambiental nova. Não
-lançar outra calibração. O cache continua parado.
+Estado operacional confirmado em 21/10, 13h45: gil262, semente 80, custo
+2001, continua a única referência aceita e auditada. A busca de rd400 que
+estava na iteração 44 foi rejeitada às 13h38. O checkpoint arquivado tem
+70 iterações e custo 10577, com `completed` falso. O processo retornou com
+código 0, mas a lacuna do monitor foi 8,329185 s, acima do limite de 5 s.
+Não houve suspensão. Esse custo não entra. Os arquivos estão em
+`experiments/lkh/published70_calibration_interrupted/20261021T163849Z/`.
+A repetição começou às 13h39: fila 90912, coletor 90968 e MDM 90998, de
+novo rd400, semente 80. Às 13h45 o checkpoint está na iteração 1, custo
+provisório 10794, e o log ainda está vazio. Não lançar outra calibração.
+O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -881,3 +884,23 @@ ainda aberta. Candidatos visíveis nesse trecho, como 10727, não substituem
 o custo do checkpoint. gil262 continua 1 de 9. Não há falha ambiental nem
 `completion.json`. Não reiniciei a coleta. Próximo passo: esperar o endpoint
 de rd400 com o computador acordado.
+
+### 21/10/2026, 13:38 Fortaleza — rd400 excluído pelo guard de monitor
+
+rd400 terminou70iterações/custo10577, mas gap8,329185s excedeu5s; clockdiff0,075641s, nenhumSleep. Não promover resultado após observar qualidade. ps confirmou coletor encerrado. Preservei protocolo e cinco arquivos da tentativa em experiments/lkh/published70_calibration_interrupted/20261021T163849Z com review/hashes; fontes/binários e arquivo íntegros. gil262 e auditoria parcial válidos mantidos intactos. Retomar somente rd400 mesma semente80/protocolo; sem afrouxar limiar ou reiniciar gil262. Usuário informado. Próximo: obter ambiente válido e nove referências auditadas.
+
+Retomada iniciada: fila90912/sessão68012; wrapper pulará gil262 válido e repetirá rd400. Não duplicar. Arquivo desta tentativa local preservado, commit seletivo pendente.
+
+### 21/10/2026, 13h45 Fortaleza: rd400 recomeçou na iteração 1
+
+Conferência passiva. A rejeição das 13h38 está confirmada no arquivo
+`20261021T163849Z`: checkpoint com 70 iterações, custo 10577 e `completed`
+falso; `native_cost_after_return` 10577; saída 0; lacuna 8,329185 s;
+diferença de relógios 0,075641 s; nenhum evento de suspensão. Não promovo
+esse custo. gil262 permanece a única referência válida.
+
+Às 13h45 a nova coleta está viva há cerca de 6 minutos: fila 90912, coletor
+90968, caffeinate 90969 e MDM 90998. O checkpoint tem 1 iteração, custo
+provisório 10794 e 0 minerações. O log nativo tem 0 bytes. Não lancei outro
+processo. Próximo passo: deixar esta repetição de rd400 terminar com o
+computador acordado e sem lacuna de monitor acima de 5 s.
