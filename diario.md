@@ -27,15 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 14h31: gil262, semente 80, custo
-2001, continua a única referência aceita. A tentativa de rd400 rejeitada às
-13h38, custo 10577, não entra. A repetição segue com os mesmos processos
-desde 13h39: fila 90912 e MDM 90998. Às 14h31 o processo está em execução,
-com cerca de 28 minutos de CPU e 52 minutos de parede. O último checkpoint,
-gravado às 14h00, tem 5 iterações, custo provisório 10691 e busca incompleta.
-O log nativo continua vazio. Não há checkpoint mais novo, então a iteração
-atual pode estar à frente de 5. Não lançar outra calibração. O cache continua
-parado.
+Estado operacional confirmado em 21/10, 15h01: gil262, semente 80, custo
+2001, continua a única referência aceita. A repetição de rd400 segue com a
+fila 90912 e o MDM 90998 desde 13h39. Às 15h01 o processo está em execução,
+com cerca de 54 minutos de CPU e 82 minutos de parede. O checkpoint das
+14h34 tem 10 iterações, custo provisório 10691 e busca incompleta. O log
+das 14h54 tem 18 marcações, à frente do checkpoint. Nenhum dos dois é
+referência. O custo 10577 da tentativa rejeitada continua de fora. Não
+lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -912,3 +911,13 @@ agora. O checkpoint das 14h00 tem 5 iterações, custo provisório 10691,
 Não há falha ambiental nova. O custo 10577 da tentativa rejeitada continua
 de fora. gil262 segue 1 de 9. Não reiniciei a coleta. Próximo passo: esperar
 o endpoint desta repetição.
+
+### 21/10/2026, 15h01 Fortaleza: repetição de rd400 no checkpoint 10
+
+Conferência passiva. Os processos continuam os das 13h39. O MDM 90998 está
+em execução, cerca de 54 minutos de CPU, 82 minutos de parede e 97% de uso
+agora. O checkpoint das 14h34 tem 10 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 3329 s internos. O log das 14h54 tem 18
+marcações. O custo provisório não mudou em relação ao checkpoint 5. gil262
+segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta. Próximo
+passo: esperar o endpoint desta repetição.
