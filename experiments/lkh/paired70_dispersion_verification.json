@@ -1,0 +1,19 @@
+{
+  "status": "PASS_SYNTHETIC_ONLY",
+  "scope": "Hand-calculated ten-seed toy data; not PCCTP outcomes. No primary gate change.",
+  "checks": [
+    "mean/median104.5",
+    "sample variance55/6",
+    "constant paired gain SD0",
+    "10ties",
+    "9geometry denominator",
+    "incomplete suppressed",
+    "failed reference suppressed",
+    "duplicate rejected",
+    "failed audit rejected"
+  ],
+  "source_sha256": {
+    "paired70_dispersion.py": "b46eeba540b6afd569ed5fd445f9e7c22dfd993fa928f2ea4995b9823e72e091",
+    "verify_paired70_dispersion.py": "2b3ddf39af90880754fddebddcb8e119141501cc3e1a1bc1c3362d394dae69ef"
+  }
+}

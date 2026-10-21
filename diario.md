@@ -982,3 +982,7 @@ há cerca de 2 minutos. O checkpoint tem 1 iteração, custo provisório 10794
 e 0 minerações. O log tem 0 bytes. Não lancei outro processo. O aviso de
 30 minutos não disparou enquanto a máquina dormia. Próximo passo: deixar
 esta repetição terminar com o computador acordado.
+
+### 21/10/2026, 19:34 Fortaleza — relatório descritivo prospectivo entre sementes
+
+Preparei experiments/lkh/paired70_dispersion.py separado de qualquer fonte congelada/runner/gate. Completa a exigência já prevista no desenho de reportar dispersão: média, mediana, mínimo/máximo, SD amostral n−1, vitórias/empates/perdas e pares brutos, por geometria com dez sementes completas. Geometrias incompletas mantêm contagem sem resumo de custos; sem p/CI, sem combinar sementes como geometrias independentes, sem mudar efeito primário ou critérios. Verificador reproduzível verify_paired70_dispersion.py PASS_SYNTHETIC_ONLY com contas manuais (variância55/6), empates/ganhos constantes, falhas/ausências/duplicatas. Execução real do novo relatório retorna NO_RESULTS: nenhum experimento paired70 lançado. Isso é preparação, não resultado científico novo. Coleta ativa rd400 permanece única, gil2621/9auditada. Próximo: aguardar calibração válida; executar relatório somente sobre auditoria do estudo paired70 futuro.
