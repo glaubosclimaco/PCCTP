@@ -27,16 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 09h41: o lote de 81 execuções de
-300 s continua auditado (624 rotas, 27/27 blocos, hybrid60 passou o filtro
-de treino e hybrid10 não passou). A tentativa de gil262 invalidada na noite
-de 20/10 não é referência. A repetição segue com os mesmos processos desde
-23h13: fila 71865, coletor 71966 e MDM 72003. Às 09h41 o log nativo tinha 63
-marcações de iteração, com a iteração 62 ainda sendo escrita. O checkpoint
-lido às 09h36 continua em 35/70, custo provisório 2003, e não é resultado
-final. O processo está em execução, com cerca de 33 minutos de CPU e 10h28
-de relógio de parede. Nenhuma das nove referências fechou. Não lançar outra
-calibração. O cache continua parado.
+Estado operacional confirmado em 21/10, 10h15: o lote de 81 execuções de
+300 s continua auditado. A repetição de gil262 que chegou a escrever a
+iteração 62 foi invalidada por suspensão da máquina (lacuna máxima de
+3619 s). Os arquivos estão em
+`experiments/lkh/published70_calibration_interrupted/20261021T124719Z/` e
+não são referência. A coleta atual começou por volta das 09h47: fila 76634,
+coletor 76702, MDM 76712, ainda em gil262, semente 80. Às 10h15 o log está
+na iteração 34 e o checkpoint permanece 35/70, custo provisório 2003. Nenhuma
+das nove referências fechou. Não lançar outra calibração. O cache continua
+parado. Os processos 71865 e 72003 não existem mais.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -764,3 +764,21 @@ Retomada efetivamente lançada: sessão95614, fila PID76634, published70_after_a
 ### 21/10/2026, 09:57 Fortaleza — arquivo ambiental conferido
 
 Nova tentativa gil262seed80 em checkpoint10, zero endpoints finais/auditados; nenhuma busca adicional. Conferi os seis hashes da tentativa excluída20261021T124719Z e identidade do protocolo da repetição: preservation_audit.json PASS. Preparado commit seletivo com logs/raw/checkpoint históricos explicitamente incluídos, espaços nativos preservados; Utils.h e diretório ativo excluídos. Próximo: continuar coleta única sessão95614 e aceitar somente endpoints com ambiente válido.
+
+### 21/10/2026, 10h07 Fortaleza — conferência da coleta e instruções atuais
+
+Observador atualizado: checkpoint35 gil262seed80, custo2003 provisório; zero referências finais/auditadas. Log parcial está sendo gravado, com marcação34, o que não altera o checkpoint atômico nem representa regressão comprovada. Todos os hashes das dependências/fontes/binários do protocolo ativo conferidos PASS. Atualizei resumo de CONTINUATION com fila atual76634/sessão95614 para evitar uso dos PIDs históricos. Arquivo ambiental já consolidado no commit a3b7f5b. Nenhuma nova otimização, alteração experimental ou resultado científico. Próximo: aguardar retorno válido e auditoria, depois avançar estudos condicionados.
+
+### 21/10/2026, 10h15 Fortaleza: a terceira tentativa continua em gil262
+
+Conferência passiva. A execução que o resumo de 09h41 ainda descrevia foi
+encerrada: a máquina dormiu, a lacuna chegou a 3619 s e o coletor rejeitou
+o ensaio. Isso já está arquivado em `20261021T124719Z` e no commit `a3b7f5b`.
+A tentativa agora ativa é outra, iniciada perto de 09h47. Às 10h15 seguem
+vivos a fila 76634, o coletor 76702, o caffeinate 76703 e o MDM 76712, com
+cerca de 28 minutos. O log nativo está na iteração 34. O checkpoint continua
+35/70, custo provisório 2003, e não é referência de 70 iterações. Zero de
+nove resultados fechados. Não lancei outro otimizador.
+
+O filtro de treino das 81 execuções não mudou. Para esta referência valer,
+o computador precisa permanecer acordado até o coletor gravar o ambiente.

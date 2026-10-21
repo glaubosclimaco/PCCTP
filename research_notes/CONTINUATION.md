@@ -1,5 +1,21 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 10h15 Fortaleza: terceira tentativa de gil262 na iteração 34
+
+A tentativa das 23h13 foi excluída por suspensão (lacuna 3619 s), arquivo
+`20261021T124719Z`, commit a3b7f5b. Coleta atual: fila 76634, coletor 76702,
+MDM 76712, cerca de 28 min, log na iteração 34, checkpoint 35/70 custo
+provisório 2003. Sem completion. 0 de 9. Não duplicar. A máquina precisa
+ficar acordada até o ambiente ser gravado.
+
+## 21/10/2026, 10h07 Fortaleza — retomada atual em checkpoint35
+
+Fila atual PID76634, sessão95614; não confundir com PIDs históricos abaixo.
+Observador13h06UTC: gil262seed80 checkpoint35/custo2003 provisório;
+zero referências finais/auditadas. Fontes/binários congelados conferidos PASS.
+Tentativa anterior excluída arquivada integralmente no commit a3b7f5b.
+Não iniciar cache/paired70 até9referências válidas; não extrapolar duração.
+
 ## 21/10/2026, 09:47 Fortaleza — tentativa excluída por suspensão; nova retomada
 
 Gil262seed80 rejeitado por suspensão tampa/manutenção; evidência em
