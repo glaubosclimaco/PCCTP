@@ -27,14 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 12h15: gil262, semente 80, segue
+Estado operacional confirmado em 21/10, 12h45: gil262, semente 80, segue
 como a única referência aceita e auditada, custo 2001. rd400, semente 80,
-continua na fila 79387. O MDM 85124 está em execução há cerca de 61 minutos,
-com 98% de CPU. O checkpoint gravado às 12h05 marca iteração 20, custo
-provisório 10691, busca incompleta e 0 chamadas de mineração. O log nativo
-tem 18 marcações e foi atualizado às 11h56. Nenhum dos dois é referência.
-Não há falha ambiental nova. Não lançar outra calibração. O cache continua
-parado.
+continua na fila 79387. O MDM 85124 está em execução há cerca de 91 minutos,
+com 99% de CPU. O checkpoint gravado às 12h42 marca iteração 35, custo
+provisório 10644, busca incompleta e 1 chamada de mineração. O log nativo,
+atualizado às 12h34, tem 31 marcações. Nenhum dos dois é referência. Não há
+falha ambiental nova. Não lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -855,3 +854,18 @@ CPU e 98% de uso. O checkpoint das 12h05 tem 20 iterações, custo provisório
 11h58 ainda descrevia o checkpoint 10. Nenhum canal fechou a referência.
 gil262 continua 1 de 9. Não reiniciei a coleta e não estimei o horário de
 término. Próximo passo: esperar o endpoint de rd400 com o computador acordado.
+
+### 21/10/2026, 12h38 Fortaleza — rd400 ativo apesar do checkpoint estável
+
+Checkpoint20 permanece parcial. Conferência ps: MDM85124 estadoR, parede1h24min09s, CPU82min57,93s, filho do coletor79433. CPU avançou desde11h58; não há evidência operacional para reiniciar. Sem endpoint novo ou environment_failure; ambiente final ainda não validado. Nenhum processo duplicado e nenhuma alteração de fonte. Próximo: aguardar endpoint/timeout, preservando critérios e denominador9.
+
+### 21/10/2026, 12h45 Fortaleza: rd400 no checkpoint 35
+
+Conferência passiva. O processo 85124 segue o mesmo, cerca de 91 minutos de
+CPU. O checkpoint das 12h42 tem 35 iterações, custo provisório 10644,
+`completed` falso e 1 mineração. O tempo interno desse arquivo é 5305 s.
+O log das 12h34 tem 31 marcações. A nota das 12h38 ainda descrevia o
+checkpoint 20 e o custo 10691. O custo provisório caiu 47 unidades entre
+esses dois checkpoints. Isso não é a referência de 70 iterações. gil262
+continua 1 de 9. Não reiniciei a coleta. Próximo passo: esperar o endpoint
+de rd400 com o computador acordado.
