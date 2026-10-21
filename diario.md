@@ -27,16 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 10h15: o lote de 81 execuções de
-300 s continua auditado. A repetição de gil262 que chegou a escrever a
-iteração 62 foi invalidada por suspensão da máquina (lacuna máxima de
-3619 s). Os arquivos estão em
-`experiments/lkh/published70_calibration_interrupted/20261021T124719Z/` e
-não são referência. A coleta atual começou por volta das 09h47: fila 76634,
-coletor 76702, MDM 76712, ainda em gil262, semente 80. Às 10h15 o log está
-na iteração 34 e o checkpoint permanece 35/70, custo provisório 2003. Nenhuma
-das nove referências fechou. Não lançar outra calibração. O cache continua
-parado. Os processos 71865 e 72003 não existem mais.
+Estado operacional confirmado em 21/10, 10h45: o lote de 81 execuções de
+300 s continua auditado. A terceira tentativa de gil262 também foi rejeitada.
+Às 10h07 a máquina dormiu por 155 s e houve outra suspensão de 78 s. O MDM
+chegou a 70 iterações com custo 2001, mas o ambiente falhou (lacuna 154 s).
+Os arquivos estão em
+`experiments/lkh/published70_calibration_interrupted/20261021T133833Z/` e não
+são referência. A quarta tentativa começou às 10h38: fila 79387, coletor
+79433, MDM 79449, de novo gil262, semente 80. Às 10h45 o log ainda não tem
+marcação de iteração. Nenhuma das nove referências fechou. Não lançar outra
+calibração. O computador precisa permanecer acordado. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -782,3 +782,26 @@ nove resultados fechados. Não lancei outro otimizador.
 
 O filtro de treino das 81 execuções não mudou. Para esta referência valer,
 o computador precisa permanecer acordado até o coletor gravar o ambiente.
+
+### 21/10/2026, 10h18 Fortaleza — revisão do critério de conclusão70
+
+Enquanto a coleta única continua, revi o auditor congelado sem executar auditoria final prematura: exige export final completed=true/iterations70, snapshot70, exit0/sem timeout, rotas/custos escalares, hashes e ambiente PASS (semSleep, gap≤5s, diferença≤3s). Só completion+9casos permite all_references_completed; calibração não é comparação de dez sementes. Nenhuma fonte alterada. Observador atual ainda35/70, zero referências finais. Não iniciei outra busca nem interpretei checkpoints como vantagem. Próximo: aceitar somente saída final auditada e avançar o protocolo condicionado.
+
+### 21/10/2026, 10h28 Fortaleza — auditoria escalar do checkpoint
+
+Log atual chegou62 com mineração, mas checkpoint atômico segue35/70. Auditei independentemente a rota e todos os snapshots desse checkpoint contra o inputTRAIN gil262 com raw_route_audit.load/check, sem chamar otimizador. Resultado em experiments/lkh/published70_checkpoint_scalar_audit.json: PASS_CHECKPOINT_ONLY; hash vincula a observação, não endpoint final. Essa verificação não aprova tempo/ambiente nem substitui o auditor final; zero referências completas. Nenhuma fonte congelada alterada ou busca duplicada. Próximo: aguardar final+ambiente e só então avaliar calibração.
+
+### 21/10/2026, 10:38 Fortaleza — nova suspensão observada, tentativa excluída
+
+Gil262seed80 retornou70, custo2001, mas ambiente rejeitado: Clamshell Sleep10h07 por155s e Maintenance Sleep78s; gap154,477s e diferença153,468s. Nenhum endpoint aceito. ps confirmou ausência de otimizadores. Preservei seis arquivos e review/hashes em experiments/lkh/published70_calibration_interrupted/20261021T133833Z; integridade e fontes/binários congelados PASS. Não afrouxar o guard nem apresentar tempo interrompido como comparação válida. Nova tentativa da mesma semente/protocolo, sem seleção por custo, depende de host acordado. Usuário informado. Cache/paired70 continuam bloqueados.
+
+Nova fila efetivamente iniciada: PID79387, sessão75056, published70_after_awake.py. Não duplicar. Arquivo desta falha preservado localmente; commit seletivo pendente.
+
+### 21/10/2026, 10h45 Fortaleza: quarta tentativa no começo
+
+Conferência passiva. A rejeição das 10h38 está confirmada: 70 iterações e
+custo 2001 não entram, porque a tampa dormiu 155 s e houve manutenção de
+78 s. Às 10h45 a fila 79387, o coletor 79433, o caffeinate 79434 e o MDM
+79449 estão vivos há cerca de 6 minutos, outra vez em gil262, semente 80.
+O log nativo ainda tem 0 marcações de iteração. Não há referência fechada.
+Não lancei outro processo. O custo 2001 da tentativa excluída não é baseline.

@@ -1,5 +1,19 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 10h45 Fortaleza: quarta tentativa de gil262 acabou de começar
+
+A terceira foi excluída com 70 iterações e custo 2001, sem endpoint:
+sleep de tampa 155 s e manutenção 78 s, arquivo `20261021T133833Z`.
+Coleta atual: fila 79387, coletor 79433, MDM 79449, cerca de 6 min.
+Log com 0 marcações de iteração. 0 de 9. Não duplicar. Host acordado.
+
+## 21/10/2026, 10:38 Fortaleza — terceira tentativa excluída por suspensão
+
+Evidência em experiments/lkh/published70_calibration_interrupted/20261021T133833Z.
+Sleep tampa155s/manutenção78s, gap154,477s: nenhum endpoint válido.
+Fontes/binários e arquivos preservados conferidos. Nenhum processo ativo antes
+da retomada. Repetir mesma semente/protocolo; não duplicar; host deve ficar acordado.
+
 ## 21/10/2026, 10h15 Fortaleza: terceira tentativa de gil262 na iteração 34
 
 A tentativa das 23h13 foi excluída por suspensão (lacuna 3619 s), arquivo
@@ -3722,3 +3736,5 @@ mining_exposure_scope.md;no superiorityclaim overminingcomponent. Future
 longerhorizon/stoppingcriterionneededbeforebroaderpublicationclaim.
 
 Atualização operacional21/10 09h47: nova fila sessão95614 PID76634; não duplicar.
+
+21/10 10h38: fila atual PID79387/sessão75056; PIDs anteriores são históricos.
