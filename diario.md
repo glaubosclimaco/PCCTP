@@ -27,13 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 12h45: gil262, semente 80, segue
+Estado operacional confirmado em 21/10, 13h15: gil262, semente 80, segue
 como a única referência aceita e auditada, custo 2001. rd400, semente 80,
-continua na fila 79387. O MDM 85124 está em execução há cerca de 91 minutos,
-com 99% de CPU. O checkpoint gravado às 12h42 marca iteração 35, custo
-provisório 10644, busca incompleta e 1 chamada de mineração. O log nativo,
-atualizado às 12h34, tem 31 marcações. Nenhum dos dois é referência. Não há
-falha ambiental nova. Não lançar outra calibração. O cache continua parado.
+continua na fila 79387. O MDM 85124 está em execução há cerca de 2 horas,
+com 98% de CPU. O checkpoint das 12h42 permanece na iteração 35, custo
+provisório 10644. O log nativo, atualizado às 13h01, tem 45 marcações e a
+última cabeçalho lida foi a iteração 44, ainda em escrita. Log e checkpoint
+não são a referência de 70 iterações. Não há falha ambiental nova. Não
+lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -868,4 +869,15 @@ O log das 12h34 tem 31 marcações. A nota das 12h38 ainda descrevia o
 checkpoint 20 e o custo 10691. O custo provisório caiu 47 unidades entre
 esses dois checkpoints. Isso não é a referência de 70 iterações. gil262
 continua 1 de 9. Não reiniciei a coleta. Próximo passo: esperar o endpoint
+de rd400 com o computador acordado.
+
+### 21/10/2026, 13h15 Fortaleza: o log de rd400 passou o checkpoint
+
+Conferência passiva. O MDM 85124 segue o mesmo processo, cerca de 119 minutos
+de CPU e 98% de uso. O checkpoint não mudou desde 12h42: iteração 35, custo
+provisório 10644, busca incompleta. O log foi atualizado às 13h01 e tem 45
+marcações. A última cabeçalho lida foi a iteração 44, com a linha seguinte
+ainda aberta. Candidatos visíveis nesse trecho, como 10727, não substituem
+o custo do checkpoint. gil262 continua 1 de 9. Não há falha ambiental nem
+`completion.json`. Não reiniciei a coleta. Próximo passo: esperar o endpoint
 de rd400 com o computador acordado.

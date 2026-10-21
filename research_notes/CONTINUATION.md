@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 13h15 Fortaleza: log de rd400 na iteração 44
+
+MDM 85124 vivo, cerca de 119 min de CPU. Checkpoint 12h42 inalterado:
+iteração 35, custo provisório 10644. Log 13h01: 45 marcações, última
+cabeçalho lida na iteração 44. gil262 continua 1/9. Sem completion e sem
+falha nova. Não duplicar.
+
 ## 21/10/2026, 12h45 Fortaleza: rd400 no checkpoint 35
 
 MDM 85124 vivo, cerca de 91 min de CPU. Checkpoint 12h42: iteração 35, custo
