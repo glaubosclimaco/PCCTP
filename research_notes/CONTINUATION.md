@@ -1,5 +1,18 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 19h28 Fortaleza: repetição de rd400 na iteração 1
+
+A tentativa anterior foi excluída: checkpoint 70, custo 10577, completed
+falso, 19 suspensões, lacuna 3367 s, arquivo `20261021T222541Z`. gil262
+continua 1/9, custo 2001. Coleta atual: fila 161, MDM 204, cerca de 2 min,
+checkpoint 1, custo provisório 10794, log vazio. Não duplicar. Host acordado.
+
+## 21/10/2026, 19:25 Fortaleza — rd400 novamente excluído por Sleep
+
+19Sleep; gap3367s. Arquivo experiments/lkh/published70_calibration_interrupted/20261021T222541Z.
+Gil262 válido intacto,1/9auditada. Repetir apenas rd400seed80/protocolo.
+Nenhum processo ativo antes da retomada. Host continuamente acordado necessário.
+
 ## 21/10/2026, 17h09 Fortaleza: log de rd400 na iteração 44
 
 MDM 90998 vivo, cerca de 134 min de CPU e 3h30 de parede. Checkpoint 16h25
@@ -3831,3 +3844,5 @@ Atualização operacional21/10 09h47: nova fila sessão95614 PID76634; não dupl
 21/10 10h38: fila atual PID79387/sessão75056; PIDs anteriores são históricos.
 
 21/10 13h39: fila atual90912/sessão68012; anteriores históricas.
+
+21/10 19h26: fila atual161/sessão5542; anteriores históricas.

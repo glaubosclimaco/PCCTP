@@ -27,14 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 17h09: gil262, semente 80, custo
-2001, continua a única referência aceita. A repetição de rd400 segue com a
-fila 90912 e o MDM 90998 desde 13h39. Às 17h09 o processo está em execução,
-com cerca de 134 minutos de CPU e 3h30 de parede. O checkpoint das 16h25
-permanece na iteração 35, custo provisório 10644. O log das 16h51 tem 45
-marcações e a última cabeçalho lida foi a iteração 44, ainda em escrita.
-Log e checkpoint não são a referência. O custo 10577 da tentativa rejeitada
-continua de fora. Não lançar outra calibração. O cache continua parado.
+Estado operacional confirmado em 21/10, 19h28: gil262, semente 80, custo
+2001, continua a única referência aceita. A repetição de rd400 que estava na
+iteração 44 foi rejeitada às 19h25. O checkpoint arquivado tem 70 iterações
+e custo 10577, com `completed` falso. Houve 19 suspensões, lacuna de 3367 s
+e diferença de relógios de 3366 s. Esse custo não entra. Os arquivos estão em
+`experiments/lkh/published70_calibration_interrupted/20261021T222541Z/`.
+A nova tentativa começou às 19h26: fila 161, coletor 197 e MDM 204, de novo
+rd400, semente 80. Às 19h28 o checkpoint está na iteração 1, custo provisório
+10794, e o log está vazio. Não lançar outra calibração. O computador precisa
+permanecer acordado. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -956,3 +958,27 @@ O log foi atualizado às 16h51 e tem 45 marcações. A última cabeçalho lida
 foi a iteração 44, com a linha seguinte ainda aberta. Um candidato visível
 nesse trecho, 10727, não substitui o custo do checkpoint. gil262 segue 1 de
 9. Não há falha ambiental nova. Não reiniciei a coleta.
+
+### 21/10/2026, 19:14 Fortaleza — confirmação do worker após intervalo de retomada
+
+O relógio de observação indica22h13UTC, posterior ao heartbeat nominal21h20UTC; não infiro trabalho no intervalo. rd400 permanece checkpoint35/custo10644 provisório, sem endpoint ou environment_failure. ps: MDM90998 estadoR, pai90968, parede5h34min44s, CPU146min04,20s. Há avanço de CPU desde nota17h09, mas parede não equivale a duração elegível; guard ambiental decidirá ao retornar. Não reiniciei nem dupliquei;1/9auditada. Próximo: endpoint/timeout e auditoria, preservando qualquer rejeição.
+
+### 21/10/2026, 19:25 Fortaleza — repetição de rd400 excluída por suspensão
+
+Retornou70/custo10577 mas19Sleep (inclui tampa), gap3367,213s/clockdiff3366,155s. Não aceitar custo/tempo como referência; gil262 permanece1/9válida. ps confirmou ausência de otimizador. Preservei seis arquivos em experiments/lkh/published70_calibration_interrupted/20261021T222541Z com review/hashes, fontes/binários íntegros. Repetir só rd400 mesma semente80/protocolo, sem alterar limiares. Usuário informado da necessidade de host continuamente acordado. Próximo: obter endpoint com ambiente válido; não liberar cache/paired70.
+
+Nova fila iniciada PID161/sessão5542. PIDs antigos históricos; não duplicar. Commit seletivo do arquivo desta falha pendente.
+
+### 21/10/2026, 19h28 Fortaleza: nova repetição de rd400 na iteração 1
+
+Conferência passiva. A rejeição das 19h25 está confirmada: checkpoint com
+70 iterações, custo 10577, `completed` falso, 3 minerações e saída 0. O
+tempo de parede nativo foi cerca de 20583 s, mas 19 suspensões produziram
+lacuna de 3367,213 s. Não promovo o custo. gil262 permanece a única
+referência válida.
+
+Às 19h28 a fila 161, o coletor 197, o caffeinate 199 e o MDM 204 estão vivos
+há cerca de 2 minutos. O checkpoint tem 1 iteração, custo provisório 10794
+e 0 minerações. O log tem 0 bytes. Não lancei outro processo. O aviso de
+30 minutos não disparou enquanto a máquina dormia. Próximo passo: deixar
+esta repetição terminar com o computador acordado.
