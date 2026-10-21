@@ -27,14 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 15h01: gil262, semente 80, custo
+Estado operacional confirmado em 21/10, 16h09: gil262, semente 80, custo
 2001, continua a única referência aceita. A repetição de rd400 segue com a
-fila 90912 e o MDM 90998 desde 13h39. Às 15h01 o processo está em execução,
-com cerca de 54 minutos de CPU e 82 minutos de parede. O checkpoint das
-14h34 tem 10 iterações, custo provisório 10691 e busca incompleta. O log
-das 14h54 tem 18 marcações, à frente do checkpoint. Nenhum dos dois é
-referência. O custo 10577 da tentativa rejeitada continua de fora. Não
-lançar outra calibração. O cache continua parado.
+fila 90912 e o MDM 90998 desde 13h39. Às 16h09 o processo está em execução,
+com cerca de 82 minutos de CPU e 2h30 de parede. O checkpoint das 15h04 tem
+20 iterações, custo provisório 10691 e busca incompleta. O log das 14h54
+continua com 18 marcações. Não há arquivo mais novo, então a iteração atual
+pode estar à frente desses dois canais. O custo 10577 da tentativa rejeitada
+continua de fora. Não lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -921,3 +921,17 @@ agora. O checkpoint das 14h34 tem 10 iterações, custo provisório 10691,
 marcações. O custo provisório não mudou em relação ao checkpoint 5. gil262
 segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta. Próximo
 passo: esperar o endpoint desta repetição.
+
+### 21/10/2026, 16:08 Fortaleza — rd400 ainda executa na repetição
+
+Observador mantém checkpoint20/custo10691 provisório;1/9final auditada. ps confirma MDM90998, pai90968, estadoR,2h29min43s de parede e81min46,11s de CPU. CPU avançou em relação à nota15h01; diferença parede/CPU não prova suspensão nem aprova ambiente. Nenhum endpoint novo ou environment_failure atual. Sem reinício/duplicação. Próximo: aguardar export final e guard ambiental, preservar qualquer rejeição.
+
+### 21/10/2026, 16h09 Fortaleza: checkpoint 20 ainda é o mais novo
+
+Conferência passiva. Os processos continuam os das 13h39. O MDM 90998 está
+em execução, cerca de 82 minutos de CPU e 2h30 de parede. O arquivo de
+checkpoint mais recente é o das 15h04: 20 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 5128 s internos. O log não cresceu desde
+14h54 e permanece com 18 marcações. gil262 segue 1 de 9. Não há falha
+ambiental nova. Não reiniciei a coleta. Próximo passo: esperar o endpoint
+desta repetição.
