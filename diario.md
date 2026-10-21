@@ -27,17 +27,16 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 20/10, 23h29: o lote de 81 execuções de
+Estado operacional confirmado em 21/10, 09h41: o lote de 81 execuções de
 300 s continua auditado (624 rotas, 27/27 blocos, hybrid60 passou o filtro
-de treino e hybrid10 não passou). A primeira calibração de gil262, semente 80,
-foi invalidada por lacuna de relógio de 6,178795 s, acima do limite de 5 s.
-Os arquivos dessa tentativa estão em
-`experiments/lkh/published70_calibration_interrupted/20261021T021307Z/` e não
-são referência. A fila foi reiniciada às 23h13, processo 71865. Às 23h29 o
-MDM 72003 está na iteração 17 de 70 da mesma instância, com cerca de 16
-minutos de execução. Nenhuma das nove referências fechou. Não lançar outra
-calibração. O cache continua parado. Os processos 68316 e 65637 não existem
-mais.
+de treino e hybrid10 não passou). A tentativa de gil262 invalidada na noite
+de 20/10 não é referência. A repetição segue com os mesmos processos desde
+23h13: fila 71865, coletor 71966 e MDM 72003. Às 09h41 o log nativo tinha 63
+marcações de iteração, com a iteração 62 ainda sendo escrita. O checkpoint
+lido às 09h36 continua em 35/70, custo provisório 2003, e não é resultado
+final. O processo está em execução, com cerca de 33 minutos de CPU e 10h28
+de relógio de parede. Nenhuma das nove referências fechou. Não lançar outra
+calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -728,3 +727,30 @@ O aviso de 30 minutos não disparou entre 17h44 e 23h28. A falha ambiental
 já registrada explica a interrupção; esta entrada só confirma que a repetição
 está em andamento. Próximo passo: deixar esta única calibração terminar as
 nove referências e auditá-las. Não extrapolar prazo a partir da iteração 17.
+
+### 20/10/2026, 23:34 Fortaleza — verificação de congelamento durante coleta
+
+Observador passivo atualizado: gil262seed80 checkpoint35/70, custo2003 provisório, zero referências completas/auditadas. Conferi novamente todos os hashes de fontes e binários no protocolo ativo: PASS. Manifesto do estudo concluído e manuscrito183artefatos+LKH também PASS. Nenhum parâmetro, fonte congelada ou otimizador adicional alterado/iniciado. Entradas de outro executor às23h29 preservadas. Não há conclusão científica nova; aguardar referências completas e auditoria antes de cache/paired70.
+
+### 21/10/2026, 09:36 Fortaleza — calibração ainda sem referência final
+
+Leitura passiva: checkpoint35/70, custo2003 e elapsed exportado1166,892s; zero referências finais/auditadas, nenhum environment_failure.json atual. ps confirma fila71865/coletor71966/MDM72003 único, MDM em estadoR e processo com elapsed cerca10h23. Não inferir tempo efetivo ou travamento a partir do checkpoint; monitor ambiental e limite43200s do protocolo continuam responsáveis pela elegibilidade/censura. Não reiniciei nem dupliquei a coleta. A primeira conferência ps expirou na revisão automática; a repetição autorizada somente de leitura funcionou, sem bloqueio restante. O timestamp real observado foi posterior ao heartbeat nominal; não reconstruo trabalho no intervalo. Próximo: revisar saída final/timeout e ambiente; cache/paired70 seguem bloqueados até9referências válidas.
+
+### 21/10/2026, 09:37 Fortaleza — distinção entre checkpoint e log nativo
+
+Conferi implementação congelada do coletor: timeout de segurança aplicado por subprocess.run; ClockGuard verifica lacunas e relógios e consulta pmset após retorno. Não alterei fonte ativa ou limiares. Checkpoint permanece35/70, enquanto log chegou49 com mineração; saídas têm cadências diferentes, não há novo endpoint. Nenhum arquivo final ou falha ambiental atual. Atualizei CONTINUATION, que ainda destacava iteração17, para evitar que outra IA reinicie uma coleta viva por interpretar relatório antigo como travamento. Próximo: observar conclusão/timeout e auditar ambiente; nenhuma busca adicional.
+
+### 21/10/2026, 09h41 Fortaleza: log na iteração 62, ainda sem referência
+
+O aviso de 30 minutos não disparou durante a madrugada. Conferência passiva.
+Os processos continuam os da retomada de 23h13. O MDM 72003 está em execução,
+98% de CPU, cerca de 33 minutos de tempo de processador e 10h28 de relógio
+de parede. O log nativo tem 63 marcações de iteração; a última cabeçalho
+completa lida foi a 62, com a linha seguinte ainda aberta. O checkpoint
+registrado às 09h36 permanece 35/70, custo provisório 2003. Os dois canais
+não são o resultado de 70 iterações. Não há `completion.json` nem falha
+ambiental nova. Zero de nove referências. Não reiniciei a coleta.
+
+O filtro de treino das 81 execuções não mudou. Próximo passo: esperar o
+retorno desta instância e a auditoria ambiental do coletor. Cache e a
+comparação de dez sementes continuam bloqueados.

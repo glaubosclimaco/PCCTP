@@ -1,5 +1,22 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 09h41 Fortaleza: log na iteração 62, checkpoint ainda 35
+
+MDM 72003 em execução, cerca de 33 min de CPU e 10h28 de parede. Log nativo
+com 63 marcações; iteração 62 em escrita. Checkpoint das 09h36 segue 35/70,
+custo provisório 2003. Sem completion e sem falha ambiental nova. 0 de 9.
+Não duplicar. O aviso de 30 minutos não rodou na madrugada.
+
+## 21/10/2026, 09:37 Fortaleza — checkpoint35 e log49, ainda sem referência
+
+Coleta gil262seed80 mantém checkpoint35/custo2003; log nativo mostra iteração49
+com mineração. São observações parciais de canais diferentes, não endpoints.
+Sem completion ou environment_failure atuais; fila única71865/coletor71966/
+MDM72003 conferida na retomada anterior. Não reiniciar nem duplicar.
+Limite de segurança43200s e auditoria ambiental serão aplicados pelo coletor
+após retorno; não tratar elapsed de processo como tempo válido.
+Cache/paired70 seguem bloqueados até9referências válidas/auditadas.
+
 ## 20/10/2026, 23h29 Fortaleza: gil262 semente 80 na iteração 17
 
 Conferência passiva. PIDs da retomada vivos: fila 71865, coletor 71966,
