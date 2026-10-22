@@ -27,15 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 20h58: gil262, semente 80, custo
+Estado operacional confirmado em 21/10, 21h28: gil262, semente 80, custo
 2001, continua a única referência aceita. A repetição de rd400 segue com a
-fila 161 e o MDM 204 desde 19h26. Às 20h58 o processo está em execução, com
-cerca de 89 minutos de CPU e 93 minutos de parede. O checkpoint das 20h57
-tem 35 iterações, custo provisório 10644, busca incompleta e 1 mineração.
-O log das 20h49 tem 31 marcações. O custo provisório caiu de 10691 para
-10644. Esse número não é referência. O custo 10577 das tentativas rejeitadas
-continua de fora. Não lançar outra calibração. O computador precisa
-permanecer acordado. O cache continua parado.
+fila 161 e o MDM 204 desde 19h26. Às 21h28 o processo está em execução, com
+cerca de 119 minutos de CPU e 122 minutos de parede. O checkpoint das 20h57
+permanece na iteração 35, custo provisório 10644. O log das 21h16 tem 45
+marcações e a última cabeçalho lida foi a iteração 44, ainda em escrita.
+Log e checkpoint não são a referência. O custo 10577 das tentativas
+rejeitadas continua de fora. Não lançar outra calibração. O computador
+precisa permanecer acordado. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1016,3 +1016,13 @@ marcações. O custo provisório caiu 47 unidades em relação ao checkpoint 20.
 O checkpoint 35 das tentativas rejeitadas também estava em 10644. Essa
 coincidência não recupera o custo 10577 nem fecha esta busca. gil262 segue
 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
+
+### 21/10/2026, 21h28 Fortaleza: o log de rd400 passou o checkpoint 35
+
+Conferência passiva. Os processos continuam os das 19h26. O MDM 204 está
+em execução, cerca de 119 minutos de CPU, 122 minutos de parede e 99% de
+uso agora. O checkpoint não mudou desde 20h57: iteração 35, custo provisório
+10644. O log foi atualizado às 21h16 e tem 45 marcações. A última cabeçalho
+lida foi a iteração 44, com a linha seguinte ainda aberta. Um candidato
+visível nesse trecho, 10727, não substitui o custo do checkpoint. gil262
+segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
