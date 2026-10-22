@@ -1,0 +1,30 @@
+{
+  "instance": "g_a280_VT56_T168_W56_50",
+  "seed": 82,
+  "protocol_sha256": "b57260b8590a8b6c6f61c67b5446f886d8f791c0ff1390a526c51444baa9627c",
+  "reference_file": "references/g_a280_VT56_T168_W56_50.seed82.reference.json",
+  "reference_sha256": "e0dc19c3379b5e97eaf9c14ef90473991ccd7815fdcf40bdd3676953d2af35f2",
+  "status": "PAIR_COMPLETED",
+  "candidate_records": {
+    "hybrid10": {
+      "file": "candidates/g_a280_VT56_T168_W56_50.seed82.hybrid10.json",
+      "sha256": "6a319b6e802db1c7208cd0ac80857c54a28347e0b70e043ad3a22520e28ca76e",
+      "cost": 2002.0,
+      "feasible": true
+    },
+    "hybrid60": {
+      "file": "candidates/g_a280_VT56_T168_W56_50.seed82.hybrid60.json",
+      "sha256": "fc4387bda153efd8d6538996f0db5b450646170bb55cff534ef47cee353ae637",
+      "cost": 2001.0,
+      "feasible": true
+    }
+  },
+  "unavailable_candidate_modes": [],
+  "budget_seconds": 1123.9246710001025,
+  "candidate_order": [
+    "hybrid10",
+    "hybrid60"
+  ],
+  "environment_file": "environment.g_a280_VT56_T168_W56_50.seed82.json",
+  "environment_sha256": "c33bed8db709115923b742e8a8bf37b704f35649e26d20a36a2d51ad966e9c76"
+}

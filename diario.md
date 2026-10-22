@@ -1229,3 +1229,7 @@ minerações e 21 s internos. O log desse braço ainda está vazio. O custo
 ### 22/10/2026, 03:28 Fortaleza — segundo par principal fechado e auditado
 
 Pargr229seed85PAIR_COMPLETED com ambientePASS;T1079,802387s por braço,ambos candidatos96707. Auditor independente executado após final atômico;sumário continuaPARTIAL e zero geometrias com10sementes,semgate ou conclusão. Custo favorável deste par não autoriza seleção de variante ou extrapolação. Sessão29767 prossegue;semalteraçãofontes. Próximo:auditar novos pares e preservar qualquerinterrupção.
+
+### 22/10/2026, 04:19 Fortaleza — terceiro par principal fechado
+
+Par a280seed82PAIR_COMPLETED/ambientePASS,T1123,924671s porbraço,H10custo2002/H60custo2001. Auditor independente e sumário parciais atualizados após arquivo atômico.3/90pares,nenhuma geometria com10sementes;sem conclusão ou seleção de variante. Coleta única sessão29767 prossegue. Próximo:preservar resultados completos e auditar demais pares;nenhum arquivo ativo deve entrar emcommit.

@@ -1,0 +1,30 @@
+{
+  "instance": "g_kroA200_VT40_T120_W40_25",
+  "seed": 89,
+  "protocol_sha256": "b57260b8590a8b6c6f61c67b5446f886d8f791c0ff1390a526c51444baa9627c",
+  "reference_file": "references/g_kroA200_VT40_T120_W40_25.seed89.reference.json",
+  "reference_sha256": "f8285fd6ece926e9f3d464940be9a2d4e3b34a14afde4c8bfc639ea500f0e9d4",
+  "status": "PAIR_COMPLETED",
+  "candidate_records": {
+    "hybrid60": {
+      "file": "candidates/g_kroA200_VT40_T120_W40_25.seed89.hybrid60.json",
+      "sha256": "5bac74d31f0692b855bcd8bcf03d42c720b0d37dd591afe7672e3ac409841595",
+      "cost": 23495.0,
+      "feasible": true
+    },
+    "hybrid10": {
+      "file": "candidates/g_kroA200_VT40_T120_W40_25.seed89.hybrid10.json",
+      "sha256": "043c4bf0f0d3c40504c92505a11f2fca5a4f84e0d8cfbd6f50ac475024c4e0c2",
+      "cost": 23495.0,
+      "feasible": true
+    }
+  },
+  "unavailable_candidate_modes": [],
+  "budget_seconds": 366.57901800004765,
+  "candidate_order": [
+    "hybrid60",
+    "hybrid10"
+  ],
+  "environment_file": "environment.g_kroA200_VT40_T120_W40_25.seed89.json",
+  "environment_sha256": "9394653c886287d3cc048b61a8204e0e6215bfbd0ee1a694f7d3fe810802bd59"
+}

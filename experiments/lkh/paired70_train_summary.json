@@ -1,0 +1,84 @@
+{
+  "status": "PARTIAL",
+  "pairs": 3,
+  "planned_pairs": 90,
+  "completed_geometries": 0,
+  "eligible_complete_study": false,
+  "reference_incomplete": 0,
+  "candidate_failure_pairs": 0,
+  "comparisons": {
+    "hybrid10": {
+      "mean_gain_percent": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "gate_passed": false
+    },
+    "hybrid60": {
+      "mean_gain_percent": null,
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "gate_passed": false
+    }
+  },
+  "geometries": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "geometry": "g_a280",
+      "pairs": 1,
+      "complete": false
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "geometry": "g_gil262",
+      "pairs": 0,
+      "complete": false
+    },
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "geometry": "g_gr229",
+      "pairs": 1,
+      "complete": false
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "geometry": "g_kroA200",
+      "pairs": 1,
+      "complete": false
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "geometry": "g_pr226",
+      "pairs": 0,
+      "complete": false
+    },
+    {
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "geometry": "g_rd400",
+      "pairs": 0,
+      "complete": false
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "geometry": "g_si175",
+      "pairs": 0,
+      "complete": false
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "geometry": "g_ts225",
+      "pairs": 0,
+      "complete": false
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "geometry": "g_tsp225",
+      "pairs": 0,
+      "complete": false
+    }
+  ],
+  "scope": "descriptive TRAIN screen, equal reference-defined per-pair wall budget; seeds not independent geometries; no test/107-instance or publication verdict",
+  "audit_sha256": "c34060c05410c1e5e1c41fd436f3690c335a7edfb242cc7a1b255bdf6516b58d",
+  "protocol_sha256": "b57260b8590a8b6c6f61c67b5446f886d8f791c0ff1390a526c51444baa9627c"
+}
