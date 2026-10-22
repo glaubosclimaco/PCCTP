@@ -1,13 +1,13 @@
 {
   "status": "PASS",
   "batch_complete": false,
-  "pairs": 4,
+  "pairs": 5,
   "planned_pairs": 90,
   "planned_executions": 270,
   "reference_incomplete": 0,
   "candidate_failure_pairs": 0,
   "eligible_complete_study": false,
-  "routes_checked": 386,
+  "routes_checked": 478,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -28,6 +28,27 @@
         "references/g_a280_VT56_T168_W56_50.seed82.reference.json": "e0dc19c3379b5e97eaf9c14ef90473991ccd7815fdcf40bdd3676953d2af35f2",
         "candidates/g_a280_VT56_T168_W56_50.seed82.hybrid10.json": "6a319b6e802db1c7208cd0ac80857c54a28347e0b70e043ad3a22520e28ca76e",
         "candidates/g_a280_VT56_T168_W56_50.seed82.hybrid60.json": "fc4387bda153efd8d6538996f0db5b450646170bb55cff534ef47cee353ae637"
+      }
+    },
+    {
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 86,
+      "status": "PAIR_COMPLETED",
+      "reference_cost": 1999,
+      "duration": 1684.1170309999725,
+      "candidate_costs": {
+        "hybrid60": 1981.0,
+        "hybrid10": 1981.0
+      },
+      "candidate_feasibility": {
+        "hybrid60": true,
+        "hybrid10": true
+      },
+      "pair_sha256": "17af2e2a76d02fbe5905ac97b1710725455eb88cfcca79b287002d779404a31d",
+      "result_hashes": {
+        "references/g_gil262_VT51_T158_W53_75.seed86.reference.json": "4b35bc9e96a8a785fd8377cc788b4ff69beb510dd0a37b3c66b0a2288e62bbcf",
+        "candidates/g_gil262_VT51_T158_W53_75.seed86.hybrid60.json": "fb04445e1415b8d1b589c536cc910e7f1548d07e5a19f8690ec0f618a212cf89",
+        "candidates/g_gil262_VT51_T158_W53_75.seed86.hybrid10.json": "c1a9182e811e530de18688886b0f33aaf75d3cb7154f6ed2b13dec782e04c4ca"
       }
     },
     {

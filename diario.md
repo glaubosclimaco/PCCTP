@@ -27,20 +27,10 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-**Estado operacional confirmado em 22/10/2026, 11h09 Fortaleza:** coleta
-`paired70_rebuilt_train.py` ativa na sessão 96262; primeiro par auditado
-(1/90, 81 verificações de rotas, ambiente PASS). Referência fresca do segundo
-par, gr229 semente 85, gravada; candidatas em execução. Nenhuma geometria
-completa: não interpretar efeito ou gate. O LKH original desapareceu do
-armazenamento temporário; o reconstruído tem outro SHA e é usado em estudo
-separado, com protocolo próprio. Os cinco pares antigos permanecem separados.
-Calibração MDM70 concluída (9/9); cache condicional concluído e gate negativo
-(27 pares, ganho médio adicional 0,037711%). Ver detalhes nas entradas datadas.
-
-**Primeiro próximo passo:** acompanhar esta única fila e auditar novos pares
-somente após fechamento. Não alterar fontes congeladas, misturar os dois
-backends, abrir teste reservado ou iniciar outra otimização. Incorporar os
-estudos completos ao artigo com suas limitações.
+**Estado operacional: ENCERRADO a pedido do usuario em22/10/2026.**
+Automacao removida; nenhum worker do estudo ativo. Dois pares auditados
+PASS/236rotas, terceiro parcial arquivado. Retomada em outra maquina:
+`research_notes/MIGRATION_HANDOFF.md`. Nao iniciar nada neste host.
 
 **Rascunho conferido às17h17:**20páginas, incluindo resultados300s completos,
 tabela de nove geometrias e figura dos dois braços. Ainda faltam abstract,
@@ -1387,3 +1377,39 @@ H10/H6096707, T1110,659320s, ambientePASS. Custos individuais nao sao
 efeito agregado nem gate. Sessao96262 prossegue para terceiro par;
 cinco pares do backend original continuam excluidos desta coleta.
 Proximo: acompanhar e auditar novos pares completos, sem fontes alteradas.
+
+### 22/10/2026 11:49 Fortaleza - prazo comunicado e fila confirmada
+
+Usuario perguntou prazo; comuniquei estimativa de5-6dias acordado para fechar
+a comparacao principal e aproximadamente1dia de consolidacao/auditoria,
+sem prazo garantido para artigo ou contribuicao. Base:30vezes a soma das
+9calibracoes=aproximadamente123,67horas sequenciais; uma semente de calibracao
+nao determina a duracao das outras. Suspensoes/repeticoes aumentam prazo.
+Esta previsao cobre90pares TRAIN, nao eventual avaliacao reservada, nova
+investigacao ou todas as etapas necessarias para artigo pronto.
+
+Conferencia: sessao96262ativa,2pares completos,terceiro a280/82 na referencia
+MDM com checkpoint/log atualizados. Nenhum novo resultado final para auditar.
+Nao dupliquei processo. Proximo: aguardar fechamento e preservar auditoria.
+
+### 22/10/2026 12:00 Fortaleza - referencia do terceiro par pronta
+
+Sessao96262 ativa. a280/82 tem referencia COMPLETED70 custo2001; candidatas
+ainda em coleta, sem pair.json/ambiente final. Auditoria permanece2/90pares
+e236rotas; nenhum efeito final disponivel. Sem repetir auditoria inalterada
+ou iniciar otimizacao paralela. Proximo: auditar terceiro par ao fechar.
+
+## 22/10/2026 12:03 Fortaleza - PARADA E TRANSFERENCIA A PEDIDO DO USUARIO
+
+Usuario solicitou gravar tudo, enviar Git e encerrar para migrar. Removi
+automacao avan-ar-pesquisa-e-artigo-pcctp; enviei SIGTERM ao grupo exclusivo
+3804 (runner/caffeinate), confirmei ausencia de workers correspondentes.
+Arquivei terceiro par incompleto a280/82 em paired70_rebuilt_interrupted/
+20261022T150221Z com hashes/review; exclusao por parada solicitada, sem resultado
+completo. Auditoria apos parada PASS2/90,236rotas. Backup permanente dos4
+binarios verificados em experiments/migration/runtime_macos_arm64. Guia
+research_notes/MIGRATION_HANDOFF.md explica caminhos absolutos, compilacao e
+necessidade de protocolo separado/calibracao nova para outro equipamento.
+Fontes/protocolos anteriores intactos;Utils.h e locks excluidos do commit.
+Proximo: nova IA ler guia/diario e preparar estudo no novo host; nao retomar
+automaticamente nesta maquina. Envio remoto sera verificado pelo Git.

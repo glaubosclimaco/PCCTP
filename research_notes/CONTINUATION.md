@@ -1,5 +1,29 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026 12:03 Fortaleza - PARADA E TRANSFERENCIA A PEDIDO DO USUARIO
+
+Usuario solicitou gravar tudo, enviar Git e encerrar para migrar. Removi
+automacao avan-ar-pesquisa-e-artigo-pcctp; enviei SIGTERM ao grupo exclusivo
+3804 (runner/caffeinate), confirmei ausencia de workers correspondentes.
+Arquivei terceiro par incompleto a280/82 em paired70_rebuilt_interrupted/
+20261022T150221Z com hashes/review; exclusao por parada solicitada, sem resultado
+completo. Auditoria apos parada PASS2/90,236rotas. Backup permanente dos4
+binarios verificados em experiments/migration/runtime_macos_arm64. Guia
+research_notes/MIGRATION_HANDOFF.md explica caminhos absolutos, compilacao e
+necessidade de protocolo separado/calibracao nova para outro equipamento.
+Fontes/protocolos anteriores intactos;Utils.h e locks excluidos do commit.
+Proximo: nova IA ler guia/diario e preparar estudo no novo host; nao retomar
+automaticamente nesta maquina. Envio remoto sera verificado pelo Git.
+
+
+### 22/10/2026 12:00 Fortaleza - referencia do terceiro par pronta
+
+Sessao96262 ativa. a280/82 tem referencia COMPLETED70 custo2001; candidatas
+ainda em coleta, sem pair.json/ambiente final. Auditoria permanece2/90pares
+e236rotas; nenhum efeito final disponivel. Sem repetir auditoria inalterada
+ou iniciar otimizacao paralela. Proximo: auditar terceiro par ao fechar.
+
+
 ## 22/10/2026 11:39 Fortaleza - segundo par reconstruido auditado
 
 Auditor separado PASS2/90pares,236verificacoes de rotas,zero falhas de
