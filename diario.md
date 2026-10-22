@@ -1311,3 +1311,9 @@ provisório. Não lancei outro estudo.
 ### 22/10/2026, 06:00 Fortaleza — quinto par principal auditado
 
 Gil262seed86PAIR_COMPLETED/ambientePASS,T1684,117031s porbraço,referência1999/candidatas1981. Auditor independente/sumário atualizados;5/90pares,nenhuma geometria completa ou efeito primário elegível. Não extrapolar melhoria destepar. Próximo parqueuedkroA200seed85;coleta única sessão29767prossegue. Sem alteraçãofontescongeladas/seleçãovariantes. Próximo:auditar demais pares e registrar falhas se ocorrerem.
+
+### 22/10/2026, 09:00 Fortaleza — sexto par excluído por suspensão, recuperação integral
+
+Runner sessão29767 encerrou por ENVIRONMENT_FAILURE em kroA200seed85:Clamshell56s e Maintenance673s,gap671,812s/clockdiff670,577s. Sem pair.json elegível. ps sem otimizadores. Preservei referência/candidatas/exports/logs/ambiente em experiments/lkh/paired70_interrupted/20261022T120024Z com hashes e revisão;conferi fontes/binários congelados e hashes dos5pair.json válidos. Excluí parinteiro,sem selecionar custos ou reaproveitar referência interrompida. Repetir mesma instância/semente e ordem;manter cinco pares anteriores. Próximo:retomar runner sob mesmo protocolo/lock e acompanhar ambiente;host deve ficar acordado.
+
+Retomada efetivamente lançada via caffeinate-i: sessão39241. Cinco pares anteriores pulados após verificação;sexto deve ser repetido porinteiro. Relógio real desta operação foi posterior ao heartbeat nominal;nenhuma cronologia contínua inferida.

@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 09:00 Fortaleza — sexto par rejeitado;cinco válidos preservados
+
+KroA200seed85 parinteiro excluído porSleep;todos arquivos em
+experiments/lkh/paired70_interrupted/20261022T120024Z comreview/hashes.
+Fontes/binários e5pares válidos intactos. Repetirparinteiro,mesmoprotocolo.
+Semotimizador antesretomada;NÃOduplicar/NÃOalterarfontescongeladas.
+
 ## 22/10/2026, 06:00 Fortaleza — paired70 em5/90
 
 Gil262seed86 concluído/ambientePASS,T1684,117s;auditor/sumário atualizados.
@@ -4122,3 +4129,5 @@ Atualização operacional21/10 09h47: nova fila sessão95614 PID76634; não dupl
 21/10 19h26: fila atual161/sessão5542; anteriores históricas.
 
 21/10 21h57: fila atual6691/sessão98125.
+
+Nova sessão ativa39241 (substitui29767encerrada);não duplicar.
