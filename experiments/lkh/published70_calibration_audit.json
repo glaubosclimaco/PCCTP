@@ -1,12 +1,22 @@
 {
   "status": "PASS",
   "batch_complete": false,
-  "runs": 2,
-  "completed70": 2,
+  "runs": 3,
+  "completed70": 3,
   "censored_or_failed": 0,
-  "routes_checked": 30,
+  "routes_checked": 45,
   "all_references_completed": false,
   "rows": [
+    {
+      "instance": "g_a280_VT56_T168_W56_50",
+      "status": "COMPLETED70",
+      "cost": 2001,
+      "iterations": 70,
+      "mining_calls": 2,
+      "native_process_wall_seconds": 1399.8353460000362,
+      "wrapper_wall_seconds": 1403.585073000053,
+      "result_sha256": "2751f1be208874d4beb6bcad0e190ff813af8aeef4d856bcba6cefa2f89f5666"
+    },
     {
       "instance": "g_gil262_VT51_T158_W53_75",
       "status": "COMPLETED70",

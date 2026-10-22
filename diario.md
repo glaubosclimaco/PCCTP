@@ -1104,3 +1104,7 @@ O checkpoint das 00h27 tem 35 iterações, custo provisório 2007, `completed`
 falso, 1 mineração e 802 s internos. O log das 00h26 tem 32 marcações. A
 última cabeçalho lida foi a iteração 31, ainda em escrita. O custo 2007
 permanece provisório. gil262 e rd400 seguem 2 de 9. Não lancei outra coleta.
+
+### 22/10/2026, 00:48 Fortaleza — terceira referência70 auditada, a280
+
+Auditor independente PASS parcial3runs/45verificações de rotas. a280seed80 COMPLETED70 custo2001,2minerações,processo1399,835346s,wrapper1403,585073s,ambiente válido;SHA2751f1be208874d4beb6bcad0e190ff813af8aeef4d856bcba6cefa2f89f5666.3/9auditadas;all_references_completed=false. gr229já em execução,checkpoint20provisório; não duplicar. Nenhuma comparação com híbrido nem alegação de melhoria. Próximo:demais seis referências válidas e auditoria total. Preservar somente arquivos finaisa280,sem gr229ativo.
