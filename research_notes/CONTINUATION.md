@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 00h28 Fortaleza: a280 no checkpoint 35, custo provisório 2007
+
+Fila 6691 e coletor 6736 vivos. MDM atual 12697 em a280, semente 80, cerca
+de 14 min de CPU. Checkpoint 00h27: iteração 35, custo provisório 2007,
+completed falso, mining 1, seconds 802. Log 00h26: 32 marcações, última
+cabeçalho na iteração 31. rd400 10577 e gil262 2001 seguem 2/9. Sem falha
+nova. Não duplicar.
+
 ## 22/10/2026, 00:17 Fortaleza — rd40070 auditado,2/9
 
 AuditorPASS parcial30rotas:gil262 e rd400 válidos. rd400custo10577,

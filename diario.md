@@ -27,14 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 23h58: gil262, semente 80, custo
-2001, continua a única referência aceita. A tentativa rejeitada às 21h56,
-custo 10577, não entra. A repetição atual segue com a fila 6691 e o MDM
-6746 desde 21h57. Às 23h58 o processo está em execução, com cerca de 120
-minutos de CPU e 122 minutos de parede. O checkpoint das 23h25 permanece
-na iteração 35, custo provisório 10644. O log das 23h44 tem 45 marcações
-e a última cabeçalho lida foi a iteração 44, ainda em escrita. Log e
-checkpoint não são a referência. Não lançar outra calibração. O cache
+Estado operacional confirmado em 22/10, 00h28: gil262, semente 80, custo
+2001, e rd400, semente 80, custo 10577, são as duas referências aceitas.
+rd400 fechou com ambiente PASS e auditoria parcial, 2 de 9. A coleta atual
+é a280, semente 80, MDM 12697, desde cerca de 00h14. Às 00h28 o processo
+está em execução, com cerca de 14 minutos de CPU. O checkpoint das 00h27
+tem 35 iterações, custo provisório 2007, busca incompleta e 1 mineração.
+O log das 00h26 tem 32 marcações e a última cabeçalho lida foi a iteração
+31. O custo 2007 permanece provisório. Não lançar outra calibração. O cache
 continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
@@ -1094,3 +1094,13 @@ de 9. Não há falha ambiental nova. Não reiniciei a coleta.
 ### 22/10/2026, 00:17 Fortaleza — rd40070 válido auditado;2/9referências
 
 Coletor gravou rd400seed80 COMPLETED70 com ambientePASS. Auditor independente executado sobre dois finais:PASS parcial,30verificações rotas/custos,2/9COMPLETED70,semcensura nos registros elegíveis,all_references_completed=false. rd400custo10577,3minerações,processo8229,090270s,wrapper8232,830226s;SHAfinal d001cf5cc2ff45bb15a5dec8afbadeccbd4926b85f6aa4c0b744fa54ddee70af. Custo coincide com tentativas excluídas mas apenas este endpoint/ambiente entra. Não comparar diretamente com300s ou garantir vantagem híbrida. Fila única já inicioua280seed80,checkpoint5provisório. Próximo:auditar demais sete referências e só liberar estudos condicionados após9válidas.
+
+### 22/10/2026, 00h28 Fortaleza: a280 no checkpoint 35, custo provisório 2007
+
+Conferência passiva. A fila 6691 e o coletor 6736 seguem os mesmos desde
+21h57. rd400 já está fechado e aceito. O MDM atual é o 12697, instância
+a280, semente 80, em execução, cerca de 14 minutos de CPU e 98% de uso.
+O checkpoint das 00h27 tem 35 iterações, custo provisório 2007, `completed`
+falso, 1 mineração e 802 s internos. O log das 00h26 tem 32 marcações. A
+última cabeçalho lida foi a iteração 31, ainda em escrita. O custo 2007
+permanece provisório. gil262 e rd400 seguem 2 de 9. Não lancei outra coleta.
