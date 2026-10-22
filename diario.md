@@ -27,13 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 05h58: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 231 minutos. gil262, semente
-86, fechou com ambiente PASS. A referência ficou em 1999 e os dois híbridos
-em 1981. A auditoria em disco ainda lista 4 pares, porque o arquivo não foi
-reescrito depois desse fechamento. A coleta atual é kroA200, semente 85,
-braço de referência. O MDM está em execução há cerca de 15 segundos. O
-checkpoint tem 1 iteração, custo provisório 23885, e o log ainda está vazio.
+Estado operacional confirmado em 22/10, 09h25: cinco pares válidos seguem
+aceitos e a auditoria parcial está PASS, com 478 verificações. O par de
+kroA200, semente 85, foi excluído por suspensão e repetido por inteiro. A
+repetição está no ar, processo 1879, caffeinate 1888 e MDM 1912, cerca de
+25 minutos de parede e 4 minutos de CPU. O checkpoint tem 20 iterações,
+custo provisório 23499. A máquina voltou a dormir às 09h02 e às 09h17, e
+acordou às 09h22. Essa repetição já atravessou suspensão, então o custo
+23499 não entra como referência. O computador precisa permanecer acordado.
 Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
@@ -1317,3 +1318,17 @@ Gil262seed86PAIR_COMPLETED/ambientePASS,T1684,117031s porbraço,referência1999/
 Runner sessão29767 encerrou por ENVIRONMENT_FAILURE em kroA200seed85:Clamshell56s e Maintenance673s,gap671,812s/clockdiff670,577s. Sem pair.json elegível. ps sem otimizadores. Preservei referência/candidatas/exports/logs/ambiente em experiments/lkh/paired70_interrupted/20261022T120024Z com hashes e revisão;conferi fontes/binários congelados e hashes dos5pair.json válidos. Excluí parinteiro,sem selecionar custos ou reaproveitar referência interrompida. Repetir mesma instância/semente e ordem;manter cinco pares anteriores. Próximo:retomar runner sob mesmo protocolo/lock e acompanhar ambiente;host deve ficar acordado.
 
 Retomada efetivamente lançada via caffeinate-i: sessão39241. Cinco pares anteriores pulados após verificação;sexto deve ser repetido porinteiro. Relógio real desta operação foi posterior ao heartbeat nominal;nenhuma cronologia contínua inferida.
+
+### 22/10/2026, 09h25 Fortaleza: a repetição de kroA200 semente 85 dormiu de novo
+
+Conferência passiva. O runner atual é o 1879, com caffeinate 1888 e MDM
+1912, instância kroA200, semente 85, braço de referência. O processo tem
+cerca de 25 minutos de parede e 4 minutos de CPU, e está em execução com
+98% de uso agora. O checkpoint tem 20 iterações, custo provisório 23499,
+`completed` falso, 0 minerações e 1410 s internos. O log tem 17 marcações
+e a última cabeçalho lida foi a iteração 16. O registro de energia mostra
+suspensão de manutenção às 09h02, por 848 s, e outra às 09h17, por 319 s,
+com despertar às 09h22. Cinco pares válidos permanecem. A auditoria parcial
+está PASS, com 5 pares e 478 verificações. O custo 23499 permanece
+provisório e esta repetição já atravessou suspensão. Não interrompi o
+processo e não lancei outro estudo.

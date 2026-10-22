@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 09h25 Fortaleza: repetição de kroA200 semente 85 atravessou nova suspensão
+
+Runner 1879, caffeinate 1888 e MDM 1912 vivos. Cerca de 25 min de parede e
+4 min de CPU. Checkpoint: iteração 20, custo provisório 23499, completed
+falso, seconds 1410. Log: 17 marcações, última cabeçalho na iteração 16.
+Suspensão de manutenção às 09h02 (848 s) e às 09h17 (319 s); despertar às
+09h22. Cinco pares válidos. Auditoria 5/90, 478 rotas. Custo 23499 não entra.
+Não interromper nem duplicar. O host precisa permanecer acordado.
+
 ## 22/10/2026, 09:00 Fortaleza — sexto par rejeitado;cinco válidos preservados
 
 KroA200seed85 parinteiro excluído porSleep;todos arquivos em
