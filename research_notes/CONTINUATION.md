@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 05h58 Fortaleza: gil262 semente 86, hybrid60 em 1981, hybrid10 no LKH
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 230 min. Auditoria parcial
+segue 4/90, 386 rotas. Referência 1999. hybrid60 gravado em 1981, a partir
+do MDM 2035. MDM do hybrid10 devolveu 2158 em cerca de 11 s. LKH desse
+braço acabou de iniciar. Sem pair.json e sem ambiente. Não duplicar.
+
 ## 22/10/2026, 05h28 Fortaleza: gil262 semente 86, referência 1999, hybrid60 no LKH
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 200 min. Auditoria parcial

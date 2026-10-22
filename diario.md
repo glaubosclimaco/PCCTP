@@ -27,13 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 05h28: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 200 minutos. Quatro pares estão
+Estado operacional confirmado em 22/10, 05h58: o paired70 segue com o
+processo 52200 e o caffeinate 52208, cerca de 230 minutos. Quatro pares estão
 fechados, com auditoria parcial PASS e 386 verificações. Nenhuma geometria
-está completa. Em gil262, semente 86, a referência foi gravada como
-COMPLETED70, custo 1999, cerca de 1684 s de processo. A fase MDM do hybrid60
-devolveu 2035 em cerca de 60 s, e o LKH desse braço acabou de iniciar. Não
-há hybrid10 nem arquivo de par. Não lançar outro estudo.
+está completa. Em gil262, semente 86, a referência está em 1999 e o hybrid60
+foi gravado com custo 1981. A fase MDM do hybrid10 devolveu 2158 em cerca de
+11 s, e o LKH desse braço acabou de iniciar. O par continua aberto. Não
+lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1282,3 +1282,14 @@ falso. A fase MDM do hybrid60 devolveu custo 2035, saída 0, em cerca de 60 s.
 Um LKH filho desse braço acabou de iniciar. Não há arquivo final do hybrid60,
 nem hybrid10, nem par, nem ambiente. O custo 2035 é a fase MDM, antes do
 reparo. Não lancei outro estudo.
+
+### 22/10/2026, 05h58 Fortaleza: hybrid60 de gil262 gravado em 1981, hybrid10 no LKH
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+cerca de 230 minutos. A auditoria parcial continua em 4 de 90 pares e 386
+verificações. Em gil262, semente 86, o hybrid60 foi gravado com custo 1981.
+A fase MDM desse braço havia devolvido 2035. A referência permanece em 1999.
+O orçamento do braço é 1684,117 s. A fase MDM do hybrid10 devolveu custo
+2158, saída 0, em cerca de 11 s. Um LKH filho desse braço acabou de iniciar.
+Não há arquivo final do hybrid10, nem par, nem ambiente. O custo 2158 é a
+fase MDM, antes do reparo. Não lancei outro estudo.
