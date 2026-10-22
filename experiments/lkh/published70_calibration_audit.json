@@ -1,10 +1,10 @@
 {
   "status": "PASS",
   "batch_complete": false,
-  "runs": 5,
-  "completed70": 5,
+  "runs": 6,
+  "completed70": 6,
   "censored_or_failed": 0,
-  "routes_checked": 75,
+  "routes_checked": 90,
   "all_references_completed": false,
   "rows": [
     {
@@ -46,6 +46,16 @@
       "native_process_wall_seconds": 322.00095299992245,
       "wrapper_wall_seconds": 325.68790999997873,
       "result_sha256": "1dc4ea775335025c737e73092819641d7a50fcf51bbb2c188d6e9c73f69c6d9e"
+    },
+    {
+      "instance": "g_pr226_VT44_T136_W46_50",
+      "status": "COMPLETED70",
+      "cost": 67852,
+      "iterations": 70,
+      "mining_calls": 4,
+      "native_process_wall_seconds": 804.0777229999658,
+      "wrapper_wall_seconds": 808.4061659999425,
+      "result_sha256": "f2ab9009a9291906878cc3d95601347b17c5a2715283c2a11664863db9d87ddc"
     },
     {
       "instance": "g_rd400_VT80_T240_W80_25",

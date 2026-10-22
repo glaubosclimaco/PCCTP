@@ -1125,3 +1125,7 @@ outra coleta.
 ### 22/10/2026, 01:07 Fortaleza — kroA20070 auditado,5/9
 
 Auditor independente PASS parcial5runs/75verificações rotas. kroA200seed80 COMPLETED70,custo23495,5minerações,processo322,000953s,wrapper325,687910s,ambiente válido;SHA1dc4ea775335025c737e73092819641d7a50fcf51bbb2c188d6e9c73f69c6d9e.5/9auditadas,all_references_completed=false. pr226já em execução,checkpoint20provisório. Nenhuma comparação híbrida. Preservar só arquivos finais kroA200,sem pr226ativo. Próximo:quatro referências restantes e auditoria completa.
+
+### 22/10/2026, 01:18 Fortaleza — pr22670 auditado,6/9
+
+Auditor independente PASS parcial6runs/90verificações rotas. pr226seed80 COMPLETED70,custo67852,4minerações,processo804,077723s,wrapper808,406166s,ambiente válido;SHAf2ab9009a9291906878cc3d95601347b17c5a2715283c2a11664863db9d87ddc.6/9auditadas,all_references_completed=false. si175já em execução checkpoint20provisório. Preservar só arquivos finaispr226,sem si175ativo. Próximo:três referências restantes e auditoria completa;sem inferir ganho híbrido.
