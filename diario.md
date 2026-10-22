@@ -1413,3 +1413,12 @@ necessidade de protocolo separado/calibracao nova para outro equipamento.
 Fontes/protocolos anteriores intactos;Utils.h e locks excluidos do commit.
 Proximo: nova IA ler guia/diario e preparar estudo no novo host; nao retomar
 automaticamente nesta maquina. Envio remoto sera verificado pelo Git.
+
+### Entrega local e bloqueio do push
+
+Commit local de transferencia criado. gh confirmou conta glaubosclimaco,
+repositorio glaubosclimaco/PCCTP publico, permissaoADMIN. Revisao automatica
+bloqueou push por falta de autorizacao explicita para divulgar publicamente
+pesquisa nao publicada (fontes/binarios/resultados). Nada enviado neste passo.
+Pendente somente confirmacao do usuario para publicacao nesse remoto publico;
+processos e automacao continuam encerrados. Nao tentar contornar bloqueio.
