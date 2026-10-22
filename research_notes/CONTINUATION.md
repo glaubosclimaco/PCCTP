@@ -1,5 +1,11 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 01:27 Fortaleza — si175/ts225 auditados,8/9
+
+AuditorPASS parcial120rotas,8COMPLETED70. si175custo7046/480,830s;
+ts225custo109147/320,898s de processo;ambientes válidos.
+Falta tsp225. Fila6691 única; não duplicar. Cache/paired70 só após9e auditoria total.
+
 ## 22/10/2026, 01:18 Fortaleza — pr226 auditado,6/9
 
 AuditorPASS parcial90rotas,6COMPLETED70. pr226custo67852,

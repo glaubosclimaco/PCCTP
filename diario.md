@@ -1129,3 +1129,7 @@ Auditor independente PASS parcial5runs/75verificações rotas. kroA200seed80 COM
 ### 22/10/2026, 01:18 Fortaleza — pr22670 auditado,6/9
 
 Auditor independente PASS parcial6runs/90verificações rotas. pr226seed80 COMPLETED70,custo67852,4minerações,processo804,077723s,wrapper808,406166s,ambiente válido;SHAf2ab9009a9291906878cc3d95601347b17c5a2715283c2a11664863db9d87ddc.6/9auditadas,all_references_completed=false. si175já em execução checkpoint20provisório. Preservar só arquivos finaispr226,sem si175ativo. Próximo:três referências restantes e auditoria completa;sem inferir ganho híbrido.
+
+### 22/10/2026, 01:27 Fortaleza — si175 e ts225 auditados,8/9
+
+Auditor independente PASS parcial8runs/120verificações rotas. si175seed80custo7046,70iterações/3minerações,processo480,829558s,wrapper484,657425s,SHAefb7d3060ffd6a6d93282c4eec62d9bd7287e7f8e883efccc4d7341c267ff401. ts225seed80custo109147,70iterações/3minerações,processo320,897544s,wrapper325,986864s,SHAd119d99bc144b2dbbdd3d85fbe5f78635d02c687b1b6331935a1db172464cc61. Ambos ambiente válido.8/9auditadas,all_references_completed=false;falta tsp225. Preservar só arquivos finais destes dois,sem tsp225ativo. Próximo:auditoria completa após último endpoint;então cumprir pré-requisitos do estudo condicionado,sem alegar vantagem híbrida nesta calibração.

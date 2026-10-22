@@ -1,10 +1,10 @@
 {
   "status": "PASS",
   "batch_complete": false,
-  "runs": 6,
-  "completed70": 6,
+  "runs": 8,
+  "completed70": 8,
   "censored_or_failed": 0,
-  "routes_checked": 90,
+  "routes_checked": 120,
   "all_references_completed": false,
   "rows": [
     {
@@ -66,6 +66,26 @@
       "native_process_wall_seconds": 8229.090270000044,
       "wrapper_wall_seconds": 8232.83022600005,
       "result_sha256": "d001cf5cc2ff45bb15a5dec8afbadeccbd4926b85f6aa4c0b744fa54ddee70af"
+    },
+    {
+      "instance": "g_si175_VT35_T105_W35_50",
+      "status": "COMPLETED70",
+      "cost": 7046,
+      "iterations": 70,
+      "mining_calls": 3,
+      "native_process_wall_seconds": 480.82955800008494,
+      "wrapper_wall_seconds": 484.65742500009947,
+      "result_sha256": "efb7d3060ffd6a6d93282c4eec62d9bd7287e7f8e883efccc4d7341c267ff401"
+    },
+    {
+      "instance": "g_ts225_VT45_T135_W45_50",
+      "status": "COMPLETED70",
+      "cost": 109147,
+      "iterations": 70,
+      "mining_calls": 3,
+      "native_process_wall_seconds": 320.89754399994854,
+      "wrapper_wall_seconds": 325.9868639999768,
+      "result_sha256": "d119d99bc144b2dbbdd3d85fbe5f78635d02c687b1b6331935a1db172464cc61"
     }
   ],
   "scope": "one-seed TRAIN reference calibration, not final ten-seed comparison"
