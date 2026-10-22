@@ -27,15 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 02h28: a calibração das nove
-referências está aceita. O estudo cached30 fechou com auditoria PASS, 27
-pares, ganho médio 0,037711%, 1 geometria favorável, 0 perdas e 8 empates.
-O gate falhou. O estudo paired70 está em execução, processo 52200 e
-caffeinate 52208, cerca de 21 minutos. O primeiro par, kroA200 semente 89,
-está completo com ambiente PASS. A auditoria parcial tem 1 de 90 pares e
-80 verificações. O MDM atual é o 66863, gr229 semente 85, braço de
-referência, cerca de 2 minutos de CPU. O checkpoint tem 5 iterações, custo
-provisório 100177, busca incompleta. Não lançar outro estudo.
+Estado operacional confirmado em 22/10, 02h58: a calibração das nove
+referências está aceita e o cached30 permanece com gate negativo. O estudo
+paired70 segue com o processo 52200 e o caffeinate 52208, cerca de 50
+minutos. Só kroA200, semente 89, está fechado: 1 de 90 pares, auditoria
+parcial de 80 verificações. Em gr229, semente 85, o arquivo de referência
+foi gravado como COMPLETED70, custo 97409, 70 iterações. O par continua
+aberto. A fase MDM do hybrid60 devolveu custo 100177 e o LKH desse braço
+acabou de iniciar. Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1186,3 +1185,14 @@ gr229, semente 85, braço de referência, em execução, cerca de 2 minutos de
 CPU e 99% de uso. O checkpoint tem 5 iterações, custo provisório 100177,
 `completed` falso, 0 minerações e 56 s internos. Esse custo permanece
 provisório. Não lancei outro estudo.
+
+### 22/10/2026, 02h58 Fortaleza: referência de gr229 gravada, hybrid60 no LKH
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+agora com cerca de 50 minutos. kroA200, semente 89, continua o único par
+fechado. Em gr229, semente 85, o arquivo de referência está como COMPLETED70,
+custo 97409, 70 iterações, 1 mineração e cerca de 1080 s de processo. O
+checkpoint nativo dessa referência permanece com `completed` falso. Não há
+arquivo de par nem de ambiente para gr229. A fase MDM do hybrid60 devolveu
+custo 100177 em cerca de 60 s, e um LKH filho desse braço acabou de iniciar.
+O custo 97409 ainda não é comparação. Não lancei outro estudo.

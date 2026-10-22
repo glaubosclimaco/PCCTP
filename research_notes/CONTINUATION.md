@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 02h58 Fortaleza: gr229 semente 85, referência gravada, hybrid60 no LKH
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 50 min. 1/90 par fechado:
+kroA200 semente 89. gr229 semente 85: reference.json COMPLETED70, custo
+97409, 70 iterações, parede cerca de 1080 s. Checkpoint nativo completed
+falso. Sem pair.json e sem ambiente. MDM do hybrid60 devolveu 100177 em
+cerca de 60 s. LKH desse braço acabou de iniciar. Não duplicar.
+
 ## 22/10/2026, 02h28 Fortaleza: gr229 semente 85, referência no checkpoint 5
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 21 min. 1/90 par completo:
