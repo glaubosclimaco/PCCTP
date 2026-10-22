@@ -27,15 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 04h58: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 170 minutos. Quatro pares estão
+Estado operacional confirmado em 22/10, 05h28: o paired70 segue com o
+processo 52200 e o caffeinate 52208, cerca de 200 minutos. Quatro pares estão
 fechados, com auditoria parcial PASS e 386 verificações. Nenhuma geometria
-está completa. kroA200, semente 84, fechou com referência, hybrid10 e hybrid60
-em 23495, ambiente PASS. A coleta atual é gil262, semente 86, braço de
-referência. O MDM 42745 está em execução, cerca de 24 minutos de CPU. O
-checkpoint tem 35 iterações, custo provisório 1999. O log tem 47 marcações e
-a última cabeçalho lida foi a iteração 46. Não há arquivo de referência. Não
-lançar outro estudo.
+está completa. Em gil262, semente 86, a referência foi gravada como
+COMPLETED70, custo 1999, cerca de 1684 s de processo. A fase MDM do hybrid60
+devolveu 2035 em cerca de 60 s, e o LKH desse braço acabou de iniciar. Não
+há hybrid10 nem arquivo de par. Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1272,3 +1270,15 @@ iterações, custo provisório 1999, `completed` falso, 1 mineração e 1028 s
 internos. O log tem 47 marcações. A última cabeçalho lida foi a iteração 46.
 Não há arquivo de referência. O custo 1999 permanece provisório. Não lancei
 outro estudo.
+
+### 22/10/2026, 05h28 Fortaleza: referência de gil262 gravada, hybrid60 no LKH
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+cerca de 200 minutos. A auditoria parcial continua em 4 de 90 pares e 386
+verificações. Em gil262, semente 86, o arquivo de referência está como
+COMPLETED70, custo 1999, 70 iterações, 4 minerações e cerca de 1684 s de
+processo. O checkpoint nativo dessa referência permanece com `completed`
+falso. A fase MDM do hybrid60 devolveu custo 2035, saída 0, em cerca de 60 s.
+Um LKH filho desse braço acabou de iniciar. Não há arquivo final do hybrid60,
+nem hybrid10, nem par, nem ambiente. O custo 2035 é a fase MDM, antes do
+reparo. Não lancei outro estudo.

@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 05h28 Fortaleza: gil262 semente 86, referência 1999, hybrid60 no LKH
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 200 min. Auditoria parcial
+segue 4/90, 386 rotas. reference.json COMPLETED70 custo 1999, 70 iterações,
+parede cerca de 1684 s. Checkpoint nativo completed falso. MDM do hybrid60
+devolveu 2035 em cerca de 60 s. LKH desse braço acabou de iniciar. Sem
+hybrid10, sem pair.json e sem ambiente. Não duplicar.
+
 ## 22/10/2026, 04h58 Fortaleza: 4/90 pares, gil262 semente 86 no checkpoint 35
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 170 min. Auditoria parcial
