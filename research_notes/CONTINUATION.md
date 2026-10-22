@@ -1,5 +1,19 @@
 # Estado operacional para retomada autônoma
 
+## 21/10/2026, 21h58 Fortaleza: nova repetição de rd400 no começo
+
+A tentativa anterior foi excluída sem sleep: checkpoint 70, custo 10577,
+completed falso, lacuna 10,334 s, arquivo `20261022T005659Z`. gil262
+continua 1/9, custo 2001. Coleta atual: fila 6691, MDM 6746, cerca de
+1 min, log vazio. Não duplicar. Não afrouxar o limite de 5 s.
+
+## 21/10/2026, 21:56 Fortaleza — rd400 rejeitado, gap10,33s semSleep
+
+Arquivo experiments/lkh/published70_calibration_interrupted/20261022T005659Z.
+Gil262 válido1/9; fontes/binários íntegros. Repetir só rd400seed80/protocolo.
+Falhas recorrentes do monitor semSleep exigem diagnóstico separado, sem
+retroclassificar tentativas ou alterar limiares ativos. Nenhum processo ativo antes da retomada.
+
 ## 21/10/2026, 21h28 Fortaleza: log de rd400 na iteração 44
 
 Fila 161 e MDM 204 vivos desde 19h26. Cerca de 119 min de CPU e 122 min de
@@ -3874,3 +3888,5 @@ Atualização operacional21/10 09h47: nova fila sessão95614 PID76634; não dupl
 21/10 13h39: fila atual90912/sessão68012; anteriores históricas.
 
 21/10 19h26: fila atual161/sessão5542; anteriores históricas.
+
+21/10 21h57: fila atual6691/sessão98125.
