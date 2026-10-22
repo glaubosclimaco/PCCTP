@@ -27,14 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 04h28: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 142 minutos. Três pares estão
-fechados, com auditoria parcial PASS e 314 verificações. Nenhuma geometria
-está completa. a280, semente 82, fechou com referência 2001, hybrid10 em 2002
-e hybrid60 em 2001, ambiente PASS. A coleta atual é kroA200, semente 84. A
-referência e o hybrid10 foram gravados com custo 23495. A fase MDM do
-hybrid60 devolveu 23573 em cerca de 60 s, e o LKH desse braço acabou de
-iniciar. O par continua aberto. Não lançar outro estudo.
+Estado operacional confirmado em 22/10, 04h58: o paired70 segue com o
+processo 52200 e o caffeinate 52208, cerca de 170 minutos. Quatro pares estão
+fechados, com auditoria parcial PASS e 386 verificações. Nenhuma geometria
+está completa. kroA200, semente 84, fechou com referência, hybrid10 e hybrid60
+em 23495, ambiente PASS. A coleta atual é gil262, semente 86, braço de
+referência. O MDM 42745 está em execução, cerca de 24 minutos de CPU. O
+checkpoint tem 35 iterações, custo provisório 1999. O log tem 47 marcações e
+a última cabeçalho lida foi a iteração 46. Não há arquivo de referência. Não
+lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1253,3 +1254,21 @@ Na mesma conferência, o arquivo nativo do hybrid60 de kroA200, semente 84,
 passou a existir. O custo devolvido foi 23573, com saída 0 e cerca de 60 s
 de processo. Um LKH filho acabou de iniciar. Ainda não há arquivo de par.
 O custo 23573 é a fase MDM, antes do reparo. Não lancei outro estudo.
+
+### 22/10/2026, 04:39 Fortaleza — quarto par principal concluído
+
+KroA200seed84PAIR_COMPLETED com ambientePASS,T354,434734s porbraço. Auditor independente/sumário parciais atualizados sobre4pares;nenhuma geometria completa ou efeito primário elegível. Fase MDM de uma candidata não é endpoint final. Sessão29767prossegue sem outro otimizador/fontesalteradas. Próximo:novos pares e auditorias,semseleção de sementes/variantes.
+
+### 22/10/2026, 04h58 Fortaleza: gil262 semente 86 no checkpoint 35, custo provisório 1999
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+cerca de 170 minutos. kroA200, semente 84, está fechado. Referência, hybrid10
+e hybrid60 ficaram em 23495. Ambiente PASS, lacuna de monitor 1,114 s,
+diferença de relógio 0,143 s, sem suspensão. O orçamento do par foi 354,435 s.
+A auditoria parcial está PASS, 4 de 90 pares, 386 verificações, 0 geometrias
+completas. O MDM atual é o 42745, gil262, semente 86, braço de referência,
+em execução, cerca de 24 minutos de CPU e 100% de uso. O checkpoint tem 35
+iterações, custo provisório 1999, `completed` falso, 1 mineração e 1028 s
+internos. O log tem 47 marcações. A última cabeçalho lida foi a iteração 46.
+Não há arquivo de referência. O custo 1999 permanece provisório. Não lancei
+outro estudo.

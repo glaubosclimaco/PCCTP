@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 04h58 Fortaleza: 4/90 pares, gil262 semente 86 no checkpoint 35
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 170 min. Auditoria parcial
+PASS, 386 rotas, 0 geometrias completas. kroA200 semente 84 fechado:
+referência, hybrid10 e hybrid60 em 23495, ambiente PASS. MDM 42745 em gil262
+semente 86, referência, cerca de 24 min de CPU. Checkpoint: iteração 35,
+custo provisório 1999, completed falso, mining 1, seconds 1028. Log: 47
+marcações, última cabeçalho na iteração 46. Sem reference.json. Não duplicar.
+
 ## 22/10/2026, 04h28 Fortaleza: kroA200 semente 84, MDM do hybrid60 devolveu 23573
 
 Runner 52200 vivo. Referência e hybrid10 em 23495. MDM do hybrid60 devolveu
