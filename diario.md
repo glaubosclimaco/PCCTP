@@ -28,12 +28,13 @@ pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
 Estado operacional confirmado em 22/10, 05h58: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 230 minutos. Quatro pares estão
-fechados, com auditoria parcial PASS e 386 verificações. Nenhuma geometria
-está completa. Em gil262, semente 86, a referência está em 1999 e o hybrid60
-foi gravado com custo 1981. A fase MDM do hybrid10 devolveu 2158 em cerca de
-11 s, e o LKH desse braço acabou de iniciar. O par continua aberto. Não
-lançar outro estudo.
+processo 52200 e o caffeinate 52208, cerca de 231 minutos. gil262, semente
+86, fechou com ambiente PASS. A referência ficou em 1999 e os dois híbridos
+em 1981. A auditoria em disco ainda lista 4 pares, porque o arquivo não foi
+reescrito depois desse fechamento. A coleta atual é kroA200, semente 85,
+braço de referência. O MDM está em execução há cerca de 15 segundos. O
+checkpoint tem 1 iteração, custo provisório 23885, e o log ainda está vazio.
+Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1293,3 +1294,20 @@ O orçamento do braço é 1684,117 s. A fase MDM do hybrid10 devolveu custo
 2158, saída 0, em cerca de 11 s. Um LKH filho desse braço acabou de iniciar.
 Não há arquivo final do hybrid10, nem par, nem ambiente. O custo 2158 é a
 fase MDM, antes do reparo. Não lancei outro estudo.
+
+### 22/10/2026, 05h58 Fortaleza: gil262 semente 86 fechou e kroA200 semente 85 começou
+
+Na mesma conferência, o par de gil262, semente 86, foi gravado como
+PAIR_COMPLETED. Ambiente PASS, lacuna de monitor 1,402 s, diferença de
+relógio 0,392 s, sem suspensão. A referência ficou em 1999. hybrid60 e
+hybrid10 ficaram em 1981, ambos viáveis. O orçamento do par foi 1684,117 s.
+O arquivo de auditoria parcial em disco continua com 4 pares e 386
+verificações. O MDM atual passou para kroA200, semente 85, braço de
+referência, processo 90714, cerca de 15 segundos de CPU e 98% de uso. O
+checkpoint tem 1 iteração, custo provisório 23885, `completed` falso, 0
+minerações e 14 s internos. O log ainda está vazio. O custo 23885 permanece
+provisório. Não lancei outro estudo.
+
+### 22/10/2026, 06:00 Fortaleza — quinto par principal auditado
+
+Gil262seed86PAIR_COMPLETED/ambientePASS,T1684,117031s porbraço,referência1999/candidatas1981. Auditor independente/sumário atualizados;5/90pares,nenhuma geometria completa ou efeito primário elegível. Não extrapolar melhoria destepar. Próximo parqueuedkroA200seed85;coleta única sessão29767prossegue. Sem alteraçãofontescongeladas/seleçãovariantes. Próximo:auditar demais pares e registrar falhas se ocorrerem.

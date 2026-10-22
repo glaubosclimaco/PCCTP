@@ -1,5 +1,27 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 06:00 Fortaleza — paired70 em5/90
+
+Gil262seed86 concluído/ambientePASS,T1684,117s;auditor/sumário atualizados.
+Zero geometrias completas/sem gate. Sessão29767única em kroA200seed85.
+NÃOduplicar/NÃOalterarfontescongeladas.
+
+## 22/10/2026, 05h58 Fortaleza: gil262 semente 86 fechado, kroA200 semente 85 no início
+
+Par gil262 semente 86 PAIR_COMPLETED, ambiente PASS. Referência 1999,
+hybrid60 e hybrid10 em 1981, orçamento 1684,117 s. Auditoria em disco ainda
+4/90, 386 rotas. MDM 90714 em kroA200 semente 85, referência, cerca de 15 s
+de CPU. Checkpoint: iteração 1, custo provisório 23885. Log vazio com o
+processo em execução. Não duplicar.
+
+## 22/10/2026, 05h58 Fortaleza: gil262 semente 86 fechado, kroA200 semente 85 no início
+
+Par gil262 semente 86 PAIR_COMPLETED, ambiente PASS. Referência 1999,
+hybrid60 e hybrid10 em 1981, orçamento 1684,117 s. Auditoria em disco ainda
+4/90, 386 rotas. MDM 90714 em kroA200 semente 85, referência, cerca de 15 s
+de CPU. Checkpoint: iteração 1, custo provisório 23885. Log vazio com o
+processo em execução. Não duplicar.
+
 ## 22/10/2026, 05h58 Fortaleza: gil262 semente 86, hybrid60 em 1981, hybrid10 no LKH
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 230 min. Auditoria parcial
