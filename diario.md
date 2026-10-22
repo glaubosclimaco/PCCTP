@@ -1108,3 +1108,7 @@ permanece provisório. gil262 e rd400 seguem 2 de 9. Não lancei outra coleta.
 ### 22/10/2026, 00:48 Fortaleza — terceira referência70 auditada, a280
 
 Auditor independente PASS parcial3runs/45verificações de rotas. a280seed80 COMPLETED70 custo2001,2minerações,processo1399,835346s,wrapper1403,585073s,ambiente válido;SHA2751f1be208874d4beb6bcad0e190ff813af8aeef4d856bcba6cefa2f89f5666.3/9auditadas;all_references_completed=false. gr229já em execução,checkpoint20provisório; não duplicar. Nenhuma comparação com híbrido nem alegação de melhoria. Próximo:demais seis referências válidas e auditoria total. Preservar somente arquivos finaisa280,sem gr229ativo.
+
+### 22/10/2026, 00:57 Fortaleza — gr22970 auditado,4/9
+
+Auditor independente PASS parcial4runs/60verificações rotas. gr229seed80 COMPLETED70,custo96884,3minerações,processo1020,129882s,wrapper1024,087607s,ambiente válido;SHA23d5f18d5adb1b46000b772aad9d2a0e00491b859bb9eb8d58edc00e78a6461a.4/9auditadas,all_references_completed=false. kroA200já em execução checkpoint20provisório. Preservar arquivos finaisgr229,sem fontes/conteúdo ativo de kroA200. Próximo:cinco referências restantes e auditoria completa; nenhuma alegação de ganho híbrido.
