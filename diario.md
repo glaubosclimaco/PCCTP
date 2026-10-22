@@ -27,13 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 22h28: gil262, semente 80, custo
+Estado operacional confirmado em 21/10, 22h58: gil262, semente 80, custo
 2001, continua a única referência aceita. A tentativa rejeitada às 21h56,
 custo 10577, não entra. A repetição atual segue com a fila 6691 e o MDM
-6746 desde 21h57. Às 22h28 o processo está em execução, com cerca de 31
-minutos de CPU e 31 minutos de parede. O checkpoint das 22h24 tem 10
-iterações, custo provisório 10691 e busca incompleta. O log continua vazio.
-Não lançar outra calibração. O cache continua parado.
+6746 desde 21h57. Às 22h58 o processo está em execução, com cerca de 60
+minutos de CPU e 61 minutos de parede. O checkpoint das 22h48 tem 20
+iterações, custo provisório 10691 e busca incompleta. O log das 22h39 tem
+18 marcações. Nenhum dos dois é referência. Não lançar outra calibração.
+O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1059,3 +1060,12 @@ agora. O checkpoint das 22h24 tem 10 iterações, custo provisório 10691,
 A nota das 22h06 ainda descrevia o checkpoint 1. Não há falha ambiental
 nova. O custo 10577 continua de fora. gil262 segue 1 de 9. Não reiniciei
 a coleta. Próximo passo: esperar o endpoint desta repetição.
+
+### 21/10/2026, 22h58 Fortaleza: repetição de rd400 no checkpoint 20
+
+Conferência passiva. Os processos continuam os das 21h57. O MDM 6746 está
+em execução, cerca de 60 minutos de CPU, 61 minutos de parede e 98% de uso
+agora. O checkpoint das 22h48 tem 20 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 3078 s internos. O log das 22h39 tem 18
+marcações. O custo provisório não mudou em relação ao checkpoint 10.
+gil262 segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
