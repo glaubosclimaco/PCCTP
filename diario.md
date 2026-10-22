@@ -1121,3 +1121,7 @@ custo provisório 23495, `completed` falso, 0 minerações e 149 s internos.
 O log tem 17 marcações. A última cabeçalho lida foi a iteração 16. O custo
 23495 permanece provisório. As quatro referências seguem 4 de 9. Não lancei
 outra coleta.
+
+### 22/10/2026, 01:07 Fortaleza — kroA20070 auditado,5/9
+
+Auditor independente PASS parcial5runs/75verificações rotas. kroA200seed80 COMPLETED70,custo23495,5minerações,processo322,000953s,wrapper325,687910s,ambiente válido;SHA1dc4ea775335025c737e73092819641d7a50fcf51bbb2c188d6e9c73f69c6d9e.5/9auditadas,all_references_completed=false. pr226já em execução,checkpoint20provisório. Nenhuma comparação híbrida. Preservar só arquivos finais kroA200,sem pr226ativo. Próximo:quatro referências restantes e auditoria completa.

@@ -1,5 +1,11 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 01:07 Fortaleza — kroA200 auditado,5/9
+
+AuditorPASS parcial75rotas,5COMPLETED70. kroA200custo23495,
+processo322,001s,wrapper325,688s,ambiente válido,70iterações/5minerações.
+Fila6691 já em pr226seed80; não duplicar. Cache/paired70 bloqueados até9.
+
 ## 22/10/2026, 00h58 Fortaleza: kroA200 no checkpoint 20, custo provisório 23495
 
 Fila 6691 e coletor 6736 vivos. MDM atual 14745 em kroA200, semente 80,
