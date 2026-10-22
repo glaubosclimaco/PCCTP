@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 01h58 Fortaleza: cached30 em 19 de 27 pares
+
+Calibração 9/9 aceita, tsp225 custo 2447, auditoria 135 rotas. Runner 17598
+e caffeinate 17606 vivos, cerca de 21 min. 19 pares PAIR_COMPLETED, 19
+ambientes PASS, maior lacuna 1,144 s. Em curso: a280 semente 43, braço
+cached. Sem completion e sem auditoria final. Não duplicar. Não iniciar
+paired70. Fontes congeladas. O parcial não passa o gate.
+
 ## 22/10/2026, 01:38 Fortaleza — calibração9/9PASS;cache30 ativo
 
 Todas9referências70completas/auditadas,135verificações rotas. tsp2252447.

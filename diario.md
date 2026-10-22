@@ -27,14 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 01h28: oito referências aceitas,
-semente 80, auditoria parcial PASS, 120 verificações. gil262 2001, rd400
-10577, a280 2001, gr229 96884, kroA200 23495, pr226 67852, si175 7046 e
-ts225 109147. A coleta atual é tsp225, semente 80, MDM 16832, cerca de 1
-minuto de CPU. O checkpoint das 01h28 tem 20 iterações, custo provisório
-2457, busca incompleta e 0 minerações. O log tem 18 marcações e a última
-cabeçalho lida foi a iteração 17. O custo 2457 permanece provisório. Não
-lançar outra calibração. O cache continua parado até as nove referências.
+Estado operacional confirmado em 22/10, 01h58: as nove referências da
+calibração, semente 80, estão aceitas. Auditoria completa PASS, 135
+verificações. tsp225 fechou em 2447. O estudo condicional cached30 está em
+execução, processo 17598 e caffeinate 17606, cerca de 21 minutos. Há 19
+pares gravados de 27, todos com ambiente PASS. O par em curso é a280,
+semente 43, braço cached. Não há completion nem auditoria final. Não lançar
+outro estudo nem o paired70. As fontes seguem congeladas.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1150,3 +1149,18 @@ referência para fechar as nove. Não lancei outra coleta.
 Calibração concluída com auditorPASS completo9COMPLETED70/135verificações rotas,semcensuras elegíveis;all_references_completed=true. Último tsp225seed80custo2447,4minerações,processo133,671197s,wrapper137,343121s,SHA2bfea43e3281c88c7333187952d8a2f3258330666edd49a2dc28542556e8d4b9. Soma nove tempos processo14840,379495s é calibração de uma semente, não comparação híbrida nem previsão garantida. Archives ambientais continuam excluídos.
 
 ps confirmou ausência de otimizadores após fila terminar. Iniciei estudo condicional prospectivo cached30_train.py via /usr/bin/caffeinate -i /usr/bin/python3 -u, sessão28252. Runner adquiriu lock compartilhado paired70, refez auditorias81/9PASS e verificou certificados/fontes/binário antes do protocolo. Diretório experiments/lkh/cached30_train já contém protocolo e primeira tentativa gr229seed43. Não iniciar paired70 simultâneo. Fontes/dependências agora congeladas.54fases/27pares,30s cada,geração do início excluída/cache setup cobrado. Texto scope herdado do manifesto diz no optimizer e descreve criação dos inícios: esta execução é otimização real; não alterar protocolo ativo para corrigir rótulo. Próximo:aguardar54fases e auditor independente, preservar todos os resultados e gate predefinido.
+
+### 22/10/2026, 01:47 Fortaleza — cache30 real parcial8/27pares
+
+Sessão28252 segue ativa,8pair.json gravados,sem completion/failure/auditoria final. Saídas parciais observadas ainda não autorizam gate ou conclusão;não mudar sementes,parâmetros ou interromper por custos. Não iniciei paired70 nem alterei fontes congeladas. Próximo:completar27pares/54fases e executar auditor independente;preservar todos os resultados.
+
+### 22/10/2026, 01h58 Fortaleza: cached30 em 19 de 27 pares
+
+Conferência passiva. A calibração das nove referências permanece fechada e
+aceita, com tsp225 no custo 2447. O runner em execução é o 17598, com
+caffeinate 17606, cerca de 21 minutos. Há 19 arquivos de par, status
+PAIR_COMPLETED, e 19 ambientes PASS. A maior lacuna de monitor entre esses
+ambientes foi 1,144 s. Não há completion nem auditoria final do lote. O
+arquivo de tentativa mais recente é a280, semente 43, braço cached, e um
+LKH filho estava em execução. Esses 19 pares não autorizam o gate. Não
+lancei outro estudo.
