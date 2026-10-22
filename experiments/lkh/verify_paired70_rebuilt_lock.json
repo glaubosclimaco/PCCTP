@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic process locking only; no optimizer or benchmark input",
+  "checks": [
+    "second process rejected before entering critical section",
+    "rejected process leaves owner metadata unchanged",
+    "new process acquires lock after normal release",
+    "exception releases lock",
+    "lock inode retained"
+  ],
+  "source_sha256": "40da3d0dbfd234a32aa306ed48a0ec2052913da60ea11bed834b55ca312c8e37"
+}

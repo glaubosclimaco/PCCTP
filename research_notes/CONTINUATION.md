@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026 10:21 Fortaleza - NOVA coleta separada ativa
+
+paired70_rebuilt_train.py sessao96262,caffeinate-i,mesmolockcompartilhado.
+Todos90pares reiniciados, mesmosmetodos/seeds/criterios;5antigos NAOentram.
+LKHrebuild1908f80d declarado e guardado permanentemente;original44a724nao
+substituido nosprotocolos antigos. Fixtures novo scheduler/lock PASS.
+Auditornovo: python3 experiments/lkh/audit_paired70_rebuilt.py,relatoriosseparados.
+NENHUMresultado novo ainda. NAOduplicar/NAOalterarfontes/NAOmisturar estudos.
+
 ## 22/10/2026 10:12 Fortaleza - backend original ausente; coleta parada
 
 Nenhum otimizador ativo. Sextoparparcial em experiments/lkh/paired70_interrupted/20261022T131215Z.
