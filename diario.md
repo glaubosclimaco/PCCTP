@@ -1332,3 +1332,7 @@ com despertar às 09h22. Cinco pares válidos permanecem. A auditoria parcial
 está PASS, com 5 pares e 478 verificações. O custo 23499 permanece
 provisório e esta repetição já atravessou suspensão. Não interrompi o
 processo e não lancei outro estudo.
+
+### 22/10/2026 10:12 Fortaleza - perda do backend temporario
+
+Sessao39241 indisponivel; ps sem runner. LKH original ausente de /private/tmp. Verificacao de hashes bloqueou recuperacao; tentativa subsequente de runner tambem falhou antes de otimizar. Clonei mirror/revisao9a51de3 e compilei pelo comando backend.json; PASS compilacao, mas SHA1908f80d difere de44a72419. Nao substituir hashes/protocolo ou misturar com5pares anteriores. Rebuild/proveniencia em experiments/lkh/rebuilt_backend, nunca usado emexperimento. Sextoparparcial arquivado em experiments/lkh/paired70_interrupted/20261022T131215Z, fontes e5pares validos intactos. Uma primeira escrita do registro falhou por encoding antes de executar; repetida em ASCII. Proximo: recuperar original ou desenhar coleta separada com rebuild declarado; redacao/auditoria dos estudos completos pode continuar. Nenhum otimizador ativo.

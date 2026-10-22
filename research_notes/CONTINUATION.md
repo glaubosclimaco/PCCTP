@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026 10:12 Fortaleza - backend original ausente; coleta parada
+
+Nenhum otimizador ativo. Sextoparparcial em experiments/lkh/paired70_interrupted/20261022T131215Z.
+5pares validos/fontes intactos. LKHoriginal44a724 perdido de/tmp.
+Rebuildmesmarevisao/comando SHA1908f80d diferente, guardado em
+rebuilt_backend/provenance.json, NAOaceito no estudo congelado.
+NAOalterarhashes/NAOretomarcombackenddiferente. Proximo: recuperaroriginal
+ou desenharcoletaseparada declarando rebuild. Sessoes39241/63776encerradas.
+
 ## 22/10/2026, 09h25 Fortaleza: repetição de kroA200 semente 85 atravessou nova suspensão
 
 Runner 1879, caffeinate 1888 e MDM 1912 vivos. Cerca de 25 min de parede e
