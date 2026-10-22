@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 02:08 Fortaleza — cacheFAIL completo;paired70 principal ativo
+
+Cache27pares/54fasesPASS501rotas;ganho0,037711%,1win/8ties,gateFAIL.
+Médiaexata400/10607 e hashes reconferidos. Preservar negativo,nãointegrarcache.
+Novo paired70_train.py sessão29767,caffeinate-i,lockcompartilhado.
+PrimeiroparkroA200seed89;90pares/270slots,seeds81–90,9TRAIN.
+NÃOduplicar/NÃOalterarfontescongeladas/NÃOcacheconcorrente.
+Semresultado principal ainda;auditarpares e preservarqualquerfalha ambiental.
+
 ## 22/10/2026, 01h58 Fortaleza: cached30 em 19 de 27 pares
 
 Calibração 9/9 aceita, tsp225 custo 2447, auditoria 135 rotas. Runner 17598

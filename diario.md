@@ -1164,3 +1164,9 @@ ambientes foi 1,144 s. Não há completion nem auditoria final do lote. O
 arquivo de tentativa mais recente é a280, semente 43, braço cached, e um
 LKH filho estava em execução. Esses 19 pares não autorizam o gate. Não
 lancei outro estudo.
+
+### 22/10/2026, 02:08 Fortaleza — cache30 completo negativo e paired70 principal lançado
+
+Experimento real completo cached30:27pares/54fases,9TRAIN×3starts,30s/braço. AuditorPASS501verificações rotas,ambientes válidos;mean_gain0,037710945602%=fração400/10607,1geometriafavorável/0perdas/8empates,gateFAIL(≥0,2% e≥6favoráveis). Reconferi independentemente média exata via Fraction sobre27rows e todos os hashes de artifact_sha256. Não confundir maior velocidade de serialização com melhoria de solução;manter resultado negativo,sem seleção de sementes. Geração dos starts excluída,cache setupcobrado.
+
+ps confirmou nenhum otimizador após término. Iniciei /usr/bin/caffeinate -i /usr/bin/python3 -u experiments/lkh/paired70_train.py,sessão29767. Runner criou protocolo congelado e lock compartilhado;primeiroparkroA200seed89.90pares/270slots,9TRAIN×10sementes81–90,MDM70primeiro+H10/H60inalterados com tempoTporparincluindosetup;semcache. Ordem referência-primeiro é assimetria declarada. Não alterar fontes/binários/protocolo durante execução, não iniciar outro estudo. Nenhum resultado deste novo estudo disponível. Próximo:acompanhar pares completos/ambiente e auditoria,semextrapolar duração;em falha preservarparinteiro e revisarantesretomada.
