@@ -1,5 +1,31 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026 11:39 Fortaleza - segundo par reconstruido auditado
+
+Auditor separado PASS2/90pares,236verificacoes de rotas,zero falhas de
+candidatas e nenhuma geometria completa. gr229/85: referencia97409,
+H10/H6096707, T1110,659320s, ambientePASS. Custos individuais nao sao
+efeito agregado nem gate. Sessao96262 prossegue para terceiro par;
+cinco pares do backend original continuam excluidos desta coleta.
+Proximo: acompanhar e auditar novos pares completos, sem fontes alteradas.
+
+
+### 22/10/2026 11:19 Fortaleza - acompanhamento do segundo par
+
+Sessao96262 segue ativa. gr229/85: referencia COMPLETED70 custo97409;
+hybrid60 gravado custo96707, T1110,659320s. Hybrid10 ainda em execucao;
+nao ha pair.json nem validacao ambiental final desse par. Valores parciais,
+sem efeito agregado/gate. Auditoria permanece1/90/81rotas, nao repetida sem
+novo par fechado. Nenhum otimizador adicional ou fonte congelada alterada.
+Proximo: auditar par inteiro apos fechamento, preservando todos os bracos.
+
+
+## 22/10/2026 10:49 Fortaleza - coleta reconstruida1/90auditada
+
+Novo paired70_rebuilt:primeiropar kroA200seed89PASS,T375,477s.
+Auditorseparado atualizado;zero geometrias completas. Sessao96262unica.
+Nao misturar com5antigos/naoduplicar/naoalterarfontescongeladas.
+
 ## 22/10/2026 10:21 Fortaleza - NOVA coleta separada ativa
 
 paired70_rebuilt_train.py sessao96262,caffeinate-i,mesmolockcompartilhado.

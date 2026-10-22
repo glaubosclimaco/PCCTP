@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "batch_complete": false,
+  "pairs": 2,
+  "planned_pairs": 90,
+  "planned_executions": 270,
+  "reference_incomplete": 0,
+  "candidate_failure_pairs": 0,
+  "eligible_complete_study": false,
+  "routes_checked": 236,
+  "rows": [
+    {
+      "instance": "g_gr229_VT45_T138_W46_50",
+      "seed": 85,
+      "status": "PAIR_COMPLETED",
+      "reference_cost": 97409,
+      "duration": 1110.6593199999998,
+      "candidate_costs": {
+        "hybrid60": 96707.0,
+        "hybrid10": 96707.0
+      },
+      "candidate_feasibility": {
+        "hybrid60": true,
+        "hybrid10": true
+      },
+      "pair_sha256": "387a5961f2aa64c3e761abad3e7ece9b27198d39460c2cf4630187b34880b736",
+      "result_hashes": {
+        "references/g_gr229_VT45_T138_W46_50.seed85.reference.json": "cd150ebd0dd3f6b5065d90a4894b62a50bcca29a19dfa7d47b08f54092a83ea3",
+        "candidates/g_gr229_VT45_T138_W46_50.seed85.hybrid60.json": "27c04fceb309eacd524e56160c09e50dd180cc5588498ee2b62d419000683056",
+        "candidates/g_gr229_VT45_T138_W46_50.seed85.hybrid10.json": "00791b6718e320f4143ff6ab2a09bd88ac75ed880ce9f3fc0810be17f3b69dd0"
+      }
+    },
+    {
+      "instance": "g_kroA200_VT40_T120_W40_25",
+      "seed": 89,
+      "status": "PAIR_COMPLETED",
+      "reference_cost": 23499,
+      "duration": 375.4771199999998,
+      "candidate_costs": {
+        "hybrid60": 23495.0,
+        "hybrid10": 23495.0
+      },
+      "candidate_feasibility": {
+        "hybrid60": true,
+        "hybrid10": true
+      },
+      "pair_sha256": "fac1242ab01247bd783f6031cf31ec1c6aea00c141c7a204966e275281130b30",
+      "result_hashes": {
+        "references/g_kroA200_VT40_T120_W40_25.seed89.reference.json": "e060debd05b0a032b2f6f2299ef88365861cb608a737f168e50c25fbf5096187",
+        "candidates/g_kroA200_VT40_T120_W40_25.seed89.hybrid60.json": "32828fd815ecfe0b0a08d51999a1208b5845ec9068e70df78f309d20259e9c39",
+        "candidates/g_kroA200_VT40_T120_W40_25.seed89.hybrid10.json": "625d14f3f0876277e8308593d431f0a2752aa6893d37ff95cd1f994fdcd34531"
+      }
+    }
+  ],
+  "scope": "TRAIN, completed70 baseline plus reference-defined candidate budget; not full107-instance replication; separate rebuilt-LKH restart, old five pairs excluded"
+}

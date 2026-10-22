@@ -1378,3 +1378,12 @@ completa existente, sem nova otimizacao:27pares/54fases/501rotas, efeito exato
 a geracao inicial excluida e decisao de nao integrar/expandir cache para salvar
 o gate. Desenho historico e fontes congeladas intactos. Proximo: incorporar
 controle negativo ao artigo; fila96262 segue unica, segundo par aberto.
+
+## 22/10/2026 11:39 Fortaleza - segundo par reconstruido auditado
+
+Auditor separado PASS2/90pares,236verificacoes de rotas,zero falhas de
+candidatas e nenhuma geometria completa. gr229/85: referencia97409,
+H10/H6096707, T1110,659320s, ambientePASS. Custos individuais nao sao
+efeito agregado nem gate. Sessao96262 prossegue para terceiro par;
+cinco pares do backend original continuam excluidos desta coleta.
+Proximo: acompanhar e auditar novos pares completos, sem fontes alteradas.

@@ -1,0 +1,30 @@
+{
+  "instance": "g_gr229_VT45_T138_W46_50",
+  "seed": 85,
+  "protocol_sha256": "0f8657dbcd9ab35339cee4e346002e2617e2b7ab0b0d135398c9815eda9de2d6",
+  "reference_file": "references/g_gr229_VT45_T138_W46_50.seed85.reference.json",
+  "reference_sha256": "cd150ebd0dd3f6b5065d90a4894b62a50bcca29a19dfa7d47b08f54092a83ea3",
+  "status": "PAIR_COMPLETED",
+  "candidate_records": {
+    "hybrid60": {
+      "file": "candidates/g_gr229_VT45_T138_W46_50.seed85.hybrid60.json",
+      "sha256": "27c04fceb309eacd524e56160c09e50dd180cc5588498ee2b62d419000683056",
+      "cost": 96707.0,
+      "feasible": true
+    },
+    "hybrid10": {
+      "file": "candidates/g_gr229_VT45_T138_W46_50.seed85.hybrid10.json",
+      "sha256": "00791b6718e320f4143ff6ab2a09bd88ac75ed880ce9f3fc0810be17f3b69dd0",
+      "cost": 96707.0,
+      "feasible": true
+    }
+  },
+  "unavailable_candidate_modes": [],
+  "budget_seconds": 1110.6593199999998,
+  "candidate_order": [
+    "hybrid60",
+    "hybrid10"
+  ],
+  "environment_file": "environment.g_gr229_VT45_T138_W46_50.seed85.json",
+  "environment_sha256": "1e1d75028771c121b2abdecac900b1efe6e536a0b525a25c3607cd3c0ce22975"
+}
