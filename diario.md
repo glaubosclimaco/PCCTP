@@ -27,15 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 00h28: gil262, semente 80, custo
-2001, e rd400, semente 80, custo 10577, são as duas referências aceitas.
-rd400 fechou com ambiente PASS e auditoria parcial, 2 de 9. A coleta atual
-é a280, semente 80, MDM 12697, desde cerca de 00h14. Às 00h28 o processo
-está em execução, com cerca de 14 minutos de CPU. O checkpoint das 00h27
-tem 35 iterações, custo provisório 2007, busca incompleta e 1 mineração.
-O log das 00h26 tem 32 marcações e a última cabeçalho lida foi a iteração
-31. O custo 2007 permanece provisório. Não lançar outra calibração. O cache
-continua parado.
+Estado operacional confirmado em 22/10, 00h58: quatro referências aceitas,
+semente 80. gil262 2001, rd400 10577, a280 2001 e gr229 96884. Auditoria
+parcial PASS, 4 de 9, 60 verificações. A coleta atual é kroA200, semente 80,
+MDM 14745, cerca de 3 minutos de CPU. O checkpoint tem 20 iterações, custo
+provisório 23495, busca incompleta e 0 minerações. O log tem 17 marcações
+e a última cabeçalho lida foi a iteração 16. O custo 23495 permanece
+provisório. Não lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1112,3 +1110,14 @@ Auditor independente PASS parcial3runs/45verificações de rotas. a280seed80 COM
 ### 22/10/2026, 00:57 Fortaleza — gr22970 auditado,4/9
 
 Auditor independente PASS parcial4runs/60verificações rotas. gr229seed80 COMPLETED70,custo96884,3minerações,processo1020,129882s,wrapper1024,087607s,ambiente válido;SHA23d5f18d5adb1b46000b772aad9d2a0e00491b859bb9eb8d58edc00e78a6461a.4/9auditadas,all_references_completed=false. kroA200já em execução checkpoint20provisório. Preservar arquivos finaisgr229,sem fontes/conteúdo ativo de kroA200. Próximo:cinco referências restantes e auditoria completa; nenhuma alegação de ganho híbrido.
+
+### 22/10/2026, 00h58 Fortaleza: kroA200 no checkpoint 20, custo provisório 23495
+
+Conferência passiva. A fila 6691 e o coletor 6736 seguem os mesmos. a280 e
+gr229 já estão fechados e aceitos, com a280 no custo 2001 e gr229 no custo
+96884. O MDM atual é o 14745, instância kroA200, semente 80, em execução,
+cerca de 3 minutos de CPU e 98% de uso. O checkpoint tem 20 iterações,
+custo provisório 23495, `completed` falso, 0 minerações e 149 s internos.
+O log tem 17 marcações. A última cabeçalho lida foi a iteração 16. O custo
+23495 permanece provisório. As quatro referências seguem 4 de 9. Não lancei
+outra coleta.

@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 00h58 Fortaleza: kroA200 no checkpoint 20, custo provisório 23495
+
+Fila 6691 e coletor 6736 vivos. MDM atual 14745 em kroA200, semente 80,
+cerca de 3 min de CPU. Checkpoint: iteração 20, custo provisório 23495,
+completed falso, mining 0, seconds 149. Log: 17 marcações, última cabeçalho
+na iteração 16. Referências aceitas 4/9: gil262 2001, rd400 10577, a280
+2001, gr229 96884. Sem falha nova. Não duplicar.
+
 ## 22/10/2026, 00:57 Fortaleza — gr229 auditado,4/9
 
 AuditorPASS parcial60rotas,4COMPLETED70. gr229custo96884,
