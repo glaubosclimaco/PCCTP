@@ -28,14 +28,13 @@ pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
 Estado operacional confirmado em 22/10, 04h28: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 140 minutos. Três pares estão
+processo 52200 e o caffeinate 52208, cerca de 142 minutos. Três pares estão
 fechados, com auditoria parcial PASS e 314 verificações. Nenhuma geometria
 está completa. a280, semente 82, fechou com referência 2001, hybrid10 em 2002
 e hybrid60 em 2001, ambiente PASS. A coleta atual é kroA200, semente 84. A
-referência foi gravada como COMPLETED70, custo 23495. O hybrid10 foi gravado
-com custo 23495. O par continua aberto. O MDM do hybrid60 acabou de iniciar.
-O checkpoint tem 1 iteração, custo provisório 23828, e o log ainda está
-vazio. Não lançar outro estudo.
+referência e o hybrid10 foram gravados com custo 23495. A fase MDM do
+hybrid60 devolveu 23573 em cerca de 60 s, e o LKH desse braço acabou de
+iniciar. O par continua aberto. Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1247,3 +1246,10 @@ atual é o 36178, hybrid60, em execução há cerca de 1 segundo quando foi
 lido, com 71% de uso. O checkpoint tem 1 iteração, custo provisório 23828,
 `completed` falso, 0 minerações e 6 s internos. O log desse braço ainda está
 vazio. O custo 23828 permanece provisório. Não lancei outro estudo.
+
+### 22/10/2026, 04h28 Fortaleza: MDM do hybrid60 de kroA200 devolveu 23573
+
+Na mesma conferência, o arquivo nativo do hybrid60 de kroA200, semente 84,
+passou a existir. O custo devolvido foi 23573, com saída 0 e cerca de 60 s
+de processo. Um LKH filho acabou de iniciar. Ainda não há arquivo de par.
+O custo 23573 é a fase MDM, antes do reparo. Não lancei outro estudo.

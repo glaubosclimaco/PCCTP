@@ -1,5 +1,11 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 04h28 Fortaleza: kroA200 semente 84, MDM do hybrid60 devolveu 23573
+
+Runner 52200 vivo. Referência e hybrid10 em 23495. MDM do hybrid60 devolveu
+23573 em cerca de 60 s, saída 0. LKH desse braço acabou de iniciar. Sem
+pair.json. 3/90 pares auditados. Não duplicar.
+
 ## 22/10/2026, 04h28 Fortaleza: kroA200 semente 84, hybrid60 no início
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 140 min. Auditoria parcial
