@@ -27,15 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 23h28: gil262, semente 80, custo
+Estado operacional confirmado em 21/10, 23h58: gil262, semente 80, custo
 2001, continua a única referência aceita. A tentativa rejeitada às 21h56,
 custo 10577, não entra. A repetição atual segue com a fila 6691 e o MDM
-6746 desde 21h57. Às 23h28 o processo está em execução, com cerca de 90
-minutos de CPU e 91 minutos de parede. O checkpoint das 23h25 tem 35
-iterações, custo provisório 10644, busca incompleta e 1 mineração. O log
-das 23h17 tem 31 marcações. O custo provisório caiu de 10691 para 10644.
-Esse número não é referência. Não lançar outra calibração. O cache continua
-parado.
+6746 desde 21h57. Às 23h58 o processo está em execução, com cerca de 120
+minutos de CPU e 122 minutos de parede. O checkpoint das 23h25 permanece
+na iteração 35, custo provisório 10644. O log das 23h44 tem 45 marcações
+e a última cabeçalho lida foi a iteração 44, ainda em escrita. Log e
+checkpoint não são a referência. Não lançar outra calibração. O cache
+continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1081,3 +1081,12 @@ marcações. O custo provisório caiu 47 unidades em relação ao checkpoint 20.
 O checkpoint 35 das tentativas rejeitadas também estava em 10644. Essa
 coincidência não recupera o custo 10577 nem fecha esta busca. gil262 segue
 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
+
+### 21/10/2026, 23h58 Fortaleza: o log de rd400 passou o checkpoint 35
+
+Conferência passiva. Os processos continuam os das 21h57. O MDM 6746 está
+em execução, cerca de 120 minutos de CPU, 122 minutos de parede e 98% de
+uso agora. O checkpoint não mudou desde 23h25: iteração 35, custo provisório
+10644. O log foi atualizado às 23h44 e tem 45 marcações. A última cabeçalho
+lida foi a iteração 44, com a linha seguinte ainda aberta. gil262 segue 1
+de 9. Não há falha ambiental nova. Não reiniciei a coleta.
