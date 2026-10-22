@@ -27,13 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 01h58: as nove referências da
-calibração, semente 80, estão aceitas. Auditoria completa PASS, 135
-verificações. tsp225 fechou em 2447. O estudo condicional cached30 está em
-execução, processo 17598 e caffeinate 17606, cerca de 21 minutos. Há 19
-pares gravados de 27, todos com ambiente PASS. O par em curso é a280,
-semente 43, braço cached. Não há completion nem auditoria final. Não lançar
-outro estudo nem o paired70. As fontes seguem congeladas.
+Estado operacional confirmado em 22/10, 02h28: a calibração das nove
+referências está aceita. O estudo cached30 fechou com auditoria PASS, 27
+pares, ganho médio 0,037711%, 1 geometria favorável, 0 perdas e 8 empates.
+O gate falhou. O estudo paired70 está em execução, processo 52200 e
+caffeinate 52208, cerca de 21 minutos. O primeiro par, kroA200 semente 89,
+está completo com ambiente PASS. A auditoria parcial tem 1 de 90 pares e
+80 verificações. O MDM atual é o 66863, gr229 semente 85, braço de
+referência, cerca de 2 minutos de CPU. O checkpoint tem 5 iterações, custo
+provisório 100177, busca incompleta. Não lançar outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1170,3 +1172,17 @@ lancei outro estudo.
 Experimento real completo cached30:27pares/54fases,9TRAIN×3starts,30s/braço. AuditorPASS501verificações rotas,ambientes válidos;mean_gain0,037710945602%=fração400/10607,1geometriafavorável/0perdas/8empates,gateFAIL(≥0,2% e≥6favoráveis). Reconferi independentemente média exata via Fraction sobre27rows e todos os hashes de artifact_sha256. Não confundir maior velocidade de serialização com melhoria de solução;manter resultado negativo,sem seleção de sementes. Geração dos starts excluída,cache setupcobrado.
 
 ps confirmou nenhum otimizador após término. Iniciei /usr/bin/caffeinate -i /usr/bin/python3 -u experiments/lkh/paired70_train.py,sessão29767. Runner criou protocolo congelado e lock compartilhado;primeiroparkroA200seed89.90pares/270slots,9TRAIN×10sementes81–90,MDM70primeiro+H10/H60inalterados com tempoTporparincluindosetup;semcache. Ordem referência-primeiro é assimetria declarada. Não alterar fontes/binários/protocolo durante execução, não iniciar outro estudo. Nenhum resultado deste novo estudo disponível. Próximo:acompanhar pares completos/ambiente e auditoria,semextrapolar duração;em falha preservarparinteiro e revisarantesretomada.
+
+### 22/10/2026, 02:28 Fortaleza — primeiro par principal auditado,1/90
+
+Par kroA200seed89 finalizado com ambientePASS. Auditor independente paired70 PASS parcial1par/80verificações rotas,semfalha candidata/referência. OrçamentoT366,579018s por braço;ambos híbridos23495,sem concluir ganho a partir deste par. SummaryPARTIAL0geometrias completas,efeitosnull/gatefalse;dispersionDESCRIPTIVE_ONLY sem resumo de custos para geometria incompleta. Coleta sessão29767 permanece; nenhuma fonte congelada alterada. Próximo:seguir90pares, auditar saídas atômicas e tratarinterrupções explicitamente; não calcular conclusão antes10sementes/9geometrias.
+
+### 22/10/2026, 02h28 Fortaleza: gr229 semente 85 na referência, checkpoint 5
+
+Conferência passiva. O runner em execução é o 52200, com caffeinate 52208,
+cerca de 21 minutos. kroA200, semente 89, segue como o único par completo,
+ambiente PASS, auditoria parcial de 1 de 90. O MDM atual é o 66863, instância
+gr229, semente 85, braço de referência, em execução, cerca de 2 minutos de
+CPU e 99% de uso. O checkpoint tem 5 iterações, custo provisório 100177,
+`completed` falso, 0 minerações e 56 s internos. Esse custo permanece
+provisório. Não lancei outro estudo.

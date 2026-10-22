@@ -1,5 +1,20 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 02h28 Fortaleza: gr229 semente 85, referência no checkpoint 5
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 21 min. 1/90 par completo:
+kroA200 semente 89, ambiente PASS, auditoria parcial 80 rotas. MDM 66863 em
+gr229 semente 85, braço de referência, cerca de 2 min de CPU. Checkpoint:
+iteração 5, custo provisório 100177, completed falso, mining 0, seconds 56.
+Cache30 já fechou com gate FAIL. Não duplicar. Não alterar fontes.
+
+## 22/10/2026, 02:28 Fortaleza — paired70 primeiro par auditado
+
+1/90parPASS80rotas,kroA200seed89,ambientePASS,T366,579s.
+Zero geometrias completas;sem efeito primário/gate elegível.
+Sessão29767única continua;NÃOalterarfontes/NÃOduplicar.
+Audit/summary/dispersion parciais atualizados sem inferência.
+
 ## 22/10/2026, 02:08 Fortaleza — cacheFAIL completo;paired70 principal ativo
 
 Cache27pares/54fasesPASS501rotas;ganho0,037711%,1win/8ties,gateFAIL.
