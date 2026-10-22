@@ -27,13 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 00h58: quatro referências aceitas,
-semente 80. gil262 2001, rd400 10577, a280 2001 e gr229 96884. Auditoria
-parcial PASS, 4 de 9, 60 verificações. A coleta atual é kroA200, semente 80,
-MDM 14745, cerca de 3 minutos de CPU. O checkpoint tem 20 iterações, custo
-provisório 23495, busca incompleta e 0 minerações. O log tem 17 marcações
-e a última cabeçalho lida foi a iteração 16. O custo 23495 permanece
-provisório. Não lançar outra calibração. O cache continua parado.
+Estado operacional confirmado em 22/10, 01h28: oito referências aceitas,
+semente 80, auditoria parcial PASS, 120 verificações. gil262 2001, rd400
+10577, a280 2001, gr229 96884, kroA200 23495, pr226 67852, si175 7046 e
+ts225 109147. A coleta atual é tsp225, semente 80, MDM 16832, cerca de 1
+minuto de CPU. O checkpoint das 01h28 tem 20 iterações, custo provisório
+2457, busca incompleta e 0 minerações. O log tem 18 marcações e a última
+cabeçalho lida foi a iteração 17. O custo 2457 permanece provisório. Não
+lançar outra calibração. O cache continua parado até as nove referências.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1133,3 +1134,13 @@ Auditor independente PASS parcial6runs/90verificações rotas. pr226seed80 COMPL
 ### 22/10/2026, 01:27 Fortaleza — si175 e ts225 auditados,8/9
 
 Auditor independente PASS parcial8runs/120verificações rotas. si175seed80custo7046,70iterações/3minerações,processo480,829558s,wrapper484,657425s,SHAefb7d3060ffd6a6d93282c4eec62d9bd7287e7f8e883efccc4d7341c267ff401. ts225seed80custo109147,70iterações/3minerações,processo320,897544s,wrapper325,986864s,SHAd119d99bc144b2dbbdd3d85fbe5f78635d02c687b1b6331935a1db172464cc61. Ambos ambiente válido.8/9auditadas,all_references_completed=false;falta tsp225. Preservar só arquivos finais destes dois,sem tsp225ativo. Próximo:auditoria completa após último endpoint;então cumprir pré-requisitos do estudo condicionado,sem alegar vantagem híbrida nesta calibração.
+
+### 22/10/2026, 01h28 Fortaleza: tsp225 no checkpoint 20, custo provisório 2457
+
+Conferência passiva. A fila 6691 e o coletor 6736 seguem os mesmos. Oito
+referências estão aceitas. O MDM atual é o 16832, instância tsp225, semente
+80, em execução, cerca de 1 minuto de CPU e 99% de uso. O checkpoint das
+01h28 tem 20 iterações, custo provisório 2457, `completed` falso, 0
+minerações e 58 s internos. O log tem 18 marcações. A última cabeçalho lida
+foi a iteração 17. O custo 2457 permanece provisório. Falta esta última
+referência para fechar as nove. Não lancei outra coleta.

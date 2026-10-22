@@ -1,5 +1,13 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 01h28 Fortaleza: tsp225 no checkpoint 20, custo provisório 2457
+
+Fila 6691 e coletor 6736 vivos. MDM atual 16832 em tsp225, semente 80,
+cerca de 1 min de CPU. Checkpoint 01h28: iteração 20, custo provisório
+2457, completed falso, mining 0, seconds 58. Log: 18 marcações, última
+cabeçalho na iteração 17. Oito referências aceitas. Sem falha nova. Não
+duplicar. Cache/paired70 só após a nona e a auditoria total.
+
 ## 22/10/2026, 01:27 Fortaleza — si175/ts225 auditados,8/9
 
 AuditorPASS parcial120rotas,8COMPLETED70. si175custo7046/480,830s;
