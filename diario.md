@@ -27,17 +27,13 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 21h58: gil262, semente 80, custo
-2001, continua a única referência aceita. A repetição de rd400 que estava na
-iteração 44 foi rejeitada às 21h56. O checkpoint arquivado tem 70 iterações
-e custo 10577, com `completed` falso. Não houve suspensão. A lacuna do
-monitor foi 10,334 s, acima do limite de 5 s, e a diferença de relógios foi
-0,285 s. Esse custo não entra. Os arquivos estão em
-`experiments/lkh/published70_calibration_interrupted/20261022T005659Z/`.
-A nova tentativa começou às 21h57: fila 6691, coletor 6736 e MDM 6746, de
-novo rd400, semente 80. Às 21h58 o log ainda está vazio e o processo tem
-cerca de 1 minuto de CPU. Não lançar outra calibração. O cache continua
-parado.
+Estado operacional confirmado em 21/10, 22h28: gil262, semente 80, custo
+2001, continua a única referência aceita. A tentativa rejeitada às 21h56,
+custo 10577, não entra. A repetição atual segue com a fila 6691 e o MDM
+6746 desde 21h57. Às 22h28 o processo está em execução, com cerca de 31
+minutos de CPU e 31 minutos de parede. O checkpoint das 22h24 tem 10
+iterações, custo provisório 10691 e busca incompleta. O log continua vazio.
+Não lançar outra calibração. O cache continua parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1053,3 +1049,13 @@ repetição terminar e guardar qualquer rejeição nova.
 ### 21/10/2026, 22:06 Fortaleza — inventário das interrupções da calibração
 
 Criei calibration_interruption_ledger.py, observador sem otimizador ou alteração de fontes ativas. Reconfere hashes de todos os arquivos nos seis archives de tentativas excluídas, liga environment e native por instância e registra duração excluída/CPU/causa observada. Execução real sobre arquivos históricos:6tentativas,3comSleep e3semSleep registrado; soma de tempos de processo excluídos79919,829414s (não tempo válido, nem desempenho). Lacuna semSleep não identifica causa de escalonamento/carga; não há inferência causal ou mudança de limiar. Output calibration_interruption_ledger.json preserva razões em vez de esconder custo operacional das repetições. Nova rd400segue checkpoint1;gil2621/9auditada. Próximo: investigar futuras lacunas com medições prospectivas separadas, sem promover archives; aguardar endpoint da coleta única.
+
+### 21/10/2026, 22h28 Fortaleza: repetição de rd400 no checkpoint 10
+
+Conferência passiva. Os processos continuam os das 21h57. O MDM 6746 está
+em execução, cerca de 31 minutos de CPU, 31 minutos de parede e 98% de uso
+agora. O checkpoint das 22h24 tem 10 iterações, custo provisório 10691,
+`completed` falso, 0 minerações e 1651 s internos. O log segue com 0 bytes.
+A nota das 22h06 ainda descrevia o checkpoint 1. Não há falha ambiental
+nova. O custo 10577 continua de fora. gil262 segue 1 de 9. Não reiniciei
+a coleta. Próximo passo: esperar o endpoint desta repetição.
