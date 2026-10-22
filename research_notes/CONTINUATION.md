@@ -1,5 +1,14 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 04h28 Fortaleza: kroA200 semente 84, hybrid60 no início
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 140 min. Auditoria parcial
+3/90, 314 rotas, 0 geometrias completas. a280 semente 82 fechado: referência
+2001, hybrid10 2002, hybrid60 2001, ambiente PASS. kroA200 semente 84:
+referência COMPLETED70 custo 23495, hybrid10 gravado em 23495. Sem pair.json.
+MDM 36178 no hybrid60, recém-iniciado. Checkpoint: iteração 1, custo
+provisório 23828. Log vazio com o processo em execução. Não duplicar.
+
 ## 22/10/2026, 04:19 Fortaleza — paired70 em3/90
 
 Terceiropar a280seed82 concluído/ambientePASS,T1123,925s;
