@@ -27,14 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 21/10, 22h58: gil262, semente 80, custo
+Estado operacional confirmado em 21/10, 23h28: gil262, semente 80, custo
 2001, continua a única referência aceita. A tentativa rejeitada às 21h56,
 custo 10577, não entra. A repetição atual segue com a fila 6691 e o MDM
-6746 desde 21h57. Às 22h58 o processo está em execução, com cerca de 60
-minutos de CPU e 61 minutos de parede. O checkpoint das 22h48 tem 20
-iterações, custo provisório 10691 e busca incompleta. O log das 22h39 tem
-18 marcações. Nenhum dos dois é referência. Não lançar outra calibração.
-O cache continua parado.
+6746 desde 21h57. Às 23h28 o processo está em execução, com cerca de 90
+minutos de CPU e 91 minutos de parede. O checkpoint das 23h25 tem 35
+iterações, custo provisório 10644, busca incompleta e 1 mineração. O log
+das 23h17 tem 31 marcações. O custo provisório caiu de 10691 para 10644.
+Esse número não é referência. Não lançar outra calibração. O cache continua
+parado.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1069,3 +1070,14 @@ agora. O checkpoint das 22h48 tem 20 iterações, custo provisório 10691,
 `completed` falso, 0 minerações e 3078 s internos. O log das 22h39 tem 18
 marcações. O custo provisório não mudou em relação ao checkpoint 10.
 gil262 segue 1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
+
+### 21/10/2026, 23h28 Fortaleza: repetição de rd400 no checkpoint 35
+
+Conferência passiva. Os processos continuam os das 21h57. O MDM 6746 está
+em execução, cerca de 90 minutos de CPU, 91 minutos de parede e 99% de uso
+agora. O checkpoint das 23h25 tem 35 iterações, custo provisório 10644,
+`completed` falso, 1 mineração e 5280 s internos. O log das 23h17 tem 31
+marcações. O custo provisório caiu 47 unidades em relação ao checkpoint 20.
+O checkpoint 35 das tentativas rejeitadas também estava em 10644. Essa
+coincidência não recupera o custo 10577 nem fecha esta busca. gil262 segue
+1 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
