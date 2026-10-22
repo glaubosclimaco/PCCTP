@@ -27,18 +27,20 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 09h25: cinco pares válidos seguem
-aceitos e a auditoria parcial está PASS, com 478 verificações. O par de
-kroA200, semente 85, foi excluído por suspensão e repetido por inteiro. A
-repetição está no ar, processo 1879, caffeinate 1888 e MDM 1912, cerca de
-25 minutos de parede e 4 minutos de CPU. O checkpoint tem 20 iterações,
-custo provisório 23499. A máquina voltou a dormir às 09h02 e às 09h17, e
-acordou às 09h22. Essa repetição já atravessou suspensão, então o custo
-23499 não entra como referência. O computador precisa permanecer acordado.
-Não lançar outro estudo.
+**Estado operacional confirmado em 22/10/2026, 11h09 Fortaleza:** coleta
+`paired70_rebuilt_train.py` ativa na sessão 96262; primeiro par auditado
+(1/90, 81 verificações de rotas, ambiente PASS). Referência fresca do segundo
+par, gr229 semente 85, gravada; candidatas em execução. Nenhuma geometria
+completa: não interpretar efeito ou gate. O LKH original desapareceu do
+armazenamento temporário; o reconstruído tem outro SHA e é usado em estudo
+separado, com protocolo próprio. Os cinco pares antigos permanecem separados.
+Calibração MDM70 concluída (9/9); cache condicional concluído e gate negativo
+(27 pares, ganho médio adicional 0,037711%). Ver detalhes nas entradas datadas.
 
-**Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
-substitui a avaliação final de dez sementes.
+**Primeiro próximo passo:** acompanhar esta única fila e auditar novos pares
+somente após fechamento. Não alterar fontes congeladas, misturar os dois
+backends, abrir teste reservado ou iniciar outra otimização. Incorporar os
+estudos completos ao artigo com suas limitações.
 
 **Rascunho conferido às17h17:**20páginas, incluindo resultados300s completos,
 tabela de nove geometrias e figura dos dois braços. Ainda faltam abstract,
@@ -57,7 +59,8 @@ submissão. Compilação e inspeção estão em `submission/compilation_audit.js
   Em 20/10, 17h10, está completo: 81/81, hybrid60 passou e hybrid10 não passou.
   Ainda não é a comparação com MDM de 70 iterações.
 - `research_notes/paired70_ten_seed_design.md`: comparação prospectiva com
-  MDM70 completo, dez sementes pareadas. Código preparado, não lançado.
+  MDM70 completo, dez sementes pareadas. Original interrompido; a continuação
+  separada está em `research_notes/paired70_rebuilt_design.md`.
 - `research_notes/cached30_conditional_design.md`: estudo de cache prospectivo,
   separado da comparação principal.
 - `submission/main.tex` e `submission/build/main.pdf`: rascunho e PDF atual.
@@ -1344,3 +1347,34 @@ Apos perda do LKH original, desenhei paired70_rebuilt_design.md ANTES de novos r
 Novo runner separado preserva AST de execute_pairs/study_lock/main/digest; so muda output e acrescenta guard/proveniencia do rebuild. Adapters e protocolos antigos intactos. Fixtures verify_paired70_rebuilt_orchestration.py PASS90pares sinteticos/268chamadas simuladas e verificacao real de lock entre processos PASS; certificados vinculados ao novo source. audit_paired70_rebuilt.py grava relatorios separados, NO_RESULTS antes do lancamento. Protocolo novo liga SHA1908f80d, runner, desenho e proveniencia; copia permanente em rebuilt_backend/LKH evita depender so de/tmp. Sem alegar equivalencia dos dois binarios.
 
 ps semotimizador antes do lancamento. Iniciei caffeinate-i python3 -u experiments/lkh/paired70_rebuilt_train.py, sessao96262; protocolo criado, primeiroparkroA200seed89. Nao duplicar/Naoalterarfontescongeladas/Naojuntarcom5antigos. Proximo:acompanhar novo estudo e auditorias separadas; avancar artigo com negativos completos sem antecipar contribuicao.
+
+### 22/10/2026 10:49 Fortaleza - primeiro par da coleta reconstruida auditado
+
+Novo estudopared70_rebuilt:1/90par kroA200seed89concluido/ambientePASS,T375,477120s,candidatas23495. Auditorseparado executado;zero geometriascompletas,sem efeito/gate. Nao misturar com5paresoriginais. Sessao96262unica prossegue;nenhum protocolo/fonte ativaalterado. Proximo:novospares e auditoriasseparadas.
+
+### 22/10/2026 11:09 Fortaleza - resumo portavel corrigido
+
+Conferi branch, sessao96262 ainda ativa, arquivos e auditoria parcial (1/90,
+81 rotas). A referencia do segundo par gr229/85 ja existe; par ainda aberto.
+Corrigi o resumo inicial deste diario, que ainda apontava a repeticao antiga
+suspensa e a calibracao pendente. Isto e manutencao de continuidade, sem novo
+resultado cientifico; nao executei outro otimizador nem alterei fontes ativas.
+Proximo: aguardar fechamento de pares e auditar separadamente o novo estudo.
+
+### 22/10/2026 11:19 Fortaleza - acompanhamento do segundo par
+
+Sessao96262 segue ativa. gr229/85: referencia COMPLETED70 custo97409;
+hybrid60 gravado custo96707, T1110,659320s. Hybrid10 ainda em execucao;
+nao ha pair.json nem validacao ambiental final desse par. Valores parciais,
+sem efeito agregado/gate. Auditoria permanece1/90/81rotas, nao repetida sem
+novo par fechado. Nenhum otimizador adicional ou fonte congelada alterada.
+Proximo: auditar par inteiro apos fechamento, preservando todos os bracos.
+
+### 22/10/2026 11:29 Fortaleza - interpretacao editorial do cache fechado
+
+Criei research_notes/cached30_completed_interpretation.md a partir da auditoria
+completa existente, sem nova otimizacao:27pares/54fases/501rotas, efeito exato
+400/10607 pontos percentuais,1geometria positiva/8empates,gateFAIL. Explicitei
+a geracao inicial excluida e decisao de nao integrar/expandir cache para salvar
+o gate. Desenho historico e fontes congeladas intactos. Proximo: incorporar
+controle negativo ao artigo; fila96262 segue unica, segundo par aberto.
