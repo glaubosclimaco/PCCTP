@@ -1090,3 +1090,7 @@ uso agora. O checkpoint não mudou desde 23h25: iteração 35, custo provisório
 10644. O log foi atualizado às 23h44 e tem 45 marcações. A última cabeçalho
 lida foi a iteração 44, com a linha seguinte ainda aberta. gil262 segue 1
 de 9. Não há falha ambiental nova. Não reiniciei a coleta.
+
+### 22/10/2026, 00:17 Fortaleza — rd40070 válido auditado;2/9referências
+
+Coletor gravou rd400seed80 COMPLETED70 com ambientePASS. Auditor independente executado sobre dois finais:PASS parcial,30verificações rotas/custos,2/9COMPLETED70,semcensura nos registros elegíveis,all_references_completed=false. rd400custo10577,3minerações,processo8229,090270s,wrapper8232,830226s;SHAfinal d001cf5cc2ff45bb15a5dec8afbadeccbd4926b85f6aa4c0b744fa54ddee70af. Custo coincide com tentativas excluídas mas apenas este endpoint/ambiente entra. Não comparar diretamente com300s ou garantir vantagem híbrida. Fila única já inicioua280seed80,checkpoint5provisório. Próximo:auditar demais sete referências e só liberar estudos condicionados após9válidas.

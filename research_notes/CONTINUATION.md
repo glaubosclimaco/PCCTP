@@ -1,5 +1,12 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 00:17 Fortaleza — rd40070 auditado,2/9
+
+AuditorPASS parcial30rotas:gil262 e rd400 válidos. rd400custo10577,
+processo8229,090s,wrapper8232,830s,70iterações/3minerações.
+all_references_completed=false. Coleta já em a280seed80; não duplicar.
+Cache/paired70 bloqueados até9referências válidas; archives excluídos permanecem.
+
 ## 21/10/2026, 23h58 Fortaleza: log de rd400 na iteração 44
 
 Fila 6691 e MDM 6746 vivos desde 21h57. Cerca de 120 min de CPU e 122 min
