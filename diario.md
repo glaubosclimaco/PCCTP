@@ -27,15 +27,14 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 03h28: o paired70 segue com o
-processo 52200 e o caffeinate 52208, cerca de 80 minutos. Dois pares estão
+Estado operacional confirmado em 22/10, 03h58: o paired70 segue com o
+processo 52200 e o caffeinate 52208, cerca de 110 minutos. Dois pares estão
 fechados, com auditoria parcial PASS e 235 verificações. Nenhuma geometria
-está completa. kroA200, semente 89: referência 23499, hybrid60 e hybrid10 em
-23495. gr229, semente 85: referência 97409, os dois híbridos em 96707,
-ambiente PASS. A coleta atual é a280, semente 82, braço de referência, MDM
-com cerca de 8 minutos de CPU. O checkpoint tem 20 iterações, custo
-provisório 2003. Esses dois pares não fecham o estudo. Não lançar outro
-estudo.
+está completa. Em a280, semente 82, a referência foi gravada como COMPLETED70,
+custo 2001. O hybrid10 foi gravado com custo 2002. O par continua aberto. O
+MDM do hybrid60 está em execução, cerca de 31 segundos de CPU. O checkpoint
+tem 1 iteração, custo provisório 2026, e o log ainda está vazio. Não lançar
+outro estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1212,6 +1211,20 @@ permanece com referência 23499 e os dois híbridos em 23495. O MDM atual é o
 `completed` falso, 0 minerações e 408 s internos. O log tem 18 marcações e
 a última cabeçalho lida foi a iteração 17. O custo 2003 permanece
 provisório. Não lancei outro estudo.
+
+### 22/10/2026, 03h58 Fortaleza: a280 semente 82 com referência e hybrid10 gravados
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+cerca de 110 minutos. A auditoria parcial continua em 2 de 90 pares e 235
+verificações. Em a280, semente 82, o arquivo de referência está como
+COMPLETED70, custo 2001, 70 iterações, 4 minerações e cerca de 1124 s de
+processo. O checkpoint nativo dessa referência permanece com `completed`
+falso. O hybrid10 foi gravado com custo 2002. A fase MDM nativa desse braço
+havia devolvido 2086. Não há arquivo de par nem de ambiente. O MDM atual é
+o 14014, hybrid60, em execução, cerca de 31 segundos de CPU e 99% de uso.
+O checkpoint tem 1 iteração, custo provisório 2026, `completed` falso, 0
+minerações e 21 s internos. O log desse braço ainda está vazio. O custo
+2026 permanece provisório. Não lancei outro estudo.
 
 ### 22/10/2026, 03:28 Fortaleza — segundo par principal fechado e auditado
 

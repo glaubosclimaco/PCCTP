@@ -7,6 +7,15 @@ amboscandidatos96707. Auditor/sumário parciais atualizados.
 Zero geometrias completas;sem efeito primário/gate. Sessão29767única continua.
 NÃOduplicar/NÃOalterarfontescongeladas.
 
+## 22/10/2026, 03h58 Fortaleza: a280 semente 82, referência 2001, hybrid60 no início
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 110 min. Auditoria parcial
+segue 2/90, 235 rotas, 0 geometrias completas. a280 semente 82: reference
+COMPLETED70 custo 2001, parede cerca de 1124 s, checkpoint nativo completed
+falso. hybrid10 gravado em 2002. Sem pair.json. MDM 14014 no hybrid60, cerca
+de 31 s de CPU. Checkpoint: iteração 1, custo provisório 2026. Log vazio com
+o processo em execução. Não duplicar.
+
 ## 22/10/2026, 03h28 Fortaleza: 2/90 pares, a280 semente 82 no checkpoint 20
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 80 min. Auditoria parcial
