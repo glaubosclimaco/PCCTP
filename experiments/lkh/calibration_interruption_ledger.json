@@ -1,0 +1,89 @@
+{
+  "status": "PRESERVATION_INVENTORY",
+  "excluded_attempts": 6,
+  "sleep_recorded_attempts": 3,
+  "no_sleep_recorded_attempts": 3,
+  "excluded_process_wall_seconds": 79919.82941400004,
+  "rows": [
+    {
+      "archive": "20261021T021307Z",
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 80,
+      "exclusion": "MONITOR_GAP_WITHOUT_SLEEP_RECORD",
+      "sleep_events": 0,
+      "max_monitor_gap_seconds": 6.178795416999947,
+      "max_clock_difference_seconds": 0.3265082585298842,
+      "excluded_process_wall_seconds": 2321.914012000081,
+      "excluded_child_cpu_seconds": 1875.6905530000001,
+      "review_sha256": "fc9e4d840b4de569cabfeedfc9f8e9db8c65284746519c2f399c3aca5e516088",
+      "environment_sha256": "6c0d93a4cad10ae30964bd86fe759e9d200e23b9bdf3842088a717594f40f076"
+    },
+    {
+      "archive": "20261021T124719Z",
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 80,
+      "exclusion": "SLEEP_RECORDED",
+      "sleep_events": 58,
+      "max_monitor_gap_seconds": 3619.116981983185,
+      "max_clock_difference_seconds": 3617.782342275185,
+      "excluded_process_wall_seconds": 37720.26670000004,
+      "excluded_child_cpu_seconds": 2007.919912,
+      "review_sha256": "40ca0749cb9b624a422a2b44a7d3c0f296d802ffa30e53e3ece6f6a45b48d4ef",
+      "environment_sha256": "366c67c53ccb8bf10b8e4142de561f4577818f07b28922d656c50465ce7df41d"
+    },
+    {
+      "archive": "20261021T133833Z",
+      "instance": "g_gil262_VT51_T158_W53_75",
+      "seed": 80,
+      "exclusion": "SLEEP_RECORDED",
+      "sleep_events": 2,
+      "max_monitor_gap_seconds": 154.47651886940002,
+      "max_clock_difference_seconds": 153.46781832739998,
+      "excluded_process_wall_seconds": 2518.73280899995,
+      "excluded_child_cpu_seconds": 2012.739811,
+      "review_sha256": "c4d9f23aabd7344e8f05ca763e694716273517a5cfeed543886fc6eaf98ad330",
+      "environment_sha256": "2dde565a86f7ba0b14e8a5fa078ba8fe37cf7ca8870e39dd237323af0593f1db"
+    },
+    {
+      "archive": "20261021T163849Z",
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 80,
+      "exclusion": "MONITOR_GAP_WITHOUT_SLEEP_RECORD",
+      "sleep_events": 0,
+      "max_monitor_gap_seconds": 8.329185009002686,
+      "max_clock_difference_seconds": 0.07564108195401786,
+      "excluded_process_wall_seconds": 8336.85574899998,
+      "excluded_child_cpu_seconds": 8187.7470650000005,
+      "review_sha256": "0cfba98712a876818bca0975774bf6a02c4997f77a0c9b24ed4ca353205d9ffa",
+      "environment_sha256": "26624a088546709f32891a5b126535a39fe57c0ee3f0ec625e9a89268fd72cc5"
+    },
+    {
+      "archive": "20261021T222541Z",
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 80,
+      "exclusion": "SLEEP_RECORDED",
+      "sleep_events": 19,
+      "max_monitor_gap_seconds": 3367.2129662036896,
+      "max_clock_difference_seconds": 3366.1546485366907,
+      "excluded_process_wall_seconds": 20582.861855000025,
+      "excluded_child_cpu_seconds": 9187.921307,
+      "review_sha256": "06f3f956ab2a51472000b59908c724465829d87e00d90cefe27690abd358c506",
+      "environment_sha256": "e543467b8cd2b1c8a7895fda8a4e88f4628ed66ac3c8b39151c5e082abb4a542"
+    },
+    {
+      "archive": "20261022T005659Z",
+      "instance": "g_rd400_VT80_T240_W80_25",
+      "seed": 80,
+      "exclusion": "MONITOR_GAP_WITHOUT_SLEEP_RECORD",
+      "sleep_events": 0,
+      "max_monitor_gap_seconds": 10.333994458000006,
+      "max_clock_difference_seconds": 0.28547057521063834,
+      "excluded_process_wall_seconds": 8439.198288999964,
+      "excluded_child_cpu_seconds": 8203.97012,
+      "review_sha256": "a6fb9e541b5c9152add6b0d59a76b7e59120cecba6dca85e6bcf271def809b9e",
+      "environment_sha256": "5a867aa0033c3fba6d7f6e975febf920d795b653003b0e6815bccc461dd55780"
+    }
+  ],
+  "scope": "Excluded operational attempts only, not algorithm performance, runtime calibration, or primary cost results. A monitor gap without a Sleep record does not identify its cause. No threshold changes or retrospective acceptance.",
+  "source_sha256": "349d1ac9169f2f3f00e8fd29268e5765bb978ce3605792a1b69a378b2a40a2d3"
+}

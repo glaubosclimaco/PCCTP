@@ -1049,3 +1049,7 @@ tem 0 bytes. Não lancei outro processo. Três tentativas desta instância já
 devolveram 10577 e foram rejeitadas. Duas foram por suspensão ou por lacuna
 sem suspensão. O limiar de 5 s permanece. Próximo passo: deixar esta
 repetição terminar e guardar qualquer rejeição nova.
+
+### 21/10/2026, 22:06 Fortaleza — inventário das interrupções da calibração
+
+Criei calibration_interruption_ledger.py, observador sem otimizador ou alteração de fontes ativas. Reconfere hashes de todos os arquivos nos seis archives de tentativas excluídas, liga environment e native por instância e registra duração excluída/CPU/causa observada. Execução real sobre arquivos históricos:6tentativas,3comSleep e3semSleep registrado; soma de tempos de processo excluídos79919,829414s (não tempo válido, nem desempenho). Lacuna semSleep não identifica causa de escalonamento/carga; não há inferência causal ou mudança de limiar. Output calibration_interruption_ledger.json preserva razões em vez de esconder custo operacional das repetições. Nova rd400segue checkpoint1;gil2621/9auditada. Próximo: investigar futuras lacunas com medições prospectivas separadas, sem promover archives; aguardar endpoint da coleta única.
