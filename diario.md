@@ -1144,3 +1144,9 @@ referências estão aceitas. O MDM atual é o 16832, instância tsp225, semente
 minerações e 58 s internos. O log tem 18 marcações. A última cabeçalho lida
 foi a iteração 17. O custo 2457 permanece provisório. Falta esta última
 referência para fechar as nove. Não lancei outra coleta.
+
+### 22/10/2026, 01:38 Fortaleza — calibração9/9 concluída e cache30 real iniciado
+
+Calibração concluída com auditorPASS completo9COMPLETED70/135verificações rotas,semcensuras elegíveis;all_references_completed=true. Último tsp225seed80custo2447,4minerações,processo133,671197s,wrapper137,343121s,SHA2bfea43e3281c88c7333187952d8a2f3258330666edd49a2dc28542556e8d4b9. Soma nove tempos processo14840,379495s é calibração de uma semente, não comparação híbrida nem previsão garantida. Archives ambientais continuam excluídos.
+
+ps confirmou ausência de otimizadores após fila terminar. Iniciei estudo condicional prospectivo cached30_train.py via /usr/bin/caffeinate -i /usr/bin/python3 -u, sessão28252. Runner adquiriu lock compartilhado paired70, refez auditorias81/9PASS e verificou certificados/fontes/binário antes do protocolo. Diretório experiments/lkh/cached30_train já contém protocolo e primeira tentativa gr229seed43. Não iniciar paired70 simultâneo. Fontes/dependências agora congeladas.54fases/27pares,30s cada,geração do início excluída/cache setup cobrado. Texto scope herdado do manifesto diz no optimizer e descreve criação dos inícios: esta execução é otimização real; não alterar protocolo ativo para corrigir rótulo. Próximo:aguardar54fases e auditor independente, preservar todos os resultados e gate predefinido.

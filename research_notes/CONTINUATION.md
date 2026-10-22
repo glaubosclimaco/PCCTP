@@ -1,5 +1,15 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 01:38 Fortaleza — calibração9/9PASS;cache30 ativo
+
+Todas9referências70completas/auditadas,135verificações rotas. tsp2252447.
+Novo estudo real cached30_train.py sessão28252, caffeinate-i,lock paired70.
+Primeiropargr229seed43;54fases/27pares de30s,setupcache cobrado.
+NÃOduplicar/NÃOpaired70simultâneo/NÃOalterar fontes congeladas.
+Auditorias prévias81/9e certificados PASS; saída experiments/lkh/cached30_train.
+Scope herdado no protocol refere manifesto dos starts; diário esclarece otimização real.
+Próximo:auditar lote cache completo, preservar negativo e decidir conformegatefixo.
+
 ## 22/10/2026, 01h28 Fortaleza: tsp225 no checkpoint 20, custo provisório 2457
 
 Fila 6691 e coletor 6736 vivos. MDM atual 16832 em tsp225, semente 80,

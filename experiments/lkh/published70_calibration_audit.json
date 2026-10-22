@@ -1,11 +1,11 @@
 {
   "status": "PASS",
-  "batch_complete": false,
-  "runs": 8,
-  "completed70": 8,
+  "batch_complete": true,
+  "runs": 9,
+  "completed70": 9,
   "censored_or_failed": 0,
-  "routes_checked": 120,
-  "all_references_completed": false,
+  "routes_checked": 135,
+  "all_references_completed": true,
   "rows": [
     {
       "instance": "g_a280_VT56_T168_W56_50",
@@ -86,6 +86,16 @@
       "native_process_wall_seconds": 320.89754399994854,
       "wrapper_wall_seconds": 325.9868639999768,
       "result_sha256": "d119d99bc144b2dbbdd3d85fbe5f78635d02c687b1b6331935a1db172464cc61"
+    },
+    {
+      "instance": "g_tsp225_VT45_T45_W135_75",
+      "status": "COMPLETED70",
+      "cost": 2447,
+      "iterations": 70,
+      "mining_calls": 4,
+      "native_process_wall_seconds": 133.67119699995965,
+      "wrapper_wall_seconds": 137.3431209999835,
+      "result_sha256": "2bfea43e3281c88c7333187952d8a2f3258330666edd49a2dc28542556e8d4b9"
     }
   ],
   "scope": "one-seed TRAIN reference calibration, not final ten-seed comparison"
