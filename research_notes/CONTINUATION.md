@@ -1,5 +1,21 @@
 # Estado operacional para retomada autônoma
 
+## 22/10/2026, 03:28 Fortaleza — paired70 em2/90pares
+
+Segundo pargr229seed85 concluído/ambientePASS;T1079,802s,
+amboscandidatos96707. Auditor/sumário parciais atualizados.
+Zero geometrias completas;sem efeito primário/gate. Sessão29767única continua.
+NÃOduplicar/NÃOalterarfontescongeladas.
+
+## 22/10/2026, 03h28 Fortaleza: 2/90 pares, a280 semente 82 no checkpoint 20
+
+Runner 52200 e caffeinate 52208 vivos, cerca de 80 min. Auditoria parcial
+PASS, 235 rotas, 0 geometrias completas. gr229 semente 85: referência 97409,
+hybrid60 e hybrid10 em 96707, ambiente PASS. kroA200 semente 89: referência
+23499, híbridos 23495. MDM 99146 em a280 semente 82, referência, cerca de
+8 min de CPU. Checkpoint: iteração 20, custo provisório 2003, completed
+falso. Log na iteração 17. Não duplicar. Dois pares não fecham o estudo.
+
 ## 22/10/2026, 02h58 Fortaleza: gr229 semente 85, referência gravada, hybrid60 no LKH
 
 Runner 52200 e caffeinate 52208 vivos, cerca de 50 min. 1/90 par fechado:

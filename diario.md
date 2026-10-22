@@ -27,14 +27,15 @@ não foi demonstrada superioridade sobre o MDM completo sob o protocolo de
 pronto. ML e várias reparações inteiras tiveram controles negativos; não
 apague esses resultados. Não iniciar CTP e não abrir as12 geometrias reservadas.
 
-Estado operacional confirmado em 22/10, 02h58: a calibração das nove
-referências está aceita e o cached30 permanece com gate negativo. O estudo
-paired70 segue com o processo 52200 e o caffeinate 52208, cerca de 50
-minutos. Só kroA200, semente 89, está fechado: 1 de 90 pares, auditoria
-parcial de 80 verificações. Em gr229, semente 85, o arquivo de referência
-foi gravado como COMPLETED70, custo 97409, 70 iterações. O par continua
-aberto. A fase MDM do hybrid60 devolveu custo 100177 e o LKH desse braço
-acabou de iniciar. Não lançar outro estudo.
+Estado operacional confirmado em 22/10, 03h28: o paired70 segue com o
+processo 52200 e o caffeinate 52208, cerca de 80 minutos. Dois pares estão
+fechados, com auditoria parcial PASS e 235 verificações. Nenhuma geometria
+está completa. kroA200, semente 89: referência 23499, hybrid60 e hybrid10 em
+23495. gr229, semente 85: referência 97409, os dois híbridos em 96707,
+ambiente PASS. A coleta atual é a280, semente 82, braço de referência, MDM
+com cerca de 8 minutos de CPU. O checkpoint tem 20 iterações, custo
+provisório 2003. Esses dois pares não fecham o estudo. Não lançar outro
+estudo.
 
 **Primeiro próximo passo:** acompanhar a calibração sem duplicá-la. Ela não
 substitui a avaliação final de dez sementes.
@@ -1196,3 +1197,22 @@ checkpoint nativo dessa referência permanece com `completed` falso. Não há
 arquivo de par nem de ambiente para gr229. A fase MDM do hybrid60 devolveu
 custo 100177 em cerca de 60 s, e um LKH filho desse braço acabou de iniciar.
 O custo 97409 ainda não é comparação. Não lancei outro estudo.
+
+### 22/10/2026, 03h28 Fortaleza: gr229 semente 85 fechado, a280 na referência
+
+Conferência passiva. O runner 52200 e o caffeinate 52208 seguem os mesmos,
+cerca de 80 minutos. gr229, semente 85, fechou como PAIR_COMPLETED. Ambiente
+PASS, lacuna de monitor 1,105 s, diferença de relógio 0,169 s, sem suspensão.
+A referência ficou em 97409. hybrid60 e hybrid10 ficaram em 96707, ambos
+viáveis. O orçamento do par foi 1079,802 s. A auditoria parcial está PASS,
+2 de 90 pares, 235 verificações, 0 geometrias completas. kroA200, semente 89,
+permanece com referência 23499 e os dois híbridos em 23495. O MDM atual é o
+99146, a280, semente 82, braço de referência, cerca de 8 minutos de CPU e
+99% de uso. O checkpoint tem 20 iterações, custo provisório 2003,
+`completed` falso, 0 minerações e 408 s internos. O log tem 18 marcações e
+a última cabeçalho lida foi a iteração 17. O custo 2003 permanece
+provisório. Não lancei outro estudo.
+
+### 22/10/2026, 03:28 Fortaleza — segundo par principal fechado e auditado
+
+Pargr229seed85PAIR_COMPLETED com ambientePASS;T1079,802387s por braço,ambos candidatos96707. Auditor independente executado após final atômico;sumário continuaPARTIAL e zero geometrias com10sementes,semgate ou conclusão. Custo favorável deste par não autoriza seleção de variante ou extrapolação. Sessão29767 prossegue;semalteraçãofontes. Próximo:auditar novos pares e preservar qualquerinterrupção.
