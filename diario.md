@@ -1422,3 +1422,11 @@ bloqueou push por falta de autorizacao explicita para divulgar publicamente
 pesquisa nao publicada (fontes/binarios/resultados). Nada enviado neste passo.
 Pendente somente confirmacao do usuario para publicacao nesse remoto publico;
 processos e automacao continuam encerrados. Nao tentar contornar bloqueio.
+
+### 22/10/2026 13:55 Fortaleza - publicacao autorizada e push concluido
+
+Usuario confirmou explicitamente publicacao no remoto publico: "sim, pode
+fazer o push". git push origin codex/pcctp-learning-submission terminou
+exit0, remoto avancou8aab79f..918424c. Bloqueio anterior resolvido por
+autorizacao humana. Execucao e automacao permanecem encerradas. Retomada
+na outra maquina deve seguir research_notes/MIGRATION_HANDOFF.md.
